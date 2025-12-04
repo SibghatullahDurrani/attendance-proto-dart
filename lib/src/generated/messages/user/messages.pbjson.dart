@@ -14,9 +14,9 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use registerStudentRequestDescriptor instead')
-const RegisterStudentRequest$json = {
-  '1': 'RegisterStudentRequest',
+@$core.Deprecated('Use createStudentRequestDescriptor instead')
+const CreateStudentRequest$json = {
+  '1': 'CreateStudentRequest',
   '2': [
     {
       '1': 'parent_id',
@@ -66,45 +66,44 @@ const RegisterStudentRequest$json = {
   ],
 };
 
-/// Descriptor for `RegisterStudentRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List registerStudentRequestDescriptor = $convert.base64Decode(
-    'ChZSZWdpc3RlclN0dWRlbnRSZXF1ZXN0EiAKCXBhcmVudF9pZBgBIAEoCUgAUghwYXJlbnRJZI'
-    'gBARIdCgpmaXJzdF9uYW1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAyABKAlI'
-    'AVIKc2Vjb25kTmFtZYgBARI4ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlIAlIUaWRlbn'
-    'RpZmljYXRpb25OdW1iZXKIAQESJgoMcGhvbmVfbnVtYmVyGAUgASgJSANSC3Bob25lTnVtYmVy'
-    'iAEBEhkKBWVtYWlsGAYgASgJSARSBWVtYWlsiAEBQgwKCl9wYXJlbnRfaWRCDgoMX3NlY29uZF'
-    '9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCDwoNX3Bob25lX251bWJlckIICgZfZW1h'
-    'aWw=');
+/// Descriptor for `CreateStudentRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createStudentRequestDescriptor = $convert.base64Decode(
+    'ChRDcmVhdGVTdHVkZW50UmVxdWVzdBIgCglwYXJlbnRfaWQYASABKAlIAFIIcGFyZW50SWSIAQ'
+    'ESHQoKZmlyc3RfbmFtZRgCIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAMgASgJSAFS'
+    'CnNlY29uZE5hbWWIAQESOAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJSAJSFGlkZW50aW'
+    'ZpY2F0aW9uTnVtYmVyiAEBEiYKDHBob25lX251bWJlchgFIAEoCUgDUgtwaG9uZU51bWJlcogB'
+    'ARIZCgVlbWFpbBgGIAEoCUgEUgVlbWFpbIgBAUIMCgpfcGFyZW50X2lkQg4KDF9zZWNvbmRfbm'
+    'FtZUIYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQg8KDV9waG9uZV9udW1iZXJCCAoGX2VtYWls');
 
-@$core.Deprecated('Use registerStudentResponseDescriptor instead')
-const RegisterStudentResponse$json = {
-  '1': 'RegisterStudentResponse',
+@$core.Deprecated('Use createStudentResponseDescriptor instead')
+const CreateStudentResponse$json = {
+  '1': 'CreateStudentResponse',
   '2': [
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
   ],
 };
 
-/// Descriptor for `RegisterStudentResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List registerStudentResponseDescriptor =
+/// Descriptor for `CreateStudentResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createStudentResponseDescriptor =
     $convert.base64Decode(
-        'ChdSZWdpc3RlclN0dWRlbnRSZXNwb25zZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQ=');
+        'ChVDcmVhdGVTdHVkZW50UmVzcG9uc2USFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklk');
 
-@$core.Deprecated('Use unregisterStudentResponseDescriptor instead')
-const UnregisterStudentResponse$json = {
-  '1': 'UnregisterStudentResponse',
+@$core.Deprecated('Use deleteStudentResponseDescriptor instead')
+const DeleteStudentResponse$json = {
+  '1': 'DeleteStudentResponse',
   '2': [
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
   ],
 };
 
-/// Descriptor for `UnregisterStudentResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List unregisterStudentResponseDescriptor =
+/// Descriptor for `DeleteStudentResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteStudentResponseDescriptor =
     $convert.base64Decode(
-        'ChlVbnJlZ2lzdGVyU3R1ZGVudFJlc3BvbnNlEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZA==');
+        'ChVEZWxldGVTdHVkZW50UmVzcG9uc2USFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklk');
 
-@$core.Deprecated('Use registerTeacherRequestDescriptor instead')
-const RegisterTeacherRequest$json = {
-  '1': 'RegisterTeacherRequest',
+@$core.Deprecated('Use createTeacherRequestDescriptor instead')
+const CreateTeacherRequest$json = {
+  '1': 'CreateTeacherRequest',
   '2': [
     {'1': 'first_name', '3': 1, '4': 1, '5': 9, '10': 'firstName'},
     {
@@ -133,43 +132,43 @@ const RegisterTeacherRequest$json = {
   ],
 };
 
-/// Descriptor for `RegisterTeacherRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List registerTeacherRequestDescriptor = $convert.base64Decode(
-    'ChZSZWdpc3RlclRlYWNoZXJSZXF1ZXN0Eh0KCmZpcnN0X25hbWUYASABKAlSCWZpcnN0TmFtZR'
-    'IkCgtzZWNvbmRfbmFtZRgCIAEoCUgAUgpzZWNvbmROYW1liAEBEjMKFWlkZW50aWZpY2F0aW9u'
-    'X251bWJlchgDIAEoCVIUaWRlbnRpZmljYXRpb25OdW1iZXISIQoMcGhvbmVfbnVtYmVyGAQgAS'
-    'gJUgtwaG9uZU51bWJlchIZCgVlbWFpbBgFIAEoCUgBUgVlbWFpbIgBARIkCg1xdWFsaWZpY2F0'
-    'aW9uGAYgASgJUg1xdWFsaWZpY2F0aW9uQg4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWw=');
+/// Descriptor for `CreateTeacherRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createTeacherRequestDescriptor = $convert.base64Decode(
+    'ChRDcmVhdGVUZWFjaGVyUmVxdWVzdBIdCgpmaXJzdF9uYW1lGAEgASgJUglmaXJzdE5hbWUSJA'
+    'oLc2Vjb25kX25hbWUYAiABKAlIAFIKc2Vjb25kTmFtZYgBARIzChVpZGVudGlmaWNhdGlvbl9u'
+    'dW1iZXIYAyABKAlSFGlkZW50aWZpY2F0aW9uTnVtYmVyEiEKDHBob25lX251bWJlchgEIAEoCV'
+    'ILcGhvbmVOdW1iZXISGQoFZW1haWwYBSABKAlIAVIFZW1haWyIAQESJAoNcXVhbGlmaWNhdGlv'
+    'bhgGIAEoCVINcXVhbGlmaWNhdGlvbkIOCgxfc2Vjb25kX25hbWVCCAoGX2VtYWls');
 
-@$core.Deprecated('Use registerTeacherResponseDescriptor instead')
-const RegisterTeacherResponse$json = {
-  '1': 'RegisterTeacherResponse',
+@$core.Deprecated('Use createTeacherResponseDescriptor instead')
+const CreateTeacherResponse$json = {
+  '1': 'CreateTeacherResponse',
   '2': [
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
   ],
 };
 
-/// Descriptor for `RegisterTeacherResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List registerTeacherResponseDescriptor =
+/// Descriptor for `CreateTeacherResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createTeacherResponseDescriptor =
     $convert.base64Decode(
-        'ChdSZWdpc3RlclRlYWNoZXJSZXNwb25zZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQ=');
+        'ChVDcmVhdGVUZWFjaGVyUmVzcG9uc2USFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklk');
 
-@$core.Deprecated('Use unregisterTeacherResponseDescriptor instead')
-const UnregisterTeacherResponse$json = {
-  '1': 'UnregisterTeacherResponse',
+@$core.Deprecated('Use deleteTeacherResponseDescriptor instead')
+const DeleteTeacherResponse$json = {
+  '1': 'DeleteTeacherResponse',
   '2': [
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
   ],
 };
 
-/// Descriptor for `UnregisterTeacherResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List unregisterTeacherResponseDescriptor =
+/// Descriptor for `DeleteTeacherResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteTeacherResponseDescriptor =
     $convert.base64Decode(
-        'ChlVbnJlZ2lzdGVyVGVhY2hlclJlc3BvbnNlEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZA==');
+        'ChVEZWxldGVUZWFjaGVyUmVzcG9uc2USFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklk');
 
-@$core.Deprecated('Use registerEmployeeRequestDescriptor instead')
-const RegisterEmployeeRequest$json = {
-  '1': 'RegisterEmployeeRequest',
+@$core.Deprecated('Use createEmployeeRequestDescriptor instead')
+const CreateEmployeeRequest$json = {
+  '1': 'CreateEmployeeRequest',
   '2': [
     {'1': 'first_name', '3': 1, '4': 1, '5': 9, '10': 'firstName'},
     {
@@ -199,44 +198,44 @@ const RegisterEmployeeRequest$json = {
   ],
 };
 
-/// Descriptor for `RegisterEmployeeRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List registerEmployeeRequestDescriptor = $convert.base64Decode(
-    'ChdSZWdpc3RlckVtcGxveWVlUmVxdWVzdBIdCgpmaXJzdF9uYW1lGAEgASgJUglmaXJzdE5hbW'
-    'USJAoLc2Vjb25kX25hbWUYAiABKAlIAFIKc2Vjb25kTmFtZYgBARIzChVpZGVudGlmaWNhdGlv'
-    'bl9udW1iZXIYAyABKAlSFGlkZW50aWZpY2F0aW9uTnVtYmVyEiEKDHBob25lX251bWJlchgEIA'
-    'EoCVILcGhvbmVOdW1iZXISGQoFZW1haWwYBSABKAlIAVIFZW1haWyIAQESJAoNcXVhbGlmaWNh'
-    'dGlvbhgGIAEoCVINcXVhbGlmaWNhdGlvbhIgCgtkZXNpZ25hdGlvbhgHIAEoCVILZGVzaWduYX'
-    'Rpb25CDgoMX3NlY29uZF9uYW1lQggKBl9lbWFpbA==');
+/// Descriptor for `CreateEmployeeRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createEmployeeRequestDescriptor = $convert.base64Decode(
+    'ChVDcmVhdGVFbXBsb3llZVJlcXVlc3QSHQoKZmlyc3RfbmFtZRgBIAEoCVIJZmlyc3ROYW1lEi'
+    'QKC3NlY29uZF9uYW1lGAIgASgJSABSCnNlY29uZE5hbWWIAQESMwoVaWRlbnRpZmljYXRpb25f'
+    'bnVtYmVyGAMgASgJUhRpZGVudGlmaWNhdGlvbk51bWJlchIhCgxwaG9uZV9udW1iZXIYBCABKA'
+    'lSC3Bob25lTnVtYmVyEhkKBWVtYWlsGAUgASgJSAFSBWVtYWlsiAEBEiQKDXF1YWxpZmljYXRp'
+    'b24YBiABKAlSDXF1YWxpZmljYXRpb24SIAoLZGVzaWduYXRpb24YByABKAlSC2Rlc2lnbmF0aW'
+    '9uQg4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWw=');
 
-@$core.Deprecated('Use registerEmployeeResponseDescriptor instead')
-const RegisterEmployeeResponse$json = {
-  '1': 'RegisterEmployeeResponse',
+@$core.Deprecated('Use createEmployeeResponseDescriptor instead')
+const CreateEmployeeResponse$json = {
+  '1': 'CreateEmployeeResponse',
   '2': [
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
   ],
 };
 
-/// Descriptor for `RegisterEmployeeResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List registerEmployeeResponseDescriptor =
+/// Descriptor for `CreateEmployeeResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createEmployeeResponseDescriptor =
     $convert.base64Decode(
-        'ChhSZWdpc3RlckVtcGxveWVlUmVzcG9uc2USFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklk');
+        'ChZDcmVhdGVFbXBsb3llZVJlc3BvbnNlEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZA==');
 
-@$core.Deprecated('Use unregisterEmployeeResponseDescriptor instead')
-const UnregisterEmployeeResponse$json = {
-  '1': 'UnregisterEmployeeResponse',
+@$core.Deprecated('Use deleteEmployeeResponseDescriptor instead')
+const DeleteEmployeeResponse$json = {
+  '1': 'DeleteEmployeeResponse',
   '2': [
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
   ],
 };
 
-/// Descriptor for `UnregisterEmployeeResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List unregisterEmployeeResponseDescriptor =
+/// Descriptor for `DeleteEmployeeResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteEmployeeResponseDescriptor =
     $convert.base64Decode(
-        'ChpVbnJlZ2lzdGVyRW1wbG95ZWVSZXNwb25zZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQ=');
+        'ChZEZWxldGVFbXBsb3llZVJlc3BvbnNlEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZA==');
 
-@$core.Deprecated('Use registerParentRequestDescriptor instead')
-const RegisterParentRequest$json = {
-  '1': 'RegisterParentRequest',
+@$core.Deprecated('Use createParentRequestDescriptor instead')
+const CreateParentRequest$json = {
+  '1': 'CreateParentRequest',
   '2': [
     {'1': 'first_name', '3': 1, '4': 1, '5': 9, '10': 'firstName'},
     {
@@ -264,36 +263,36 @@ const RegisterParentRequest$json = {
   ],
 };
 
-/// Descriptor for `RegisterParentRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List registerParentRequestDescriptor = $convert.base64Decode(
-    'ChVSZWdpc3RlclBhcmVudFJlcXVlc3QSHQoKZmlyc3RfbmFtZRgBIAEoCVIJZmlyc3ROYW1lEi'
-    'QKC3NlY29uZF9uYW1lGAIgASgJSABSCnNlY29uZE5hbWWIAQESMwoVaWRlbnRpZmljYXRpb25f'
-    'bnVtYmVyGAMgASgJUhRpZGVudGlmaWNhdGlvbk51bWJlchIhCgxwaG9uZV9udW1iZXIYBCABKA'
-    'lSC3Bob25lTnVtYmVyEhkKBWVtYWlsGAUgASgJSAFSBWVtYWlsiAEBQg4KDF9zZWNvbmRfbmFt'
-    'ZUIICgZfZW1haWw=');
+/// Descriptor for `CreateParentRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createParentRequestDescriptor = $convert.base64Decode(
+    'ChNDcmVhdGVQYXJlbnRSZXF1ZXN0Eh0KCmZpcnN0X25hbWUYASABKAlSCWZpcnN0TmFtZRIkCg'
+    'tzZWNvbmRfbmFtZRgCIAEoCUgAUgpzZWNvbmROYW1liAEBEjMKFWlkZW50aWZpY2F0aW9uX251'
+    'bWJlchgDIAEoCVIUaWRlbnRpZmljYXRpb25OdW1iZXISIQoMcGhvbmVfbnVtYmVyGAQgASgJUg'
+    'twaG9uZU51bWJlchIZCgVlbWFpbBgFIAEoCUgBUgVlbWFpbIgBAUIOCgxfc2Vjb25kX25hbWVC'
+    'CAoGX2VtYWls');
 
-@$core.Deprecated('Use registerParentResponseDescriptor instead')
-const RegisterParentResponse$json = {
-  '1': 'RegisterParentResponse',
+@$core.Deprecated('Use createParentResponseDescriptor instead')
+const CreateParentResponse$json = {
+  '1': 'CreateParentResponse',
   '2': [
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
   ],
 };
 
-/// Descriptor for `RegisterParentResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List registerParentResponseDescriptor =
+/// Descriptor for `CreateParentResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createParentResponseDescriptor =
     $convert.base64Decode(
-        'ChZSZWdpc3RlclBhcmVudFJlc3BvbnNlEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZA==');
+        'ChRDcmVhdGVQYXJlbnRSZXNwb25zZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQ=');
 
-@$core.Deprecated('Use unregisterParentResponseDescriptor instead')
-const UnregisterParentResponse$json = {
-  '1': 'UnregisterParentResponse',
+@$core.Deprecated('Use deleteParentResponseDescriptor instead')
+const DeleteParentResponse$json = {
+  '1': 'DeleteParentResponse',
   '2': [
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
   ],
 };
 
-/// Descriptor for `UnregisterParentResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List unregisterParentResponseDescriptor =
+/// Descriptor for `DeleteParentResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteParentResponseDescriptor =
     $convert.base64Decode(
-        'ChhVbnJlZ2lzdGVyUGFyZW50UmVzcG9uc2USFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklk');
+        'ChREZWxldGVQYXJlbnRSZXNwb25zZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQ=');

@@ -40,19 +40,19 @@ class AuthServiceClient extends $grpc.Client {
   }
 
   /// Action
-  $grpc.ResponseFuture<$0.RegisterResponse> register(
-    $0.RegisterRequest request, {
+  $grpc.ResponseFuture<$0.AddUserResponse> addUser(
+    $0.AddUserRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$register, request, options: options);
+    return $createUnaryCall(_$addUser, request, options: options);
   }
 
   /// Compensation
-  $grpc.ResponseFuture<$0.UnregisterResponse> unregister(
-    $0.RegisterResponse request, {
+  $grpc.ResponseFuture<$0.RemoveUserResponse> removeUser(
+    $0.AddUserResponse request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$unregister, request, options: options);
+    return $createUnaryCall(_$removeUser, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.LoginResponse> refreshLogin(
@@ -68,16 +68,16 @@ class AuthServiceClient extends $grpc.Client {
       '/auth.AuthService/Login',
       ($0.LoginRequest value) => value.writeToBuffer(),
       $0.LoginResponse.fromBuffer);
-  static final _$register =
-      $grpc.ClientMethod<$0.RegisterRequest, $0.RegisterResponse>(
-          '/auth.AuthService/Register',
-          ($0.RegisterRequest value) => value.writeToBuffer(),
-          $0.RegisterResponse.fromBuffer);
-  static final _$unregister =
-      $grpc.ClientMethod<$0.RegisterResponse, $0.UnregisterResponse>(
-          '/auth.AuthService/Unregister',
-          ($0.RegisterResponse value) => value.writeToBuffer(),
-          $0.UnregisterResponse.fromBuffer);
+  static final _$addUser =
+      $grpc.ClientMethod<$0.AddUserRequest, $0.AddUserResponse>(
+          '/auth.AuthService/AddUser',
+          ($0.AddUserRequest value) => value.writeToBuffer(),
+          $0.AddUserResponse.fromBuffer);
+  static final _$removeUser =
+      $grpc.ClientMethod<$0.AddUserResponse, $0.RemoveUserResponse>(
+          '/auth.AuthService/RemoveUser',
+          ($0.AddUserResponse value) => value.writeToBuffer(),
+          $0.RemoveUserResponse.fromBuffer);
   static final _$refreshLogin =
       $grpc.ClientMethod<$0.RefreshLoginRequest, $0.LoginResponse>(
           '/auth.AuthService/RefreshLogin',
@@ -97,20 +97,20 @@ abstract class AuthServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.LoginRequest.fromBuffer(value),
         ($0.LoginResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.RegisterRequest, $0.RegisterResponse>(
-        'Register',
-        register_Pre,
+    $addMethod($grpc.ServiceMethod<$0.AddUserRequest, $0.AddUserResponse>(
+        'AddUser',
+        addUser_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.RegisterRequest.fromBuffer(value),
-        ($0.RegisterResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.RegisterResponse, $0.UnregisterResponse>(
-        'Unregister',
-        unregister_Pre,
+        ($core.List<$core.int> value) => $0.AddUserRequest.fromBuffer(value),
+        ($0.AddUserResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AddUserResponse, $0.RemoveUserResponse>(
+        'RemoveUser',
+        removeUser_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.RegisterResponse.fromBuffer(value),
-        ($0.UnregisterResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $0.AddUserResponse.fromBuffer(value),
+        ($0.RemoveUserResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.RefreshLoginRequest, $0.LoginResponse>(
         'RefreshLogin',
         refreshLogin_Pre,
@@ -129,21 +129,21 @@ abstract class AuthServiceBase extends $grpc.Service {
   $async.Future<$0.LoginResponse> login(
       $grpc.ServiceCall call, $0.LoginRequest request);
 
-  $async.Future<$0.RegisterResponse> register_Pre($grpc.ServiceCall $call,
-      $async.Future<$0.RegisterRequest> $request) async {
-    return register($call, await $request);
+  $async.Future<$0.AddUserResponse> addUser_Pre($grpc.ServiceCall $call,
+      $async.Future<$0.AddUserRequest> $request) async {
+    return addUser($call, await $request);
   }
 
-  $async.Future<$0.RegisterResponse> register(
-      $grpc.ServiceCall call, $0.RegisterRequest request);
+  $async.Future<$0.AddUserResponse> addUser(
+      $grpc.ServiceCall call, $0.AddUserRequest request);
 
-  $async.Future<$0.UnregisterResponse> unregister_Pre($grpc.ServiceCall $call,
-      $async.Future<$0.RegisterResponse> $request) async {
-    return unregister($call, await $request);
+  $async.Future<$0.RemoveUserResponse> removeUser_Pre($grpc.ServiceCall $call,
+      $async.Future<$0.AddUserResponse> $request) async {
+    return removeUser($call, await $request);
   }
 
-  $async.Future<$0.UnregisterResponse> unregister(
-      $grpc.ServiceCall call, $0.RegisterResponse request);
+  $async.Future<$0.RemoveUserResponse> removeUser(
+      $grpc.ServiceCall call, $0.AddUserResponse request);
 
   $async.Future<$0.LoginResponse> refreshLogin_Pre($grpc.ServiceCall $call,
       $async.Future<$0.RefreshLoginRequest> $request) async {

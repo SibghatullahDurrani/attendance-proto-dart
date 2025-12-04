@@ -34,114 +34,114 @@ class UserServiceClient extends $grpc.Client {
 
   /// Student Registration
   /// Action --------------------
-  $grpc.ResponseFuture<$0.RegisterStudentResponse> registerStudent(
-    $0.RegisterStudentRequest request, {
+  $grpc.ResponseFuture<$0.CreateStudentResponse> createUser(
+    $0.CreateStudentRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$registerStudent, request, options: options);
+    return $createUnaryCall(_$createUser, request, options: options);
   }
 
   /// Compensation ---------------
-  $grpc.ResponseFuture<$0.UnregisterStudentResponse> unregisterStudent(
-    $0.RegisterStudentResponse request, {
+  $grpc.ResponseFuture<$0.DeleteStudentResponse> deleteUser(
+    $0.CreateStudentResponse request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$unregisterStudent, request, options: options);
+    return $createUnaryCall(_$deleteUser, request, options: options);
   }
 
   /// Teacher Registration
   /// Action -----------------
-  $grpc.ResponseFuture<$0.RegisterTeacherResponse> registerTeacher(
-    $0.RegisterTeacherRequest request, {
+  $grpc.ResponseFuture<$0.CreateTeacherResponse> createTeacher(
+    $0.CreateTeacherRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$registerTeacher, request, options: options);
+    return $createUnaryCall(_$createTeacher, request, options: options);
   }
 
   /// Compensation ---------------
-  $grpc.ResponseFuture<$0.UnregisterTeacherResponse> unregisterTeacher(
-    $0.RegisterTeacherResponse request, {
+  $grpc.ResponseFuture<$0.DeleteTeacherResponse> deleteTeacher(
+    $0.CreateTeacherResponse request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$unregisterTeacher, request, options: options);
+    return $createUnaryCall(_$deleteTeacher, request, options: options);
   }
 
   /// Parent Registration
   /// Action -----------------
-  $grpc.ResponseFuture<$0.RegisterParentResponse> registerParent(
-    $0.RegisterParentRequest request, {
+  $grpc.ResponseFuture<$0.CreateParentResponse> createParent(
+    $0.CreateParentRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$registerParent, request, options: options);
+    return $createUnaryCall(_$createParent, request, options: options);
   }
 
   /// Compensation ---------------
-  $grpc.ResponseFuture<$0.UnregisterParentResponse> unregisterParent(
-    $0.RegisterParentResponse request, {
+  $grpc.ResponseFuture<$0.DeleteParentResponse> deleteParent(
+    $0.CreateParentResponse request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$unregisterParent, request, options: options);
+    return $createUnaryCall(_$deleteParent, request, options: options);
   }
 
   /// Employee Registration
   /// Action -----------------
-  $grpc.ResponseFuture<$0.RegisterEmployeeResponse> registerEmployee(
-    $0.RegisterEmployeeRequest request, {
+  $grpc.ResponseFuture<$0.CreateEmployeeResponse> createEmployee(
+    $0.CreateEmployeeRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$registerEmployee, request, options: options);
+    return $createUnaryCall(_$createEmployee, request, options: options);
   }
 
   /// Compensation ---------------
-  $grpc.ResponseFuture<$0.UnregisterEmployeeResponse> unregisterEmployee(
-    $0.RegisterEmployeeResponse request, {
+  $grpc.ResponseFuture<$0.DeleteEmployeeResponse> deleteEmployee(
+    $0.CreateEmployeeResponse request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$unregisterEmployee, request, options: options);
+    return $createUnaryCall(_$deleteEmployee, request, options: options);
   }
 
   // method descriptors
 
-  static final _$registerStudent =
-      $grpc.ClientMethod<$0.RegisterStudentRequest, $0.RegisterStudentResponse>(
-          '/user.UserService/RegisterStudent',
-          ($0.RegisterStudentRequest value) => value.writeToBuffer(),
-          $0.RegisterStudentResponse.fromBuffer);
-  static final _$unregisterStudent = $grpc.ClientMethod<
-          $0.RegisterStudentResponse, $0.UnregisterStudentResponse>(
-      '/user.UserService/UnregisterStudent',
-      ($0.RegisterStudentResponse value) => value.writeToBuffer(),
-      $0.UnregisterStudentResponse.fromBuffer);
-  static final _$registerTeacher =
-      $grpc.ClientMethod<$0.RegisterTeacherRequest, $0.RegisterTeacherResponse>(
-          '/user.UserService/RegisterTeacher',
-          ($0.RegisterTeacherRequest value) => value.writeToBuffer(),
-          $0.RegisterTeacherResponse.fromBuffer);
-  static final _$unregisterTeacher = $grpc.ClientMethod<
-          $0.RegisterTeacherResponse, $0.UnregisterTeacherResponse>(
-      '/user.UserService/UnregisterTeacher',
-      ($0.RegisterTeacherResponse value) => value.writeToBuffer(),
-      $0.UnregisterTeacherResponse.fromBuffer);
-  static final _$registerParent =
-      $grpc.ClientMethod<$0.RegisterParentRequest, $0.RegisterParentResponse>(
-          '/user.UserService/RegisterParent',
-          ($0.RegisterParentRequest value) => value.writeToBuffer(),
-          $0.RegisterParentResponse.fromBuffer);
-  static final _$unregisterParent = $grpc.ClientMethod<
-          $0.RegisterParentResponse, $0.UnregisterParentResponse>(
-      '/user.UserService/UnregisterParent',
-      ($0.RegisterParentResponse value) => value.writeToBuffer(),
-      $0.UnregisterParentResponse.fromBuffer);
-  static final _$registerEmployee = $grpc.ClientMethod<
-          $0.RegisterEmployeeRequest, $0.RegisterEmployeeResponse>(
-      '/user.UserService/RegisterEmployee',
-      ($0.RegisterEmployeeRequest value) => value.writeToBuffer(),
-      $0.RegisterEmployeeResponse.fromBuffer);
-  static final _$unregisterEmployee = $grpc.ClientMethod<
-          $0.RegisterEmployeeResponse, $0.UnregisterEmployeeResponse>(
-      '/user.UserService/UnregisterEmployee',
-      ($0.RegisterEmployeeResponse value) => value.writeToBuffer(),
-      $0.UnregisterEmployeeResponse.fromBuffer);
+  static final _$createUser =
+      $grpc.ClientMethod<$0.CreateStudentRequest, $0.CreateStudentResponse>(
+          '/user.UserService/CreateUser',
+          ($0.CreateStudentRequest value) => value.writeToBuffer(),
+          $0.CreateStudentResponse.fromBuffer);
+  static final _$deleteUser =
+      $grpc.ClientMethod<$0.CreateStudentResponse, $0.DeleteStudentResponse>(
+          '/user.UserService/DeleteUser',
+          ($0.CreateStudentResponse value) => value.writeToBuffer(),
+          $0.DeleteStudentResponse.fromBuffer);
+  static final _$createTeacher =
+      $grpc.ClientMethod<$0.CreateTeacherRequest, $0.CreateTeacherResponse>(
+          '/user.UserService/CreateTeacher',
+          ($0.CreateTeacherRequest value) => value.writeToBuffer(),
+          $0.CreateTeacherResponse.fromBuffer);
+  static final _$deleteTeacher =
+      $grpc.ClientMethod<$0.CreateTeacherResponse, $0.DeleteTeacherResponse>(
+          '/user.UserService/DeleteTeacher',
+          ($0.CreateTeacherResponse value) => value.writeToBuffer(),
+          $0.DeleteTeacherResponse.fromBuffer);
+  static final _$createParent =
+      $grpc.ClientMethod<$0.CreateParentRequest, $0.CreateParentResponse>(
+          '/user.UserService/CreateParent',
+          ($0.CreateParentRequest value) => value.writeToBuffer(),
+          $0.CreateParentResponse.fromBuffer);
+  static final _$deleteParent =
+      $grpc.ClientMethod<$0.CreateParentResponse, $0.DeleteParentResponse>(
+          '/user.UserService/DeleteParent',
+          ($0.CreateParentResponse value) => value.writeToBuffer(),
+          $0.DeleteParentResponse.fromBuffer);
+  static final _$createEmployee =
+      $grpc.ClientMethod<$0.CreateEmployeeRequest, $0.CreateEmployeeResponse>(
+          '/user.UserService/CreateEmployee',
+          ($0.CreateEmployeeRequest value) => value.writeToBuffer(),
+          $0.CreateEmployeeResponse.fromBuffer);
+  static final _$deleteEmployee =
+      $grpc.ClientMethod<$0.CreateEmployeeResponse, $0.DeleteEmployeeResponse>(
+          '/user.UserService/DeleteEmployee',
+          ($0.CreateEmployeeResponse value) => value.writeToBuffer(),
+          $0.DeleteEmployeeResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('user.UserService')
@@ -149,149 +149,149 @@ abstract class UserServiceBase extends $grpc.Service {
   $core.String get $name => 'user.UserService';
 
   UserServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.RegisterStudentRequest,
-            $0.RegisterStudentResponse>(
-        'RegisterStudent',
-        registerStudent_Pre,
+    $addMethod(
+        $grpc.ServiceMethod<$0.CreateStudentRequest, $0.CreateStudentResponse>(
+            'CreateUser',
+            createUser_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.CreateStudentRequest.fromBuffer(value),
+            ($0.CreateStudentResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.CreateStudentResponse, $0.DeleteStudentResponse>(
+            'DeleteUser',
+            deleteUser_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.CreateStudentResponse.fromBuffer(value),
+            ($0.DeleteStudentResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.CreateTeacherRequest, $0.CreateTeacherResponse>(
+            'CreateTeacher',
+            createTeacher_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.CreateTeacherRequest.fromBuffer(value),
+            ($0.CreateTeacherResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.CreateTeacherResponse, $0.DeleteTeacherResponse>(
+            'DeleteTeacher',
+            deleteTeacher_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.CreateTeacherResponse.fromBuffer(value),
+            ($0.DeleteTeacherResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.CreateParentRequest, $0.CreateParentResponse>(
+            'CreateParent',
+            createParent_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.CreateParentRequest.fromBuffer(value),
+            ($0.CreateParentResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.CreateParentResponse, $0.DeleteParentResponse>(
+            'DeleteParent',
+            deleteParent_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.CreateParentResponse.fromBuffer(value),
+            ($0.DeleteParentResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateEmployeeRequest,
+            $0.CreateEmployeeResponse>(
+        'CreateEmployee',
+        createEmployee_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.RegisterStudentRequest.fromBuffer(value),
-        ($0.RegisterStudentResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.RegisterStudentResponse,
-            $0.UnregisterStudentResponse>(
-        'UnregisterStudent',
-        unregisterStudent_Pre,
+            $0.CreateEmployeeRequest.fromBuffer(value),
+        ($0.CreateEmployeeResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateEmployeeResponse,
+            $0.DeleteEmployeeResponse>(
+        'DeleteEmployee',
+        deleteEmployee_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.RegisterStudentResponse.fromBuffer(value),
-        ($0.UnregisterStudentResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.RegisterTeacherRequest,
-            $0.RegisterTeacherResponse>(
-        'RegisterTeacher',
-        registerTeacher_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.RegisterTeacherRequest.fromBuffer(value),
-        ($0.RegisterTeacherResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.RegisterTeacherResponse,
-            $0.UnregisterTeacherResponse>(
-        'UnregisterTeacher',
-        unregisterTeacher_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.RegisterTeacherResponse.fromBuffer(value),
-        ($0.UnregisterTeacherResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.RegisterParentRequest,
-            $0.RegisterParentResponse>(
-        'RegisterParent',
-        registerParent_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.RegisterParentRequest.fromBuffer(value),
-        ($0.RegisterParentResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.RegisterParentResponse,
-            $0.UnregisterParentResponse>(
-        'UnregisterParent',
-        unregisterParent_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.RegisterParentResponse.fromBuffer(value),
-        ($0.UnregisterParentResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.RegisterEmployeeRequest,
-            $0.RegisterEmployeeResponse>(
-        'RegisterEmployee',
-        registerEmployee_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.RegisterEmployeeRequest.fromBuffer(value),
-        ($0.RegisterEmployeeResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.RegisterEmployeeResponse,
-            $0.UnregisterEmployeeResponse>(
-        'UnregisterEmployee',
-        unregisterEmployee_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.RegisterEmployeeResponse.fromBuffer(value),
-        ($0.UnregisterEmployeeResponse value) => value.writeToBuffer()));
+            $0.CreateEmployeeResponse.fromBuffer(value),
+        ($0.DeleteEmployeeResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.RegisterStudentResponse> registerStudent_Pre(
+  $async.Future<$0.CreateStudentResponse> createUser_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.RegisterStudentRequest> $request) async {
-    return registerStudent($call, await $request);
+      $async.Future<$0.CreateStudentRequest> $request) async {
+    return createUser($call, await $request);
   }
 
-  $async.Future<$0.RegisterStudentResponse> registerStudent(
-      $grpc.ServiceCall call, $0.RegisterStudentRequest request);
+  $async.Future<$0.CreateStudentResponse> createUser(
+      $grpc.ServiceCall call, $0.CreateStudentRequest request);
 
-  $async.Future<$0.UnregisterStudentResponse> unregisterStudent_Pre(
+  $async.Future<$0.DeleteStudentResponse> deleteUser_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.RegisterStudentResponse> $request) async {
-    return unregisterStudent($call, await $request);
+      $async.Future<$0.CreateStudentResponse> $request) async {
+    return deleteUser($call, await $request);
   }
 
-  $async.Future<$0.UnregisterStudentResponse> unregisterStudent(
-      $grpc.ServiceCall call, $0.RegisterStudentResponse request);
+  $async.Future<$0.DeleteStudentResponse> deleteUser(
+      $grpc.ServiceCall call, $0.CreateStudentResponse request);
 
-  $async.Future<$0.RegisterTeacherResponse> registerTeacher_Pre(
+  $async.Future<$0.CreateTeacherResponse> createTeacher_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.RegisterTeacherRequest> $request) async {
-    return registerTeacher($call, await $request);
+      $async.Future<$0.CreateTeacherRequest> $request) async {
+    return createTeacher($call, await $request);
   }
 
-  $async.Future<$0.RegisterTeacherResponse> registerTeacher(
-      $grpc.ServiceCall call, $0.RegisterTeacherRequest request);
+  $async.Future<$0.CreateTeacherResponse> createTeacher(
+      $grpc.ServiceCall call, $0.CreateTeacherRequest request);
 
-  $async.Future<$0.UnregisterTeacherResponse> unregisterTeacher_Pre(
+  $async.Future<$0.DeleteTeacherResponse> deleteTeacher_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.RegisterTeacherResponse> $request) async {
-    return unregisterTeacher($call, await $request);
+      $async.Future<$0.CreateTeacherResponse> $request) async {
+    return deleteTeacher($call, await $request);
   }
 
-  $async.Future<$0.UnregisterTeacherResponse> unregisterTeacher(
-      $grpc.ServiceCall call, $0.RegisterTeacherResponse request);
+  $async.Future<$0.DeleteTeacherResponse> deleteTeacher(
+      $grpc.ServiceCall call, $0.CreateTeacherResponse request);
 
-  $async.Future<$0.RegisterParentResponse> registerParent_Pre(
+  $async.Future<$0.CreateParentResponse> createParent_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.RegisterParentRequest> $request) async {
-    return registerParent($call, await $request);
+      $async.Future<$0.CreateParentRequest> $request) async {
+    return createParent($call, await $request);
   }
 
-  $async.Future<$0.RegisterParentResponse> registerParent(
-      $grpc.ServiceCall call, $0.RegisterParentRequest request);
+  $async.Future<$0.CreateParentResponse> createParent(
+      $grpc.ServiceCall call, $0.CreateParentRequest request);
 
-  $async.Future<$0.UnregisterParentResponse> unregisterParent_Pre(
+  $async.Future<$0.DeleteParentResponse> deleteParent_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.RegisterParentResponse> $request) async {
-    return unregisterParent($call, await $request);
+      $async.Future<$0.CreateParentResponse> $request) async {
+    return deleteParent($call, await $request);
   }
 
-  $async.Future<$0.UnregisterParentResponse> unregisterParent(
-      $grpc.ServiceCall call, $0.RegisterParentResponse request);
+  $async.Future<$0.DeleteParentResponse> deleteParent(
+      $grpc.ServiceCall call, $0.CreateParentResponse request);
 
-  $async.Future<$0.RegisterEmployeeResponse> registerEmployee_Pre(
+  $async.Future<$0.CreateEmployeeResponse> createEmployee_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.RegisterEmployeeRequest> $request) async {
-    return registerEmployee($call, await $request);
+      $async.Future<$0.CreateEmployeeRequest> $request) async {
+    return createEmployee($call, await $request);
   }
 
-  $async.Future<$0.RegisterEmployeeResponse> registerEmployee(
-      $grpc.ServiceCall call, $0.RegisterEmployeeRequest request);
+  $async.Future<$0.CreateEmployeeResponse> createEmployee(
+      $grpc.ServiceCall call, $0.CreateEmployeeRequest request);
 
-  $async.Future<$0.UnregisterEmployeeResponse> unregisterEmployee_Pre(
+  $async.Future<$0.DeleteEmployeeResponse> deleteEmployee_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.RegisterEmployeeResponse> $request) async {
-    return unregisterEmployee($call, await $request);
+      $async.Future<$0.CreateEmployeeResponse> $request) async {
+    return deleteEmployee($call, await $request);
   }
 
-  $async.Future<$0.UnregisterEmployeeResponse> unregisterEmployee(
-      $grpc.ServiceCall call, $0.RegisterEmployeeResponse request);
+  $async.Future<$0.DeleteEmployeeResponse> deleteEmployee(
+      $grpc.ServiceCall call, $0.CreateEmployeeResponse request);
 }

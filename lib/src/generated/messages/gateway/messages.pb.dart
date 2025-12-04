@@ -71,6 +71,8 @@ class RegisterTeacherRequest extends $pb.GeneratedMessage {
   static RegisterTeacherRequest create() => RegisterTeacherRequest._();
   @$core.override
   RegisterTeacherRequest createEmptyInstance() => create();
+  static $pb.PbList<RegisterTeacherRequest> createRepeated() =>
+      $pb.PbList<RegisterTeacherRequest>();
   @$core.pragma('dart2js:noInline')
   static RegisterTeacherRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RegisterTeacherRequest>(create);
@@ -151,6 +153,8 @@ class RegisterTeacherResponse extends $pb.GeneratedMessage {
   static RegisterTeacherResponse create() => RegisterTeacherResponse._();
   @$core.override
   RegisterTeacherResponse createEmptyInstance() => create();
+  static $pb.PbList<RegisterTeacherResponse> createRepeated() =>
+      $pb.PbList<RegisterTeacherResponse>();
   @$core.pragma('dart2js:noInline')
   static RegisterTeacherResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RegisterTeacherResponse>(create);
@@ -230,6 +234,8 @@ class RegisterStudentRequest extends $pb.GeneratedMessage {
   static RegisterStudentRequest create() => RegisterStudentRequest._();
   @$core.override
   RegisterStudentRequest createEmptyInstance() => create();
+  static $pb.PbList<RegisterStudentRequest> createRepeated() =>
+      $pb.PbList<RegisterStudentRequest>();
   @$core.pragma('dart2js:noInline')
   static RegisterStudentRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RegisterStudentRequest>(create);
@@ -310,6 +316,8 @@ class RegisterStudentResponse extends $pb.GeneratedMessage {
   static RegisterStudentResponse create() => RegisterStudentResponse._();
   @$core.override
   RegisterStudentResponse createEmptyInstance() => create();
+  static $pb.PbList<RegisterStudentResponse> createRepeated() =>
+      $pb.PbList<RegisterStudentResponse>();
   @$core.pragma('dart2js:noInline')
   static RegisterStudentResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RegisterStudentResponse>(create);
@@ -388,6 +396,8 @@ class RegisterParentRequest extends $pb.GeneratedMessage {
   static RegisterParentRequest create() => RegisterParentRequest._();
   @$core.override
   RegisterParentRequest createEmptyInstance() => create();
+  static $pb.PbList<RegisterParentRequest> createRepeated() =>
+      $pb.PbList<RegisterParentRequest>();
   @$core.pragma('dart2js:noInline')
   static RegisterParentRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RegisterParentRequest>(create);
@@ -480,6 +490,8 @@ class RegisterParentResponse extends $pb.GeneratedMessage {
   static RegisterParentResponse create() => RegisterParentResponse._();
   @$core.override
   RegisterParentResponse createEmptyInstance() => create();
+  static $pb.PbList<RegisterParentResponse> createRepeated() =>
+      $pb.PbList<RegisterParentResponse>();
   @$core.pragma('dart2js:noInline')
   static RegisterParentResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RegisterParentResponse>(create);
@@ -552,6 +564,8 @@ class RegisterSchoolEmployeeRequest extends $pb.GeneratedMessage {
       RegisterSchoolEmployeeRequest._();
   @$core.override
   RegisterSchoolEmployeeRequest createEmptyInstance() => create();
+  static $pb.PbList<RegisterSchoolEmployeeRequest> createRepeated() =>
+      $pb.PbList<RegisterSchoolEmployeeRequest>();
   @$core.pragma('dart2js:noInline')
   static RegisterSchoolEmployeeRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RegisterSchoolEmployeeRequest>(create);
@@ -634,6 +648,8 @@ class RegisterSchoolEmployeeResponse extends $pb.GeneratedMessage {
       RegisterSchoolEmployeeResponse._();
   @$core.override
   RegisterSchoolEmployeeResponse createEmptyInstance() => create();
+  static $pb.PbList<RegisterSchoolEmployeeResponse> createRepeated() =>
+      $pb.PbList<RegisterSchoolEmployeeResponse>();
   @$core.pragma('dart2js:noInline')
   static RegisterSchoolEmployeeResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RegisterSchoolEmployeeResponse>(create);
@@ -700,6 +716,8 @@ class RegisterSchoolAdminRequest extends $pb.GeneratedMessage {
   static RegisterSchoolAdminRequest create() => RegisterSchoolAdminRequest._();
   @$core.override
   RegisterSchoolAdminRequest createEmptyInstance() => create();
+  static $pb.PbList<RegisterSchoolAdminRequest> createRepeated() =>
+      $pb.PbList<RegisterSchoolAdminRequest>();
   @$core.pragma('dart2js:noInline')
   static RegisterSchoolAdminRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RegisterSchoolAdminRequest>(create);
@@ -758,6 +776,8 @@ class RegisterSchoolAdminResponse extends $pb.GeneratedMessage {
       RegisterSchoolAdminResponse._();
   @$core.override
   RegisterSchoolAdminResponse createEmptyInstance() => create();
+  static $pb.PbList<RegisterSchoolAdminResponse> createRepeated() =>
+      $pb.PbList<RegisterSchoolAdminResponse>();
   @$core.pragma('dart2js:noInline')
   static RegisterSchoolAdminResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RegisterSchoolAdminResponse>(create);
@@ -838,6 +858,8 @@ class SchoolEmployeeRegistrationForm extends $pb.GeneratedMessage {
       SchoolEmployeeRegistrationForm._();
   @$core.override
   SchoolEmployeeRegistrationForm createEmptyInstance() => create();
+  static $pb.PbList<SchoolEmployeeRegistrationForm> createRepeated() =>
+      $pb.PbList<SchoolEmployeeRegistrationForm>();
   @$core.pragma('dart2js:noInline')
   static SchoolEmployeeRegistrationForm getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SchoolEmployeeRegistrationForm>(create);
@@ -973,6 +995,8 @@ class StudentRegistrationForm extends $pb.GeneratedMessage {
   static StudentRegistrationForm create() => StudentRegistrationForm._();
   @$core.override
   StudentRegistrationForm createEmptyInstance() => create();
+  static $pb.PbList<StudentRegistrationForm> createRepeated() =>
+      $pb.PbList<StudentRegistrationForm>();
   @$core.pragma('dart2js:noInline')
   static StudentRegistrationForm getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<StudentRegistrationForm>(create);
@@ -1093,6 +1117,8 @@ class TeacherRegistrationForm extends $pb.GeneratedMessage {
   static TeacherRegistrationForm create() => TeacherRegistrationForm._();
   @$core.override
   TeacherRegistrationForm createEmptyInstance() => create();
+  static $pb.PbList<TeacherRegistrationForm> createRepeated() =>
+      $pb.PbList<TeacherRegistrationForm>();
   @$core.pragma('dart2js:noInline')
   static TeacherRegistrationForm getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TeacherRegistrationForm>(create);
@@ -1202,6 +1228,7 @@ class ImageChunk extends $pb.GeneratedMessage {
   static ImageChunk create() => ImageChunk._();
   @$core.override
   ImageChunk createEmptyInstance() => create();
+  static $pb.PbList<ImageChunk> createRepeated() => $pb.PbList<ImageChunk>();
   @$core.pragma('dart2js:noInline')
   static ImageChunk getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ImageChunk>(create);

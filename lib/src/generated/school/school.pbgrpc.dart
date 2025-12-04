@@ -53,39 +53,39 @@ class SchoolServiceClient extends $grpc.Client {
     return $createUnaryCall(_$createClass, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.RegisterTeacherResponse> registerTeacher(
-    $0.RegisterTeacherRequest request, {
+  $grpc.ResponseFuture<$0.AddTeacherToSchoolResponse> addTeacherToSchool(
+    $0.AddTeacherToSchoolRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$registerTeacher, request, options: options);
+    return $createUnaryCall(_$addTeacherToSchool, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.RegisterEmployeeResponse> registerEmployee(
-    $0.RegisterEmployeeRequest request, {
+  $grpc.ResponseFuture<$0.AddEmployeeToSchoolResponse> addEmployeeToSchool(
+    $0.AddEmployeeToSchoolRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$registerEmployee, request, options: options);
+    return $createUnaryCall(_$addEmployeeToSchool, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.RegisterParentResponse> registerParent(
-    $0.RegisterParentRequest request, {
+  $grpc.ResponseFuture<$0.AddParentToSchoolResponse> addParentToSchool(
+    $0.AddParentToSchoolRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$registerParent, request, options: options);
+    return $createUnaryCall(_$addParentToSchool, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.RegisterAdminResponse> registerAdmin(
-    $0.RegisterAdminRequest request, {
+  $grpc.ResponseFuture<$0.AddAdminToSchoolResponse> addAdminToSchool(
+    $0.AddAdminToSchoolRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$registerAdmin, request, options: options);
+    return $createUnaryCall(_$addAdminToSchool, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.EnrollStudentResponse> enrollStudent(
-    $0.EnrollStudentRequest request, {
+  $grpc.ResponseFuture<$0.AddStudentToClassResponse> addStudentToClass(
+    $0.AddStudentToClassRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$enrollStudent, request, options: options);
+    return $createUnaryCall(_$addStudentToClass, request, options: options);
   }
 
   // method descriptors
@@ -105,31 +105,31 @@ class SchoolServiceClient extends $grpc.Client {
           '/school.SchoolService/CreateClass',
           ($0.CreateClassRequest value) => value.writeToBuffer(),
           $0.CreateClassResponse.fromBuffer);
-  static final _$registerTeacher =
-      $grpc.ClientMethod<$0.RegisterTeacherRequest, $0.RegisterTeacherResponse>(
-          '/school.SchoolService/RegisterTeacher',
-          ($0.RegisterTeacherRequest value) => value.writeToBuffer(),
-          $0.RegisterTeacherResponse.fromBuffer);
-  static final _$registerEmployee = $grpc.ClientMethod<
-          $0.RegisterEmployeeRequest, $0.RegisterEmployeeResponse>(
-      '/school.SchoolService/RegisterEmployee',
-      ($0.RegisterEmployeeRequest value) => value.writeToBuffer(),
-      $0.RegisterEmployeeResponse.fromBuffer);
-  static final _$registerParent =
-      $grpc.ClientMethod<$0.RegisterParentRequest, $0.RegisterParentResponse>(
-          '/school.SchoolService/RegisterParent',
-          ($0.RegisterParentRequest value) => value.writeToBuffer(),
-          $0.RegisterParentResponse.fromBuffer);
-  static final _$registerAdmin =
-      $grpc.ClientMethod<$0.RegisterAdminRequest, $0.RegisterAdminResponse>(
-          '/school.SchoolService/RegisterAdmin',
-          ($0.RegisterAdminRequest value) => value.writeToBuffer(),
-          $0.RegisterAdminResponse.fromBuffer);
-  static final _$enrollStudent =
-      $grpc.ClientMethod<$0.EnrollStudentRequest, $0.EnrollStudentResponse>(
-          '/school.SchoolService/EnrollStudent',
-          ($0.EnrollStudentRequest value) => value.writeToBuffer(),
-          $0.EnrollStudentResponse.fromBuffer);
+  static final _$addTeacherToSchool = $grpc.ClientMethod<
+          $0.AddTeacherToSchoolRequest, $0.AddTeacherToSchoolResponse>(
+      '/school.SchoolService/AddTeacherToSchool',
+      ($0.AddTeacherToSchoolRequest value) => value.writeToBuffer(),
+      $0.AddTeacherToSchoolResponse.fromBuffer);
+  static final _$addEmployeeToSchool = $grpc.ClientMethod<
+          $0.AddEmployeeToSchoolRequest, $0.AddEmployeeToSchoolResponse>(
+      '/school.SchoolService/AddEmployeeToSchool',
+      ($0.AddEmployeeToSchoolRequest value) => value.writeToBuffer(),
+      $0.AddEmployeeToSchoolResponse.fromBuffer);
+  static final _$addParentToSchool = $grpc.ClientMethod<
+          $0.AddParentToSchoolRequest, $0.AddParentToSchoolResponse>(
+      '/school.SchoolService/AddParentToSchool',
+      ($0.AddParentToSchoolRequest value) => value.writeToBuffer(),
+      $0.AddParentToSchoolResponse.fromBuffer);
+  static final _$addAdminToSchool = $grpc.ClientMethod<
+          $0.AddAdminToSchoolRequest, $0.AddAdminToSchoolResponse>(
+      '/school.SchoolService/AddAdminToSchool',
+      ($0.AddAdminToSchoolRequest value) => value.writeToBuffer(),
+      $0.AddAdminToSchoolResponse.fromBuffer);
+  static final _$addStudentToClass = $grpc.ClientMethod<
+          $0.AddStudentToClassRequest, $0.AddStudentToClassResponse>(
+      '/school.SchoolService/AddStudentToClass',
+      ($0.AddStudentToClassRequest value) => value.writeToBuffer(),
+      $0.AddStudentToClassResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -164,51 +164,51 @@ abstract class SchoolServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $0.CreateClassRequest.fromBuffer(value),
             ($0.CreateClassResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.RegisterTeacherRequest,
-            $0.RegisterTeacherResponse>(
-        'RegisterTeacher',
-        registerTeacher_Pre,
+    $addMethod($grpc.ServiceMethod<$0.AddTeacherToSchoolRequest,
+            $0.AddTeacherToSchoolResponse>(
+        'AddTeacherToSchool',
+        addTeacherToSchool_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.RegisterTeacherRequest.fromBuffer(value),
-        ($0.RegisterTeacherResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.RegisterEmployeeRequest,
-            $0.RegisterEmployeeResponse>(
-        'RegisterEmployee',
-        registerEmployee_Pre,
+            $0.AddTeacherToSchoolRequest.fromBuffer(value),
+        ($0.AddTeacherToSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AddEmployeeToSchoolRequest,
+            $0.AddEmployeeToSchoolResponse>(
+        'AddEmployeeToSchool',
+        addEmployeeToSchool_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.RegisterEmployeeRequest.fromBuffer(value),
-        ($0.RegisterEmployeeResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.RegisterParentRequest,
-            $0.RegisterParentResponse>(
-        'RegisterParent',
-        registerParent_Pre,
+            $0.AddEmployeeToSchoolRequest.fromBuffer(value),
+        ($0.AddEmployeeToSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AddParentToSchoolRequest,
+            $0.AddParentToSchoolResponse>(
+        'AddParentToSchool',
+        addParentToSchool_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.RegisterParentRequest.fromBuffer(value),
-        ($0.RegisterParentResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.RegisterAdminRequest, $0.RegisterAdminResponse>(
-            'RegisterAdmin',
-            registerAdmin_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $0.RegisterAdminRequest.fromBuffer(value),
-            ($0.RegisterAdminResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.EnrollStudentRequest, $0.EnrollStudentResponse>(
-            'EnrollStudent',
-            enrollStudent_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $0.EnrollStudentRequest.fromBuffer(value),
-            ($0.EnrollStudentResponse value) => value.writeToBuffer()));
+            $0.AddParentToSchoolRequest.fromBuffer(value),
+        ($0.AddParentToSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AddAdminToSchoolRequest,
+            $0.AddAdminToSchoolResponse>(
+        'AddAdminToSchool',
+        addAdminToSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.AddAdminToSchoolRequest.fromBuffer(value),
+        ($0.AddAdminToSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AddStudentToClassRequest,
+            $0.AddStudentToClassResponse>(
+        'AddStudentToClass',
+        addStudentToClass_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.AddStudentToClassRequest.fromBuffer(value),
+        ($0.AddStudentToClassResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -237,48 +237,48 @@ abstract class SchoolServiceBase extends $grpc.Service {
   $async.Future<$0.CreateClassResponse> createClass(
       $grpc.ServiceCall call, $0.CreateClassRequest request);
 
-  $async.Future<$0.RegisterTeacherResponse> registerTeacher_Pre(
+  $async.Future<$0.AddTeacherToSchoolResponse> addTeacherToSchool_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.RegisterTeacherRequest> $request) async {
-    return registerTeacher($call, await $request);
+      $async.Future<$0.AddTeacherToSchoolRequest> $request) async {
+    return addTeacherToSchool($call, await $request);
   }
 
-  $async.Future<$0.RegisterTeacherResponse> registerTeacher(
-      $grpc.ServiceCall call, $0.RegisterTeacherRequest request);
+  $async.Future<$0.AddTeacherToSchoolResponse> addTeacherToSchool(
+      $grpc.ServiceCall call, $0.AddTeacherToSchoolRequest request);
 
-  $async.Future<$0.RegisterEmployeeResponse> registerEmployee_Pre(
+  $async.Future<$0.AddEmployeeToSchoolResponse> addEmployeeToSchool_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.RegisterEmployeeRequest> $request) async {
-    return registerEmployee($call, await $request);
+      $async.Future<$0.AddEmployeeToSchoolRequest> $request) async {
+    return addEmployeeToSchool($call, await $request);
   }
 
-  $async.Future<$0.RegisterEmployeeResponse> registerEmployee(
-      $grpc.ServiceCall call, $0.RegisterEmployeeRequest request);
+  $async.Future<$0.AddEmployeeToSchoolResponse> addEmployeeToSchool(
+      $grpc.ServiceCall call, $0.AddEmployeeToSchoolRequest request);
 
-  $async.Future<$0.RegisterParentResponse> registerParent_Pre(
+  $async.Future<$0.AddParentToSchoolResponse> addParentToSchool_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.RegisterParentRequest> $request) async {
-    return registerParent($call, await $request);
+      $async.Future<$0.AddParentToSchoolRequest> $request) async {
+    return addParentToSchool($call, await $request);
   }
 
-  $async.Future<$0.RegisterParentResponse> registerParent(
-      $grpc.ServiceCall call, $0.RegisterParentRequest request);
+  $async.Future<$0.AddParentToSchoolResponse> addParentToSchool(
+      $grpc.ServiceCall call, $0.AddParentToSchoolRequest request);
 
-  $async.Future<$0.RegisterAdminResponse> registerAdmin_Pre(
+  $async.Future<$0.AddAdminToSchoolResponse> addAdminToSchool_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.RegisterAdminRequest> $request) async {
-    return registerAdmin($call, await $request);
+      $async.Future<$0.AddAdminToSchoolRequest> $request) async {
+    return addAdminToSchool($call, await $request);
   }
 
-  $async.Future<$0.RegisterAdminResponse> registerAdmin(
-      $grpc.ServiceCall call, $0.RegisterAdminRequest request);
+  $async.Future<$0.AddAdminToSchoolResponse> addAdminToSchool(
+      $grpc.ServiceCall call, $0.AddAdminToSchoolRequest request);
 
-  $async.Future<$0.EnrollStudentResponse> enrollStudent_Pre(
+  $async.Future<$0.AddStudentToClassResponse> addStudentToClass_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.EnrollStudentRequest> $request) async {
-    return enrollStudent($call, await $request);
+      $async.Future<$0.AddStudentToClassRequest> $request) async {
+    return addStudentToClass($call, await $request);
   }
 
-  $async.Future<$0.EnrollStudentResponse> enrollStudent(
-      $grpc.ServiceCall call, $0.EnrollStudentRequest request);
+  $async.Future<$0.AddStudentToClassResponse> addStudentToClass(
+      $grpc.ServiceCall call, $0.AddStudentToClassRequest request);
 }

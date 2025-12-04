@@ -42,9 +42,9 @@ final $typed_data.Uint8List loginResponseDescriptor = $convert.base64Decode(
     'Cg1Mb2dpblJlc3BvbnNlEiEKDGFjY2Vzc190b2tlbhgBIAEoCVILYWNjZXNzVG9rZW4SIwoNcm'
     'VmcmVzaF90b2tlbhgCIAEoCVIMcmVmcmVzaFRva2Vu');
 
-@$core.Deprecated('Use registerRequestDescriptor instead')
-const RegisterRequest$json = {
-  '1': 'RegisterRequest',
+@$core.Deprecated('Use addUserRequestDescriptor instead')
+const AddUserRequest$json = {
+  '1': 'AddUserRequest',
   '2': [
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
     {
@@ -71,24 +71,24 @@ const RegisterRequest$json = {
   ],
 };
 
-/// Descriptor for `RegisterRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List registerRequestDescriptor = $convert.base64Decode(
-    'Cg9SZWdpc3RlclJlcXVlc3QSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEikKBHJvbGUYAiABKA'
-    '4yFS5jb21tb25fbWVzc2FnZXMuUm9sZVIEcm9sZRIdCgpmaXJzdF9uYW1lGAMgASgJUglmaXJz'
-    'dE5hbWUSJAoLc2Vjb25kX25hbWUYBCABKAlIAFIKc2Vjb25kTmFtZYgBAUIOCgxfc2Vjb25kX2'
-    '5hbWU=');
+/// Descriptor for `AddUserRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addUserRequestDescriptor = $convert.base64Decode(
+    'Cg5BZGRVc2VyUmVxdWVzdBIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQSKQoEcm9sZRgCIAEoDj'
+    'IVLmNvbW1vbl9tZXNzYWdlcy5Sb2xlUgRyb2xlEh0KCmZpcnN0X25hbWUYAyABKAlSCWZpcnN0'
+    'TmFtZRIkCgtzZWNvbmRfbmFtZRgEIAEoCUgAUgpzZWNvbmROYW1liAEBQg4KDF9zZWNvbmRfbm'
+    'FtZQ==');
 
-@$core.Deprecated('Use registerResponseDescriptor instead')
-const RegisterResponse$json = {
-  '1': 'RegisterResponse',
+@$core.Deprecated('Use addUserResponseDescriptor instead')
+const AddUserResponse$json = {
+  '1': 'AddUserResponse',
   '2': [
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
   ],
 };
 
-/// Descriptor for `RegisterResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List registerResponseDescriptor = $convert.base64Decode(
-    'ChBSZWdpc3RlclJlc3BvbnNlEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZA==');
+/// Descriptor for `AddUserResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addUserResponseDescriptor = $convert
+    .base64Decode('Cg9BZGRVc2VyUmVzcG9uc2USFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklk');
 
 @$core.Deprecated('Use refreshLoginRequestDescriptor instead')
 const RefreshLoginRequest$json = {
@@ -103,11 +103,11 @@ final $typed_data.Uint8List refreshLoginRequestDescriptor = $convert.base64Decod
     'ChNSZWZyZXNoTG9naW5SZXF1ZXN0EiMKDXJlZnJlc2hfdG9rZW4YASABKAlSDHJlZnJlc2hUb2'
     'tlbg==');
 
-@$core.Deprecated('Use unregisterResponseDescriptor instead')
-const UnregisterResponse$json = {
-  '1': 'UnregisterResponse',
+@$core.Deprecated('Use removeUserResponseDescriptor instead')
+const RemoveUserResponse$json = {
+  '1': 'RemoveUserResponse',
 };
 
-/// Descriptor for `UnregisterResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List unregisterResponseDescriptor =
-    $convert.base64Decode('ChJVbnJlZ2lzdGVyUmVzcG9uc2U=');
+/// Descriptor for `RemoveUserResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List removeUserResponseDescriptor =
+    $convert.base64Decode('ChJSZW1vdmVVc2VyUmVzcG9uc2U=');

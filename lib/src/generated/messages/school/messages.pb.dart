@@ -59,6 +59,8 @@ class CreateSchoolRequest extends $pb.GeneratedMessage {
   static CreateSchoolRequest create() => CreateSchoolRequest._();
   @$core.override
   CreateSchoolRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateSchoolRequest> createRepeated() =>
+      $pb.PbList<CreateSchoolRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateSchoolRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateSchoolRequest>(create);
@@ -114,6 +116,8 @@ class CreateSchoolResponse extends $pb.GeneratedMessage {
   static CreateSchoolResponse create() => CreateSchoolResponse._();
   @$core.override
   CreateSchoolResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateSchoolResponse> createRepeated() =>
+      $pb.PbList<CreateSchoolResponse>();
   @$core.pragma('dart2js:noInline')
   static CreateSchoolResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateSchoolResponse>(create);
@@ -184,6 +188,8 @@ class CreateSessionRequest extends $pb.GeneratedMessage {
   static CreateSessionRequest create() => CreateSessionRequest._();
   @$core.override
   CreateSessionRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateSessionRequest> createRepeated() =>
+      $pb.PbList<CreateSessionRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateSessionRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateSessionRequest>(create);
@@ -280,6 +286,8 @@ class CreateSessionResponse extends $pb.GeneratedMessage {
   static CreateSessionResponse create() => CreateSessionResponse._();
   @$core.override
   CreateSessionResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateSessionResponse> createRepeated() =>
+      $pb.PbList<CreateSessionResponse>();
   @$core.pragma('dart2js:noInline')
   static CreateSessionResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateSessionResponse>(create);
@@ -344,6 +352,8 @@ class CreateClassRequest extends $pb.GeneratedMessage {
   static CreateClassRequest create() => CreateClassRequest._();
   @$core.override
   CreateClassRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateClassRequest> createRepeated() =>
+      $pb.PbList<CreateClassRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateClassRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateClassRequest>(create);
@@ -426,6 +436,8 @@ class CreateClassResponse extends $pb.GeneratedMessage {
   static CreateClassResponse create() => CreateClassResponse._();
   @$core.override
   CreateClassResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateClassResponse> createRepeated() =>
+      $pb.PbList<CreateClassResponse>();
   @$core.pragma('dart2js:noInline')
   static CreateClassResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateClassResponse>(create);
@@ -441,8 +453,8 @@ class CreateClassResponse extends $pb.GeneratedMessage {
   void clearClassId() => $_clearField(1);
 }
 
-class RegisterTeacherRequest extends $pb.GeneratedMessage {
-  factory RegisterTeacherRequest({
+class AddTeacherToSchoolRequest extends $pb.GeneratedMessage {
+  factory AddTeacherToSchoolRequest({
     $core.String? schoolId,
     $core.String? teacherId,
   }) {
@@ -452,17 +464,17 @@ class RegisterTeacherRequest extends $pb.GeneratedMessage {
     return result;
   }
 
-  RegisterTeacherRequest._();
+  AddTeacherToSchoolRequest._();
 
-  factory RegisterTeacherRequest.fromBuffer($core.List<$core.int> data,
+  factory AddTeacherToSchoolRequest.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory RegisterTeacherRequest.fromJson($core.String json,
+  factory AddTeacherToSchoolRequest.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RegisterTeacherRequest',
+      _omitMessageNames ? '' : 'AddTeacherToSchoolRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -471,24 +483,26 @@ class RegisterTeacherRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterTeacherRequest clone() => deepCopy();
+  AddTeacherToSchoolRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterTeacherRequest copyWith(
-          void Function(RegisterTeacherRequest) updates) =>
-      super.copyWith((message) => updates(message as RegisterTeacherRequest))
-          as RegisterTeacherRequest;
+  AddTeacherToSchoolRequest copyWith(
+          void Function(AddTeacherToSchoolRequest) updates) =>
+      super.copyWith((message) => updates(message as AddTeacherToSchoolRequest))
+          as AddTeacherToSchoolRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RegisterTeacherRequest create() => RegisterTeacherRequest._();
+  static AddTeacherToSchoolRequest create() => AddTeacherToSchoolRequest._();
   @$core.override
-  RegisterTeacherRequest createEmptyInstance() => create();
+  AddTeacherToSchoolRequest createEmptyInstance() => create();
+  static $pb.PbList<AddTeacherToSchoolRequest> createRepeated() =>
+      $pb.PbList<AddTeacherToSchoolRequest>();
   @$core.pragma('dart2js:noInline')
-  static RegisterTeacherRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RegisterTeacherRequest>(create);
-  static RegisterTeacherRequest? _defaultInstance;
+  static AddTeacherToSchoolRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddTeacherToSchoolRequest>(create);
+  static AddTeacherToSchoolRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get schoolId => $_getSZ(0);
@@ -509,8 +523,8 @@ class RegisterTeacherRequest extends $pb.GeneratedMessage {
   void clearTeacherId() => $_clearField(2);
 }
 
-class RegisterTeacherResponse extends $pb.GeneratedMessage {
-  factory RegisterTeacherResponse({
+class AddTeacherToSchoolResponse extends $pb.GeneratedMessage {
+  factory AddTeacherToSchoolResponse({
     $core.String? registrationId,
   }) {
     final result = create();
@@ -518,17 +532,17 @@ class RegisterTeacherResponse extends $pb.GeneratedMessage {
     return result;
   }
 
-  RegisterTeacherResponse._();
+  AddTeacherToSchoolResponse._();
 
-  factory RegisterTeacherResponse.fromBuffer($core.List<$core.int> data,
+  factory AddTeacherToSchoolResponse.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory RegisterTeacherResponse.fromJson($core.String json,
+  factory AddTeacherToSchoolResponse.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RegisterTeacherResponse',
+      _omitMessageNames ? '' : 'AddTeacherToSchoolResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -536,24 +550,27 @@ class RegisterTeacherResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterTeacherResponse clone() => deepCopy();
+  AddTeacherToSchoolResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterTeacherResponse copyWith(
-          void Function(RegisterTeacherResponse) updates) =>
-      super.copyWith((message) => updates(message as RegisterTeacherResponse))
-          as RegisterTeacherResponse;
+  AddTeacherToSchoolResponse copyWith(
+          void Function(AddTeacherToSchoolResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as AddTeacherToSchoolResponse))
+          as AddTeacherToSchoolResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RegisterTeacherResponse create() => RegisterTeacherResponse._();
+  static AddTeacherToSchoolResponse create() => AddTeacherToSchoolResponse._();
   @$core.override
-  RegisterTeacherResponse createEmptyInstance() => create();
+  AddTeacherToSchoolResponse createEmptyInstance() => create();
+  static $pb.PbList<AddTeacherToSchoolResponse> createRepeated() =>
+      $pb.PbList<AddTeacherToSchoolResponse>();
   @$core.pragma('dart2js:noInline')
-  static RegisterTeacherResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RegisterTeacherResponse>(create);
-  static RegisterTeacherResponse? _defaultInstance;
+  static AddTeacherToSchoolResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddTeacherToSchoolResponse>(create);
+  static AddTeacherToSchoolResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get registrationId => $_getSZ(0);
@@ -565,8 +582,8 @@ class RegisterTeacherResponse extends $pb.GeneratedMessage {
   void clearRegistrationId() => $_clearField(1);
 }
 
-class RegisterEmployeeRequest extends $pb.GeneratedMessage {
-  factory RegisterEmployeeRequest({
+class AddEmployeeToSchoolRequest extends $pb.GeneratedMessage {
+  factory AddEmployeeToSchoolRequest({
     $core.String? schoolId,
     $core.String? employeeId,
   }) {
@@ -576,17 +593,17 @@ class RegisterEmployeeRequest extends $pb.GeneratedMessage {
     return result;
   }
 
-  RegisterEmployeeRequest._();
+  AddEmployeeToSchoolRequest._();
 
-  factory RegisterEmployeeRequest.fromBuffer($core.List<$core.int> data,
+  factory AddEmployeeToSchoolRequest.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory RegisterEmployeeRequest.fromJson($core.String json,
+  factory AddEmployeeToSchoolRequest.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RegisterEmployeeRequest',
+      _omitMessageNames ? '' : 'AddEmployeeToSchoolRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -595,24 +612,27 @@ class RegisterEmployeeRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterEmployeeRequest clone() => deepCopy();
+  AddEmployeeToSchoolRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterEmployeeRequest copyWith(
-          void Function(RegisterEmployeeRequest) updates) =>
-      super.copyWith((message) => updates(message as RegisterEmployeeRequest))
-          as RegisterEmployeeRequest;
+  AddEmployeeToSchoolRequest copyWith(
+          void Function(AddEmployeeToSchoolRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as AddEmployeeToSchoolRequest))
+          as AddEmployeeToSchoolRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RegisterEmployeeRequest create() => RegisterEmployeeRequest._();
+  static AddEmployeeToSchoolRequest create() => AddEmployeeToSchoolRequest._();
   @$core.override
-  RegisterEmployeeRequest createEmptyInstance() => create();
+  AddEmployeeToSchoolRequest createEmptyInstance() => create();
+  static $pb.PbList<AddEmployeeToSchoolRequest> createRepeated() =>
+      $pb.PbList<AddEmployeeToSchoolRequest>();
   @$core.pragma('dart2js:noInline')
-  static RegisterEmployeeRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RegisterEmployeeRequest>(create);
-  static RegisterEmployeeRequest? _defaultInstance;
+  static AddEmployeeToSchoolRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddEmployeeToSchoolRequest>(create);
+  static AddEmployeeToSchoolRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get schoolId => $_getSZ(0);
@@ -633,8 +653,8 @@ class RegisterEmployeeRequest extends $pb.GeneratedMessage {
   void clearEmployeeId() => $_clearField(2);
 }
 
-class RegisterEmployeeResponse extends $pb.GeneratedMessage {
-  factory RegisterEmployeeResponse({
+class AddEmployeeToSchoolResponse extends $pb.GeneratedMessage {
+  factory AddEmployeeToSchoolResponse({
     $core.String? registrationId,
   }) {
     final result = create();
@@ -642,17 +662,17 @@ class RegisterEmployeeResponse extends $pb.GeneratedMessage {
     return result;
   }
 
-  RegisterEmployeeResponse._();
+  AddEmployeeToSchoolResponse._();
 
-  factory RegisterEmployeeResponse.fromBuffer($core.List<$core.int> data,
+  factory AddEmployeeToSchoolResponse.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory RegisterEmployeeResponse.fromJson($core.String json,
+  factory AddEmployeeToSchoolResponse.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RegisterEmployeeResponse',
+      _omitMessageNames ? '' : 'AddEmployeeToSchoolResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -660,24 +680,28 @@ class RegisterEmployeeResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterEmployeeResponse clone() => deepCopy();
+  AddEmployeeToSchoolResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterEmployeeResponse copyWith(
-          void Function(RegisterEmployeeResponse) updates) =>
-      super.copyWith((message) => updates(message as RegisterEmployeeResponse))
-          as RegisterEmployeeResponse;
+  AddEmployeeToSchoolResponse copyWith(
+          void Function(AddEmployeeToSchoolResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as AddEmployeeToSchoolResponse))
+          as AddEmployeeToSchoolResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RegisterEmployeeResponse create() => RegisterEmployeeResponse._();
+  static AddEmployeeToSchoolResponse create() =>
+      AddEmployeeToSchoolResponse._();
   @$core.override
-  RegisterEmployeeResponse createEmptyInstance() => create();
+  AddEmployeeToSchoolResponse createEmptyInstance() => create();
+  static $pb.PbList<AddEmployeeToSchoolResponse> createRepeated() =>
+      $pb.PbList<AddEmployeeToSchoolResponse>();
   @$core.pragma('dart2js:noInline')
-  static RegisterEmployeeResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RegisterEmployeeResponse>(create);
-  static RegisterEmployeeResponse? _defaultInstance;
+  static AddEmployeeToSchoolResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddEmployeeToSchoolResponse>(create);
+  static AddEmployeeToSchoolResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get registrationId => $_getSZ(0);
@@ -689,8 +713,8 @@ class RegisterEmployeeResponse extends $pb.GeneratedMessage {
   void clearRegistrationId() => $_clearField(1);
 }
 
-class RegisterParentRequest extends $pb.GeneratedMessage {
-  factory RegisterParentRequest({
+class AddParentToSchoolRequest extends $pb.GeneratedMessage {
+  factory AddParentToSchoolRequest({
     $core.String? schoolId,
     $core.String? parentId,
   }) {
@@ -700,17 +724,17 @@ class RegisterParentRequest extends $pb.GeneratedMessage {
     return result;
   }
 
-  RegisterParentRequest._();
+  AddParentToSchoolRequest._();
 
-  factory RegisterParentRequest.fromBuffer($core.List<$core.int> data,
+  factory AddParentToSchoolRequest.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory RegisterParentRequest.fromJson($core.String json,
+  factory AddParentToSchoolRequest.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RegisterParentRequest',
+      _omitMessageNames ? '' : 'AddParentToSchoolRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -719,24 +743,26 @@ class RegisterParentRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterParentRequest clone() => deepCopy();
+  AddParentToSchoolRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterParentRequest copyWith(
-          void Function(RegisterParentRequest) updates) =>
-      super.copyWith((message) => updates(message as RegisterParentRequest))
-          as RegisterParentRequest;
+  AddParentToSchoolRequest copyWith(
+          void Function(AddParentToSchoolRequest) updates) =>
+      super.copyWith((message) => updates(message as AddParentToSchoolRequest))
+          as AddParentToSchoolRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RegisterParentRequest create() => RegisterParentRequest._();
+  static AddParentToSchoolRequest create() => AddParentToSchoolRequest._();
   @$core.override
-  RegisterParentRequest createEmptyInstance() => create();
+  AddParentToSchoolRequest createEmptyInstance() => create();
+  static $pb.PbList<AddParentToSchoolRequest> createRepeated() =>
+      $pb.PbList<AddParentToSchoolRequest>();
   @$core.pragma('dart2js:noInline')
-  static RegisterParentRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RegisterParentRequest>(create);
-  static RegisterParentRequest? _defaultInstance;
+  static AddParentToSchoolRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddParentToSchoolRequest>(create);
+  static AddParentToSchoolRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get schoolId => $_getSZ(0);
@@ -757,8 +783,8 @@ class RegisterParentRequest extends $pb.GeneratedMessage {
   void clearParentId() => $_clearField(2);
 }
 
-class RegisterParentResponse extends $pb.GeneratedMessage {
-  factory RegisterParentResponse({
+class AddParentToSchoolResponse extends $pb.GeneratedMessage {
+  factory AddParentToSchoolResponse({
     $core.String? registrationId,
   }) {
     final result = create();
@@ -766,17 +792,17 @@ class RegisterParentResponse extends $pb.GeneratedMessage {
     return result;
   }
 
-  RegisterParentResponse._();
+  AddParentToSchoolResponse._();
 
-  factory RegisterParentResponse.fromBuffer($core.List<$core.int> data,
+  factory AddParentToSchoolResponse.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory RegisterParentResponse.fromJson($core.String json,
+  factory AddParentToSchoolResponse.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RegisterParentResponse',
+      _omitMessageNames ? '' : 'AddParentToSchoolResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -784,24 +810,26 @@ class RegisterParentResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterParentResponse clone() => deepCopy();
+  AddParentToSchoolResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterParentResponse copyWith(
-          void Function(RegisterParentResponse) updates) =>
-      super.copyWith((message) => updates(message as RegisterParentResponse))
-          as RegisterParentResponse;
+  AddParentToSchoolResponse copyWith(
+          void Function(AddParentToSchoolResponse) updates) =>
+      super.copyWith((message) => updates(message as AddParentToSchoolResponse))
+          as AddParentToSchoolResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RegisterParentResponse create() => RegisterParentResponse._();
+  static AddParentToSchoolResponse create() => AddParentToSchoolResponse._();
   @$core.override
-  RegisterParentResponse createEmptyInstance() => create();
+  AddParentToSchoolResponse createEmptyInstance() => create();
+  static $pb.PbList<AddParentToSchoolResponse> createRepeated() =>
+      $pb.PbList<AddParentToSchoolResponse>();
   @$core.pragma('dart2js:noInline')
-  static RegisterParentResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RegisterParentResponse>(create);
-  static RegisterParentResponse? _defaultInstance;
+  static AddParentToSchoolResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddParentToSchoolResponse>(create);
+  static AddParentToSchoolResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get registrationId => $_getSZ(0);
@@ -813,8 +841,8 @@ class RegisterParentResponse extends $pb.GeneratedMessage {
   void clearRegistrationId() => $_clearField(1);
 }
 
-class RegisterAdminRequest extends $pb.GeneratedMessage {
-  factory RegisterAdminRequest({
+class AddAdminToSchoolRequest extends $pb.GeneratedMessage {
+  factory AddAdminToSchoolRequest({
     $core.String? schoolId,
   }) {
     final result = create();
@@ -822,17 +850,17 @@ class RegisterAdminRequest extends $pb.GeneratedMessage {
     return result;
   }
 
-  RegisterAdminRequest._();
+  AddAdminToSchoolRequest._();
 
-  factory RegisterAdminRequest.fromBuffer($core.List<$core.int> data,
+  factory AddAdminToSchoolRequest.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory RegisterAdminRequest.fromJson($core.String json,
+  factory AddAdminToSchoolRequest.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RegisterAdminRequest',
+      _omitMessageNames ? '' : 'AddAdminToSchoolRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -840,23 +868,26 @@ class RegisterAdminRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterAdminRequest clone() => deepCopy();
+  AddAdminToSchoolRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterAdminRequest copyWith(void Function(RegisterAdminRequest) updates) =>
-      super.copyWith((message) => updates(message as RegisterAdminRequest))
-          as RegisterAdminRequest;
+  AddAdminToSchoolRequest copyWith(
+          void Function(AddAdminToSchoolRequest) updates) =>
+      super.copyWith((message) => updates(message as AddAdminToSchoolRequest))
+          as AddAdminToSchoolRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RegisterAdminRequest create() => RegisterAdminRequest._();
+  static AddAdminToSchoolRequest create() => AddAdminToSchoolRequest._();
   @$core.override
-  RegisterAdminRequest createEmptyInstance() => create();
+  AddAdminToSchoolRequest createEmptyInstance() => create();
+  static $pb.PbList<AddAdminToSchoolRequest> createRepeated() =>
+      $pb.PbList<AddAdminToSchoolRequest>();
   @$core.pragma('dart2js:noInline')
-  static RegisterAdminRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RegisterAdminRequest>(create);
-  static RegisterAdminRequest? _defaultInstance;
+  static AddAdminToSchoolRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddAdminToSchoolRequest>(create);
+  static AddAdminToSchoolRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get schoolId => $_getSZ(0);
@@ -868,8 +899,8 @@ class RegisterAdminRequest extends $pb.GeneratedMessage {
   void clearSchoolId() => $_clearField(1);
 }
 
-class RegisterAdminResponse extends $pb.GeneratedMessage {
-  factory RegisterAdminResponse({
+class AddAdminToSchoolResponse extends $pb.GeneratedMessage {
+  factory AddAdminToSchoolResponse({
     $core.String? registrationId,
   }) {
     final result = create();
@@ -877,17 +908,17 @@ class RegisterAdminResponse extends $pb.GeneratedMessage {
     return result;
   }
 
-  RegisterAdminResponse._();
+  AddAdminToSchoolResponse._();
 
-  factory RegisterAdminResponse.fromBuffer($core.List<$core.int> data,
+  factory AddAdminToSchoolResponse.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory RegisterAdminResponse.fromJson($core.String json,
+  factory AddAdminToSchoolResponse.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RegisterAdminResponse',
+      _omitMessageNames ? '' : 'AddAdminToSchoolResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -895,24 +926,26 @@ class RegisterAdminResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterAdminResponse clone() => deepCopy();
+  AddAdminToSchoolResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterAdminResponse copyWith(
-          void Function(RegisterAdminResponse) updates) =>
-      super.copyWith((message) => updates(message as RegisterAdminResponse))
-          as RegisterAdminResponse;
+  AddAdminToSchoolResponse copyWith(
+          void Function(AddAdminToSchoolResponse) updates) =>
+      super.copyWith((message) => updates(message as AddAdminToSchoolResponse))
+          as AddAdminToSchoolResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RegisterAdminResponse create() => RegisterAdminResponse._();
+  static AddAdminToSchoolResponse create() => AddAdminToSchoolResponse._();
   @$core.override
-  RegisterAdminResponse createEmptyInstance() => create();
+  AddAdminToSchoolResponse createEmptyInstance() => create();
+  static $pb.PbList<AddAdminToSchoolResponse> createRepeated() =>
+      $pb.PbList<AddAdminToSchoolResponse>();
   @$core.pragma('dart2js:noInline')
-  static RegisterAdminResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RegisterAdminResponse>(create);
-  static RegisterAdminResponse? _defaultInstance;
+  static AddAdminToSchoolResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddAdminToSchoolResponse>(create);
+  static AddAdminToSchoolResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get registrationId => $_getSZ(0);
@@ -924,8 +957,8 @@ class RegisterAdminResponse extends $pb.GeneratedMessage {
   void clearRegistrationId() => $_clearField(1);
 }
 
-class EnrollStudentRequest extends $pb.GeneratedMessage {
-  factory EnrollStudentRequest({
+class AddStudentToClassRequest extends $pb.GeneratedMessage {
+  factory AddStudentToClassRequest({
     $core.String? classId,
     $core.String? studentId,
   }) {
@@ -935,17 +968,17 @@ class EnrollStudentRequest extends $pb.GeneratedMessage {
     return result;
   }
 
-  EnrollStudentRequest._();
+  AddStudentToClassRequest._();
 
-  factory EnrollStudentRequest.fromBuffer($core.List<$core.int> data,
+  factory AddStudentToClassRequest.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory EnrollStudentRequest.fromJson($core.String json,
+  factory AddStudentToClassRequest.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'EnrollStudentRequest',
+      _omitMessageNames ? '' : 'AddStudentToClassRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -954,23 +987,26 @@ class EnrollStudentRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EnrollStudentRequest clone() => deepCopy();
+  AddStudentToClassRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EnrollStudentRequest copyWith(void Function(EnrollStudentRequest) updates) =>
-      super.copyWith((message) => updates(message as EnrollStudentRequest))
-          as EnrollStudentRequest;
+  AddStudentToClassRequest copyWith(
+          void Function(AddStudentToClassRequest) updates) =>
+      super.copyWith((message) => updates(message as AddStudentToClassRequest))
+          as AddStudentToClassRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static EnrollStudentRequest create() => EnrollStudentRequest._();
+  static AddStudentToClassRequest create() => AddStudentToClassRequest._();
   @$core.override
-  EnrollStudentRequest createEmptyInstance() => create();
+  AddStudentToClassRequest createEmptyInstance() => create();
+  static $pb.PbList<AddStudentToClassRequest> createRepeated() =>
+      $pb.PbList<AddStudentToClassRequest>();
   @$core.pragma('dart2js:noInline')
-  static EnrollStudentRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<EnrollStudentRequest>(create);
-  static EnrollStudentRequest? _defaultInstance;
+  static AddStudentToClassRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddStudentToClassRequest>(create);
+  static AddStudentToClassRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get classId => $_getSZ(0);
@@ -991,8 +1027,8 @@ class EnrollStudentRequest extends $pb.GeneratedMessage {
   void clearStudentId() => $_clearField(2);
 }
 
-class EnrollStudentResponse extends $pb.GeneratedMessage {
-  factory EnrollStudentResponse({
+class AddStudentToClassResponse extends $pb.GeneratedMessage {
+  factory AddStudentToClassResponse({
     $core.String? enrollmentId,
   }) {
     final result = create();
@@ -1000,17 +1036,17 @@ class EnrollStudentResponse extends $pb.GeneratedMessage {
     return result;
   }
 
-  EnrollStudentResponse._();
+  AddStudentToClassResponse._();
 
-  factory EnrollStudentResponse.fromBuffer($core.List<$core.int> data,
+  factory AddStudentToClassResponse.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory EnrollStudentResponse.fromJson($core.String json,
+  factory AddStudentToClassResponse.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'EnrollStudentResponse',
+      _omitMessageNames ? '' : 'AddStudentToClassResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -1018,24 +1054,26 @@ class EnrollStudentResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EnrollStudentResponse clone() => deepCopy();
+  AddStudentToClassResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EnrollStudentResponse copyWith(
-          void Function(EnrollStudentResponse) updates) =>
-      super.copyWith((message) => updates(message as EnrollStudentResponse))
-          as EnrollStudentResponse;
+  AddStudentToClassResponse copyWith(
+          void Function(AddStudentToClassResponse) updates) =>
+      super.copyWith((message) => updates(message as AddStudentToClassResponse))
+          as AddStudentToClassResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static EnrollStudentResponse create() => EnrollStudentResponse._();
+  static AddStudentToClassResponse create() => AddStudentToClassResponse._();
   @$core.override
-  EnrollStudentResponse createEmptyInstance() => create();
+  AddStudentToClassResponse createEmptyInstance() => create();
+  static $pb.PbList<AddStudentToClassResponse> createRepeated() =>
+      $pb.PbList<AddStudentToClassResponse>();
   @$core.pragma('dart2js:noInline')
-  static EnrollStudentResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<EnrollStudentResponse>(create);
-  static EnrollStudentResponse? _defaultInstance;
+  static AddStudentToClassResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddStudentToClassResponse>(create);
+  static AddStudentToClassResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get enrollmentId => $_getSZ(0);

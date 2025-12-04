@@ -60,6 +60,8 @@ class LoginRequest extends $pb.GeneratedMessage {
   static LoginRequest create() => LoginRequest._();
   @$core.override
   LoginRequest createEmptyInstance() => create();
+  static $pb.PbList<LoginRequest> createRepeated() =>
+      $pb.PbList<LoginRequest>();
   @$core.pragma('dart2js:noInline')
   static LoginRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<LoginRequest>(create);
@@ -126,6 +128,8 @@ class LoginResponse extends $pb.GeneratedMessage {
   static LoginResponse create() => LoginResponse._();
   @$core.override
   LoginResponse createEmptyInstance() => create();
+  static $pb.PbList<LoginResponse> createRepeated() =>
+      $pb.PbList<LoginResponse>();
   @$core.pragma('dart2js:noInline')
   static LoginResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<LoginResponse>(create);
@@ -150,8 +154,8 @@ class LoginResponse extends $pb.GeneratedMessage {
   void clearRefreshToken() => $_clearField(2);
 }
 
-class RegisterRequest extends $pb.GeneratedMessage {
-  factory RegisterRequest({
+class AddUserRequest extends $pb.GeneratedMessage {
+  factory AddUserRequest({
     $core.String? userId,
     $0.Role? role,
     $core.String? firstName,
@@ -165,17 +169,17 @@ class RegisterRequest extends $pb.GeneratedMessage {
     return result;
   }
 
-  RegisterRequest._();
+  AddUserRequest._();
 
-  factory RegisterRequest.fromBuffer($core.List<$core.int> data,
+  factory AddUserRequest.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory RegisterRequest.fromJson($core.String json,
+  factory AddUserRequest.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RegisterRequest',
+      _omitMessageNames ? '' : 'AddUserRequest',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'userId')
@@ -185,23 +189,25 @@ class RegisterRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterRequest clone() => deepCopy();
+  AddUserRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterRequest copyWith(void Function(RegisterRequest) updates) =>
-      super.copyWith((message) => updates(message as RegisterRequest))
-          as RegisterRequest;
+  AddUserRequest copyWith(void Function(AddUserRequest) updates) =>
+      super.copyWith((message) => updates(message as AddUserRequest))
+          as AddUserRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RegisterRequest create() => RegisterRequest._();
+  static AddUserRequest create() => AddUserRequest._();
   @$core.override
-  RegisterRequest createEmptyInstance() => create();
+  AddUserRequest createEmptyInstance() => create();
+  static $pb.PbList<AddUserRequest> createRepeated() =>
+      $pb.PbList<AddUserRequest>();
   @$core.pragma('dart2js:noInline')
-  static RegisterRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RegisterRequest>(create);
-  static RegisterRequest? _defaultInstance;
+  static AddUserRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddUserRequest>(create);
+  static AddUserRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get userId => $_getSZ(0);
@@ -240,8 +246,8 @@ class RegisterRequest extends $pb.GeneratedMessage {
   void clearSecondName() => $_clearField(4);
 }
 
-class RegisterResponse extends $pb.GeneratedMessage {
-  factory RegisterResponse({
+class AddUserResponse extends $pb.GeneratedMessage {
+  factory AddUserResponse({
     $core.String? userId,
   }) {
     final result = create();
@@ -249,40 +255,42 @@ class RegisterResponse extends $pb.GeneratedMessage {
     return result;
   }
 
-  RegisterResponse._();
+  AddUserResponse._();
 
-  factory RegisterResponse.fromBuffer($core.List<$core.int> data,
+  factory AddUserResponse.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory RegisterResponse.fromJson($core.String json,
+  factory AddUserResponse.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RegisterResponse',
+      _omitMessageNames ? '' : 'AddUserResponse',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'userId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterResponse clone() => deepCopy();
+  AddUserResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterResponse copyWith(void Function(RegisterResponse) updates) =>
-      super.copyWith((message) => updates(message as RegisterResponse))
-          as RegisterResponse;
+  AddUserResponse copyWith(void Function(AddUserResponse) updates) =>
+      super.copyWith((message) => updates(message as AddUserResponse))
+          as AddUserResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RegisterResponse create() => RegisterResponse._();
+  static AddUserResponse create() => AddUserResponse._();
   @$core.override
-  RegisterResponse createEmptyInstance() => create();
+  AddUserResponse createEmptyInstance() => create();
+  static $pb.PbList<AddUserResponse> createRepeated() =>
+      $pb.PbList<AddUserResponse>();
   @$core.pragma('dart2js:noInline')
-  static RegisterResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RegisterResponse>(create);
-  static RegisterResponse? _defaultInstance;
+  static AddUserResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddUserResponse>(create);
+  static AddUserResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get userId => $_getSZ(0);
@@ -333,6 +341,8 @@ class RefreshLoginRequest extends $pb.GeneratedMessage {
   static RefreshLoginRequest create() => RefreshLoginRequest._();
   @$core.override
   RefreshLoginRequest createEmptyInstance() => create();
+  static $pb.PbList<RefreshLoginRequest> createRepeated() =>
+      $pb.PbList<RefreshLoginRequest>();
   @$core.pragma('dart2js:noInline')
   static RefreshLoginRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RefreshLoginRequest>(create);
@@ -348,42 +358,44 @@ class RefreshLoginRequest extends $pb.GeneratedMessage {
   void clearRefreshToken() => $_clearField(1);
 }
 
-class UnregisterResponse extends $pb.GeneratedMessage {
-  factory UnregisterResponse() => create();
+class RemoveUserResponse extends $pb.GeneratedMessage {
+  factory RemoveUserResponse() => create();
 
-  UnregisterResponse._();
+  RemoveUserResponse._();
 
-  factory UnregisterResponse.fromBuffer($core.List<$core.int> data,
+  factory RemoveUserResponse.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory UnregisterResponse.fromJson($core.String json,
+  factory RemoveUserResponse.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UnregisterResponse',
+      _omitMessageNames ? '' : 'RemoveUserResponse',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UnregisterResponse clone() => deepCopy();
+  RemoveUserResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UnregisterResponse copyWith(void Function(UnregisterResponse) updates) =>
-      super.copyWith((message) => updates(message as UnregisterResponse))
-          as UnregisterResponse;
+  RemoveUserResponse copyWith(void Function(RemoveUserResponse) updates) =>
+      super.copyWith((message) => updates(message as RemoveUserResponse))
+          as RemoveUserResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static UnregisterResponse create() => UnregisterResponse._();
+  static RemoveUserResponse create() => RemoveUserResponse._();
   @$core.override
-  UnregisterResponse createEmptyInstance() => create();
+  RemoveUserResponse createEmptyInstance() => create();
+  static $pb.PbList<RemoveUserResponse> createRepeated() =>
+      $pb.PbList<RemoveUserResponse>();
   @$core.pragma('dart2js:noInline')
-  static UnregisterResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<UnregisterResponse>(create);
-  static UnregisterResponse? _defaultInstance;
+  static RemoveUserResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RemoveUserResponse>(create);
+  static RemoveUserResponse? _defaultInstance;
 }
 
 const $core.bool _omitFieldNames =
