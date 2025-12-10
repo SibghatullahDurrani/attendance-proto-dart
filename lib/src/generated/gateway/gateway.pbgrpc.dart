@@ -123,6 +123,20 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$createSchoolChain, request, options: options);
   }
 
+  $grpc.ResponseFuture<$1.GetSchoolIdResponse> getSchoolId(
+    $1.GetSchoolIdRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getSchoolId, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.GetSchoolChainIdResponse> getSchoolChainId(
+    $1.GetSchoolChainIdRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getSchoolChainId, request, options: options);
+  }
+
   // method descriptors
 
   static final _$login = $grpc.ClientMethod<$0.LoginRequest, $0.LoginResponse>(
@@ -184,6 +198,16 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/CreateSchoolChain',
       ($1.CreateSchoolChainRequest value) => value.writeToBuffer(),
       $1.CreateSchoolChainResponse.fromBuffer);
+  static final _$getSchoolId =
+      $grpc.ClientMethod<$1.GetSchoolIdRequest, $1.GetSchoolIdResponse>(
+          '/gateway.GatewayService/GetSchoolId',
+          ($1.GetSchoolIdRequest value) => value.writeToBuffer(),
+          $1.GetSchoolIdResponse.fromBuffer);
+  static final _$getSchoolChainId = $grpc.ClientMethod<
+          $1.GetSchoolChainIdRequest, $1.GetSchoolChainIdResponse>(
+      '/gateway.GatewayService/GetSchoolChainId',
+      ($1.GetSchoolChainIdRequest value) => value.writeToBuffer(),
+      $1.GetSchoolChainIdResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -297,6 +321,24 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $1.CreateSchoolChainRequest.fromBuffer(value),
         ($1.CreateSchoolChainResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$1.GetSchoolIdRequest, $1.GetSchoolIdResponse>(
+            'GetSchoolId',
+            getSchoolId_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $1.GetSchoolIdRequest.fromBuffer(value),
+            ($1.GetSchoolIdResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetSchoolChainIdRequest,
+            $1.GetSchoolChainIdResponse>(
+        'GetSchoolChainId',
+        getSchoolChainId_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $1.GetSchoolChainIdRequest.fromBuffer(value),
+        ($1.GetSchoolChainIdResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -387,4 +429,21 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$1.CreateSchoolChainResponse> createSchoolChain(
       $grpc.ServiceCall call, $1.CreateSchoolChainRequest request);
+
+  $async.Future<$1.GetSchoolIdResponse> getSchoolId_Pre($grpc.ServiceCall $call,
+      $async.Future<$1.GetSchoolIdRequest> $request) async {
+    return getSchoolId($call, await $request);
+  }
+
+  $async.Future<$1.GetSchoolIdResponse> getSchoolId(
+      $grpc.ServiceCall call, $1.GetSchoolIdRequest request);
+
+  $async.Future<$1.GetSchoolChainIdResponse> getSchoolChainId_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$1.GetSchoolChainIdRequest> $request) async {
+    return getSchoolChainId($call, await $request);
+  }
+
+  $async.Future<$1.GetSchoolChainIdResponse> getSchoolChainId(
+      $grpc.ServiceCall call, $1.GetSchoolChainIdRequest request);
 }

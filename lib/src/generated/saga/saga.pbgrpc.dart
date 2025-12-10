@@ -71,6 +71,15 @@ class SagaServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.RegisterSchoolChainAdminSagaResponse>
+      registerSchoolChainAdminSaga(
+    $0.RegisterSchoolChainAdminSagaRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$registerSchoolChainAdminSaga, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$registerStudentSaga = $grpc.ClientMethod<
@@ -100,6 +109,12 @@ class SagaServiceClient extends $grpc.Client {
       '/saga.SagaService/RegisterSchoolAdminSaga',
       ($0.RegisterSchoolAdminSagaRequest value) => value.writeToBuffer(),
       $0.RegisterSchoolAdminSagaResponse.fromBuffer);
+  static final _$registerSchoolChainAdminSaga = $grpc.ClientMethod<
+          $0.RegisterSchoolChainAdminSagaRequest,
+          $0.RegisterSchoolChainAdminSagaResponse>(
+      '/saga.SagaService/RegisterSchoolChainAdminSaga',
+      ($0.RegisterSchoolChainAdminSagaRequest value) => value.writeToBuffer(),
+      $0.RegisterSchoolChainAdminSagaResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('saga.SagaService')
@@ -153,6 +168,16 @@ abstract class SagaServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.RegisterSchoolAdminSagaRequest.fromBuffer(value),
         ($0.RegisterSchoolAdminSagaResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RegisterSchoolChainAdminSagaRequest,
+            $0.RegisterSchoolChainAdminSagaResponse>(
+        'RegisterSchoolChainAdminSaga',
+        registerSchoolChainAdminSaga_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.RegisterSchoolChainAdminSagaRequest.fromBuffer(value),
+        ($0.RegisterSchoolChainAdminSagaResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.RegisterStudentSagaResponse> registerStudentSaga_Pre(
@@ -200,4 +225,16 @@ abstract class SagaServiceBase extends $grpc.Service {
 
   $async.Future<$0.RegisterSchoolAdminSagaResponse> registerSchoolAdminSaga(
       $grpc.ServiceCall call, $0.RegisterSchoolAdminSagaRequest request);
+
+  $async.Future<$0.RegisterSchoolChainAdminSagaResponse>
+      registerSchoolChainAdminSaga_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.RegisterSchoolChainAdminSagaRequest>
+              $request) async {
+    return registerSchoolChainAdminSaga($call, await $request);
+  }
+
+  $async.Future<$0.RegisterSchoolChainAdminSagaResponse>
+      registerSchoolChainAdminSaga($grpc.ServiceCall call,
+          $0.RegisterSchoolChainAdminSagaRequest request);
 }

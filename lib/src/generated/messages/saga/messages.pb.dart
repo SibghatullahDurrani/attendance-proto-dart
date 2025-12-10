@@ -910,6 +910,128 @@ class RegisterSchoolAdminSagaResponse extends $pb.GeneratedMessage {
   void clearAdminId() => $_clearField(1);
 }
 
+class RegisterSchoolChainAdminSagaRequest extends $pb.GeneratedMessage {
+  factory RegisterSchoolChainAdminSagaRequest({
+    $core.String? schoolChainId,
+  }) {
+    final result = create();
+    if (schoolChainId != null) result.schoolChainId = schoolChainId;
+    return result;
+  }
+
+  RegisterSchoolChainAdminSagaRequest._();
+
+  factory RegisterSchoolChainAdminSagaRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RegisterSchoolChainAdminSagaRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegisterSchoolChainAdminSagaRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolChainId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainAdminSagaRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainAdminSagaRequest copyWith(
+          void Function(RegisterSchoolChainAdminSagaRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as RegisterSchoolChainAdminSagaRequest))
+          as RegisterSchoolChainAdminSagaRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainAdminSagaRequest create() =>
+      RegisterSchoolChainAdminSagaRequest._();
+  @$core.override
+  RegisterSchoolChainAdminSagaRequest createEmptyInstance() => create();
+  static $pb.PbList<RegisterSchoolChainAdminSagaRequest> createRepeated() =>
+      $pb.PbList<RegisterSchoolChainAdminSagaRequest>();
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainAdminSagaRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          RegisterSchoolChainAdminSagaRequest>(create);
+  static RegisterSchoolChainAdminSagaRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get schoolChainId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set schoolChainId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchoolChainId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchoolChainId() => $_clearField(1);
+}
+
+class RegisterSchoolChainAdminSagaResponse extends $pb.GeneratedMessage {
+  factory RegisterSchoolChainAdminSagaResponse({
+    $core.String? adminId,
+  }) {
+    final result = create();
+    if (adminId != null) result.adminId = adminId;
+    return result;
+  }
+
+  RegisterSchoolChainAdminSagaResponse._();
+
+  factory RegisterSchoolChainAdminSagaResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RegisterSchoolChainAdminSagaResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegisterSchoolChainAdminSagaResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'adminId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainAdminSagaResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainAdminSagaResponse copyWith(
+          void Function(RegisterSchoolChainAdminSagaResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as RegisterSchoolChainAdminSagaResponse))
+          as RegisterSchoolChainAdminSagaResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainAdminSagaResponse create() =>
+      RegisterSchoolChainAdminSagaResponse._();
+  @$core.override
+  RegisterSchoolChainAdminSagaResponse createEmptyInstance() => create();
+  static $pb.PbList<RegisterSchoolChainAdminSagaResponse> createRepeated() =>
+      $pb.PbList<RegisterSchoolChainAdminSagaResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainAdminSagaResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          RegisterSchoolChainAdminSagaResponse>(create);
+  static RegisterSchoolChainAdminSagaResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get adminId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set adminId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasAdminId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAdminId() => $_clearField(1);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

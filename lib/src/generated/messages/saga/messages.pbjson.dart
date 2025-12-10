@@ -294,3 +294,31 @@ final $typed_data.Uint8List registerSchoolAdminSagaResponseDescriptor =
     $convert.base64Decode(
         'Ch9SZWdpc3RlclNjaG9vbEFkbWluU2FnYVJlc3BvbnNlEhkKCGFkbWluX2lkGAEgASgJUgdhZG'
         '1pbklk');
+
+@$core.Deprecated('Use registerSchoolChainAdminSagaRequestDescriptor instead')
+const RegisterSchoolChainAdminSagaRequest$json = {
+  '1': 'RegisterSchoolChainAdminSagaRequest',
+  '2': [
+    {'1': 'school_chain_id', '3': 1, '4': 1, '5': 9, '10': 'schoolChainId'},
+  ],
+};
+
+/// Descriptor for `RegisterSchoolChainAdminSagaRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List registerSchoolChainAdminSagaRequestDescriptor =
+    $convert.base64Decode(
+        'CiNSZWdpc3RlclNjaG9vbENoYWluQWRtaW5TYWdhUmVxdWVzdBImCg9zY2hvb2xfY2hhaW5faW'
+        'QYASABKAlSDXNjaG9vbENoYWluSWQ=');
+
+@$core.Deprecated('Use registerSchoolChainAdminSagaResponseDescriptor instead')
+const RegisterSchoolChainAdminSagaResponse$json = {
+  '1': 'RegisterSchoolChainAdminSagaResponse',
+  '2': [
+    {'1': 'admin_id', '3': 1, '4': 1, '5': 9, '10': 'adminId'},
+  ],
+};
+
+/// Descriptor for `RegisterSchoolChainAdminSagaResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List registerSchoolChainAdminSagaResponseDescriptor =
+    $convert.base64Decode(
+        'CiRSZWdpc3RlclNjaG9vbENoYWluQWRtaW5TYWdhUmVzcG9uc2USGQoIYWRtaW5faWQYASABKA'
+        'lSB2FkbWluSWQ=');
