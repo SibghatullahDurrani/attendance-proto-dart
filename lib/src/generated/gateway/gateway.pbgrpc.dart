@@ -41,6 +41,13 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$login, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.LoginResponse> refreshLogin(
+    $0.RefreshLoginRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$refreshLogin, request, options: options);
+  }
+
   $grpc.ResponseFuture<$1.CreateSchoolResponse> createSchool(
     $1.CreateSchoolRequest request, {
     $grpc.CallOptions? options,
@@ -143,6 +150,11 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/Login',
       ($0.LoginRequest value) => value.writeToBuffer(),
       $0.LoginResponse.fromBuffer);
+  static final _$refreshLogin =
+      $grpc.ClientMethod<$0.RefreshLoginRequest, $0.LoginResponse>(
+          '/gateway.GatewayService/RefreshLogin',
+          ($0.RefreshLoginRequest value) => value.writeToBuffer(),
+          $0.LoginResponse.fromBuffer);
   static final _$createSchool =
       $grpc.ClientMethod<$1.CreateSchoolRequest, $1.CreateSchoolResponse>(
           '/gateway.GatewayService/CreateSchool',
@@ -221,6 +233,14 @@ abstract class GatewayServiceBase extends $grpc.Service {
         false,
         false,
         ($core.List<$core.int> value) => $0.LoginRequest.fromBuffer(value),
+        ($0.LoginResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RefreshLoginRequest, $0.LoginResponse>(
+        'RefreshLogin',
+        refreshLogin_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.RefreshLoginRequest.fromBuffer(value),
         ($0.LoginResponse value) => value.writeToBuffer()));
     $addMethod(
         $grpc.ServiceMethod<$1.CreateSchoolRequest, $1.CreateSchoolResponse>(
@@ -348,6 +368,14 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$0.LoginResponse> login(
       $grpc.ServiceCall call, $0.LoginRequest request);
+
+  $async.Future<$0.LoginResponse> refreshLogin_Pre($grpc.ServiceCall $call,
+      $async.Future<$0.RefreshLoginRequest> $request) async {
+    return refreshLogin($call, await $request);
+  }
+
+  $async.Future<$0.LoginResponse> refreshLogin(
+      $grpc.ServiceCall call, $0.RefreshLoginRequest request);
 
   $async.Future<$1.CreateSchoolResponse> createSchool_Pre(
       $grpc.ServiceCall $call,
