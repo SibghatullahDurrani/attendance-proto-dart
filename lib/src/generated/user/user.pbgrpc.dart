@@ -32,21 +32,20 @@ class UserServiceClient extends $grpc.Client {
 
   UserServiceClient(super.channel, {super.options, super.interceptors});
 
-  /// Student Registration
   /// Action --------------------
-  $grpc.ResponseFuture<$0.CreateStudentResponse> createUser(
+  $grpc.ResponseFuture<$0.CreateStudentResponse> createStudent(
     $0.CreateStudentRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$createUser, request, options: options);
+    return $createUnaryCall(_$createStudent, request, options: options);
   }
 
   /// Compensation ---------------
-  $grpc.ResponseFuture<$0.DeleteStudentResponse> deleteUser(
+  $grpc.ResponseFuture<$0.DeleteStudentResponse> deleteStudent(
     $0.CreateStudentResponse request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$deleteUser, request, options: options);
+    return $createUnaryCall(_$deleteStudent, request, options: options);
   }
 
   /// Teacher Registration
@@ -102,14 +101,14 @@ class UserServiceClient extends $grpc.Client {
 
   // method descriptors
 
-  static final _$createUser =
+  static final _$createStudent =
       $grpc.ClientMethod<$0.CreateStudentRequest, $0.CreateStudentResponse>(
-          '/user.UserService/CreateUser',
+          '/user.UserService/CreateStudent',
           ($0.CreateStudentRequest value) => value.writeToBuffer(),
           $0.CreateStudentResponse.fromBuffer);
-  static final _$deleteUser =
+  static final _$deleteStudent =
       $grpc.ClientMethod<$0.CreateStudentResponse, $0.DeleteStudentResponse>(
-          '/user.UserService/DeleteUser',
+          '/user.UserService/DeleteStudent',
           ($0.CreateStudentResponse value) => value.writeToBuffer(),
           $0.DeleteStudentResponse.fromBuffer);
   static final _$createTeacher =
@@ -151,8 +150,8 @@ abstract class UserServiceBase extends $grpc.Service {
   UserServiceBase() {
     $addMethod(
         $grpc.ServiceMethod<$0.CreateStudentRequest, $0.CreateStudentResponse>(
-            'CreateUser',
-            createUser_Pre,
+            'CreateStudent',
+            createStudent_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
@@ -160,8 +159,8 @@ abstract class UserServiceBase extends $grpc.Service {
             ($0.CreateStudentResponse value) => value.writeToBuffer()));
     $addMethod(
         $grpc.ServiceMethod<$0.CreateStudentResponse, $0.DeleteStudentResponse>(
-            'DeleteUser',
-            deleteUser_Pre,
+            'DeleteStudent',
+            deleteStudent_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
@@ -223,22 +222,22 @@ abstract class UserServiceBase extends $grpc.Service {
         ($0.DeleteEmployeeResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.CreateStudentResponse> createUser_Pre(
+  $async.Future<$0.CreateStudentResponse> createStudent_Pre(
       $grpc.ServiceCall $call,
       $async.Future<$0.CreateStudentRequest> $request) async {
-    return createUser($call, await $request);
+    return createStudent($call, await $request);
   }
 
-  $async.Future<$0.CreateStudentResponse> createUser(
+  $async.Future<$0.CreateStudentResponse> createStudent(
       $grpc.ServiceCall call, $0.CreateStudentRequest request);
 
-  $async.Future<$0.DeleteStudentResponse> deleteUser_Pre(
+  $async.Future<$0.DeleteStudentResponse> deleteStudent_Pre(
       $grpc.ServiceCall $call,
       $async.Future<$0.CreateStudentResponse> $request) async {
-    return deleteUser($call, await $request);
+    return deleteStudent($call, await $request);
   }
 
-  $async.Future<$0.DeleteStudentResponse> deleteUser(
+  $async.Future<$0.DeleteStudentResponse> deleteStudent(
       $grpc.ServiceCall call, $0.CreateStudentResponse request);
 
   $async.Future<$0.CreateTeacherResponse> createTeacher_Pre(

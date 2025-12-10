@@ -19,12 +19,28 @@ const CreateSchoolRequest$json = {
   '1': 'CreateSchoolRequest',
   '2': [
     {'1': 'school_name', '3': 1, '4': 1, '5': 9, '10': 'schoolName'},
+    {'1': 'city', '3': 2, '4': 1, '5': 9, '10': 'city'},
+    {'1': 'address', '3': 3, '4': 1, '5': 9, '10': 'address'},
+    {
+      '1': 'school_chain_id',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'schoolChainId',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_school_chain_id'},
   ],
 };
 
 /// Descriptor for `CreateSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createSchoolRequestDescriptor = $convert.base64Decode(
-    'ChNDcmVhdGVTY2hvb2xSZXF1ZXN0Eh8KC3NjaG9vbF9uYW1lGAEgASgJUgpzY2hvb2xOYW1l');
+    'ChNDcmVhdGVTY2hvb2xSZXF1ZXN0Eh8KC3NjaG9vbF9uYW1lGAEgASgJUgpzY2hvb2xOYW1lEh'
+    'IKBGNpdHkYAiABKAlSBGNpdHkSGAoHYWRkcmVzcxgDIAEoCVIHYWRkcmVzcxIrCg9zY2hvb2xf'
+    'Y2hhaW5faWQYBCABKAlIAFINc2Nob29sQ2hhaW5JZIgBAUISChBfc2Nob29sX2NoYWluX2lk');
 
 @$core.Deprecated('Use createSchoolResponseDescriptor instead')
 const CreateSchoolResponse$json = {
@@ -227,6 +243,7 @@ const AddAdminToSchoolResponse$json = {
   '1': 'AddAdminToSchoolResponse',
   '2': [
     {'1': 'registration_id', '3': 1, '4': 1, '5': 9, '10': 'registrationId'},
+    {'1': 'admin_id', '3': 2, '4': 1, '5': 9, '10': 'adminId'},
   ],
 };
 
@@ -234,7 +251,7 @@ const AddAdminToSchoolResponse$json = {
 final $typed_data.Uint8List addAdminToSchoolResponseDescriptor =
     $convert.base64Decode(
         'ChhBZGRBZG1pblRvU2Nob29sUmVzcG9uc2USJwoPcmVnaXN0cmF0aW9uX2lkGAEgASgJUg5yZW'
-        'dpc3RyYXRpb25JZA==');
+        'dpc3RyYXRpb25JZBIZCghhZG1pbl9pZBgCIAEoCVIHYWRtaW5JZA==');
 
 @$core.Deprecated('Use addStudentToClassRequestDescriptor instead')
 const AddStudentToClassRequest$json = {
@@ -264,3 +281,298 @@ final $typed_data.Uint8List addStudentToClassResponseDescriptor =
     $convert.base64Decode(
         'ChlBZGRTdHVkZW50VG9DbGFzc1Jlc3BvbnNlEiMKDWVucm9sbG1lbnRfaWQYASABKAlSDGVucm'
         '9sbG1lbnRJZA==');
+
+@$core.Deprecated('Use addStudentToSchoolRequestDescriptor instead')
+const AddStudentToSchoolRequest$json = {
+  '1': 'AddStudentToSchoolRequest',
+  '2': [
+    {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
+    {'1': 'student_id', '3': 2, '4': 1, '5': 9, '10': 'studentId'},
+  ],
+};
+
+/// Descriptor for `AddStudentToSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addStudentToSchoolRequestDescriptor =
+    $convert.base64Decode(
+        'ChlBZGRTdHVkZW50VG9TY2hvb2xSZXF1ZXN0EhsKCXNjaG9vbF9pZBgBIAEoCVIIc2Nob29sSW'
+        'QSHQoKc3R1ZGVudF9pZBgCIAEoCVIJc3R1ZGVudElk');
+
+@$core.Deprecated('Use addStudentToSchoolResponseDescriptor instead')
+const AddStudentToSchoolResponse$json = {
+  '1': 'AddStudentToSchoolResponse',
+  '2': [
+    {'1': 'registration_id', '3': 1, '4': 1, '5': 9, '10': 'registrationId'},
+  ],
+};
+
+/// Descriptor for `AddStudentToSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addStudentToSchoolResponseDescriptor =
+    $convert.base64Decode(
+        'ChpBZGRTdHVkZW50VG9TY2hvb2xSZXNwb25zZRInCg9yZWdpc3RyYXRpb25faWQYASABKAlSDn'
+        'JlZ2lzdHJhdGlvbklk');
+
+@$core.Deprecated('Use removeStudentFromSchoolResponseDescriptor instead')
+const RemoveStudentFromSchoolResponse$json = {
+  '1': 'RemoveStudentFromSchoolResponse',
+};
+
+/// Descriptor for `RemoveStudentFromSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List removeStudentFromSchoolResponseDescriptor =
+    $convert.base64Decode('Ch9SZW1vdmVTdHVkZW50RnJvbVNjaG9vbFJlc3BvbnNl');
+
+@$core.Deprecated('Use listAllSchoolsRequestDescriptor instead')
+const ListAllSchoolsRequest$json = {
+  '1': 'ListAllSchoolsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+  ],
+};
+
+/// Descriptor for `ListAllSchoolsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAllSchoolsRequestDescriptor = $convert.base64Decode(
+    'ChVMaXN0QWxsU2Nob29sc1JlcXVlc3QSQgoKcGFnaW5hdGlvbhgBIAEoCzIiLmNvbW1vbl9tZX'
+    'NzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbg==');
+
+@$core.Deprecated('Use listAllSchoolsResponseDescriptor instead')
+const ListAllSchoolsResponse$json = {
+  '1': 'ListAllSchoolsResponse',
+  '2': [
+    {
+      '1': 'schools',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.Schools',
+      '10': 'schools'
+    },
+    {
+      '1': 'pagination',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+  ],
+};
+
+/// Descriptor for `ListAllSchoolsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAllSchoolsResponseDescriptor = $convert.base64Decode(
+    'ChZMaXN0QWxsU2Nob29sc1Jlc3BvbnNlEjIKB3NjaG9vbHMYASADKAsyGC5zY2hvb2xfbWVzc2'
+    'FnZXMuU2Nob29sc1IHc2Nob29scxJDCgpwYWdpbmF0aW9uGAIgASgLMiMuY29tbW9uX21lc3Nh'
+    'Z2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbg==');
+
+@$core.Deprecated('Use schoolsDescriptor instead')
+const Schools$json = {
+  '1': 'Schools',
+  '2': [
+    {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
+    {'1': 'school_name', '3': 2, '4': 1, '5': 9, '10': 'schoolName'},
+    {
+      '1': 'created_at',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createdAt'
+    },
+    {
+      '1': 'modified_at',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'modifiedAt'
+    },
+    {'1': 'city', '3': 5, '4': 1, '5': 9, '10': 'city'},
+    {'1': 'address', '3': 6, '4': 1, '5': 9, '10': 'address'},
+  ],
+};
+
+/// Descriptor for `Schools`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schoolsDescriptor = $convert.base64Decode(
+    'CgdTY2hvb2xzEhsKCXNjaG9vbF9pZBgBIAEoCVIIc2Nob29sSWQSHwoLc2Nob29sX25hbWUYAi'
+    'ABKAlSCnNjaG9vbE5hbWUSOQoKY3JlYXRlZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U'
+    'aW1lc3RhbXBSCWNyZWF0ZWRBdBI7Cgttb2RpZmllZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2'
+    'J1Zi5UaW1lc3RhbXBSCm1vZGlmaWVkQXQSEgoEY2l0eRgFIAEoCVIEY2l0eRIYCgdhZGRyZXNz'
+    'GAYgASgJUgdhZGRyZXNz');
+
+@$core.Deprecated('Use getSchoolNameRequestDescriptor instead')
+const GetSchoolNameRequest$json = {
+  '1': 'GetSchoolNameRequest',
+  '2': [
+    {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
+  ],
+};
+
+/// Descriptor for `GetSchoolNameRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolNameRequestDescriptor =
+    $convert.base64Decode(
+        'ChRHZXRTY2hvb2xOYW1lUmVxdWVzdBIbCglzY2hvb2xfaWQYASABKAlSCHNjaG9vbElk');
+
+@$core.Deprecated('Use getSchoolNameResponseDescriptor instead')
+const GetSchoolNameResponse$json = {
+  '1': 'GetSchoolNameResponse',
+  '2': [
+    {'1': 'school_name', '3': 1, '4': 1, '5': 9, '10': 'schoolName'},
+  ],
+};
+
+/// Descriptor for `GetSchoolNameResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolNameResponseDescriptor = $convert.base64Decode(
+    'ChVHZXRTY2hvb2xOYW1lUmVzcG9uc2USHwoLc2Nob29sX25hbWUYASABKAlSCnNjaG9vbE5hbW'
+    'U=');
+
+@$core.Deprecated('Use removeAdminFromSchoolResponseDescriptor instead')
+const RemoveAdminFromSchoolResponse$json = {
+  '1': 'RemoveAdminFromSchoolResponse',
+};
+
+/// Descriptor for `RemoveAdminFromSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List removeAdminFromSchoolResponseDescriptor =
+    $convert.base64Decode('Ch1SZW1vdmVBZG1pbkZyb21TY2hvb2xSZXNwb25zZQ==');
+
+@$core.Deprecated('Use createSchoolChainRequestDescriptor instead')
+const CreateSchoolChainRequest$json = {
+  '1': 'CreateSchoolChainRequest',
+  '2': [
+    {'1': 'chain_name', '3': 1, '4': 1, '5': 9, '10': 'chainName'},
+  ],
+};
+
+/// Descriptor for `CreateSchoolChainRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createSchoolChainRequestDescriptor =
+    $convert.base64Decode(
+        'ChhDcmVhdGVTY2hvb2xDaGFpblJlcXVlc3QSHQoKY2hhaW5fbmFtZRgBIAEoCVIJY2hhaW5OYW'
+        '1l');
+
+@$core.Deprecated('Use createSchoolChainResponseDescriptor instead')
+const CreateSchoolChainResponse$json = {
+  '1': 'CreateSchoolChainResponse',
+  '2': [
+    {'1': 'chain_id', '3': 1, '4': 1, '5': 9, '10': 'chainId'},
+  ],
+};
+
+/// Descriptor for `CreateSchoolChainResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createSchoolChainResponseDescriptor =
+    $convert.base64Decode(
+        'ChlDcmVhdGVTY2hvb2xDaGFpblJlc3BvbnNlEhkKCGNoYWluX2lkGAEgASgJUgdjaGFpbklk');
+
+@$core.Deprecated('Use addAdminToSchoolChainRequestDescriptor instead')
+const AddAdminToSchoolChainRequest$json = {
+  '1': 'AddAdminToSchoolChainRequest',
+  '2': [
+    {'1': 'school_chain_id', '3': 1, '4': 1, '5': 9, '10': 'schoolChainId'},
+  ],
+};
+
+/// Descriptor for `AddAdminToSchoolChainRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addAdminToSchoolChainRequestDescriptor =
+    $convert.base64Decode(
+        'ChxBZGRBZG1pblRvU2Nob29sQ2hhaW5SZXF1ZXN0EiYKD3NjaG9vbF9jaGFpbl9pZBgBIAEoCV'
+        'INc2Nob29sQ2hhaW5JZA==');
+
+@$core.Deprecated('Use addAdminToSchoolChainResponseDescriptor instead')
+const AddAdminToSchoolChainResponse$json = {
+  '1': 'AddAdminToSchoolChainResponse',
+  '2': [
+    {'1': 'registration_id', '3': 1, '4': 1, '5': 9, '10': 'registrationId'},
+    {'1': 'admin_id', '3': 2, '4': 1, '5': 9, '10': 'adminId'},
+  ],
+};
+
+/// Descriptor for `AddAdminToSchoolChainResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addAdminToSchoolChainResponseDescriptor =
+    $convert.base64Decode(
+        'Ch1BZGRBZG1pblRvU2Nob29sQ2hhaW5SZXNwb25zZRInCg9yZWdpc3RyYXRpb25faWQYASABKA'
+        'lSDnJlZ2lzdHJhdGlvbklkEhkKCGFkbWluX2lkGAIgASgJUgdhZG1pbklk');
+
+@$core.Deprecated('Use addEmployeeToSchoolChainRequestDescriptor instead')
+const AddEmployeeToSchoolChainRequest$json = {
+  '1': 'AddEmployeeToSchoolChainRequest',
+  '2': [
+    {'1': 'school_chain_id', '3': 1, '4': 1, '5': 9, '10': 'schoolChainId'},
+    {'1': 'employee_id', '3': 2, '4': 1, '5': 9, '10': 'employeeId'},
+  ],
+};
+
+/// Descriptor for `AddEmployeeToSchoolChainRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addEmployeeToSchoolChainRequestDescriptor =
+    $convert.base64Decode(
+        'Ch9BZGRFbXBsb3llZVRvU2Nob29sQ2hhaW5SZXF1ZXN0EiYKD3NjaG9vbF9jaGFpbl9pZBgBIA'
+        'EoCVINc2Nob29sQ2hhaW5JZBIfCgtlbXBsb3llZV9pZBgCIAEoCVIKZW1wbG95ZWVJZA==');
+
+@$core.Deprecated('Use addEmployeeToSchoolChainResponseDescriptor instead')
+const AddEmployeeToSchoolChainResponse$json = {
+  '1': 'AddEmployeeToSchoolChainResponse',
+  '2': [
+    {'1': 'registration_id', '3': 1, '4': 1, '5': 9, '10': 'registrationId'},
+  ],
+};
+
+/// Descriptor for `AddEmployeeToSchoolChainResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addEmployeeToSchoolChainResponseDescriptor =
+    $convert.base64Decode(
+        'CiBBZGRFbXBsb3llZVRvU2Nob29sQ2hhaW5SZXNwb25zZRInCg9yZWdpc3RyYXRpb25faWQYAS'
+        'ABKAlSDnJlZ2lzdHJhdGlvbklk');
+
+@$core.Deprecated('Use getSchoolIdRequestDescriptor instead')
+const GetSchoolIdRequest$json = {
+  '1': 'GetSchoolIdRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+  ],
+};
+
+/// Descriptor for `GetSchoolIdRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolIdRequestDescriptor =
+    $convert.base64Decode(
+        'ChJHZXRTY2hvb2xJZFJlcXVlc3QSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklk');
+
+@$core.Deprecated('Use getSchoolIdResponseDescriptor instead')
+const GetSchoolIdResponse$json = {
+  '1': 'GetSchoolIdResponse',
+  '2': [
+    {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
+  ],
+};
+
+/// Descriptor for `GetSchoolIdResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolIdResponseDescriptor =
+    $convert.base64Decode(
+        'ChNHZXRTY2hvb2xJZFJlc3BvbnNlEhsKCXNjaG9vbF9pZBgBIAEoCVIIc2Nob29sSWQ=');
+
+@$core.Deprecated('Use getSchoolChainIdRequestDescriptor instead')
+const GetSchoolChainIdRequest$json = {
+  '1': 'GetSchoolChainIdRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+  ],
+};
+
+/// Descriptor for `GetSchoolChainIdRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolChainIdRequestDescriptor =
+    $convert.base64Decode(
+        'ChdHZXRTY2hvb2xDaGFpbklkUmVxdWVzdBIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQ=');
+
+@$core.Deprecated('Use getSchoolChainIdResponseDescriptor instead')
+const GetSchoolChainIdResponse$json = {
+  '1': 'GetSchoolChainIdResponse',
+  '2': [
+    {'1': 'school_chain_id', '3': 1, '4': 1, '5': 9, '10': 'schoolChainId'},
+  ],
+};
+
+/// Descriptor for `GetSchoolChainIdResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolChainIdResponseDescriptor =
+    $convert.base64Decode(
+        'ChhHZXRTY2hvb2xDaGFpbklkUmVzcG9uc2USJgoPc2Nob29sX2NoYWluX2lkGAEgASgJUg1zY2'
+        'hvb2xDaGFpbklk');

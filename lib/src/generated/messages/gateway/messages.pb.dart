@@ -14,6 +14,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../common/messages.pb.dart' as $0;
+
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 enum RegisterTeacherRequest_Data { formData, imageChunk, notSet }
@@ -21,7 +23,7 @@ enum RegisterTeacherRequest_Data { formData, imageChunk, notSet }
 class RegisterTeacherRequest extends $pb.GeneratedMessage {
   factory RegisterTeacherRequest({
     TeacherRegistrationForm? formData,
-    ImageChunk? imageChunk,
+    $0.ImageChunk? imageChunk,
   }) {
     final result = create();
     if (formData != null) result.formData = formData;
@@ -52,8 +54,8 @@ class RegisterTeacherRequest extends $pb.GeneratedMessage {
     ..oo(0, [1, 2])
     ..aOM<TeacherRegistrationForm>(1, _omitFieldNames ? '' : 'formData',
         subBuilder: TeacherRegistrationForm.create)
-    ..aOM<ImageChunk>(2, _omitFieldNames ? '' : 'imageChunk',
-        subBuilder: ImageChunk.create)
+    ..aOM<$0.ImageChunk>(2, _omitFieldNames ? '' : 'imageChunk',
+        subBuilder: $0.ImageChunk.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -98,24 +100,24 @@ class RegisterTeacherRequest extends $pb.GeneratedMessage {
   TeacherRegistrationForm ensureFormData() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  ImageChunk get imageChunk => $_getN(1);
+  $0.ImageChunk get imageChunk => $_getN(1);
   @$pb.TagNumber(2)
-  set imageChunk(ImageChunk value) => $_setField(2, value);
+  set imageChunk($0.ImageChunk value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasImageChunk() => $_has(1);
   @$pb.TagNumber(2)
   void clearImageChunk() => $_clearField(2);
   @$pb.TagNumber(2)
-  ImageChunk ensureImageChunk() => $_ensure(1);
+  $0.ImageChunk ensureImageChunk() => $_ensure(1);
 }
 
 class RegisterTeacherResponse extends $pb.GeneratedMessage {
   factory RegisterTeacherResponse({
-    $core.String? imageId,
+    $core.bool? imageSaved,
     $core.String? teacherId,
   }) {
     final result = create();
-    if (imageId != null) result.imageId = imageId;
+    if (imageSaved != null) result.imageSaved = imageSaved;
     if (teacherId != null) result.teacherId = teacherId;
     return result;
   }
@@ -134,7 +136,7 @@ class RegisterTeacherResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'imageId')
+    ..aOB(1, _omitFieldNames ? '' : 'imageSaved')
     ..aOS(2, _omitFieldNames ? '' : 'teacherId')
     ..hasRequiredFields = false;
 
@@ -161,13 +163,13 @@ class RegisterTeacherResponse extends $pb.GeneratedMessage {
   static RegisterTeacherResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get imageId => $_getSZ(0);
+  $core.bool get imageSaved => $_getBF(0);
   @$pb.TagNumber(1)
-  set imageId($core.String value) => $_setString(0, value);
+  set imageSaved($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasImageId() => $_has(0);
+  $core.bool hasImageSaved() => $_has(0);
   @$pb.TagNumber(1)
-  void clearImageId() => $_clearField(1);
+  void clearImageSaved() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get teacherId => $_getSZ(1);
@@ -184,7 +186,7 @@ enum RegisterStudentRequest_Data { formData, imageChunk, notSet }
 class RegisterStudentRequest extends $pb.GeneratedMessage {
   factory RegisterStudentRequest({
     StudentRegistrationForm? formData,
-    ImageChunk? imageChunk,
+    $0.ImageChunk? imageChunk,
   }) {
     final result = create();
     if (formData != null) result.formData = formData;
@@ -215,8 +217,8 @@ class RegisterStudentRequest extends $pb.GeneratedMessage {
     ..oo(0, [1, 2])
     ..aOM<StudentRegistrationForm>(1, _omitFieldNames ? '' : 'formData',
         subBuilder: StudentRegistrationForm.create)
-    ..aOM<ImageChunk>(2, _omitFieldNames ? '' : 'imageChunk',
-        subBuilder: ImageChunk.create)
+    ..aOM<$0.ImageChunk>(2, _omitFieldNames ? '' : 'imageChunk',
+        subBuilder: $0.ImageChunk.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -261,24 +263,24 @@ class RegisterStudentRequest extends $pb.GeneratedMessage {
   StudentRegistrationForm ensureFormData() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  ImageChunk get imageChunk => $_getN(1);
+  $0.ImageChunk get imageChunk => $_getN(1);
   @$pb.TagNumber(2)
-  set imageChunk(ImageChunk value) => $_setField(2, value);
+  set imageChunk($0.ImageChunk value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasImageChunk() => $_has(1);
   @$pb.TagNumber(2)
   void clearImageChunk() => $_clearField(2);
   @$pb.TagNumber(2)
-  ImageChunk ensureImageChunk() => $_ensure(1);
+  $0.ImageChunk ensureImageChunk() => $_ensure(1);
 }
 
 class RegisterStudentResponse extends $pb.GeneratedMessage {
   factory RegisterStudentResponse({
-    $core.String? imageId,
+    $core.bool? imageSaved,
     $core.String? studentId,
   }) {
     final result = create();
-    if (imageId != null) result.imageId = imageId;
+    if (imageSaved != null) result.imageSaved = imageSaved;
     if (studentId != null) result.studentId = studentId;
     return result;
   }
@@ -297,7 +299,7 @@ class RegisterStudentResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'imageId')
+    ..aOB(1, _omitFieldNames ? '' : 'imageSaved')
     ..aOS(2, _omitFieldNames ? '' : 'studentId')
     ..hasRequiredFields = false;
 
@@ -324,13 +326,13 @@ class RegisterStudentResponse extends $pb.GeneratedMessage {
   static RegisterStudentResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get imageId => $_getSZ(0);
+  $core.bool get imageSaved => $_getBF(0);
   @$pb.TagNumber(1)
-  set imageId($core.String value) => $_setString(0, value);
+  set imageSaved($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasImageId() => $_has(0);
+  $core.bool hasImageSaved() => $_has(0);
   @$pb.TagNumber(1)
-  void clearImageId() => $_clearField(1);
+  void clearImageSaved() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get studentId => $_getSZ(1);
@@ -349,6 +351,7 @@ class RegisterParentRequest extends $pb.GeneratedMessage {
     $core.String? identificationNumber,
     $core.String? phoneNumber,
     $core.String? email,
+    $core.String? schoolId,
   }) {
     final result = create();
     if (firstName != null) result.firstName = firstName;
@@ -357,6 +360,7 @@ class RegisterParentRequest extends $pb.GeneratedMessage {
       result.identificationNumber = identificationNumber;
     if (phoneNumber != null) result.phoneNumber = phoneNumber;
     if (email != null) result.email = email;
+    if (schoolId != null) result.schoolId = schoolId;
     return result;
   }
 
@@ -379,6 +383,7 @@ class RegisterParentRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'identificationNumber')
     ..aOS(4, _omitFieldNames ? '' : 'phoneNumber')
     ..aOS(5, _omitFieldNames ? '' : 'email')
+    ..aOS(6, _omitFieldNames ? '' : 'schoolId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -447,6 +452,15 @@ class RegisterParentRequest extends $pb.GeneratedMessage {
   $core.bool hasEmail() => $_has(4);
   @$pb.TagNumber(5)
   void clearEmail() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get schoolId => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set schoolId($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasSchoolId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearSchoolId() => $_clearField(6);
 }
 
 class RegisterParentResponse extends $pb.GeneratedMessage {
@@ -512,7 +526,7 @@ enum RegisterSchoolEmployeeRequest_Data { formData, imageChunk, notSet }
 class RegisterSchoolEmployeeRequest extends $pb.GeneratedMessage {
   factory RegisterSchoolEmployeeRequest({
     SchoolEmployeeRegistrationForm? formData,
-    ImageChunk? imageChunk,
+    $0.ImageChunk? imageChunk,
   }) {
     final result = create();
     if (formData != null) result.formData = formData;
@@ -543,8 +557,8 @@ class RegisterSchoolEmployeeRequest extends $pb.GeneratedMessage {
     ..oo(0, [1, 2])
     ..aOM<SchoolEmployeeRegistrationForm>(1, _omitFieldNames ? '' : 'formData',
         subBuilder: SchoolEmployeeRegistrationForm.create)
-    ..aOM<ImageChunk>(2, _omitFieldNames ? '' : 'imageChunk',
-        subBuilder: ImageChunk.create)
+    ..aOM<$0.ImageChunk>(2, _omitFieldNames ? '' : 'imageChunk',
+        subBuilder: $0.ImageChunk.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -591,24 +605,24 @@ class RegisterSchoolEmployeeRequest extends $pb.GeneratedMessage {
   SchoolEmployeeRegistrationForm ensureFormData() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  ImageChunk get imageChunk => $_getN(1);
+  $0.ImageChunk get imageChunk => $_getN(1);
   @$pb.TagNumber(2)
-  set imageChunk(ImageChunk value) => $_setField(2, value);
+  set imageChunk($0.ImageChunk value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasImageChunk() => $_has(1);
   @$pb.TagNumber(2)
   void clearImageChunk() => $_clearField(2);
   @$pb.TagNumber(2)
-  ImageChunk ensureImageChunk() => $_ensure(1);
+  $0.ImageChunk ensureImageChunk() => $_ensure(1);
 }
 
 class RegisterSchoolEmployeeResponse extends $pb.GeneratedMessage {
   factory RegisterSchoolEmployeeResponse({
-    $core.String? imageId,
+    $core.bool? imageSaved,
     $core.String? employeeId,
   }) {
     final result = create();
-    if (imageId != null) result.imageId = imageId;
+    if (imageSaved != null) result.imageSaved = imageSaved;
     if (employeeId != null) result.employeeId = employeeId;
     return result;
   }
@@ -627,7 +641,7 @@ class RegisterSchoolEmployeeResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'imageId')
+    ..aOB(1, _omitFieldNames ? '' : 'imageSaved')
     ..aOS(2, _omitFieldNames ? '' : 'employeeId')
     ..hasRequiredFields = false;
 
@@ -656,13 +670,13 @@ class RegisterSchoolEmployeeResponse extends $pb.GeneratedMessage {
   static RegisterSchoolEmployeeResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get imageId => $_getSZ(0);
+  $core.bool get imageSaved => $_getBF(0);
   @$pb.TagNumber(1)
-  set imageId($core.String value) => $_setString(0, value);
+  set imageSaved($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasImageId() => $_has(0);
+  $core.bool hasImageSaved() => $_has(0);
   @$pb.TagNumber(1)
-  void clearImageId() => $_clearField(1);
+  void clearImageSaved() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get employeeId => $_getSZ(1);
@@ -946,6 +960,8 @@ class StudentRegistrationForm extends $pb.GeneratedMessage {
     $core.String? identificationNumber,
     $core.String? phoneNumber,
     $core.String? email,
+    $core.String? classId,
+    $core.String? schoolId,
   }) {
     final result = create();
     if (parentId != null) result.parentId = parentId;
@@ -955,6 +971,8 @@ class StudentRegistrationForm extends $pb.GeneratedMessage {
       result.identificationNumber = identificationNumber;
     if (phoneNumber != null) result.phoneNumber = phoneNumber;
     if (email != null) result.email = email;
+    if (classId != null) result.classId = classId;
+    if (schoolId != null) result.schoolId = schoolId;
     return result;
   }
 
@@ -978,6 +996,8 @@ class StudentRegistrationForm extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
     ..aOS(5, _omitFieldNames ? '' : 'phoneNumber')
     ..aOS(6, _omitFieldNames ? '' : 'email')
+    ..aOS(7, _omitFieldNames ? '' : 'classId')
+    ..aOS(8, _omitFieldNames ? '' : 'schoolId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1055,6 +1075,24 @@ class StudentRegistrationForm extends $pb.GeneratedMessage {
   $core.bool hasEmail() => $_has(5);
   @$pb.TagNumber(6)
   void clearEmail() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get classId => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set classId($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasClassId() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearClassId() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get schoolId => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set schoolId($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasSchoolId() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearSchoolId() => $_clearField(8);
 }
 
 class TeacherRegistrationForm extends $pb.GeneratedMessage {
@@ -1062,20 +1100,20 @@ class TeacherRegistrationForm extends $pb.GeneratedMessage {
     $core.String? firstName,
     $core.String? secondName,
     $core.String? identificationNumber,
+    $core.String? phoneNumber,
     $core.String? email,
     $core.String? qualification,
     $core.String? schoolId,
-    $core.String? classId,
   }) {
     final result = create();
     if (firstName != null) result.firstName = firstName;
     if (secondName != null) result.secondName = secondName;
     if (identificationNumber != null)
       result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
     if (email != null) result.email = email;
     if (qualification != null) result.qualification = qualification;
     if (schoolId != null) result.schoolId = schoolId;
-    if (classId != null) result.classId = classId;
     return result;
   }
 
@@ -1096,10 +1134,10 @@ class TeacherRegistrationForm extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'firstName')
     ..aOS(2, _omitFieldNames ? '' : 'secondName')
     ..aOS(3, _omitFieldNames ? '' : 'identificationNumber')
-    ..aOS(4, _omitFieldNames ? '' : 'email')
-    ..aOS(5, _omitFieldNames ? '' : 'qualification')
-    ..aOS(6, _omitFieldNames ? '' : 'schoolId')
-    ..aOS(7, _omitFieldNames ? '' : 'classId')
+    ..aOS(4, _omitFieldNames ? '' : 'phoneNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'email')
+    ..aOS(6, _omitFieldNames ? '' : 'qualification')
+    ..aOS(7, _omitFieldNames ? '' : 'schoolId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1152,96 +1190,40 @@ class TeacherRegistrationForm extends $pb.GeneratedMessage {
   void clearIdentificationNumber() => $_clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get email => $_getSZ(3);
+  $core.String get phoneNumber => $_getSZ(3);
   @$pb.TagNumber(4)
-  set email($core.String value) => $_setString(3, value);
+  set phoneNumber($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
-  $core.bool hasEmail() => $_has(3);
+  $core.bool hasPhoneNumber() => $_has(3);
   @$pb.TagNumber(4)
-  void clearEmail() => $_clearField(4);
+  void clearPhoneNumber() => $_clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get qualification => $_getSZ(4);
+  $core.String get email => $_getSZ(4);
   @$pb.TagNumber(5)
-  set qualification($core.String value) => $_setString(4, value);
+  set email($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
-  $core.bool hasQualification() => $_has(4);
+  $core.bool hasEmail() => $_has(4);
   @$pb.TagNumber(5)
-  void clearQualification() => $_clearField(5);
+  void clearEmail() => $_clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get schoolId => $_getSZ(5);
+  $core.String get qualification => $_getSZ(5);
   @$pb.TagNumber(6)
-  set schoolId($core.String value) => $_setString(5, value);
+  set qualification($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
-  $core.bool hasSchoolId() => $_has(5);
+  $core.bool hasQualification() => $_has(5);
   @$pb.TagNumber(6)
-  void clearSchoolId() => $_clearField(6);
+  void clearQualification() => $_clearField(6);
 
   @$pb.TagNumber(7)
-  $core.String get classId => $_getSZ(6);
+  $core.String get schoolId => $_getSZ(6);
   @$pb.TagNumber(7)
-  set classId($core.String value) => $_setString(6, value);
+  set schoolId($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
-  $core.bool hasClassId() => $_has(6);
+  $core.bool hasSchoolId() => $_has(6);
   @$pb.TagNumber(7)
-  void clearClassId() => $_clearField(7);
-}
-
-class ImageChunk extends $pb.GeneratedMessage {
-  factory ImageChunk({
-    $core.List<$core.int>? imageBytes,
-  }) {
-    final result = create();
-    if (imageBytes != null) result.imageBytes = imageBytes;
-    return result;
-  }
-
-  ImageChunk._();
-
-  factory ImageChunk.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory ImageChunk.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ImageChunk',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
-      createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(
-        1, _omitFieldNames ? '' : 'imageBytes', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ImageChunk clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ImageChunk copyWith(void Function(ImageChunk) updates) =>
-      super.copyWith((message) => updates(message as ImageChunk)) as ImageChunk;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static ImageChunk create() => ImageChunk._();
-  @$core.override
-  ImageChunk createEmptyInstance() => create();
-  static $pb.PbList<ImageChunk> createRepeated() => $pb.PbList<ImageChunk>();
-  @$core.pragma('dart2js:noInline')
-  static ImageChunk getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ImageChunk>(create);
-  static ImageChunk? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<$core.int> get imageBytes => $_getN(0);
-  @$pb.TagNumber(1)
-  set imageBytes($core.List<$core.int> value) => $_setBytes(0, value);
-  @$pb.TagNumber(1)
-  $core.bool hasImageBytes() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearImageBytes() => $_clearField(1);
+  void clearSchoolId() => $_clearField(7);
 }
 
 const $core.bool _omitFieldNames =

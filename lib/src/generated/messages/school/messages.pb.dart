@@ -15,16 +15,22 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../google/protobuf/timestamp.pb.dart' as $0;
-import '../common/messages.pbenum.dart' as $1;
+import '../common/messages.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 class CreateSchoolRequest extends $pb.GeneratedMessage {
   factory CreateSchoolRequest({
     $core.String? schoolName,
+    $core.String? city,
+    $core.String? address,
+    $core.String? schoolChainId,
   }) {
     final result = create();
     if (schoolName != null) result.schoolName = schoolName;
+    if (city != null) result.city = city;
+    if (address != null) result.address = address;
+    if (schoolChainId != null) result.schoolChainId = schoolChainId;
     return result;
   }
 
@@ -43,6 +49,9 @@ class CreateSchoolRequest extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'schoolName')
+    ..aOS(2, _omitFieldNames ? '' : 'city')
+    ..aOS(3, _omitFieldNames ? '' : 'address')
+    ..aOS(4, _omitFieldNames ? '' : 'schoolChainId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -74,6 +83,33 @@ class CreateSchoolRequest extends $pb.GeneratedMessage {
   $core.bool hasSchoolName() => $_has(0);
   @$pb.TagNumber(1)
   void clearSchoolName() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get city => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set city($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasCity() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearCity() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get address => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set address($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasAddress() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAddress() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get schoolChainId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set schoolChainId($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasSchoolChainId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSchoolChainId() => $_clearField(4);
 }
 
 class CreateSchoolResponse extends $pb.GeneratedMessage {
@@ -902,9 +938,11 @@ class AddAdminToSchoolRequest extends $pb.GeneratedMessage {
 class AddAdminToSchoolResponse extends $pb.GeneratedMessage {
   factory AddAdminToSchoolResponse({
     $core.String? registrationId,
+    $core.String? adminId,
   }) {
     final result = create();
     if (registrationId != null) result.registrationId = registrationId;
+    if (adminId != null) result.adminId = adminId;
     return result;
   }
 
@@ -923,6 +961,7 @@ class AddAdminToSchoolResponse extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'registrationId')
+    ..aOS(2, _omitFieldNames ? '' : 'adminId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -955,6 +994,15 @@ class AddAdminToSchoolResponse extends $pb.GeneratedMessage {
   $core.bool hasRegistrationId() => $_has(0);
   @$pb.TagNumber(1)
   void clearRegistrationId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get adminId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set adminId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasAdminId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAdminId() => $_clearField(2);
 }
 
 class AddStudentToClassRequest extends $pb.GeneratedMessage {
@@ -1083,6 +1131,1202 @@ class AddStudentToClassResponse extends $pb.GeneratedMessage {
   $core.bool hasEnrollmentId() => $_has(0);
   @$pb.TagNumber(1)
   void clearEnrollmentId() => $_clearField(1);
+}
+
+class AddStudentToSchoolRequest extends $pb.GeneratedMessage {
+  factory AddStudentToSchoolRequest({
+    $core.String? schoolId,
+    $core.String? studentId,
+  }) {
+    final result = create();
+    if (schoolId != null) result.schoolId = schoolId;
+    if (studentId != null) result.studentId = studentId;
+    return result;
+  }
+
+  AddStudentToSchoolRequest._();
+
+  factory AddStudentToSchoolRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddStudentToSchoolRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddStudentToSchoolRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(2, _omitFieldNames ? '' : 'studentId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddStudentToSchoolRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddStudentToSchoolRequest copyWith(
+          void Function(AddStudentToSchoolRequest) updates) =>
+      super.copyWith((message) => updates(message as AddStudentToSchoolRequest))
+          as AddStudentToSchoolRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddStudentToSchoolRequest create() => AddStudentToSchoolRequest._();
+  @$core.override
+  AddStudentToSchoolRequest createEmptyInstance() => create();
+  static $pb.PbList<AddStudentToSchoolRequest> createRepeated() =>
+      $pb.PbList<AddStudentToSchoolRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AddStudentToSchoolRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddStudentToSchoolRequest>(create);
+  static AddStudentToSchoolRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get schoolId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set schoolId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchoolId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchoolId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get studentId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set studentId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasStudentId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStudentId() => $_clearField(2);
+}
+
+class AddStudentToSchoolResponse extends $pb.GeneratedMessage {
+  factory AddStudentToSchoolResponse({
+    $core.String? registrationId,
+  }) {
+    final result = create();
+    if (registrationId != null) result.registrationId = registrationId;
+    return result;
+  }
+
+  AddStudentToSchoolResponse._();
+
+  factory AddStudentToSchoolResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddStudentToSchoolResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddStudentToSchoolResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'registrationId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddStudentToSchoolResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddStudentToSchoolResponse copyWith(
+          void Function(AddStudentToSchoolResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as AddStudentToSchoolResponse))
+          as AddStudentToSchoolResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddStudentToSchoolResponse create() => AddStudentToSchoolResponse._();
+  @$core.override
+  AddStudentToSchoolResponse createEmptyInstance() => create();
+  static $pb.PbList<AddStudentToSchoolResponse> createRepeated() =>
+      $pb.PbList<AddStudentToSchoolResponse>();
+  @$core.pragma('dart2js:noInline')
+  static AddStudentToSchoolResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddStudentToSchoolResponse>(create);
+  static AddStudentToSchoolResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get registrationId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set registrationId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasRegistrationId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRegistrationId() => $_clearField(1);
+}
+
+class RemoveStudentFromSchoolResponse extends $pb.GeneratedMessage {
+  factory RemoveStudentFromSchoolResponse() => create();
+
+  RemoveStudentFromSchoolResponse._();
+
+  factory RemoveStudentFromSchoolResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RemoveStudentFromSchoolResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RemoveStudentFromSchoolResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RemoveStudentFromSchoolResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RemoveStudentFromSchoolResponse copyWith(
+          void Function(RemoveStudentFromSchoolResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as RemoveStudentFromSchoolResponse))
+          as RemoveStudentFromSchoolResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RemoveStudentFromSchoolResponse create() =>
+      RemoveStudentFromSchoolResponse._();
+  @$core.override
+  RemoveStudentFromSchoolResponse createEmptyInstance() => create();
+  static $pb.PbList<RemoveStudentFromSchoolResponse> createRepeated() =>
+      $pb.PbList<RemoveStudentFromSchoolResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RemoveStudentFromSchoolResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RemoveStudentFromSchoolResponse>(
+          create);
+  static RemoveStudentFromSchoolResponse? _defaultInstance;
+}
+
+class ListAllSchoolsRequest extends $pb.GeneratedMessage {
+  factory ListAllSchoolsRequest({
+    $1.PaginationRequest? pagination,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    return result;
+  }
+
+  ListAllSchoolsRequest._();
+
+  factory ListAllSchoolsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListAllSchoolsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAllSchoolsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOM<$1.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationRequest.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAllSchoolsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAllSchoolsRequest copyWith(
+          void Function(ListAllSchoolsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListAllSchoolsRequest))
+          as ListAllSchoolsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListAllSchoolsRequest create() => ListAllSchoolsRequest._();
+  @$core.override
+  ListAllSchoolsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListAllSchoolsRequest> createRepeated() =>
+      $pb.PbList<ListAllSchoolsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListAllSchoolsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAllSchoolsRequest>(create);
+  static ListAllSchoolsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($1.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.PaginationRequest ensurePagination() => $_ensure(0);
+}
+
+class ListAllSchoolsResponse extends $pb.GeneratedMessage {
+  factory ListAllSchoolsResponse({
+    $core.Iterable<Schools>? schools,
+    $1.PaginationResponse? pagination,
+  }) {
+    final result = create();
+    if (schools != null) result.schools.addAll(schools);
+    if (pagination != null) result.pagination = pagination;
+    return result;
+  }
+
+  ListAllSchoolsResponse._();
+
+  factory ListAllSchoolsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListAllSchoolsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAllSchoolsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..pPM<Schools>(1, _omitFieldNames ? '' : 'schools',
+        subBuilder: Schools.create)
+    ..aOM<$1.PaginationResponse>(2, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationResponse.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAllSchoolsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAllSchoolsResponse copyWith(
+          void Function(ListAllSchoolsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListAllSchoolsResponse))
+          as ListAllSchoolsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListAllSchoolsResponse create() => ListAllSchoolsResponse._();
+  @$core.override
+  ListAllSchoolsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListAllSchoolsResponse> createRepeated() =>
+      $pb.PbList<ListAllSchoolsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListAllSchoolsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAllSchoolsResponse>(create);
+  static ListAllSchoolsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<Schools> get schools => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $1.PaginationResponse get pagination => $_getN(1);
+  @$pb.TagNumber(2)
+  set pagination($1.PaginationResponse value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasPagination() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPagination() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $1.PaginationResponse ensurePagination() => $_ensure(1);
+}
+
+class Schools extends $pb.GeneratedMessage {
+  factory Schools({
+    $core.String? schoolId,
+    $core.String? schoolName,
+    $0.Timestamp? createdAt,
+    $0.Timestamp? modifiedAt,
+    $core.String? city,
+    $core.String? address,
+  }) {
+    final result = create();
+    if (schoolId != null) result.schoolId = schoolId;
+    if (schoolName != null) result.schoolName = schoolName;
+    if (createdAt != null) result.createdAt = createdAt;
+    if (modifiedAt != null) result.modifiedAt = modifiedAt;
+    if (city != null) result.city = city;
+    if (address != null) result.address = address;
+    return result;
+  }
+
+  Schools._();
+
+  factory Schools.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Schools.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Schools',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(2, _omitFieldNames ? '' : 'schoolName')
+    ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'createdAt',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(4, _omitFieldNames ? '' : 'modifiedAt',
+        subBuilder: $0.Timestamp.create)
+    ..aOS(5, _omitFieldNames ? '' : 'city')
+    ..aOS(6, _omitFieldNames ? '' : 'address')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Schools clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Schools copyWith(void Function(Schools) updates) =>
+      super.copyWith((message) => updates(message as Schools)) as Schools;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Schools create() => Schools._();
+  @$core.override
+  Schools createEmptyInstance() => create();
+  static $pb.PbList<Schools> createRepeated() => $pb.PbList<Schools>();
+  @$core.pragma('dart2js:noInline')
+  static Schools getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Schools>(create);
+  static Schools? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get schoolId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set schoolId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchoolId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchoolId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get schoolName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set schoolName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSchoolName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSchoolName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $0.Timestamp get createdAt => $_getN(2);
+  @$pb.TagNumber(3)
+  set createdAt($0.Timestamp value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasCreatedAt() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCreatedAt() => $_clearField(3);
+  @$pb.TagNumber(3)
+  $0.Timestamp ensureCreatedAt() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $0.Timestamp get modifiedAt => $_getN(3);
+  @$pb.TagNumber(4)
+  set modifiedAt($0.Timestamp value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasModifiedAt() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearModifiedAt() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $0.Timestamp ensureModifiedAt() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.String get city => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set city($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasCity() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearCity() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get address => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set address($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasAddress() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearAddress() => $_clearField(6);
+}
+
+class GetSchoolNameRequest extends $pb.GeneratedMessage {
+  factory GetSchoolNameRequest({
+    $core.String? schoolId,
+  }) {
+    final result = create();
+    if (schoolId != null) result.schoolId = schoolId;
+    return result;
+  }
+
+  GetSchoolNameRequest._();
+
+  factory GetSchoolNameRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolNameRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSchoolNameRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolNameRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolNameRequest copyWith(void Function(GetSchoolNameRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSchoolNameRequest))
+          as GetSchoolNameRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolNameRequest create() => GetSchoolNameRequest._();
+  @$core.override
+  GetSchoolNameRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSchoolNameRequest> createRepeated() =>
+      $pb.PbList<GetSchoolNameRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolNameRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSchoolNameRequest>(create);
+  static GetSchoolNameRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get schoolId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set schoolId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchoolId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchoolId() => $_clearField(1);
+}
+
+class GetSchoolNameResponse extends $pb.GeneratedMessage {
+  factory GetSchoolNameResponse({
+    $core.String? schoolName,
+  }) {
+    final result = create();
+    if (schoolName != null) result.schoolName = schoolName;
+    return result;
+  }
+
+  GetSchoolNameResponse._();
+
+  factory GetSchoolNameResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolNameResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSchoolNameResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolNameResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolNameResponse copyWith(
+          void Function(GetSchoolNameResponse) updates) =>
+      super.copyWith((message) => updates(message as GetSchoolNameResponse))
+          as GetSchoolNameResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolNameResponse create() => GetSchoolNameResponse._();
+  @$core.override
+  GetSchoolNameResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSchoolNameResponse> createRepeated() =>
+      $pb.PbList<GetSchoolNameResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolNameResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSchoolNameResponse>(create);
+  static GetSchoolNameResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get schoolName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set schoolName($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchoolName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchoolName() => $_clearField(1);
+}
+
+class RemoveAdminFromSchoolResponse extends $pb.GeneratedMessage {
+  factory RemoveAdminFromSchoolResponse() => create();
+
+  RemoveAdminFromSchoolResponse._();
+
+  factory RemoveAdminFromSchoolResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RemoveAdminFromSchoolResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RemoveAdminFromSchoolResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RemoveAdminFromSchoolResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RemoveAdminFromSchoolResponse copyWith(
+          void Function(RemoveAdminFromSchoolResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as RemoveAdminFromSchoolResponse))
+          as RemoveAdminFromSchoolResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RemoveAdminFromSchoolResponse create() =>
+      RemoveAdminFromSchoolResponse._();
+  @$core.override
+  RemoveAdminFromSchoolResponse createEmptyInstance() => create();
+  static $pb.PbList<RemoveAdminFromSchoolResponse> createRepeated() =>
+      $pb.PbList<RemoveAdminFromSchoolResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RemoveAdminFromSchoolResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RemoveAdminFromSchoolResponse>(create);
+  static RemoveAdminFromSchoolResponse? _defaultInstance;
+}
+
+class CreateSchoolChainRequest extends $pb.GeneratedMessage {
+  factory CreateSchoolChainRequest({
+    $core.String? chainName,
+  }) {
+    final result = create();
+    if (chainName != null) result.chainName = chainName;
+    return result;
+  }
+
+  CreateSchoolChainRequest._();
+
+  factory CreateSchoolChainRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateSchoolChainRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateSchoolChainRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'chainName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateSchoolChainRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateSchoolChainRequest copyWith(
+          void Function(CreateSchoolChainRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateSchoolChainRequest))
+          as CreateSchoolChainRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateSchoolChainRequest create() => CreateSchoolChainRequest._();
+  @$core.override
+  CreateSchoolChainRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateSchoolChainRequest> createRepeated() =>
+      $pb.PbList<CreateSchoolChainRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateSchoolChainRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateSchoolChainRequest>(create);
+  static CreateSchoolChainRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get chainName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set chainName($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasChainName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChainName() => $_clearField(1);
+}
+
+class CreateSchoolChainResponse extends $pb.GeneratedMessage {
+  factory CreateSchoolChainResponse({
+    $core.String? chainId,
+  }) {
+    final result = create();
+    if (chainId != null) result.chainId = chainId;
+    return result;
+  }
+
+  CreateSchoolChainResponse._();
+
+  factory CreateSchoolChainResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateSchoolChainResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateSchoolChainResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'chainId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateSchoolChainResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateSchoolChainResponse copyWith(
+          void Function(CreateSchoolChainResponse) updates) =>
+      super.copyWith((message) => updates(message as CreateSchoolChainResponse))
+          as CreateSchoolChainResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateSchoolChainResponse create() => CreateSchoolChainResponse._();
+  @$core.override
+  CreateSchoolChainResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateSchoolChainResponse> createRepeated() =>
+      $pb.PbList<CreateSchoolChainResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CreateSchoolChainResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateSchoolChainResponse>(create);
+  static CreateSchoolChainResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get chainId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set chainId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasChainId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChainId() => $_clearField(1);
+}
+
+class AddAdminToSchoolChainRequest extends $pb.GeneratedMessage {
+  factory AddAdminToSchoolChainRequest({
+    $core.String? schoolChainId,
+  }) {
+    final result = create();
+    if (schoolChainId != null) result.schoolChainId = schoolChainId;
+    return result;
+  }
+
+  AddAdminToSchoolChainRequest._();
+
+  factory AddAdminToSchoolChainRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddAdminToSchoolChainRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddAdminToSchoolChainRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolChainId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddAdminToSchoolChainRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddAdminToSchoolChainRequest copyWith(
+          void Function(AddAdminToSchoolChainRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as AddAdminToSchoolChainRequest))
+          as AddAdminToSchoolChainRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddAdminToSchoolChainRequest create() =>
+      AddAdminToSchoolChainRequest._();
+  @$core.override
+  AddAdminToSchoolChainRequest createEmptyInstance() => create();
+  static $pb.PbList<AddAdminToSchoolChainRequest> createRepeated() =>
+      $pb.PbList<AddAdminToSchoolChainRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AddAdminToSchoolChainRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddAdminToSchoolChainRequest>(create);
+  static AddAdminToSchoolChainRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get schoolChainId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set schoolChainId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchoolChainId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchoolChainId() => $_clearField(1);
+}
+
+class AddAdminToSchoolChainResponse extends $pb.GeneratedMessage {
+  factory AddAdminToSchoolChainResponse({
+    $core.String? registrationId,
+    $core.String? adminId,
+  }) {
+    final result = create();
+    if (registrationId != null) result.registrationId = registrationId;
+    if (adminId != null) result.adminId = adminId;
+    return result;
+  }
+
+  AddAdminToSchoolChainResponse._();
+
+  factory AddAdminToSchoolChainResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddAdminToSchoolChainResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddAdminToSchoolChainResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'registrationId')
+    ..aOS(2, _omitFieldNames ? '' : 'adminId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddAdminToSchoolChainResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddAdminToSchoolChainResponse copyWith(
+          void Function(AddAdminToSchoolChainResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as AddAdminToSchoolChainResponse))
+          as AddAdminToSchoolChainResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddAdminToSchoolChainResponse create() =>
+      AddAdminToSchoolChainResponse._();
+  @$core.override
+  AddAdminToSchoolChainResponse createEmptyInstance() => create();
+  static $pb.PbList<AddAdminToSchoolChainResponse> createRepeated() =>
+      $pb.PbList<AddAdminToSchoolChainResponse>();
+  @$core.pragma('dart2js:noInline')
+  static AddAdminToSchoolChainResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddAdminToSchoolChainResponse>(create);
+  static AddAdminToSchoolChainResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get registrationId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set registrationId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasRegistrationId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRegistrationId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get adminId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set adminId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasAdminId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAdminId() => $_clearField(2);
+}
+
+class AddEmployeeToSchoolChainRequest extends $pb.GeneratedMessage {
+  factory AddEmployeeToSchoolChainRequest({
+    $core.String? schoolChainId,
+    $core.String? employeeId,
+  }) {
+    final result = create();
+    if (schoolChainId != null) result.schoolChainId = schoolChainId;
+    if (employeeId != null) result.employeeId = employeeId;
+    return result;
+  }
+
+  AddEmployeeToSchoolChainRequest._();
+
+  factory AddEmployeeToSchoolChainRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddEmployeeToSchoolChainRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddEmployeeToSchoolChainRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolChainId')
+    ..aOS(2, _omitFieldNames ? '' : 'employeeId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddEmployeeToSchoolChainRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddEmployeeToSchoolChainRequest copyWith(
+          void Function(AddEmployeeToSchoolChainRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as AddEmployeeToSchoolChainRequest))
+          as AddEmployeeToSchoolChainRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddEmployeeToSchoolChainRequest create() =>
+      AddEmployeeToSchoolChainRequest._();
+  @$core.override
+  AddEmployeeToSchoolChainRequest createEmptyInstance() => create();
+  static $pb.PbList<AddEmployeeToSchoolChainRequest> createRepeated() =>
+      $pb.PbList<AddEmployeeToSchoolChainRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AddEmployeeToSchoolChainRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddEmployeeToSchoolChainRequest>(
+          create);
+  static AddEmployeeToSchoolChainRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get schoolChainId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set schoolChainId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchoolChainId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchoolChainId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get employeeId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set employeeId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasEmployeeId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEmployeeId() => $_clearField(2);
+}
+
+class AddEmployeeToSchoolChainResponse extends $pb.GeneratedMessage {
+  factory AddEmployeeToSchoolChainResponse({
+    $core.String? registrationId,
+  }) {
+    final result = create();
+    if (registrationId != null) result.registrationId = registrationId;
+    return result;
+  }
+
+  AddEmployeeToSchoolChainResponse._();
+
+  factory AddEmployeeToSchoolChainResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddEmployeeToSchoolChainResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddEmployeeToSchoolChainResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'registrationId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddEmployeeToSchoolChainResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddEmployeeToSchoolChainResponse copyWith(
+          void Function(AddEmployeeToSchoolChainResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as AddEmployeeToSchoolChainResponse))
+          as AddEmployeeToSchoolChainResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddEmployeeToSchoolChainResponse create() =>
+      AddEmployeeToSchoolChainResponse._();
+  @$core.override
+  AddEmployeeToSchoolChainResponse createEmptyInstance() => create();
+  static $pb.PbList<AddEmployeeToSchoolChainResponse> createRepeated() =>
+      $pb.PbList<AddEmployeeToSchoolChainResponse>();
+  @$core.pragma('dart2js:noInline')
+  static AddEmployeeToSchoolChainResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddEmployeeToSchoolChainResponse>(
+          create);
+  static AddEmployeeToSchoolChainResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get registrationId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set registrationId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasRegistrationId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRegistrationId() => $_clearField(1);
+}
+
+class GetSchoolIdRequest extends $pb.GeneratedMessage {
+  factory GetSchoolIdRequest({
+    $core.String? userId,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    return result;
+  }
+
+  GetSchoolIdRequest._();
+
+  factory GetSchoolIdRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolIdRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSchoolIdRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolIdRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolIdRequest copyWith(void Function(GetSchoolIdRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSchoolIdRequest))
+          as GetSchoolIdRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolIdRequest create() => GetSchoolIdRequest._();
+  @$core.override
+  GetSchoolIdRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSchoolIdRequest> createRepeated() =>
+      $pb.PbList<GetSchoolIdRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolIdRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSchoolIdRequest>(create);
+  static GetSchoolIdRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+}
+
+class GetSchoolIdResponse extends $pb.GeneratedMessage {
+  factory GetSchoolIdResponse({
+    $core.String? schoolId,
+  }) {
+    final result = create();
+    if (schoolId != null) result.schoolId = schoolId;
+    return result;
+  }
+
+  GetSchoolIdResponse._();
+
+  factory GetSchoolIdResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolIdResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSchoolIdResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolIdResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolIdResponse copyWith(void Function(GetSchoolIdResponse) updates) =>
+      super.copyWith((message) => updates(message as GetSchoolIdResponse))
+          as GetSchoolIdResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolIdResponse create() => GetSchoolIdResponse._();
+  @$core.override
+  GetSchoolIdResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSchoolIdResponse> createRepeated() =>
+      $pb.PbList<GetSchoolIdResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolIdResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSchoolIdResponse>(create);
+  static GetSchoolIdResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get schoolId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set schoolId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchoolId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchoolId() => $_clearField(1);
+}
+
+class GetSchoolChainIdRequest extends $pb.GeneratedMessage {
+  factory GetSchoolChainIdRequest({
+    $core.String? userId,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    return result;
+  }
+
+  GetSchoolChainIdRequest._();
+
+  factory GetSchoolChainIdRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolChainIdRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSchoolChainIdRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolChainIdRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolChainIdRequest copyWith(
+          void Function(GetSchoolChainIdRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSchoolChainIdRequest))
+          as GetSchoolChainIdRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolChainIdRequest create() => GetSchoolChainIdRequest._();
+  @$core.override
+  GetSchoolChainIdRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSchoolChainIdRequest> createRepeated() =>
+      $pb.PbList<GetSchoolChainIdRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolChainIdRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSchoolChainIdRequest>(create);
+  static GetSchoolChainIdRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+}
+
+class GetSchoolChainIdResponse extends $pb.GeneratedMessage {
+  factory GetSchoolChainIdResponse({
+    $core.String? schoolChainId,
+  }) {
+    final result = create();
+    if (schoolChainId != null) result.schoolChainId = schoolChainId;
+    return result;
+  }
+
+  GetSchoolChainIdResponse._();
+
+  factory GetSchoolChainIdResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolChainIdResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSchoolChainIdResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolChainId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolChainIdResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolChainIdResponse copyWith(
+          void Function(GetSchoolChainIdResponse) updates) =>
+      super.copyWith((message) => updates(message as GetSchoolChainIdResponse))
+          as GetSchoolChainIdResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolChainIdResponse create() => GetSchoolChainIdResponse._();
+  @$core.override
+  GetSchoolChainIdResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSchoolChainIdResponse> createRepeated() =>
+      $pb.PbList<GetSchoolChainIdResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolChainIdResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSchoolChainIdResponse>(create);
+  static GetSchoolChainIdResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get schoolChainId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set schoolChainId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchoolChainId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchoolChainId() => $_clearField(1);
 }
 
 const $core.bool _omitFieldNames =

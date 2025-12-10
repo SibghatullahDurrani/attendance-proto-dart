@@ -38,6 +38,10 @@ class Role extends $pb.ProtobufEnum {
       Role._(9, _omitEnumNames ? '' : 'ROLE_SUB_ORGANIZATION_EMPLOYEE');
   static const Role ROLE_SUPER_ADMIN =
       Role._(10, _omitEnumNames ? '' : 'ROLE_SUPER_ADMIN');
+  static const Role ROLE_SCHOOL_CHAIN_ADMIN =
+      Role._(11, _omitEnumNames ? '' : 'ROLE_SCHOOL_CHAIN_ADMIN');
+  static const Role ROLE_SCHOOL_CHAIN_EMPLOYEE =
+      Role._(12, _omitEnumNames ? '' : 'ROLE_SCHOOL_CHAIN_EMPLOYEE');
 
   static const $core.List<Role> values = <Role>[
     ROLE_UNSPECIFIED,
@@ -51,10 +55,12 @@ class Role extends $pb.ProtobufEnum {
     ROLE_SUB_ORGANIZATION_ADMIN,
     ROLE_SUB_ORGANIZATION_EMPLOYEE,
     ROLE_SUPER_ADMIN,
+    ROLE_SCHOOL_CHAIN_ADMIN,
+    ROLE_SCHOOL_CHAIN_EMPLOYEE,
   ];
 
   static final $core.List<Role?> _byValue =
-      $pb.ProtobufEnum.$_initByValueList(values, 10);
+      $pb.ProtobufEnum.$_initByValueList(values, 12);
   static Role? valueOf($core.int value) =>
       value < 0 || value >= _byValue.length ? null : _byValue[value];
 

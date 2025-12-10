@@ -29,6 +29,8 @@ const Role$json = {
     {'1': 'ROLE_SUB_ORGANIZATION_ADMIN', '2': 8},
     {'1': 'ROLE_SUB_ORGANIZATION_EMPLOYEE', '2': 9},
     {'1': 'ROLE_SUPER_ADMIN', '2': 10},
+    {'1': 'ROLE_SCHOOL_CHAIN_ADMIN', '2': 11},
+    {'1': 'ROLE_SCHOOL_CHAIN_EMPLOYEE', '2': 12},
   ],
 };
 
@@ -39,7 +41,8 @@ final $typed_data.Uint8List roleDescriptor = $convert.base64Decode(
     'RV9TQ0hPT0xfRU1QTE9ZRUUQBRIbChdST0xFX09SR0FOSVpBVElPTl9BRE1JThAGEh4KGlJPTE'
     'VfT1JHQU5JWkFUSU9OX0VNUExPWUVFEAcSHwobUk9MRV9TVUJfT1JHQU5JWkFUSU9OX0FETUlO'
     'EAgSIgoeUk9MRV9TVUJfT1JHQU5JWkFUSU9OX0VNUExPWUVFEAkSFAoQUk9MRV9TVVBFUl9BRE'
-    '1JThAK');
+    '1JThAKEhsKF1JPTEVfU0NIT09MX0NIQUlOX0FETUlOEAsSHgoaUk9MRV9TQ0hPT0xfQ0hBSU5f'
+    'RU1QTE9ZRUUQDA==');
 
 @$core.Deprecated('Use sessionStatusDescriptor instead')
 const SessionStatus$json = {
@@ -57,3 +60,43 @@ final $typed_data.Uint8List sessionStatusDescriptor = $convert.base64Decode(
     'Cg1TZXNzaW9uU3RhdHVzEh4KGlNFU1NJT05fU1RBVFVTX1VOU1BFQ0lGSUVEEAASGQoVU0VTU0'
     'lPTl9TVEFUVVNfQUNUSVZFEAESGwoXU0VTU0lPTl9TVEFUVVNfVVBDT01JTkcQAhIcChhTRVNT'
     'SU9OX1NUQVRVU19DT01QTEVURUQQAw==');
+
+@$core.Deprecated('Use paginationRequestDescriptor instead')
+const PaginationRequest$json = {
+  '1': 'PaginationRequest',
+  '2': [
+    {'1': 'page', '3': 1, '4': 1, '5': 5, '10': 'page'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+  ],
+};
+
+/// Descriptor for `PaginationRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List paginationRequestDescriptor = $convert.base64Decode(
+    'ChFQYWdpbmF0aW9uUmVxdWVzdBISCgRwYWdlGAEgASgFUgRwYWdlEhsKCXBhZ2Vfc2l6ZRgCIA'
+    'EoBVIIcGFnZVNpemU=');
+
+@$core.Deprecated('Use paginationResponseDescriptor instead')
+const PaginationResponse$json = {
+  '1': 'PaginationResponse',
+  '2': [
+    {'1': 'max_pages', '3': 1, '4': 1, '5': 5, '10': 'maxPages'},
+    {'1': 'is_last', '3': 2, '4': 1, '5': 8, '10': 'isLast'},
+  ],
+};
+
+/// Descriptor for `PaginationResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List paginationResponseDescriptor = $convert.base64Decode(
+    'ChJQYWdpbmF0aW9uUmVzcG9uc2USGwoJbWF4X3BhZ2VzGAEgASgFUghtYXhQYWdlcxIXCgdpc1'
+    '9sYXN0GAIgASgIUgZpc0xhc3Q=');
+
+@$core.Deprecated('Use imageChunkDescriptor instead')
+const ImageChunk$json = {
+  '1': 'ImageChunk',
+  '2': [
+    {'1': 'image_bytes', '3': 1, '4': 1, '5': 12, '10': 'imageBytes'},
+  ],
+};
+
+/// Descriptor for `ImageChunk`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List imageChunkDescriptor = $convert.base64Decode(
+    'CgpJbWFnZUNodW5rEh8KC2ltYWdlX2J5dGVzGAEgASgMUgppbWFnZUJ5dGVz');
