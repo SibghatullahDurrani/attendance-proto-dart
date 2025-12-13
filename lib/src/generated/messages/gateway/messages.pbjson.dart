@@ -400,3 +400,125 @@ final $typed_data.Uint8List teacherRegistrationFormDescriptor = $convert.base64D
     'EoCVILcGhvbmVOdW1iZXISGQoFZW1haWwYBSABKAlIAVIFZW1haWyIAQESJAoNcXVhbGlmaWNh'
     'dGlvbhgGIAEoCVINcXVhbGlmaWNhdGlvbhIbCglzY2hvb2xfaWQYByABKAlSCHNjaG9vbElkQg'
     '4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWw=');
+
+@$core.Deprecated('Use registerSchoolChainAdminRequestDescriptor instead')
+const RegisterSchoolChainAdminRequest$json = {
+  '1': 'RegisterSchoolChainAdminRequest',
+  '2': [
+    {'1': 'school_chain_id', '3': 1, '4': 1, '5': 9, '10': 'schoolChainId'},
+  ],
+};
+
+/// Descriptor for `RegisterSchoolChainAdminRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List registerSchoolChainAdminRequestDescriptor =
+    $convert.base64Decode(
+        'Ch9SZWdpc3RlclNjaG9vbENoYWluQWRtaW5SZXF1ZXN0EiYKD3NjaG9vbF9jaGFpbl9pZBgBIA'
+        'EoCVINc2Nob29sQ2hhaW5JZA==');
+
+@$core.Deprecated('Use registerSchoolChainAdminResponseDescriptor instead')
+const RegisterSchoolChainAdminResponse$json = {
+  '1': 'RegisterSchoolChainAdminResponse',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+  ],
+};
+
+/// Descriptor for `RegisterSchoolChainAdminResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List registerSchoolChainAdminResponseDescriptor =
+    $convert.base64Decode(
+        'CiBSZWdpc3RlclNjaG9vbENoYWluQWRtaW5SZXNwb25zZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2'
+        'VySWQ=');
+
+@$core.Deprecated('Use registerSchoolChainEmployeeRequestDescriptor instead')
+const RegisterSchoolChainEmployeeRequest$json = {
+  '1': 'RegisterSchoolChainEmployeeRequest',
+  '2': [
+    {
+      '1': 'form_data',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.gateway_messages.SchoolChainEmployeeRegistrationForm',
+      '9': 0,
+      '10': 'formData'
+    },
+    {
+      '1': 'image_chunk',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.ImageChunk',
+      '9': 0,
+      '10': 'imageChunk'
+    },
+  ],
+  '8': [
+    {'1': 'data'},
+  ],
+};
+
+/// Descriptor for `RegisterSchoolChainEmployeeRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List registerSchoolChainEmployeeRequestDescriptor =
+    $convert.base64Decode(
+        'CiJSZWdpc3RlclNjaG9vbENoYWluRW1wbG95ZWVSZXF1ZXN0ElQKCWZvcm1fZGF0YRgBIAEoCz'
+        'I1LmdhdGV3YXlfbWVzc2FnZXMuU2Nob29sQ2hhaW5FbXBsb3llZVJlZ2lzdHJhdGlvbkZvcm1I'
+        'AFIIZm9ybURhdGESPgoLaW1hZ2VfY2h1bmsYAiABKAsyGy5jb21tb25fbWVzc2FnZXMuSW1hZ2'
+        'VDaHVua0gAUgppbWFnZUNodW5rQgYKBGRhdGE=');
+
+@$core.Deprecated('Use registerSchoolChainEmployeeResponseDescriptor instead')
+const RegisterSchoolChainEmployeeResponse$json = {
+  '1': 'RegisterSchoolChainEmployeeResponse',
+  '2': [
+    {'1': 'image_saved', '3': 1, '4': 1, '5': 8, '10': 'imageSaved'},
+    {'1': 'employee_id', '3': 2, '4': 1, '5': 9, '10': 'employeeId'},
+  ],
+};
+
+/// Descriptor for `RegisterSchoolChainEmployeeResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List registerSchoolChainEmployeeResponseDescriptor =
+    $convert.base64Decode(
+        'CiNSZWdpc3RlclNjaG9vbENoYWluRW1wbG95ZWVSZXNwb25zZRIfCgtpbWFnZV9zYXZlZBgBIA'
+        'EoCFIKaW1hZ2VTYXZlZBIfCgtlbXBsb3llZV9pZBgCIAEoCVIKZW1wbG95ZWVJZA==');
+
+@$core.Deprecated('Use schoolChainEmployeeRegistrationFormDescriptor instead')
+const SchoolChainEmployeeRegistrationForm$json = {
+  '1': 'SchoolChainEmployeeRegistrationForm',
+  '2': [
+    {'1': 'first_name', '3': 1, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 4, '4': 1, '5': 9, '10': 'phoneNumber'},
+    {'1': 'email', '3': 5, '4': 1, '5': 9, '9': 1, '10': 'email', '17': true},
+    {'1': 'qualification', '3': 6, '4': 1, '5': 9, '10': 'qualification'},
+    {'1': 'designation', '3': 7, '4': 1, '5': 9, '10': 'designation'},
+    {'1': 'school_chain_id', '3': 8, '4': 1, '5': 9, '10': 'schoolChainId'},
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_email'},
+  ],
+};
+
+/// Descriptor for `SchoolChainEmployeeRegistrationForm`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schoolChainEmployeeRegistrationFormDescriptor = $convert.base64Decode(
+    'CiNTY2hvb2xDaGFpbkVtcGxveWVlUmVnaXN0cmF0aW9uRm9ybRIdCgpmaXJzdF9uYW1lGAEgAS'
+    'gJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAiABKAlIAFIKc2Vjb25kTmFtZYgBARIzChVp'
+    'ZGVudGlmaWNhdGlvbl9udW1iZXIYAyABKAlSFGlkZW50aWZpY2F0aW9uTnVtYmVyEiEKDHBob2'
+    '5lX251bWJlchgEIAEoCVILcGhvbmVOdW1iZXISGQoFZW1haWwYBSABKAlIAVIFZW1haWyIAQES'
+    'JAoNcXVhbGlmaWNhdGlvbhgGIAEoCVINcXVhbGlmaWNhdGlvbhIgCgtkZXNpZ25hdGlvbhgHIA'
+    'EoCVILZGVzaWduYXRpb24SJgoPc2Nob29sX2NoYWluX2lkGAggASgJUg1zY2hvb2xDaGFpbklk'
+    'Qg4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWw=');

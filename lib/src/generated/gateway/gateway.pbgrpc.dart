@@ -34,6 +34,7 @@ class GatewayServiceClient extends $grpc.Client {
 
   GatewayServiceClient(super.channel, {super.options, super.interceptors});
 
+  /// Auth RPCS
   $grpc.ResponseFuture<$0.LoginResponse> login(
     $0.LoginRequest request, {
     $grpc.CallOptions? options,
@@ -48,6 +49,7 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$refreshLogin, request, options: options);
   }
 
+  /// School RPCS
   $grpc.ResponseFuture<$1.CreateSchoolResponse> createSchool(
     $1.CreateSchoolRequest request, {
     $grpc.CallOptions? options,
@@ -69,6 +71,42 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$createClass, request, options: options);
   }
 
+  $grpc.ResponseFuture<$1.ListAllSchoolsResponse> listAllSchools(
+    $1.ListAllSchoolsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listAllSchools, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.GetSchoolNameResponse> getSchoolName(
+    $1.GetSchoolNameRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getSchoolName, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.CreateSchoolChainResponse> createSchoolChain(
+    $1.CreateSchoolChainRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$createSchoolChain, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.GetSchoolIdResponse> getSchoolId(
+    $1.GetSchoolIdRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getSchoolId, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.GetSchoolChainIdResponse> getSchoolChainId(
+    $1.GetSchoolChainIdRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getSchoolChainId, request, options: options);
+  }
+
+  /// Saga RPCS
   $grpc.ResponseFuture<$2.RegisterTeacherResponse> registerTeacher(
     $async.Stream<$2.RegisterTeacherRequest> request, {
     $grpc.CallOptions? options,
@@ -109,39 +147,23 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$registerSchoolAdmin, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.ListAllSchoolsResponse> listAllSchools(
-    $1.ListAllSchoolsRequest request, {
+  $grpc.ResponseFuture<$2.RegisterSchoolChainAdminResponse>
+      registerSchoolChainAdmin(
+    $2.RegisterSchoolChainAdminRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$listAllSchools, request, options: options);
+    return $createUnaryCall(_$registerSchoolChainAdmin, request,
+        options: options);
   }
 
-  $grpc.ResponseFuture<$1.GetSchoolNameResponse> getSchoolName(
-    $1.GetSchoolNameRequest request, {
+  $grpc.ResponseFuture<$2.RegisterSchoolChainEmployeeResponse>
+      registerSchoolChainEmployee(
+    $async.Stream<$2.RegisterSchoolChainEmployeeRequest> request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$getSchoolName, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.CreateSchoolChainResponse> createSchoolChain(
-    $1.CreateSchoolChainRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$createSchoolChain, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.GetSchoolIdResponse> getSchoolId(
-    $1.GetSchoolIdRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getSchoolId, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.GetSchoolChainIdResponse> getSchoolChainId(
-    $1.GetSchoolChainIdRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getSchoolChainId, request, options: options);
+    return $createStreamingCall(_$registerSchoolChainEmployee, request,
+            options: options)
+        .single;
   }
 
   // method descriptors
@@ -170,31 +192,6 @@ class GatewayServiceClient extends $grpc.Client {
           '/gateway.GatewayService/CreateClass',
           ($1.CreateClassRequest value) => value.writeToBuffer(),
           $1.CreateClassResponse.fromBuffer);
-  static final _$registerTeacher =
-      $grpc.ClientMethod<$2.RegisterTeacherRequest, $2.RegisterTeacherResponse>(
-          '/gateway.GatewayService/RegisterTeacher',
-          ($2.RegisterTeacherRequest value) => value.writeToBuffer(),
-          $2.RegisterTeacherResponse.fromBuffer);
-  static final _$registerStudent =
-      $grpc.ClientMethod<$2.RegisterStudentRequest, $2.RegisterStudentResponse>(
-          '/gateway.GatewayService/RegisterStudent',
-          ($2.RegisterStudentRequest value) => value.writeToBuffer(),
-          $2.RegisterStudentResponse.fromBuffer);
-  static final _$registerParent =
-      $grpc.ClientMethod<$2.RegisterParentRequest, $2.RegisterParentResponse>(
-          '/gateway.GatewayService/RegisterParent',
-          ($2.RegisterParentRequest value) => value.writeToBuffer(),
-          $2.RegisterParentResponse.fromBuffer);
-  static final _$registerSchoolEmployee = $grpc.ClientMethod<
-          $2.RegisterSchoolEmployeeRequest, $2.RegisterSchoolEmployeeResponse>(
-      '/gateway.GatewayService/RegisterSchoolEmployee',
-      ($2.RegisterSchoolEmployeeRequest value) => value.writeToBuffer(),
-      $2.RegisterSchoolEmployeeResponse.fromBuffer);
-  static final _$registerSchoolAdmin = $grpc.ClientMethod<
-          $2.RegisterSchoolAdminRequest, $2.RegisterSchoolAdminResponse>(
-      '/gateway.GatewayService/RegisterSchoolAdmin',
-      ($2.RegisterSchoolAdminRequest value) => value.writeToBuffer(),
-      $2.RegisterSchoolAdminResponse.fromBuffer);
   static final _$listAllSchools =
       $grpc.ClientMethod<$1.ListAllSchoolsRequest, $1.ListAllSchoolsResponse>(
           '/gateway.GatewayService/ListAllSchools',
@@ -220,6 +217,43 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/GetSchoolChainId',
       ($1.GetSchoolChainIdRequest value) => value.writeToBuffer(),
       $1.GetSchoolChainIdResponse.fromBuffer);
+  static final _$registerTeacher =
+      $grpc.ClientMethod<$2.RegisterTeacherRequest, $2.RegisterTeacherResponse>(
+          '/gateway.GatewayService/RegisterTeacher',
+          ($2.RegisterTeacherRequest value) => value.writeToBuffer(),
+          $2.RegisterTeacherResponse.fromBuffer);
+  static final _$registerStudent =
+      $grpc.ClientMethod<$2.RegisterStudentRequest, $2.RegisterStudentResponse>(
+          '/gateway.GatewayService/RegisterStudent',
+          ($2.RegisterStudentRequest value) => value.writeToBuffer(),
+          $2.RegisterStudentResponse.fromBuffer);
+  static final _$registerParent =
+      $grpc.ClientMethod<$2.RegisterParentRequest, $2.RegisterParentResponse>(
+          '/gateway.GatewayService/RegisterParent',
+          ($2.RegisterParentRequest value) => value.writeToBuffer(),
+          $2.RegisterParentResponse.fromBuffer);
+  static final _$registerSchoolEmployee = $grpc.ClientMethod<
+          $2.RegisterSchoolEmployeeRequest, $2.RegisterSchoolEmployeeResponse>(
+      '/gateway.GatewayService/RegisterSchoolEmployee',
+      ($2.RegisterSchoolEmployeeRequest value) => value.writeToBuffer(),
+      $2.RegisterSchoolEmployeeResponse.fromBuffer);
+  static final _$registerSchoolAdmin = $grpc.ClientMethod<
+          $2.RegisterSchoolAdminRequest, $2.RegisterSchoolAdminResponse>(
+      '/gateway.GatewayService/RegisterSchoolAdmin',
+      ($2.RegisterSchoolAdminRequest value) => value.writeToBuffer(),
+      $2.RegisterSchoolAdminResponse.fromBuffer);
+  static final _$registerSchoolChainAdmin = $grpc.ClientMethod<
+          $2.RegisterSchoolChainAdminRequest,
+          $2.RegisterSchoolChainAdminResponse>(
+      '/gateway.GatewayService/RegisterSchoolChainAdmin',
+      ($2.RegisterSchoolChainAdminRequest value) => value.writeToBuffer(),
+      $2.RegisterSchoolChainAdminResponse.fromBuffer);
+  static final _$registerSchoolChainEmployee = $grpc.ClientMethod<
+          $2.RegisterSchoolChainEmployeeRequest,
+          $2.RegisterSchoolChainEmployeeResponse>(
+      '/gateway.GatewayService/RegisterSchoolChainEmployee',
+      ($2.RegisterSchoolChainEmployeeRequest value) => value.writeToBuffer(),
+      $2.RegisterSchoolChainEmployeeResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -269,51 +303,6 @@ abstract class GatewayServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $1.CreateClassRequest.fromBuffer(value),
             ($1.CreateClassResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RegisterTeacherRequest,
-            $2.RegisterTeacherResponse>(
-        'RegisterTeacher',
-        registerTeacher,
-        true,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.RegisterTeacherRequest.fromBuffer(value),
-        ($2.RegisterTeacherResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RegisterStudentRequest,
-            $2.RegisterStudentResponse>(
-        'RegisterStudent',
-        registerStudent,
-        true,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.RegisterStudentRequest.fromBuffer(value),
-        ($2.RegisterStudentResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RegisterParentRequest,
-            $2.RegisterParentResponse>(
-        'RegisterParent',
-        registerParent_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.RegisterParentRequest.fromBuffer(value),
-        ($2.RegisterParentResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RegisterSchoolEmployeeRequest,
-            $2.RegisterSchoolEmployeeResponse>(
-        'RegisterSchoolEmployee',
-        registerSchoolEmployee,
-        true,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.RegisterSchoolEmployeeRequest.fromBuffer(value),
-        ($2.RegisterSchoolEmployeeResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RegisterSchoolAdminRequest,
-            $2.RegisterSchoolAdminResponse>(
-        'RegisterSchoolAdmin',
-        registerSchoolAdmin_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.RegisterSchoolAdminRequest.fromBuffer(value),
-        ($2.RegisterSchoolAdminResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$1.ListAllSchoolsRequest,
             $1.ListAllSchoolsResponse>(
         'ListAllSchools',
@@ -359,6 +348,70 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $1.GetSchoolChainIdRequest.fromBuffer(value),
         ($1.GetSchoolChainIdResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.RegisterTeacherRequest,
+            $2.RegisterTeacherResponse>(
+        'RegisterTeacher',
+        registerTeacher,
+        true,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.RegisterTeacherRequest.fromBuffer(value),
+        ($2.RegisterTeacherResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.RegisterStudentRequest,
+            $2.RegisterStudentResponse>(
+        'RegisterStudent',
+        registerStudent,
+        true,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.RegisterStudentRequest.fromBuffer(value),
+        ($2.RegisterStudentResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.RegisterParentRequest,
+            $2.RegisterParentResponse>(
+        'RegisterParent',
+        registerParent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.RegisterParentRequest.fromBuffer(value),
+        ($2.RegisterParentResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.RegisterSchoolEmployeeRequest,
+            $2.RegisterSchoolEmployeeResponse>(
+        'RegisterSchoolEmployee',
+        registerSchoolEmployee,
+        true,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.RegisterSchoolEmployeeRequest.fromBuffer(value),
+        ($2.RegisterSchoolEmployeeResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.RegisterSchoolAdminRequest,
+            $2.RegisterSchoolAdminResponse>(
+        'RegisterSchoolAdmin',
+        registerSchoolAdmin_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.RegisterSchoolAdminRequest.fromBuffer(value),
+        ($2.RegisterSchoolAdminResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.RegisterSchoolChainAdminRequest,
+            $2.RegisterSchoolChainAdminResponse>(
+        'RegisterSchoolChainAdmin',
+        registerSchoolChainAdmin_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.RegisterSchoolChainAdminRequest.fromBuffer(value),
+        ($2.RegisterSchoolChainAdminResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.RegisterSchoolChainEmployeeRequest,
+            $2.RegisterSchoolChainEmployeeResponse>(
+        'RegisterSchoolChainEmployee',
+        registerSchoolChainEmployee,
+        true,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.RegisterSchoolChainEmployeeRequest.fromBuffer(value),
+        ($2.RegisterSchoolChainEmployeeResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -403,34 +456,6 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$1.CreateClassResponse> createClass(
       $grpc.ServiceCall call, $1.CreateClassRequest request);
 
-  $async.Future<$2.RegisterTeacherResponse> registerTeacher(
-      $grpc.ServiceCall call, $async.Stream<$2.RegisterTeacherRequest> request);
-
-  $async.Future<$2.RegisterStudentResponse> registerStudent(
-      $grpc.ServiceCall call, $async.Stream<$2.RegisterStudentRequest> request);
-
-  $async.Future<$2.RegisterParentResponse> registerParent_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$2.RegisterParentRequest> $request) async {
-    return registerParent($call, await $request);
-  }
-
-  $async.Future<$2.RegisterParentResponse> registerParent(
-      $grpc.ServiceCall call, $2.RegisterParentRequest request);
-
-  $async.Future<$2.RegisterSchoolEmployeeResponse> registerSchoolEmployee(
-      $grpc.ServiceCall call,
-      $async.Stream<$2.RegisterSchoolEmployeeRequest> request);
-
-  $async.Future<$2.RegisterSchoolAdminResponse> registerSchoolAdmin_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$2.RegisterSchoolAdminRequest> $request) async {
-    return registerSchoolAdmin($call, await $request);
-  }
-
-  $async.Future<$2.RegisterSchoolAdminResponse> registerSchoolAdmin(
-      $grpc.ServiceCall call, $2.RegisterSchoolAdminRequest request);
-
   $async.Future<$1.ListAllSchoolsResponse> listAllSchools_Pre(
       $grpc.ServiceCall $call,
       $async.Future<$1.ListAllSchoolsRequest> $request) async {
@@ -474,4 +499,45 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$1.GetSchoolChainIdResponse> getSchoolChainId(
       $grpc.ServiceCall call, $1.GetSchoolChainIdRequest request);
+
+  $async.Future<$2.RegisterTeacherResponse> registerTeacher(
+      $grpc.ServiceCall call, $async.Stream<$2.RegisterTeacherRequest> request);
+
+  $async.Future<$2.RegisterStudentResponse> registerStudent(
+      $grpc.ServiceCall call, $async.Stream<$2.RegisterStudentRequest> request);
+
+  $async.Future<$2.RegisterParentResponse> registerParent_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$2.RegisterParentRequest> $request) async {
+    return registerParent($call, await $request);
+  }
+
+  $async.Future<$2.RegisterParentResponse> registerParent(
+      $grpc.ServiceCall call, $2.RegisterParentRequest request);
+
+  $async.Future<$2.RegisterSchoolEmployeeResponse> registerSchoolEmployee(
+      $grpc.ServiceCall call,
+      $async.Stream<$2.RegisterSchoolEmployeeRequest> request);
+
+  $async.Future<$2.RegisterSchoolAdminResponse> registerSchoolAdmin_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$2.RegisterSchoolAdminRequest> $request) async {
+    return registerSchoolAdmin($call, await $request);
+  }
+
+  $async.Future<$2.RegisterSchoolAdminResponse> registerSchoolAdmin(
+      $grpc.ServiceCall call, $2.RegisterSchoolAdminRequest request);
+
+  $async.Future<$2.RegisterSchoolChainAdminResponse>
+      registerSchoolChainAdmin_Pre($grpc.ServiceCall $call,
+          $async.Future<$2.RegisterSchoolChainAdminRequest> $request) async {
+    return registerSchoolChainAdmin($call, await $request);
+  }
+
+  $async.Future<$2.RegisterSchoolChainAdminResponse> registerSchoolChainAdmin(
+      $grpc.ServiceCall call, $2.RegisterSchoolChainAdminRequest request);
+
+  $async.Future<$2.RegisterSchoolChainEmployeeResponse>
+      registerSchoolChainEmployee($grpc.ServiceCall call,
+          $async.Stream<$2.RegisterSchoolChainEmployeeRequest> request);
 }

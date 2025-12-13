@@ -322,3 +322,62 @@ final $typed_data.Uint8List registerSchoolChainAdminSagaResponseDescriptor =
     $convert.base64Decode(
         'CiRSZWdpc3RlclNjaG9vbENoYWluQWRtaW5TYWdhUmVzcG9uc2USGQoIYWRtaW5faWQYASABKA'
         'lSB2FkbWluSWQ=');
+
+@$core
+    .Deprecated('Use registerSchoolChainEmployeeSagaRequestDescriptor instead')
+const RegisterSchoolChainEmployeeSagaRequest$json = {
+  '1': 'RegisterSchoolChainEmployeeSagaRequest',
+  '2': [
+    {'1': 'first_name', '3': 1, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 4, '4': 1, '5': 9, '10': 'phoneNumber'},
+    {'1': 'email', '3': 5, '4': 1, '5': 9, '9': 1, '10': 'email', '17': true},
+    {'1': 'qualification', '3': 6, '4': 1, '5': 9, '10': 'qualification'},
+    {'1': 'designation', '3': 7, '4': 1, '5': 9, '10': 'designation'},
+    {'1': 'school_chain_id', '3': 8, '4': 1, '5': 9, '10': 'schoolChainId'},
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_email'},
+  ],
+};
+
+/// Descriptor for `RegisterSchoolChainEmployeeSagaRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List registerSchoolChainEmployeeSagaRequestDescriptor = $convert.base64Decode(
+    'CiZSZWdpc3RlclNjaG9vbENoYWluRW1wbG95ZWVTYWdhUmVxdWVzdBIdCgpmaXJzdF9uYW1lGA'
+    'EgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAiABKAlIAFIKc2Vjb25kTmFtZYgBARIz'
+    'ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYAyABKAlSFGlkZW50aWZpY2F0aW9uTnVtYmVyEiEKDH'
+    'Bob25lX251bWJlchgEIAEoCVILcGhvbmVOdW1iZXISGQoFZW1haWwYBSABKAlIAVIFZW1haWyI'
+    'AQESJAoNcXVhbGlmaWNhdGlvbhgGIAEoCVINcXVhbGlmaWNhdGlvbhIgCgtkZXNpZ25hdGlvbh'
+    'gHIAEoCVILZGVzaWduYXRpb24SJgoPc2Nob29sX2NoYWluX2lkGAggASgJUg1zY2hvb2xDaGFp'
+    'bklkQg4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWw=');
+
+@$core
+    .Deprecated('Use registerSchoolChainEmployeeSagaResponseDescriptor instead')
+const RegisterSchoolChainEmployeeSagaResponse$json = {
+  '1': 'RegisterSchoolChainEmployeeSagaResponse',
+  '2': [
+    {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
+  ],
+};
+
+/// Descriptor for `RegisterSchoolChainEmployeeSagaResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List registerSchoolChainEmployeeSagaResponseDescriptor =
+    $convert.base64Decode(
+        'CidSZWdpc3RlclNjaG9vbENoYWluRW1wbG95ZWVTYWdhUmVzcG9uc2USHwoLZW1wbG95ZWVfaW'
+        'QYASABKAlSCmVtcGxveWVlSWQ=');

@@ -80,6 +80,15 @@ class SagaServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.RegisterSchoolChainEmployeeSagaResponse>
+      registerSchoolChainEmployeeSaga(
+    $0.RegisterSchoolChainEmployeeSagaRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$registerSchoolChainEmployeeSaga, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$registerStudentSaga = $grpc.ClientMethod<
@@ -115,6 +124,13 @@ class SagaServiceClient extends $grpc.Client {
       '/saga.SagaService/RegisterSchoolChainAdminSaga',
       ($0.RegisterSchoolChainAdminSagaRequest value) => value.writeToBuffer(),
       $0.RegisterSchoolChainAdminSagaResponse.fromBuffer);
+  static final _$registerSchoolChainEmployeeSaga = $grpc.ClientMethod<
+          $0.RegisterSchoolChainEmployeeSagaRequest,
+          $0.RegisterSchoolChainEmployeeSagaResponse>(
+      '/saga.SagaService/RegisterSchoolChainEmployeeSaga',
+      ($0.RegisterSchoolChainEmployeeSagaRequest value) =>
+          value.writeToBuffer(),
+      $0.RegisterSchoolChainEmployeeSagaResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('saga.SagaService')
@@ -178,6 +194,16 @@ abstract class SagaServiceBase extends $grpc.Service {
             $0.RegisterSchoolChainAdminSagaRequest.fromBuffer(value),
         ($0.RegisterSchoolChainAdminSagaResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RegisterSchoolChainEmployeeSagaRequest,
+            $0.RegisterSchoolChainEmployeeSagaResponse>(
+        'RegisterSchoolChainEmployeeSaga',
+        registerSchoolChainEmployeeSaga_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.RegisterSchoolChainEmployeeSagaRequest.fromBuffer(value),
+        ($0.RegisterSchoolChainEmployeeSagaResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.RegisterStudentSagaResponse> registerStudentSaga_Pre(
@@ -237,4 +263,16 @@ abstract class SagaServiceBase extends $grpc.Service {
   $async.Future<$0.RegisterSchoolChainAdminSagaResponse>
       registerSchoolChainAdminSaga($grpc.ServiceCall call,
           $0.RegisterSchoolChainAdminSagaRequest request);
+
+  $async.Future<$0.RegisterSchoolChainEmployeeSagaResponse>
+      registerSchoolChainEmployeeSaga_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.RegisterSchoolChainEmployeeSagaRequest>
+              $request) async {
+    return registerSchoolChainEmployeeSaga($call, await $request);
+  }
+
+  $async.Future<$0.RegisterSchoolChainEmployeeSagaResponse>
+      registerSchoolChainEmployeeSaga($grpc.ServiceCall call,
+          $0.RegisterSchoolChainEmployeeSagaRequest request);
 }

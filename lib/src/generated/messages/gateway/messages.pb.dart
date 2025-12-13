@@ -1226,6 +1226,449 @@ class TeacherRegistrationForm extends $pb.GeneratedMessage {
   void clearSchoolId() => $_clearField(7);
 }
 
+class RegisterSchoolChainAdminRequest extends $pb.GeneratedMessage {
+  factory RegisterSchoolChainAdminRequest({
+    $core.String? schoolChainId,
+  }) {
+    final result = create();
+    if (schoolChainId != null) result.schoolChainId = schoolChainId;
+    return result;
+  }
+
+  RegisterSchoolChainAdminRequest._();
+
+  factory RegisterSchoolChainAdminRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RegisterSchoolChainAdminRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegisterSchoolChainAdminRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolChainId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainAdminRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainAdminRequest copyWith(
+          void Function(RegisterSchoolChainAdminRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as RegisterSchoolChainAdminRequest))
+          as RegisterSchoolChainAdminRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainAdminRequest create() =>
+      RegisterSchoolChainAdminRequest._();
+  @$core.override
+  RegisterSchoolChainAdminRequest createEmptyInstance() => create();
+  static $pb.PbList<RegisterSchoolChainAdminRequest> createRepeated() =>
+      $pb.PbList<RegisterSchoolChainAdminRequest>();
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainAdminRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RegisterSchoolChainAdminRequest>(
+          create);
+  static RegisterSchoolChainAdminRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get schoolChainId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set schoolChainId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchoolChainId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchoolChainId() => $_clearField(1);
+}
+
+class RegisterSchoolChainAdminResponse extends $pb.GeneratedMessage {
+  factory RegisterSchoolChainAdminResponse({
+    $core.String? userId,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    return result;
+  }
+
+  RegisterSchoolChainAdminResponse._();
+
+  factory RegisterSchoolChainAdminResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RegisterSchoolChainAdminResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegisterSchoolChainAdminResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainAdminResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainAdminResponse copyWith(
+          void Function(RegisterSchoolChainAdminResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as RegisterSchoolChainAdminResponse))
+          as RegisterSchoolChainAdminResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainAdminResponse create() =>
+      RegisterSchoolChainAdminResponse._();
+  @$core.override
+  RegisterSchoolChainAdminResponse createEmptyInstance() => create();
+  static $pb.PbList<RegisterSchoolChainAdminResponse> createRepeated() =>
+      $pb.PbList<RegisterSchoolChainAdminResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainAdminResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RegisterSchoolChainAdminResponse>(
+          create);
+  static RegisterSchoolChainAdminResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+}
+
+enum RegisterSchoolChainEmployeeRequest_Data { formData, imageChunk, notSet }
+
+class RegisterSchoolChainEmployeeRequest extends $pb.GeneratedMessage {
+  factory RegisterSchoolChainEmployeeRequest({
+    SchoolChainEmployeeRegistrationForm? formData,
+    $0.ImageChunk? imageChunk,
+  }) {
+    final result = create();
+    if (formData != null) result.formData = formData;
+    if (imageChunk != null) result.imageChunk = imageChunk;
+    return result;
+  }
+
+  RegisterSchoolChainEmployeeRequest._();
+
+  factory RegisterSchoolChainEmployeeRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RegisterSchoolChainEmployeeRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static const $core.Map<$core.int, RegisterSchoolChainEmployeeRequest_Data>
+      _RegisterSchoolChainEmployeeRequest_DataByTag = {
+    1: RegisterSchoolChainEmployeeRequest_Data.formData,
+    2: RegisterSchoolChainEmployeeRequest_Data.imageChunk,
+    0: RegisterSchoolChainEmployeeRequest_Data.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegisterSchoolChainEmployeeRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..aOM<SchoolChainEmployeeRegistrationForm>(
+        1, _omitFieldNames ? '' : 'formData',
+        subBuilder: SchoolChainEmployeeRegistrationForm.create)
+    ..aOM<$0.ImageChunk>(2, _omitFieldNames ? '' : 'imageChunk',
+        subBuilder: $0.ImageChunk.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainEmployeeRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainEmployeeRequest copyWith(
+          void Function(RegisterSchoolChainEmployeeRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as RegisterSchoolChainEmployeeRequest))
+          as RegisterSchoolChainEmployeeRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainEmployeeRequest create() =>
+      RegisterSchoolChainEmployeeRequest._();
+  @$core.override
+  RegisterSchoolChainEmployeeRequest createEmptyInstance() => create();
+  static $pb.PbList<RegisterSchoolChainEmployeeRequest> createRepeated() =>
+      $pb.PbList<RegisterSchoolChainEmployeeRequest>();
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainEmployeeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RegisterSchoolChainEmployeeRequest>(
+          create);
+  static RegisterSchoolChainEmployeeRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  RegisterSchoolChainEmployeeRequest_Data whichData() =>
+      _RegisterSchoolChainEmployeeRequest_DataByTag[$_whichOneof(0)]!;
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearData() => $_clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  SchoolChainEmployeeRegistrationForm get formData => $_getN(0);
+  @$pb.TagNumber(1)
+  set formData(SchoolChainEmployeeRegistrationForm value) =>
+      $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasFormData() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFormData() => $_clearField(1);
+  @$pb.TagNumber(1)
+  SchoolChainEmployeeRegistrationForm ensureFormData() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $0.ImageChunk get imageChunk => $_getN(1);
+  @$pb.TagNumber(2)
+  set imageChunk($0.ImageChunk value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasImageChunk() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearImageChunk() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $0.ImageChunk ensureImageChunk() => $_ensure(1);
+}
+
+class RegisterSchoolChainEmployeeResponse extends $pb.GeneratedMessage {
+  factory RegisterSchoolChainEmployeeResponse({
+    $core.bool? imageSaved,
+    $core.String? employeeId,
+  }) {
+    final result = create();
+    if (imageSaved != null) result.imageSaved = imageSaved;
+    if (employeeId != null) result.employeeId = employeeId;
+    return result;
+  }
+
+  RegisterSchoolChainEmployeeResponse._();
+
+  factory RegisterSchoolChainEmployeeResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RegisterSchoolChainEmployeeResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegisterSchoolChainEmployeeResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'imageSaved')
+    ..aOS(2, _omitFieldNames ? '' : 'employeeId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainEmployeeResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainEmployeeResponse copyWith(
+          void Function(RegisterSchoolChainEmployeeResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as RegisterSchoolChainEmployeeResponse))
+          as RegisterSchoolChainEmployeeResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainEmployeeResponse create() =>
+      RegisterSchoolChainEmployeeResponse._();
+  @$core.override
+  RegisterSchoolChainEmployeeResponse createEmptyInstance() => create();
+  static $pb.PbList<RegisterSchoolChainEmployeeResponse> createRepeated() =>
+      $pb.PbList<RegisterSchoolChainEmployeeResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainEmployeeResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          RegisterSchoolChainEmployeeResponse>(create);
+  static RegisterSchoolChainEmployeeResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get imageSaved => $_getBF(0);
+  @$pb.TagNumber(1)
+  set imageSaved($core.bool value) => $_setBool(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasImageSaved() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearImageSaved() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get employeeId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set employeeId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasEmployeeId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEmployeeId() => $_clearField(2);
+}
+
+class SchoolChainEmployeeRegistrationForm extends $pb.GeneratedMessage {
+  factory SchoolChainEmployeeRegistrationForm({
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? phoneNumber,
+    $core.String? email,
+    $core.String? qualification,
+    $core.String? designation,
+    $core.String? schoolChainId,
+  }) {
+    final result = create();
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
+    if (email != null) result.email = email;
+    if (qualification != null) result.qualification = qualification;
+    if (designation != null) result.designation = designation;
+    if (schoolChainId != null) result.schoolChainId = schoolChainId;
+    return result;
+  }
+
+  SchoolChainEmployeeRegistrationForm._();
+
+  factory SchoolChainEmployeeRegistrationForm.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SchoolChainEmployeeRegistrationForm.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SchoolChainEmployeeRegistrationForm',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'firstName')
+    ..aOS(2, _omitFieldNames ? '' : 'secondName')
+    ..aOS(3, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(4, _omitFieldNames ? '' : 'phoneNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'email')
+    ..aOS(6, _omitFieldNames ? '' : 'qualification')
+    ..aOS(7, _omitFieldNames ? '' : 'designation')
+    ..aOS(8, _omitFieldNames ? '' : 'schoolChainId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SchoolChainEmployeeRegistrationForm clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SchoolChainEmployeeRegistrationForm copyWith(
+          void Function(SchoolChainEmployeeRegistrationForm) updates) =>
+      super.copyWith((message) =>
+              updates(message as SchoolChainEmployeeRegistrationForm))
+          as SchoolChainEmployeeRegistrationForm;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SchoolChainEmployeeRegistrationForm create() =>
+      SchoolChainEmployeeRegistrationForm._();
+  @$core.override
+  SchoolChainEmployeeRegistrationForm createEmptyInstance() => create();
+  static $pb.PbList<SchoolChainEmployeeRegistrationForm> createRepeated() =>
+      $pb.PbList<SchoolChainEmployeeRegistrationForm>();
+  @$core.pragma('dart2js:noInline')
+  static SchoolChainEmployeeRegistrationForm getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          SchoolChainEmployeeRegistrationForm>(create);
+  static SchoolChainEmployeeRegistrationForm? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get firstName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set firstName($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasFirstName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFirstName() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get secondName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set secondName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSecondName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSecondName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get identificationNumber => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set identificationNumber($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasIdentificationNumber() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearIdentificationNumber() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get phoneNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set phoneNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasPhoneNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPhoneNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get email => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set email($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasEmail() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearEmail() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get qualification => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set qualification($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasQualification() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearQualification() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get designation => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set designation($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasDesignation() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearDesignation() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get schoolChainId => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set schoolChainId($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasSchoolChainId() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearSchoolChainId() => $_clearField(8);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

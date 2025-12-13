@@ -1032,6 +1032,213 @@ class RegisterSchoolChainAdminSagaResponse extends $pb.GeneratedMessage {
   void clearAdminId() => $_clearField(1);
 }
 
+class RegisterSchoolChainEmployeeSagaRequest extends $pb.GeneratedMessage {
+  factory RegisterSchoolChainEmployeeSagaRequest({
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? phoneNumber,
+    $core.String? email,
+    $core.String? qualification,
+    $core.String? designation,
+    $core.String? schoolChainId,
+  }) {
+    final result = create();
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
+    if (email != null) result.email = email;
+    if (qualification != null) result.qualification = qualification;
+    if (designation != null) result.designation = designation;
+    if (schoolChainId != null) result.schoolChainId = schoolChainId;
+    return result;
+  }
+
+  RegisterSchoolChainEmployeeSagaRequest._();
+
+  factory RegisterSchoolChainEmployeeSagaRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RegisterSchoolChainEmployeeSagaRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegisterSchoolChainEmployeeSagaRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'firstName')
+    ..aOS(2, _omitFieldNames ? '' : 'secondName')
+    ..aOS(3, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(4, _omitFieldNames ? '' : 'phoneNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'email')
+    ..aOS(6, _omitFieldNames ? '' : 'qualification')
+    ..aOS(7, _omitFieldNames ? '' : 'designation')
+    ..aOS(8, _omitFieldNames ? '' : 'schoolChainId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainEmployeeSagaRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainEmployeeSagaRequest copyWith(
+          void Function(RegisterSchoolChainEmployeeSagaRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as RegisterSchoolChainEmployeeSagaRequest))
+          as RegisterSchoolChainEmployeeSagaRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainEmployeeSagaRequest create() =>
+      RegisterSchoolChainEmployeeSagaRequest._();
+  @$core.override
+  RegisterSchoolChainEmployeeSagaRequest createEmptyInstance() => create();
+  static $pb.PbList<RegisterSchoolChainEmployeeSagaRequest> createRepeated() =>
+      $pb.PbList<RegisterSchoolChainEmployeeSagaRequest>();
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainEmployeeSagaRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          RegisterSchoolChainEmployeeSagaRequest>(create);
+  static RegisterSchoolChainEmployeeSagaRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get firstName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set firstName($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasFirstName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFirstName() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get secondName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set secondName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSecondName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSecondName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get identificationNumber => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set identificationNumber($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasIdentificationNumber() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearIdentificationNumber() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get phoneNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set phoneNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasPhoneNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPhoneNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get email => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set email($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasEmail() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearEmail() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get qualification => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set qualification($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasQualification() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearQualification() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get designation => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set designation($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasDesignation() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearDesignation() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get schoolChainId => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set schoolChainId($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasSchoolChainId() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearSchoolChainId() => $_clearField(8);
+}
+
+class RegisterSchoolChainEmployeeSagaResponse extends $pb.GeneratedMessage {
+  factory RegisterSchoolChainEmployeeSagaResponse({
+    $core.String? employeeId,
+  }) {
+    final result = create();
+    if (employeeId != null) result.employeeId = employeeId;
+    return result;
+  }
+
+  RegisterSchoolChainEmployeeSagaResponse._();
+
+  factory RegisterSchoolChainEmployeeSagaResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RegisterSchoolChainEmployeeSagaResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegisterSchoolChainEmployeeSagaResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'employeeId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainEmployeeSagaResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterSchoolChainEmployeeSagaResponse copyWith(
+          void Function(RegisterSchoolChainEmployeeSagaResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as RegisterSchoolChainEmployeeSagaResponse))
+          as RegisterSchoolChainEmployeeSagaResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainEmployeeSagaResponse create() =>
+      RegisterSchoolChainEmployeeSagaResponse._();
+  @$core.override
+  RegisterSchoolChainEmployeeSagaResponse createEmptyInstance() => create();
+  static $pb.PbList<RegisterSchoolChainEmployeeSagaResponse> createRepeated() =>
+      $pb.PbList<RegisterSchoolChainEmployeeSagaResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RegisterSchoolChainEmployeeSagaResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          RegisterSchoolChainEmployeeSagaResponse>(create);
+  static RegisterSchoolChainEmployeeSagaResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get employeeId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set employeeId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasEmployeeId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEmployeeId() => $_clearField(1);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =
