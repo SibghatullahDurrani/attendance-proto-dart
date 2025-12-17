@@ -61,6 +61,26 @@ final $typed_data.Uint8List sessionStatusDescriptor = $convert.base64Decode(
     'lPTl9TVEFUVVNfQUNUSVZFEAESGwoXU0VTU0lPTl9TVEFUVVNfVVBDT01JTkcQAhIcChhTRVNT'
     'SU9OX1NUQVRVU19DT01QTEVURUQQAw==');
 
+@$core.Deprecated('Use attendanceStatusDescriptor instead')
+const AttendanceStatus$json = {
+  '1': 'AttendanceStatus',
+  '2': [
+    {'1': 'ATTENDANCE_STATUS_ON_TIME', '2': 0},
+    {'1': 'ATTENDANCE_STATUS_LATE', '2': 1},
+    {'1': 'ATTENDANCE_STATUS_ABSENT', '2': 2},
+    {'1': 'ATTENDANCE_STATUS_ON_LEAVE', '2': 3},
+    {'1': 'ATTENDANCE_STATUS_OFF_DAY', '2': 4},
+    {'1': 'ATTENDANCE_STATUS_HOLIDAY', '2': 5},
+  ],
+};
+
+/// Descriptor for `AttendanceStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List attendanceStatusDescriptor = $convert.base64Decode(
+    'ChBBdHRlbmRhbmNlU3RhdHVzEh0KGUFUVEVOREFOQ0VfU1RBVFVTX09OX1RJTUUQABIaChZBVF'
+    'RFTkRBTkNFX1NUQVRVU19MQVRFEAESHAoYQVRURU5EQU5DRV9TVEFUVVNfQUJTRU5UEAISHgoa'
+    'QVRURU5EQU5DRV9TVEFUVVNfT05fTEVBVkUQAxIdChlBVFRFTkRBTkNFX1NUQVRVU19PRkZfRE'
+    'FZEAQSHQoZQVRURU5EQU5DRV9TVEFUVVNfSE9MSURBWRAF');
+
 @$core.Deprecated('Use paginationRequestDescriptor instead')
 const PaginationRequest$json = {
   '1': 'PaginationRequest',

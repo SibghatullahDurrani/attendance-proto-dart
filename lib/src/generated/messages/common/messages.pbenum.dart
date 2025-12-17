@@ -92,5 +92,36 @@ class SessionStatus extends $pb.ProtobufEnum {
   const SessionStatus._(super.value, super.name);
 }
 
+class AttendanceStatus extends $pb.ProtobufEnum {
+  static const AttendanceStatus ATTENDANCE_STATUS_ON_TIME =
+      AttendanceStatus._(0, _omitEnumNames ? '' : 'ATTENDANCE_STATUS_ON_TIME');
+  static const AttendanceStatus ATTENDANCE_STATUS_LATE =
+      AttendanceStatus._(1, _omitEnumNames ? '' : 'ATTENDANCE_STATUS_LATE');
+  static const AttendanceStatus ATTENDANCE_STATUS_ABSENT =
+      AttendanceStatus._(2, _omitEnumNames ? '' : 'ATTENDANCE_STATUS_ABSENT');
+  static const AttendanceStatus ATTENDANCE_STATUS_ON_LEAVE =
+      AttendanceStatus._(3, _omitEnumNames ? '' : 'ATTENDANCE_STATUS_ON_LEAVE');
+  static const AttendanceStatus ATTENDANCE_STATUS_OFF_DAY =
+      AttendanceStatus._(4, _omitEnumNames ? '' : 'ATTENDANCE_STATUS_OFF_DAY');
+  static const AttendanceStatus ATTENDANCE_STATUS_HOLIDAY =
+      AttendanceStatus._(5, _omitEnumNames ? '' : 'ATTENDANCE_STATUS_HOLIDAY');
+
+  static const $core.List<AttendanceStatus> values = <AttendanceStatus>[
+    ATTENDANCE_STATUS_ON_TIME,
+    ATTENDANCE_STATUS_LATE,
+    ATTENDANCE_STATUS_ABSENT,
+    ATTENDANCE_STATUS_ON_LEAVE,
+    ATTENDANCE_STATUS_OFF_DAY,
+    ATTENDANCE_STATUS_HOLIDAY,
+  ];
+
+  static final $core.List<AttendanceStatus?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 5);
+  static AttendanceStatus? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const AttendanceStatus._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');
