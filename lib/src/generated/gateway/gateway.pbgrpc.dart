@@ -16,6 +16,7 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../messages/attendance/messages.pb.dart' as $3;
 import '../messages/auth/messages.pb.dart' as $0;
 import '../messages/gateway/messages.pb.dart' as $2;
 import '../messages/school/messages.pb.dart' as $1;
@@ -166,6 +167,43 @@ class GatewayServiceClient extends $grpc.Client {
         .single;
   }
 
+  /// Attendance RPCS
+  $grpc.ResponseFuture<$3.GetUserMonthlyAttendanceStatsResponse>
+      getUserMonthlyAttendanceStats(
+    $3.GetUserMonthlyAttendanceStatsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserMonthlyAttendanceStats, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$3.GetUserAttendanceCalendarResponse>
+      getUserAttendanceCalendar(
+    $3.GetUserAttendanceCalendarRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserAttendanceCalendar, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$3.GetUserYearlyAttendanceStatsResponse>
+      getUserYearlyAttendanceStats(
+    $3.GetUserYearlyAttendanceStatsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserYearlyAttendanceStats, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$3.GetUserAttendanceDetailsResponse>
+      getUserAttendanceDetails(
+    $3.GetUserAttendanceDetailsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserAttendanceDetails, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$login = $grpc.ClientMethod<$0.LoginRequest, $0.LoginResponse>(
@@ -254,6 +292,30 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/RegisterSchoolChainEmployee',
       ($2.RegisterSchoolChainEmployeeRequest value) => value.writeToBuffer(),
       $2.RegisterSchoolChainEmployeeResponse.fromBuffer);
+  static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
+          $3.GetUserMonthlyAttendanceStatsRequest,
+          $3.GetUserMonthlyAttendanceStatsResponse>(
+      '/gateway.GatewayService/GetUserMonthlyAttendanceStats',
+      ($3.GetUserMonthlyAttendanceStatsRequest value) => value.writeToBuffer(),
+      $3.GetUserMonthlyAttendanceStatsResponse.fromBuffer);
+  static final _$getUserAttendanceCalendar = $grpc.ClientMethod<
+          $3.GetUserAttendanceCalendarRequest,
+          $3.GetUserAttendanceCalendarResponse>(
+      '/gateway.GatewayService/GetUserAttendanceCalendar',
+      ($3.GetUserAttendanceCalendarRequest value) => value.writeToBuffer(),
+      $3.GetUserAttendanceCalendarResponse.fromBuffer);
+  static final _$getUserYearlyAttendanceStats = $grpc.ClientMethod<
+          $3.GetUserYearlyAttendanceStatsRequest,
+          $3.GetUserYearlyAttendanceStatsResponse>(
+      '/gateway.GatewayService/GetUserYearlyAttendanceStats',
+      ($3.GetUserYearlyAttendanceStatsRequest value) => value.writeToBuffer(),
+      $3.GetUserYearlyAttendanceStatsResponse.fromBuffer);
+  static final _$getUserAttendanceDetails = $grpc.ClientMethod<
+          $3.GetUserAttendanceDetailsRequest,
+          $3.GetUserAttendanceDetailsResponse>(
+      '/gateway.GatewayService/GetUserAttendanceDetails',
+      ($3.GetUserAttendanceDetailsRequest value) => value.writeToBuffer(),
+      $3.GetUserAttendanceDetailsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -412,6 +474,44 @@ abstract class GatewayServiceBase extends $grpc.Service {
             $2.RegisterSchoolChainEmployeeRequest.fromBuffer(value),
         ($2.RegisterSchoolChainEmployeeResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetUserMonthlyAttendanceStatsRequest,
+            $3.GetUserMonthlyAttendanceStatsResponse>(
+        'GetUserMonthlyAttendanceStats',
+        getUserMonthlyAttendanceStats_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.GetUserMonthlyAttendanceStatsRequest.fromBuffer(value),
+        ($3.GetUserMonthlyAttendanceStatsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetUserAttendanceCalendarRequest,
+            $3.GetUserAttendanceCalendarResponse>(
+        'GetUserAttendanceCalendar',
+        getUserAttendanceCalendar_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.GetUserAttendanceCalendarRequest.fromBuffer(value),
+        ($3.GetUserAttendanceCalendarResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetUserYearlyAttendanceStatsRequest,
+            $3.GetUserYearlyAttendanceStatsResponse>(
+        'GetUserYearlyAttendanceStats',
+        getUserYearlyAttendanceStats_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.GetUserYearlyAttendanceStatsRequest.fromBuffer(value),
+        ($3.GetUserYearlyAttendanceStatsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetUserAttendanceDetailsRequest,
+            $3.GetUserAttendanceDetailsResponse>(
+        'GetUserAttendanceDetails',
+        getUserAttendanceDetails_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.GetUserAttendanceDetailsRequest.fromBuffer(value),
+        ($3.GetUserAttendanceDetailsResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -540,4 +640,46 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$2.RegisterSchoolChainEmployeeResponse>
       registerSchoolChainEmployee($grpc.ServiceCall call,
           $async.Stream<$2.RegisterSchoolChainEmployeeRequest> request);
+
+  $async.Future<$3.GetUserMonthlyAttendanceStatsResponse>
+      getUserMonthlyAttendanceStats_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$3.GetUserMonthlyAttendanceStatsRequest>
+              $request) async {
+    return getUserMonthlyAttendanceStats($call, await $request);
+  }
+
+  $async.Future<$3.GetUserMonthlyAttendanceStatsResponse>
+      getUserMonthlyAttendanceStats($grpc.ServiceCall call,
+          $3.GetUserMonthlyAttendanceStatsRequest request);
+
+  $async.Future<$3.GetUserAttendanceCalendarResponse>
+      getUserAttendanceCalendar_Pre($grpc.ServiceCall $call,
+          $async.Future<$3.GetUserAttendanceCalendarRequest> $request) async {
+    return getUserAttendanceCalendar($call, await $request);
+  }
+
+  $async.Future<$3.GetUserAttendanceCalendarResponse> getUserAttendanceCalendar(
+      $grpc.ServiceCall call, $3.GetUserAttendanceCalendarRequest request);
+
+  $async.Future<$3.GetUserYearlyAttendanceStatsResponse>
+      getUserYearlyAttendanceStats_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$3.GetUserYearlyAttendanceStatsRequest>
+              $request) async {
+    return getUserYearlyAttendanceStats($call, await $request);
+  }
+
+  $async.Future<$3.GetUserYearlyAttendanceStatsResponse>
+      getUserYearlyAttendanceStats($grpc.ServiceCall call,
+          $3.GetUserYearlyAttendanceStatsRequest request);
+
+  $async.Future<$3.GetUserAttendanceDetailsResponse>
+      getUserAttendanceDetails_Pre($grpc.ServiceCall $call,
+          $async.Future<$3.GetUserAttendanceDetailsRequest> $request) async {
+    return getUserAttendanceDetails($call, await $request);
+  }
+
+  $async.Future<$3.GetUserAttendanceDetailsResponse> getUserAttendanceDetails(
+      $grpc.ServiceCall call, $3.GetUserAttendanceDetailsRequest request);
 }
