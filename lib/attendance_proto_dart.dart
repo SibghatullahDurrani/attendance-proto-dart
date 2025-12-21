@@ -54,4 +54,6 @@ export 'src/generated/messages/attendance/messages.pb.dart';
 export 'src/generated/messages/attendance/messages.pbenum.dart';
 export 'src/generated/messages/attendance/messages.pbjson.dart';
 
-// TODO: Export any libraries intended for clients of this package.
+export 'src/generated/google/protobuf/timestamp.pb.dart';
+export 'src/generated/google/protobuf/timestamp.pbenum.dart';
+export 'src/generated/google/protobuf/timestamp.pbjson.dart';
