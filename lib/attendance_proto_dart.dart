@@ -44,4 +44,14 @@ export 'src/generated/messages/school/messages.pbjson.dart';
 export 'src/generated/messages/user/messages.pb.dart';
 export 'src/generated/messages/user/messages.pbenum.dart';
 export 'src/generated/messages/user/messages.pbjson.dart';
+
+export 'src/generated/attendance/attendance.pb.dart';
+export 'src/generated/attendance/attendance.pbenum.dart';
+export 'src/generated/attendance/attendance.pbgrpc.dart';
+export 'src/generated/attendance/attendance.pbjson.dart';
+
+export 'src/generated/messages/attendance/messages.pb.dart';
+export 'src/generated/messages/attendance/messages.pbenum.dart';
+export 'src/generated/messages/attendance/messages.pbjson.dart';
+
 // TODO: Export any libraries intended for clients of this package.
