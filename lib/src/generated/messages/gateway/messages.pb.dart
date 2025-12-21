@@ -1669,6 +1669,274 @@ class SchoolChainEmployeeRegistrationForm extends $pb.GeneratedMessage {
   void clearSchoolChainId() => $_clearField(8);
 }
 
+class GetUserFullNameRequest extends $pb.GeneratedMessage {
+  factory GetUserFullNameRequest({
+    $core.String? userId,
+    $0.Role? role,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    if (role != null) result.role = role;
+    return result;
+  }
+
+  GetUserFullNameRequest._();
+
+  factory GetUserFullNameRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetUserFullNameRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetUserFullNameRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..aE<$0.Role>(2, _omitFieldNames ? '' : 'role', enumValues: $0.Role.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserFullNameRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserFullNameRequest copyWith(
+          void Function(GetUserFullNameRequest) updates) =>
+      super.copyWith((message) => updates(message as GetUserFullNameRequest))
+          as GetUserFullNameRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserFullNameRequest create() => GetUserFullNameRequest._();
+  @$core.override
+  GetUserFullNameRequest createEmptyInstance() => create();
+  static $pb.PbList<GetUserFullNameRequest> createRepeated() =>
+      $pb.PbList<GetUserFullNameRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserFullNameRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetUserFullNameRequest>(create);
+  static GetUserFullNameRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.Role get role => $_getN(1);
+  @$pb.TagNumber(2)
+  set role($0.Role value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasRole() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRole() => $_clearField(2);
+}
+
+class GetUserFullNameResponse extends $pb.GeneratedMessage {
+  factory GetUserFullNameResponse({
+    $core.String? firstName,
+    $core.String? secondName,
+  }) {
+    final result = create();
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    return result;
+  }
+
+  GetUserFullNameResponse._();
+
+  factory GetUserFullNameResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetUserFullNameResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetUserFullNameResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'firstName')
+    ..aOS(2, _omitFieldNames ? '' : 'secondName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserFullNameResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserFullNameResponse copyWith(
+          void Function(GetUserFullNameResponse) updates) =>
+      super.copyWith((message) => updates(message as GetUserFullNameResponse))
+          as GetUserFullNameResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserFullNameResponse create() => GetUserFullNameResponse._();
+  @$core.override
+  GetUserFullNameResponse createEmptyInstance() => create();
+  static $pb.PbList<GetUserFullNameResponse> createRepeated() =>
+      $pb.PbList<GetUserFullNameResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserFullNameResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetUserFullNameResponse>(create);
+  static GetUserFullNameResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get firstName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set firstName($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasFirstName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFirstName() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get secondName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set secondName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSecondName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSecondName() => $_clearField(2);
+}
+
+class GetUserTimezoneRequest extends $pb.GeneratedMessage {
+  factory GetUserTimezoneRequest({
+    $core.String? belongsTo,
+    $0.Role? role,
+  }) {
+    final result = create();
+    if (belongsTo != null) result.belongsTo = belongsTo;
+    if (role != null) result.role = role;
+    return result;
+  }
+
+  GetUserTimezoneRequest._();
+
+  factory GetUserTimezoneRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetUserTimezoneRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetUserTimezoneRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'belongsTo')
+    ..aE<$0.Role>(2, _omitFieldNames ? '' : 'role', enumValues: $0.Role.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserTimezoneRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserTimezoneRequest copyWith(
+          void Function(GetUserTimezoneRequest) updates) =>
+      super.copyWith((message) => updates(message as GetUserTimezoneRequest))
+          as GetUserTimezoneRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserTimezoneRequest create() => GetUserTimezoneRequest._();
+  @$core.override
+  GetUserTimezoneRequest createEmptyInstance() => create();
+  static $pb.PbList<GetUserTimezoneRequest> createRepeated() =>
+      $pb.PbList<GetUserTimezoneRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserTimezoneRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetUserTimezoneRequest>(create);
+  static GetUserTimezoneRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get belongsTo => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set belongsTo($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasBelongsTo() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBelongsTo() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.Role get role => $_getN(1);
+  @$pb.TagNumber(2)
+  set role($0.Role value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasRole() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRole() => $_clearField(2);
+}
+
+class GetUserTimezoneResponse extends $pb.GeneratedMessage {
+  factory GetUserTimezoneResponse({
+    $core.String? timezone,
+  }) {
+    final result = create();
+    if (timezone != null) result.timezone = timezone;
+    return result;
+  }
+
+  GetUserTimezoneResponse._();
+
+  factory GetUserTimezoneResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetUserTimezoneResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetUserTimezoneResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'timezone')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserTimezoneResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserTimezoneResponse copyWith(
+          void Function(GetUserTimezoneResponse) updates) =>
+      super.copyWith((message) => updates(message as GetUserTimezoneResponse))
+          as GetUserTimezoneResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserTimezoneResponse create() => GetUserTimezoneResponse._();
+  @$core.override
+  GetUserTimezoneResponse createEmptyInstance() => create();
+  static $pb.PbList<GetUserTimezoneResponse> createRepeated() =>
+      $pb.PbList<GetUserTimezoneResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserTimezoneResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetUserTimezoneResponse>(create);
+  static GetUserTimezoneResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get timezone => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set timezone($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasTimezone() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTimezone() => $_clearField(1);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

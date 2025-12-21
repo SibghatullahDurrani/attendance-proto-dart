@@ -24,12 +24,14 @@ class CreateSchoolRequest extends $pb.GeneratedMessage {
     $core.String? schoolName,
     $core.String? city,
     $core.String? address,
+    $core.String? timeZone,
     $core.String? schoolChainId,
   }) {
     final result = create();
     if (schoolName != null) result.schoolName = schoolName;
     if (city != null) result.city = city;
     if (address != null) result.address = address;
+    if (timeZone != null) result.timeZone = timeZone;
     if (schoolChainId != null) result.schoolChainId = schoolChainId;
     return result;
   }
@@ -51,7 +53,8 @@ class CreateSchoolRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'schoolName')
     ..aOS(2, _omitFieldNames ? '' : 'city')
     ..aOS(3, _omitFieldNames ? '' : 'address')
-    ..aOS(4, _omitFieldNames ? '' : 'schoolChainId')
+    ..aOS(4, _omitFieldNames ? '' : 'timeZone')
+    ..aOS(5, _omitFieldNames ? '' : 'schoolChainId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -103,13 +106,22 @@ class CreateSchoolRequest extends $pb.GeneratedMessage {
   void clearAddress() => $_clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get schoolChainId => $_getSZ(3);
+  $core.String get timeZone => $_getSZ(3);
   @$pb.TagNumber(4)
-  set schoolChainId($core.String value) => $_setString(3, value);
+  set timeZone($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
-  $core.bool hasSchoolChainId() => $_has(3);
+  $core.bool hasTimeZone() => $_has(3);
   @$pb.TagNumber(4)
-  void clearSchoolChainId() => $_clearField(4);
+  void clearTimeZone() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get schoolChainId => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set schoolChainId($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasSchoolChainId() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearSchoolChainId() => $_clearField(5);
 }
 
 class CreateSchoolResponse extends $pb.GeneratedMessage {
@@ -1370,7 +1382,7 @@ class ListAllSchoolsRequest extends $pb.GeneratedMessage {
 
 class ListAllSchoolsResponse extends $pb.GeneratedMessage {
   factory ListAllSchoolsResponse({
-    $core.Iterable<Schools>? schools,
+    $core.Iterable<School>? schools,
     $1.PaginationResponse? pagination,
   }) {
     final result = create();
@@ -1393,8 +1405,8 @@ class ListAllSchoolsResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
-    ..pPM<Schools>(1, _omitFieldNames ? '' : 'schools',
-        subBuilder: Schools.create)
+    ..pPM<School>(1, _omitFieldNames ? '' : 'schools',
+        subBuilder: School.create)
     ..aOM<$1.PaginationResponse>(2, _omitFieldNames ? '' : 'pagination',
         subBuilder: $1.PaginationResponse.create)
     ..hasRequiredFields = false;
@@ -1422,7 +1434,7 @@ class ListAllSchoolsResponse extends $pb.GeneratedMessage {
   static ListAllSchoolsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $pb.PbList<Schools> get schools => $_getList(0);
+  $pb.PbList<School> get schools => $_getList(0);
 
   @$pb.TagNumber(2)
   $1.PaginationResponse get pagination => $_getN(1);
@@ -1436,14 +1448,15 @@ class ListAllSchoolsResponse extends $pb.GeneratedMessage {
   $1.PaginationResponse ensurePagination() => $_ensure(1);
 }
 
-class Schools extends $pb.GeneratedMessage {
-  factory Schools({
+class School extends $pb.GeneratedMessage {
+  factory School({
     $core.String? schoolId,
     $core.String? schoolName,
     $0.Timestamp? createdAt,
     $0.Timestamp? modifiedAt,
     $core.String? city,
     $core.String? address,
+    $core.String? timeZone,
   }) {
     final result = create();
     if (schoolId != null) result.schoolId = schoolId;
@@ -1452,20 +1465,21 @@ class Schools extends $pb.GeneratedMessage {
     if (modifiedAt != null) result.modifiedAt = modifiedAt;
     if (city != null) result.city = city;
     if (address != null) result.address = address;
+    if (timeZone != null) result.timeZone = timeZone;
     return result;
   }
 
-  Schools._();
+  School._();
 
-  factory Schools.fromBuffer($core.List<$core.int> data,
+  factory School.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory Schools.fromJson($core.String json,
+  factory School.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'Schools',
+      _omitMessageNames ? '' : 'School',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -1477,26 +1491,27 @@ class Schools extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..aOS(5, _omitFieldNames ? '' : 'city')
     ..aOS(6, _omitFieldNames ? '' : 'address')
+    ..aOS(7, _omitFieldNames ? '' : 'timeZone')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Schools clone() => deepCopy();
+  School clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Schools copyWith(void Function(Schools) updates) =>
-      super.copyWith((message) => updates(message as Schools)) as Schools;
+  School copyWith(void Function(School) updates) =>
+      super.copyWith((message) => updates(message as School)) as School;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static Schools create() => Schools._();
+  static School create() => School._();
   @$core.override
-  Schools createEmptyInstance() => create();
-  static $pb.PbList<Schools> createRepeated() => $pb.PbList<Schools>();
+  School createEmptyInstance() => create();
+  static $pb.PbList<School> createRepeated() => $pb.PbList<School>();
   @$core.pragma('dart2js:noInline')
-  static Schools getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Schools>(create);
-  static Schools? _defaultInstance;
+  static School getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<School>(create);
+  static School? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get schoolId => $_getSZ(0);
@@ -1555,6 +1570,15 @@ class Schools extends $pb.GeneratedMessage {
   $core.bool hasAddress() => $_has(5);
   @$pb.TagNumber(6)
   void clearAddress() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get timeZone => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set timeZone($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasTimeZone() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearTimeZone() => $_clearField(7);
 }
 
 class GetSchoolNameRequest extends $pb.GeneratedMessage {
@@ -1719,9 +1743,11 @@ class RemoveAdminFromSchoolResponse extends $pb.GeneratedMessage {
 class CreateSchoolChainRequest extends $pb.GeneratedMessage {
   factory CreateSchoolChainRequest({
     $core.String? chainName,
+    $core.String? timezone,
   }) {
     final result = create();
     if (chainName != null) result.chainName = chainName;
+    if (timezone != null) result.timezone = timezone;
     return result;
   }
 
@@ -1740,6 +1766,7 @@ class CreateSchoolChainRequest extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'chainName')
+    ..aOS(2, _omitFieldNames ? '' : 'timezone')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1772,6 +1799,15 @@ class CreateSchoolChainRequest extends $pb.GeneratedMessage {
   $core.bool hasChainName() => $_has(0);
   @$pb.TagNumber(1)
   void clearChainName() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get timezone => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set timezone($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasTimezone() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTimezone() => $_clearField(2);
 }
 
 class CreateSchoolChainResponse extends $pb.GeneratedMessage {
@@ -2516,6 +2552,242 @@ class RemoveAdminFromSchoolChainResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RemoveAdminFromSchoolChainResponse>(
           create);
   static RemoveAdminFromSchoolChainResponse? _defaultInstance;
+}
+
+class GetSchoolTimezoneRequest extends $pb.GeneratedMessage {
+  factory GetSchoolTimezoneRequest({
+    $core.String? schoolId,
+  }) {
+    final result = create();
+    if (schoolId != null) result.schoolId = schoolId;
+    return result;
+  }
+
+  GetSchoolTimezoneRequest._();
+
+  factory GetSchoolTimezoneRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolTimezoneRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSchoolTimezoneRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolTimezoneRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolTimezoneRequest copyWith(
+          void Function(GetSchoolTimezoneRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSchoolTimezoneRequest))
+          as GetSchoolTimezoneRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolTimezoneRequest create() => GetSchoolTimezoneRequest._();
+  @$core.override
+  GetSchoolTimezoneRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSchoolTimezoneRequest> createRepeated() =>
+      $pb.PbList<GetSchoolTimezoneRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolTimezoneRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSchoolTimezoneRequest>(create);
+  static GetSchoolTimezoneRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get schoolId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set schoolId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchoolId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchoolId() => $_clearField(1);
+}
+
+class GetSchoolTimezoneResponse extends $pb.GeneratedMessage {
+  factory GetSchoolTimezoneResponse({
+    $core.String? timezone,
+  }) {
+    final result = create();
+    if (timezone != null) result.timezone = timezone;
+    return result;
+  }
+
+  GetSchoolTimezoneResponse._();
+
+  factory GetSchoolTimezoneResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolTimezoneResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSchoolTimezoneResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'timezone')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolTimezoneResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolTimezoneResponse copyWith(
+          void Function(GetSchoolTimezoneResponse) updates) =>
+      super.copyWith((message) => updates(message as GetSchoolTimezoneResponse))
+          as GetSchoolTimezoneResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolTimezoneResponse create() => GetSchoolTimezoneResponse._();
+  @$core.override
+  GetSchoolTimezoneResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSchoolTimezoneResponse> createRepeated() =>
+      $pb.PbList<GetSchoolTimezoneResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolTimezoneResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSchoolTimezoneResponse>(create);
+  static GetSchoolTimezoneResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get timezone => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set timezone($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasTimezone() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTimezone() => $_clearField(1);
+}
+
+class GetSchoolChainTimezoneRequest extends $pb.GeneratedMessage {
+  factory GetSchoolChainTimezoneRequest({
+    $core.String? schoolChainId,
+  }) {
+    final result = create();
+    if (schoolChainId != null) result.schoolChainId = schoolChainId;
+    return result;
+  }
+
+  GetSchoolChainTimezoneRequest._();
+
+  factory GetSchoolChainTimezoneRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolChainTimezoneRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSchoolChainTimezoneRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolChainId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolChainTimezoneRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolChainTimezoneRequest copyWith(
+          void Function(GetSchoolChainTimezoneRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetSchoolChainTimezoneRequest))
+          as GetSchoolChainTimezoneRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolChainTimezoneRequest create() =>
+      GetSchoolChainTimezoneRequest._();
+  @$core.override
+  GetSchoolChainTimezoneRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSchoolChainTimezoneRequest> createRepeated() =>
+      $pb.PbList<GetSchoolChainTimezoneRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolChainTimezoneRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSchoolChainTimezoneRequest>(create);
+  static GetSchoolChainTimezoneRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get schoolChainId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set schoolChainId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchoolChainId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchoolChainId() => $_clearField(1);
+}
+
+class GetSchoolChainTimezoneResponse extends $pb.GeneratedMessage {
+  factory GetSchoolChainTimezoneResponse({
+    $core.String? timezone,
+  }) {
+    final result = create();
+    if (timezone != null) result.timezone = timezone;
+    return result;
+  }
+
+  GetSchoolChainTimezoneResponse._();
+
+  factory GetSchoolChainTimezoneResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolChainTimezoneResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSchoolChainTimezoneResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'timezone')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolChainTimezoneResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolChainTimezoneResponse copyWith(
+          void Function(GetSchoolChainTimezoneResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetSchoolChainTimezoneResponse))
+          as GetSchoolChainTimezoneResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolChainTimezoneResponse create() =>
+      GetSchoolChainTimezoneResponse._();
+  @$core.override
+  GetSchoolChainTimezoneResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSchoolChainTimezoneResponse> createRepeated() =>
+      $pb.PbList<GetSchoolChainTimezoneResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolChainTimezoneResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSchoolChainTimezoneResponse>(create);
+  static GetSchoolChainTimezoneResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get timezone => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set timezone($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasTimezone() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTimezone() => $_clearField(1);
 }
 
 const $core.bool _omitFieldNames =

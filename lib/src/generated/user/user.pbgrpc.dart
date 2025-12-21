@@ -99,6 +99,34 @@ class UserServiceClient extends $grpc.Client {
     return $createUnaryCall(_$deleteEmployee, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetStudentFullNameResponse> getStudentFullName(
+    $0.GetStudentFullNameRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getStudentFullName, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetParentFullNameResponse> getParentFullName(
+    $0.GetParentFullNameRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getParentFullName, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetEmployeeFullNameResponse> getEmployeeFullName(
+    $0.GetEmployeeFullNameRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getEmployeeFullName, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetTeacherFullNameResponse> getTeacherFullName(
+    $0.GetTeacherFullNameRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getTeacherFullName, request, options: options);
+  }
+
   // method descriptors
 
   static final _$createStudent =
@@ -141,6 +169,26 @@ class UserServiceClient extends $grpc.Client {
           '/user.UserService/DeleteEmployee',
           ($0.CreateEmployeeResponse value) => value.writeToBuffer(),
           $0.DeleteEmployeeResponse.fromBuffer);
+  static final _$getStudentFullName = $grpc.ClientMethod<
+          $0.GetStudentFullNameRequest, $0.GetStudentFullNameResponse>(
+      '/user.UserService/GetStudentFullName',
+      ($0.GetStudentFullNameRequest value) => value.writeToBuffer(),
+      $0.GetStudentFullNameResponse.fromBuffer);
+  static final _$getParentFullName = $grpc.ClientMethod<
+          $0.GetParentFullNameRequest, $0.GetParentFullNameResponse>(
+      '/user.UserService/GetParentFullName',
+      ($0.GetParentFullNameRequest value) => value.writeToBuffer(),
+      $0.GetParentFullNameResponse.fromBuffer);
+  static final _$getEmployeeFullName = $grpc.ClientMethod<
+          $0.GetEmployeeFullNameRequest, $0.GetEmployeeFullNameResponse>(
+      '/user.UserService/GetEmployeeFullName',
+      ($0.GetEmployeeFullNameRequest value) => value.writeToBuffer(),
+      $0.GetEmployeeFullNameResponse.fromBuffer);
+  static final _$getTeacherFullName = $grpc.ClientMethod<
+          $0.GetTeacherFullNameRequest, $0.GetTeacherFullNameResponse>(
+      '/user.UserService/GetTeacherFullName',
+      ($0.GetTeacherFullNameRequest value) => value.writeToBuffer(),
+      $0.GetTeacherFullNameResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('user.UserService')
@@ -220,6 +268,42 @@ abstract class UserServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.CreateEmployeeResponse.fromBuffer(value),
         ($0.DeleteEmployeeResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetStudentFullNameRequest,
+            $0.GetStudentFullNameResponse>(
+        'GetStudentFullName',
+        getStudentFullName_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetStudentFullNameRequest.fromBuffer(value),
+        ($0.GetStudentFullNameResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetParentFullNameRequest,
+            $0.GetParentFullNameResponse>(
+        'GetParentFullName',
+        getParentFullName_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetParentFullNameRequest.fromBuffer(value),
+        ($0.GetParentFullNameResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetEmployeeFullNameRequest,
+            $0.GetEmployeeFullNameResponse>(
+        'GetEmployeeFullName',
+        getEmployeeFullName_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetEmployeeFullNameRequest.fromBuffer(value),
+        ($0.GetEmployeeFullNameResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetTeacherFullNameRequest,
+            $0.GetTeacherFullNameResponse>(
+        'GetTeacherFullName',
+        getTeacherFullName_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetTeacherFullNameRequest.fromBuffer(value),
+        ($0.GetTeacherFullNameResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateStudentResponse> createStudent_Pre(
@@ -293,4 +377,40 @@ abstract class UserServiceBase extends $grpc.Service {
 
   $async.Future<$0.DeleteEmployeeResponse> deleteEmployee(
       $grpc.ServiceCall call, $0.CreateEmployeeResponse request);
+
+  $async.Future<$0.GetStudentFullNameResponse> getStudentFullName_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetStudentFullNameRequest> $request) async {
+    return getStudentFullName($call, await $request);
+  }
+
+  $async.Future<$0.GetStudentFullNameResponse> getStudentFullName(
+      $grpc.ServiceCall call, $0.GetStudentFullNameRequest request);
+
+  $async.Future<$0.GetParentFullNameResponse> getParentFullName_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetParentFullNameRequest> $request) async {
+    return getParentFullName($call, await $request);
+  }
+
+  $async.Future<$0.GetParentFullNameResponse> getParentFullName(
+      $grpc.ServiceCall call, $0.GetParentFullNameRequest request);
+
+  $async.Future<$0.GetEmployeeFullNameResponse> getEmployeeFullName_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetEmployeeFullNameRequest> $request) async {
+    return getEmployeeFullName($call, await $request);
+  }
+
+  $async.Future<$0.GetEmployeeFullNameResponse> getEmployeeFullName(
+      $grpc.ServiceCall call, $0.GetEmployeeFullNameRequest request);
+
+  $async.Future<$0.GetTeacherFullNameResponse> getTeacherFullName_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetTeacherFullNameRequest> $request) async {
+    return getTeacherFullName($call, await $request);
+  }
+
+  $async.Future<$0.GetTeacherFullNameResponse> getTeacherFullName(
+      $grpc.ServiceCall call, $0.GetTeacherFullNameRequest request);
 }

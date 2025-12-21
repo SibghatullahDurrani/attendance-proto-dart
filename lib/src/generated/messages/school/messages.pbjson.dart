@@ -21,9 +21,10 @@ const CreateSchoolRequest$json = {
     {'1': 'school_name', '3': 1, '4': 1, '5': 9, '10': 'schoolName'},
     {'1': 'city', '3': 2, '4': 1, '5': 9, '10': 'city'},
     {'1': 'address', '3': 3, '4': 1, '5': 9, '10': 'address'},
+    {'1': 'time_zone', '3': 4, '4': 1, '5': 9, '10': 'timeZone'},
     {
       '1': 'school_chain_id',
-      '3': 4,
+      '3': 5,
       '4': 1,
       '5': 9,
       '9': 0,
@@ -39,8 +40,9 @@ const CreateSchoolRequest$json = {
 /// Descriptor for `CreateSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createSchoolRequestDescriptor = $convert.base64Decode(
     'ChNDcmVhdGVTY2hvb2xSZXF1ZXN0Eh8KC3NjaG9vbF9uYW1lGAEgASgJUgpzY2hvb2xOYW1lEh'
-    'IKBGNpdHkYAiABKAlSBGNpdHkSGAoHYWRkcmVzcxgDIAEoCVIHYWRkcmVzcxIrCg9zY2hvb2xf'
-    'Y2hhaW5faWQYBCABKAlIAFINc2Nob29sQ2hhaW5JZIgBAUISChBfc2Nob29sX2NoYWluX2lk');
+    'IKBGNpdHkYAiABKAlSBGNpdHkSGAoHYWRkcmVzcxgDIAEoCVIHYWRkcmVzcxIbCgl0aW1lX3pv'
+    'bmUYBCABKAlSCHRpbWVab25lEisKD3NjaG9vbF9jaGFpbl9pZBgFIAEoCUgAUg1zY2hvb2xDaG'
+    'FpbklkiAEBQhIKEF9zY2hvb2xfY2hhaW5faWQ=');
 
 @$core.Deprecated('Use createSchoolResponseDescriptor instead')
 const CreateSchoolResponse$json = {
@@ -349,7 +351,7 @@ const ListAllSchoolsResponse$json = {
       '3': 1,
       '4': 3,
       '5': 11,
-      '6': '.school_messages.Schools',
+      '6': '.school_messages.School',
       '10': 'schools'
     },
     {
@@ -365,13 +367,13 @@ const ListAllSchoolsResponse$json = {
 
 /// Descriptor for `ListAllSchoolsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listAllSchoolsResponseDescriptor = $convert.base64Decode(
-    'ChZMaXN0QWxsU2Nob29sc1Jlc3BvbnNlEjIKB3NjaG9vbHMYASADKAsyGC5zY2hvb2xfbWVzc2'
-    'FnZXMuU2Nob29sc1IHc2Nob29scxJDCgpwYWdpbmF0aW9uGAIgASgLMiMuY29tbW9uX21lc3Nh'
-    'Z2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbg==');
+    'ChZMaXN0QWxsU2Nob29sc1Jlc3BvbnNlEjEKB3NjaG9vbHMYASADKAsyFy5zY2hvb2xfbWVzc2'
+    'FnZXMuU2Nob29sUgdzY2hvb2xzEkMKCnBhZ2luYXRpb24YAiABKAsyIy5jb21tb25fbWVzc2Fn'
+    'ZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpwYWdpbmF0aW9u');
 
-@$core.Deprecated('Use schoolsDescriptor instead')
-const Schools$json = {
-  '1': 'Schools',
+@$core.Deprecated('Use schoolDescriptor instead')
+const School$json = {
+  '1': 'School',
   '2': [
     {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
     {'1': 'school_name', '3': 2, '4': 1, '5': 9, '10': 'schoolName'},
@@ -393,16 +395,17 @@ const Schools$json = {
     },
     {'1': 'city', '3': 5, '4': 1, '5': 9, '10': 'city'},
     {'1': 'address', '3': 6, '4': 1, '5': 9, '10': 'address'},
+    {'1': 'time_zone', '3': 7, '4': 1, '5': 9, '10': 'timeZone'},
   ],
 };
 
-/// Descriptor for `Schools`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List schoolsDescriptor = $convert.base64Decode(
-    'CgdTY2hvb2xzEhsKCXNjaG9vbF9pZBgBIAEoCVIIc2Nob29sSWQSHwoLc2Nob29sX25hbWUYAi'
-    'ABKAlSCnNjaG9vbE5hbWUSOQoKY3JlYXRlZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U'
-    'aW1lc3RhbXBSCWNyZWF0ZWRBdBI7Cgttb2RpZmllZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2'
-    'J1Zi5UaW1lc3RhbXBSCm1vZGlmaWVkQXQSEgoEY2l0eRgFIAEoCVIEY2l0eRIYCgdhZGRyZXNz'
-    'GAYgASgJUgdhZGRyZXNz');
+/// Descriptor for `School`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schoolDescriptor = $convert.base64Decode(
+    'CgZTY2hvb2wSGwoJc2Nob29sX2lkGAEgASgJUghzY2hvb2xJZBIfCgtzY2hvb2xfbmFtZRgCIA'
+    'EoCVIKc2Nob29sTmFtZRI5CgpjcmVhdGVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp'
+    'bWVzdGFtcFIJY3JlYXRlZEF0EjsKC21vZGlmaWVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYn'
+    'VmLlRpbWVzdGFtcFIKbW9kaWZpZWRBdBISCgRjaXR5GAUgASgJUgRjaXR5EhgKB2FkZHJlc3MY'
+    'BiABKAlSB2FkZHJlc3MSGwoJdGltZV96b25lGAcgASgJUgh0aW1lWm9uZQ==');
 
 @$core.Deprecated('Use getSchoolNameRequestDescriptor instead')
 const GetSchoolNameRequest$json = {
@@ -444,6 +447,7 @@ const CreateSchoolChainRequest$json = {
   '1': 'CreateSchoolChainRequest',
   '2': [
     {'1': 'chain_name', '3': 1, '4': 1, '5': 9, '10': 'chainName'},
+    {'1': 'timezone', '3': 2, '4': 1, '5': 9, '10': 'timezone'},
   ],
 };
 
@@ -451,7 +455,7 @@ const CreateSchoolChainRequest$json = {
 final $typed_data.Uint8List createSchoolChainRequestDescriptor =
     $convert.base64Decode(
         'ChhDcmVhdGVTY2hvb2xDaGFpblJlcXVlc3QSHQoKY2hhaW5fbmFtZRgBIAEoCVIJY2hhaW5OYW'
-        '1l');
+        '1lEhoKCHRpbWV6b25lGAIgASgJUgh0aW1lem9uZQ==');
 
 @$core.Deprecated('Use createSchoolChainResponseDescriptor instead')
 const CreateSchoolChainResponse$json = {
@@ -630,3 +634,59 @@ const RemoveAdminFromSchoolChainResponse$json = {
 /// Descriptor for `RemoveAdminFromSchoolChainResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List removeAdminFromSchoolChainResponseDescriptor =
     $convert.base64Decode('CiJSZW1vdmVBZG1pbkZyb21TY2hvb2xDaGFpblJlc3BvbnNl');
+
+@$core.Deprecated('Use getSchoolTimezoneRequestDescriptor instead')
+const GetSchoolTimezoneRequest$json = {
+  '1': 'GetSchoolTimezoneRequest',
+  '2': [
+    {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
+  ],
+};
+
+/// Descriptor for `GetSchoolTimezoneRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolTimezoneRequestDescriptor =
+    $convert.base64Decode(
+        'ChhHZXRTY2hvb2xUaW1lem9uZVJlcXVlc3QSGwoJc2Nob29sX2lkGAEgASgJUghzY2hvb2xJZA'
+        '==');
+
+@$core.Deprecated('Use getSchoolTimezoneResponseDescriptor instead')
+const GetSchoolTimezoneResponse$json = {
+  '1': 'GetSchoolTimezoneResponse',
+  '2': [
+    {'1': 'timezone', '3': 1, '4': 1, '5': 9, '10': 'timezone'},
+  ],
+};
+
+/// Descriptor for `GetSchoolTimezoneResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolTimezoneResponseDescriptor =
+    $convert.base64Decode(
+        'ChlHZXRTY2hvb2xUaW1lem9uZVJlc3BvbnNlEhoKCHRpbWV6b25lGAEgASgJUgh0aW1lem9uZQ'
+        '==');
+
+@$core.Deprecated('Use getSchoolChainTimezoneRequestDescriptor instead')
+const GetSchoolChainTimezoneRequest$json = {
+  '1': 'GetSchoolChainTimezoneRequest',
+  '2': [
+    {'1': 'school_chain_id', '3': 1, '4': 1, '5': 9, '10': 'schoolChainId'},
+  ],
+};
+
+/// Descriptor for `GetSchoolChainTimezoneRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolChainTimezoneRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1HZXRTY2hvb2xDaGFpblRpbWV6b25lUmVxdWVzdBImCg9zY2hvb2xfY2hhaW5faWQYASABKA'
+        'lSDXNjaG9vbENoYWluSWQ=');
+
+@$core.Deprecated('Use getSchoolChainTimezoneResponseDescriptor instead')
+const GetSchoolChainTimezoneResponse$json = {
+  '1': 'GetSchoolChainTimezoneResponse',
+  '2': [
+    {'1': 'timezone', '3': 1, '4': 1, '5': 9, '10': 'timezone'},
+  ],
+};
+
+/// Descriptor for `GetSchoolChainTimezoneResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolChainTimezoneResponseDescriptor =
+    $convert.base64Decode(
+        'Ch5HZXRTY2hvb2xDaGFpblRpbWV6b25lUmVzcG9uc2USGgoIdGltZXpvbmUYASABKAlSCHRpbW'
+        'V6b25l');

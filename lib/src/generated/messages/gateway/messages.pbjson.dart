@@ -522,3 +522,85 @@ final $typed_data.Uint8List schoolChainEmployeeRegistrationFormDescriptor = $con
     'JAoNcXVhbGlmaWNhdGlvbhgGIAEoCVINcXVhbGlmaWNhdGlvbhIgCgtkZXNpZ25hdGlvbhgHIA'
     'EoCVILZGVzaWduYXRpb24SJgoPc2Nob29sX2NoYWluX2lkGAggASgJUg1zY2hvb2xDaGFpbklk'
     'Qg4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWw=');
+
+@$core.Deprecated('Use getUserFullNameRequestDescriptor instead')
+const GetUserFullNameRequest$json = {
+  '1': 'GetUserFullNameRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'role',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.Role',
+      '10': 'role'
+    },
+  ],
+};
+
+/// Descriptor for `GetUserFullNameRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserFullNameRequestDescriptor =
+    $convert.base64Decode(
+        'ChZHZXRVc2VyRnVsbE5hbWVSZXF1ZXN0EhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIpCgRyb2'
+        'xlGAIgASgOMhUuY29tbW9uX21lc3NhZ2VzLlJvbGVSBHJvbGU=');
+
+@$core.Deprecated('Use getUserFullNameResponseDescriptor instead')
+const GetUserFullNameResponse$json = {
+  '1': 'GetUserFullNameResponse',
+  '2': [
+    {'1': 'first_name', '3': 1, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+  ],
+};
+
+/// Descriptor for `GetUserFullNameResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserFullNameResponseDescriptor = $convert.base64Decode(
+    'ChdHZXRVc2VyRnVsbE5hbWVSZXNwb25zZRIdCgpmaXJzdF9uYW1lGAEgASgJUglmaXJzdE5hbW'
+    'USJAoLc2Vjb25kX25hbWUYAiABKAlIAFIKc2Vjb25kTmFtZYgBAUIOCgxfc2Vjb25kX25hbWU=');
+
+@$core.Deprecated('Use getUserTimezoneRequestDescriptor instead')
+const GetUserTimezoneRequest$json = {
+  '1': 'GetUserTimezoneRequest',
+  '2': [
+    {'1': 'belongs_to', '3': 1, '4': 1, '5': 9, '10': 'belongsTo'},
+    {
+      '1': 'role',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.Role',
+      '10': 'role'
+    },
+  ],
+};
+
+/// Descriptor for `GetUserTimezoneRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserTimezoneRequestDescriptor =
+    $convert.base64Decode(
+        'ChZHZXRVc2VyVGltZXpvbmVSZXF1ZXN0Eh0KCmJlbG9uZ3NfdG8YASABKAlSCWJlbG9uZ3NUbx'
+        'IpCgRyb2xlGAIgASgOMhUuY29tbW9uX21lc3NhZ2VzLlJvbGVSBHJvbGU=');
+
+@$core.Deprecated('Use getUserTimezoneResponseDescriptor instead')
+const GetUserTimezoneResponse$json = {
+  '1': 'GetUserTimezoneResponse',
+  '2': [
+    {'1': 'timezone', '3': 1, '4': 1, '5': 9, '10': 'timezone'},
+  ],
+};
+
+/// Descriptor for `GetUserTimezoneResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserTimezoneResponseDescriptor =
+    $convert.base64Decode(
+        'ChdHZXRVc2VyVGltZXpvbmVSZXNwb25zZRIaCgh0aW1lem9uZRgBIAEoCVIIdGltZXpvbmU=');

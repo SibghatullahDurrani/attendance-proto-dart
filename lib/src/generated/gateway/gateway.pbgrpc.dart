@@ -204,6 +204,21 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// User RPCs
+  $grpc.ResponseFuture<$2.GetUserFullNameResponse> getUserFullName(
+    $2.GetUserFullNameRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserFullName, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.GetUserTimezoneResponse> getUserTimezone(
+    $2.GetUserTimezoneRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserTimezone, request, options: options);
+  }
+
   // method descriptors
 
   static final _$login = $grpc.ClientMethod<$0.LoginRequest, $0.LoginResponse>(
@@ -316,6 +331,16 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/GetUserAttendanceDetails',
       ($3.GetUserAttendanceDetailsRequest value) => value.writeToBuffer(),
       $3.GetUserAttendanceDetailsResponse.fromBuffer);
+  static final _$getUserFullName =
+      $grpc.ClientMethod<$2.GetUserFullNameRequest, $2.GetUserFullNameResponse>(
+          '/gateway.GatewayService/GetUserFullName',
+          ($2.GetUserFullNameRequest value) => value.writeToBuffer(),
+          $2.GetUserFullNameResponse.fromBuffer);
+  static final _$getUserTimezone =
+      $grpc.ClientMethod<$2.GetUserTimezoneRequest, $2.GetUserTimezoneResponse>(
+          '/gateway.GatewayService/GetUserTimezone',
+          ($2.GetUserTimezoneRequest value) => value.writeToBuffer(),
+          $2.GetUserTimezoneResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -512,6 +537,24 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $3.GetUserAttendanceDetailsRequest.fromBuffer(value),
         ($3.GetUserAttendanceDetailsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetUserFullNameRequest,
+            $2.GetUserFullNameResponse>(
+        'GetUserFullName',
+        getUserFullName_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetUserFullNameRequest.fromBuffer(value),
+        ($2.GetUserFullNameResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetUserTimezoneRequest,
+            $2.GetUserTimezoneResponse>(
+        'GetUserTimezone',
+        getUserTimezone_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetUserTimezoneRequest.fromBuffer(value),
+        ($2.GetUserTimezoneResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -682,4 +725,22 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$3.GetUserAttendanceDetailsResponse> getUserAttendanceDetails(
       $grpc.ServiceCall call, $3.GetUserAttendanceDetailsRequest request);
+
+  $async.Future<$2.GetUserFullNameResponse> getUserFullName_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$2.GetUserFullNameRequest> $request) async {
+    return getUserFullName($call, await $request);
+  }
+
+  $async.Future<$2.GetUserFullNameResponse> getUserFullName(
+      $grpc.ServiceCall call, $2.GetUserFullNameRequest request);
+
+  $async.Future<$2.GetUserTimezoneResponse> getUserTimezone_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$2.GetUserTimezoneRequest> $request) async {
+    return getUserTimezone($call, await $request);
+  }
+
+  $async.Future<$2.GetUserTimezoneResponse> getUserTimezone(
+      $grpc.ServiceCall call, $2.GetUserTimezoneRequest request);
 }

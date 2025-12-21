@@ -178,6 +178,22 @@ class SchoolServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getSchoolChainName, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetSchoolTimezoneResponse> getSchoolTimezone(
+    $0.GetSchoolTimezoneRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getSchoolTimezone, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetSchoolChainTimezoneResponse>
+      getSchoolChainTimezone(
+    $0.GetSchoolChainTimezoneRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getSchoolChainTimezone, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -282,6 +298,16 @@ class SchoolServiceClient extends $grpc.Client {
       '/school.SchoolService/GetSchoolChainName',
       ($0.GetSchoolChainNameRequest value) => value.writeToBuffer(),
       $0.GetSchoolChainNameResponse.fromBuffer);
+  static final _$getSchoolTimezone = $grpc.ClientMethod<
+          $0.GetSchoolTimezoneRequest, $0.GetSchoolTimezoneResponse>(
+      '/school.SchoolService/GetSchoolTimezone',
+      ($0.GetSchoolTimezoneRequest value) => value.writeToBuffer(),
+      $0.GetSchoolTimezoneResponse.fromBuffer);
+  static final _$getSchoolChainTimezone = $grpc.ClientMethod<
+          $0.GetSchoolChainTimezoneRequest, $0.GetSchoolChainTimezoneResponse>(
+      '/school.SchoolService/GetSchoolChainTimezone',
+      ($0.GetSchoolChainTimezoneRequest value) => value.writeToBuffer(),
+      $0.GetSchoolChainTimezoneResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -470,6 +496,24 @@ abstract class SchoolServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetSchoolChainNameRequest.fromBuffer(value),
         ($0.GetSchoolChainNameResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetSchoolTimezoneRequest,
+            $0.GetSchoolTimezoneResponse>(
+        'GetSchoolTimezone',
+        getSchoolTimezone_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetSchoolTimezoneRequest.fromBuffer(value),
+        ($0.GetSchoolTimezoneResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetSchoolChainTimezoneRequest,
+            $0.GetSchoolChainTimezoneResponse>(
+        'GetSchoolChainTimezone',
+        getSchoolChainTimezone_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetSchoolChainTimezoneRequest.fromBuffer(value),
+        ($0.GetSchoolChainTimezoneResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -650,4 +694,22 @@ abstract class SchoolServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetSchoolChainNameResponse> getSchoolChainName(
       $grpc.ServiceCall call, $0.GetSchoolChainNameRequest request);
+
+  $async.Future<$0.GetSchoolTimezoneResponse> getSchoolTimezone_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetSchoolTimezoneRequest> $request) async {
+    return getSchoolTimezone($call, await $request);
+  }
+
+  $async.Future<$0.GetSchoolTimezoneResponse> getSchoolTimezone(
+      $grpc.ServiceCall call, $0.GetSchoolTimezoneRequest request);
+
+  $async.Future<$0.GetSchoolChainTimezoneResponse> getSchoolChainTimezone_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetSchoolChainTimezoneRequest> $request) async {
+    return getSchoolChainTimezone($call, await $request);
+  }
+
+  $async.Future<$0.GetSchoolChainTimezoneResponse> getSchoolChainTimezone(
+      $grpc.ServiceCall call, $0.GetSchoolChainTimezoneRequest request);
 }

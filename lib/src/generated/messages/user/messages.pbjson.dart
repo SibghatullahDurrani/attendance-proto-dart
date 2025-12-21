@@ -296,3 +296,166 @@ const DeleteParentResponse$json = {
 final $typed_data.Uint8List deleteParentResponseDescriptor =
     $convert.base64Decode(
         'ChREZWxldGVQYXJlbnRSZXNwb25zZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQ=');
+
+@$core.Deprecated('Use getStudentFullNameRequestDescriptor instead')
+const GetStudentFullNameRequest$json = {
+  '1': 'GetStudentFullNameRequest',
+  '2': [
+    {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
+  ],
+};
+
+/// Descriptor for `GetStudentFullNameRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getStudentFullNameRequestDescriptor =
+    $convert.base64Decode(
+        'ChlHZXRTdHVkZW50RnVsbE5hbWVSZXF1ZXN0Eh0KCnN0dWRlbnRfaWQYASABKAlSCXN0dWRlbn'
+        'RJZA==');
+
+@$core.Deprecated('Use getStudentFullNameResponseDescriptor instead')
+const GetStudentFullNameResponse$json = {
+  '1': 'GetStudentFullNameResponse',
+  '2': [
+    {'1': 'first_name', '3': 1, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+  ],
+};
+
+/// Descriptor for `GetStudentFullNameResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getStudentFullNameResponseDescriptor =
+    $convert.base64Decode(
+        'ChpHZXRTdHVkZW50RnVsbE5hbWVSZXNwb25zZRIdCgpmaXJzdF9uYW1lGAEgASgJUglmaXJzdE'
+        '5hbWUSJAoLc2Vjb25kX25hbWUYAiABKAlIAFIKc2Vjb25kTmFtZYgBAUIOCgxfc2Vjb25kX25h'
+        'bWU=');
+
+@$core.Deprecated('Use getParentFullNameRequestDescriptor instead')
+const GetParentFullNameRequest$json = {
+  '1': 'GetParentFullNameRequest',
+  '2': [
+    {'1': 'parent_id', '3': 1, '4': 1, '5': 9, '10': 'parentId'},
+  ],
+};
+
+/// Descriptor for `GetParentFullNameRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getParentFullNameRequestDescriptor =
+    $convert.base64Decode(
+        'ChhHZXRQYXJlbnRGdWxsTmFtZVJlcXVlc3QSGwoJcGFyZW50X2lkGAEgASgJUghwYXJlbnRJZA'
+        '==');
+
+@$core.Deprecated('Use getParentFullNameResponseDescriptor instead')
+const GetParentFullNameResponse$json = {
+  '1': 'GetParentFullNameResponse',
+  '2': [
+    {'1': 'first_name', '3': 1, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+  ],
+};
+
+/// Descriptor for `GetParentFullNameResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getParentFullNameResponseDescriptor = $convert.base64Decode(
+    'ChlHZXRQYXJlbnRGdWxsTmFtZVJlc3BvbnNlEh0KCmZpcnN0X25hbWUYASABKAlSCWZpcnN0Tm'
+    'FtZRIkCgtzZWNvbmRfbmFtZRgCIAEoCUgAUgpzZWNvbmROYW1liAEBQg4KDF9zZWNvbmRfbmFt'
+    'ZQ==');
+
+@$core.Deprecated('Use getEmployeeFullNameRequestDescriptor instead')
+const GetEmployeeFullNameRequest$json = {
+  '1': 'GetEmployeeFullNameRequest',
+  '2': [
+    {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
+  ],
+};
+
+/// Descriptor for `GetEmployeeFullNameRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getEmployeeFullNameRequestDescriptor =
+    $convert.base64Decode(
+        'ChpHZXRFbXBsb3llZUZ1bGxOYW1lUmVxdWVzdBIfCgtlbXBsb3llZV9pZBgBIAEoCVIKZW1wbG'
+        '95ZWVJZA==');
+
+@$core.Deprecated('Use getEmployeeFullNameResponseDescriptor instead')
+const GetEmployeeFullNameResponse$json = {
+  '1': 'GetEmployeeFullNameResponse',
+  '2': [
+    {'1': 'first_name', '3': 1, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+  ],
+};
+
+/// Descriptor for `GetEmployeeFullNameResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getEmployeeFullNameResponseDescriptor =
+    $convert.base64Decode(
+        'ChtHZXRFbXBsb3llZUZ1bGxOYW1lUmVzcG9uc2USHQoKZmlyc3RfbmFtZRgBIAEoCVIJZmlyc3'
+        'ROYW1lEiQKC3NlY29uZF9uYW1lGAIgASgJSABSCnNlY29uZE5hbWWIAQFCDgoMX3NlY29uZF9u'
+        'YW1l');
+
+@$core.Deprecated('Use getTeacherFullNameRequestDescriptor instead')
+const GetTeacherFullNameRequest$json = {
+  '1': 'GetTeacherFullNameRequest',
+  '2': [
+    {'1': 'teacher_id', '3': 1, '4': 1, '5': 9, '10': 'teacherId'},
+  ],
+};
+
+/// Descriptor for `GetTeacherFullNameRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getTeacherFullNameRequestDescriptor =
+    $convert.base64Decode(
+        'ChlHZXRUZWFjaGVyRnVsbE5hbWVSZXF1ZXN0Eh0KCnRlYWNoZXJfaWQYASABKAlSCXRlYWNoZX'
+        'JJZA==');
+
+@$core.Deprecated('Use getTeacherFullNameResponseDescriptor instead')
+const GetTeacherFullNameResponse$json = {
+  '1': 'GetTeacherFullNameResponse',
+  '2': [
+    {'1': 'first_name', '3': 1, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+  ],
+};
+
+/// Descriptor for `GetTeacherFullNameResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getTeacherFullNameResponseDescriptor =
+    $convert.base64Decode(
+        'ChpHZXRUZWFjaGVyRnVsbE5hbWVSZXNwb25zZRIdCgpmaXJzdF9uYW1lGAEgASgJUglmaXJzdE'
+        '5hbWUSJAoLc2Vjb25kX25hbWUYAiABKAlIAFIKc2Vjb25kTmFtZYgBAUIOCgxfc2Vjb25kX25h'
+        'bWU=');
