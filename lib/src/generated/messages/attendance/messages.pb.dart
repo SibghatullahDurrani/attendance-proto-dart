@@ -409,12 +409,12 @@ class GetUserYearlyAttendanceStatsRequest extends $pb.GeneratedMessage {
   factory GetUserYearlyAttendanceStatsRequest({
     $core.String? userId,
     $core.String? timeZone,
-    $0.Timestamp? monthStartTime,
+    $0.Timestamp? yearStartTime,
   }) {
     final result = create();
     if (userId != null) result.userId = userId;
     if (timeZone != null) result.timeZone = timeZone;
-    if (monthStartTime != null) result.monthStartTime = monthStartTime;
+    if (yearStartTime != null) result.yearStartTime = yearStartTime;
     return result;
   }
 
@@ -435,7 +435,7 @@ class GetUserYearlyAttendanceStatsRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'userId')
     ..aOS(2, _omitFieldNames ? '' : 'timeZone')
-    ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'monthStartTime',
+    ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'yearStartTime',
         subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
@@ -483,15 +483,15 @@ class GetUserYearlyAttendanceStatsRequest extends $pb.GeneratedMessage {
   void clearTimeZone() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $0.Timestamp get monthStartTime => $_getN(2);
+  $0.Timestamp get yearStartTime => $_getN(2);
   @$pb.TagNumber(3)
-  set monthStartTime($0.Timestamp value) => $_setField(3, value);
+  set yearStartTime($0.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
-  $core.bool hasMonthStartTime() => $_has(2);
+  $core.bool hasYearStartTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMonthStartTime() => $_clearField(3);
+  void clearYearStartTime() => $_clearField(3);
   @$pb.TagNumber(3)
-  $0.Timestamp ensureMonthStartTime() => $_ensure(2);
+  $0.Timestamp ensureYearStartTime() => $_ensure(2);
 }
 
 class GetUserYearlyAttendanceStatsResponse extends $pb.GeneratedMessage {

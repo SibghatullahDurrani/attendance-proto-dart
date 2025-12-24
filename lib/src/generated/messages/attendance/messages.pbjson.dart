@@ -143,12 +143,12 @@ const GetUserYearlyAttendanceStatsRequest$json = {
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
     {'1': 'time_zone', '3': 2, '4': 1, '5': 9, '10': 'timeZone'},
     {
-      '1': 'month_start_time',
+      '1': 'year_start_time',
       '3': 3,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
-      '10': 'monthStartTime'
+      '10': 'yearStartTime'
     },
   ],
 };
@@ -157,8 +157,8 @@ const GetUserYearlyAttendanceStatsRequest$json = {
 final $typed_data.Uint8List getUserYearlyAttendanceStatsRequestDescriptor =
     $convert.base64Decode(
         'CiNHZXRVc2VyWWVhcmx5QXR0ZW5kYW5jZVN0YXRzUmVxdWVzdBIXCgd1c2VyX2lkGAEgASgJUg'
-        'Z1c2VySWQSGwoJdGltZV96b25lGAIgASgJUgh0aW1lWm9uZRJEChBtb250aF9zdGFydF90aW1l'
-        'GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIObW9udGhTdGFydFRpbWU=');
+        'Z1c2VySWQSGwoJdGltZV96b25lGAIgASgJUgh0aW1lWm9uZRJCCg95ZWFyX3N0YXJ0X3RpbWUY'
+        'AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUg15ZWFyU3RhcnRUaW1l');
 
 @$core.Deprecated('Use getUserYearlyAttendanceStatsResponseDescriptor instead')
 const GetUserYearlyAttendanceStatsResponse$json = {
