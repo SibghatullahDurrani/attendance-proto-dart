@@ -25,12 +25,14 @@ class ListUserLeavesRequest extends $pb.GeneratedMessage {
     $core.String? userId,
     $0.LeaveStatus? leaveStatus,
     $1.Timestamp? monthStartTime,
+    $core.String? timezone,
   }) {
     final result = create();
     if (pagination != null) result.pagination = pagination;
     if (userId != null) result.userId = userId;
     if (leaveStatus != null) result.leaveStatus = leaveStatus;
     if (monthStartTime != null) result.monthStartTime = monthStartTime;
+    if (timezone != null) result.timezone = timezone;
     return result;
   }
 
@@ -54,6 +56,7 @@ class ListUserLeavesRequest extends $pb.GeneratedMessage {
         enumValues: $0.LeaveStatus.values)
     ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'monthStartTime',
         subBuilder: $1.Timestamp.create)
+    ..aOS(5, _omitFieldNames ? '' : 'timezone')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -117,6 +120,15 @@ class ListUserLeavesRequest extends $pb.GeneratedMessage {
   void clearMonthStartTime() => $_clearField(4);
   @$pb.TagNumber(4)
   $1.Timestamp ensureMonthStartTime() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.String get timezone => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set timezone($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasTimezone() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearTimezone() => $_clearField(5);
 }
 
 class UserLeave extends $pb.GeneratedMessage {

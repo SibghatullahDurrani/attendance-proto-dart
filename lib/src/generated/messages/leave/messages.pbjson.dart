@@ -47,10 +47,20 @@ const ListUserLeavesRequest$json = {
       '10': 'monthStartTime',
       '17': true
     },
+    {
+      '1': 'timezone',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'timezone',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_leave_status'},
     {'1': '_month_start_time'},
+    {'1': '_timezone'},
   ],
 };
 
@@ -60,8 +70,9 @@ final $typed_data.Uint8List listUserLeavesRequestDescriptor = $convert.base64Dec
     'NzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhIXCgd1c2VyX2lkGAIgASgJUgZ1'
     'c2VySWQSRAoMbGVhdmVfc3RhdHVzGAMgASgOMhwuY29tbW9uX21lc3NhZ2VzLkxlYXZlU3RhdH'
     'VzSABSC2xlYXZlU3RhdHVziAEBEkkKEG1vbnRoX3N0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUu'
-    'cHJvdG9idWYuVGltZXN0YW1wSAFSDm1vbnRoU3RhcnRUaW1liAEBQg8KDV9sZWF2ZV9zdGF0dX'
-    'NCEwoRX21vbnRoX3N0YXJ0X3RpbWU=');
+    'cHJvdG9idWYuVGltZXN0YW1wSAFSDm1vbnRoU3RhcnRUaW1liAEBEh8KCHRpbWV6b25lGAUgAS'
+    'gJSAJSCHRpbWV6b25liAEBQg8KDV9sZWF2ZV9zdGF0dXNCEwoRX21vbnRoX3N0YXJ0X3RpbWVC'
+    'CwoJX3RpbWV6b25l');
 
 @$core.Deprecated('Use userLeaveDescriptor instead')
 const UserLeave$json = {
