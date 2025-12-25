@@ -123,5 +123,27 @@ class AttendanceStatus extends $pb.ProtobufEnum {
   const AttendanceStatus._(super.value, super.name);
 }
 
+class LeaveStatus extends $pb.ProtobufEnum {
+  static const LeaveStatus LEAVE_STATUS_PENDING =
+      LeaveStatus._(0, _omitEnumNames ? '' : 'LEAVE_STATUS_PENDING');
+  static const LeaveStatus LEAVE_STATUS_ACCEPTED =
+      LeaveStatus._(1, _omitEnumNames ? '' : 'LEAVE_STATUS_ACCEPTED');
+  static const LeaveStatus LEAVE_STATUS_REJECTED =
+      LeaveStatus._(2, _omitEnumNames ? '' : 'LEAVE_STATUS_REJECTED');
+
+  static const $core.List<LeaveStatus> values = <LeaveStatus>[
+    LEAVE_STATUS_PENDING,
+    LEAVE_STATUS_ACCEPTED,
+    LEAVE_STATUS_REJECTED,
+  ];
+
+  static final $core.List<LeaveStatus?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static LeaveStatus? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const LeaveStatus._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');

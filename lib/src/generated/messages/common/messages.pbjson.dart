@@ -81,6 +81,21 @@ final $typed_data.Uint8List attendanceStatusDescriptor = $convert.base64Decode(
     'QVRURU5EQU5DRV9TVEFUVVNfT05fTEVBVkUQAxIdChlBVFRFTkRBTkNFX1NUQVRVU19PRkZfRE'
     'FZEAQSHQoZQVRURU5EQU5DRV9TVEFUVVNfSE9MSURBWRAF');
 
+@$core.Deprecated('Use leaveStatusDescriptor instead')
+const LeaveStatus$json = {
+  '1': 'LeaveStatus',
+  '2': [
+    {'1': 'LEAVE_STATUS_PENDING', '2': 0},
+    {'1': 'LEAVE_STATUS_ACCEPTED', '2': 1},
+    {'1': 'LEAVE_STATUS_REJECTED', '2': 2},
+  ],
+};
+
+/// Descriptor for `LeaveStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List leaveStatusDescriptor = $convert.base64Decode(
+    'CgtMZWF2ZVN0YXR1cxIYChRMRUFWRV9TVEFUVVNfUEVORElORxAAEhkKFUxFQVZFX1NUQVRVU1'
+    '9BQ0NFUFRFRBABEhkKFUxFQVZFX1NUQVRVU19SRUpFQ1RFRBAC');
+
 @$core.Deprecated('Use paginationRequestDescriptor instead')
 const PaginationRequest$json = {
   '1': 'PaginationRequest',
