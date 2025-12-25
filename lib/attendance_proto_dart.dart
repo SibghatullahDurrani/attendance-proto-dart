@@ -57,3 +57,12 @@ export 'src/generated/messages/attendance/messages.pbjson.dart';
 export 'src/generated/google/protobuf/timestamp.pb.dart';
 export 'src/generated/google/protobuf/timestamp.pbenum.dart';
 export 'src/generated/google/protobuf/timestamp.pbjson.dart';
+
+export 'src/generated/leave/leave.pb.dart';
+export 'src/generated/leave/leave.pbenum.dart';
+export 'src/generated/leave/leave.pbgrpc.dart';
+export 'src/generated/leave/leave.pbjson.dart';
+
+export 'src/generated/messages/leave/messages.pb.dart';
+export 'src/generated/messages/leave/messages.pbenum.dart';
+export 'src/generated/messages/leave/messages.pbjson.dart';
