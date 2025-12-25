@@ -130,3 +130,51 @@ final $typed_data.Uint8List listUserLeavesResponseDescriptor = $convert.base64De
     'ChZMaXN0VXNlckxlYXZlc1Jlc3BvbnNlEjoKC3VzZXJfbGVhdmVzGAEgAygLMhkubGVhdmVfbW'
     'Vzc2FnZXMuVXNlckxlYXZlUgp1c2VyTGVhdmVzEkMKCnBhZ2luYXRpb24YAiABKAsyIy5jb21t'
     'b25fbWVzc2FnZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpwYWdpbmF0aW9u');
+
+@$core.Deprecated('Use createLeaveRequestDescriptor instead')
+const CreateLeaveRequest$json = {
+  '1': 'CreateLeaveRequest',
+  '2': [
+    {
+      '1': 'from_date',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'fromDate'
+    },
+    {
+      '1': 'till_date',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'tillDate'
+    },
+    {'1': 'user_id', '3': 3, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'belongs_to', '3': 4, '4': 1, '5': 9, '10': 'belongsTo'},
+    {'1': 'timezone', '3': 5, '4': 1, '5': 9, '10': 'timezone'},
+    {'1': 'description', '3': 6, '4': 1, '5': 9, '10': 'description'},
+  ],
+};
+
+/// Descriptor for `CreateLeaveRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createLeaveRequestDescriptor = $convert.base64Decode(
+    'ChJDcmVhdGVMZWF2ZVJlcXVlc3QSNwoJZnJvbV9kYXRlGAEgASgLMhouZ29vZ2xlLnByb3RvYn'
+    'VmLlRpbWVzdGFtcFIIZnJvbURhdGUSNwoJdGlsbF9kYXRlGAIgASgLMhouZ29vZ2xlLnByb3Rv'
+    'YnVmLlRpbWVzdGFtcFIIdGlsbERhdGUSFwoHdXNlcl9pZBgDIAEoCVIGdXNlcklkEh0KCmJlbG'
+    '9uZ3NfdG8YBCABKAlSCWJlbG9uZ3NUbxIaCgh0aW1lem9uZRgFIAEoCVIIdGltZXpvbmUSIAoL'
+    'ZGVzY3JpcHRpb24YBiABKAlSC2Rlc2NyaXB0aW9u');
+
+@$core.Deprecated('Use createLeaveResponseDescriptor instead')
+const CreateLeaveResponse$json = {
+  '1': 'CreateLeaveResponse',
+  '2': [
+    {'1': 'leave_id', '3': 1, '4': 1, '5': 9, '10': 'leaveId'},
+  ],
+};
+
+/// Descriptor for `CreateLeaveResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createLeaveResponseDescriptor =
+    $convert.base64Decode(
+        'ChNDcmVhdGVMZWF2ZVJlc3BvbnNlEhkKCGxlYXZlX2lkGAEgASgJUgdsZWF2ZUlk');
