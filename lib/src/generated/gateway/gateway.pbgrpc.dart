@@ -19,6 +19,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../messages/attendance/messages.pb.dart' as $3;
 import '../messages/auth/messages.pb.dart' as $0;
 import '../messages/gateway/messages.pb.dart' as $2;
+import '../messages/leave/messages.pb.dart' as $4;
 import '../messages/school/messages.pb.dart' as $1;
 
 export 'gateway.pb.dart';
@@ -219,6 +220,21 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getUserTimezone, request, options: options);
   }
 
+  /// Leave RPCs
+  $grpc.ResponseFuture<$4.ListUserLeavesResponse> listUserLeaves(
+    $4.ListUserLeavesRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listUserLeaves, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.CreateLeaveResponse> createLeaveRequest(
+    $4.CreateLeaveRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$createLeaveRequest, request, options: options);
+  }
+
   // method descriptors
 
   static final _$login = $grpc.ClientMethod<$0.LoginRequest, $0.LoginResponse>(
@@ -341,6 +357,16 @@ class GatewayServiceClient extends $grpc.Client {
           '/gateway.GatewayService/GetUserTimezone',
           ($2.GetUserTimezoneRequest value) => value.writeToBuffer(),
           $2.GetUserTimezoneResponse.fromBuffer);
+  static final _$listUserLeaves =
+      $grpc.ClientMethod<$4.ListUserLeavesRequest, $4.ListUserLeavesResponse>(
+          '/gateway.GatewayService/ListUserLeaves',
+          ($4.ListUserLeavesRequest value) => value.writeToBuffer(),
+          $4.ListUserLeavesResponse.fromBuffer);
+  static final _$createLeaveRequest =
+      $grpc.ClientMethod<$4.CreateLeaveRequest, $4.CreateLeaveResponse>(
+          '/gateway.GatewayService/CreateLeaveRequest',
+          ($4.CreateLeaveRequest value) => value.writeToBuffer(),
+          $4.CreateLeaveResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -555,6 +581,24 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.GetUserTimezoneRequest.fromBuffer(value),
         ($2.GetUserTimezoneResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListUserLeavesRequest,
+            $4.ListUserLeavesResponse>(
+        'ListUserLeaves',
+        listUserLeaves_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.ListUserLeavesRequest.fromBuffer(value),
+        ($4.ListUserLeavesResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.CreateLeaveRequest, $4.CreateLeaveResponse>(
+            'CreateLeaveRequest',
+            createLeaveRequest_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.CreateLeaveRequest.fromBuffer(value),
+            ($4.CreateLeaveResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -743,4 +787,22 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$2.GetUserTimezoneResponse> getUserTimezone(
       $grpc.ServiceCall call, $2.GetUserTimezoneRequest request);
+
+  $async.Future<$4.ListUserLeavesResponse> listUserLeaves_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$4.ListUserLeavesRequest> $request) async {
+    return listUserLeaves($call, await $request);
+  }
+
+  $async.Future<$4.ListUserLeavesResponse> listUserLeaves(
+      $grpc.ServiceCall call, $4.ListUserLeavesRequest request);
+
+  $async.Future<$4.CreateLeaveResponse> createLeaveRequest_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$4.CreateLeaveRequest> $request) async {
+    return createLeaveRequest($call, await $request);
+  }
+
+  $async.Future<$4.CreateLeaveResponse> createLeaveRequest(
+      $grpc.ServiceCall call, $4.CreateLeaveRequest request);
 }
