@@ -207,7 +207,7 @@ final $typed_data.Uint8List getLeaveDetailsRequestDescriptor =
 const GetLeaveDetailsResponse$json = {
   '1': 'GetLeaveDetailsResponse',
   '2': [
-    {'1': 'details', '3': 1, '4': 1, '5': 9, '10': 'details'},
+    {'1': 'description', '3': 1, '4': 1, '5': 9, '10': 'description'},
     {
       '1': 'leave_status',
       '3': 2,
@@ -237,8 +237,8 @@ const GetLeaveDetailsResponse$json = {
 
 /// Descriptor for `GetLeaveDetailsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getLeaveDetailsResponseDescriptor = $convert.base64Decode(
-    'ChdHZXRMZWF2ZURldGFpbHNSZXNwb25zZRIYCgdkZXRhaWxzGAEgASgJUgdkZXRhaWxzEj8KDG'
-    'xlYXZlX3N0YXR1cxgCIAEoDjIcLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVN0YXR1c1ILbGVhdmVT'
-    'dGF0dXMSNwoJZnJvbV9kYXRlGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIIZn'
-    'JvbURhdGUSNwoJdGlsbF9kYXRlGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFII'
-    'dGlsbERhdGU=');
+    'ChdHZXRMZWF2ZURldGFpbHNSZXNwb25zZRIgCgtkZXNjcmlwdGlvbhgBIAEoCVILZGVzY3JpcH'
+    'Rpb24SPwoMbGVhdmVfc3RhdHVzGAIgASgOMhwuY29tbW9uX21lc3NhZ2VzLkxlYXZlU3RhdHVz'
+    'UgtsZWF2ZVN0YXR1cxI3Cglmcm9tX2RhdGUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZX'
+    'N0YW1wUghmcm9tRGF0ZRI3Cgl0aWxsX2RhdGUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt'
+    'ZXN0YW1wUgh0aWxsRGF0ZQ==');

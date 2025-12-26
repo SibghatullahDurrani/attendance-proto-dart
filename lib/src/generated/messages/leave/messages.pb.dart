@@ -532,13 +532,13 @@ class GetLeaveDetailsRequest extends $pb.GeneratedMessage {
 
 class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
   factory GetLeaveDetailsResponse({
-    $core.String? details,
+    $core.String? description,
     $0.LeaveStatus? leaveStatus,
     $1.Timestamp? fromDate,
     $1.Timestamp? tillDate,
   }) {
     final result = create();
-    if (details != null) result.details = details;
+    if (description != null) result.description = description;
     if (leaveStatus != null) result.leaveStatus = leaveStatus;
     if (fromDate != null) result.fromDate = fromDate;
     if (tillDate != null) result.tillDate = tillDate;
@@ -558,7 +558,7 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
       _omitMessageNames ? '' : 'GetLeaveDetailsResponse',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'details')
+    ..aOS(1, _omitFieldNames ? '' : 'description')
     ..aE<$0.LeaveStatus>(2, _omitFieldNames ? '' : 'leaveStatus',
         enumValues: $0.LeaveStatus.values)
     ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'fromDate',
@@ -590,13 +590,13 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
   static GetLeaveDetailsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get details => $_getSZ(0);
+  $core.String get description => $_getSZ(0);
   @$pb.TagNumber(1)
-  set details($core.String value) => $_setString(0, value);
+  set description($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasDetails() => $_has(0);
+  $core.bool hasDescription() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDetails() => $_clearField(1);
+  void clearDescription() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $0.LeaveStatus get leaveStatus => $_getN(1);
