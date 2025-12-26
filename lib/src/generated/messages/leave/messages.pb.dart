@@ -473,6 +473,163 @@ class CreateLeaveResponse extends $pb.GeneratedMessage {
   void clearLeaveId() => $_clearField(1);
 }
 
+class GetLeaveDetailsRequest extends $pb.GeneratedMessage {
+  factory GetLeaveDetailsRequest({
+    $core.String? leaveId,
+  }) {
+    final result = create();
+    if (leaveId != null) result.leaveId = leaveId;
+    return result;
+  }
+
+  GetLeaveDetailsRequest._();
+
+  factory GetLeaveDetailsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetLeaveDetailsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetLeaveDetailsRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'leaveId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetLeaveDetailsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetLeaveDetailsRequest copyWith(
+          void Function(GetLeaveDetailsRequest) updates) =>
+      super.copyWith((message) => updates(message as GetLeaveDetailsRequest))
+          as GetLeaveDetailsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetLeaveDetailsRequest create() => GetLeaveDetailsRequest._();
+  @$core.override
+  GetLeaveDetailsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetLeaveDetailsRequest> createRepeated() =>
+      $pb.PbList<GetLeaveDetailsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetLeaveDetailsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetLeaveDetailsRequest>(create);
+  static GetLeaveDetailsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get leaveId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set leaveId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasLeaveId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLeaveId() => $_clearField(1);
+}
+
+class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
+  factory GetLeaveDetailsResponse({
+    $core.String? details,
+    $0.LeaveStatus? leaveStatus,
+    $1.Timestamp? fromDate,
+    $1.Timestamp? tillDate,
+  }) {
+    final result = create();
+    if (details != null) result.details = details;
+    if (leaveStatus != null) result.leaveStatus = leaveStatus;
+    if (fromDate != null) result.fromDate = fromDate;
+    if (tillDate != null) result.tillDate = tillDate;
+    return result;
+  }
+
+  GetLeaveDetailsResponse._();
+
+  factory GetLeaveDetailsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetLeaveDetailsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetLeaveDetailsResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'details')
+    ..aE<$0.LeaveStatus>(2, _omitFieldNames ? '' : 'leaveStatus',
+        enumValues: $0.LeaveStatus.values)
+    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'fromDate',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'tillDate',
+        subBuilder: $1.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetLeaveDetailsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetLeaveDetailsResponse copyWith(
+          void Function(GetLeaveDetailsResponse) updates) =>
+      super.copyWith((message) => updates(message as GetLeaveDetailsResponse))
+          as GetLeaveDetailsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetLeaveDetailsResponse create() => GetLeaveDetailsResponse._();
+  @$core.override
+  GetLeaveDetailsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetLeaveDetailsResponse> createRepeated() =>
+      $pb.PbList<GetLeaveDetailsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetLeaveDetailsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetLeaveDetailsResponse>(create);
+  static GetLeaveDetailsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get details => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set details($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasDetails() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDetails() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.LeaveStatus get leaveStatus => $_getN(1);
+  @$pb.TagNumber(2)
+  set leaveStatus($0.LeaveStatus value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasLeaveStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLeaveStatus() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $1.Timestamp get fromDate => $_getN(2);
+  @$pb.TagNumber(3)
+  set fromDate($1.Timestamp value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasFromDate() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFromDate() => $_clearField(3);
+  @$pb.TagNumber(3)
+  $1.Timestamp ensureFromDate() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $1.Timestamp get tillDate => $_getN(3);
+  @$pb.TagNumber(4)
+  set tillDate($1.Timestamp value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasTillDate() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearTillDate() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $1.Timestamp ensureTillDate() => $_ensure(3);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =
