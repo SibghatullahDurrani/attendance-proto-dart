@@ -242,3 +242,77 @@ final $typed_data.Uint8List getLeaveDetailsResponseDescriptor = $convert.base64D
     'UgtsZWF2ZVN0YXR1cxI3Cglmcm9tX2RhdGUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZX'
     'N0YW1wUghmcm9tRGF0ZRI3Cgl0aWxsX2RhdGUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt'
     'ZXN0YW1wUgh0aWxsRGF0ZQ==');
+
+@$core.Deprecated('Use updateLeaveRequestDescriptor instead')
+const UpdateLeaveRequest$json = {
+  '1': 'UpdateLeaveRequest',
+  '2': [
+    {'1': 'leave_id', '3': 1, '4': 1, '5': 9, '10': 'leaveId'},
+    {
+      '1': 'from_date',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 0,
+      '10': 'fromDate',
+      '17': true
+    },
+    {
+      '1': 'till_date',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 1,
+      '10': 'tillDate',
+      '17': true
+    },
+    {
+      '1': 'timezone',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'timezone',
+      '17': true
+    },
+    {
+      '1': 'description',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'description',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_from_date'},
+    {'1': '_till_date'},
+    {'1': '_timezone'},
+    {'1': '_description'},
+  ],
+};
+
+/// Descriptor for `UpdateLeaveRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateLeaveRequestDescriptor = $convert.base64Decode(
+    'ChJVcGRhdGVMZWF2ZVJlcXVlc3QSGQoIbGVhdmVfaWQYASABKAlSB2xlYXZlSWQSPAoJZnJvbV'
+    '9kYXRlGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAUghmcm9tRGF0ZYgBARI8'
+    'Cgl0aWxsX2RhdGUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAFSCHRpbGxEYX'
+    'RliAEBEh8KCHRpbWV6b25lGAQgASgJSAJSCHRpbWV6b25liAEBEiUKC2Rlc2NyaXB0aW9uGAUg'
+    'ASgJSANSC2Rlc2NyaXB0aW9uiAEBQgwKCl9mcm9tX2RhdGVCDAoKX3RpbGxfZGF0ZUILCglfdG'
+    'ltZXpvbmVCDgoMX2Rlc2NyaXB0aW9u');
+
+@$core.Deprecated('Use updateLeaveResponseDescriptor instead')
+const UpdateLeaveResponse$json = {
+  '1': 'UpdateLeaveResponse',
+  '2': [
+    {'1': 'leave_id', '3': 1, '4': 1, '5': 9, '10': 'leaveId'},
+  ],
+};
+
+/// Descriptor for `UpdateLeaveResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateLeaveResponseDescriptor =
+    $convert.base64Decode(
+        'ChNVcGRhdGVMZWF2ZVJlc3BvbnNlEhkKCGxlYXZlX2lkGAEgASgJUgdsZWF2ZUlk');
