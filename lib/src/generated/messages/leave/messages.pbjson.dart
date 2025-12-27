@@ -316,3 +316,25 @@ const UpdateLeaveResponse$json = {
 final $typed_data.Uint8List updateLeaveResponseDescriptor =
     $convert.base64Decode(
         'ChNVcGRhdGVMZWF2ZVJlc3BvbnNlEhkKCGxlYXZlX2lkGAEgASgJUgdsZWF2ZUlk');
+
+@$core.Deprecated('Use deleteLeaveRequestDescriptor instead')
+const DeleteLeaveRequest$json = {
+  '1': 'DeleteLeaveRequest',
+  '2': [
+    {'1': 'leave_id', '3': 1, '4': 1, '5': 9, '10': 'leaveId'},
+  ],
+};
+
+/// Descriptor for `DeleteLeaveRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteLeaveRequestDescriptor =
+    $convert.base64Decode(
+        'ChJEZWxldGVMZWF2ZVJlcXVlc3QSGQoIbGVhdmVfaWQYASABKAlSB2xlYXZlSWQ=');
+
+@$core.Deprecated('Use deleteLeaveResponseDescriptor instead')
+const DeleteLeaveResponse$json = {
+  '1': 'DeleteLeaveResponse',
+};
+
+/// Descriptor for `DeleteLeaveResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteLeaveResponseDescriptor =
+    $convert.base64Decode('ChNEZWxldGVMZWF2ZVJlc3BvbnNl');

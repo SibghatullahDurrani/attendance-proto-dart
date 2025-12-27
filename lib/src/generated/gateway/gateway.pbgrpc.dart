@@ -249,6 +249,13 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$updateLeave, request, options: options);
   }
 
+  $grpc.ResponseFuture<$4.DeleteLeaveResponse> deleteLeave(
+    $4.DeleteLeaveRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$deleteLeave, request, options: options);
+  }
+
   // method descriptors
 
   static final _$login = $grpc.ClientMethod<$0.LoginRequest, $0.LoginResponse>(
@@ -391,6 +398,11 @@ class GatewayServiceClient extends $grpc.Client {
           '/gateway.GatewayService/UpdateLeave',
           ($4.UpdateLeaveRequest value) => value.writeToBuffer(),
           $4.UpdateLeaveResponse.fromBuffer);
+  static final _$deleteLeave =
+      $grpc.ClientMethod<$4.DeleteLeaveRequest, $4.DeleteLeaveResponse>(
+          '/gateway.GatewayService/DeleteLeave',
+          ($4.DeleteLeaveRequest value) => value.writeToBuffer(),
+          $4.DeleteLeaveResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -641,6 +653,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $4.UpdateLeaveRequest.fromBuffer(value),
             ($4.UpdateLeaveResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.DeleteLeaveRequest, $4.DeleteLeaveResponse>(
+            'DeleteLeave',
+            deleteLeave_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.DeleteLeaveRequest.fromBuffer(value),
+            ($4.DeleteLeaveResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -863,4 +884,12 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$4.UpdateLeaveResponse> updateLeave(
       $grpc.ServiceCall call, $4.UpdateLeaveRequest request);
+
+  $async.Future<$4.DeleteLeaveResponse> deleteLeave_Pre($grpc.ServiceCall $call,
+      $async.Future<$4.DeleteLeaveRequest> $request) async {
+    return deleteLeave($call, await $request);
+  }
+
+  $async.Future<$4.DeleteLeaveResponse> deleteLeave(
+      $grpc.ServiceCall call, $4.DeleteLeaveRequest request);
 }
