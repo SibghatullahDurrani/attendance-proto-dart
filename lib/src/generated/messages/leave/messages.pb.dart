@@ -135,14 +135,12 @@ class UserLeave extends $pb.GeneratedMessage {
   factory UserLeave({
     $core.String? leaveId,
     $0.LeaveStatus? leaveStatus,
-    $1.Timestamp? fromDate,
-    $1.Timestamp? tillDate,
+    $core.Iterable<$1.Timestamp>? date,
   }) {
     final result = create();
     if (leaveId != null) result.leaveId = leaveId;
     if (leaveStatus != null) result.leaveStatus = leaveStatus;
-    if (fromDate != null) result.fromDate = fromDate;
-    if (tillDate != null) result.tillDate = tillDate;
+    if (date != null) result.date.addAll(date);
     return result;
   }
 
@@ -162,9 +160,7 @@ class UserLeave extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'leaveId')
     ..aE<$0.LeaveStatus>(2, _omitFieldNames ? '' : 'leaveStatus',
         enumValues: $0.LeaveStatus.values)
-    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'fromDate',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'tillDate',
+    ..pPM<$1.Timestamp>(3, _omitFieldNames ? '' : 'date',
         subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
@@ -206,26 +202,7 @@ class UserLeave extends $pb.GeneratedMessage {
   void clearLeaveStatus() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $1.Timestamp get fromDate => $_getN(2);
-  @$pb.TagNumber(3)
-  set fromDate($1.Timestamp value) => $_setField(3, value);
-  @$pb.TagNumber(3)
-  $core.bool hasFromDate() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearFromDate() => $_clearField(3);
-  @$pb.TagNumber(3)
-  $1.Timestamp ensureFromDate() => $_ensure(2);
-
-  @$pb.TagNumber(4)
-  $1.Timestamp get tillDate => $_getN(3);
-  @$pb.TagNumber(4)
-  set tillDate($1.Timestamp value) => $_setField(4, value);
-  @$pb.TagNumber(4)
-  $core.bool hasTillDate() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearTillDate() => $_clearField(4);
-  @$pb.TagNumber(4)
-  $1.Timestamp ensureTillDate() => $_ensure(3);
+  $pb.PbList<$1.Timestamp> get date => $_getList(2);
 }
 
 class ListUserLeavesResponse extends $pb.GeneratedMessage {
@@ -297,16 +274,14 @@ class ListUserLeavesResponse extends $pb.GeneratedMessage {
 
 class CreateLeaveRequest extends $pb.GeneratedMessage {
   factory CreateLeaveRequest({
-    $1.Timestamp? fromDate,
-    $1.Timestamp? tillDate,
+    $core.Iterable<$1.Timestamp>? dates,
     $core.String? userId,
     $core.String? belongsTo,
     $core.String? timezone,
     $core.String? description,
   }) {
     final result = create();
-    if (fromDate != null) result.fromDate = fromDate;
-    if (tillDate != null) result.tillDate = tillDate;
+    if (dates != null) result.dates.addAll(dates);
     if (userId != null) result.userId = userId;
     if (belongsTo != null) result.belongsTo = belongsTo;
     if (timezone != null) result.timezone = timezone;
@@ -327,14 +302,12 @@ class CreateLeaveRequest extends $pb.GeneratedMessage {
       _omitMessageNames ? '' : 'CreateLeaveRequest',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
-    ..aOM<$1.Timestamp>(1, _omitFieldNames ? '' : 'fromDate',
+    ..pPM<$1.Timestamp>(1, _omitFieldNames ? '' : 'dates',
         subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(2, _omitFieldNames ? '' : 'tillDate',
-        subBuilder: $1.Timestamp.create)
-    ..aOS(3, _omitFieldNames ? '' : 'userId')
-    ..aOS(4, _omitFieldNames ? '' : 'belongsTo')
-    ..aOS(5, _omitFieldNames ? '' : 'timezone')
-    ..aOS(6, _omitFieldNames ? '' : 'description')
+    ..aOS(2, _omitFieldNames ? '' : 'userId')
+    ..aOS(3, _omitFieldNames ? '' : 'belongsTo')
+    ..aOS(4, _omitFieldNames ? '' : 'timezone')
+    ..aOS(5, _omitFieldNames ? '' : 'description')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -359,62 +332,43 @@ class CreateLeaveRequest extends $pb.GeneratedMessage {
   static CreateLeaveRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $1.Timestamp get fromDate => $_getN(0);
-  @$pb.TagNumber(1)
-  set fromDate($1.Timestamp value) => $_setField(1, value);
-  @$pb.TagNumber(1)
-  $core.bool hasFromDate() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearFromDate() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $1.Timestamp ensureFromDate() => $_ensure(0);
+  $pb.PbList<$1.Timestamp> get dates => $_getList(0);
 
   @$pb.TagNumber(2)
-  $1.Timestamp get tillDate => $_getN(1);
+  $core.String get userId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set tillDate($1.Timestamp value) => $_setField(2, value);
+  set userId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
-  $core.bool hasTillDate() => $_has(1);
+  $core.bool hasUserId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTillDate() => $_clearField(2);
-  @$pb.TagNumber(2)
-  $1.Timestamp ensureTillDate() => $_ensure(1);
+  void clearUserId() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get userId => $_getSZ(2);
+  $core.String get belongsTo => $_getSZ(2);
   @$pb.TagNumber(3)
-  set userId($core.String value) => $_setString(2, value);
+  set belongsTo($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
-  $core.bool hasUserId() => $_has(2);
+  $core.bool hasBelongsTo() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUserId() => $_clearField(3);
+  void clearBelongsTo() => $_clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get belongsTo => $_getSZ(3);
+  $core.String get timezone => $_getSZ(3);
   @$pb.TagNumber(4)
-  set belongsTo($core.String value) => $_setString(3, value);
+  set timezone($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
-  $core.bool hasBelongsTo() => $_has(3);
+  $core.bool hasTimezone() => $_has(3);
   @$pb.TagNumber(4)
-  void clearBelongsTo() => $_clearField(4);
+  void clearTimezone() => $_clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get timezone => $_getSZ(4);
+  $core.String get description => $_getSZ(4);
   @$pb.TagNumber(5)
-  set timezone($core.String value) => $_setString(4, value);
+  set description($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
-  $core.bool hasTimezone() => $_has(4);
+  $core.bool hasDescription() => $_has(4);
   @$pb.TagNumber(5)
-  void clearTimezone() => $_clearField(5);
-
-  @$pb.TagNumber(6)
-  $core.String get description => $_getSZ(5);
-  @$pb.TagNumber(6)
-  set description($core.String value) => $_setString(5, value);
-  @$pb.TagNumber(6)
-  $core.bool hasDescription() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearDescription() => $_clearField(6);
+  void clearDescription() => $_clearField(5);
 }
 
 class CreateLeaveResponse extends $pb.GeneratedMessage {
@@ -534,14 +488,12 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
   factory GetLeaveDetailsResponse({
     $core.String? description,
     $0.LeaveStatus? leaveStatus,
-    $1.Timestamp? fromDate,
-    $1.Timestamp? tillDate,
+    $core.Iterable<$1.Timestamp>? dates,
   }) {
     final result = create();
     if (description != null) result.description = description;
     if (leaveStatus != null) result.leaveStatus = leaveStatus;
-    if (fromDate != null) result.fromDate = fromDate;
-    if (tillDate != null) result.tillDate = tillDate;
+    if (dates != null) result.dates.addAll(dates);
     return result;
   }
 
@@ -561,9 +513,7 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'description')
     ..aE<$0.LeaveStatus>(2, _omitFieldNames ? '' : 'leaveStatus',
         enumValues: $0.LeaveStatus.values)
-    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'fromDate',
-        subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'tillDate',
+    ..pPM<$1.Timestamp>(3, _omitFieldNames ? '' : 'dates',
         subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
@@ -608,40 +558,19 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
   void clearLeaveStatus() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $1.Timestamp get fromDate => $_getN(2);
-  @$pb.TagNumber(3)
-  set fromDate($1.Timestamp value) => $_setField(3, value);
-  @$pb.TagNumber(3)
-  $core.bool hasFromDate() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearFromDate() => $_clearField(3);
-  @$pb.TagNumber(3)
-  $1.Timestamp ensureFromDate() => $_ensure(2);
-
-  @$pb.TagNumber(4)
-  $1.Timestamp get tillDate => $_getN(3);
-  @$pb.TagNumber(4)
-  set tillDate($1.Timestamp value) => $_setField(4, value);
-  @$pb.TagNumber(4)
-  $core.bool hasTillDate() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearTillDate() => $_clearField(4);
-  @$pb.TagNumber(4)
-  $1.Timestamp ensureTillDate() => $_ensure(3);
+  $pb.PbList<$1.Timestamp> get dates => $_getList(2);
 }
 
 class UpdateLeaveRequest extends $pb.GeneratedMessage {
   factory UpdateLeaveRequest({
     $core.String? leaveId,
-    $1.Timestamp? fromDate,
-    $1.Timestamp? tillDate,
+    $core.Iterable<$1.Timestamp>? dates,
     $core.String? timezone,
     $core.String? description,
   }) {
     final result = create();
     if (leaveId != null) result.leaveId = leaveId;
-    if (fromDate != null) result.fromDate = fromDate;
-    if (tillDate != null) result.tillDate = tillDate;
+    if (dates != null) result.dates.addAll(dates);
     if (timezone != null) result.timezone = timezone;
     if (description != null) result.description = description;
     return result;
@@ -661,12 +590,10 @@ class UpdateLeaveRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'leaveId')
-    ..aOM<$1.Timestamp>(2, _omitFieldNames ? '' : 'fromDate',
+    ..pPM<$1.Timestamp>(2, _omitFieldNames ? '' : 'dates',
         subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'tillDate',
-        subBuilder: $1.Timestamp.create)
-    ..aOS(4, _omitFieldNames ? '' : 'timezone')
-    ..aOS(5, _omitFieldNames ? '' : 'description')
+    ..aOS(3, _omitFieldNames ? '' : 'timezone')
+    ..aOS(4, _omitFieldNames ? '' : 'description')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -700,44 +627,25 @@ class UpdateLeaveRequest extends $pb.GeneratedMessage {
   void clearLeaveId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $1.Timestamp get fromDate => $_getN(1);
-  @$pb.TagNumber(2)
-  set fromDate($1.Timestamp value) => $_setField(2, value);
-  @$pb.TagNumber(2)
-  $core.bool hasFromDate() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearFromDate() => $_clearField(2);
-  @$pb.TagNumber(2)
-  $1.Timestamp ensureFromDate() => $_ensure(1);
+  $pb.PbList<$1.Timestamp> get dates => $_getList(1);
 
   @$pb.TagNumber(3)
-  $1.Timestamp get tillDate => $_getN(2);
+  $core.String get timezone => $_getSZ(2);
   @$pb.TagNumber(3)
-  set tillDate($1.Timestamp value) => $_setField(3, value);
+  set timezone($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
-  $core.bool hasTillDate() => $_has(2);
+  $core.bool hasTimezone() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTillDate() => $_clearField(3);
-  @$pb.TagNumber(3)
-  $1.Timestamp ensureTillDate() => $_ensure(2);
+  void clearTimezone() => $_clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get timezone => $_getSZ(3);
+  $core.String get description => $_getSZ(3);
   @$pb.TagNumber(4)
-  set timezone($core.String value) => $_setString(3, value);
+  set description($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
-  $core.bool hasTimezone() => $_has(3);
+  $core.bool hasDescription() => $_has(3);
   @$pb.TagNumber(4)
-  void clearTimezone() => $_clearField(4);
-
-  @$pb.TagNumber(5)
-  $core.String get description => $_getSZ(4);
-  @$pb.TagNumber(5)
-  set description($core.String value) => $_setString(4, value);
-  @$pb.TagNumber(5)
-  $core.bool hasDescription() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearDescription() => $_clearField(5);
+  void clearDescription() => $_clearField(4);
 }
 
 class UpdateLeaveResponse extends $pb.GeneratedMessage {
