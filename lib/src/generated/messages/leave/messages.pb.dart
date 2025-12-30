@@ -135,12 +135,12 @@ class UserLeave extends $pb.GeneratedMessage {
   factory UserLeave({
     $core.String? leaveId,
     $0.LeaveStatus? leaveStatus,
-    $core.Iterable<$1.Timestamp>? date,
+    $core.Iterable<$1.Timestamp>? dates,
   }) {
     final result = create();
     if (leaveId != null) result.leaveId = leaveId;
     if (leaveStatus != null) result.leaveStatus = leaveStatus;
-    if (date != null) result.date.addAll(date);
+    if (dates != null) result.dates.addAll(dates);
     return result;
   }
 
@@ -160,7 +160,7 @@ class UserLeave extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'leaveId')
     ..aE<$0.LeaveStatus>(2, _omitFieldNames ? '' : 'leaveStatus',
         enumValues: $0.LeaveStatus.values)
-    ..pPM<$1.Timestamp>(3, _omitFieldNames ? '' : 'date',
+    ..pPM<$1.Timestamp>(3, _omitFieldNames ? '' : 'dates',
         subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
@@ -202,7 +202,7 @@ class UserLeave extends $pb.GeneratedMessage {
   void clearLeaveStatus() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $pb.PbList<$1.Timestamp> get date => $_getList(2);
+  $pb.PbList<$1.Timestamp> get dates => $_getList(2);
 }
 
 class ListUserLeavesResponse extends $pb.GeneratedMessage {

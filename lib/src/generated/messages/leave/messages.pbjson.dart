@@ -88,12 +88,12 @@ const UserLeave$json = {
       '10': 'leaveStatus'
     },
     {
-      '1': 'date',
+      '1': 'dates',
       '3': 3,
       '4': 3,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
-      '10': 'date'
+      '10': 'dates'
     },
   ],
 };
@@ -101,8 +101,8 @@ const UserLeave$json = {
 /// Descriptor for `UserLeave`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userLeaveDescriptor = $convert.base64Decode(
     'CglVc2VyTGVhdmUSGQoIbGVhdmVfaWQYASABKAlSB2xlYXZlSWQSPwoMbGVhdmVfc3RhdHVzGA'
-    'IgASgOMhwuY29tbW9uX21lc3NhZ2VzLkxlYXZlU3RhdHVzUgtsZWF2ZVN0YXR1cxIuCgRkYXRl'
-    'GAMgAygLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIEZGF0ZQ==');
+    'IgASgOMhwuY29tbW9uX21lc3NhZ2VzLkxlYXZlU3RhdHVzUgtsZWF2ZVN0YXR1cxIwCgVkYXRl'
+    'cxgDIAMoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSBWRhdGVz');
 
 @$core.Deprecated('Use listUserLeavesResponseDescriptor instead')
 const ListUserLeavesResponse$json = {
