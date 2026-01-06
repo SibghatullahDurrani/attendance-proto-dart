@@ -134,13 +134,11 @@ class ListUserLeavesRequest extends $pb.GeneratedMessage {
 class UserLeave extends $pb.GeneratedMessage {
   factory UserLeave({
     $core.String? leaveId,
-    $0.LeaveStatus? leaveStatus,
-    $core.Iterable<$1.Timestamp>? dates,
+    $core.Iterable<LeaveDate>? leaveDates,
   }) {
     final result = create();
     if (leaveId != null) result.leaveId = leaveId;
-    if (leaveStatus != null) result.leaveStatus = leaveStatus;
-    if (dates != null) result.dates.addAll(dates);
+    if (leaveDates != null) result.leaveDates.addAll(leaveDates);
     return result;
   }
 
@@ -158,10 +156,8 @@ class UserLeave extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'leaveId')
-    ..aE<$0.LeaveStatus>(2, _omitFieldNames ? '' : 'leaveStatus',
-        enumValues: $0.LeaveStatus.values)
-    ..pPM<$1.Timestamp>(3, _omitFieldNames ? '' : 'dates',
-        subBuilder: $1.Timestamp.create)
+    ..pPM<LeaveDate>(2, _omitFieldNames ? '' : 'leaveDates',
+        subBuilder: LeaveDate.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -193,6 +189,70 @@ class UserLeave extends $pb.GeneratedMessage {
   void clearLeaveId() => $_clearField(1);
 
   @$pb.TagNumber(2)
+  $pb.PbList<LeaveDate> get leaveDates => $_getList(1);
+}
+
+class LeaveDate extends $pb.GeneratedMessage {
+  factory LeaveDate({
+    $1.Timestamp? dates,
+    $0.LeaveStatus? leaveStatus,
+  }) {
+    final result = create();
+    if (dates != null) result.dates = dates;
+    if (leaveStatus != null) result.leaveStatus = leaveStatus;
+    return result;
+  }
+
+  LeaveDate._();
+
+  factory LeaveDate.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory LeaveDate.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LeaveDate',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
+      createEmptyInstance: create)
+    ..aOM<$1.Timestamp>(1, _omitFieldNames ? '' : 'dates',
+        subBuilder: $1.Timestamp.create)
+    ..aE<$0.LeaveStatus>(2, _omitFieldNames ? '' : 'leaveStatus',
+        enumValues: $0.LeaveStatus.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LeaveDate clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LeaveDate copyWith(void Function(LeaveDate) updates) =>
+      super.copyWith((message) => updates(message as LeaveDate)) as LeaveDate;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static LeaveDate create() => LeaveDate._();
+  @$core.override
+  LeaveDate createEmptyInstance() => create();
+  static $pb.PbList<LeaveDate> createRepeated() => $pb.PbList<LeaveDate>();
+  @$core.pragma('dart2js:noInline')
+  static LeaveDate getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LeaveDate>(create);
+  static LeaveDate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.Timestamp get dates => $_getN(0);
+  @$pb.TagNumber(1)
+  set dates($1.Timestamp value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasDates() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDates() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.Timestamp ensureDates() => $_ensure(0);
+
+  @$pb.TagNumber(2)
   $0.LeaveStatus get leaveStatus => $_getN(1);
   @$pb.TagNumber(2)
   set leaveStatus($0.LeaveStatus value) => $_setField(2, value);
@@ -200,9 +260,6 @@ class UserLeave extends $pb.GeneratedMessage {
   $core.bool hasLeaveStatus() => $_has(1);
   @$pb.TagNumber(2)
   void clearLeaveStatus() => $_clearField(2);
-
-  @$pb.TagNumber(3)
-  $pb.PbList<$1.Timestamp> get dates => $_getList(2);
 }
 
 class ListUserLeavesResponse extends $pb.GeneratedMessage {
@@ -487,13 +544,11 @@ class GetLeaveDetailsRequest extends $pb.GeneratedMessage {
 class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
   factory GetLeaveDetailsResponse({
     $core.String? description,
-    $0.LeaveStatus? leaveStatus,
-    $core.Iterable<$1.Timestamp>? dates,
+    $core.Iterable<LeaveDate>? leaveDates,
   }) {
     final result = create();
     if (description != null) result.description = description;
-    if (leaveStatus != null) result.leaveStatus = leaveStatus;
-    if (dates != null) result.dates.addAll(dates);
+    if (leaveDates != null) result.leaveDates.addAll(leaveDates);
     return result;
   }
 
@@ -511,10 +566,8 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'description')
-    ..aE<$0.LeaveStatus>(2, _omitFieldNames ? '' : 'leaveStatus',
-        enumValues: $0.LeaveStatus.values)
-    ..pPM<$1.Timestamp>(3, _omitFieldNames ? '' : 'dates',
-        subBuilder: $1.Timestamp.create)
+    ..pPM<LeaveDate>(2, _omitFieldNames ? '' : 'leaveDates',
+        subBuilder: LeaveDate.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -549,16 +602,7 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
   void clearDescription() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $0.LeaveStatus get leaveStatus => $_getN(1);
-  @$pb.TagNumber(2)
-  set leaveStatus($0.LeaveStatus value) => $_setField(2, value);
-  @$pb.TagNumber(2)
-  $core.bool hasLeaveStatus() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearLeaveStatus() => $_clearField(2);
-
-  @$pb.TagNumber(3)
-  $pb.PbList<$1.Timestamp> get dates => $_getList(2);
+  $pb.PbList<LeaveDate> get leaveDates => $_getList(1);
 }
 
 class UpdateLeaveRequest extends $pb.GeneratedMessage {
