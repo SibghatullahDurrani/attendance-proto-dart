@@ -205,6 +205,13 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$3.GetUserShiftOffDaysResponse> getUserShiftOffDays(
+    $3.GetUserShiftOffDaysRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserShiftOffDays, request, options: options);
+  }
+
   /// User RPCs
   $grpc.ResponseFuture<$2.GetUserFullNameResponse> getUserFullName(
     $2.GetUserFullNameRequest request, {
@@ -368,6 +375,11 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/GetUserAttendanceDetails',
       ($3.GetUserAttendanceDetailsRequest value) => value.writeToBuffer(),
       $3.GetUserAttendanceDetailsResponse.fromBuffer);
+  static final _$getUserShiftOffDays = $grpc.ClientMethod<
+          $3.GetUserShiftOffDaysRequest, $3.GetUserShiftOffDaysResponse>(
+      '/gateway.GatewayService/GetUserShiftOffDays',
+      ($3.GetUserShiftOffDaysRequest value) => value.writeToBuffer(),
+      $3.GetUserShiftOffDaysResponse.fromBuffer);
   static final _$getUserFullName =
       $grpc.ClientMethod<$2.GetUserFullNameRequest, $2.GetUserFullNameResponse>(
           '/gateway.GatewayService/GetUserFullName',
@@ -599,6 +611,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $3.GetUserAttendanceDetailsRequest.fromBuffer(value),
         ($3.GetUserAttendanceDetailsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetUserShiftOffDaysRequest,
+            $3.GetUserShiftOffDaysResponse>(
+        'GetUserShiftOffDays',
+        getUserShiftOffDays_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.GetUserShiftOffDaysRequest.fromBuffer(value),
+        ($3.GetUserShiftOffDaysResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.GetUserFullNameRequest,
             $2.GetUserFullNameResponse>(
         'GetUserFullName',
@@ -832,6 +853,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$3.GetUserAttendanceDetailsResponse> getUserAttendanceDetails(
       $grpc.ServiceCall call, $3.GetUserAttendanceDetailsRequest request);
+
+  $async.Future<$3.GetUserShiftOffDaysResponse> getUserShiftOffDays_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$3.GetUserShiftOffDaysRequest> $request) async {
+    return getUserShiftOffDays($call, await $request);
+  }
+
+  $async.Future<$3.GetUserShiftOffDaysResponse> getUserShiftOffDays(
+      $grpc.ServiceCall call, $3.GetUserShiftOffDaysRequest request);
 
   $async.Future<$2.GetUserFullNameResponse> getUserFullName_Pre(
       $grpc.ServiceCall $call,

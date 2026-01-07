@@ -68,6 +68,13 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetUserShiftOffDaysResponse> getUserShiftOffDays(
+    $0.GetUserShiftOffDaysRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserShiftOffDays, request, options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -94,6 +101,11 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/GetUserAttendanceDetails',
       ($0.GetUserAttendanceDetailsRequest value) => value.writeToBuffer(),
       $0.GetUserAttendanceDetailsResponse.fromBuffer);
+  static final _$getUserShiftOffDays = $grpc.ClientMethod<
+          $0.GetUserShiftOffDaysRequest, $0.GetUserShiftOffDaysResponse>(
+      '/attendance.AttendanceService/GetUserShiftOffDays',
+      ($0.GetUserShiftOffDaysRequest value) => value.writeToBuffer(),
+      $0.GetUserShiftOffDaysResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -139,6 +151,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetUserAttendanceDetailsRequest.fromBuffer(value),
         ($0.GetUserAttendanceDetailsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetUserShiftOffDaysRequest,
+            $0.GetUserShiftOffDaysResponse>(
+        'GetUserShiftOffDays',
+        getUserShiftOffDays_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetUserShiftOffDaysRequest.fromBuffer(value),
+        ($0.GetUserShiftOffDaysResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -182,4 +203,13 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetUserAttendanceDetailsResponse> getUserAttendanceDetails(
       $grpc.ServiceCall call, $0.GetUserAttendanceDetailsRequest request);
+
+  $async.Future<$0.GetUserShiftOffDaysResponse> getUserShiftOffDays_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetUserShiftOffDaysRequest> $request) async {
+    return getUserShiftOffDays($call, await $request);
+  }
+
+  $async.Future<$0.GetUserShiftOffDaysResponse> getUserShiftOffDays(
+      $grpc.ServiceCall call, $0.GetUserShiftOffDaysRequest request);
 }

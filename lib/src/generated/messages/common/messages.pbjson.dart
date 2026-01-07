@@ -96,6 +96,25 @@ final $typed_data.Uint8List leaveStatusDescriptor = $convert.base64Decode(
     'CgtMZWF2ZVN0YXR1cxIYChRMRUFWRV9TVEFUVVNfUEVORElORxAAEhkKFUxFQVZFX1NUQVRVU1'
     '9BQ0NFUFRFRBABEhkKFUxFQVZFX1NUQVRVU19SRUpFQ1RFRBAC');
 
+@$core.Deprecated('Use daysDescriptor instead')
+const Days$json = {
+  '1': 'Days',
+  '2': [
+    {'1': 'MONDAY', '2': 0},
+    {'1': 'TUESDAY', '2': 1},
+    {'1': 'WEDNESDAY', '2': 2},
+    {'1': 'THURSDAY', '2': 3},
+    {'1': 'FRIDAY', '2': 4},
+    {'1': 'SATURDAY', '2': 5},
+    {'1': 'SUNDAY', '2': 6},
+  ],
+};
+
+/// Descriptor for `Days`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List daysDescriptor = $convert.base64Decode(
+    'CgREYXlzEgoKBk1PTkRBWRAAEgsKB1RVRVNEQVkQARINCglXRURORVNEQVkQAhIMCghUSFVSU0'
+    'RBWRADEgoKBkZSSURBWRAEEgwKCFNBVFVSREFZEAUSCgoGU1VOREFZEAY=');
+
 @$core.Deprecated('Use paginationRequestDescriptor instead')
 const PaginationRequest$json = {
   '1': 'PaginationRequest',

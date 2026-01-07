@@ -1094,6 +1094,122 @@ class UserAttendanceDetails extends $pb.GeneratedMessage {
   void clearTotalTimeSpentSeconds() => $_clearField(13);
 }
 
+class GetUserShiftOffDaysRequest extends $pb.GeneratedMessage {
+  factory GetUserShiftOffDaysRequest({
+    $core.String? userId,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    return result;
+  }
+
+  GetUserShiftOffDaysRequest._();
+
+  factory GetUserShiftOffDaysRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetUserShiftOffDaysRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetUserShiftOffDaysRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserShiftOffDaysRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserShiftOffDaysRequest copyWith(
+          void Function(GetUserShiftOffDaysRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetUserShiftOffDaysRequest))
+          as GetUserShiftOffDaysRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserShiftOffDaysRequest create() => GetUserShiftOffDaysRequest._();
+  @$core.override
+  GetUserShiftOffDaysRequest createEmptyInstance() => create();
+  static $pb.PbList<GetUserShiftOffDaysRequest> createRepeated() =>
+      $pb.PbList<GetUserShiftOffDaysRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserShiftOffDaysRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetUserShiftOffDaysRequest>(create);
+  static GetUserShiftOffDaysRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+}
+
+class GetUserShiftOffDaysResponse extends $pb.GeneratedMessage {
+  factory GetUserShiftOffDaysResponse({
+    $core.Iterable<$1.Days>? offDays,
+  }) {
+    final result = create();
+    if (offDays != null) result.offDays.addAll(offDays);
+    return result;
+  }
+
+  GetUserShiftOffDaysResponse._();
+
+  factory GetUserShiftOffDaysResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetUserShiftOffDaysResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetUserShiftOffDaysResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..pc<$1.Days>(1, _omitFieldNames ? '' : 'offDays', $pb.PbFieldType.KE,
+        valueOf: $1.Days.valueOf,
+        enumValues: $1.Days.values,
+        defaultEnumValue: $1.Days.MONDAY)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserShiftOffDaysResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserShiftOffDaysResponse copyWith(
+          void Function(GetUserShiftOffDaysResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetUserShiftOffDaysResponse))
+          as GetUserShiftOffDaysResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserShiftOffDaysResponse create() =>
+      GetUserShiftOffDaysResponse._();
+  @$core.override
+  GetUserShiftOffDaysResponse createEmptyInstance() => create();
+  static $pb.PbList<GetUserShiftOffDaysResponse> createRepeated() =>
+      $pb.PbList<GetUserShiftOffDaysResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserShiftOffDaysResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetUserShiftOffDaysResponse>(create);
+  static GetUserShiftOffDaysResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$1.Days> get offDays => $_getList(0);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

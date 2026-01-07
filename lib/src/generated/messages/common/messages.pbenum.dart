@@ -145,5 +145,32 @@ class LeaveStatus extends $pb.ProtobufEnum {
   const LeaveStatus._(super.value, super.name);
 }
 
+class Days extends $pb.ProtobufEnum {
+  static const Days MONDAY = Days._(0, _omitEnumNames ? '' : 'MONDAY');
+  static const Days TUESDAY = Days._(1, _omitEnumNames ? '' : 'TUESDAY');
+  static const Days WEDNESDAY = Days._(2, _omitEnumNames ? '' : 'WEDNESDAY');
+  static const Days THURSDAY = Days._(3, _omitEnumNames ? '' : 'THURSDAY');
+  static const Days FRIDAY = Days._(4, _omitEnumNames ? '' : 'FRIDAY');
+  static const Days SATURDAY = Days._(5, _omitEnumNames ? '' : 'SATURDAY');
+  static const Days SUNDAY = Days._(6, _omitEnumNames ? '' : 'SUNDAY');
+
+  static const $core.List<Days> values = <Days>[
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY,
+  ];
+
+  static final $core.List<Days?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 6);
+  static Days? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const Days._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');

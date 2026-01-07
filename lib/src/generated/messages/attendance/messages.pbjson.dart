@@ -339,3 +339,37 @@ final $typed_data.Uint8List userAttendanceDetailsDescriptor = $convert.base64Dec
     'Zi5UaW1lc3RhbXBIAVIQbGFzdENoZWNrT3V0VGltZYgBARI3Chh0b3RhbF90aW1lX3NwZW50X3'
     'NlY29uZHMYDSABKANSFXRvdGFsVGltZVNwZW50U2Vjb25kc0IWChRfZmlyc3RfY2hlY2tfaW5f'
     'dGltZUIWChRfbGFzdF9jaGVja19vdXRfdGltZQ==');
+
+@$core.Deprecated('Use getUserShiftOffDaysRequestDescriptor instead')
+const GetUserShiftOffDaysRequest$json = {
+  '1': 'GetUserShiftOffDaysRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+  ],
+};
+
+/// Descriptor for `GetUserShiftOffDaysRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserShiftOffDaysRequestDescriptor =
+    $convert.base64Decode(
+        'ChpHZXRVc2VyU2hpZnRPZmZEYXlzUmVxdWVzdBIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQ=');
+
+@$core.Deprecated('Use getUserShiftOffDaysResponseDescriptor instead')
+const GetUserShiftOffDaysResponse$json = {
+  '1': 'GetUserShiftOffDaysResponse',
+  '2': [
+    {
+      '1': 'off_days',
+      '3': 1,
+      '4': 3,
+      '5': 14,
+      '6': '.common_messages.Days',
+      '10': 'offDays'
+    },
+  ],
+};
+
+/// Descriptor for `GetUserShiftOffDaysResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserShiftOffDaysResponseDescriptor =
+    $convert.base64Decode(
+        'ChtHZXRVc2VyU2hpZnRPZmZEYXlzUmVzcG9uc2USMAoIb2ZmX2RheXMYASADKA4yFS5jb21tb2'
+        '5fbWVzc2FnZXMuRGF5c1IHb2ZmRGF5cw==');
