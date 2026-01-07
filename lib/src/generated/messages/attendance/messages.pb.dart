@@ -1210,6 +1210,137 @@ class GetUserShiftOffDaysResponse extends $pb.GeneratedMessage {
   $pb.PbList<$1.Days> get offDays => $_getList(0);
 }
 
+class GetUserHolidaysForMonthRequest extends $pb.GeneratedMessage {
+  factory GetUserHolidaysForMonthRequest({
+    $core.String? belongsTo,
+    $0.Timestamp? monthStartTime,
+  }) {
+    final result = create();
+    if (belongsTo != null) result.belongsTo = belongsTo;
+    if (monthStartTime != null) result.monthStartTime = monthStartTime;
+    return result;
+  }
+
+  GetUserHolidaysForMonthRequest._();
+
+  factory GetUserHolidaysForMonthRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetUserHolidaysForMonthRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetUserHolidaysForMonthRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'belongsTo')
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'monthStartTime',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserHolidaysForMonthRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserHolidaysForMonthRequest copyWith(
+          void Function(GetUserHolidaysForMonthRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetUserHolidaysForMonthRequest))
+          as GetUserHolidaysForMonthRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserHolidaysForMonthRequest create() =>
+      GetUserHolidaysForMonthRequest._();
+  @$core.override
+  GetUserHolidaysForMonthRequest createEmptyInstance() => create();
+  static $pb.PbList<GetUserHolidaysForMonthRequest> createRepeated() =>
+      $pb.PbList<GetUserHolidaysForMonthRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserHolidaysForMonthRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetUserHolidaysForMonthRequest>(create);
+  static GetUserHolidaysForMonthRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get belongsTo => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set belongsTo($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasBelongsTo() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBelongsTo() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.Timestamp get monthStartTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set monthStartTime($0.Timestamp value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasMonthStartTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMonthStartTime() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $0.Timestamp ensureMonthStartTime() => $_ensure(1);
+}
+
+class GetUserHolidaysForMonthResponse extends $pb.GeneratedMessage {
+  factory GetUserHolidaysForMonthResponse({
+    $core.Iterable<$0.Timestamp>? holidayDates,
+  }) {
+    final result = create();
+    if (holidayDates != null) result.holidayDates.addAll(holidayDates);
+    return result;
+  }
+
+  GetUserHolidaysForMonthResponse._();
+
+  factory GetUserHolidaysForMonthResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetUserHolidaysForMonthResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetUserHolidaysForMonthResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..pPM<$0.Timestamp>(1, _omitFieldNames ? '' : 'holidayDates',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserHolidaysForMonthResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserHolidaysForMonthResponse copyWith(
+          void Function(GetUserHolidaysForMonthResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetUserHolidaysForMonthResponse))
+          as GetUserHolidaysForMonthResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserHolidaysForMonthResponse create() =>
+      GetUserHolidaysForMonthResponse._();
+  @$core.override
+  GetUserHolidaysForMonthResponse createEmptyInstance() => create();
+  static $pb.PbList<GetUserHolidaysForMonthResponse> createRepeated() =>
+      $pb.PbList<GetUserHolidaysForMonthResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserHolidaysForMonthResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetUserHolidaysForMonthResponse>(
+          create);
+  static GetUserHolidaysForMonthResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$0.Timestamp> get holidayDates => $_getList(0);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

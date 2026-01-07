@@ -212,6 +212,15 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getUserShiftOffDays, request, options: options);
   }
 
+  $grpc.ResponseFuture<$3.GetUserHolidaysForMonthResponse>
+      getUserHolidaysForMonth(
+    $3.GetUserHolidaysForMonthRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserHolidaysForMonth, request,
+        options: options);
+  }
+
   /// User RPCs
   $grpc.ResponseFuture<$2.GetUserFullNameResponse> getUserFullName(
     $2.GetUserFullNameRequest request, {
@@ -380,6 +389,12 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/GetUserShiftOffDays',
       ($3.GetUserShiftOffDaysRequest value) => value.writeToBuffer(),
       $3.GetUserShiftOffDaysResponse.fromBuffer);
+  static final _$getUserHolidaysForMonth = $grpc.ClientMethod<
+          $3.GetUserHolidaysForMonthRequest,
+          $3.GetUserHolidaysForMonthResponse>(
+      '/gateway.GatewayService/GetUserHolidaysForMonth',
+      ($3.GetUserHolidaysForMonthRequest value) => value.writeToBuffer(),
+      $3.GetUserHolidaysForMonthResponse.fromBuffer);
   static final _$getUserFullName =
       $grpc.ClientMethod<$2.GetUserFullNameRequest, $2.GetUserFullNameResponse>(
           '/gateway.GatewayService/GetUserFullName',
@@ -620,6 +635,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $3.GetUserShiftOffDaysRequest.fromBuffer(value),
         ($3.GetUserShiftOffDaysResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetUserHolidaysForMonthRequest,
+            $3.GetUserHolidaysForMonthResponse>(
+        'GetUserHolidaysForMonth',
+        getUserHolidaysForMonth_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.GetUserHolidaysForMonthRequest.fromBuffer(value),
+        ($3.GetUserHolidaysForMonthResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.GetUserFullNameRequest,
             $2.GetUserFullNameResponse>(
         'GetUserFullName',
@@ -862,6 +886,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$3.GetUserShiftOffDaysResponse> getUserShiftOffDays(
       $grpc.ServiceCall call, $3.GetUserShiftOffDaysRequest request);
+
+  $async.Future<$3.GetUserHolidaysForMonthResponse> getUserHolidaysForMonth_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$3.GetUserHolidaysForMonthRequest> $request) async {
+    return getUserHolidaysForMonth($call, await $request);
+  }
+
+  $async.Future<$3.GetUserHolidaysForMonthResponse> getUserHolidaysForMonth(
+      $grpc.ServiceCall call, $3.GetUserHolidaysForMonthRequest request);
 
   $async.Future<$2.GetUserFullNameResponse> getUserFullName_Pre(
       $grpc.ServiceCall $call,

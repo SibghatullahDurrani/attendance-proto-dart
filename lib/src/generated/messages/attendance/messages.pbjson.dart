@@ -373,3 +373,47 @@ final $typed_data.Uint8List getUserShiftOffDaysResponseDescriptor =
     $convert.base64Decode(
         'ChtHZXRVc2VyU2hpZnRPZmZEYXlzUmVzcG9uc2USMAoIb2ZmX2RheXMYASADKA4yFS5jb21tb2'
         '5fbWVzc2FnZXMuRGF5c1IHb2ZmRGF5cw==');
+
+@$core.Deprecated('Use getUserHolidaysForMonthRequestDescriptor instead')
+const GetUserHolidaysForMonthRequest$json = {
+  '1': 'GetUserHolidaysForMonthRequest',
+  '2': [
+    {'1': 'belongs_to', '3': 1, '4': 1, '5': 9, '10': 'belongsTo'},
+    {
+      '1': 'month_start_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'monthStartTime'
+    },
+  ],
+};
+
+/// Descriptor for `GetUserHolidaysForMonthRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserHolidaysForMonthRequestDescriptor =
+    $convert.base64Decode(
+        'Ch5HZXRVc2VySG9saWRheXNGb3JNb250aFJlcXVlc3QSHQoKYmVsb25nc190bxgBIAEoCVIJYm'
+        'Vsb25nc1RvEkQKEG1vbnRoX3N0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt'
+        'ZXN0YW1wUg5tb250aFN0YXJ0VGltZQ==');
+
+@$core.Deprecated('Use getUserHolidaysForMonthResponseDescriptor instead')
+const GetUserHolidaysForMonthResponse$json = {
+  '1': 'GetUserHolidaysForMonthResponse',
+  '2': [
+    {
+      '1': 'holiday_dates',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'holidayDates'
+    },
+  ],
+};
+
+/// Descriptor for `GetUserHolidaysForMonthResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserHolidaysForMonthResponseDescriptor =
+    $convert.base64Decode(
+        'Ch9HZXRVc2VySG9saWRheXNGb3JNb250aFJlc3BvbnNlEj8KDWhvbGlkYXlfZGF0ZXMYASADKA'
+        'syGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgxob2xpZGF5RGF0ZXM=');
