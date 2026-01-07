@@ -1214,10 +1214,12 @@ class GetUserHolidaysForMonthRequest extends $pb.GeneratedMessage {
   factory GetUserHolidaysForMonthRequest({
     $core.String? belongsTo,
     $0.Timestamp? monthStartTime,
+    $core.String? timezone,
   }) {
     final result = create();
     if (belongsTo != null) result.belongsTo = belongsTo;
     if (monthStartTime != null) result.monthStartTime = monthStartTime;
+    if (timezone != null) result.timezone = timezone;
     return result;
   }
 
@@ -1238,6 +1240,7 @@ class GetUserHolidaysForMonthRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'belongsTo')
     ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'monthStartTime',
         subBuilder: $0.Timestamp.create)
+    ..aOS(3, _omitFieldNames ? '' : 'timezone')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1283,6 +1286,15 @@ class GetUserHolidaysForMonthRequest extends $pb.GeneratedMessage {
   void clearMonthStartTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureMonthStartTime() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get timezone => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set timezone($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasTimezone() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTimezone() => $_clearField(3);
 }
 
 class GetUserHolidaysForMonthResponse extends $pb.GeneratedMessage {

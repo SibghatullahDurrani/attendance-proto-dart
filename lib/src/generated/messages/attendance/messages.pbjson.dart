@@ -387,6 +387,7 @@ const GetUserHolidaysForMonthRequest$json = {
       '6': '.google.protobuf.Timestamp',
       '10': 'monthStartTime'
     },
+    {'1': 'timezone', '3': 3, '4': 1, '5': 9, '10': 'timezone'},
   ],
 };
 
@@ -395,7 +396,7 @@ final $typed_data.Uint8List getUserHolidaysForMonthRequestDescriptor =
     $convert.base64Decode(
         'Ch5HZXRVc2VySG9saWRheXNGb3JNb250aFJlcXVlc3QSHQoKYmVsb25nc190bxgBIAEoCVIJYm'
         'Vsb25nc1RvEkQKEG1vbnRoX3N0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt'
-        'ZXN0YW1wUg5tb250aFN0YXJ0VGltZQ==');
+        'ZXN0YW1wUg5tb250aFN0YXJ0VGltZRIaCgh0aW1lem9uZRgDIAEoCVIIdGltZXpvbmU=');
 
 @$core.Deprecated('Use getUserHolidaysForMonthResponseDescriptor instead')
 const GetUserHolidaysForMonthResponse$json = {
