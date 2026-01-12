@@ -459,3 +459,66 @@ final $typed_data.Uint8List getTeacherFullNameResponseDescriptor =
         'ChpHZXRUZWFjaGVyRnVsbE5hbWVSZXNwb25zZRIdCgpmaXJzdF9uYW1lGAEgASgJUglmaXJzdE'
         '5hbWUSJAoLc2Vjb25kX25hbWUYAiABKAlIAFIKc2Vjb25kTmFtZYgBAUIOCgxfc2Vjb25kX25h'
         'bWU=');
+
+@$core.Deprecated('Use getParentStudentSelectionDataRequestDescriptor instead')
+const GetParentStudentSelectionDataRequest$json = {
+  '1': 'GetParentStudentSelectionDataRequest',
+  '2': [
+    {'1': 'parent_id', '3': 1, '4': 1, '5': 9, '10': 'parentId'},
+  ],
+};
+
+/// Descriptor for `GetParentStudentSelectionDataRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getParentStudentSelectionDataRequestDescriptor =
+    $convert.base64Decode(
+        'CiRHZXRQYXJlbnRTdHVkZW50U2VsZWN0aW9uRGF0YVJlcXVlc3QSGwoJcGFyZW50X2lkGAEgAS'
+        'gJUghwYXJlbnRJZA==');
+
+@$core.Deprecated('Use studentSelectionDescriptor instead')
+const StudentSelection$json = {
+  '1': 'StudentSelection',
+  '2': [
+    {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+  ],
+};
+
+/// Descriptor for `StudentSelection`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List studentSelectionDescriptor = $convert.base64Decode(
+    'ChBTdHVkZW50U2VsZWN0aW9uEh0KCnN0dWRlbnRfaWQYASABKAlSCXN0dWRlbnRJZBIdCgpmaX'
+    'JzdF9uYW1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAyABKAlIAFIKc2Vjb25k'
+    'TmFtZYgBAUIOCgxfc2Vjb25kX25hbWU=');
+
+@$core.Deprecated('Use getParentStudentSelectionDataResponseDescriptor instead')
+const GetParentStudentSelectionDataResponse$json = {
+  '1': 'GetParentStudentSelectionDataResponse',
+  '2': [
+    {
+      '1': 'student_selections',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.StudentSelection',
+      '10': 'studentSelections'
+    },
+  ],
+};
+
+/// Descriptor for `GetParentStudentSelectionDataResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getParentStudentSelectionDataResponseDescriptor =
+    $convert.base64Decode(
+        'CiVHZXRQYXJlbnRTdHVkZW50U2VsZWN0aW9uRGF0YVJlc3BvbnNlEk4KEnN0dWRlbnRfc2VsZW'
+        'N0aW9ucxgBIAMoCzIfLnVzZXJfbWVzc2FnZXMuU3R1ZGVudFNlbGVjdGlvblIRc3R1ZGVudFNl'
+        'bGVjdGlvbnM=');

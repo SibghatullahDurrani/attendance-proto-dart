@@ -127,6 +127,15 @@ class UserServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getTeacherFullName, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetParentStudentSelectionDataResponse>
+      getParentStudentSelectionData(
+    $0.GetParentStudentSelectionDataRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getParentStudentSelectionData, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createStudent =
@@ -189,6 +198,12 @@ class UserServiceClient extends $grpc.Client {
       '/user.UserService/GetTeacherFullName',
       ($0.GetTeacherFullNameRequest value) => value.writeToBuffer(),
       $0.GetTeacherFullNameResponse.fromBuffer);
+  static final _$getParentStudentSelectionData = $grpc.ClientMethod<
+          $0.GetParentStudentSelectionDataRequest,
+          $0.GetParentStudentSelectionDataResponse>(
+      '/user.UserService/GetParentStudentSelectionData',
+      ($0.GetParentStudentSelectionDataRequest value) => value.writeToBuffer(),
+      $0.GetParentStudentSelectionDataResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('user.UserService')
@@ -304,6 +319,16 @@ abstract class UserServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetTeacherFullNameRequest.fromBuffer(value),
         ($0.GetTeacherFullNameResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetParentStudentSelectionDataRequest,
+            $0.GetParentStudentSelectionDataResponse>(
+        'GetParentStudentSelectionData',
+        getParentStudentSelectionData_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetParentStudentSelectionDataRequest.fromBuffer(value),
+        ($0.GetParentStudentSelectionDataResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateStudentResponse> createStudent_Pre(
@@ -413,4 +438,16 @@ abstract class UserServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetTeacherFullNameResponse> getTeacherFullName(
       $grpc.ServiceCall call, $0.GetTeacherFullNameRequest request);
+
+  $async.Future<$0.GetParentStudentSelectionDataResponse>
+      getParentStudentSelectionData_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetParentStudentSelectionDataRequest>
+              $request) async {
+    return getParentStudentSelectionData($call, await $request);
+  }
+
+  $async.Future<$0.GetParentStudentSelectionDataResponse>
+      getParentStudentSelectionData($grpc.ServiceCall call,
+          $0.GetParentStudentSelectionDataRequest request);
 }

@@ -1448,6 +1448,204 @@ class GetTeacherFullNameResponse extends $pb.GeneratedMessage {
   void clearSecondName() => $_clearField(2);
 }
 
+class GetParentStudentSelectionDataRequest extends $pb.GeneratedMessage {
+  factory GetParentStudentSelectionDataRequest({
+    $core.String? parentId,
+  }) {
+    final result = create();
+    if (parentId != null) result.parentId = parentId;
+    return result;
+  }
+
+  GetParentStudentSelectionDataRequest._();
+
+  factory GetParentStudentSelectionDataRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetParentStudentSelectionDataRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetParentStudentSelectionDataRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parentId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParentStudentSelectionDataRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParentStudentSelectionDataRequest copyWith(
+          void Function(GetParentStudentSelectionDataRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetParentStudentSelectionDataRequest))
+          as GetParentStudentSelectionDataRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetParentStudentSelectionDataRequest create() =>
+      GetParentStudentSelectionDataRequest._();
+  @$core.override
+  GetParentStudentSelectionDataRequest createEmptyInstance() => create();
+  static $pb.PbList<GetParentStudentSelectionDataRequest> createRepeated() =>
+      $pb.PbList<GetParentStudentSelectionDataRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetParentStudentSelectionDataRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetParentStudentSelectionDataRequest>(create);
+  static GetParentStudentSelectionDataRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasParentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParentId() => $_clearField(1);
+}
+
+class StudentSelection extends $pb.GeneratedMessage {
+  factory StudentSelection({
+    $core.String? studentId,
+    $core.String? firstName,
+    $core.String? secondName,
+  }) {
+    final result = create();
+    if (studentId != null) result.studentId = studentId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    return result;
+  }
+
+  StudentSelection._();
+
+  factory StudentSelection.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StudentSelection.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StudentSelection',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'studentId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StudentSelection clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StudentSelection copyWith(void Function(StudentSelection) updates) =>
+      super.copyWith((message) => updates(message as StudentSelection))
+          as StudentSelection;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static StudentSelection create() => StudentSelection._();
+  @$core.override
+  StudentSelection createEmptyInstance() => create();
+  static $pb.PbList<StudentSelection> createRepeated() =>
+      $pb.PbList<StudentSelection>();
+  @$core.pragma('dart2js:noInline')
+  static StudentSelection getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StudentSelection>(create);
+  static StudentSelection? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get studentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set studentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasStudentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStudentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+}
+
+class GetParentStudentSelectionDataResponse extends $pb.GeneratedMessage {
+  factory GetParentStudentSelectionDataResponse({
+    $core.Iterable<StudentSelection>? studentSelections,
+  }) {
+    final result = create();
+    if (studentSelections != null)
+      result.studentSelections.addAll(studentSelections);
+    return result;
+  }
+
+  GetParentStudentSelectionDataResponse._();
+
+  factory GetParentStudentSelectionDataResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetParentStudentSelectionDataResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetParentStudentSelectionDataResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPM<StudentSelection>(1, _omitFieldNames ? '' : 'studentSelections',
+        subBuilder: StudentSelection.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParentStudentSelectionDataResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParentStudentSelectionDataResponse copyWith(
+          void Function(GetParentStudentSelectionDataResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetParentStudentSelectionDataResponse))
+          as GetParentStudentSelectionDataResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetParentStudentSelectionDataResponse create() =>
+      GetParentStudentSelectionDataResponse._();
+  @$core.override
+  GetParentStudentSelectionDataResponse createEmptyInstance() => create();
+  static $pb.PbList<GetParentStudentSelectionDataResponse> createRepeated() =>
+      $pb.PbList<GetParentStudentSelectionDataResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetParentStudentSelectionDataResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetParentStudentSelectionDataResponse>(create);
+  static GetParentStudentSelectionDataResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<StudentSelection> get studentSelections => $_getList(0);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

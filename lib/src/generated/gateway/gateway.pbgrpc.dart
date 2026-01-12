@@ -19,8 +19,9 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../messages/attendance/messages.pb.dart' as $3;
 import '../messages/auth/messages.pb.dart' as $0;
 import '../messages/gateway/messages.pb.dart' as $2;
-import '../messages/leave/messages.pb.dart' as $4;
+import '../messages/leave/messages.pb.dart' as $5;
 import '../messages/school/messages.pb.dart' as $1;
+import '../messages/user/messages.pb.dart' as $4;
 
 export 'gateway.pb.dart';
 
@@ -236,37 +237,46 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getUserTimezone, request, options: options);
   }
 
+  $grpc.ResponseFuture<$4.GetParentStudentSelectionDataResponse>
+      getParentStudentSelectionData(
+    $4.GetParentStudentSelectionDataRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getParentStudentSelectionData, request,
+        options: options);
+  }
+
   /// Leave RPCs
-  $grpc.ResponseFuture<$4.ListUserLeavesResponse> listUserLeaves(
-    $4.ListUserLeavesRequest request, {
+  $grpc.ResponseFuture<$5.ListUserLeavesResponse> listUserLeaves(
+    $5.ListUserLeavesRequest request, {
     $grpc.CallOptions? options,
   }) {
     return $createUnaryCall(_$listUserLeaves, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.CreateLeaveResponse> createLeave(
-    $4.CreateLeaveRequest request, {
+  $grpc.ResponseFuture<$5.CreateLeaveResponse> createLeave(
+    $5.CreateLeaveRequest request, {
     $grpc.CallOptions? options,
   }) {
     return $createUnaryCall(_$createLeave, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.GetLeaveDetailsResponse> getLeaveDetails(
-    $4.GetLeaveDetailsRequest request, {
+  $grpc.ResponseFuture<$5.GetLeaveDetailsResponse> getLeaveDetails(
+    $5.GetLeaveDetailsRequest request, {
     $grpc.CallOptions? options,
   }) {
     return $createUnaryCall(_$getLeaveDetails, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.UpdateLeaveResponse> updateLeave(
-    $4.UpdateLeaveRequest request, {
+  $grpc.ResponseFuture<$5.UpdateLeaveResponse> updateLeave(
+    $5.UpdateLeaveRequest request, {
     $grpc.CallOptions? options,
   }) {
     return $createUnaryCall(_$updateLeave, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.DeleteLeaveResponse> deleteLeave(
-    $4.DeleteLeaveRequest request, {
+  $grpc.ResponseFuture<$5.DeleteLeaveResponse> deleteLeave(
+    $5.DeleteLeaveRequest request, {
     $grpc.CallOptions? options,
   }) {
     return $createUnaryCall(_$deleteLeave, request, options: options);
@@ -405,31 +415,37 @@ class GatewayServiceClient extends $grpc.Client {
           '/gateway.GatewayService/GetUserTimezone',
           ($2.GetUserTimezoneRequest value) => value.writeToBuffer(),
           $2.GetUserTimezoneResponse.fromBuffer);
+  static final _$getParentStudentSelectionData = $grpc.ClientMethod<
+          $4.GetParentStudentSelectionDataRequest,
+          $4.GetParentStudentSelectionDataResponse>(
+      '/gateway.GatewayService/GetParentStudentSelectionData',
+      ($4.GetParentStudentSelectionDataRequest value) => value.writeToBuffer(),
+      $4.GetParentStudentSelectionDataResponse.fromBuffer);
   static final _$listUserLeaves =
-      $grpc.ClientMethod<$4.ListUserLeavesRequest, $4.ListUserLeavesResponse>(
+      $grpc.ClientMethod<$5.ListUserLeavesRequest, $5.ListUserLeavesResponse>(
           '/gateway.GatewayService/ListUserLeaves',
-          ($4.ListUserLeavesRequest value) => value.writeToBuffer(),
-          $4.ListUserLeavesResponse.fromBuffer);
+          ($5.ListUserLeavesRequest value) => value.writeToBuffer(),
+          $5.ListUserLeavesResponse.fromBuffer);
   static final _$createLeave =
-      $grpc.ClientMethod<$4.CreateLeaveRequest, $4.CreateLeaveResponse>(
+      $grpc.ClientMethod<$5.CreateLeaveRequest, $5.CreateLeaveResponse>(
           '/gateway.GatewayService/CreateLeave',
-          ($4.CreateLeaveRequest value) => value.writeToBuffer(),
-          $4.CreateLeaveResponse.fromBuffer);
+          ($5.CreateLeaveRequest value) => value.writeToBuffer(),
+          $5.CreateLeaveResponse.fromBuffer);
   static final _$getLeaveDetails =
-      $grpc.ClientMethod<$4.GetLeaveDetailsRequest, $4.GetLeaveDetailsResponse>(
+      $grpc.ClientMethod<$5.GetLeaveDetailsRequest, $5.GetLeaveDetailsResponse>(
           '/gateway.GatewayService/GetLeaveDetails',
-          ($4.GetLeaveDetailsRequest value) => value.writeToBuffer(),
-          $4.GetLeaveDetailsResponse.fromBuffer);
+          ($5.GetLeaveDetailsRequest value) => value.writeToBuffer(),
+          $5.GetLeaveDetailsResponse.fromBuffer);
   static final _$updateLeave =
-      $grpc.ClientMethod<$4.UpdateLeaveRequest, $4.UpdateLeaveResponse>(
+      $grpc.ClientMethod<$5.UpdateLeaveRequest, $5.UpdateLeaveResponse>(
           '/gateway.GatewayService/UpdateLeave',
-          ($4.UpdateLeaveRequest value) => value.writeToBuffer(),
-          $4.UpdateLeaveResponse.fromBuffer);
+          ($5.UpdateLeaveRequest value) => value.writeToBuffer(),
+          $5.UpdateLeaveResponse.fromBuffer);
   static final _$deleteLeave =
-      $grpc.ClientMethod<$4.DeleteLeaveRequest, $4.DeleteLeaveResponse>(
+      $grpc.ClientMethod<$5.DeleteLeaveRequest, $5.DeleteLeaveResponse>(
           '/gateway.GatewayService/DeleteLeave',
-          ($4.DeleteLeaveRequest value) => value.writeToBuffer(),
-          $4.DeleteLeaveResponse.fromBuffer);
+          ($5.DeleteLeaveRequest value) => value.writeToBuffer(),
+          $5.DeleteLeaveResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -662,51 +678,61 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.GetUserTimezoneRequest.fromBuffer(value),
         ($2.GetUserTimezoneResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.ListUserLeavesRequest,
-            $4.ListUserLeavesResponse>(
+    $addMethod($grpc.ServiceMethod<$4.GetParentStudentSelectionDataRequest,
+            $4.GetParentStudentSelectionDataResponse>(
+        'GetParentStudentSelectionData',
+        getParentStudentSelectionData_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.GetParentStudentSelectionDataRequest.fromBuffer(value),
+        ($4.GetParentStudentSelectionDataResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.ListUserLeavesRequest,
+            $5.ListUserLeavesResponse>(
         'ListUserLeaves',
         listUserLeaves_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $4.ListUserLeavesRequest.fromBuffer(value),
-        ($4.ListUserLeavesResponse value) => value.writeToBuffer()));
+            $5.ListUserLeavesRequest.fromBuffer(value),
+        ($5.ListUserLeavesResponse value) => value.writeToBuffer()));
     $addMethod(
-        $grpc.ServiceMethod<$4.CreateLeaveRequest, $4.CreateLeaveResponse>(
+        $grpc.ServiceMethod<$5.CreateLeaveRequest, $5.CreateLeaveResponse>(
             'CreateLeave',
             createLeave_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
-                $4.CreateLeaveRequest.fromBuffer(value),
-            ($4.CreateLeaveResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.GetLeaveDetailsRequest,
-            $4.GetLeaveDetailsResponse>(
+                $5.CreateLeaveRequest.fromBuffer(value),
+            ($5.CreateLeaveResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.GetLeaveDetailsRequest,
+            $5.GetLeaveDetailsResponse>(
         'GetLeaveDetails',
         getLeaveDetails_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $4.GetLeaveDetailsRequest.fromBuffer(value),
-        ($4.GetLeaveDetailsResponse value) => value.writeToBuffer()));
+            $5.GetLeaveDetailsRequest.fromBuffer(value),
+        ($5.GetLeaveDetailsResponse value) => value.writeToBuffer()));
     $addMethod(
-        $grpc.ServiceMethod<$4.UpdateLeaveRequest, $4.UpdateLeaveResponse>(
+        $grpc.ServiceMethod<$5.UpdateLeaveRequest, $5.UpdateLeaveResponse>(
             'UpdateLeave',
             updateLeave_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
-                $4.UpdateLeaveRequest.fromBuffer(value),
-            ($4.UpdateLeaveResponse value) => value.writeToBuffer()));
+                $5.UpdateLeaveRequest.fromBuffer(value),
+            ($5.UpdateLeaveResponse value) => value.writeToBuffer()));
     $addMethod(
-        $grpc.ServiceMethod<$4.DeleteLeaveRequest, $4.DeleteLeaveResponse>(
+        $grpc.ServiceMethod<$5.DeleteLeaveRequest, $5.DeleteLeaveResponse>(
             'DeleteLeave',
             deleteLeave_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
-                $4.DeleteLeaveRequest.fromBuffer(value),
-            ($4.DeleteLeaveResponse value) => value.writeToBuffer()));
+                $5.DeleteLeaveRequest.fromBuffer(value),
+            ($5.DeleteLeaveResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -914,45 +940,57 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$2.GetUserTimezoneResponse> getUserTimezone(
       $grpc.ServiceCall call, $2.GetUserTimezoneRequest request);
 
-  $async.Future<$4.ListUserLeavesResponse> listUserLeaves_Pre(
+  $async.Future<$4.GetParentStudentSelectionDataResponse>
+      getParentStudentSelectionData_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$4.GetParentStudentSelectionDataRequest>
+              $request) async {
+    return getParentStudentSelectionData($call, await $request);
+  }
+
+  $async.Future<$4.GetParentStudentSelectionDataResponse>
+      getParentStudentSelectionData($grpc.ServiceCall call,
+          $4.GetParentStudentSelectionDataRequest request);
+
+  $async.Future<$5.ListUserLeavesResponse> listUserLeaves_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$4.ListUserLeavesRequest> $request) async {
+      $async.Future<$5.ListUserLeavesRequest> $request) async {
     return listUserLeaves($call, await $request);
   }
 
-  $async.Future<$4.ListUserLeavesResponse> listUserLeaves(
-      $grpc.ServiceCall call, $4.ListUserLeavesRequest request);
+  $async.Future<$5.ListUserLeavesResponse> listUserLeaves(
+      $grpc.ServiceCall call, $5.ListUserLeavesRequest request);
 
-  $async.Future<$4.CreateLeaveResponse> createLeave_Pre($grpc.ServiceCall $call,
-      $async.Future<$4.CreateLeaveRequest> $request) async {
+  $async.Future<$5.CreateLeaveResponse> createLeave_Pre($grpc.ServiceCall $call,
+      $async.Future<$5.CreateLeaveRequest> $request) async {
     return createLeave($call, await $request);
   }
 
-  $async.Future<$4.CreateLeaveResponse> createLeave(
-      $grpc.ServiceCall call, $4.CreateLeaveRequest request);
+  $async.Future<$5.CreateLeaveResponse> createLeave(
+      $grpc.ServiceCall call, $5.CreateLeaveRequest request);
 
-  $async.Future<$4.GetLeaveDetailsResponse> getLeaveDetails_Pre(
+  $async.Future<$5.GetLeaveDetailsResponse> getLeaveDetails_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$4.GetLeaveDetailsRequest> $request) async {
+      $async.Future<$5.GetLeaveDetailsRequest> $request) async {
     return getLeaveDetails($call, await $request);
   }
 
-  $async.Future<$4.GetLeaveDetailsResponse> getLeaveDetails(
-      $grpc.ServiceCall call, $4.GetLeaveDetailsRequest request);
+  $async.Future<$5.GetLeaveDetailsResponse> getLeaveDetails(
+      $grpc.ServiceCall call, $5.GetLeaveDetailsRequest request);
 
-  $async.Future<$4.UpdateLeaveResponse> updateLeave_Pre($grpc.ServiceCall $call,
-      $async.Future<$4.UpdateLeaveRequest> $request) async {
+  $async.Future<$5.UpdateLeaveResponse> updateLeave_Pre($grpc.ServiceCall $call,
+      $async.Future<$5.UpdateLeaveRequest> $request) async {
     return updateLeave($call, await $request);
   }
 
-  $async.Future<$4.UpdateLeaveResponse> updateLeave(
-      $grpc.ServiceCall call, $4.UpdateLeaveRequest request);
+  $async.Future<$5.UpdateLeaveResponse> updateLeave(
+      $grpc.ServiceCall call, $5.UpdateLeaveRequest request);
 
-  $async.Future<$4.DeleteLeaveResponse> deleteLeave_Pre($grpc.ServiceCall $call,
-      $async.Future<$4.DeleteLeaveRequest> $request) async {
+  $async.Future<$5.DeleteLeaveResponse> deleteLeave_Pre($grpc.ServiceCall $call,
+      $async.Future<$5.DeleteLeaveRequest> $request) async {
     return deleteLeave($call, await $request);
   }
 
-  $async.Future<$4.DeleteLeaveResponse> deleteLeave(
-      $grpc.ServiceCall call, $4.DeleteLeaveRequest request);
+  $async.Future<$5.DeleteLeaveResponse> deleteLeave(
+      $grpc.ServiceCall call, $5.DeleteLeaveRequest request);
 }
