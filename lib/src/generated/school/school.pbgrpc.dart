@@ -194,6 +194,13 @@ class SchoolServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.ListAllSchoolChainsResponse> listAllSchoolChains(
+    $0.ListAllSchoolChainsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listAllSchoolChains, request, options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -308,6 +315,11 @@ class SchoolServiceClient extends $grpc.Client {
       '/school.SchoolService/GetSchoolChainTimezone',
       ($0.GetSchoolChainTimezoneRequest value) => value.writeToBuffer(),
       $0.GetSchoolChainTimezoneResponse.fromBuffer);
+  static final _$listAllSchoolChains = $grpc.ClientMethod<
+          $0.ListAllSchoolChainsRequest, $0.ListAllSchoolChainsResponse>(
+      '/school.SchoolService/ListAllSchoolChains',
+      ($0.ListAllSchoolChainsRequest value) => value.writeToBuffer(),
+      $0.ListAllSchoolChainsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -514,6 +526,15 @@ abstract class SchoolServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetSchoolChainTimezoneRequest.fromBuffer(value),
         ($0.GetSchoolChainTimezoneResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListAllSchoolChainsRequest,
+            $0.ListAllSchoolChainsResponse>(
+        'ListAllSchoolChains',
+        listAllSchoolChains_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListAllSchoolChainsRequest.fromBuffer(value),
+        ($0.ListAllSchoolChainsResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -712,4 +733,13 @@ abstract class SchoolServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetSchoolChainTimezoneResponse> getSchoolChainTimezone(
       $grpc.ServiceCall call, $0.GetSchoolChainTimezoneRequest request);
+
+  $async.Future<$0.ListAllSchoolChainsResponse> listAllSchoolChains_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.ListAllSchoolChainsRequest> $request) async {
+    return listAllSchoolChains($call, await $request);
+  }
+
+  $async.Future<$0.ListAllSchoolChainsResponse> listAllSchoolChains(
+      $grpc.ServiceCall call, $0.ListAllSchoolChainsRequest request);
 }

@@ -748,3 +748,109 @@ final $typed_data.Uint8List getSchoolChainTimezoneResponseDescriptor =
     $convert.base64Decode(
         'Ch5HZXRTY2hvb2xDaGFpblRpbWV6b25lUmVzcG9uc2USGgoIdGltZXpvbmUYASABKAlSCHRpbW'
         'V6b25l');
+
+@$core.Deprecated('Use listAllSchoolChainsRequestDescriptor instead')
+const ListAllSchoolChainsRequest$json = {
+  '1': 'ListAllSchoolChainsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {
+      '1': 'school_chain_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'schoolChainName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_school_chain_name'},
+  ],
+};
+
+/// Descriptor for `ListAllSchoolChainsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAllSchoolChainsRequestDescriptor = $convert.base64Decode(
+    'ChpMaXN0QWxsU2Nob29sQ2hhaW5zUmVxdWVzdBJCCgpwYWdpbmF0aW9uGAEgASgLMiIuY29tbW'
+    '9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9uEi8KEXNjaG9vbF9jaGFp'
+    'bl9uYW1lGAIgASgJSABSD3NjaG9vbENoYWluTmFtZYgBAUIUChJfc2Nob29sX2NoYWluX25hbW'
+    'U=');
+
+@$core.Deprecated('Use listAllSchoolChainsResponseDescriptor instead')
+const ListAllSchoolChainsResponse$json = {
+  '1': 'ListAllSchoolChainsResponse',
+  '2': [
+    {
+      '1': 'school_chains',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.SchoolChains',
+      '10': 'schoolChains'
+    },
+    {
+      '1': 'pagination',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+  ],
+};
+
+/// Descriptor for `ListAllSchoolChainsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAllSchoolChainsResponseDescriptor = $convert.base64Decode(
+    'ChtMaXN0QWxsU2Nob29sQ2hhaW5zUmVzcG9uc2USQgoNc2Nob29sX2NoYWlucxgBIAMoCzIdLn'
+    'NjaG9vbF9tZXNzYWdlcy5TY2hvb2xDaGFpbnNSDHNjaG9vbENoYWlucxJDCgpwYWdpbmF0aW9u'
+    'GAIgASgLMiMuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbg'
+    '==');
+
+@$core.Deprecated('Use schoolChainsDescriptor instead')
+const SchoolChains$json = {
+  '1': 'SchoolChains',
+  '2': [
+    {'1': 'school_chain_id', '3': 1, '4': 1, '5': 9, '10': 'schoolChainId'},
+    {'1': 'school_chain_name', '3': 2, '4': 1, '5': 9, '10': 'schoolChainName'},
+    {
+      '1': 'created_at',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createdAt'
+    },
+    {
+      '1': 'modified_at',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'modifiedAt'
+    },
+    {'1': 'timezone', '3': 5, '4': 1, '5': 9, '10': 'timezone'},
+    {
+      '1': 'school_chain_school_count',
+      '3': 6,
+      '4': 1,
+      '5': 5,
+      '10': 'schoolChainSchoolCount'
+    },
+  ],
+};
+
+/// Descriptor for `SchoolChains`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schoolChainsDescriptor = $convert.base64Decode(
+    'CgxTY2hvb2xDaGFpbnMSJgoPc2Nob29sX2NoYWluX2lkGAEgASgJUg1zY2hvb2xDaGFpbklkEi'
+    'oKEXNjaG9vbF9jaGFpbl9uYW1lGAIgASgJUg9zY2hvb2xDaGFpbk5hbWUSOQoKY3JlYXRlZF9h'
+    'dBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCWNyZWF0ZWRBdBI7Cgttb2RpZm'
+    'llZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCm1vZGlmaWVkQXQSGgoI'
+    'dGltZXpvbmUYBSABKAlSCHRpbWV6b25lEjkKGXNjaG9vbF9jaGFpbl9zY2hvb2xfY291bnQYBi'
+    'ABKAVSFnNjaG9vbENoYWluU2Nob29sQ291bnQ=');
