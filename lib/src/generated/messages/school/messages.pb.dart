@@ -1322,9 +1322,15 @@ class RemoveStudentFromSchoolResponse extends $pb.GeneratedMessage {
 class ListAllSchoolsRequest extends $pb.GeneratedMessage {
   factory ListAllSchoolsRequest({
     $1.PaginationRequest? pagination,
+    $core.String? schoolName,
+    $core.String? city,
+    $core.String? address,
   }) {
     final result = create();
     if (pagination != null) result.pagination = pagination;
+    if (schoolName != null) result.schoolName = schoolName;
+    if (city != null) result.city = city;
+    if (address != null) result.address = address;
     return result;
   }
 
@@ -1344,6 +1350,9 @@ class ListAllSchoolsRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<$1.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
         subBuilder: $1.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'schoolName')
+    ..aOS(3, _omitFieldNames ? '' : 'city')
+    ..aOS(4, _omitFieldNames ? '' : 'address')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1378,6 +1387,33 @@ class ListAllSchoolsRequest extends $pb.GeneratedMessage {
   void clearPagination() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get schoolName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set schoolName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSchoolName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSchoolName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get city => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set city($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasCity() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCity() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get address => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set address($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasAddress() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAddress() => $_clearField(4);
 }
 
 class ListAllSchoolsResponse extends $pb.GeneratedMessage {
@@ -1454,6 +1490,10 @@ class School extends $pb.GeneratedMessage {
     $core.String? schoolName,
     $0.Timestamp? createdAt,
     $0.Timestamp? modifiedAt,
+    $core.int? schoolStudentCount,
+    $core.int? schoolTeacherCount,
+    $core.int? schoolEmployeeCount,
+    $core.int? schoolAdminCount,
     $core.String? city,
     $core.String? address,
     $core.String? timeZone,
@@ -1463,6 +1503,13 @@ class School extends $pb.GeneratedMessage {
     if (schoolName != null) result.schoolName = schoolName;
     if (createdAt != null) result.createdAt = createdAt;
     if (modifiedAt != null) result.modifiedAt = modifiedAt;
+    if (schoolStudentCount != null)
+      result.schoolStudentCount = schoolStudentCount;
+    if (schoolTeacherCount != null)
+      result.schoolTeacherCount = schoolTeacherCount;
+    if (schoolEmployeeCount != null)
+      result.schoolEmployeeCount = schoolEmployeeCount;
+    if (schoolAdminCount != null) result.schoolAdminCount = schoolAdminCount;
     if (city != null) result.city = city;
     if (address != null) result.address = address;
     if (timeZone != null) result.timeZone = timeZone;
@@ -1489,9 +1536,13 @@ class School extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..aOM<$0.Timestamp>(4, _omitFieldNames ? '' : 'modifiedAt',
         subBuilder: $0.Timestamp.create)
-    ..aOS(5, _omitFieldNames ? '' : 'city')
-    ..aOS(6, _omitFieldNames ? '' : 'address')
-    ..aOS(7, _omitFieldNames ? '' : 'timeZone')
+    ..aI(5, _omitFieldNames ? '' : 'schoolStudentCount')
+    ..aI(6, _omitFieldNames ? '' : 'schoolTeacherCount')
+    ..aI(7, _omitFieldNames ? '' : 'schoolEmployeeCount')
+    ..aI(8, _omitFieldNames ? '' : 'schoolAdminCount')
+    ..aOS(9, _omitFieldNames ? '' : 'city')
+    ..aOS(10, _omitFieldNames ? '' : 'address')
+    ..aOS(11, _omitFieldNames ? '' : 'timeZone')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1554,31 +1605,67 @@ class School extends $pb.GeneratedMessage {
   $0.Timestamp ensureModifiedAt() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $core.String get city => $_getSZ(4);
+  $core.int get schoolStudentCount => $_getIZ(4);
   @$pb.TagNumber(5)
-  set city($core.String value) => $_setString(4, value);
+  set schoolStudentCount($core.int value) => $_setSignedInt32(4, value);
   @$pb.TagNumber(5)
-  $core.bool hasCity() => $_has(4);
+  $core.bool hasSchoolStudentCount() => $_has(4);
   @$pb.TagNumber(5)
-  void clearCity() => $_clearField(5);
+  void clearSchoolStudentCount() => $_clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get address => $_getSZ(5);
+  $core.int get schoolTeacherCount => $_getIZ(5);
   @$pb.TagNumber(6)
-  set address($core.String value) => $_setString(5, value);
+  set schoolTeacherCount($core.int value) => $_setSignedInt32(5, value);
   @$pb.TagNumber(6)
-  $core.bool hasAddress() => $_has(5);
+  $core.bool hasSchoolTeacherCount() => $_has(5);
   @$pb.TagNumber(6)
-  void clearAddress() => $_clearField(6);
+  void clearSchoolTeacherCount() => $_clearField(6);
 
   @$pb.TagNumber(7)
-  $core.String get timeZone => $_getSZ(6);
+  $core.int get schoolEmployeeCount => $_getIZ(6);
   @$pb.TagNumber(7)
-  set timeZone($core.String value) => $_setString(6, value);
+  set schoolEmployeeCount($core.int value) => $_setSignedInt32(6, value);
   @$pb.TagNumber(7)
-  $core.bool hasTimeZone() => $_has(6);
+  $core.bool hasSchoolEmployeeCount() => $_has(6);
   @$pb.TagNumber(7)
-  void clearTimeZone() => $_clearField(7);
+  void clearSchoolEmployeeCount() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.int get schoolAdminCount => $_getIZ(7);
+  @$pb.TagNumber(8)
+  set schoolAdminCount($core.int value) => $_setSignedInt32(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasSchoolAdminCount() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearSchoolAdminCount() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get city => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set city($core.String value) => $_setString(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasCity() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearCity() => $_clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get address => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set address($core.String value) => $_setString(9, value);
+  @$pb.TagNumber(10)
+  $core.bool hasAddress() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearAddress() => $_clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.String get timeZone => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set timeZone($core.String value) => $_setString(10, value);
+  @$pb.TagNumber(11)
+  $core.bool hasTimeZone() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearTimeZone() => $_clearField(11);
 }
 
 class GetSchoolNameRequest extends $pb.GeneratedMessage {

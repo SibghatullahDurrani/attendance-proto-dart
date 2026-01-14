@@ -334,13 +334,39 @@ const ListAllSchoolsRequest$json = {
       '6': '.common_messages.PaginationRequest',
       '10': 'pagination'
     },
+    {
+      '1': 'school_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'schoolName',
+      '17': true
+    },
+    {'1': 'city', '3': 3, '4': 1, '5': 9, '9': 1, '10': 'city', '17': true},
+    {
+      '1': 'address',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'address',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_school_name'},
+    {'1': '_city'},
+    {'1': '_address'},
   ],
 };
 
 /// Descriptor for `ListAllSchoolsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listAllSchoolsRequestDescriptor = $convert.base64Decode(
     'ChVMaXN0QWxsU2Nob29sc1JlcXVlc3QSQgoKcGFnaW5hdGlvbhgBIAEoCzIiLmNvbW1vbl9tZX'
-    'NzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbg==');
+    'NzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhIkCgtzY2hvb2xfbmFtZRgCIAEo'
+    'CUgAUgpzY2hvb2xOYW1liAEBEhcKBGNpdHkYAyABKAlIAVIEY2l0eYgBARIdCgdhZGRyZXNzGA'
+    'QgASgJSAJSB2FkZHJlc3OIAQFCDgoMX3NjaG9vbF9uYW1lQgcKBV9jaXR5QgoKCF9hZGRyZXNz');
 
 @$core.Deprecated('Use listAllSchoolsResponseDescriptor instead')
 const ListAllSchoolsResponse$json = {
@@ -393,9 +419,37 @@ const School$json = {
       '6': '.google.protobuf.Timestamp',
       '10': 'modifiedAt'
     },
-    {'1': 'city', '3': 5, '4': 1, '5': 9, '10': 'city'},
-    {'1': 'address', '3': 6, '4': 1, '5': 9, '10': 'address'},
-    {'1': 'time_zone', '3': 7, '4': 1, '5': 9, '10': 'timeZone'},
+    {
+      '1': 'school_student_count',
+      '3': 5,
+      '4': 1,
+      '5': 5,
+      '10': 'schoolStudentCount'
+    },
+    {
+      '1': 'school_teacher_count',
+      '3': 6,
+      '4': 1,
+      '5': 5,
+      '10': 'schoolTeacherCount'
+    },
+    {
+      '1': 'school_employee_count',
+      '3': 7,
+      '4': 1,
+      '5': 5,
+      '10': 'schoolEmployeeCount'
+    },
+    {
+      '1': 'school_admin_count',
+      '3': 8,
+      '4': 1,
+      '5': 5,
+      '10': 'schoolAdminCount'
+    },
+    {'1': 'city', '3': 9, '4': 1, '5': 9, '10': 'city'},
+    {'1': 'address', '3': 10, '4': 1, '5': 9, '10': 'address'},
+    {'1': 'time_zone', '3': 11, '4': 1, '5': 9, '10': 'timeZone'},
   ],
 };
 
@@ -404,8 +458,12 @@ final $typed_data.Uint8List schoolDescriptor = $convert.base64Decode(
     'CgZTY2hvb2wSGwoJc2Nob29sX2lkGAEgASgJUghzY2hvb2xJZBIfCgtzY2hvb2xfbmFtZRgCIA'
     'EoCVIKc2Nob29sTmFtZRI5CgpjcmVhdGVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp'
     'bWVzdGFtcFIJY3JlYXRlZEF0EjsKC21vZGlmaWVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYn'
-    'VmLlRpbWVzdGFtcFIKbW9kaWZpZWRBdBISCgRjaXR5GAUgASgJUgRjaXR5EhgKB2FkZHJlc3MY'
-    'BiABKAlSB2FkZHJlc3MSGwoJdGltZV96b25lGAcgASgJUgh0aW1lWm9uZQ==');
+    'VmLlRpbWVzdGFtcFIKbW9kaWZpZWRBdBIwChRzY2hvb2xfc3R1ZGVudF9jb3VudBgFIAEoBVIS'
+    'c2Nob29sU3R1ZGVudENvdW50EjAKFHNjaG9vbF90ZWFjaGVyX2NvdW50GAYgASgFUhJzY2hvb2'
+    'xUZWFjaGVyQ291bnQSMgoVc2Nob29sX2VtcGxveWVlX2NvdW50GAcgASgFUhNzY2hvb2xFbXBs'
+    'b3llZUNvdW50EiwKEnNjaG9vbF9hZG1pbl9jb3VudBgIIAEoBVIQc2Nob29sQWRtaW5Db3VudB'
+    'ISCgRjaXR5GAkgASgJUgRjaXR5EhgKB2FkZHJlc3MYCiABKAlSB2FkZHJlc3MSGwoJdGltZV96'
+    'b25lGAsgASgJUgh0aW1lWm9uZQ==');
 
 @$core.Deprecated('Use getSchoolNameRequestDescriptor instead')
 const GetSchoolNameRequest$json = {
