@@ -201,6 +201,15 @@ class SchoolServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listAllSchoolChains, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetSchoolChainSelectionMenuItemsResponse>
+      getSchoolChainSelectionMenuItems(
+    $0.GetSchoolChainSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getSchoolChainSelectionMenuItems, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -320,6 +329,13 @@ class SchoolServiceClient extends $grpc.Client {
       '/school.SchoolService/ListAllSchoolChains',
       ($0.ListAllSchoolChainsRequest value) => value.writeToBuffer(),
       $0.ListAllSchoolChainsResponse.fromBuffer);
+  static final _$getSchoolChainSelectionMenuItems = $grpc.ClientMethod<
+          $0.GetSchoolChainSelectionMenuItemsRequest,
+          $0.GetSchoolChainSelectionMenuItemsResponse>(
+      '/school.SchoolService/GetSchoolChainSelectionMenuItems',
+      ($0.GetSchoolChainSelectionMenuItemsRequest value) =>
+          value.writeToBuffer(),
+      $0.GetSchoolChainSelectionMenuItemsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -535,6 +551,16 @@ abstract class SchoolServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ListAllSchoolChainsRequest.fromBuffer(value),
         ($0.ListAllSchoolChainsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetSchoolChainSelectionMenuItemsRequest,
+            $0.GetSchoolChainSelectionMenuItemsResponse>(
+        'GetSchoolChainSelectionMenuItems',
+        getSchoolChainSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetSchoolChainSelectionMenuItemsRequest.fromBuffer(value),
+        ($0.GetSchoolChainSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -742,4 +768,16 @@ abstract class SchoolServiceBase extends $grpc.Service {
 
   $async.Future<$0.ListAllSchoolChainsResponse> listAllSchoolChains(
       $grpc.ServiceCall call, $0.ListAllSchoolChainsRequest request);
+
+  $async.Future<$0.GetSchoolChainSelectionMenuItemsResponse>
+      getSchoolChainSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetSchoolChainSelectionMenuItemsRequest>
+              $request) async {
+    return getSchoolChainSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$0.GetSchoolChainSelectionMenuItemsResponse>
+      getSchoolChainSelectionMenuItems($grpc.ServiceCall call,
+          $0.GetSchoolChainSelectionMenuItemsRequest request);
 }

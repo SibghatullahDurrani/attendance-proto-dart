@@ -854,3 +854,65 @@ final $typed_data.Uint8List schoolChainsDescriptor = $convert.base64Decode(
     'llZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCm1vZGlmaWVkQXQSGgoI'
     'dGltZXpvbmUYBSABKAlSCHRpbWV6b25lEjkKGXNjaG9vbF9jaGFpbl9zY2hvb2xfY291bnQYBi'
     'ABKAVSFnNjaG9vbENoYWluU2Nob29sQ291bnQ=');
+
+@$core
+    .Deprecated('Use getSchoolChainSelectionMenuItemsRequestDescriptor instead')
+const GetSchoolChainSelectionMenuItemsRequest$json = {
+  '1': 'GetSchoolChainSelectionMenuItemsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {
+      '1': 'school_chain_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'schoolChainName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_school_chain_name'},
+  ],
+};
+
+/// Descriptor for `GetSchoolChainSelectionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolChainSelectionMenuItemsRequestDescriptor =
+    $convert.base64Decode(
+        'CidHZXRTY2hvb2xDaGFpblNlbGVjdGlvbk1lbnVJdGVtc1JlcXVlc3QSQgoKcGFnaW5hdGlvbh'
+        'gBIAEoCzIiLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhIv'
+        'ChFzY2hvb2xfY2hhaW5fbmFtZRgCIAEoCUgAUg9zY2hvb2xDaGFpbk5hbWWIAQFCFAoSX3NjaG'
+        '9vbF9jaGFpbl9uYW1l');
+
+@$core.Deprecated(
+    'Use getSchoolChainSelectionMenuItemsResponseDescriptor instead')
+const GetSchoolChainSelectionMenuItemsResponse$json = {
+  '1': 'GetSchoolChainSelectionMenuItemsResponse',
+  '2': [
+    {'1': 'school_chain_id', '3': 1, '4': 1, '5': 9, '10': 'schoolChainId'},
+    {'1': 'school_chain_name', '3': 2, '4': 1, '5': 9, '10': 'schoolChainName'},
+    {
+      '1': 'pagination',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+  ],
+};
+
+/// Descriptor for `GetSchoolChainSelectionMenuItemsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolChainSelectionMenuItemsResponseDescriptor =
+    $convert.base64Decode(
+        'CihHZXRTY2hvb2xDaGFpblNlbGVjdGlvbk1lbnVJdGVtc1Jlc3BvbnNlEiYKD3NjaG9vbF9jaG'
+        'Fpbl9pZBgBIAEoCVINc2Nob29sQ2hhaW5JZBIqChFzY2hvb2xfY2hhaW5fbmFtZRgCIAEoCVIP'
+        'c2Nob29sQ2hhaW5OYW1lEkMKCnBhZ2luYXRpb24YAyABKAsyIy5jb21tb25fbWVzc2FnZXMuUG'
+        'FnaW5hdGlvblJlc3BvbnNlUgpwYWdpbmF0aW9u');

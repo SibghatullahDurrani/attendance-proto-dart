@@ -116,6 +116,15 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listAllSchoolChains, request, options: options);
   }
 
+  $grpc.ResponseFuture<$1.GetSchoolChainSelectionMenuItemsResponse>
+      getSchoolChainSelectionMenuItems(
+    $1.GetSchoolChainSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getSchoolChainSelectionMenuItems, request,
+        options: options);
+  }
+
   /// Saga RPCS
   $grpc.ResponseFuture<$2.RegisterTeacherResponse> registerTeacher(
     $async.Stream<$2.RegisterTeacherRequest> request, {
@@ -345,6 +354,13 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/ListAllSchoolChains',
       ($1.ListAllSchoolChainsRequest value) => value.writeToBuffer(),
       $1.ListAllSchoolChainsResponse.fromBuffer);
+  static final _$getSchoolChainSelectionMenuItems = $grpc.ClientMethod<
+          $1.GetSchoolChainSelectionMenuItemsRequest,
+          $1.GetSchoolChainSelectionMenuItemsResponse>(
+      '/gateway.GatewayService/GetSchoolChainSelectionMenuItems',
+      ($1.GetSchoolChainSelectionMenuItemsRequest value) =>
+          value.writeToBuffer(),
+      $1.GetSchoolChainSelectionMenuItemsResponse.fromBuffer);
   static final _$registerTeacher =
       $grpc.ClientMethod<$2.RegisterTeacherRequest, $2.RegisterTeacherResponse>(
           '/gateway.GatewayService/RegisterTeacher',
@@ -561,6 +577,16 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $1.ListAllSchoolChainsRequest.fromBuffer(value),
         ($1.ListAllSchoolChainsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetSchoolChainSelectionMenuItemsRequest,
+            $1.GetSchoolChainSelectionMenuItemsResponse>(
+        'GetSchoolChainSelectionMenuItems',
+        getSchoolChainSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $1.GetSchoolChainSelectionMenuItemsRequest.fromBuffer(value),
+        ($1.GetSchoolChainSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.RegisterTeacherRequest,
             $2.RegisterTeacherResponse>(
         'RegisterTeacher',
@@ -850,6 +876,18 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$1.ListAllSchoolChainsResponse> listAllSchoolChains(
       $grpc.ServiceCall call, $1.ListAllSchoolChainsRequest request);
+
+  $async.Future<$1.GetSchoolChainSelectionMenuItemsResponse>
+      getSchoolChainSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$1.GetSchoolChainSelectionMenuItemsRequest>
+              $request) async {
+    return getSchoolChainSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$1.GetSchoolChainSelectionMenuItemsResponse>
+      getSchoolChainSelectionMenuItems($grpc.ServiceCall call,
+          $1.GetSchoolChainSelectionMenuItemsRequest request);
 
   $async.Future<$2.RegisterTeacherResponse> registerTeacher(
       $grpc.ServiceCall call, $async.Stream<$2.RegisterTeacherRequest> request);
