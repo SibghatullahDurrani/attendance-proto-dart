@@ -896,8 +896,14 @@ final $typed_data.Uint8List getSchoolChainSelectionMenuItemsRequestDescriptor =
 const GetSchoolChainSelectionMenuItemsResponse$json = {
   '1': 'GetSchoolChainSelectionMenuItemsResponse',
   '2': [
-    {'1': 'school_chain_id', '3': 1, '4': 1, '5': 9, '10': 'schoolChainId'},
-    {'1': 'school_chain_name', '3': 2, '4': 1, '5': 9, '10': 'schoolChainName'},
+    {
+      '1': 'school_chain_menu_item',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.SchoolChainMenuItem',
+      '10': 'schoolChainMenuItem'
+    },
     {
       '1': 'pagination',
       '3': 3,
@@ -912,7 +918,21 @@ const GetSchoolChainSelectionMenuItemsResponse$json = {
 /// Descriptor for `GetSchoolChainSelectionMenuItemsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getSchoolChainSelectionMenuItemsResponseDescriptor =
     $convert.base64Decode(
-        'CihHZXRTY2hvb2xDaGFpblNlbGVjdGlvbk1lbnVJdGVtc1Jlc3BvbnNlEiYKD3NjaG9vbF9jaG'
-        'Fpbl9pZBgBIAEoCVINc2Nob29sQ2hhaW5JZBIqChFzY2hvb2xfY2hhaW5fbmFtZRgCIAEoCVIP'
-        'c2Nob29sQ2hhaW5OYW1lEkMKCnBhZ2luYXRpb24YAyABKAsyIy5jb21tb25fbWVzc2FnZXMuUG'
-        'FnaW5hdGlvblJlc3BvbnNlUgpwYWdpbmF0aW9u');
+        'CihHZXRTY2hvb2xDaGFpblNlbGVjdGlvbk1lbnVJdGVtc1Jlc3BvbnNlElkKFnNjaG9vbF9jaG'
+        'Fpbl9tZW51X2l0ZW0YASADKAsyJC5zY2hvb2xfbWVzc2FnZXMuU2Nob29sQ2hhaW5NZW51SXRl'
+        'bVITc2Nob29sQ2hhaW5NZW51SXRlbRJDCgpwYWdpbmF0aW9uGAMgASgLMiMuY29tbW9uX21lc3'
+        'NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbg==');
+
+@$core.Deprecated('Use schoolChainMenuItemDescriptor instead')
+const SchoolChainMenuItem$json = {
+  '1': 'SchoolChainMenuItem',
+  '2': [
+    {'1': 'school_chain_id', '3': 1, '4': 1, '5': 9, '10': 'schoolChainId'},
+    {'1': 'school_chain_name', '3': 2, '4': 1, '5': 9, '10': 'schoolChainName'},
+  ],
+};
+
+/// Descriptor for `SchoolChainMenuItem`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schoolChainMenuItemDescriptor = $convert.base64Decode(
+    'ChNTY2hvb2xDaGFpbk1lbnVJdGVtEiYKD3NjaG9vbF9jaGFpbl9pZBgBIAEoCVINc2Nob29sQ2'
+    'hhaW5JZBIqChFzY2hvb2xfY2hhaW5fbmFtZRgCIAEoCVIPc2Nob29sQ2hhaW5OYW1l');

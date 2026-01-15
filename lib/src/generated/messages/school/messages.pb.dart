@@ -3224,13 +3224,12 @@ class GetSchoolChainSelectionMenuItemsRequest extends $pb.GeneratedMessage {
 
 class GetSchoolChainSelectionMenuItemsResponse extends $pb.GeneratedMessage {
   factory GetSchoolChainSelectionMenuItemsResponse({
-    $core.String? schoolChainId,
-    $core.String? schoolChainName,
+    $core.Iterable<SchoolChainMenuItem>? schoolChainMenuItem,
     $1.PaginationResponse? pagination,
   }) {
     final result = create();
-    if (schoolChainId != null) result.schoolChainId = schoolChainId;
-    if (schoolChainName != null) result.schoolChainName = schoolChainName;
+    if (schoolChainMenuItem != null)
+      result.schoolChainMenuItem.addAll(schoolChainMenuItem);
     if (pagination != null) result.pagination = pagination;
     return result;
   }
@@ -3250,8 +3249,8 @@ class GetSchoolChainSelectionMenuItemsResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'schoolChainId')
-    ..aOS(2, _omitFieldNames ? '' : 'schoolChainName')
+    ..pPM<SchoolChainMenuItem>(1, _omitFieldNames ? '' : 'schoolChainMenuItem',
+        subBuilder: SchoolChainMenuItem.create)
     ..aOM<$1.PaginationResponse>(3, _omitFieldNames ? '' : 'pagination',
         subBuilder: $1.PaginationResponse.create)
     ..hasRequiredFields = false;
@@ -3283,6 +3282,71 @@ class GetSchoolChainSelectionMenuItemsResponse extends $pb.GeneratedMessage {
   static GetSchoolChainSelectionMenuItemsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
+  $pb.PbList<SchoolChainMenuItem> get schoolChainMenuItem => $_getList(0);
+
+  @$pb.TagNumber(3)
+  $1.PaginationResponse get pagination => $_getN(1);
+  @$pb.TagNumber(3)
+  set pagination($1.PaginationResponse value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasPagination() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearPagination() => $_clearField(3);
+  @$pb.TagNumber(3)
+  $1.PaginationResponse ensurePagination() => $_ensure(1);
+}
+
+class SchoolChainMenuItem extends $pb.GeneratedMessage {
+  factory SchoolChainMenuItem({
+    $core.String? schoolChainId,
+    $core.String? schoolChainName,
+  }) {
+    final result = create();
+    if (schoolChainId != null) result.schoolChainId = schoolChainId;
+    if (schoolChainName != null) result.schoolChainName = schoolChainName;
+    return result;
+  }
+
+  SchoolChainMenuItem._();
+
+  factory SchoolChainMenuItem.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SchoolChainMenuItem.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SchoolChainMenuItem',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolChainId')
+    ..aOS(2, _omitFieldNames ? '' : 'schoolChainName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SchoolChainMenuItem clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SchoolChainMenuItem copyWith(void Function(SchoolChainMenuItem) updates) =>
+      super.copyWith((message) => updates(message as SchoolChainMenuItem))
+          as SchoolChainMenuItem;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SchoolChainMenuItem create() => SchoolChainMenuItem._();
+  @$core.override
+  SchoolChainMenuItem createEmptyInstance() => create();
+  static $pb.PbList<SchoolChainMenuItem> createRepeated() =>
+      $pb.PbList<SchoolChainMenuItem>();
+  @$core.pragma('dart2js:noInline')
+  static SchoolChainMenuItem getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SchoolChainMenuItem>(create);
+  static SchoolChainMenuItem? _defaultInstance;
+
+  @$pb.TagNumber(1)
   $core.String get schoolChainId => $_getSZ(0);
   @$pb.TagNumber(1)
   set schoolChainId($core.String value) => $_setString(0, value);
@@ -3299,17 +3363,6 @@ class GetSchoolChainSelectionMenuItemsResponse extends $pb.GeneratedMessage {
   $core.bool hasSchoolChainName() => $_has(1);
   @$pb.TagNumber(2)
   void clearSchoolChainName() => $_clearField(2);
-
-  @$pb.TagNumber(3)
-  $1.PaginationResponse get pagination => $_getN(2);
-  @$pb.TagNumber(3)
-  set pagination($1.PaginationResponse value) => $_setField(3, value);
-  @$pb.TagNumber(3)
-  $core.bool hasPagination() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearPagination() => $_clearField(3);
-  @$pb.TagNumber(3)
-  $1.PaginationResponse ensurePagination() => $_ensure(2);
 }
 
 const $core.bool _omitFieldNames =
