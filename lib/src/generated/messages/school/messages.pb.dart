@@ -4021,20 +4021,11 @@ class ListAllClassesOfSchoolRequest extends $pb.GeneratedMessage {
 class ListAllClassesOfSchoolResponse extends $pb.GeneratedMessage {
   factory ListAllClassesOfSchoolResponse({
     $1.PaginationResponse? pagination,
-    $core.String? className,
-    $core.String? section,
-    $core.int? totalStudentsInClass,
-    $core.String? sessionName,
-    $1.SessionStatus? sessionStatus,
+    $core.Iterable<SchoolClass>? classes,
   }) {
     final result = create();
     if (pagination != null) result.pagination = pagination;
-    if (className != null) result.className = className;
-    if (section != null) result.section = section;
-    if (totalStudentsInClass != null)
-      result.totalStudentsInClass = totalStudentsInClass;
-    if (sessionName != null) result.sessionName = sessionName;
-    if (sessionStatus != null) result.sessionStatus = sessionStatus;
+    if (classes != null) result.classes.addAll(classes);
     return result;
   }
 
@@ -4054,12 +4045,8 @@ class ListAllClassesOfSchoolResponse extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<$1.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
         subBuilder: $1.PaginationResponse.create)
-    ..aOS(2, _omitFieldNames ? '' : 'className')
-    ..aOS(3, _omitFieldNames ? '' : 'section')
-    ..aI(4, _omitFieldNames ? '' : 'totalStudentsInClass')
-    ..aOS(5, _omitFieldNames ? '' : 'sessionName')
-    ..aE<$1.SessionStatus>(6, _omitFieldNames ? '' : 'sessionStatus',
-        enumValues: $1.SessionStatus.values)
+    ..pPM<SchoolClass>(2, _omitFieldNames ? '' : 'classes',
+        subBuilder: SchoolClass.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -4098,49 +4085,113 @@ class ListAllClassesOfSchoolResponse extends $pb.GeneratedMessage {
   $1.PaginationResponse ensurePagination() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.String get className => $_getSZ(1);
+  $pb.PbList<SchoolClass> get classes => $_getList(1);
+}
+
+class SchoolClass extends $pb.GeneratedMessage {
+  factory SchoolClass({
+    $core.String? className,
+    $core.String? section,
+    $core.int? totalStudentsInClass,
+    $core.String? sessionName,
+    $1.SessionStatus? sessionStatus,
+  }) {
+    final result = create();
+    if (className != null) result.className = className;
+    if (section != null) result.section = section;
+    if (totalStudentsInClass != null)
+      result.totalStudentsInClass = totalStudentsInClass;
+    if (sessionName != null) result.sessionName = sessionName;
+    if (sessionStatus != null) result.sessionStatus = sessionStatus;
+    return result;
+  }
+
+  SchoolClass._();
+
+  factory SchoolClass.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SchoolClass.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SchoolClass',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'className')
+    ..aOS(2, _omitFieldNames ? '' : 'section')
+    ..aI(3, _omitFieldNames ? '' : 'totalStudentsInClass')
+    ..aOS(4, _omitFieldNames ? '' : 'sessionName')
+    ..aE<$1.SessionStatus>(5, _omitFieldNames ? '' : 'sessionStatus',
+        enumValues: $1.SessionStatus.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SchoolClass clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SchoolClass copyWith(void Function(SchoolClass) updates) =>
+      super.copyWith((message) => updates(message as SchoolClass))
+          as SchoolClass;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SchoolClass create() => SchoolClass._();
+  @$core.override
+  SchoolClass createEmptyInstance() => create();
+  static $pb.PbList<SchoolClass> createRepeated() => $pb.PbList<SchoolClass>();
+  @$core.pragma('dart2js:noInline')
+  static SchoolClass getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SchoolClass>(create);
+  static SchoolClass? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get className => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set className($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasClassName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearClassName() => $_clearField(1);
+
   @$pb.TagNumber(2)
-  set className($core.String value) => $_setString(1, value);
+  $core.String get section => $_getSZ(1);
   @$pb.TagNumber(2)
-  $core.bool hasClassName() => $_has(1);
+  set section($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
-  void clearClassName() => $_clearField(2);
+  $core.bool hasSection() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSection() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get section => $_getSZ(2);
+  $core.int get totalStudentsInClass => $_getIZ(2);
   @$pb.TagNumber(3)
-  set section($core.String value) => $_setString(2, value);
+  set totalStudentsInClass($core.int value) => $_setSignedInt32(2, value);
   @$pb.TagNumber(3)
-  $core.bool hasSection() => $_has(2);
+  $core.bool hasTotalStudentsInClass() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSection() => $_clearField(3);
+  void clearTotalStudentsInClass() => $_clearField(3);
 
   @$pb.TagNumber(4)
-  $core.int get totalStudentsInClass => $_getIZ(3);
+  $core.String get sessionName => $_getSZ(3);
   @$pb.TagNumber(4)
-  set totalStudentsInClass($core.int value) => $_setSignedInt32(3, value);
+  set sessionName($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
-  $core.bool hasTotalStudentsInClass() => $_has(3);
+  $core.bool hasSessionName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearTotalStudentsInClass() => $_clearField(4);
+  void clearSessionName() => $_clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get sessionName => $_getSZ(4);
+  $1.SessionStatus get sessionStatus => $_getN(4);
   @$pb.TagNumber(5)
-  set sessionName($core.String value) => $_setString(4, value);
+  set sessionStatus($1.SessionStatus value) => $_setField(5, value);
   @$pb.TagNumber(5)
-  $core.bool hasSessionName() => $_has(4);
+  $core.bool hasSessionStatus() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSessionName() => $_clearField(5);
-
-  @$pb.TagNumber(6)
-  $1.SessionStatus get sessionStatus => $_getN(5);
-  @$pb.TagNumber(6)
-  set sessionStatus($1.SessionStatus value) => $_setField(6, value);
-  @$pb.TagNumber(6)
-  $core.bool hasSessionStatus() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearSessionStatus() => $_clearField(6);
+  void clearSessionStatus() => $_clearField(5);
 }
 
 const $core.bool _omitFieldNames =

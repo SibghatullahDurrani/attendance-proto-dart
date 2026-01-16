@@ -1215,19 +1215,41 @@ const ListAllClassesOfSchoolResponse$json = {
       '6': '.common_messages.PaginationResponse',
       '10': 'pagination'
     },
-    {'1': 'class_name', '3': 2, '4': 1, '5': 9, '10': 'className'},
-    {'1': 'section', '3': 3, '4': 1, '5': 9, '10': 'section'},
+    {
+      '1': 'classes',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.SchoolClass',
+      '10': 'classes'
+    },
+  ],
+};
+
+/// Descriptor for `ListAllClassesOfSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAllClassesOfSchoolResponseDescriptor =
+    $convert.base64Decode(
+        'Ch5MaXN0QWxsQ2xhc3Nlc09mU2Nob29sUmVzcG9uc2USQwoKcGFnaW5hdGlvbhgBIAEoCzIjLm'
+        'NvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9uc2VSCnBhZ2luYXRpb24SNgoHY2xhc3Nl'
+        'cxgCIAMoCzIcLnNjaG9vbF9tZXNzYWdlcy5TY2hvb2xDbGFzc1IHY2xhc3Nlcw==');
+
+@$core.Deprecated('Use schoolClassDescriptor instead')
+const SchoolClass$json = {
+  '1': 'SchoolClass',
+  '2': [
+    {'1': 'class_name', '3': 1, '4': 1, '5': 9, '10': 'className'},
+    {'1': 'section', '3': 2, '4': 1, '5': 9, '10': 'section'},
     {
       '1': 'total_students_in_class',
-      '3': 4,
+      '3': 3,
       '4': 1,
       '5': 5,
       '10': 'totalStudentsInClass'
     },
-    {'1': 'session_name', '3': 5, '4': 1, '5': 9, '10': 'sessionName'},
+    {'1': 'session_name', '3': 4, '4': 1, '5': 9, '10': 'sessionName'},
     {
       '1': 'session_status',
-      '3': 6,
+      '3': 5,
       '4': 1,
       '5': 14,
       '6': '.common_messages.SessionStatus',
@@ -1236,11 +1258,10 @@ const ListAllClassesOfSchoolResponse$json = {
   ],
 };
 
-/// Descriptor for `ListAllClassesOfSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List listAllClassesOfSchoolResponseDescriptor = $convert.base64Decode(
-    'Ch5MaXN0QWxsQ2xhc3Nlc09mU2Nob29sUmVzcG9uc2USQwoKcGFnaW5hdGlvbhgBIAEoCzIjLm'
-    'NvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9uc2VSCnBhZ2luYXRpb24SHQoKY2xhc3Nf'
-    'bmFtZRgCIAEoCVIJY2xhc3NOYW1lEhgKB3NlY3Rpb24YAyABKAlSB3NlY3Rpb24SNQoXdG90YW'
-    'xfc3R1ZGVudHNfaW5fY2xhc3MYBCABKAVSFHRvdGFsU3R1ZGVudHNJbkNsYXNzEiEKDHNlc3Np'
-    'b25fbmFtZRgFIAEoCVILc2Vzc2lvbk5hbWUSRQoOc2Vzc2lvbl9zdGF0dXMYBiABKA4yHi5jb2'
-    '1tb25fbWVzc2FnZXMuU2Vzc2lvblN0YXR1c1INc2Vzc2lvblN0YXR1cw==');
+/// Descriptor for `SchoolClass`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schoolClassDescriptor = $convert.base64Decode(
+    'CgtTY2hvb2xDbGFzcxIdCgpjbGFzc19uYW1lGAEgASgJUgljbGFzc05hbWUSGAoHc2VjdGlvbh'
+    'gCIAEoCVIHc2VjdGlvbhI1Chd0b3RhbF9zdHVkZW50c19pbl9jbGFzcxgDIAEoBVIUdG90YWxT'
+    'dHVkZW50c0luQ2xhc3MSIQoMc2Vzc2lvbl9uYW1lGAQgASgJUgtzZXNzaW9uTmFtZRJFCg5zZX'
+    'NzaW9uX3N0YXR1cxgFIAEoDjIeLmNvbW1vbl9tZXNzYWdlcy5TZXNzaW9uU3RhdHVzUg1zZXNz'
+    'aW9uU3RhdHVz');
