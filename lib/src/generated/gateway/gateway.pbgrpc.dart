@@ -125,6 +125,13 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$1.ListAllSchoolSessionsResponse> listAllSchoolSessions(
+    $1.ListAllSchoolSessionsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listAllSchoolSessions, request, options: options);
+  }
+
   /// Saga RPCS
   $grpc.ResponseFuture<$2.RegisterTeacherResponse> registerTeacher(
     $async.Stream<$2.RegisterTeacherRequest> request, {
@@ -361,6 +368,11 @@ class GatewayServiceClient extends $grpc.Client {
       ($1.GetSchoolChainSelectionMenuItemsRequest value) =>
           value.writeToBuffer(),
       $1.GetSchoolChainSelectionMenuItemsResponse.fromBuffer);
+  static final _$listAllSchoolSessions = $grpc.ClientMethod<
+          $1.ListAllSchoolSessionsRequest, $1.ListAllSchoolSessionsResponse>(
+      '/gateway.GatewayService/ListAllSchoolSessions',
+      ($1.ListAllSchoolSessionsRequest value) => value.writeToBuffer(),
+      $1.ListAllSchoolSessionsResponse.fromBuffer);
   static final _$registerTeacher =
       $grpc.ClientMethod<$2.RegisterTeacherRequest, $2.RegisterTeacherResponse>(
           '/gateway.GatewayService/RegisterTeacher',
@@ -587,6 +599,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
             $1.GetSchoolChainSelectionMenuItemsRequest.fromBuffer(value),
         ($1.GetSchoolChainSelectionMenuItemsResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.ListAllSchoolSessionsRequest,
+            $1.ListAllSchoolSessionsResponse>(
+        'ListAllSchoolSessions',
+        listAllSchoolSessions_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $1.ListAllSchoolSessionsRequest.fromBuffer(value),
+        ($1.ListAllSchoolSessionsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.RegisterTeacherRequest,
             $2.RegisterTeacherResponse>(
         'RegisterTeacher',
@@ -888,6 +909,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$1.GetSchoolChainSelectionMenuItemsResponse>
       getSchoolChainSelectionMenuItems($grpc.ServiceCall call,
           $1.GetSchoolChainSelectionMenuItemsRequest request);
+
+  $async.Future<$1.ListAllSchoolSessionsResponse> listAllSchoolSessions_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$1.ListAllSchoolSessionsRequest> $request) async {
+    return listAllSchoolSessions($call, await $request);
+  }
+
+  $async.Future<$1.ListAllSchoolSessionsResponse> listAllSchoolSessions(
+      $grpc.ServiceCall call, $1.ListAllSchoolSessionsRequest request);
 
   $async.Future<$2.RegisterTeacherResponse> registerTeacher(
       $grpc.ServiceCall call, $async.Stream<$2.RegisterTeacherRequest> request);

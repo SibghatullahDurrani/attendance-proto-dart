@@ -936,3 +936,124 @@ const SchoolChainMenuItem$json = {
 final $typed_data.Uint8List schoolChainMenuItemDescriptor = $convert.base64Decode(
     'ChNTY2hvb2xDaGFpbk1lbnVJdGVtEiYKD3NjaG9vbF9jaGFpbl9pZBgBIAEoCVINc2Nob29sQ2'
     'hhaW5JZBIqChFzY2hvb2xfY2hhaW5fbmFtZRgCIAEoCVIPc2Nob29sQ2hhaW5OYW1l');
+
+@$core.Deprecated('Use listAllSchoolSessionsRequestDescriptor instead')
+const ListAllSchoolSessionsRequest$json = {
+  '1': 'ListAllSchoolSessionsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'session_status',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.SessionStatus',
+      '9': 0,
+      '10': 'sessionStatus',
+      '17': true
+    },
+    {
+      '1': 'session_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'sessionName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_session_status'},
+    {'1': '_session_name'},
+  ],
+};
+
+/// Descriptor for `ListAllSchoolSessionsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAllSchoolSessionsRequestDescriptor = $convert.base64Decode(
+    'ChxMaXN0QWxsU2Nob29sU2Vzc2lvbnNSZXF1ZXN0EkIKCnBhZ2luYXRpb24YASABKAsyIi5jb2'
+    '1tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SGwoJc2Nob29sX2lk'
+    'GAIgASgJUghzY2hvb2xJZBJKCg5zZXNzaW9uX3N0YXR1cxgDIAEoDjIeLmNvbW1vbl9tZXNzYW'
+    'dlcy5TZXNzaW9uU3RhdHVzSABSDXNlc3Npb25TdGF0dXOIAQESJgoMc2Vzc2lvbl9uYW1lGAQg'
+    'ASgJSAFSC3Nlc3Npb25OYW1liAEBQhEKD19zZXNzaW9uX3N0YXR1c0IPCg1fc2Vzc2lvbl9uYW'
+    '1l');
+
+@$core.Deprecated('Use listAllSchoolSessionsResponseDescriptor instead')
+const ListAllSchoolSessionsResponse$json = {
+  '1': 'ListAllSchoolSessionsResponse',
+  '2': [
+    {
+      '1': 'school_sessions',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.SchoolSession',
+      '10': 'schoolSessions'
+    },
+    {
+      '1': 'pagination',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+  ],
+};
+
+/// Descriptor for `ListAllSchoolSessionsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAllSchoolSessionsResponseDescriptor = $convert.base64Decode(
+    'Ch1MaXN0QWxsU2Nob29sU2Vzc2lvbnNSZXNwb25zZRJHCg9zY2hvb2xfc2Vzc2lvbnMYASADKA'
+    'syHi5zY2hvb2xfbWVzc2FnZXMuU2Nob29sU2Vzc2lvblIOc2Nob29sU2Vzc2lvbnMSQwoKcGFn'
+    'aW5hdGlvbhgCIAEoCzIjLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9uc2VSCnBhZ2'
+    'luYXRpb24=');
+
+@$core.Deprecated('Use schoolSessionDescriptor instead')
+const SchoolSession$json = {
+  '1': 'SchoolSession',
+  '2': [
+    {'1': 'session_id', '3': 1, '4': 1, '5': 9, '10': 'sessionId'},
+    {'1': 'session_name', '3': 2, '4': 1, '5': 9, '10': 'sessionName'},
+    {
+      '1': 'start_date',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startDate'
+    },
+    {
+      '1': 'end_date',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endDate'
+    },
+    {
+      '1': 'session_status',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.SessionStatus',
+      '10': 'sessionStatus'
+    },
+    {'1': 'class_count', '3': 6, '4': 1, '5': 5, '10': 'classCount'},
+  ],
+};
+
+/// Descriptor for `SchoolSession`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schoolSessionDescriptor = $convert.base64Decode(
+    'Cg1TY2hvb2xTZXNzaW9uEh0KCnNlc3Npb25faWQYASABKAlSCXNlc3Npb25JZBIhCgxzZXNzaW'
+    '9uX25hbWUYAiABKAlSC3Nlc3Npb25OYW1lEjkKCnN0YXJ0X2RhdGUYAyABKAsyGi5nb29nbGUu'
+    'cHJvdG9idWYuVGltZXN0YW1wUglzdGFydERhdGUSNQoIZW5kX2RhdGUYBCABKAsyGi5nb29nbG'
+    'UucHJvdG9idWYuVGltZXN0YW1wUgdlbmREYXRlEkUKDnNlc3Npb25fc3RhdHVzGAUgASgOMh4u'
+    'Y29tbW9uX21lc3NhZ2VzLlNlc3Npb25TdGF0dXNSDXNlc3Npb25TdGF0dXMSHwoLY2xhc3NfY2'
+    '91bnQYBiABKAVSCmNsYXNzQ291bnQ=');
