@@ -87,6 +87,18 @@ const CreateSessionRequest$json = {
       '6': '.common_messages.SessionStatus',
       '10': 'status'
     },
+    {
+      '1': 'copy_classes_from_session_id',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'copyClassesFromSessionId',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_copy_classes_from_session_id'},
   ],
 };
 
@@ -96,7 +108,9 @@ final $typed_data.Uint8List createSessionRequestDescriptor = $convert.base64Deco
     '5hbWUYAiABKAlSBG5hbWUSOQoKc3RhcnRfZGF0ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U'
     'aW1lc3RhbXBSCXN0YXJ0RGF0ZRI1CghlbmRfZGF0ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi'
     '5UaW1lc3RhbXBSB2VuZERhdGUSNgoGc3RhdHVzGAUgASgOMh4uY29tbW9uX21lc3NhZ2VzLlNl'
-    'c3Npb25TdGF0dXNSBnN0YXR1cw==');
+    'c3Npb25TdGF0dXNSBnN0YXR1cxJDChxjb3B5X2NsYXNzZXNfZnJvbV9zZXNzaW9uX2lkGAYgAS'
+    'gJSABSGGNvcHlDbGFzc2VzRnJvbVNlc3Npb25JZIgBAUIfCh1fY29weV9jbGFzc2VzX2Zyb21f'
+    'c2Vzc2lvbl9pZA==');
 
 @$core.Deprecated('Use createSessionResponseDescriptor instead')
 const CreateSessionResponse$json = {
@@ -1057,3 +1071,87 @@ final $typed_data.Uint8List schoolSessionDescriptor = $convert.base64Decode(
     'UucHJvdG9idWYuVGltZXN0YW1wUgdlbmREYXRlEkUKDnNlc3Npb25fc3RhdHVzGAUgASgOMh4u'
     'Y29tbW9uX21lc3NhZ2VzLlNlc3Npb25TdGF0dXNSDXNlc3Npb25TdGF0dXMSHwoLY2xhc3NfY2'
     '91bnQYBiABKAVSCmNsYXNzQ291bnQ=');
+
+@$core.Deprecated(
+    'Use getSchoolSessionSelectionMenuItemsRequestDescriptor instead')
+const GetSchoolSessionSelectionMenuItemsRequest$json = {
+  '1': 'GetSchoolSessionSelectionMenuItemsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'session_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'sessionName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_session_name'},
+  ],
+};
+
+/// Descriptor for `GetSchoolSessionSelectionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getSchoolSessionSelectionMenuItemsRequestDescriptor = $convert.base64Decode(
+        'CilHZXRTY2hvb2xTZXNzaW9uU2VsZWN0aW9uTWVudUl0ZW1zUmVxdWVzdBJCCgpwYWdpbmF0aW'
+        '9uGAEgASgLMiIuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9u'
+        'EhsKCXNjaG9vbF9pZBgCIAEoCVIIc2Nob29sSWQSJgoMc2Vzc2lvbl9uYW1lGAQgASgJSABSC3'
+        'Nlc3Npb25OYW1liAEBQg8KDV9zZXNzaW9uX25hbWU=');
+
+@$core.Deprecated('Use schoolSessionMenuItemDescriptor instead')
+const SchoolSessionMenuItem$json = {
+  '1': 'SchoolSessionMenuItem',
+  '2': [
+    {'1': 'session_id', '3': 1, '4': 1, '5': 9, '10': 'sessionId'},
+    {'1': 'session_name', '3': 2, '4': 1, '5': 9, '10': 'sessionName'},
+  ],
+};
+
+/// Descriptor for `SchoolSessionMenuItem`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schoolSessionMenuItemDescriptor = $convert.base64Decode(
+    'ChVTY2hvb2xTZXNzaW9uTWVudUl0ZW0SHQoKc2Vzc2lvbl9pZBgBIAEoCVIJc2Vzc2lvbklkEi'
+    'EKDHNlc3Npb25fbmFtZRgCIAEoCVILc2Vzc2lvbk5hbWU=');
+
+@$core.Deprecated(
+    'Use getSchoolSessionSelectionMenuItemsResponseDescriptor instead')
+const GetSchoolSessionSelectionMenuItemsResponse$json = {
+  '1': 'GetSchoolSessionSelectionMenuItemsResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'school_session_menu_items',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.SchoolSessionMenuItem',
+      '10': 'schoolSessionMenuItems'
+    },
+  ],
+};
+
+/// Descriptor for `GetSchoolSessionSelectionMenuItemsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getSchoolSessionSelectionMenuItemsResponseDescriptor =
+    $convert.base64Decode(
+        'CipHZXRTY2hvb2xTZXNzaW9uU2VsZWN0aW9uTWVudUl0ZW1zUmVzcG9uc2USQwoKcGFnaW5hdG'
+        'lvbhgBIAEoCzIjLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9uc2VSCnBhZ2luYXRp'
+        'b24SYQoZc2Nob29sX3Nlc3Npb25fbWVudV9pdGVtcxgCIAMoCzImLnNjaG9vbF9tZXNzYWdlcy'
+        '5TY2hvb2xTZXNzaW9uTWVudUl0ZW1SFnNjaG9vbFNlc3Npb25NZW51SXRlbXM=');
