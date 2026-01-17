@@ -4194,6 +4194,260 @@ class SchoolClass extends $pb.GeneratedMessage {
   void clearSessionStatus() => $_clearField(5);
 }
 
+class GetSchoolActiveAndUpcomingSessionMenuItemsRequest
+    extends $pb.GeneratedMessage {
+  factory GetSchoolActiveAndUpcomingSessionMenuItemsRequest({
+    $1.PaginationRequest? pagination,
+    $core.String? schoolId,
+    $core.String? sessionName,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (schoolId != null) result.schoolId = schoolId;
+    if (sessionName != null) result.sessionName = sessionName;
+    return result;
+  }
+
+  GetSchoolActiveAndUpcomingSessionMenuItemsRequest._();
+
+  factory GetSchoolActiveAndUpcomingSessionMenuItemsRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolActiveAndUpcomingSessionMenuItemsRequest.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'GetSchoolActiveAndUpcomingSessionMenuItemsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOM<$1.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(4, _omitFieldNames ? '' : 'sessionName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolActiveAndUpcomingSessionMenuItemsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolActiveAndUpcomingSessionMenuItemsRequest copyWith(
+          void Function(GetSchoolActiveAndUpcomingSessionMenuItemsRequest)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as GetSchoolActiveAndUpcomingSessionMenuItemsRequest))
+          as GetSchoolActiveAndUpcomingSessionMenuItemsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolActiveAndUpcomingSessionMenuItemsRequest create() =>
+      GetSchoolActiveAndUpcomingSessionMenuItemsRequest._();
+  @$core.override
+  GetSchoolActiveAndUpcomingSessionMenuItemsRequest createEmptyInstance() =>
+      create();
+  static $pb.PbList<GetSchoolActiveAndUpcomingSessionMenuItemsRequest>
+      createRepeated() =>
+          $pb.PbList<GetSchoolActiveAndUpcomingSessionMenuItemsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolActiveAndUpcomingSessionMenuItemsRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetSchoolActiveAndUpcomingSessionMenuItemsRequest>(create);
+  static GetSchoolActiveAndUpcomingSessionMenuItemsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($1.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get schoolId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set schoolId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSchoolId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSchoolId() => $_clearField(2);
+
+  @$pb.TagNumber(4)
+  $core.String get sessionName => $_getSZ(2);
+  @$pb.TagNumber(4)
+  set sessionName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(4)
+  $core.bool hasSessionName() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearSessionName() => $_clearField(4);
+}
+
+class SchoolActiveAndUpcomingSessionMenuItem extends $pb.GeneratedMessage {
+  factory SchoolActiveAndUpcomingSessionMenuItem({
+    $core.String? sessionId,
+    $core.String? sessionName,
+  }) {
+    final result = create();
+    if (sessionId != null) result.sessionId = sessionId;
+    if (sessionName != null) result.sessionName = sessionName;
+    return result;
+  }
+
+  SchoolActiveAndUpcomingSessionMenuItem._();
+
+  factory SchoolActiveAndUpcomingSessionMenuItem.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SchoolActiveAndUpcomingSessionMenuItem.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SchoolActiveAndUpcomingSessionMenuItem',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'sessionId')
+    ..aOS(2, _omitFieldNames ? '' : 'sessionName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SchoolActiveAndUpcomingSessionMenuItem clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SchoolActiveAndUpcomingSessionMenuItem copyWith(
+          void Function(SchoolActiveAndUpcomingSessionMenuItem) updates) =>
+      super.copyWith((message) =>
+              updates(message as SchoolActiveAndUpcomingSessionMenuItem))
+          as SchoolActiveAndUpcomingSessionMenuItem;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SchoolActiveAndUpcomingSessionMenuItem create() =>
+      SchoolActiveAndUpcomingSessionMenuItem._();
+  @$core.override
+  SchoolActiveAndUpcomingSessionMenuItem createEmptyInstance() => create();
+  static $pb.PbList<SchoolActiveAndUpcomingSessionMenuItem> createRepeated() =>
+      $pb.PbList<SchoolActiveAndUpcomingSessionMenuItem>();
+  @$core.pragma('dart2js:noInline')
+  static SchoolActiveAndUpcomingSessionMenuItem getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          SchoolActiveAndUpcomingSessionMenuItem>(create);
+  static SchoolActiveAndUpcomingSessionMenuItem? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get sessionId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set sessionId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSessionId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSessionId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get sessionName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set sessionName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSessionName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSessionName() => $_clearField(2);
+}
+
+class GetSchoolActiveAndUpcomingSessionMenuItemsResponse
+    extends $pb.GeneratedMessage {
+  factory GetSchoolActiveAndUpcomingSessionMenuItemsResponse({
+    $1.PaginationResponse? pagination,
+    $core.Iterable<SchoolActiveAndUpcomingSessionMenuItem>?
+        schoolActiveUpcomingSessionMenuItems,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (schoolActiveUpcomingSessionMenuItems != null)
+      result.schoolActiveUpcomingSessionMenuItems
+          .addAll(schoolActiveUpcomingSessionMenuItems);
+    return result;
+  }
+
+  GetSchoolActiveAndUpcomingSessionMenuItemsResponse._();
+
+  factory GetSchoolActiveAndUpcomingSessionMenuItemsResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolActiveAndUpcomingSessionMenuItemsResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'GetSchoolActiveAndUpcomingSessionMenuItemsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOM<$1.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationResponse.create)
+    ..pPM<SchoolActiveAndUpcomingSessionMenuItem>(
+        2, _omitFieldNames ? '' : 'schoolActiveUpcomingSessionMenuItems',
+        subBuilder: SchoolActiveAndUpcomingSessionMenuItem.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolActiveAndUpcomingSessionMenuItemsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolActiveAndUpcomingSessionMenuItemsResponse copyWith(
+          void Function(GetSchoolActiveAndUpcomingSessionMenuItemsResponse)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as GetSchoolActiveAndUpcomingSessionMenuItemsResponse))
+          as GetSchoolActiveAndUpcomingSessionMenuItemsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolActiveAndUpcomingSessionMenuItemsResponse create() =>
+      GetSchoolActiveAndUpcomingSessionMenuItemsResponse._();
+  @$core.override
+  GetSchoolActiveAndUpcomingSessionMenuItemsResponse createEmptyInstance() =>
+      create();
+  static $pb.PbList<GetSchoolActiveAndUpcomingSessionMenuItemsResponse>
+      createRepeated() =>
+          $pb.PbList<GetSchoolActiveAndUpcomingSessionMenuItemsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolActiveAndUpcomingSessionMenuItemsResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetSchoolActiveAndUpcomingSessionMenuItemsResponse>(create);
+  static GetSchoolActiveAndUpcomingSessionMenuItemsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($1.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<SchoolActiveAndUpcomingSessionMenuItem>
+      get schoolActiveUpcomingSessionMenuItems => $_getList(1);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

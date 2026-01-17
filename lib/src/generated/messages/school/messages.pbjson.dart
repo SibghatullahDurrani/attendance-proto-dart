@@ -1265,3 +1265,91 @@ final $typed_data.Uint8List schoolClassDescriptor = $convert.base64Decode(
     'dHVkZW50c0luQ2xhc3MSIQoMc2Vzc2lvbl9uYW1lGAQgASgJUgtzZXNzaW9uTmFtZRJFCg5zZX'
     'NzaW9uX3N0YXR1cxgFIAEoDjIeLmNvbW1vbl9tZXNzYWdlcy5TZXNzaW9uU3RhdHVzUg1zZXNz'
     'aW9uU3RhdHVz');
+
+@$core.Deprecated(
+    'Use getSchoolActiveAndUpcomingSessionMenuItemsRequestDescriptor instead')
+const GetSchoolActiveAndUpcomingSessionMenuItemsRequest$json = {
+  '1': 'GetSchoolActiveAndUpcomingSessionMenuItemsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'session_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'sessionName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_session_name'},
+  ],
+};
+
+/// Descriptor for `GetSchoolActiveAndUpcomingSessionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getSchoolActiveAndUpcomingSessionMenuItemsRequestDescriptor =
+    $convert.base64Decode(
+        'CjFHZXRTY2hvb2xBY3RpdmVBbmRVcGNvbWluZ1Nlc3Npb25NZW51SXRlbXNSZXF1ZXN0EkIKCn'
+        'BhZ2luYXRpb24YASABKAsyIi5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBh'
+        'Z2luYXRpb24SGwoJc2Nob29sX2lkGAIgASgJUghzY2hvb2xJZBImCgxzZXNzaW9uX25hbWUYBC'
+        'ABKAlIAFILc2Vzc2lvbk5hbWWIAQFCDwoNX3Nlc3Npb25fbmFtZQ==');
+
+@$core
+    .Deprecated('Use schoolActiveAndUpcomingSessionMenuItemDescriptor instead')
+const SchoolActiveAndUpcomingSessionMenuItem$json = {
+  '1': 'SchoolActiveAndUpcomingSessionMenuItem',
+  '2': [
+    {'1': 'session_id', '3': 1, '4': 1, '5': 9, '10': 'sessionId'},
+    {'1': 'session_name', '3': 2, '4': 1, '5': 9, '10': 'sessionName'},
+  ],
+};
+
+/// Descriptor for `SchoolActiveAndUpcomingSessionMenuItem`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schoolActiveAndUpcomingSessionMenuItemDescriptor =
+    $convert.base64Decode(
+        'CiZTY2hvb2xBY3RpdmVBbmRVcGNvbWluZ1Nlc3Npb25NZW51SXRlbRIdCgpzZXNzaW9uX2lkGA'
+        'EgASgJUglzZXNzaW9uSWQSIQoMc2Vzc2lvbl9uYW1lGAIgASgJUgtzZXNzaW9uTmFtZQ==');
+
+@$core.Deprecated(
+    'Use getSchoolActiveAndUpcomingSessionMenuItemsResponseDescriptor instead')
+const GetSchoolActiveAndUpcomingSessionMenuItemsResponse$json = {
+  '1': 'GetSchoolActiveAndUpcomingSessionMenuItemsResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'school_active_upcoming_session_menu_items',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.SchoolActiveAndUpcomingSessionMenuItem',
+      '10': 'schoolActiveUpcomingSessionMenuItems'
+    },
+  ],
+};
+
+/// Descriptor for `GetSchoolActiveAndUpcomingSessionMenuItemsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getSchoolActiveAndUpcomingSessionMenuItemsResponseDescriptor =
+    $convert.base64Decode(
+        'CjJHZXRTY2hvb2xBY3RpdmVBbmRVcGNvbWluZ1Nlc3Npb25NZW51SXRlbXNSZXNwb25zZRJDCg'
+        'pwYWdpbmF0aW9uGAEgASgLMiMuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIK'
+        'cGFnaW5hdGlvbhKQAQopc2Nob29sX2FjdGl2ZV91cGNvbWluZ19zZXNzaW9uX21lbnVfaXRlbX'
+        'MYAiADKAsyNy5zY2hvb2xfbWVzc2FnZXMuU2Nob29sQWN0aXZlQW5kVXBjb21pbmdTZXNzaW9u'
+        'TWVudUl0ZW1SJHNjaG9vbEFjdGl2ZVVwY29taW5nU2Vzc2lvbk1lbnVJdGVtcw==');

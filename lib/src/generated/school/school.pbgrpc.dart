@@ -235,6 +235,16 @@ class SchoolServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetSchoolActiveAndUpcomingSessionMenuItemsResponse>
+      getSchoolActiveAndUpcomingSessionMenuItems(
+    $0.GetSchoolActiveAndUpcomingSessionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(
+        _$getSchoolActiveAndUpcomingSessionMenuItems, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -378,6 +388,13 @@ class SchoolServiceClient extends $grpc.Client {
       '/school.SchoolService/ListAllClassesOfSchool',
       ($0.ListAllClassesOfSchoolRequest value) => value.writeToBuffer(),
       $0.ListAllClassesOfSchoolResponse.fromBuffer);
+  static final _$getSchoolActiveAndUpcomingSessionMenuItems =
+      $grpc.ClientMethod<$0.GetSchoolActiveAndUpcomingSessionMenuItemsRequest,
+              $0.GetSchoolActiveAndUpcomingSessionMenuItemsResponse>(
+          '/school.SchoolService/GetSchoolActiveAndUpcomingSessionMenuItems',
+          ($0.GetSchoolActiveAndUpcomingSessionMenuItemsRequest value) =>
+              value.writeToBuffer(),
+          $0.GetSchoolActiveAndUpcomingSessionMenuItemsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -631,6 +648,18 @@ abstract class SchoolServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ListAllClassesOfSchoolRequest.fromBuffer(value),
         ($0.ListAllClassesOfSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.GetSchoolActiveAndUpcomingSessionMenuItemsRequest,
+            $0.GetSchoolActiveAndUpcomingSessionMenuItemsResponse>(
+        'GetSchoolActiveAndUpcomingSessionMenuItems',
+        getSchoolActiveAndUpcomingSessionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetSchoolActiveAndUpcomingSessionMenuItemsRequest.fromBuffer(
+                value),
+        ($0.GetSchoolActiveAndUpcomingSessionMenuItemsResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -880,4 +909,16 @@ abstract class SchoolServiceBase extends $grpc.Service {
 
   $async.Future<$0.ListAllClassesOfSchoolResponse> listAllClassesOfSchool(
       $grpc.ServiceCall call, $0.ListAllClassesOfSchoolRequest request);
+
+  $async.Future<$0.GetSchoolActiveAndUpcomingSessionMenuItemsResponse>
+      getSchoolActiveAndUpcomingSessionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetSchoolActiveAndUpcomingSessionMenuItemsRequest>
+              $request) async {
+    return getSchoolActiveAndUpcomingSessionMenuItems($call, await $request);
+  }
+
+  $async.Future<$0.GetSchoolActiveAndUpcomingSessionMenuItemsResponse>
+      getSchoolActiveAndUpcomingSessionMenuItems($grpc.ServiceCall call,
+          $0.GetSchoolActiveAndUpcomingSessionMenuItemsRequest request);
 }
