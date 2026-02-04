@@ -282,6 +282,15 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$3.ListAllOrganizationShiftsResponse>
+      listAllOrganizationShifts(
+    $3.ListAllOrganizationShiftsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listAllOrganizationShifts, request,
+        options: options);
+  }
+
   /// User RPCs
   $grpc.ResponseFuture<$2.GetUserFullNameResponse> getUserFullName(
     $2.GetUserFullNameRequest request, {
@@ -507,6 +516,12 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/CreateOrganizationShift',
       ($3.CreateOrganizationShiftRequest value) => value.writeToBuffer(),
       $3.CreateOrganizationShiftResponse.fromBuffer);
+  static final _$listAllOrganizationShifts = $grpc.ClientMethod<
+          $3.ListAllOrganizationShiftsRequest,
+          $3.ListAllOrganizationShiftsResponse>(
+      '/gateway.GatewayService/ListAllOrganizationShifts',
+      ($3.ListAllOrganizationShiftsRequest value) => value.writeToBuffer(),
+      $3.ListAllOrganizationShiftsResponse.fromBuffer);
   static final _$getUserFullName =
       $grpc.ClientMethod<$2.GetUserFullNameRequest, $2.GetUserFullNameResponse>(
           '/gateway.GatewayService/GetUserFullName',
@@ -830,6 +845,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $3.CreateOrganizationShiftRequest.fromBuffer(value),
         ($3.CreateOrganizationShiftResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.ListAllOrganizationShiftsRequest,
+            $3.ListAllOrganizationShiftsResponse>(
+        'ListAllOrganizationShifts',
+        listAllOrganizationShifts_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.ListAllOrganizationShiftsRequest.fromBuffer(value),
+        ($3.ListAllOrganizationShiftsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.GetUserFullNameRequest,
             $2.GetUserFullNameResponse>(
         'GetUserFullName',
@@ -1163,6 +1187,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$3.CreateOrganizationShiftResponse> createOrganizationShift(
       $grpc.ServiceCall call, $3.CreateOrganizationShiftRequest request);
+
+  $async.Future<$3.ListAllOrganizationShiftsResponse>
+      listAllOrganizationShifts_Pre($grpc.ServiceCall $call,
+          $async.Future<$3.ListAllOrganizationShiftsRequest> $request) async {
+    return listAllOrganizationShifts($call, await $request);
+  }
+
+  $async.Future<$3.ListAllOrganizationShiftsResponse> listAllOrganizationShifts(
+      $grpc.ServiceCall call, $3.ListAllOrganizationShiftsRequest request);
 
   $async.Future<$2.GetUserFullNameResponse> getUserFullName_Pre(
       $grpc.ServiceCall $call,

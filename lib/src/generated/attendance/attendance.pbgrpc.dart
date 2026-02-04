@@ -93,6 +93,15 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.ListAllOrganizationShiftsResponse>
+      listAllOrganizationShifts(
+    $0.ListAllOrganizationShiftsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listAllOrganizationShifts, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -136,6 +145,12 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/CreateOrganizationShift',
       ($0.CreateOrganizationShiftRequest value) => value.writeToBuffer(),
       $0.CreateOrganizationShiftResponse.fromBuffer);
+  static final _$listAllOrganizationShifts = $grpc.ClientMethod<
+          $0.ListAllOrganizationShiftsRequest,
+          $0.ListAllOrganizationShiftsResponse>(
+      '/attendance.AttendanceService/ListAllOrganizationShifts',
+      ($0.ListAllOrganizationShiftsRequest value) => value.writeToBuffer(),
+      $0.ListAllOrganizationShiftsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -208,6 +223,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.CreateOrganizationShiftRequest.fromBuffer(value),
         ($0.CreateOrganizationShiftResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListAllOrganizationShiftsRequest,
+            $0.ListAllOrganizationShiftsResponse>(
+        'ListAllOrganizationShifts',
+        listAllOrganizationShifts_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListAllOrganizationShiftsRequest.fromBuffer(value),
+        ($0.ListAllOrganizationShiftsResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -278,4 +302,13 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.CreateOrganizationShiftResponse> createOrganizationShift(
       $grpc.ServiceCall call, $0.CreateOrganizationShiftRequest request);
+
+  $async.Future<$0.ListAllOrganizationShiftsResponse>
+      listAllOrganizationShifts_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.ListAllOrganizationShiftsRequest> $request) async {
+    return listAllOrganizationShifts($call, await $request);
+  }
+
+  $async.Future<$0.ListAllOrganizationShiftsResponse> listAllOrganizationShifts(
+      $grpc.ServiceCall call, $0.ListAllOrganizationShiftsRequest request);
 }
