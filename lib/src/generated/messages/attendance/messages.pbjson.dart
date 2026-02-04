@@ -418,3 +418,50 @@ final $typed_data.Uint8List getUserHolidaysForMonthResponseDescriptor =
     $convert.base64Decode(
         'Ch9HZXRVc2VySG9saWRheXNGb3JNb250aFJlc3BvbnNlEj8KDWhvbGlkYXlfZGF0ZXMYASADKA'
         'syGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgxob2xpZGF5RGF0ZXM=');
+
+@$core.Deprecated('Use createOrganizationShiftRequestDescriptor instead')
+const CreateOrganizationShiftRequest$json = {
+  '1': 'CreateOrganizationShiftRequest',
+  '2': [
+    {'1': 'belongs_to', '3': 1, '4': 1, '5': 9, '10': 'belongsTo'},
+    {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'check_in_hour', '3': 3, '4': 1, '5': 5, '10': 'checkInHour'},
+    {'1': 'check_in_minute', '3': 4, '4': 1, '5': 5, '10': 'checkInMinute'},
+    {'1': 'check_out_hour', '3': 5, '4': 1, '5': 5, '10': 'checkOutHour'},
+    {'1': 'check_out_minute', '3': 6, '4': 1, '5': 5, '10': 'checkOutMinute'},
+    {'1': 'is_default', '3': 7, '4': 1, '5': 8, '10': 'isDefault'},
+    {'1': 'time_zone', '3': 8, '4': 1, '5': 9, '10': 'timeZone'},
+    {
+      '1': 'working_days',
+      '3': 9,
+      '4': 3,
+      '5': 14,
+      '6': '.common_messages.Days',
+      '10': 'workingDays'
+    },
+  ],
+};
+
+/// Descriptor for `CreateOrganizationShiftRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createOrganizationShiftRequestDescriptor = $convert.base64Decode(
+    'Ch5DcmVhdGVPcmdhbml6YXRpb25TaGlmdFJlcXVlc3QSHQoKYmVsb25nc190bxgBIAEoCVIJYm'
+    'Vsb25nc1RvEhIKBG5hbWUYAiABKAlSBG5hbWUSIgoNY2hlY2tfaW5faG91chgDIAEoBVILY2hl'
+    'Y2tJbkhvdXISJgoPY2hlY2tfaW5fbWludXRlGAQgASgFUg1jaGVja0luTWludXRlEiQKDmNoZW'
+    'NrX291dF9ob3VyGAUgASgFUgxjaGVja091dEhvdXISKAoQY2hlY2tfb3V0X21pbnV0ZRgGIAEo'
+    'BVIOY2hlY2tPdXRNaW51dGUSHQoKaXNfZGVmYXVsdBgHIAEoCFIJaXNEZWZhdWx0EhsKCXRpbW'
+    'Vfem9uZRgIIAEoCVIIdGltZVpvbmUSOAoMd29ya2luZ19kYXlzGAkgAygOMhUuY29tbW9uX21l'
+    'c3NhZ2VzLkRheXNSC3dvcmtpbmdEYXlz');
+
+@$core.Deprecated('Use createOrganizationShiftResponseDescriptor instead')
+const CreateOrganizationShiftResponse$json = {
+  '1': 'CreateOrganizationShiftResponse',
+  '2': [
+    {'1': 'shift_id', '3': 1, '4': 1, '5': 9, '10': 'shiftId'},
+  ],
+};
+
+/// Descriptor for `CreateOrganizationShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createOrganizationShiftResponseDescriptor =
+    $convert.base64Decode(
+        'Ch9DcmVhdGVPcmdhbml6YXRpb25TaGlmdFJlc3BvbnNlEhkKCHNoaWZ0X2lkGAEgASgJUgdzaG'
+        'lmdElk');

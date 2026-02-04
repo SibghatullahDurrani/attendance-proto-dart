@@ -84,6 +84,15 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.CreateOrganizationShiftResponse>
+      createOrganizationShift(
+    $0.CreateOrganizationShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$createOrganizationShift, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -121,6 +130,12 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/GetUserHolidaysForMonth',
       ($0.GetUserHolidaysForMonthRequest value) => value.writeToBuffer(),
       $0.GetUserHolidaysForMonthResponse.fromBuffer);
+  static final _$createOrganizationShift = $grpc.ClientMethod<
+          $0.CreateOrganizationShiftRequest,
+          $0.CreateOrganizationShiftResponse>(
+      '/attendance.AttendanceService/CreateOrganizationShift',
+      ($0.CreateOrganizationShiftRequest value) => value.writeToBuffer(),
+      $0.CreateOrganizationShiftResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -184,6 +199,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetUserHolidaysForMonthRequest.fromBuffer(value),
         ($0.GetUserHolidaysForMonthResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateOrganizationShiftRequest,
+            $0.CreateOrganizationShiftResponse>(
+        'CreateOrganizationShift',
+        createOrganizationShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CreateOrganizationShiftRequest.fromBuffer(value),
+        ($0.CreateOrganizationShiftResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -245,4 +269,13 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetUserHolidaysForMonthResponse> getUserHolidaysForMonth(
       $grpc.ServiceCall call, $0.GetUserHolidaysForMonthRequest request);
+
+  $async.Future<$0.CreateOrganizationShiftResponse> createOrganizationShift_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.CreateOrganizationShiftRequest> $request) async {
+    return createOrganizationShift($call, await $request);
+  }
+
+  $async.Future<$0.CreateOrganizationShiftResponse> createOrganizationShift(
+      $grpc.ServiceCall call, $0.CreateOrganizationShiftRequest request);
 }

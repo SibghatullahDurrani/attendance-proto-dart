@@ -1353,6 +1353,220 @@ class GetUserHolidaysForMonthResponse extends $pb.GeneratedMessage {
   $pb.PbList<$0.Timestamp> get holidayDates => $_getList(0);
 }
 
+class CreateOrganizationShiftRequest extends $pb.GeneratedMessage {
+  factory CreateOrganizationShiftRequest({
+    $core.String? belongsTo,
+    $core.String? name,
+    $core.int? checkInHour,
+    $core.int? checkInMinute,
+    $core.int? checkOutHour,
+    $core.int? checkOutMinute,
+    $core.bool? isDefault,
+    $core.String? timeZone,
+    $core.Iterable<$1.Days>? workingDays,
+  }) {
+    final result = create();
+    if (belongsTo != null) result.belongsTo = belongsTo;
+    if (name != null) result.name = name;
+    if (checkInHour != null) result.checkInHour = checkInHour;
+    if (checkInMinute != null) result.checkInMinute = checkInMinute;
+    if (checkOutHour != null) result.checkOutHour = checkOutHour;
+    if (checkOutMinute != null) result.checkOutMinute = checkOutMinute;
+    if (isDefault != null) result.isDefault = isDefault;
+    if (timeZone != null) result.timeZone = timeZone;
+    if (workingDays != null) result.workingDays.addAll(workingDays);
+    return result;
+  }
+
+  CreateOrganizationShiftRequest._();
+
+  factory CreateOrganizationShiftRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateOrganizationShiftRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateOrganizationShiftRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'belongsTo')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..aI(3, _omitFieldNames ? '' : 'checkInHour')
+    ..aI(4, _omitFieldNames ? '' : 'checkInMinute')
+    ..aI(5, _omitFieldNames ? '' : 'checkOutHour')
+    ..aI(6, _omitFieldNames ? '' : 'checkOutMinute')
+    ..aOB(7, _omitFieldNames ? '' : 'isDefault')
+    ..aOS(8, _omitFieldNames ? '' : 'timeZone')
+    ..pc<$1.Days>(9, _omitFieldNames ? '' : 'workingDays', $pb.PbFieldType.KE,
+        valueOf: $1.Days.valueOf,
+        enumValues: $1.Days.values,
+        defaultEnumValue: $1.Days.MONDAY)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateOrganizationShiftRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateOrganizationShiftRequest copyWith(
+          void Function(CreateOrganizationShiftRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as CreateOrganizationShiftRequest))
+          as CreateOrganizationShiftRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateOrganizationShiftRequest create() =>
+      CreateOrganizationShiftRequest._();
+  @$core.override
+  CreateOrganizationShiftRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateOrganizationShiftRequest> createRepeated() =>
+      $pb.PbList<CreateOrganizationShiftRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateOrganizationShiftRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateOrganizationShiftRequest>(create);
+  static CreateOrganizationShiftRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get belongsTo => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set belongsTo($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasBelongsTo() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBelongsTo() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set name($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get checkInHour => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set checkInHour($core.int value) => $_setSignedInt32(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasCheckInHour() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCheckInHour() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get checkInMinute => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set checkInMinute($core.int value) => $_setSignedInt32(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasCheckInMinute() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCheckInMinute() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get checkOutHour => $_getIZ(4);
+  @$pb.TagNumber(5)
+  set checkOutHour($core.int value) => $_setSignedInt32(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasCheckOutHour() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearCheckOutHour() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.int get checkOutMinute => $_getIZ(5);
+  @$pb.TagNumber(6)
+  set checkOutMinute($core.int value) => $_setSignedInt32(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasCheckOutMinute() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearCheckOutMinute() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.bool get isDefault => $_getBF(6);
+  @$pb.TagNumber(7)
+  set isDefault($core.bool value) => $_setBool(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasIsDefault() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearIsDefault() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get timeZone => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set timeZone($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasTimeZone() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearTimeZone() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $pb.PbList<$1.Days> get workingDays => $_getList(8);
+}
+
+class CreateOrganizationShiftResponse extends $pb.GeneratedMessage {
+  factory CreateOrganizationShiftResponse({
+    $core.String? shiftId,
+  }) {
+    final result = create();
+    if (shiftId != null) result.shiftId = shiftId;
+    return result;
+  }
+
+  CreateOrganizationShiftResponse._();
+
+  factory CreateOrganizationShiftResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateOrganizationShiftResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateOrganizationShiftResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'shiftId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateOrganizationShiftResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateOrganizationShiftResponse copyWith(
+          void Function(CreateOrganizationShiftResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as CreateOrganizationShiftResponse))
+          as CreateOrganizationShiftResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateOrganizationShiftResponse create() =>
+      CreateOrganizationShiftResponse._();
+  @$core.override
+  CreateOrganizationShiftResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateOrganizationShiftResponse> createRepeated() =>
+      $pb.PbList<CreateOrganizationShiftResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CreateOrganizationShiftResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateOrganizationShiftResponse>(
+          create);
+  static CreateOrganizationShiftResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get shiftId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set shiftId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasShiftId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearShiftId() => $_clearField(1);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =
