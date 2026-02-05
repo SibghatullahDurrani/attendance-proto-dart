@@ -563,3 +563,37 @@ final $typed_data.Uint8List organizationShiftDescriptor = $convert.base64Decode(
     '9ob3VyGAUgASgFUgxjaGVja091dEhvdXISKAoQY2hlY2tfb3V0X21pbnV0ZRgGIAEoBVIOY2hl'
     'Y2tPdXRNaW51dGUSHQoKaXNfZGVmYXVsdBgHIAEoCFIJaXNEZWZhdWx0EjgKDHdvcmtpbmdfZG'
     'F5cxgIIAMoDjIVLmNvbW1vbl9tZXNzYWdlcy5EYXlzUgt3b3JraW5nRGF5cw==');
+
+@$core.Deprecated('Use addUserToShiftRequestDescriptor instead')
+const AddUserToShiftRequest$json = {
+  '1': 'AddUserToShiftRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'shift_id', '3': 2, '4': 1, '5': 9, '10': 'shiftId'},
+  ],
+};
+
+/// Descriptor for `AddUserToShiftRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addUserToShiftRequestDescriptor = $convert.base64Decode(
+    'ChVBZGRVc2VyVG9TaGlmdFJlcXVlc3QSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEhkKCHNoaW'
+    'Z0X2lkGAIgASgJUgdzaGlmdElk');
+
+@$core.Deprecated('Use addUserToShiftResponseDescriptor instead')
+const AddUserToShiftResponse$json = {
+  '1': 'AddUserToShiftResponse',
+  '2': [
+    {
+      '1': 'user_shift_registration_id',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '10': 'userShiftRegistrationId'
+    },
+  ],
+};
+
+/// Descriptor for `AddUserToShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addUserToShiftResponseDescriptor =
+    $convert.base64Decode(
+        'ChZBZGRVc2VyVG9TaGlmdFJlc3BvbnNlEjsKGnVzZXJfc2hpZnRfcmVnaXN0cmF0aW9uX2lkGA'
+        'EgASgJUhd1c2VyU2hpZnRSZWdpc3RyYXRpb25JZA==');

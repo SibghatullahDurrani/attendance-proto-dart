@@ -102,6 +102,13 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.AddUserToShiftResponse> addUserToShift(
+    $0.AddUserToShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$addUserToShift, request, options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -151,6 +158,11 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/ListAllOrganizationShifts',
       ($0.ListAllOrganizationShiftsRequest value) => value.writeToBuffer(),
       $0.ListAllOrganizationShiftsResponse.fromBuffer);
+  static final _$addUserToShift =
+      $grpc.ClientMethod<$0.AddUserToShiftRequest, $0.AddUserToShiftResponse>(
+          '/attendance.AttendanceService/AddUserToShift',
+          ($0.AddUserToShiftRequest value) => value.writeToBuffer(),
+          $0.AddUserToShiftResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -232,6 +244,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ListAllOrganizationShiftsRequest.fromBuffer(value),
         ($0.ListAllOrganizationShiftsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AddUserToShiftRequest,
+            $0.AddUserToShiftResponse>(
+        'AddUserToShift',
+        addUserToShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.AddUserToShiftRequest.fromBuffer(value),
+        ($0.AddUserToShiftResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -311,4 +332,13 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.ListAllOrganizationShiftsResponse> listAllOrganizationShifts(
       $grpc.ServiceCall call, $0.ListAllOrganizationShiftsRequest request);
+
+  $async.Future<$0.AddUserToShiftResponse> addUserToShift_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.AddUserToShiftRequest> $request) async {
+    return addUserToShift($call, await $request);
+  }
+
+  $async.Future<$0.AddUserToShiftResponse> addUserToShift(
+      $grpc.ServiceCall call, $0.AddUserToShiftRequest request);
 }
