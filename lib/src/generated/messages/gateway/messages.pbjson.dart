@@ -269,10 +269,20 @@ const SchoolEmployeeRegistrationForm$json = {
     {'1': 'qualification', '3': 6, '4': 1, '5': 9, '10': 'qualification'},
     {'1': 'designation', '3': 7, '4': 1, '5': 9, '10': 'designation'},
     {'1': 'school_id', '3': 8, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'shift_id',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'shiftId',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_second_name'},
     {'1': '_email'},
+    {'1': '_shift_id'},
   ],
 };
 
@@ -283,8 +293,9 @@ final $typed_data.Uint8List schoolEmployeeRegistrationFormDescriptor = $convert.
     'ZmljYXRpb25fbnVtYmVyGAMgASgJUhRpZGVudGlmaWNhdGlvbk51bWJlchIhCgxwaG9uZV9udW'
     '1iZXIYBCABKAlSC3Bob25lTnVtYmVyEhkKBWVtYWlsGAUgASgJSAFSBWVtYWlsiAEBEiQKDXF1'
     'YWxpZmljYXRpb24YBiABKAlSDXF1YWxpZmljYXRpb24SIAoLZGVzaWduYXRpb24YByABKAlSC2'
-    'Rlc2lnbmF0aW9uEhsKCXNjaG9vbF9pZBgIIAEoCVIIc2Nob29sSWRCDgoMX3NlY29uZF9uYW1l'
-    'QggKBl9lbWFpbA==');
+    'Rlc2lnbmF0aW9uEhsKCXNjaG9vbF9pZBgIIAEoCVIIc2Nob29sSWQSHgoIc2hpZnRfaWQYCSAB'
+    'KAlIAlIHc2hpZnRJZIgBAUIOCgxfc2Vjb25kX25hbWVCCAoGX2VtYWlsQgsKCV9zaGlmdF9pZA'
+    '==');
 
 @$core.Deprecated('Use studentRegistrationFormDescriptor instead')
 const StudentRegistrationForm$json = {
@@ -338,6 +349,15 @@ const StudentRegistrationForm$json = {
       '17': true
     },
     {'1': 'school_id', '3': 8, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'shift_id',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '9': 6,
+      '10': 'shiftId',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_parent_id'},
@@ -346,6 +366,7 @@ const StudentRegistrationForm$json = {
     {'1': '_phone_number'},
     {'1': '_email'},
     {'1': '_class_id'},
+    {'1': '_shift_id'},
   ],
 };
 
@@ -356,9 +377,10 @@ final $typed_data.Uint8List studentRegistrationFormDescriptor = $convert.base64D
     'SAFSCnNlY29uZE5hbWWIAQESOAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJSAJSFGlkZW'
     '50aWZpY2F0aW9uTnVtYmVyiAEBEiYKDHBob25lX251bWJlchgFIAEoCUgDUgtwaG9uZU51bWJl'
     'cogBARIZCgVlbWFpbBgGIAEoCUgEUgVlbWFpbIgBARIeCghjbGFzc19pZBgHIAEoCUgFUgdjbG'
-    'Fzc0lkiAEBEhsKCXNjaG9vbF9pZBgIIAEoCVIIc2Nob29sSWRCDAoKX3BhcmVudF9pZEIOCgxf'
-    'c2Vjb25kX25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX251bWJlckIPCg1fcGhvbmVfbnVtYmVyQg'
-    'gKBl9lbWFpbEILCglfY2xhc3NfaWQ=');
+    'Fzc0lkiAEBEhsKCXNjaG9vbF9pZBgIIAEoCVIIc2Nob29sSWQSHgoIc2hpZnRfaWQYCSABKAlI'
+    'BlIHc2hpZnRJZIgBAUIMCgpfcGFyZW50X2lkQg4KDF9zZWNvbmRfbmFtZUIYChZfaWRlbnRpZm'
+    'ljYXRpb25fbnVtYmVyQg8KDV9waG9uZV9udW1iZXJCCAoGX2VtYWlsQgsKCV9jbGFzc19pZEIL'
+    'Cglfc2hpZnRfaWQ=');
 
 @$core.Deprecated('Use teacherRegistrationFormDescriptor instead')
 const TeacherRegistrationForm$json = {
@@ -385,10 +407,20 @@ const TeacherRegistrationForm$json = {
     {'1': 'email', '3': 5, '4': 1, '5': 9, '9': 1, '10': 'email', '17': true},
     {'1': 'qualification', '3': 6, '4': 1, '5': 9, '10': 'qualification'},
     {'1': 'school_id', '3': 7, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'shift_id',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'shiftId',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_second_name'},
     {'1': '_email'},
+    {'1': '_shift_id'},
   ],
 };
 
@@ -398,8 +430,9 @@ final $typed_data.Uint8List teacherRegistrationFormDescriptor = $convert.base64D
     'USJAoLc2Vjb25kX25hbWUYAiABKAlIAFIKc2Vjb25kTmFtZYgBARIzChVpZGVudGlmaWNhdGlv'
     'bl9udW1iZXIYAyABKAlSFGlkZW50aWZpY2F0aW9uTnVtYmVyEiEKDHBob25lX251bWJlchgEIA'
     'EoCVILcGhvbmVOdW1iZXISGQoFZW1haWwYBSABKAlIAVIFZW1haWyIAQESJAoNcXVhbGlmaWNh'
-    'dGlvbhgGIAEoCVINcXVhbGlmaWNhdGlvbhIbCglzY2hvb2xfaWQYByABKAlSCHNjaG9vbElkQg'
-    '4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWw=');
+    'dGlvbhgGIAEoCVINcXVhbGlmaWNhdGlvbhIbCglzY2hvb2xfaWQYByABKAlSCHNjaG9vbElkEh'
+    '4KCHNoaWZ0X2lkGAggASgJSAJSB3NoaWZ0SWSIAQFCDgoMX3NlY29uZF9uYW1lQggKBl9lbWFp'
+    'bEILCglfc2hpZnRfaWQ=');
 
 @$core.Deprecated('Use registerSchoolChainAdminRequestDescriptor instead')
 const RegisterSchoolChainAdminRequest$json = {
@@ -506,10 +539,20 @@ const SchoolChainEmployeeRegistrationForm$json = {
     {'1': 'qualification', '3': 6, '4': 1, '5': 9, '10': 'qualification'},
     {'1': 'designation', '3': 7, '4': 1, '5': 9, '10': 'designation'},
     {'1': 'school_chain_id', '3': 8, '4': 1, '5': 9, '10': 'schoolChainId'},
+    {
+      '1': 'shift_id',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'shiftId',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_second_name'},
     {'1': '_email'},
+    {'1': '_shift_id'},
   ],
 };
 
@@ -521,7 +564,8 @@ final $typed_data.Uint8List schoolChainEmployeeRegistrationFormDescriptor = $con
     '5lX251bWJlchgEIAEoCVILcGhvbmVOdW1iZXISGQoFZW1haWwYBSABKAlIAVIFZW1haWyIAQES'
     'JAoNcXVhbGlmaWNhdGlvbhgGIAEoCVINcXVhbGlmaWNhdGlvbhIgCgtkZXNpZ25hdGlvbhgHIA'
     'EoCVILZGVzaWduYXRpb24SJgoPc2Nob29sX2NoYWluX2lkGAggASgJUg1zY2hvb2xDaGFpbklk'
-    'Qg4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWw=');
+    'Eh4KCHNoaWZ0X2lkGAkgASgJSAJSB3NoaWZ0SWSIAQFCDgoMX3NlY29uZF9uYW1lQggKBl9lbW'
+    'FpbEILCglfc2hpZnRfaWQ=');
 
 @$core.Deprecated('Use getUserFullNameRequestDescriptor instead')
 const GetUserFullNameRequest$json = {

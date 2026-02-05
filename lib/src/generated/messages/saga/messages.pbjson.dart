@@ -66,6 +66,15 @@ const RegisterStudentSagaRequest$json = {
       '17': true
     },
     {'1': 'school_id', '3': 8, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'shift_id',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '9': 6,
+      '10': 'shiftId',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_parent_id'},
@@ -74,6 +83,7 @@ const RegisterStudentSagaRequest$json = {
     {'1': '_phone_number'},
     {'1': '_email'},
     {'1': '_class_id'},
+    {'1': '_shift_id'},
   ],
 };
 
@@ -84,9 +94,10 @@ final $typed_data.Uint8List registerStudentSagaRequestDescriptor = $convert.base
     'ASgJSAFSCnNlY29uZE5hbWWIAQESOAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJSAJSFG'
     'lkZW50aWZpY2F0aW9uTnVtYmVyiAEBEiYKDHBob25lX251bWJlchgFIAEoCUgDUgtwaG9uZU51'
     'bWJlcogBARIZCgVlbWFpbBgGIAEoCUgEUgVlbWFpbIgBARIeCghjbGFzc19pZBgHIAEoCUgFUg'
-    'djbGFzc0lkiAEBEhsKCXNjaG9vbF9pZBgIIAEoCVIIc2Nob29sSWRCDAoKX3BhcmVudF9pZEIO'
-    'Cgxfc2Vjb25kX25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX251bWJlckIPCg1fcGhvbmVfbnVtYm'
-    'VyQggKBl9lbWFpbEILCglfY2xhc3NfaWQ=');
+    'djbGFzc0lkiAEBEhsKCXNjaG9vbF9pZBgIIAEoCVIIc2Nob29sSWQSHgoIc2hpZnRfaWQYCSAB'
+    'KAlIBlIHc2hpZnRJZIgBAUIMCgpfcGFyZW50X2lkQg4KDF9zZWNvbmRfbmFtZUIYChZfaWRlbn'
+    'RpZmljYXRpb25fbnVtYmVyQg8KDV9waG9uZV9udW1iZXJCCAoGX2VtYWlsQgsKCV9jbGFzc19p'
+    'ZEILCglfc2hpZnRfaWQ=');
 
 @$core.Deprecated('Use registerStudentSagaResponseDescriptor instead')
 const RegisterStudentSagaResponse$json = {
@@ -127,10 +138,20 @@ const RegisterTeacherSagaRequest$json = {
     {'1': 'email', '3': 5, '4': 1, '5': 9, '9': 1, '10': 'email', '17': true},
     {'1': 'qualification', '3': 6, '4': 1, '5': 9, '10': 'qualification'},
     {'1': 'school_id', '3': 7, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'shift_id',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'shiftId',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_second_name'},
     {'1': '_email'},
+    {'1': '_shift_id'},
   ],
 };
 
@@ -141,7 +162,8 @@ final $typed_data.Uint8List registerTeacherSagaRequestDescriptor = $convert.base
     'dGlvbl9udW1iZXIYAyABKAlSFGlkZW50aWZpY2F0aW9uTnVtYmVyEiEKDHBob25lX251bWJlch'
     'gEIAEoCVILcGhvbmVOdW1iZXISGQoFZW1haWwYBSABKAlIAVIFZW1haWyIAQESJAoNcXVhbGlm'
     'aWNhdGlvbhgGIAEoCVINcXVhbGlmaWNhdGlvbhIbCglzY2hvb2xfaWQYByABKAlSCHNjaG9vbE'
-    'lkQg4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWw=');
+    'lkEh4KCHNoaWZ0X2lkGAggASgJSAJSB3NoaWZ0SWSIAQFCDgoMX3NlY29uZF9uYW1lQggKBl9l'
+    'bWFpbEILCglfc2hpZnRfaWQ=');
 
 @$core.Deprecated('Use registerTeacherSagaResponseDescriptor instead')
 const RegisterTeacherSagaResponse$json = {
@@ -236,10 +258,20 @@ const RegisterSchoolEmployeeSagaRequest$json = {
     {'1': 'qualification', '3': 6, '4': 1, '5': 9, '10': 'qualification'},
     {'1': 'designation', '3': 7, '4': 1, '5': 9, '10': 'designation'},
     {'1': 'school_id', '3': 8, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'shift_id',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'shiftId',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_second_name'},
     {'1': '_email'},
+    {'1': '_shift_id'},
   ],
 };
 
@@ -250,8 +282,9 @@ final $typed_data.Uint8List registerSchoolEmployeeSagaRequestDescriptor = $conve
     'bnRpZmljYXRpb25fbnVtYmVyGAMgASgJUhRpZGVudGlmaWNhdGlvbk51bWJlchIhCgxwaG9uZV'
     '9udW1iZXIYBCABKAlSC3Bob25lTnVtYmVyEhkKBWVtYWlsGAUgASgJSAFSBWVtYWlsiAEBEiQK'
     'DXF1YWxpZmljYXRpb24YBiABKAlSDXF1YWxpZmljYXRpb24SIAoLZGVzaWduYXRpb24YByABKA'
-    'lSC2Rlc2lnbmF0aW9uEhsKCXNjaG9vbF9pZBgIIAEoCVIIc2Nob29sSWRCDgoMX3NlY29uZF9u'
-    'YW1lQggKBl9lbWFpbA==');
+    'lSC2Rlc2lnbmF0aW9uEhsKCXNjaG9vbF9pZBgIIAEoCVIIc2Nob29sSWQSHgoIc2hpZnRfaWQY'
+    'CSABKAlIAlIHc2hpZnRJZIgBAUIOCgxfc2Vjb25kX25hbWVCCAoGX2VtYWlsQgsKCV9zaGlmdF'
+    '9pZA==');
 
 @$core.Deprecated('Use registerSchoolEmployeeSagaResponseDescriptor instead')
 const RegisterSchoolEmployeeSagaResponse$json = {
@@ -350,10 +383,20 @@ const RegisterSchoolChainEmployeeSagaRequest$json = {
     {'1': 'qualification', '3': 6, '4': 1, '5': 9, '10': 'qualification'},
     {'1': 'designation', '3': 7, '4': 1, '5': 9, '10': 'designation'},
     {'1': 'school_chain_id', '3': 8, '4': 1, '5': 9, '10': 'schoolChainId'},
+    {
+      '1': 'shift_id',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'shiftId',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_second_name'},
     {'1': '_email'},
+    {'1': '_shift_id'},
   ],
 };
 
@@ -365,7 +408,8 @@ final $typed_data.Uint8List registerSchoolChainEmployeeSagaRequestDescriptor = $
     'Bob25lX251bWJlchgEIAEoCVILcGhvbmVOdW1iZXISGQoFZW1haWwYBSABKAlIAVIFZW1haWyI'
     'AQESJAoNcXVhbGlmaWNhdGlvbhgGIAEoCVINcXVhbGlmaWNhdGlvbhIgCgtkZXNpZ25hdGlvbh'
     'gHIAEoCVILZGVzaWduYXRpb24SJgoPc2Nob29sX2NoYWluX2lkGAggASgJUg1zY2hvb2xDaGFp'
-    'bklkQg4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWw=');
+    'bklkEh4KCHNoaWZ0X2lkGAkgASgJSAJSB3NoaWZ0SWSIAQFCDgoMX3NlY29uZF9uYW1lQggKBl'
+    '9lbWFpbEILCglfc2hpZnRfaWQ=');
 
 @$core
     .Deprecated('Use registerSchoolChainEmployeeSagaResponseDescriptor instead')

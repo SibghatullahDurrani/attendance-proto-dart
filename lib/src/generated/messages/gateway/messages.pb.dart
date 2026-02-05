@@ -817,6 +817,7 @@ class SchoolEmployeeRegistrationForm extends $pb.GeneratedMessage {
     $core.String? qualification,
     $core.String? designation,
     $core.String? schoolId,
+    $core.String? shiftId,
   }) {
     final result = create();
     if (firstName != null) result.firstName = firstName;
@@ -828,6 +829,7 @@ class SchoolEmployeeRegistrationForm extends $pb.GeneratedMessage {
     if (qualification != null) result.qualification = qualification;
     if (designation != null) result.designation = designation;
     if (schoolId != null) result.schoolId = schoolId;
+    if (shiftId != null) result.shiftId = shiftId;
     return result;
   }
 
@@ -853,6 +855,7 @@ class SchoolEmployeeRegistrationForm extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'qualification')
     ..aOS(7, _omitFieldNames ? '' : 'designation')
     ..aOS(8, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(9, _omitFieldNames ? '' : 'shiftId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -950,6 +953,15 @@ class SchoolEmployeeRegistrationForm extends $pb.GeneratedMessage {
   $core.bool hasSchoolId() => $_has(7);
   @$pb.TagNumber(8)
   void clearSchoolId() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get shiftId => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set shiftId($core.String value) => $_setString(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasShiftId() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearShiftId() => $_clearField(9);
 }
 
 class StudentRegistrationForm extends $pb.GeneratedMessage {
@@ -962,6 +974,7 @@ class StudentRegistrationForm extends $pb.GeneratedMessage {
     $core.String? email,
     $core.String? classId,
     $core.String? schoolId,
+    $core.String? shiftId,
   }) {
     final result = create();
     if (parentId != null) result.parentId = parentId;
@@ -973,6 +986,7 @@ class StudentRegistrationForm extends $pb.GeneratedMessage {
     if (email != null) result.email = email;
     if (classId != null) result.classId = classId;
     if (schoolId != null) result.schoolId = schoolId;
+    if (shiftId != null) result.shiftId = shiftId;
     return result;
   }
 
@@ -998,6 +1012,7 @@ class StudentRegistrationForm extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'email')
     ..aOS(7, _omitFieldNames ? '' : 'classId')
     ..aOS(8, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(9, _omitFieldNames ? '' : 'shiftId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1093,6 +1108,15 @@ class StudentRegistrationForm extends $pb.GeneratedMessage {
   $core.bool hasSchoolId() => $_has(7);
   @$pb.TagNumber(8)
   void clearSchoolId() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get shiftId => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set shiftId($core.String value) => $_setString(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasShiftId() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearShiftId() => $_clearField(9);
 }
 
 class TeacherRegistrationForm extends $pb.GeneratedMessage {
@@ -1104,6 +1128,7 @@ class TeacherRegistrationForm extends $pb.GeneratedMessage {
     $core.String? email,
     $core.String? qualification,
     $core.String? schoolId,
+    $core.String? shiftId,
   }) {
     final result = create();
     if (firstName != null) result.firstName = firstName;
@@ -1114,6 +1139,7 @@ class TeacherRegistrationForm extends $pb.GeneratedMessage {
     if (email != null) result.email = email;
     if (qualification != null) result.qualification = qualification;
     if (schoolId != null) result.schoolId = schoolId;
+    if (shiftId != null) result.shiftId = shiftId;
     return result;
   }
 
@@ -1138,6 +1164,7 @@ class TeacherRegistrationForm extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'email')
     ..aOS(6, _omitFieldNames ? '' : 'qualification')
     ..aOS(7, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(8, _omitFieldNames ? '' : 'shiftId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1224,6 +1251,15 @@ class TeacherRegistrationForm extends $pb.GeneratedMessage {
   $core.bool hasSchoolId() => $_has(6);
   @$pb.TagNumber(7)
   void clearSchoolId() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get shiftId => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set shiftId($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasShiftId() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearShiftId() => $_clearField(8);
 }
 
 class RegisterSchoolChainAdminRequest extends $pb.GeneratedMessage {
@@ -1532,6 +1568,7 @@ class SchoolChainEmployeeRegistrationForm extends $pb.GeneratedMessage {
     $core.String? qualification,
     $core.String? designation,
     $core.String? schoolChainId,
+    $core.String? shiftId,
   }) {
     final result = create();
     if (firstName != null) result.firstName = firstName;
@@ -1543,6 +1580,7 @@ class SchoolChainEmployeeRegistrationForm extends $pb.GeneratedMessage {
     if (qualification != null) result.qualification = qualification;
     if (designation != null) result.designation = designation;
     if (schoolChainId != null) result.schoolChainId = schoolChainId;
+    if (shiftId != null) result.shiftId = shiftId;
     return result;
   }
 
@@ -1569,6 +1607,7 @@ class SchoolChainEmployeeRegistrationForm extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'qualification')
     ..aOS(7, _omitFieldNames ? '' : 'designation')
     ..aOS(8, _omitFieldNames ? '' : 'schoolChainId')
+    ..aOS(9, _omitFieldNames ? '' : 'shiftId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1667,6 +1706,15 @@ class SchoolChainEmployeeRegistrationForm extends $pb.GeneratedMessage {
   $core.bool hasSchoolChainId() => $_has(7);
   @$pb.TagNumber(8)
   void clearSchoolChainId() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get shiftId => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set shiftId($core.String value) => $_setString(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasShiftId() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearShiftId() => $_clearField(9);
 }
 
 class GetUserFullNameRequest extends $pb.GeneratedMessage {
