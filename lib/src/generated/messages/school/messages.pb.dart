@@ -4795,6 +4795,187 @@ class StudentOfSchool extends $pb.GeneratedMessage {
   $0.Timestamp ensureThumbnailExpiresAt() => $_ensure(11);
 }
 
+class RemoveStudentFromClassResponse extends $pb.GeneratedMessage {
+  factory RemoveStudentFromClassResponse() => create();
+
+  RemoveStudentFromClassResponse._();
+
+  factory RemoveStudentFromClassResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RemoveStudentFromClassResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RemoveStudentFromClassResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RemoveStudentFromClassResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RemoveStudentFromClassResponse copyWith(
+          void Function(RemoveStudentFromClassResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as RemoveStudentFromClassResponse))
+          as RemoveStudentFromClassResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RemoveStudentFromClassResponse create() =>
+      RemoveStudentFromClassResponse._();
+  @$core.override
+  RemoveStudentFromClassResponse createEmptyInstance() => create();
+  static $pb.PbList<RemoveStudentFromClassResponse> createRepeated() =>
+      $pb.PbList<RemoveStudentFromClassResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RemoveStudentFromClassResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RemoveStudentFromClassResponse>(create);
+  static RemoveStudentFromClassResponse? _defaultInstance;
+}
+
+class RemoveTeacherFromSchoolResponse extends $pb.GeneratedMessage {
+  factory RemoveTeacherFromSchoolResponse() => create();
+
+  RemoveTeacherFromSchoolResponse._();
+
+  factory RemoveTeacherFromSchoolResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RemoveTeacherFromSchoolResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RemoveTeacherFromSchoolResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RemoveTeacherFromSchoolResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RemoveTeacherFromSchoolResponse copyWith(
+          void Function(RemoveTeacherFromSchoolResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as RemoveTeacherFromSchoolResponse))
+          as RemoveTeacherFromSchoolResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RemoveTeacherFromSchoolResponse create() =>
+      RemoveTeacherFromSchoolResponse._();
+  @$core.override
+  RemoveTeacherFromSchoolResponse createEmptyInstance() => create();
+  static $pb.PbList<RemoveTeacherFromSchoolResponse> createRepeated() =>
+      $pb.PbList<RemoveTeacherFromSchoolResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RemoveTeacherFromSchoolResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RemoveTeacherFromSchoolResponse>(
+          create);
+  static RemoveTeacherFromSchoolResponse? _defaultInstance;
+}
+
+class RemoveEmployeeFromSchoolResponse extends $pb.GeneratedMessage {
+  factory RemoveEmployeeFromSchoolResponse() => create();
+
+  RemoveEmployeeFromSchoolResponse._();
+
+  factory RemoveEmployeeFromSchoolResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RemoveEmployeeFromSchoolResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RemoveEmployeeFromSchoolResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RemoveEmployeeFromSchoolResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RemoveEmployeeFromSchoolResponse copyWith(
+          void Function(RemoveEmployeeFromSchoolResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as RemoveEmployeeFromSchoolResponse))
+          as RemoveEmployeeFromSchoolResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RemoveEmployeeFromSchoolResponse create() =>
+      RemoveEmployeeFromSchoolResponse._();
+  @$core.override
+  RemoveEmployeeFromSchoolResponse createEmptyInstance() => create();
+  static $pb.PbList<RemoveEmployeeFromSchoolResponse> createRepeated() =>
+      $pb.PbList<RemoveEmployeeFromSchoolResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RemoveEmployeeFromSchoolResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RemoveEmployeeFromSchoolResponse>(
+          create);
+  static RemoveEmployeeFromSchoolResponse? _defaultInstance;
+}
+
+class RemoveEmployeeFromSchoolChainResponse extends $pb.GeneratedMessage {
+  factory RemoveEmployeeFromSchoolChainResponse() => create();
+
+  RemoveEmployeeFromSchoolChainResponse._();
+
+  factory RemoveEmployeeFromSchoolChainResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RemoveEmployeeFromSchoolChainResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RemoveEmployeeFromSchoolChainResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RemoveEmployeeFromSchoolChainResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RemoveEmployeeFromSchoolChainResponse copyWith(
+          void Function(RemoveEmployeeFromSchoolChainResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as RemoveEmployeeFromSchoolChainResponse))
+          as RemoveEmployeeFromSchoolChainResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RemoveEmployeeFromSchoolChainResponse create() =>
+      RemoveEmployeeFromSchoolChainResponse._();
+  @$core.override
+  RemoveEmployeeFromSchoolChainResponse createEmptyInstance() => create();
+  static $pb.PbList<RemoveEmployeeFromSchoolChainResponse> createRepeated() =>
+      $pb.PbList<RemoveEmployeeFromSchoolChainResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RemoveEmployeeFromSchoolChainResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          RemoveEmployeeFromSchoolChainResponse>(create);
+  static RemoveEmployeeFromSchoolChainResponse? _defaultInstance;
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

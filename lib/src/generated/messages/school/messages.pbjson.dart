@@ -1559,3 +1559,40 @@ final $typed_data.Uint8List studentOfSchoolDescriptor = $convert.base64Decode(
     '9uZF9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCDwoNX3Bob25lX251bWJlckIICgZf'
     'ZW1haWxCEgoQX2Vucm9sbG1lbnRfaW5mb0IhCh9fY2F1c2Vfb2Zfbm9fYXR0ZW5kYW5jZV9tYX'
     'JraW5nQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF9leHBpcmVzX2F0');
+
+@$core.Deprecated('Use removeStudentFromClassResponseDescriptor instead')
+const RemoveStudentFromClassResponse$json = {
+  '1': 'RemoveStudentFromClassResponse',
+};
+
+/// Descriptor for `RemoveStudentFromClassResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List removeStudentFromClassResponseDescriptor =
+    $convert.base64Decode('Ch5SZW1vdmVTdHVkZW50RnJvbUNsYXNzUmVzcG9uc2U=');
+
+@$core.Deprecated('Use removeTeacherFromSchoolResponseDescriptor instead')
+const RemoveTeacherFromSchoolResponse$json = {
+  '1': 'RemoveTeacherFromSchoolResponse',
+};
+
+/// Descriptor for `RemoveTeacherFromSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List removeTeacherFromSchoolResponseDescriptor =
+    $convert.base64Decode('Ch9SZW1vdmVUZWFjaGVyRnJvbVNjaG9vbFJlc3BvbnNl');
+
+@$core.Deprecated('Use removeEmployeeFromSchoolResponseDescriptor instead')
+const RemoveEmployeeFromSchoolResponse$json = {
+  '1': 'RemoveEmployeeFromSchoolResponse',
+};
+
+/// Descriptor for `RemoveEmployeeFromSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List removeEmployeeFromSchoolResponseDescriptor =
+    $convert.base64Decode('CiBSZW1vdmVFbXBsb3llZUZyb21TY2hvb2xSZXNwb25zZQ==');
+
+@$core.Deprecated('Use removeEmployeeFromSchoolChainResponseDescriptor instead')
+const RemoveEmployeeFromSchoolChainResponse$json = {
+  '1': 'RemoveEmployeeFromSchoolChainResponse',
+};
+
+/// Descriptor for `RemoveEmployeeFromSchoolChainResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List removeEmployeeFromSchoolChainResponseDescriptor =
+    $convert
+        .base64Decode('CiVSZW1vdmVFbXBsb3llZUZyb21TY2hvb2xDaGFpblJlc3BvbnNl');

@@ -245,6 +245,42 @@ class SchoolServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.RemoveStudentFromClassResponse>
+      removeStudentFromClass(
+    $0.AddStudentToClassResponse request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$removeStudentFromClass, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.RemoveTeacherFromSchoolResponse>
+      removeTeacherFromSchool(
+    $0.AddTeacherToSchoolResponse request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$removeTeacherFromSchool, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.RemoveEmployeeFromSchoolResponse>
+      removeEmployeeFromSchool(
+    $0.AddEmployeeToSchoolResponse request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$removeEmployeeFromSchool, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.RemoveEmployeeFromSchoolChainResponse>
+      removeEmployeeFromSchoolChain(
+    $0.AddEmployeeToSchoolChainResponse request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$removeEmployeeFromSchoolChain, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -395,6 +431,27 @@ class SchoolServiceClient extends $grpc.Client {
           ($0.GetSchoolActiveAndUpcomingSessionMenuItemsRequest value) =>
               value.writeToBuffer(),
           $0.GetSchoolActiveAndUpcomingSessionMenuItemsResponse.fromBuffer);
+  static final _$removeStudentFromClass = $grpc.ClientMethod<
+          $0.AddStudentToClassResponse, $0.RemoveStudentFromClassResponse>(
+      '/school.SchoolService/RemoveStudentFromClass',
+      ($0.AddStudentToClassResponse value) => value.writeToBuffer(),
+      $0.RemoveStudentFromClassResponse.fromBuffer);
+  static final _$removeTeacherFromSchool = $grpc.ClientMethod<
+          $0.AddTeacherToSchoolResponse, $0.RemoveTeacherFromSchoolResponse>(
+      '/school.SchoolService/RemoveTeacherFromSchool',
+      ($0.AddTeacherToSchoolResponse value) => value.writeToBuffer(),
+      $0.RemoveTeacherFromSchoolResponse.fromBuffer);
+  static final _$removeEmployeeFromSchool = $grpc.ClientMethod<
+          $0.AddEmployeeToSchoolResponse, $0.RemoveEmployeeFromSchoolResponse>(
+      '/school.SchoolService/RemoveEmployeeFromSchool',
+      ($0.AddEmployeeToSchoolResponse value) => value.writeToBuffer(),
+      $0.RemoveEmployeeFromSchoolResponse.fromBuffer);
+  static final _$removeEmployeeFromSchoolChain = $grpc.ClientMethod<
+          $0.AddEmployeeToSchoolChainResponse,
+          $0.RemoveEmployeeFromSchoolChainResponse>(
+      '/school.SchoolService/RemoveEmployeeFromSchoolChain',
+      ($0.AddEmployeeToSchoolChainResponse value) => value.writeToBuffer(),
+      $0.RemoveEmployeeFromSchoolChainResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -660,6 +717,43 @@ abstract class SchoolServiceBase extends $grpc.Service {
                 value),
         ($0.GetSchoolActiveAndUpcomingSessionMenuItemsResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AddStudentToClassResponse,
+            $0.RemoveStudentFromClassResponse>(
+        'RemoveStudentFromClass',
+        removeStudentFromClass_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.AddStudentToClassResponse.fromBuffer(value),
+        ($0.RemoveStudentFromClassResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AddTeacherToSchoolResponse,
+            $0.RemoveTeacherFromSchoolResponse>(
+        'RemoveTeacherFromSchool',
+        removeTeacherFromSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.AddTeacherToSchoolResponse.fromBuffer(value),
+        ($0.RemoveTeacherFromSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AddEmployeeToSchoolResponse,
+            $0.RemoveEmployeeFromSchoolResponse>(
+        'RemoveEmployeeFromSchool',
+        removeEmployeeFromSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.AddEmployeeToSchoolResponse.fromBuffer(value),
+        ($0.RemoveEmployeeFromSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AddEmployeeToSchoolChainResponse,
+            $0.RemoveEmployeeFromSchoolChainResponse>(
+        'RemoveEmployeeFromSchoolChain',
+        removeEmployeeFromSchoolChain_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.AddEmployeeToSchoolChainResponse.fromBuffer(value),
+        ($0.RemoveEmployeeFromSchoolChainResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -921,4 +1015,41 @@ abstract class SchoolServiceBase extends $grpc.Service {
   $async.Future<$0.GetSchoolActiveAndUpcomingSessionMenuItemsResponse>
       getSchoolActiveAndUpcomingSessionMenuItems($grpc.ServiceCall call,
           $0.GetSchoolActiveAndUpcomingSessionMenuItemsRequest request);
+
+  $async.Future<$0.RemoveStudentFromClassResponse> removeStudentFromClass_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.AddStudentToClassResponse> $request) async {
+    return removeStudentFromClass($call, await $request);
+  }
+
+  $async.Future<$0.RemoveStudentFromClassResponse> removeStudentFromClass(
+      $grpc.ServiceCall call, $0.AddStudentToClassResponse request);
+
+  $async.Future<$0.RemoveTeacherFromSchoolResponse> removeTeacherFromSchool_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.AddTeacherToSchoolResponse> $request) async {
+    return removeTeacherFromSchool($call, await $request);
+  }
+
+  $async.Future<$0.RemoveTeacherFromSchoolResponse> removeTeacherFromSchool(
+      $grpc.ServiceCall call, $0.AddTeacherToSchoolResponse request);
+
+  $async.Future<$0.RemoveEmployeeFromSchoolResponse>
+      removeEmployeeFromSchool_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.AddEmployeeToSchoolResponse> $request) async {
+    return removeEmployeeFromSchool($call, await $request);
+  }
+
+  $async.Future<$0.RemoveEmployeeFromSchoolResponse> removeEmployeeFromSchool(
+      $grpc.ServiceCall call, $0.AddEmployeeToSchoolResponse request);
+
+  $async.Future<$0.RemoveEmployeeFromSchoolChainResponse>
+      removeEmployeeFromSchoolChain_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.AddEmployeeToSchoolChainResponse> $request) async {
+    return removeEmployeeFromSchoolChain($call, await $request);
+  }
+
+  $async.Future<$0.RemoveEmployeeFromSchoolChainResponse>
+      removeEmployeeFromSchoolChain(
+          $grpc.ServiceCall call, $0.AddEmployeeToSchoolChainResponse request);
 }
