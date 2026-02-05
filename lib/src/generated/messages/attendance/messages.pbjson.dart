@@ -597,3 +597,125 @@ final $typed_data.Uint8List addUserToShiftResponseDescriptor =
     $convert.base64Decode(
         'ChZBZGRVc2VyVG9TaGlmdFJlc3BvbnNlEjsKGnVzZXJfc2hpZnRfcmVnaXN0cmF0aW9uX2lkGA'
         'EgASgJUhd1c2VyU2hpZnRSZWdpc3RyYXRpb25JZA==');
+
+@$core.Deprecated(
+    'Use getOrganizationShiftSelectionMenuItemsRequestDescriptor instead')
+const GetOrganizationShiftSelectionMenuItemsRequest$json = {
+  '1': 'GetOrganizationShiftSelectionMenuItemsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'belongs_to', '3': 2, '4': 1, '5': 9, '10': 'belongsTo'},
+    {
+      '1': 'shift_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'shiftName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_shift_name'},
+  ],
+};
+
+/// Descriptor for `GetOrganizationShiftSelectionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getOrganizationShiftSelectionMenuItemsRequestDescriptor =
+    $convert.base64Decode(
+        'Ci1HZXRPcmdhbml6YXRpb25TaGlmdFNlbGVjdGlvbk1lbnVJdGVtc1JlcXVlc3QSQgoKcGFnaW'
+        '5hdGlvbhgBIAEoCzIiLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5h'
+        'dGlvbhIdCgpiZWxvbmdzX3RvGAIgASgJUgliZWxvbmdzVG8SIgoKc2hpZnRfbmFtZRgDIAEoCU'
+        'gAUglzaGlmdE5hbWWIAQFCDQoLX3NoaWZ0X25hbWU=');
+
+@$core.Deprecated(
+    'Use getOrganizationShiftSelectionMenuItemsResponseDescriptor instead')
+const GetOrganizationShiftSelectionMenuItemsResponse$json = {
+  '1': 'GetOrganizationShiftSelectionMenuItemsResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'menu_items',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.OrganizationShiftSelectionMenuItem',
+      '10': 'menuItems'
+    },
+  ],
+};
+
+/// Descriptor for `GetOrganizationShiftSelectionMenuItemsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getOrganizationShiftSelectionMenuItemsResponseDescriptor =
+    $convert.base64Decode(
+        'Ci5HZXRPcmdhbml6YXRpb25TaGlmdFNlbGVjdGlvbk1lbnVJdGVtc1Jlc3BvbnNlEkMKCnBhZ2'
+        'luYXRpb24YASABKAsyIy5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpwYWdp'
+        'bmF0aW9uElYKCm1lbnVfaXRlbXMYAiADKAsyNy5hdHRlbmRhbmNlX21lc3NhZ2VzLk9yZ2FuaX'
+        'phdGlvblNoaWZ0U2VsZWN0aW9uTWVudUl0ZW1SCW1lbnVJdGVtcw==');
+
+@$core.Deprecated('Use organizationShiftSelectionMenuItemDescriptor instead')
+const OrganizationShiftSelectionMenuItem$json = {
+  '1': 'OrganizationShiftSelectionMenuItem',
+  '2': [
+    {'1': 'shift_id', '3': 1, '4': 1, '5': 9, '10': 'shiftId'},
+    {'1': 'shift_name', '3': 2, '4': 1, '5': 9, '10': 'shiftName'},
+    {'1': 'is_default', '3': 3, '4': 1, '5': 8, '10': 'isDefault'},
+    {'1': 'check_in_hour', '3': 4, '4': 1, '5': 5, '10': 'checkInHour'},
+    {'1': 'check_in_minute', '3': 5, '4': 1, '5': 5, '10': 'checkInMinute'},
+    {'1': 'check_out_hour', '3': 6, '4': 1, '5': 5, '10': 'checkOutHour'},
+    {'1': 'check_out_minute', '3': 7, '4': 1, '5': 5, '10': 'checkOutMinute'},
+  ],
+};
+
+/// Descriptor for `OrganizationShiftSelectionMenuItem`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List organizationShiftSelectionMenuItemDescriptor = $convert.base64Decode(
+    'CiJPcmdhbml6YXRpb25TaGlmdFNlbGVjdGlvbk1lbnVJdGVtEhkKCHNoaWZ0X2lkGAEgASgJUg'
+    'dzaGlmdElkEh0KCnNoaWZ0X25hbWUYAiABKAlSCXNoaWZ0TmFtZRIdCgppc19kZWZhdWx0GAMg'
+    'ASgIUglpc0RlZmF1bHQSIgoNY2hlY2tfaW5faG91chgEIAEoBVILY2hlY2tJbkhvdXISJgoPY2'
+    'hlY2tfaW5fbWludXRlGAUgASgFUg1jaGVja0luTWludXRlEiQKDmNoZWNrX291dF9ob3VyGAYg'
+    'ASgFUgxjaGVja091dEhvdXISKAoQY2hlY2tfb3V0X21pbnV0ZRgHIAEoBVIOY2hlY2tPdXRNaW'
+    '51dGU=');
+
+@$core.Deprecated('Use getOrganizationDefaultShiftRequestDescriptor instead')
+const GetOrganizationDefaultShiftRequest$json = {
+  '1': 'GetOrganizationDefaultShiftRequest',
+  '2': [
+    {'1': 'belongs_to', '3': 1, '4': 1, '5': 9, '10': 'belongsTo'},
+  ],
+};
+
+/// Descriptor for `GetOrganizationDefaultShiftRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getOrganizationDefaultShiftRequestDescriptor =
+    $convert.base64Decode(
+        'CiJHZXRPcmdhbml6YXRpb25EZWZhdWx0U2hpZnRSZXF1ZXN0Eh0KCmJlbG9uZ3NfdG8YASABKA'
+        'lSCWJlbG9uZ3NUbw==');
+
+@$core.Deprecated('Use getOrganizationDefaultShiftResponseDescriptor instead')
+const GetOrganizationDefaultShiftResponse$json = {
+  '1': 'GetOrganizationDefaultShiftResponse',
+  '2': [
+    {'1': 'shift_id', '3': 1, '4': 1, '5': 9, '10': 'shiftId'},
+  ],
+};
+
+/// Descriptor for `GetOrganizationDefaultShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getOrganizationDefaultShiftResponseDescriptor =
+    $convert.base64Decode(
+        'CiNHZXRPcmdhbml6YXRpb25EZWZhdWx0U2hpZnRSZXNwb25zZRIZCghzaGlmdF9pZBgBIAEoCV'
+        'IHc2hpZnRJZA==');

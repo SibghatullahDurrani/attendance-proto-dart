@@ -109,6 +109,24 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$addUserToShift, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetOrganizationShiftSelectionMenuItemsResponse>
+      getOrganizationShiftSelectionMenuItems(
+    $0.GetOrganizationShiftSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getOrganizationShiftSelectionMenuItems, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetOrganizationDefaultShiftResponse>
+      getOrganizationDefaultShift(
+    $0.GetOrganizationDefaultShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getOrganizationDefaultShift, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -163,6 +181,19 @@ class AttendanceServiceClient extends $grpc.Client {
           '/attendance.AttendanceService/AddUserToShift',
           ($0.AddUserToShiftRequest value) => value.writeToBuffer(),
           $0.AddUserToShiftResponse.fromBuffer);
+  static final _$getOrganizationShiftSelectionMenuItems = $grpc.ClientMethod<
+          $0.GetOrganizationShiftSelectionMenuItemsRequest,
+          $0.GetOrganizationShiftSelectionMenuItemsResponse>(
+      '/attendance.AttendanceService/GetOrganizationShiftSelectionMenuItems',
+      ($0.GetOrganizationShiftSelectionMenuItemsRequest value) =>
+          value.writeToBuffer(),
+      $0.GetOrganizationShiftSelectionMenuItemsResponse.fromBuffer);
+  static final _$getOrganizationDefaultShift = $grpc.ClientMethod<
+          $0.GetOrganizationDefaultShiftRequest,
+          $0.GetOrganizationDefaultShiftResponse>(
+      '/attendance.AttendanceService/GetOrganizationDefaultShift',
+      ($0.GetOrganizationDefaultShiftRequest value) => value.writeToBuffer(),
+      $0.GetOrganizationDefaultShiftResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -253,6 +284,27 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.AddUserToShiftRequest.fromBuffer(value),
         ($0.AddUserToShiftResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.GetOrganizationShiftSelectionMenuItemsRequest,
+            $0.GetOrganizationShiftSelectionMenuItemsResponse>(
+        'GetOrganizationShiftSelectionMenuItems',
+        getOrganizationShiftSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetOrganizationShiftSelectionMenuItemsRequest.fromBuffer(value),
+        ($0.GetOrganizationShiftSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetOrganizationDefaultShiftRequest,
+            $0.GetOrganizationDefaultShiftResponse>(
+        'GetOrganizationDefaultShift',
+        getOrganizationDefaultShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetOrganizationDefaultShiftRequest.fromBuffer(value),
+        ($0.GetOrganizationDefaultShiftResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -341,4 +393,26 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.AddUserToShiftResponse> addUserToShift(
       $grpc.ServiceCall call, $0.AddUserToShiftRequest request);
+
+  $async.Future<$0.GetOrganizationShiftSelectionMenuItemsResponse>
+      getOrganizationShiftSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetOrganizationShiftSelectionMenuItemsRequest>
+              $request) async {
+    return getOrganizationShiftSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$0.GetOrganizationShiftSelectionMenuItemsResponse>
+      getOrganizationShiftSelectionMenuItems($grpc.ServiceCall call,
+          $0.GetOrganizationShiftSelectionMenuItemsRequest request);
+
+  $async.Future<$0.GetOrganizationDefaultShiftResponse>
+      getOrganizationDefaultShift_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetOrganizationDefaultShiftRequest> $request) async {
+    return getOrganizationDefaultShift($call, await $request);
+  }
+
+  $async.Future<$0.GetOrganizationDefaultShiftResponse>
+      getOrganizationDefaultShift($grpc.ServiceCall call,
+          $0.GetOrganizationDefaultShiftRequest request);
 }
