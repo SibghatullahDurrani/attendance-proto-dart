@@ -291,6 +291,24 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$3.GetOrganizationShiftSelectionMenuItemsResponse>
+      getOrganizationShiftSelectionMenuItems(
+    $3.GetOrganizationShiftSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getOrganizationShiftSelectionMenuItems, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$3.GetOrganizationDefaultShiftResponse>
+      getOrganizationDefaultShift(
+    $3.GetOrganizationDefaultShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getOrganizationDefaultShift, request,
+        options: options);
+  }
+
   /// User RPCs
   $grpc.ResponseFuture<$2.GetUserFullNameResponse> getUserFullName(
     $2.GetUserFullNameRequest request, {
@@ -543,6 +561,19 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/ListAllOrganizationShifts',
       ($3.ListAllOrganizationShiftsRequest value) => value.writeToBuffer(),
       $3.ListAllOrganizationShiftsResponse.fromBuffer);
+  static final _$getOrganizationShiftSelectionMenuItems = $grpc.ClientMethod<
+          $3.GetOrganizationShiftSelectionMenuItemsRequest,
+          $3.GetOrganizationShiftSelectionMenuItemsResponse>(
+      '/gateway.GatewayService/GetOrganizationShiftSelectionMenuItems',
+      ($3.GetOrganizationShiftSelectionMenuItemsRequest value) =>
+          value.writeToBuffer(),
+      $3.GetOrganizationShiftSelectionMenuItemsResponse.fromBuffer);
+  static final _$getOrganizationDefaultShift = $grpc.ClientMethod<
+          $3.GetOrganizationDefaultShiftRequest,
+          $3.GetOrganizationDefaultShiftResponse>(
+      '/gateway.GatewayService/GetOrganizationDefaultShift',
+      ($3.GetOrganizationDefaultShiftRequest value) => value.writeToBuffer(),
+      $3.GetOrganizationDefaultShiftResponse.fromBuffer);
   static final _$getUserFullName =
       $grpc.ClientMethod<$2.GetUserFullNameRequest, $2.GetUserFullNameResponse>(
           '/gateway.GatewayService/GetUserFullName',
@@ -890,6 +921,27 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $3.ListAllOrganizationShiftsRequest.fromBuffer(value),
         ($3.ListAllOrganizationShiftsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $3.GetOrganizationShiftSelectionMenuItemsRequest,
+            $3.GetOrganizationShiftSelectionMenuItemsResponse>(
+        'GetOrganizationShiftSelectionMenuItems',
+        getOrganizationShiftSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.GetOrganizationShiftSelectionMenuItemsRequest.fromBuffer(value),
+        ($3.GetOrganizationShiftSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetOrganizationDefaultShiftRequest,
+            $3.GetOrganizationDefaultShiftResponse>(
+        'GetOrganizationDefaultShift',
+        getOrganizationDefaultShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.GetOrganizationDefaultShiftRequest.fromBuffer(value),
+        ($3.GetOrganizationDefaultShiftResponse value) =>
+            value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.GetUserFullNameRequest,
             $2.GetUserFullNameResponse>(
         'GetUserFullName',
@@ -1254,6 +1306,28 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$3.ListAllOrganizationShiftsResponse> listAllOrganizationShifts(
       $grpc.ServiceCall call, $3.ListAllOrganizationShiftsRequest request);
+
+  $async.Future<$3.GetOrganizationShiftSelectionMenuItemsResponse>
+      getOrganizationShiftSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$3.GetOrganizationShiftSelectionMenuItemsRequest>
+              $request) async {
+    return getOrganizationShiftSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$3.GetOrganizationShiftSelectionMenuItemsResponse>
+      getOrganizationShiftSelectionMenuItems($grpc.ServiceCall call,
+          $3.GetOrganizationShiftSelectionMenuItemsRequest request);
+
+  $async.Future<$3.GetOrganizationDefaultShiftResponse>
+      getOrganizationDefaultShift_Pre($grpc.ServiceCall $call,
+          $async.Future<$3.GetOrganizationDefaultShiftRequest> $request) async {
+    return getOrganizationDefaultShift($call, await $request);
+  }
+
+  $async.Future<$3.GetOrganizationDefaultShiftResponse>
+      getOrganizationDefaultShift($grpc.ServiceCall call,
+          $3.GetOrganizationDefaultShiftRequest request);
 
   $async.Future<$2.GetUserFullNameResponse> getUserFullName_Pre(
       $grpc.ServiceCall $call,
