@@ -1832,3 +1832,104 @@ final $typed_data.Uint8List schoolParentDescriptor = $convert.base64Decode(
     '1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAyABKAlIAFIKc2Vjb25kTmFtZYgB'
     'ARIzChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlSFGlkZW50aWZpY2F0aW9uTnVtYmVyQg'
     '4KDF9zZWNvbmRfbmFtZQ==');
+
+@$core.Deprecated(
+    'Use getActiveAndUpcommingClassesSelectionMenuItemsRequestDescriptor instead')
+const GetActiveAndUpcommingClassesSelectionMenuItemsRequest$json = {
+  '1': 'GetActiveAndUpcommingClassesSelectionMenuItemsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'session_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'sessionName',
+      '17': true
+    },
+    {
+      '1': 'class_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'className',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_session_name'},
+    {'1': '_class_name'},
+  ],
+};
+
+/// Descriptor for `GetActiveAndUpcommingClassesSelectionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getActiveAndUpcommingClassesSelectionMenuItemsRequestDescriptor =
+    $convert.base64Decode(
+        'CjVHZXRBY3RpdmVBbmRVcGNvbW1pbmdDbGFzc2VzU2VsZWN0aW9uTWVudUl0ZW1zUmVxdWVzdB'
+        'JCCgpwYWdpbmF0aW9uGAEgASgLMiIuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0'
+        'UgpwYWdpbmF0aW9uEhsKCXNjaG9vbF9pZBgCIAEoCVIIc2Nob29sSWQSJgoMc2Vzc2lvbl9uYW'
+        '1lGAMgASgJSABSC3Nlc3Npb25OYW1liAEBEiIKCmNsYXNzX25hbWUYBCABKAlIAVIJY2xhc3NO'
+        'YW1liAEBQg8KDV9zZXNzaW9uX25hbWVCDQoLX2NsYXNzX25hbWU=');
+
+@$core.Deprecated(
+    'Use getActiveAndUpcommingClassesSelectionMenuItemsResponseDescriptor instead')
+const GetActiveAndUpcommingClassesSelectionMenuItemsResponse$json = {
+  '1': 'GetActiveAndUpcommingClassesSelectionMenuItemsResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'menu_items',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.ActiveAndUpcommingClassesSelectionMenuItem',
+      '10': 'menuItems'
+    },
+  ],
+};
+
+/// Descriptor for `GetActiveAndUpcommingClassesSelectionMenuItemsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getActiveAndUpcommingClassesSelectionMenuItemsResponseDescriptor =
+    $convert.base64Decode(
+        'CjZHZXRBY3RpdmVBbmRVcGNvbW1pbmdDbGFzc2VzU2VsZWN0aW9uTWVudUl0ZW1zUmVzcG9uc2'
+        'USQwoKcGFnaW5hdGlvbhgBIAEoCzIjLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9u'
+        'c2VSCnBhZ2luYXRpb24SWgoKbWVudV9pdGVtcxgCIAMoCzI7LnNjaG9vbF9tZXNzYWdlcy5BY3'
+        'RpdmVBbmRVcGNvbW1pbmdDbGFzc2VzU2VsZWN0aW9uTWVudUl0ZW1SCW1lbnVJdGVtcw==');
+
+@$core.Deprecated(
+    'Use activeAndUpcommingClassesSelectionMenuItemDescriptor instead')
+const ActiveAndUpcommingClassesSelectionMenuItem$json = {
+  '1': 'ActiveAndUpcommingClassesSelectionMenuItem',
+  '2': [
+    {'1': 'class_id', '3': 1, '4': 1, '5': 9, '10': 'classId'},
+    {'1': 'class_name', '3': 2, '4': 1, '5': 9, '10': 'className'},
+    {'1': 'session_name', '3': 3, '4': 1, '5': 9, '10': 'sessionName'},
+  ],
+};
+
+/// Descriptor for `ActiveAndUpcommingClassesSelectionMenuItem`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    activeAndUpcommingClassesSelectionMenuItemDescriptor =
+    $convert.base64Decode(
+        'CipBY3RpdmVBbmRVcGNvbW1pbmdDbGFzc2VzU2VsZWN0aW9uTWVudUl0ZW0SGQoIY2xhc3NfaW'
+        'QYASABKAlSB2NsYXNzSWQSHQoKY2xhc3NfbmFtZRgCIAEoCVIJY2xhc3NOYW1lEiEKDHNlc3Np'
+        'b25fbmFtZRgDIAEoCVILc2Vzc2lvbk5hbWU=');

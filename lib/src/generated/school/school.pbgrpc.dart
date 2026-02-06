@@ -290,6 +290,17 @@ class SchoolServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc
+      .ResponseFuture<$0.GetActiveAndUpcommingClassesSelectionMenuItemsResponse>
+      getActiveAndUpcommingClassesSelectionMenuItems(
+    $0.GetActiveAndUpcommingClassesSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(
+        _$getActiveAndUpcommingClassesSelectionMenuItems, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -468,6 +479,14 @@ class SchoolServiceClient extends $grpc.Client {
       ($0.GetSchoolParentSelectionMenuItemsRequest value) =>
           value.writeToBuffer(),
       $0.GetSchoolParentSelectionMenuItemsResponse.fromBuffer);
+  static final _$getActiveAndUpcommingClassesSelectionMenuItems =
+      $grpc.ClientMethod<
+              $0.GetActiveAndUpcommingClassesSelectionMenuItemsRequest,
+              $0.GetActiveAndUpcommingClassesSelectionMenuItemsResponse>(
+          '/school.SchoolService/GetActiveAndUpcommingClassesSelectionMenuItems',
+          ($0.GetActiveAndUpcommingClassesSelectionMenuItemsRequest value) =>
+              value.writeToBuffer(),
+          $0.GetActiveAndUpcommingClassesSelectionMenuItemsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -780,6 +799,18 @@ abstract class SchoolServiceBase extends $grpc.Service {
             $0.GetSchoolParentSelectionMenuItemsRequest.fromBuffer(value),
         ($0.GetSchoolParentSelectionMenuItemsResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.GetActiveAndUpcommingClassesSelectionMenuItemsRequest,
+            $0.GetActiveAndUpcommingClassesSelectionMenuItemsResponse>(
+        'GetActiveAndUpcommingClassesSelectionMenuItems',
+        getActiveAndUpcommingClassesSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetActiveAndUpcommingClassesSelectionMenuItemsRequest.fromBuffer(
+                value),
+        ($0.GetActiveAndUpcommingClassesSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -1090,4 +1121,18 @@ abstract class SchoolServiceBase extends $grpc.Service {
   $async.Future<$0.GetSchoolParentSelectionMenuItemsResponse>
       getSchoolParentSelectionMenuItems($grpc.ServiceCall call,
           $0.GetSchoolParentSelectionMenuItemsRequest request);
+
+  $async.Future<$0.GetActiveAndUpcommingClassesSelectionMenuItemsResponse>
+      getActiveAndUpcommingClassesSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async
+              .Future<$0.GetActiveAndUpcommingClassesSelectionMenuItemsRequest>
+              $request) async {
+    return getActiveAndUpcommingClassesSelectionMenuItems(
+        $call, await $request);
+  }
+
+  $async.Future<$0.GetActiveAndUpcommingClassesSelectionMenuItemsResponse>
+      getActiveAndUpcommingClassesSelectionMenuItems($grpc.ServiceCall call,
+          $0.GetActiveAndUpcommingClassesSelectionMenuItemsRequest request);
 }
