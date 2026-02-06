@@ -281,11 +281,13 @@ class SchoolServiceClient extends $grpc.Client {
         options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetSchoolParentIdsResponse> getSchoolParentIds(
-    $0.GetSchoolParentIdsRequest request, {
+  $grpc.ResponseFuture<$0.GetSchoolParentSelectionMenuItemsResponse>
+      getSchoolParentSelectionMenuItems(
+    $0.GetSchoolParentSelectionMenuItemsRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$getSchoolParentIds, request, options: options);
+    return $createUnaryCall(_$getSchoolParentSelectionMenuItems, request,
+        options: options);
   }
 
   // method descriptors
@@ -459,11 +461,13 @@ class SchoolServiceClient extends $grpc.Client {
       '/school.SchoolService/RemoveEmployeeFromSchoolChain',
       ($0.AddEmployeeToSchoolChainResponse value) => value.writeToBuffer(),
       $0.RemoveEmployeeFromSchoolChainResponse.fromBuffer);
-  static final _$getSchoolParentIds = $grpc.ClientMethod<
-          $0.GetSchoolParentIdsRequest, $0.GetSchoolParentIdsResponse>(
-      '/school.SchoolService/GetSchoolParentIds',
-      ($0.GetSchoolParentIdsRequest value) => value.writeToBuffer(),
-      $0.GetSchoolParentIdsResponse.fromBuffer);
+  static final _$getSchoolParentSelectionMenuItems = $grpc.ClientMethod<
+          $0.GetSchoolParentSelectionMenuItemsRequest,
+          $0.GetSchoolParentSelectionMenuItemsResponse>(
+      '/school.SchoolService/GetSchoolParentSelectionMenuItems',
+      ($0.GetSchoolParentSelectionMenuItemsRequest value) =>
+          value.writeToBuffer(),
+      $0.GetSchoolParentSelectionMenuItemsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -766,15 +770,16 @@ abstract class SchoolServiceBase extends $grpc.Service {
             $0.AddEmployeeToSchoolChainResponse.fromBuffer(value),
         ($0.RemoveEmployeeFromSchoolChainResponse value) =>
             value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.GetSchoolParentIdsRequest,
-            $0.GetSchoolParentIdsResponse>(
-        'GetSchoolParentIds',
-        getSchoolParentIds_Pre,
+    $addMethod($grpc.ServiceMethod<$0.GetSchoolParentSelectionMenuItemsRequest,
+            $0.GetSchoolParentSelectionMenuItemsResponse>(
+        'GetSchoolParentSelectionMenuItems',
+        getSchoolParentSelectionMenuItems_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.GetSchoolParentIdsRequest.fromBuffer(value),
-        ($0.GetSchoolParentIdsResponse value) => value.writeToBuffer()));
+            $0.GetSchoolParentSelectionMenuItemsRequest.fromBuffer(value),
+        ($0.GetSchoolParentSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -1074,12 +1079,15 @@ abstract class SchoolServiceBase extends $grpc.Service {
       removeEmployeeFromSchoolChain(
           $grpc.ServiceCall call, $0.AddEmployeeToSchoolChainResponse request);
 
-  $async.Future<$0.GetSchoolParentIdsResponse> getSchoolParentIds_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$0.GetSchoolParentIdsRequest> $request) async {
-    return getSchoolParentIds($call, await $request);
+  $async.Future<$0.GetSchoolParentSelectionMenuItemsResponse>
+      getSchoolParentSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetSchoolParentSelectionMenuItemsRequest>
+              $request) async {
+    return getSchoolParentSelectionMenuItems($call, await $request);
   }
 
-  $async.Future<$0.GetSchoolParentIdsResponse> getSchoolParentIds(
-      $grpc.ServiceCall call, $0.GetSchoolParentIdsRequest request);
+  $async.Future<$0.GetSchoolParentSelectionMenuItemsResponse>
+      getSchoolParentSelectionMenuItems($grpc.ServiceCall call,
+          $0.GetSchoolParentSelectionMenuItemsRequest request);
 }

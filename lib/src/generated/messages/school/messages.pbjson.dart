@@ -1726,30 +1726,109 @@ final $typed_data.Uint8List removeEmployeeFromSchoolChainResponseDescriptor =
     $convert
         .base64Decode('CiVSZW1vdmVFbXBsb3llZUZyb21TY2hvb2xDaGFpblJlc3BvbnNl');
 
-@$core.Deprecated('Use getSchoolParentIdsRequestDescriptor instead')
-const GetSchoolParentIdsRequest$json = {
-  '1': 'GetSchoolParentIdsRequest',
+@$core.Deprecated(
+    'Use getSchoolParentSelectionMenuItemsRequestDescriptor instead')
+const GetSchoolParentSelectionMenuItemsRequest$json = {
+  '1': 'GetSchoolParentSelectionMenuItemsRequest',
   '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
     {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {'1': 'name', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'name', '17': true},
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_name'},
+    {'1': '_identification_number'},
   ],
 };
 
-/// Descriptor for `GetSchoolParentIdsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getSchoolParentIdsRequestDescriptor =
+/// Descriptor for `GetSchoolParentSelectionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolParentSelectionMenuItemsRequestDescriptor =
     $convert.base64Decode(
-        'ChlHZXRTY2hvb2xQYXJlbnRJZHNSZXF1ZXN0EhsKCXNjaG9vbF9pZBgCIAEoCVIIc2Nob29sSW'
-        'Q=');
+        'CihHZXRTY2hvb2xQYXJlbnRTZWxlY3Rpb25NZW51SXRlbXNSZXF1ZXN0EkIKCnBhZ2luYXRpb2'
+        '4YASABKAsyIi5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24S'
+        'GwoJc2Nob29sX2lkGAIgASgJUghzY2hvb2xJZBIXCgRuYW1lGAMgASgJSABSBG5hbWWIAQESOA'
+        'oVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJSAFSFGlkZW50aWZpY2F0aW9uTnVtYmVyiAEB'
+        'QgcKBV9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXI=');
 
-@$core.Deprecated('Use getSchoolParentIdsResponseDescriptor instead')
-const GetSchoolParentIdsResponse$json = {
-  '1': 'GetSchoolParentIdsResponse',
+@$core.Deprecated(
+    'Use getSchoolParentSelectionMenuItemsResponseDescriptor instead')
+const GetSchoolParentSelectionMenuItemsResponse$json = {
+  '1': 'GetSchoolParentSelectionMenuItemsResponse',
   '2': [
-    {'1': 'parent_ids', '3': 2, '4': 3, '5': 9, '10': 'parentIds'},
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'school_parents',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.SchoolParent',
+      '10': 'schoolParents'
+    },
   ],
 };
 
-/// Descriptor for `GetSchoolParentIdsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getSchoolParentIdsResponseDescriptor =
-    $convert.base64Decode(
-        'ChpHZXRTY2hvb2xQYXJlbnRJZHNSZXNwb25zZRIdCgpwYXJlbnRfaWRzGAIgAygJUglwYXJlbn'
-        'RJZHM=');
+/// Descriptor for `GetSchoolParentSelectionMenuItemsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getSchoolParentSelectionMenuItemsResponseDescriptor = $convert.base64Decode(
+        'CilHZXRTY2hvb2xQYXJlbnRTZWxlY3Rpb25NZW51SXRlbXNSZXNwb25zZRJDCgpwYWdpbmF0aW'
+        '9uGAEgASgLMiMuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlv'
+        'bhJECg5zY2hvb2xfcGFyZW50cxgCIAMoCzIdLnNjaG9vbF9tZXNzYWdlcy5TY2hvb2xQYXJlbn'
+        'RSDXNjaG9vbFBhcmVudHM=');
+
+@$core.Deprecated('Use schoolParentDescriptor instead')
+const SchoolParent$json = {
+  '1': 'SchoolParent',
+  '2': [
+    {'1': 'parent_id', '3': 1, '4': 1, '5': 9, '10': 'parentId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+  ],
+};
+
+/// Descriptor for `SchoolParent`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schoolParentDescriptor = $convert.base64Decode(
+    'CgxTY2hvb2xQYXJlbnQSGwoJcGFyZW50X2lkGAEgASgJUghwYXJlbnRJZBIdCgpmaXJzdF9uYW'
+    '1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAyABKAlIAFIKc2Vjb25kTmFtZYgB'
+    'ARIzChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlSFGlkZW50aWZpY2F0aW9uTnVtYmVyQg'
+    '4KDF9zZWNvbmRfbmFtZQ==');
