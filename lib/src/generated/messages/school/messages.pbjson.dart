@@ -1596,3 +1596,48 @@ const RemoveEmployeeFromSchoolChainResponse$json = {
 final $typed_data.Uint8List removeEmployeeFromSchoolChainResponseDescriptor =
     $convert
         .base64Decode('CiVSZW1vdmVFbXBsb3llZUZyb21TY2hvb2xDaGFpblJlc3BvbnNl');
+
+@$core.Deprecated('Use getSchoolParentIdsRequestDescriptor instead')
+const GetSchoolParentIdsRequest$json = {
+  '1': 'GetSchoolParentIdsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+  ],
+};
+
+/// Descriptor for `GetSchoolParentIdsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolParentIdsRequestDescriptor = $convert.base64Decode(
+    'ChlHZXRTY2hvb2xQYXJlbnRJZHNSZXF1ZXN0EkIKCnBhZ2luYXRpb24YASABKAsyIi5jb21tb2'
+    '5fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SGwoJc2Nob29sX2lkGAIg'
+    'ASgJUghzY2hvb2xJZA==');
+
+@$core.Deprecated('Use getSchoolParentIdsResponseDescriptor instead')
+const GetSchoolParentIdsResponse$json = {
+  '1': 'GetSchoolParentIdsResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {'1': 'parent_ids', '3': 2, '4': 3, '5': 9, '10': 'parentIds'},
+  ],
+};
+
+/// Descriptor for `GetSchoolParentIdsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolParentIdsResponseDescriptor =
+    $convert.base64Decode(
+        'ChpHZXRTY2hvb2xQYXJlbnRJZHNSZXNwb25zZRJDCgpwYWdpbmF0aW9uGAEgASgLMiMuY29tbW'
+        '9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbhIdCgpwYXJlbnRfaWRz'
+        'GAIgAygJUglwYXJlbnRJZHM=');

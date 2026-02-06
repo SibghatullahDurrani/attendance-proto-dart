@@ -1646,6 +1646,211 @@ class GetParentStudentSelectionDataResponse extends $pb.GeneratedMessage {
   $pb.PbList<StudentSelection> get studentSelections => $_getList(0);
 }
 
+class GetParentSelectionMenuInfoRequest extends $pb.GeneratedMessage {
+  factory GetParentSelectionMenuInfoRequest({
+    $core.Iterable<$core.String>? parentIds,
+  }) {
+    final result = create();
+    if (parentIds != null) result.parentIds.addAll(parentIds);
+    return result;
+  }
+
+  GetParentSelectionMenuInfoRequest._();
+
+  factory GetParentSelectionMenuInfoRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetParentSelectionMenuInfoRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetParentSelectionMenuInfoRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'parentIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParentSelectionMenuInfoRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParentSelectionMenuInfoRequest copyWith(
+          void Function(GetParentSelectionMenuInfoRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetParentSelectionMenuInfoRequest))
+          as GetParentSelectionMenuInfoRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetParentSelectionMenuInfoRequest create() =>
+      GetParentSelectionMenuInfoRequest._();
+  @$core.override
+  GetParentSelectionMenuInfoRequest createEmptyInstance() => create();
+  static $pb.PbList<GetParentSelectionMenuInfoRequest> createRepeated() =>
+      $pb.PbList<GetParentSelectionMenuInfoRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetParentSelectionMenuInfoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetParentSelectionMenuInfoRequest>(
+          create);
+  static GetParentSelectionMenuInfoRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get parentIds => $_getList(0);
+}
+
+class GetParentSelectionMenuInfoResponse extends $pb.GeneratedMessage {
+  factory GetParentSelectionMenuInfoResponse({
+    $core.Iterable<ParentSelectionMenuInfo>? parentsInfo,
+  }) {
+    final result = create();
+    if (parentsInfo != null) result.parentsInfo.addAll(parentsInfo);
+    return result;
+  }
+
+  GetParentSelectionMenuInfoResponse._();
+
+  factory GetParentSelectionMenuInfoResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetParentSelectionMenuInfoResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetParentSelectionMenuInfoResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPM<ParentSelectionMenuInfo>(1, _omitFieldNames ? '' : 'parentsInfo',
+        subBuilder: ParentSelectionMenuInfo.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParentSelectionMenuInfoResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParentSelectionMenuInfoResponse copyWith(
+          void Function(GetParentSelectionMenuInfoResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetParentSelectionMenuInfoResponse))
+          as GetParentSelectionMenuInfoResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetParentSelectionMenuInfoResponse create() =>
+      GetParentSelectionMenuInfoResponse._();
+  @$core.override
+  GetParentSelectionMenuInfoResponse createEmptyInstance() => create();
+  static $pb.PbList<GetParentSelectionMenuInfoResponse> createRepeated() =>
+      $pb.PbList<GetParentSelectionMenuInfoResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetParentSelectionMenuInfoResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetParentSelectionMenuInfoResponse>(
+          create);
+  static GetParentSelectionMenuInfoResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<ParentSelectionMenuInfo> get parentsInfo => $_getList(0);
+}
+
+class ParentSelectionMenuInfo extends $pb.GeneratedMessage {
+  factory ParentSelectionMenuInfo({
+    $core.String? parentId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+  }) {
+    final result = create();
+    if (parentId != null) result.parentId = parentId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    return result;
+  }
+
+  ParentSelectionMenuInfo._();
+
+  factory ParentSelectionMenuInfo.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ParentSelectionMenuInfo.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ParentSelectionMenuInfo',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parentId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParentSelectionMenuInfo clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParentSelectionMenuInfo copyWith(
+          void Function(ParentSelectionMenuInfo) updates) =>
+      super.copyWith((message) => updates(message as ParentSelectionMenuInfo))
+          as ParentSelectionMenuInfo;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ParentSelectionMenuInfo create() => ParentSelectionMenuInfo._();
+  @$core.override
+  ParentSelectionMenuInfo createEmptyInstance() => create();
+  static $pb.PbList<ParentSelectionMenuInfo> createRepeated() =>
+      $pb.PbList<ParentSelectionMenuInfo>();
+  @$core.pragma('dart2js:noInline')
+  static ParentSelectionMenuInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ParentSelectionMenuInfo>(create);
+  static ParentSelectionMenuInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasParentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

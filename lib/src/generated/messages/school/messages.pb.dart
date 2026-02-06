@@ -4976,6 +4976,147 @@ class RemoveEmployeeFromSchoolChainResponse extends $pb.GeneratedMessage {
   static RemoveEmployeeFromSchoolChainResponse? _defaultInstance;
 }
 
+class GetSchoolParentIdsRequest extends $pb.GeneratedMessage {
+  factory GetSchoolParentIdsRequest({
+    $1.PaginationRequest? pagination,
+    $core.String? schoolId,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (schoolId != null) result.schoolId = schoolId;
+    return result;
+  }
+
+  GetSchoolParentIdsRequest._();
+
+  factory GetSchoolParentIdsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolParentIdsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSchoolParentIdsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOM<$1.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'schoolId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolParentIdsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolParentIdsRequest copyWith(
+          void Function(GetSchoolParentIdsRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSchoolParentIdsRequest))
+          as GetSchoolParentIdsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolParentIdsRequest create() => GetSchoolParentIdsRequest._();
+  @$core.override
+  GetSchoolParentIdsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSchoolParentIdsRequest> createRepeated() =>
+      $pb.PbList<GetSchoolParentIdsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolParentIdsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSchoolParentIdsRequest>(create);
+  static GetSchoolParentIdsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($1.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get schoolId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set schoolId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSchoolId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSchoolId() => $_clearField(2);
+}
+
+class GetSchoolParentIdsResponse extends $pb.GeneratedMessage {
+  factory GetSchoolParentIdsResponse({
+    $1.PaginationResponse? pagination,
+    $core.Iterable<$core.String>? parentIds,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (parentIds != null) result.parentIds.addAll(parentIds);
+    return result;
+  }
+
+  GetSchoolParentIdsResponse._();
+
+  factory GetSchoolParentIdsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchoolParentIdsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSchoolParentIdsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOM<$1.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationResponse.create)
+    ..pPS(2, _omitFieldNames ? '' : 'parentIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolParentIdsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchoolParentIdsResponse copyWith(
+          void Function(GetSchoolParentIdsResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetSchoolParentIdsResponse))
+          as GetSchoolParentIdsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolParentIdsResponse create() => GetSchoolParentIdsResponse._();
+  @$core.override
+  GetSchoolParentIdsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSchoolParentIdsResponse> createRepeated() =>
+      $pb.PbList<GetSchoolParentIdsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSchoolParentIdsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSchoolParentIdsResponse>(create);
+  static GetSchoolParentIdsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($1.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<$core.String> get parentIds => $_getList(1);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

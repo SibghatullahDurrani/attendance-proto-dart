@@ -351,6 +351,16 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$deleteLeave, request, options: options);
   }
 
+  /// Mixed Rpcs
+  $grpc.ResponseFuture<$2.GetSchoolParentSelectionMenuItemsResponse>
+      getSchoolParentSelectionMenuItems(
+    $2.GetSchoolParentSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getSchoolParentSelectionMenuItems, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$login = $grpc.ClientMethod<$0.LoginRequest, $0.LoginResponse>(
@@ -563,6 +573,13 @@ class GatewayServiceClient extends $grpc.Client {
           '/gateway.GatewayService/DeleteLeave',
           ($5.DeleteLeaveRequest value) => value.writeToBuffer(),
           $5.DeleteLeaveResponse.fromBuffer);
+  static final _$getSchoolParentSelectionMenuItems = $grpc.ClientMethod<
+          $2.GetSchoolParentSelectionMenuItemsRequest,
+          $2.GetSchoolParentSelectionMenuItemsResponse>(
+      '/gateway.GatewayService/GetSchoolParentSelectionMenuItems',
+      ($2.GetSchoolParentSelectionMenuItemsRequest value) =>
+          value.writeToBuffer(),
+      $2.GetSchoolParentSelectionMenuItemsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -927,6 +944,16 @@ abstract class GatewayServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $5.DeleteLeaveRequest.fromBuffer(value),
             ($5.DeleteLeaveResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetSchoolParentSelectionMenuItemsRequest,
+            $2.GetSchoolParentSelectionMenuItemsResponse>(
+        'GetSchoolParentSelectionMenuItems',
+        getSchoolParentSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetSchoolParentSelectionMenuItemsRequest.fromBuffer(value),
+        ($2.GetSchoolParentSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -1268,4 +1295,16 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$5.DeleteLeaveResponse> deleteLeave(
       $grpc.ServiceCall call, $5.DeleteLeaveRequest request);
+
+  $async.Future<$2.GetSchoolParentSelectionMenuItemsResponse>
+      getSchoolParentSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$2.GetSchoolParentSelectionMenuItemsRequest>
+              $request) async {
+    return getSchoolParentSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$2.GetSchoolParentSelectionMenuItemsResponse>
+      getSchoolParentSelectionMenuItems($grpc.ServiceCall call,
+          $2.GetSchoolParentSelectionMenuItemsRequest request);
 }

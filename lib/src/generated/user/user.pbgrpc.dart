@@ -136,6 +136,15 @@ class UserServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetParentSelectionMenuInfoResponse>
+      getParentSelectionMenuInfo(
+    $0.GetParentSelectionMenuInfoRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getParentSelectionMenuInfo, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createStudent =
@@ -204,6 +213,12 @@ class UserServiceClient extends $grpc.Client {
       '/user.UserService/GetParentStudentSelectionData',
       ($0.GetParentStudentSelectionDataRequest value) => value.writeToBuffer(),
       $0.GetParentStudentSelectionDataResponse.fromBuffer);
+  static final _$getParentSelectionMenuInfo = $grpc.ClientMethod<
+          $0.GetParentSelectionMenuInfoRequest,
+          $0.GetParentSelectionMenuInfoResponse>(
+      '/user.UserService/GetParentSelectionMenuInfo',
+      ($0.GetParentSelectionMenuInfoRequest value) => value.writeToBuffer(),
+      $0.GetParentSelectionMenuInfoResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('user.UserService')
@@ -329,6 +344,16 @@ abstract class UserServiceBase extends $grpc.Service {
             $0.GetParentStudentSelectionDataRequest.fromBuffer(value),
         ($0.GetParentStudentSelectionDataResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetParentSelectionMenuInfoRequest,
+            $0.GetParentSelectionMenuInfoResponse>(
+        'GetParentSelectionMenuInfo',
+        getParentSelectionMenuInfo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetParentSelectionMenuInfoRequest.fromBuffer(value),
+        ($0.GetParentSelectionMenuInfoResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateStudentResponse> createStudent_Pre(
@@ -450,4 +475,14 @@ abstract class UserServiceBase extends $grpc.Service {
   $async.Future<$0.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData($grpc.ServiceCall call,
           $0.GetParentStudentSelectionDataRequest request);
+
+  $async.Future<$0.GetParentSelectionMenuInfoResponse>
+      getParentSelectionMenuInfo_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetParentSelectionMenuInfoRequest> $request) async {
+    return getParentSelectionMenuInfo($call, await $request);
+  }
+
+  $async.Future<$0.GetParentSelectionMenuInfoResponse>
+      getParentSelectionMenuInfo(
+          $grpc.ServiceCall call, $0.GetParentSelectionMenuInfoRequest request);
 }

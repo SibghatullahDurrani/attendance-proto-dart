@@ -522,3 +522,73 @@ final $typed_data.Uint8List getParentStudentSelectionDataResponseDescriptor =
         'CiVHZXRQYXJlbnRTdHVkZW50U2VsZWN0aW9uRGF0YVJlc3BvbnNlEk4KEnN0dWRlbnRfc2VsZW'
         'N0aW9ucxgBIAMoCzIfLnVzZXJfbWVzc2FnZXMuU3R1ZGVudFNlbGVjdGlvblIRc3R1ZGVudFNl'
         'bGVjdGlvbnM=');
+
+@$core.Deprecated('Use getParentSelectionMenuInfoRequestDescriptor instead')
+const GetParentSelectionMenuInfoRequest$json = {
+  '1': 'GetParentSelectionMenuInfoRequest',
+  '2': [
+    {'1': 'parent_ids', '3': 1, '4': 3, '5': 9, '10': 'parentIds'},
+  ],
+};
+
+/// Descriptor for `GetParentSelectionMenuInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getParentSelectionMenuInfoRequestDescriptor =
+    $convert.base64Decode(
+        'CiFHZXRQYXJlbnRTZWxlY3Rpb25NZW51SW5mb1JlcXVlc3QSHQoKcGFyZW50X2lkcxgBIAMoCV'
+        'IJcGFyZW50SWRz');
+
+@$core.Deprecated('Use getParentSelectionMenuInfoResponseDescriptor instead')
+const GetParentSelectionMenuInfoResponse$json = {
+  '1': 'GetParentSelectionMenuInfoResponse',
+  '2': [
+    {
+      '1': 'parents_info',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.ParentSelectionMenuInfo',
+      '10': 'parentsInfo'
+    },
+  ],
+};
+
+/// Descriptor for `GetParentSelectionMenuInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getParentSelectionMenuInfoResponseDescriptor =
+    $convert.base64Decode(
+        'CiJHZXRQYXJlbnRTZWxlY3Rpb25NZW51SW5mb1Jlc3BvbnNlEkkKDHBhcmVudHNfaW5mbxgBIA'
+        'MoCzImLnVzZXJfbWVzc2FnZXMuUGFyZW50U2VsZWN0aW9uTWVudUluZm9SC3BhcmVudHNJbmZv');
+
+@$core.Deprecated('Use parentSelectionMenuInfoDescriptor instead')
+const ParentSelectionMenuInfo$json = {
+  '1': 'ParentSelectionMenuInfo',
+  '2': [
+    {'1': 'parent_id', '3': 1, '4': 1, '5': 9, '10': 'parentId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+  ],
+};
+
+/// Descriptor for `ParentSelectionMenuInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List parentSelectionMenuInfoDescriptor = $convert.base64Decode(
+    'ChdQYXJlbnRTZWxlY3Rpb25NZW51SW5mbxIbCglwYXJlbnRfaWQYASABKAlSCHBhcmVudElkEh'
+    '0KCmZpcnN0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNvbmRfbmFtZRgDIAEoCUgAUgpz'
+    'ZWNvbmROYW1liAEBEjMKFWlkZW50aWZpY2F0aW9uX251bWJlchgEIAEoCVIUaWRlbnRpZmljYX'
+    'Rpb25OdW1iZXJCDgoMX3NlY29uZF9uYW1l');
