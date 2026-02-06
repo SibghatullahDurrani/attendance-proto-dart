@@ -663,6 +663,20 @@ const GetSchoolParentSelectionMenuItemsRequest$json = {
       '10': 'pagination'
     },
     {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {'1': 'name', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'name', '17': true},
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_name'},
+    {'1': '_identification_number'},
   ],
 };
 
@@ -671,7 +685,9 @@ final $typed_data.Uint8List getSchoolParentSelectionMenuItemsRequestDescriptor =
     $convert.base64Decode(
         'CihHZXRTY2hvb2xQYXJlbnRTZWxlY3Rpb25NZW51SXRlbXNSZXF1ZXN0EkIKCnBhZ2luYXRpb2'
         '4YASABKAsyIi5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24S'
-        'GwoJc2Nob29sX2lkGAIgASgJUghzY2hvb2xJZA==');
+        'GwoJc2Nob29sX2lkGAIgASgJUghzY2hvb2xJZBIXCgRuYW1lGAMgASgJSABSBG5hbWWIAQESOA'
+        'oVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJSAFSFGlkZW50aWZpY2F0aW9uTnVtYmVyiAEB'
+        'QgcKBV9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXI=');
 
 @$core.Deprecated(
     'Use getSchoolParentSelectionMenuItemsResponseDescriptor instead')

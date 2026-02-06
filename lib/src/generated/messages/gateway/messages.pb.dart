@@ -1989,10 +1989,15 @@ class GetSchoolParentSelectionMenuItemsRequest extends $pb.GeneratedMessage {
   factory GetSchoolParentSelectionMenuItemsRequest({
     $0.PaginationRequest? pagination,
     $core.String? schoolId,
+    $core.String? name,
+    $core.String? identificationNumber,
   }) {
     final result = create();
     if (pagination != null) result.pagination = pagination;
     if (schoolId != null) result.schoolId = schoolId;
+    if (name != null) result.name = name;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
     return result;
   }
 
@@ -2014,6 +2019,8 @@ class GetSchoolParentSelectionMenuItemsRequest extends $pb.GeneratedMessage {
     ..aOM<$0.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
         subBuilder: $0.PaginationRequest.create)
     ..aOS(2, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(3, _omitFieldNames ? '' : 'name')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -2061,6 +2068,24 @@ class GetSchoolParentSelectionMenuItemsRequest extends $pb.GeneratedMessage {
   $core.bool hasSchoolId() => $_has(1);
   @$pb.TagNumber(2)
   void clearSchoolId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set name($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
 }
 
 class GetSchoolParentSelectionMenuItemsResponse extends $pb.GeneratedMessage {

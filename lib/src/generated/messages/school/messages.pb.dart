@@ -518,10 +518,19 @@ class AddTeacherToSchoolRequest extends $pb.GeneratedMessage {
   factory AddTeacherToSchoolRequest({
     $core.String? schoolId,
     $core.String? teacherId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? phoneNumber,
   }) {
     final result = create();
     if (schoolId != null) result.schoolId = schoolId;
     if (teacherId != null) result.teacherId = teacherId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
     return result;
   }
 
@@ -541,6 +550,10 @@ class AddTeacherToSchoolRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'schoolId')
     ..aOS(2, _omitFieldNames ? '' : 'teacherId')
+    ..aOS(3, _omitFieldNames ? '' : 'firstName')
+    ..aOS(4, _omitFieldNames ? '' : 'secondName')
+    ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(6, _omitFieldNames ? '' : 'phoneNumber')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -582,6 +595,42 @@ class AddTeacherToSchoolRequest extends $pb.GeneratedMessage {
   $core.bool hasTeacherId() => $_has(1);
   @$pb.TagNumber(2)
   void clearTeacherId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get firstName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set firstName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasFirstName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFirstName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get secondName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set secondName($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasSecondName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSecondName() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get identificationNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set identificationNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasIdentificationNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIdentificationNumber() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get phoneNumber => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set phoneNumber($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasPhoneNumber() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearPhoneNumber() => $_clearField(6);
 }
 
 class AddTeacherToSchoolResponse extends $pb.GeneratedMessage {
@@ -647,10 +696,19 @@ class AddEmployeeToSchoolRequest extends $pb.GeneratedMessage {
   factory AddEmployeeToSchoolRequest({
     $core.String? schoolId,
     $core.String? employeeId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? phoneNumber,
   }) {
     final result = create();
     if (schoolId != null) result.schoolId = schoolId;
     if (employeeId != null) result.employeeId = employeeId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
     return result;
   }
 
@@ -670,6 +728,10 @@ class AddEmployeeToSchoolRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'schoolId')
     ..aOS(2, _omitFieldNames ? '' : 'employeeId')
+    ..aOS(3, _omitFieldNames ? '' : 'firstName')
+    ..aOS(4, _omitFieldNames ? '' : 'secondName')
+    ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(6, _omitFieldNames ? '' : 'phoneNumber')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -712,6 +774,42 @@ class AddEmployeeToSchoolRequest extends $pb.GeneratedMessage {
   $core.bool hasEmployeeId() => $_has(1);
   @$pb.TagNumber(2)
   void clearEmployeeId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get firstName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set firstName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasFirstName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFirstName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get secondName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set secondName($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasSecondName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSecondName() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get identificationNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set identificationNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasIdentificationNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIdentificationNumber() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get phoneNumber => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set phoneNumber($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasPhoneNumber() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearPhoneNumber() => $_clearField(6);
 }
 
 class AddEmployeeToSchoolResponse extends $pb.GeneratedMessage {
@@ -778,10 +876,19 @@ class AddParentToSchoolRequest extends $pb.GeneratedMessage {
   factory AddParentToSchoolRequest({
     $core.String? schoolId,
     $core.String? parentId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? phoneNumber,
   }) {
     final result = create();
     if (schoolId != null) result.schoolId = schoolId;
     if (parentId != null) result.parentId = parentId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
     return result;
   }
 
@@ -801,6 +908,10 @@ class AddParentToSchoolRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'schoolId')
     ..aOS(2, _omitFieldNames ? '' : 'parentId')
+    ..aOS(3, _omitFieldNames ? '' : 'firstName')
+    ..aOS(4, _omitFieldNames ? '' : 'secondName')
+    ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(6, _omitFieldNames ? '' : 'phoneNumber')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -842,6 +953,42 @@ class AddParentToSchoolRequest extends $pb.GeneratedMessage {
   $core.bool hasParentId() => $_has(1);
   @$pb.TagNumber(2)
   void clearParentId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get firstName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set firstName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasFirstName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFirstName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get secondName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set secondName($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasSecondName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSecondName() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get identificationNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set identificationNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasIdentificationNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIdentificationNumber() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get phoneNumber => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set phoneNumber($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasPhoneNumber() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearPhoneNumber() => $_clearField(6);
 }
 
 class AddParentToSchoolResponse extends $pb.GeneratedMessage {
@@ -1162,10 +1309,19 @@ class AddStudentToSchoolRequest extends $pb.GeneratedMessage {
   factory AddStudentToSchoolRequest({
     $core.String? schoolId,
     $core.String? studentId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? parentId,
   }) {
     final result = create();
     if (schoolId != null) result.schoolId = schoolId;
     if (studentId != null) result.studentId = studentId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (parentId != null) result.parentId = parentId;
     return result;
   }
 
@@ -1185,6 +1341,10 @@ class AddStudentToSchoolRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'schoolId')
     ..aOS(2, _omitFieldNames ? '' : 'studentId')
+    ..aOS(3, _omitFieldNames ? '' : 'firstName')
+    ..aOS(4, _omitFieldNames ? '' : 'secondName')
+    ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(6, _omitFieldNames ? '' : 'parentId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1226,6 +1386,42 @@ class AddStudentToSchoolRequest extends $pb.GeneratedMessage {
   $core.bool hasStudentId() => $_has(1);
   @$pb.TagNumber(2)
   void clearStudentId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get firstName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set firstName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasFirstName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFirstName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get secondName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set secondName($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasSecondName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSecondName() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get identificationNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set identificationNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasIdentificationNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIdentificationNumber() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get parentId => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set parentId($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasParentId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearParentId() => $_clearField(6);
 }
 
 class AddStudentToSchoolResponse extends $pb.GeneratedMessage {
@@ -2104,10 +2300,19 @@ class AddEmployeeToSchoolChainRequest extends $pb.GeneratedMessage {
   factory AddEmployeeToSchoolChainRequest({
     $core.String? schoolChainId,
     $core.String? employeeId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? phoneNumber,
   }) {
     final result = create();
     if (schoolChainId != null) result.schoolChainId = schoolChainId;
     if (employeeId != null) result.employeeId = employeeId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
     return result;
   }
 
@@ -2127,6 +2332,10 @@ class AddEmployeeToSchoolChainRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'schoolChainId')
     ..aOS(2, _omitFieldNames ? '' : 'employeeId')
+    ..aOS(3, _omitFieldNames ? '' : 'firstName')
+    ..aOS(4, _omitFieldNames ? '' : 'secondName')
+    ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(6, _omitFieldNames ? '' : 'phoneNumber')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -2171,6 +2380,42 @@ class AddEmployeeToSchoolChainRequest extends $pb.GeneratedMessage {
   $core.bool hasEmployeeId() => $_has(1);
   @$pb.TagNumber(2)
   void clearEmployeeId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get firstName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set firstName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasFirstName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFirstName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get secondName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set secondName($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasSecondName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSecondName() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get identificationNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set identificationNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasIdentificationNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIdentificationNumber() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get phoneNumber => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set phoneNumber($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasPhoneNumber() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearPhoneNumber() => $_clearField(6);
 }
 
 class AddEmployeeToSchoolChainResponse extends $pb.GeneratedMessage {
@@ -4978,11 +5223,9 @@ class RemoveEmployeeFromSchoolChainResponse extends $pb.GeneratedMessage {
 
 class GetSchoolParentIdsRequest extends $pb.GeneratedMessage {
   factory GetSchoolParentIdsRequest({
-    $1.PaginationRequest? pagination,
     $core.String? schoolId,
   }) {
     final result = create();
-    if (pagination != null) result.pagination = pagination;
     if (schoolId != null) result.schoolId = schoolId;
     return result;
   }
@@ -5001,8 +5244,6 @@ class GetSchoolParentIdsRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
-    ..aOM<$1.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
-        subBuilder: $1.PaginationRequest.create)
     ..aOS(2, _omitFieldNames ? '' : 'schoolId')
     ..hasRequiredFields = false;
 
@@ -5028,34 +5269,21 @@ class GetSchoolParentIdsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetSchoolParentIdsRequest>(create);
   static GetSchoolParentIdsRequest? _defaultInstance;
 
-  @$pb.TagNumber(1)
-  $1.PaginationRequest get pagination => $_getN(0);
-  @$pb.TagNumber(1)
-  set pagination($1.PaginationRequest value) => $_setField(1, value);
-  @$pb.TagNumber(1)
-  $core.bool hasPagination() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearPagination() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $1.PaginationRequest ensurePagination() => $_ensure(0);
-
   @$pb.TagNumber(2)
-  $core.String get schoolId => $_getSZ(1);
+  $core.String get schoolId => $_getSZ(0);
   @$pb.TagNumber(2)
-  set schoolId($core.String value) => $_setString(1, value);
+  set schoolId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(2)
-  $core.bool hasSchoolId() => $_has(1);
+  $core.bool hasSchoolId() => $_has(0);
   @$pb.TagNumber(2)
   void clearSchoolId() => $_clearField(2);
 }
 
 class GetSchoolParentIdsResponse extends $pb.GeneratedMessage {
   factory GetSchoolParentIdsResponse({
-    $1.PaginationResponse? pagination,
     $core.Iterable<$core.String>? parentIds,
   }) {
     final result = create();
-    if (pagination != null) result.pagination = pagination;
     if (parentIds != null) result.parentIds.addAll(parentIds);
     return result;
   }
@@ -5074,8 +5302,6 @@ class GetSchoolParentIdsResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
-    ..aOM<$1.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
-        subBuilder: $1.PaginationResponse.create)
     ..pPS(2, _omitFieldNames ? '' : 'parentIds')
     ..hasRequiredFields = false;
 
@@ -5102,19 +5328,8 @@ class GetSchoolParentIdsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetSchoolParentIdsResponse>(create);
   static GetSchoolParentIdsResponse? _defaultInstance;
 
-  @$pb.TagNumber(1)
-  $1.PaginationResponse get pagination => $_getN(0);
-  @$pb.TagNumber(1)
-  set pagination($1.PaginationResponse value) => $_setField(1, value);
-  @$pb.TagNumber(1)
-  $core.bool hasPagination() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearPagination() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $1.PaginationResponse ensurePagination() => $_ensure(0);
-
   @$pb.TagNumber(2)
-  $pb.PbList<$core.String> get parentIds => $_getList(1);
+  $pb.PbList<$core.String> get parentIds => $_getList(0);
 }
 
 const $core.bool _omitFieldNames =

@@ -160,14 +160,37 @@ const AddTeacherToSchoolRequest$json = {
   '2': [
     {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
     {'1': 'teacher_id', '3': 2, '4': 1, '5': 9, '10': 'teacherId'},
+    {'1': 'first_name', '3': 3, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 6, '4': 1, '5': 9, '10': 'phoneNumber'},
+  ],
+  '8': [
+    {'1': '_second_name'},
   ],
 };
 
 /// Descriptor for `AddTeacherToSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addTeacherToSchoolRequestDescriptor =
-    $convert.base64Decode(
-        'ChlBZGRUZWFjaGVyVG9TY2hvb2xSZXF1ZXN0EhsKCXNjaG9vbF9pZBgBIAEoCVIIc2Nob29sSW'
-        'QSHQoKdGVhY2hlcl9pZBgCIAEoCVIJdGVhY2hlcklk');
+final $typed_data.Uint8List addTeacherToSchoolRequestDescriptor = $convert.base64Decode(
+    'ChlBZGRUZWFjaGVyVG9TY2hvb2xSZXF1ZXN0EhsKCXNjaG9vbF9pZBgBIAEoCVIIc2Nob29sSW'
+    'QSHQoKdGVhY2hlcl9pZBgCIAEoCVIJdGVhY2hlcklkEh0KCmZpcnN0X25hbWUYAyABKAlSCWZp'
+    'cnN0TmFtZRIkCgtzZWNvbmRfbmFtZRgEIAEoCUgAUgpzZWNvbmROYW1liAEBEjMKFWlkZW50aW'
+    'ZpY2F0aW9uX251bWJlchgFIAEoCVIUaWRlbnRpZmljYXRpb25OdW1iZXISIQoMcGhvbmVfbnVt'
+    'YmVyGAYgASgJUgtwaG9uZU51bWJlckIOCgxfc2Vjb25kX25hbWU=');
 
 @$core.Deprecated('Use addTeacherToSchoolResponseDescriptor instead')
 const AddTeacherToSchoolResponse$json = {
@@ -189,14 +212,37 @@ const AddEmployeeToSchoolRequest$json = {
   '2': [
     {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
     {'1': 'employee_id', '3': 2, '4': 1, '5': 9, '10': 'employeeId'},
+    {'1': 'first_name', '3': 3, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 6, '4': 1, '5': 9, '10': 'phoneNumber'},
+  ],
+  '8': [
+    {'1': '_second_name'},
   ],
 };
 
 /// Descriptor for `AddEmployeeToSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addEmployeeToSchoolRequestDescriptor =
-    $convert.base64Decode(
-        'ChpBZGRFbXBsb3llZVRvU2Nob29sUmVxdWVzdBIbCglzY2hvb2xfaWQYASABKAlSCHNjaG9vbE'
-        'lkEh8KC2VtcGxveWVlX2lkGAIgASgJUgplbXBsb3llZUlk');
+final $typed_data.Uint8List addEmployeeToSchoolRequestDescriptor = $convert.base64Decode(
+    'ChpBZGRFbXBsb3llZVRvU2Nob29sUmVxdWVzdBIbCglzY2hvb2xfaWQYASABKAlSCHNjaG9vbE'
+    'lkEh8KC2VtcGxveWVlX2lkGAIgASgJUgplbXBsb3llZUlkEh0KCmZpcnN0X25hbWUYAyABKAlS'
+    'CWZpcnN0TmFtZRIkCgtzZWNvbmRfbmFtZRgEIAEoCUgAUgpzZWNvbmROYW1liAEBEjMKFWlkZW'
+    '50aWZpY2F0aW9uX251bWJlchgFIAEoCVIUaWRlbnRpZmljYXRpb25OdW1iZXISIQoMcGhvbmVf'
+    'bnVtYmVyGAYgASgJUgtwaG9uZU51bWJlckIOCgxfc2Vjb25kX25hbWU=');
 
 @$core.Deprecated('Use addEmployeeToSchoolResponseDescriptor instead')
 const AddEmployeeToSchoolResponse$json = {
@@ -218,14 +264,37 @@ const AddParentToSchoolRequest$json = {
   '2': [
     {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
     {'1': 'parent_id', '3': 2, '4': 1, '5': 9, '10': 'parentId'},
+    {'1': 'first_name', '3': 3, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 6, '4': 1, '5': 9, '10': 'phoneNumber'},
+  ],
+  '8': [
+    {'1': '_second_name'},
   ],
 };
 
 /// Descriptor for `AddParentToSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addParentToSchoolRequestDescriptor =
-    $convert.base64Decode(
-        'ChhBZGRQYXJlbnRUb1NjaG9vbFJlcXVlc3QSGwoJc2Nob29sX2lkGAEgASgJUghzY2hvb2xJZB'
-        'IbCglwYXJlbnRfaWQYAiABKAlSCHBhcmVudElk');
+final $typed_data.Uint8List addParentToSchoolRequestDescriptor = $convert.base64Decode(
+    'ChhBZGRQYXJlbnRUb1NjaG9vbFJlcXVlc3QSGwoJc2Nob29sX2lkGAEgASgJUghzY2hvb2xJZB'
+    'IbCglwYXJlbnRfaWQYAiABKAlSCHBhcmVudElkEh0KCmZpcnN0X25hbWUYAyABKAlSCWZpcnN0'
+    'TmFtZRIkCgtzZWNvbmRfbmFtZRgEIAEoCUgAUgpzZWNvbmROYW1liAEBEjMKFWlkZW50aWZpY2'
+    'F0aW9uX251bWJlchgFIAEoCVIUaWRlbnRpZmljYXRpb25OdW1iZXISIQoMcGhvbmVfbnVtYmVy'
+    'GAYgASgJUgtwaG9uZU51bWJlckIOCgxfc2Vjb25kX25hbWU=');
 
 @$core.Deprecated('Use addParentToSchoolResponseDescriptor instead')
 const AddParentToSchoolResponse$json = {
@@ -304,14 +373,50 @@ const AddStudentToSchoolRequest$json = {
   '2': [
     {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
     {'1': 'student_id', '3': 2, '4': 1, '5': 9, '10': 'studentId'},
+    {'1': 'first_name', '3': 3, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'parent_id',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'parentId',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_identification_number'},
+    {'1': '_parent_id'},
   ],
 };
 
 /// Descriptor for `AddStudentToSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addStudentToSchoolRequestDescriptor =
-    $convert.base64Decode(
-        'ChlBZGRTdHVkZW50VG9TY2hvb2xSZXF1ZXN0EhsKCXNjaG9vbF9pZBgBIAEoCVIIc2Nob29sSW'
-        'QSHQoKc3R1ZGVudF9pZBgCIAEoCVIJc3R1ZGVudElk');
+final $typed_data.Uint8List addStudentToSchoolRequestDescriptor = $convert.base64Decode(
+    'ChlBZGRTdHVkZW50VG9TY2hvb2xSZXF1ZXN0EhsKCXNjaG9vbF9pZBgBIAEoCVIIc2Nob29sSW'
+    'QSHQoKc3R1ZGVudF9pZBgCIAEoCVIJc3R1ZGVudElkEh0KCmZpcnN0X25hbWUYAyABKAlSCWZp'
+    'cnN0TmFtZRIkCgtzZWNvbmRfbmFtZRgEIAEoCUgAUgpzZWNvbmROYW1liAEBEjgKFWlkZW50aW'
+    'ZpY2F0aW9uX251bWJlchgFIAEoCUgBUhRpZGVudGlmaWNhdGlvbk51bWJlcogBARIgCglwYXJl'
+    'bnRfaWQYBiABKAlIAlIIcGFyZW50SWSIAQFCDgoMX3NlY29uZF9uYW1lQhgKFl9pZGVudGlmaW'
+    'NhdGlvbl9udW1iZXJCDAoKX3BhcmVudF9pZA==');
 
 @$core.Deprecated('Use addStudentToSchoolResponseDescriptor instead')
 const AddStudentToSchoolResponse$json = {
@@ -577,14 +682,38 @@ const AddEmployeeToSchoolChainRequest$json = {
   '2': [
     {'1': 'school_chain_id', '3': 1, '4': 1, '5': 9, '10': 'schoolChainId'},
     {'1': 'employee_id', '3': 2, '4': 1, '5': 9, '10': 'employeeId'},
+    {'1': 'first_name', '3': 3, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 6, '4': 1, '5': 9, '10': 'phoneNumber'},
+  ],
+  '8': [
+    {'1': '_second_name'},
   ],
 };
 
 /// Descriptor for `AddEmployeeToSchoolChainRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addEmployeeToSchoolChainRequestDescriptor =
-    $convert.base64Decode(
-        'Ch9BZGRFbXBsb3llZVRvU2Nob29sQ2hhaW5SZXF1ZXN0EiYKD3NjaG9vbF9jaGFpbl9pZBgBIA'
-        'EoCVINc2Nob29sQ2hhaW5JZBIfCgtlbXBsb3llZV9pZBgCIAEoCVIKZW1wbG95ZWVJZA==');
+final $typed_data.Uint8List addEmployeeToSchoolChainRequestDescriptor = $convert.base64Decode(
+    'Ch9BZGRFbXBsb3llZVRvU2Nob29sQ2hhaW5SZXF1ZXN0EiYKD3NjaG9vbF9jaGFpbl9pZBgBIA'
+    'EoCVINc2Nob29sQ2hhaW5JZBIfCgtlbXBsb3llZV9pZBgCIAEoCVIKZW1wbG95ZWVJZBIdCgpm'
+    'aXJzdF9uYW1lGAMgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYBCABKAlIAFIKc2Vjb2'
+    '5kTmFtZYgBARIzChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBSABKAlSFGlkZW50aWZpY2F0aW9u'
+    'TnVtYmVyEiEKDHBob25lX251bWJlchgGIAEoCVILcGhvbmVOdW1iZXJCDgoMX3NlY29uZF9uYW'
+    '1l');
 
 @$core.Deprecated('Use addEmployeeToSchoolChainResponseDescriptor instead')
 const AddEmployeeToSchoolChainResponse$json = {
@@ -1601,36 +1730,20 @@ final $typed_data.Uint8List removeEmployeeFromSchoolChainResponseDescriptor =
 const GetSchoolParentIdsRequest$json = {
   '1': 'GetSchoolParentIdsRequest',
   '2': [
-    {
-      '1': 'pagination',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.common_messages.PaginationRequest',
-      '10': 'pagination'
-    },
     {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
   ],
 };
 
 /// Descriptor for `GetSchoolParentIdsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getSchoolParentIdsRequestDescriptor = $convert.base64Decode(
-    'ChlHZXRTY2hvb2xQYXJlbnRJZHNSZXF1ZXN0EkIKCnBhZ2luYXRpb24YASABKAsyIi5jb21tb2'
-    '5fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SGwoJc2Nob29sX2lkGAIg'
-    'ASgJUghzY2hvb2xJZA==');
+final $typed_data.Uint8List getSchoolParentIdsRequestDescriptor =
+    $convert.base64Decode(
+        'ChlHZXRTY2hvb2xQYXJlbnRJZHNSZXF1ZXN0EhsKCXNjaG9vbF9pZBgCIAEoCVIIc2Nob29sSW'
+        'Q=');
 
 @$core.Deprecated('Use getSchoolParentIdsResponseDescriptor instead')
 const GetSchoolParentIdsResponse$json = {
   '1': 'GetSchoolParentIdsResponse',
   '2': [
-    {
-      '1': 'pagination',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.common_messages.PaginationResponse',
-      '10': 'pagination'
-    },
     {'1': 'parent_ids', '3': 2, '4': 3, '5': 9, '10': 'parentIds'},
   ],
 };
@@ -1638,6 +1751,5 @@ const GetSchoolParentIdsResponse$json = {
 /// Descriptor for `GetSchoolParentIdsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getSchoolParentIdsResponseDescriptor =
     $convert.base64Decode(
-        'ChpHZXRTY2hvb2xQYXJlbnRJZHNSZXNwb25zZRJDCgpwYWdpbmF0aW9uGAEgASgLMiMuY29tbW'
-        '9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbhIdCgpwYXJlbnRfaWRz'
-        'GAIgAygJUglwYXJlbnRJZHM=');
+        'ChpHZXRTY2hvb2xQYXJlbnRJZHNSZXNwb25zZRIdCgpwYXJlbnRfaWRzGAIgAygJUglwYXJlbn'
+        'RJZHM=');
