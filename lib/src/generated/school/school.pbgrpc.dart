@@ -301,6 +301,15 @@ class SchoolServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetStudentEnrollmentInfoResponse>
+      getStudentEnrollmentInfo(
+    $0.GetStudentEnrollmentInfoRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getStudentEnrollmentInfo, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -487,6 +496,12 @@ class SchoolServiceClient extends $grpc.Client {
           ($0.GetActiveAndUpcommingClassesSelectionMenuItemsRequest value) =>
               value.writeToBuffer(),
           $0.GetActiveAndUpcommingClassesSelectionMenuItemsResponse.fromBuffer);
+  static final _$getStudentEnrollmentInfo = $grpc.ClientMethod<
+          $0.GetStudentEnrollmentInfoRequest,
+          $0.GetStudentEnrollmentInfoResponse>(
+      '/school.SchoolService/GetStudentEnrollmentInfo',
+      ($0.GetStudentEnrollmentInfoRequest value) => value.writeToBuffer(),
+      $0.GetStudentEnrollmentInfoResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -811,6 +826,15 @@ abstract class SchoolServiceBase extends $grpc.Service {
                 value),
         ($0.GetActiveAndUpcommingClassesSelectionMenuItemsResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetStudentEnrollmentInfoRequest,
+            $0.GetStudentEnrollmentInfoResponse>(
+        'GetStudentEnrollmentInfo',
+        getStudentEnrollmentInfo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetStudentEnrollmentInfoRequest.fromBuffer(value),
+        ($0.GetStudentEnrollmentInfoResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -1135,4 +1159,13 @@ abstract class SchoolServiceBase extends $grpc.Service {
   $async.Future<$0.GetActiveAndUpcommingClassesSelectionMenuItemsResponse>
       getActiveAndUpcommingClassesSelectionMenuItems($grpc.ServiceCall call,
           $0.GetActiveAndUpcommingClassesSelectionMenuItemsRequest request);
+
+  $async.Future<$0.GetStudentEnrollmentInfoResponse>
+      getStudentEnrollmentInfo_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetStudentEnrollmentInfoRequest> $request) async {
+    return getStudentEnrollmentInfo($call, await $request);
+  }
+
+  $async.Future<$0.GetStudentEnrollmentInfoResponse> getStudentEnrollmentInfo(
+      $grpc.ServiceCall call, $0.GetStudentEnrollmentInfoRequest request);
 }

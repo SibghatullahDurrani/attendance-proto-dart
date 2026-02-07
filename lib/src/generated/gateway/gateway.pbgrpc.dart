@@ -16,12 +16,12 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../messages/attendance/messages.pb.dart' as $3;
+import '../messages/attendance/messages.pb.dart' as $2;
 import '../messages/auth/messages.pb.dart' as $0;
-import '../messages/gateway/messages.pb.dart' as $2;
-import '../messages/leave/messages.pb.dart' as $5;
+import '../messages/gateway/messages.pb.dart' as $5;
+import '../messages/leave/messages.pb.dart' as $4;
 import '../messages/school/messages.pb.dart' as $1;
-import '../messages/user/messages.pb.dart' as $4;
+import '../messages/user/messages.pb.dart' as $3;
 
 export 'gateway.pb.dart';
 
@@ -160,216 +160,6 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// Saga RPCS
-  $grpc.ResponseFuture<$2.RegisterTeacherResponse> registerTeacher(
-    $async.Stream<$2.RegisterTeacherRequest> request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createStreamingCall(_$registerTeacher, request, options: options)
-        .single;
-  }
-
-  $grpc.ResponseFuture<$2.RegisterStudentResponse> registerStudent(
-    $async.Stream<$2.RegisterStudentRequest> request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createStreamingCall(_$registerStudent, request, options: options)
-        .single;
-  }
-
-  $grpc.ResponseFuture<$2.RegisterParentResponse> registerParent(
-    $2.RegisterParentRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$registerParent, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$2.RegisterSchoolEmployeeResponse>
-      registerSchoolEmployee(
-    $async.Stream<$2.RegisterSchoolEmployeeRequest> request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createStreamingCall(_$registerSchoolEmployee, request,
-            options: options)
-        .single;
-  }
-
-  $grpc.ResponseFuture<$2.RegisterSchoolAdminResponse> registerSchoolAdmin(
-    $2.RegisterSchoolAdminRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$registerSchoolAdmin, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$2.RegisterSchoolChainAdminResponse>
-      registerSchoolChainAdmin(
-    $2.RegisterSchoolChainAdminRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$registerSchoolChainAdmin, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$2.RegisterSchoolChainEmployeeResponse>
-      registerSchoolChainEmployee(
-    $async.Stream<$2.RegisterSchoolChainEmployeeRequest> request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createStreamingCall(_$registerSchoolChainEmployee, request,
-            options: options)
-        .single;
-  }
-
-  /// Attendance RPCS
-  $grpc.ResponseFuture<$3.GetUserMonthlyAttendanceStatsResponse>
-      getUserMonthlyAttendanceStats(
-    $3.GetUserMonthlyAttendanceStatsRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getUserMonthlyAttendanceStats, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$3.GetUserAttendanceCalendarResponse>
-      getUserAttendanceCalendar(
-    $3.GetUserAttendanceCalendarRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getUserAttendanceCalendar, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$3.GetUserYearlyAttendanceStatsResponse>
-      getUserYearlyAttendanceStats(
-    $3.GetUserYearlyAttendanceStatsRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getUserYearlyAttendanceStats, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$3.GetUserAttendanceDetailsResponse>
-      getUserAttendanceDetails(
-    $3.GetUserAttendanceDetailsRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getUserAttendanceDetails, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$3.GetUserShiftOffDaysResponse> getUserShiftOffDays(
-    $3.GetUserShiftOffDaysRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getUserShiftOffDays, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$3.GetUserHolidaysForMonthResponse>
-      getUserHolidaysForMonth(
-    $3.GetUserHolidaysForMonthRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getUserHolidaysForMonth, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$3.CreateOrganizationShiftResponse>
-      createOrganizationShift(
-    $3.CreateOrganizationShiftRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$createOrganizationShift, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$3.ListAllOrganizationShiftsResponse>
-      listAllOrganizationShifts(
-    $3.ListAllOrganizationShiftsRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$listAllOrganizationShifts, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$3.GetOrganizationShiftSelectionMenuItemsResponse>
-      getOrganizationShiftSelectionMenuItems(
-    $3.GetOrganizationShiftSelectionMenuItemsRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getOrganizationShiftSelectionMenuItems, request,
-        options: options);
-  }
-
-  $grpc.ResponseFuture<$3.GetOrganizationDefaultShiftResponse>
-      getOrganizationDefaultShift(
-    $3.GetOrganizationDefaultShiftRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getOrganizationDefaultShift, request,
-        options: options);
-  }
-
-  /// User RPCs
-  $grpc.ResponseFuture<$2.GetUserFullNameResponse> getUserFullName(
-    $2.GetUserFullNameRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getUserFullName, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$2.GetUserTimezoneResponse> getUserTimezone(
-    $2.GetUserTimezoneRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getUserTimezone, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$4.GetParentStudentSelectionDataResponse>
-      getParentStudentSelectionData(
-    $4.GetParentStudentSelectionDataRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getParentStudentSelectionData, request,
-        options: options);
-  }
-
-  /// Leave RPCs
-  $grpc.ResponseFuture<$5.ListUserLeavesResponse> listUserLeaves(
-    $5.ListUserLeavesRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$listUserLeaves, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$5.CreateLeaveResponse> createLeave(
-    $5.CreateLeaveRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$createLeave, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$5.GetLeaveDetailsResponse> getLeaveDetails(
-    $5.GetLeaveDetailsRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getLeaveDetails, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$5.UpdateLeaveResponse> updateLeave(
-    $5.UpdateLeaveRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$updateLeave, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$5.DeleteLeaveResponse> deleteLeave(
-    $5.DeleteLeaveRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$deleteLeave, request, options: options);
-  }
-
-  /// Mixed Rpcs
   $grpc.ResponseFuture<$1.GetSchoolParentSelectionMenuItemsResponse>
       getSchoolParentSelectionMenuItems(
     $1.GetSchoolParentSelectionMenuItemsRequest request, {
@@ -388,6 +178,222 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(
         _$getActiveAndUpcommingClassesSelectionMenuItems, request,
         options: options);
+  }
+
+  /// Attendance RPCS
+  $grpc.ResponseFuture<$2.GetUserMonthlyAttendanceStatsResponse>
+      getUserMonthlyAttendanceStats(
+    $2.GetUserMonthlyAttendanceStatsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserMonthlyAttendanceStats, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.GetUserAttendanceCalendarResponse>
+      getUserAttendanceCalendar(
+    $2.GetUserAttendanceCalendarRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserAttendanceCalendar, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.GetUserYearlyAttendanceStatsResponse>
+      getUserYearlyAttendanceStats(
+    $2.GetUserYearlyAttendanceStatsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserYearlyAttendanceStats, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.GetUserAttendanceDetailsResponse>
+      getUserAttendanceDetails(
+    $2.GetUserAttendanceDetailsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserAttendanceDetails, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.GetUserShiftOffDaysResponse> getUserShiftOffDays(
+    $2.GetUserShiftOffDaysRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserShiftOffDays, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.GetUserHolidaysForMonthResponse>
+      getUserHolidaysForMonth(
+    $2.GetUserHolidaysForMonthRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserHolidaysForMonth, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.CreateOrganizationShiftResponse>
+      createOrganizationShift(
+    $2.CreateOrganizationShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$createOrganizationShift, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.ListAllOrganizationShiftsResponse>
+      listAllOrganizationShifts(
+    $2.ListAllOrganizationShiftsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listAllOrganizationShifts, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.GetOrganizationShiftSelectionMenuItemsResponse>
+      getOrganizationShiftSelectionMenuItems(
+    $2.GetOrganizationShiftSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getOrganizationShiftSelectionMenuItems, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$2.GetOrganizationDefaultShiftResponse>
+      getOrganizationDefaultShift(
+    $2.GetOrganizationDefaultShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getOrganizationDefaultShift, request,
+        options: options);
+  }
+
+  /// User RPCs
+  $grpc.ResponseFuture<$3.GetParentStudentSelectionDataResponse>
+      getParentStudentSelectionData(
+    $3.GetParentStudentSelectionDataRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getParentStudentSelectionData, request,
+        options: options);
+  }
+
+  /// Leave RPCs
+  $grpc.ResponseFuture<$4.ListUserLeavesResponse> listUserLeaves(
+    $4.ListUserLeavesRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listUserLeaves, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.CreateLeaveResponse> createLeave(
+    $4.CreateLeaveRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$createLeave, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.GetLeaveDetailsResponse> getLeaveDetails(
+    $4.GetLeaveDetailsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getLeaveDetails, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.UpdateLeaveResponse> updateLeave(
+    $4.UpdateLeaveRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$updateLeave, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$4.DeleteLeaveResponse> deleteLeave(
+    $4.DeleteLeaveRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$deleteLeave, request, options: options);
+  }
+
+  /// Multi-Service Rpcs
+  $grpc.ResponseFuture<$5.GetUserFullNameResponse> getUserFullName(
+    $5.GetUserFullNameRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserFullName, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$5.GetUserTimezoneResponse> getUserTimezone(
+    $5.GetUserTimezoneRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserTimezone, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$5.RegisterTeacherResponse> registerTeacher(
+    $async.Stream<$5.RegisterTeacherRequest> request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createStreamingCall(_$registerTeacher, request, options: options)
+        .single;
+  }
+
+  $grpc.ResponseFuture<$5.RegisterStudentResponse> registerStudent(
+    $async.Stream<$5.RegisterStudentRequest> request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createStreamingCall(_$registerStudent, request, options: options)
+        .single;
+  }
+
+  $grpc.ResponseFuture<$5.RegisterParentResponse> registerParent(
+    $5.RegisterParentRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$registerParent, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$5.RegisterSchoolEmployeeResponse>
+      registerSchoolEmployee(
+    $async.Stream<$5.RegisterSchoolEmployeeRequest> request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createStreamingCall(_$registerSchoolEmployee, request,
+            options: options)
+        .single;
+  }
+
+  $grpc.ResponseFuture<$5.RegisterSchoolAdminResponse> registerSchoolAdmin(
+    $5.RegisterSchoolAdminRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$registerSchoolAdmin, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$5.RegisterSchoolChainAdminResponse>
+      registerSchoolChainAdmin(
+    $5.RegisterSchoolChainAdminRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$registerSchoolChainAdmin, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$5.RegisterSchoolChainEmployeeResponse>
+      registerSchoolChainEmployee(
+    $async.Stream<$5.RegisterSchoolChainEmployeeRequest> request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createStreamingCall(_$registerSchoolChainEmployee, request,
+            options: options)
+        .single;
+  }
+
+  $grpc.ResponseFuture<$5.ListStudentsOfSchoolResponse> listStudentsOfSchool(
+    $5.ListStudentsOfSchoolRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listStudentsOfSchool, request, options: options);
   }
 
   // method descriptors
@@ -477,144 +483,6 @@ class GatewayServiceClient extends $grpc.Client {
           ($1.GetSchoolActiveAndUpcomingSessionMenuItemsRequest value) =>
               value.writeToBuffer(),
           $1.GetSchoolActiveAndUpcomingSessionMenuItemsResponse.fromBuffer);
-  static final _$registerTeacher =
-      $grpc.ClientMethod<$2.RegisterTeacherRequest, $2.RegisterTeacherResponse>(
-          '/gateway.GatewayService/RegisterTeacher',
-          ($2.RegisterTeacherRequest value) => value.writeToBuffer(),
-          $2.RegisterTeacherResponse.fromBuffer);
-  static final _$registerStudent =
-      $grpc.ClientMethod<$2.RegisterStudentRequest, $2.RegisterStudentResponse>(
-          '/gateway.GatewayService/RegisterStudent',
-          ($2.RegisterStudentRequest value) => value.writeToBuffer(),
-          $2.RegisterStudentResponse.fromBuffer);
-  static final _$registerParent =
-      $grpc.ClientMethod<$2.RegisterParentRequest, $2.RegisterParentResponse>(
-          '/gateway.GatewayService/RegisterParent',
-          ($2.RegisterParentRequest value) => value.writeToBuffer(),
-          $2.RegisterParentResponse.fromBuffer);
-  static final _$registerSchoolEmployee = $grpc.ClientMethod<
-          $2.RegisterSchoolEmployeeRequest, $2.RegisterSchoolEmployeeResponse>(
-      '/gateway.GatewayService/RegisterSchoolEmployee',
-      ($2.RegisterSchoolEmployeeRequest value) => value.writeToBuffer(),
-      $2.RegisterSchoolEmployeeResponse.fromBuffer);
-  static final _$registerSchoolAdmin = $grpc.ClientMethod<
-          $2.RegisterSchoolAdminRequest, $2.RegisterSchoolAdminResponse>(
-      '/gateway.GatewayService/RegisterSchoolAdmin',
-      ($2.RegisterSchoolAdminRequest value) => value.writeToBuffer(),
-      $2.RegisterSchoolAdminResponse.fromBuffer);
-  static final _$registerSchoolChainAdmin = $grpc.ClientMethod<
-          $2.RegisterSchoolChainAdminRequest,
-          $2.RegisterSchoolChainAdminResponse>(
-      '/gateway.GatewayService/RegisterSchoolChainAdmin',
-      ($2.RegisterSchoolChainAdminRequest value) => value.writeToBuffer(),
-      $2.RegisterSchoolChainAdminResponse.fromBuffer);
-  static final _$registerSchoolChainEmployee = $grpc.ClientMethod<
-          $2.RegisterSchoolChainEmployeeRequest,
-          $2.RegisterSchoolChainEmployeeResponse>(
-      '/gateway.GatewayService/RegisterSchoolChainEmployee',
-      ($2.RegisterSchoolChainEmployeeRequest value) => value.writeToBuffer(),
-      $2.RegisterSchoolChainEmployeeResponse.fromBuffer);
-  static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
-          $3.GetUserMonthlyAttendanceStatsRequest,
-          $3.GetUserMonthlyAttendanceStatsResponse>(
-      '/gateway.GatewayService/GetUserMonthlyAttendanceStats',
-      ($3.GetUserMonthlyAttendanceStatsRequest value) => value.writeToBuffer(),
-      $3.GetUserMonthlyAttendanceStatsResponse.fromBuffer);
-  static final _$getUserAttendanceCalendar = $grpc.ClientMethod<
-          $3.GetUserAttendanceCalendarRequest,
-          $3.GetUserAttendanceCalendarResponse>(
-      '/gateway.GatewayService/GetUserAttendanceCalendar',
-      ($3.GetUserAttendanceCalendarRequest value) => value.writeToBuffer(),
-      $3.GetUserAttendanceCalendarResponse.fromBuffer);
-  static final _$getUserYearlyAttendanceStats = $grpc.ClientMethod<
-          $3.GetUserYearlyAttendanceStatsRequest,
-          $3.GetUserYearlyAttendanceStatsResponse>(
-      '/gateway.GatewayService/GetUserYearlyAttendanceStats',
-      ($3.GetUserYearlyAttendanceStatsRequest value) => value.writeToBuffer(),
-      $3.GetUserYearlyAttendanceStatsResponse.fromBuffer);
-  static final _$getUserAttendanceDetails = $grpc.ClientMethod<
-          $3.GetUserAttendanceDetailsRequest,
-          $3.GetUserAttendanceDetailsResponse>(
-      '/gateway.GatewayService/GetUserAttendanceDetails',
-      ($3.GetUserAttendanceDetailsRequest value) => value.writeToBuffer(),
-      $3.GetUserAttendanceDetailsResponse.fromBuffer);
-  static final _$getUserShiftOffDays = $grpc.ClientMethod<
-          $3.GetUserShiftOffDaysRequest, $3.GetUserShiftOffDaysResponse>(
-      '/gateway.GatewayService/GetUserShiftOffDays',
-      ($3.GetUserShiftOffDaysRequest value) => value.writeToBuffer(),
-      $3.GetUserShiftOffDaysResponse.fromBuffer);
-  static final _$getUserHolidaysForMonth = $grpc.ClientMethod<
-          $3.GetUserHolidaysForMonthRequest,
-          $3.GetUserHolidaysForMonthResponse>(
-      '/gateway.GatewayService/GetUserHolidaysForMonth',
-      ($3.GetUserHolidaysForMonthRequest value) => value.writeToBuffer(),
-      $3.GetUserHolidaysForMonthResponse.fromBuffer);
-  static final _$createOrganizationShift = $grpc.ClientMethod<
-          $3.CreateOrganizationShiftRequest,
-          $3.CreateOrganizationShiftResponse>(
-      '/gateway.GatewayService/CreateOrganizationShift',
-      ($3.CreateOrganizationShiftRequest value) => value.writeToBuffer(),
-      $3.CreateOrganizationShiftResponse.fromBuffer);
-  static final _$listAllOrganizationShifts = $grpc.ClientMethod<
-          $3.ListAllOrganizationShiftsRequest,
-          $3.ListAllOrganizationShiftsResponse>(
-      '/gateway.GatewayService/ListAllOrganizationShifts',
-      ($3.ListAllOrganizationShiftsRequest value) => value.writeToBuffer(),
-      $3.ListAllOrganizationShiftsResponse.fromBuffer);
-  static final _$getOrganizationShiftSelectionMenuItems = $grpc.ClientMethod<
-          $3.GetOrganizationShiftSelectionMenuItemsRequest,
-          $3.GetOrganizationShiftSelectionMenuItemsResponse>(
-      '/gateway.GatewayService/GetOrganizationShiftSelectionMenuItems',
-      ($3.GetOrganizationShiftSelectionMenuItemsRequest value) =>
-          value.writeToBuffer(),
-      $3.GetOrganizationShiftSelectionMenuItemsResponse.fromBuffer);
-  static final _$getOrganizationDefaultShift = $grpc.ClientMethod<
-          $3.GetOrganizationDefaultShiftRequest,
-          $3.GetOrganizationDefaultShiftResponse>(
-      '/gateway.GatewayService/GetOrganizationDefaultShift',
-      ($3.GetOrganizationDefaultShiftRequest value) => value.writeToBuffer(),
-      $3.GetOrganizationDefaultShiftResponse.fromBuffer);
-  static final _$getUserFullName =
-      $grpc.ClientMethod<$2.GetUserFullNameRequest, $2.GetUserFullNameResponse>(
-          '/gateway.GatewayService/GetUserFullName',
-          ($2.GetUserFullNameRequest value) => value.writeToBuffer(),
-          $2.GetUserFullNameResponse.fromBuffer);
-  static final _$getUserTimezone =
-      $grpc.ClientMethod<$2.GetUserTimezoneRequest, $2.GetUserTimezoneResponse>(
-          '/gateway.GatewayService/GetUserTimezone',
-          ($2.GetUserTimezoneRequest value) => value.writeToBuffer(),
-          $2.GetUserTimezoneResponse.fromBuffer);
-  static final _$getParentStudentSelectionData = $grpc.ClientMethod<
-          $4.GetParentStudentSelectionDataRequest,
-          $4.GetParentStudentSelectionDataResponse>(
-      '/gateway.GatewayService/GetParentStudentSelectionData',
-      ($4.GetParentStudentSelectionDataRequest value) => value.writeToBuffer(),
-      $4.GetParentStudentSelectionDataResponse.fromBuffer);
-  static final _$listUserLeaves =
-      $grpc.ClientMethod<$5.ListUserLeavesRequest, $5.ListUserLeavesResponse>(
-          '/gateway.GatewayService/ListUserLeaves',
-          ($5.ListUserLeavesRequest value) => value.writeToBuffer(),
-          $5.ListUserLeavesResponse.fromBuffer);
-  static final _$createLeave =
-      $grpc.ClientMethod<$5.CreateLeaveRequest, $5.CreateLeaveResponse>(
-          '/gateway.GatewayService/CreateLeave',
-          ($5.CreateLeaveRequest value) => value.writeToBuffer(),
-          $5.CreateLeaveResponse.fromBuffer);
-  static final _$getLeaveDetails =
-      $grpc.ClientMethod<$5.GetLeaveDetailsRequest, $5.GetLeaveDetailsResponse>(
-          '/gateway.GatewayService/GetLeaveDetails',
-          ($5.GetLeaveDetailsRequest value) => value.writeToBuffer(),
-          $5.GetLeaveDetailsResponse.fromBuffer);
-  static final _$updateLeave =
-      $grpc.ClientMethod<$5.UpdateLeaveRequest, $5.UpdateLeaveResponse>(
-          '/gateway.GatewayService/UpdateLeave',
-          ($5.UpdateLeaveRequest value) => value.writeToBuffer(),
-          $5.UpdateLeaveResponse.fromBuffer);
-  static final _$deleteLeave =
-      $grpc.ClientMethod<$5.DeleteLeaveRequest, $5.DeleteLeaveResponse>(
-          '/gateway.GatewayService/DeleteLeave',
-          ($5.DeleteLeaveRequest value) => value.writeToBuffer(),
-          $5.DeleteLeaveResponse.fromBuffer);
   static final _$getSchoolParentSelectionMenuItems = $grpc.ClientMethod<
           $1.GetSchoolParentSelectionMenuItemsRequest,
           $1.GetSchoolParentSelectionMenuItemsResponse>(
@@ -630,6 +498,149 @@ class GatewayServiceClient extends $grpc.Client {
           ($1.GetActiveAndUpcommingClassesSelectionMenuItemsRequest value) =>
               value.writeToBuffer(),
           $1.GetActiveAndUpcommingClassesSelectionMenuItemsResponse.fromBuffer);
+  static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
+          $2.GetUserMonthlyAttendanceStatsRequest,
+          $2.GetUserMonthlyAttendanceStatsResponse>(
+      '/gateway.GatewayService/GetUserMonthlyAttendanceStats',
+      ($2.GetUserMonthlyAttendanceStatsRequest value) => value.writeToBuffer(),
+      $2.GetUserMonthlyAttendanceStatsResponse.fromBuffer);
+  static final _$getUserAttendanceCalendar = $grpc.ClientMethod<
+          $2.GetUserAttendanceCalendarRequest,
+          $2.GetUserAttendanceCalendarResponse>(
+      '/gateway.GatewayService/GetUserAttendanceCalendar',
+      ($2.GetUserAttendanceCalendarRequest value) => value.writeToBuffer(),
+      $2.GetUserAttendanceCalendarResponse.fromBuffer);
+  static final _$getUserYearlyAttendanceStats = $grpc.ClientMethod<
+          $2.GetUserYearlyAttendanceStatsRequest,
+          $2.GetUserYearlyAttendanceStatsResponse>(
+      '/gateway.GatewayService/GetUserYearlyAttendanceStats',
+      ($2.GetUserYearlyAttendanceStatsRequest value) => value.writeToBuffer(),
+      $2.GetUserYearlyAttendanceStatsResponse.fromBuffer);
+  static final _$getUserAttendanceDetails = $grpc.ClientMethod<
+          $2.GetUserAttendanceDetailsRequest,
+          $2.GetUserAttendanceDetailsResponse>(
+      '/gateway.GatewayService/GetUserAttendanceDetails',
+      ($2.GetUserAttendanceDetailsRequest value) => value.writeToBuffer(),
+      $2.GetUserAttendanceDetailsResponse.fromBuffer);
+  static final _$getUserShiftOffDays = $grpc.ClientMethod<
+          $2.GetUserShiftOffDaysRequest, $2.GetUserShiftOffDaysResponse>(
+      '/gateway.GatewayService/GetUserShiftOffDays',
+      ($2.GetUserShiftOffDaysRequest value) => value.writeToBuffer(),
+      $2.GetUserShiftOffDaysResponse.fromBuffer);
+  static final _$getUserHolidaysForMonth = $grpc.ClientMethod<
+          $2.GetUserHolidaysForMonthRequest,
+          $2.GetUserHolidaysForMonthResponse>(
+      '/gateway.GatewayService/GetUserHolidaysForMonth',
+      ($2.GetUserHolidaysForMonthRequest value) => value.writeToBuffer(),
+      $2.GetUserHolidaysForMonthResponse.fromBuffer);
+  static final _$createOrganizationShift = $grpc.ClientMethod<
+          $2.CreateOrganizationShiftRequest,
+          $2.CreateOrganizationShiftResponse>(
+      '/gateway.GatewayService/CreateOrganizationShift',
+      ($2.CreateOrganizationShiftRequest value) => value.writeToBuffer(),
+      $2.CreateOrganizationShiftResponse.fromBuffer);
+  static final _$listAllOrganizationShifts = $grpc.ClientMethod<
+          $2.ListAllOrganizationShiftsRequest,
+          $2.ListAllOrganizationShiftsResponse>(
+      '/gateway.GatewayService/ListAllOrganizationShifts',
+      ($2.ListAllOrganizationShiftsRequest value) => value.writeToBuffer(),
+      $2.ListAllOrganizationShiftsResponse.fromBuffer);
+  static final _$getOrganizationShiftSelectionMenuItems = $grpc.ClientMethod<
+          $2.GetOrganizationShiftSelectionMenuItemsRequest,
+          $2.GetOrganizationShiftSelectionMenuItemsResponse>(
+      '/gateway.GatewayService/GetOrganizationShiftSelectionMenuItems',
+      ($2.GetOrganizationShiftSelectionMenuItemsRequest value) =>
+          value.writeToBuffer(),
+      $2.GetOrganizationShiftSelectionMenuItemsResponse.fromBuffer);
+  static final _$getOrganizationDefaultShift = $grpc.ClientMethod<
+          $2.GetOrganizationDefaultShiftRequest,
+          $2.GetOrganizationDefaultShiftResponse>(
+      '/gateway.GatewayService/GetOrganizationDefaultShift',
+      ($2.GetOrganizationDefaultShiftRequest value) => value.writeToBuffer(),
+      $2.GetOrganizationDefaultShiftResponse.fromBuffer);
+  static final _$getParentStudentSelectionData = $grpc.ClientMethod<
+          $3.GetParentStudentSelectionDataRequest,
+          $3.GetParentStudentSelectionDataResponse>(
+      '/gateway.GatewayService/GetParentStudentSelectionData',
+      ($3.GetParentStudentSelectionDataRequest value) => value.writeToBuffer(),
+      $3.GetParentStudentSelectionDataResponse.fromBuffer);
+  static final _$listUserLeaves =
+      $grpc.ClientMethod<$4.ListUserLeavesRequest, $4.ListUserLeavesResponse>(
+          '/gateway.GatewayService/ListUserLeaves',
+          ($4.ListUserLeavesRequest value) => value.writeToBuffer(),
+          $4.ListUserLeavesResponse.fromBuffer);
+  static final _$createLeave =
+      $grpc.ClientMethod<$4.CreateLeaveRequest, $4.CreateLeaveResponse>(
+          '/gateway.GatewayService/CreateLeave',
+          ($4.CreateLeaveRequest value) => value.writeToBuffer(),
+          $4.CreateLeaveResponse.fromBuffer);
+  static final _$getLeaveDetails =
+      $grpc.ClientMethod<$4.GetLeaveDetailsRequest, $4.GetLeaveDetailsResponse>(
+          '/gateway.GatewayService/GetLeaveDetails',
+          ($4.GetLeaveDetailsRequest value) => value.writeToBuffer(),
+          $4.GetLeaveDetailsResponse.fromBuffer);
+  static final _$updateLeave =
+      $grpc.ClientMethod<$4.UpdateLeaveRequest, $4.UpdateLeaveResponse>(
+          '/gateway.GatewayService/UpdateLeave',
+          ($4.UpdateLeaveRequest value) => value.writeToBuffer(),
+          $4.UpdateLeaveResponse.fromBuffer);
+  static final _$deleteLeave =
+      $grpc.ClientMethod<$4.DeleteLeaveRequest, $4.DeleteLeaveResponse>(
+          '/gateway.GatewayService/DeleteLeave',
+          ($4.DeleteLeaveRequest value) => value.writeToBuffer(),
+          $4.DeleteLeaveResponse.fromBuffer);
+  static final _$getUserFullName =
+      $grpc.ClientMethod<$5.GetUserFullNameRequest, $5.GetUserFullNameResponse>(
+          '/gateway.GatewayService/GetUserFullName',
+          ($5.GetUserFullNameRequest value) => value.writeToBuffer(),
+          $5.GetUserFullNameResponse.fromBuffer);
+  static final _$getUserTimezone =
+      $grpc.ClientMethod<$5.GetUserTimezoneRequest, $5.GetUserTimezoneResponse>(
+          '/gateway.GatewayService/GetUserTimezone',
+          ($5.GetUserTimezoneRequest value) => value.writeToBuffer(),
+          $5.GetUserTimezoneResponse.fromBuffer);
+  static final _$registerTeacher =
+      $grpc.ClientMethod<$5.RegisterTeacherRequest, $5.RegisterTeacherResponse>(
+          '/gateway.GatewayService/RegisterTeacher',
+          ($5.RegisterTeacherRequest value) => value.writeToBuffer(),
+          $5.RegisterTeacherResponse.fromBuffer);
+  static final _$registerStudent =
+      $grpc.ClientMethod<$5.RegisterStudentRequest, $5.RegisterStudentResponse>(
+          '/gateway.GatewayService/RegisterStudent',
+          ($5.RegisterStudentRequest value) => value.writeToBuffer(),
+          $5.RegisterStudentResponse.fromBuffer);
+  static final _$registerParent =
+      $grpc.ClientMethod<$5.RegisterParentRequest, $5.RegisterParentResponse>(
+          '/gateway.GatewayService/RegisterParent',
+          ($5.RegisterParentRequest value) => value.writeToBuffer(),
+          $5.RegisterParentResponse.fromBuffer);
+  static final _$registerSchoolEmployee = $grpc.ClientMethod<
+          $5.RegisterSchoolEmployeeRequest, $5.RegisterSchoolEmployeeResponse>(
+      '/gateway.GatewayService/RegisterSchoolEmployee',
+      ($5.RegisterSchoolEmployeeRequest value) => value.writeToBuffer(),
+      $5.RegisterSchoolEmployeeResponse.fromBuffer);
+  static final _$registerSchoolAdmin = $grpc.ClientMethod<
+          $5.RegisterSchoolAdminRequest, $5.RegisterSchoolAdminResponse>(
+      '/gateway.GatewayService/RegisterSchoolAdmin',
+      ($5.RegisterSchoolAdminRequest value) => value.writeToBuffer(),
+      $5.RegisterSchoolAdminResponse.fromBuffer);
+  static final _$registerSchoolChainAdmin = $grpc.ClientMethod<
+          $5.RegisterSchoolChainAdminRequest,
+          $5.RegisterSchoolChainAdminResponse>(
+      '/gateway.GatewayService/RegisterSchoolChainAdmin',
+      ($5.RegisterSchoolChainAdminRequest value) => value.writeToBuffer(),
+      $5.RegisterSchoolChainAdminResponse.fromBuffer);
+  static final _$registerSchoolChainEmployee = $grpc.ClientMethod<
+          $5.RegisterSchoolChainEmployeeRequest,
+          $5.RegisterSchoolChainEmployeeResponse>(
+      '/gateway.GatewayService/RegisterSchoolChainEmployee',
+      ($5.RegisterSchoolChainEmployeeRequest value) => value.writeToBuffer(),
+      $5.RegisterSchoolChainEmployeeResponse.fromBuffer);
+  static final _$listStudentsOfSchool = $grpc.ClientMethod<
+          $5.ListStudentsOfSchoolRequest, $5.ListStudentsOfSchoolResponse>(
+      '/gateway.GatewayService/ListStudentsOfSchool',
+      ($5.ListStudentsOfSchoolRequest value) => value.writeToBuffer(),
+      $5.ListStudentsOfSchoolResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -783,238 +794,6 @@ abstract class GatewayServiceBase extends $grpc.Service {
                 value),
         ($1.GetSchoolActiveAndUpcomingSessionMenuItemsResponse value) =>
             value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RegisterTeacherRequest,
-            $2.RegisterTeacherResponse>(
-        'RegisterTeacher',
-        registerTeacher,
-        true,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.RegisterTeacherRequest.fromBuffer(value),
-        ($2.RegisterTeacherResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RegisterStudentRequest,
-            $2.RegisterStudentResponse>(
-        'RegisterStudent',
-        registerStudent,
-        true,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.RegisterStudentRequest.fromBuffer(value),
-        ($2.RegisterStudentResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RegisterParentRequest,
-            $2.RegisterParentResponse>(
-        'RegisterParent',
-        registerParent_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.RegisterParentRequest.fromBuffer(value),
-        ($2.RegisterParentResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RegisterSchoolEmployeeRequest,
-            $2.RegisterSchoolEmployeeResponse>(
-        'RegisterSchoolEmployee',
-        registerSchoolEmployee,
-        true,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.RegisterSchoolEmployeeRequest.fromBuffer(value),
-        ($2.RegisterSchoolEmployeeResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RegisterSchoolAdminRequest,
-            $2.RegisterSchoolAdminResponse>(
-        'RegisterSchoolAdmin',
-        registerSchoolAdmin_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.RegisterSchoolAdminRequest.fromBuffer(value),
-        ($2.RegisterSchoolAdminResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RegisterSchoolChainAdminRequest,
-            $2.RegisterSchoolChainAdminResponse>(
-        'RegisterSchoolChainAdmin',
-        registerSchoolChainAdmin_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.RegisterSchoolChainAdminRequest.fromBuffer(value),
-        ($2.RegisterSchoolChainAdminResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RegisterSchoolChainEmployeeRequest,
-            $2.RegisterSchoolChainEmployeeResponse>(
-        'RegisterSchoolChainEmployee',
-        registerSchoolChainEmployee,
-        true,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.RegisterSchoolChainEmployeeRequest.fromBuffer(value),
-        ($2.RegisterSchoolChainEmployeeResponse value) =>
-            value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.GetUserMonthlyAttendanceStatsRequest,
-            $3.GetUserMonthlyAttendanceStatsResponse>(
-        'GetUserMonthlyAttendanceStats',
-        getUserMonthlyAttendanceStats_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $3.GetUserMonthlyAttendanceStatsRequest.fromBuffer(value),
-        ($3.GetUserMonthlyAttendanceStatsResponse value) =>
-            value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.GetUserAttendanceCalendarRequest,
-            $3.GetUserAttendanceCalendarResponse>(
-        'GetUserAttendanceCalendar',
-        getUserAttendanceCalendar_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $3.GetUserAttendanceCalendarRequest.fromBuffer(value),
-        ($3.GetUserAttendanceCalendarResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.GetUserYearlyAttendanceStatsRequest,
-            $3.GetUserYearlyAttendanceStatsResponse>(
-        'GetUserYearlyAttendanceStats',
-        getUserYearlyAttendanceStats_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $3.GetUserYearlyAttendanceStatsRequest.fromBuffer(value),
-        ($3.GetUserYearlyAttendanceStatsResponse value) =>
-            value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.GetUserAttendanceDetailsRequest,
-            $3.GetUserAttendanceDetailsResponse>(
-        'GetUserAttendanceDetails',
-        getUserAttendanceDetails_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $3.GetUserAttendanceDetailsRequest.fromBuffer(value),
-        ($3.GetUserAttendanceDetailsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.GetUserShiftOffDaysRequest,
-            $3.GetUserShiftOffDaysResponse>(
-        'GetUserShiftOffDays',
-        getUserShiftOffDays_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $3.GetUserShiftOffDaysRequest.fromBuffer(value),
-        ($3.GetUserShiftOffDaysResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.GetUserHolidaysForMonthRequest,
-            $3.GetUserHolidaysForMonthResponse>(
-        'GetUserHolidaysForMonth',
-        getUserHolidaysForMonth_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $3.GetUserHolidaysForMonthRequest.fromBuffer(value),
-        ($3.GetUserHolidaysForMonthResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.CreateOrganizationShiftRequest,
-            $3.CreateOrganizationShiftResponse>(
-        'CreateOrganizationShift',
-        createOrganizationShift_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $3.CreateOrganizationShiftRequest.fromBuffer(value),
-        ($3.CreateOrganizationShiftResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.ListAllOrganizationShiftsRequest,
-            $3.ListAllOrganizationShiftsResponse>(
-        'ListAllOrganizationShifts',
-        listAllOrganizationShifts_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $3.ListAllOrganizationShiftsRequest.fromBuffer(value),
-        ($3.ListAllOrganizationShiftsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<
-            $3.GetOrganizationShiftSelectionMenuItemsRequest,
-            $3.GetOrganizationShiftSelectionMenuItemsResponse>(
-        'GetOrganizationShiftSelectionMenuItems',
-        getOrganizationShiftSelectionMenuItems_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $3.GetOrganizationShiftSelectionMenuItemsRequest.fromBuffer(value),
-        ($3.GetOrganizationShiftSelectionMenuItemsResponse value) =>
-            value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.GetOrganizationDefaultShiftRequest,
-            $3.GetOrganizationDefaultShiftResponse>(
-        'GetOrganizationDefaultShift',
-        getOrganizationDefaultShift_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $3.GetOrganizationDefaultShiftRequest.fromBuffer(value),
-        ($3.GetOrganizationDefaultShiftResponse value) =>
-            value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.GetUserFullNameRequest,
-            $2.GetUserFullNameResponse>(
-        'GetUserFullName',
-        getUserFullName_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.GetUserFullNameRequest.fromBuffer(value),
-        ($2.GetUserFullNameResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.GetUserTimezoneRequest,
-            $2.GetUserTimezoneResponse>(
-        'GetUserTimezone',
-        getUserTimezone_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.GetUserTimezoneRequest.fromBuffer(value),
-        ($2.GetUserTimezoneResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.GetParentStudentSelectionDataRequest,
-            $4.GetParentStudentSelectionDataResponse>(
-        'GetParentStudentSelectionData',
-        getParentStudentSelectionData_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $4.GetParentStudentSelectionDataRequest.fromBuffer(value),
-        ($4.GetParentStudentSelectionDataResponse value) =>
-            value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$5.ListUserLeavesRequest,
-            $5.ListUserLeavesResponse>(
-        'ListUserLeaves',
-        listUserLeaves_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $5.ListUserLeavesRequest.fromBuffer(value),
-        ($5.ListUserLeavesResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$5.CreateLeaveRequest, $5.CreateLeaveResponse>(
-            'CreateLeave',
-            createLeave_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $5.CreateLeaveRequest.fromBuffer(value),
-            ($5.CreateLeaveResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$5.GetLeaveDetailsRequest,
-            $5.GetLeaveDetailsResponse>(
-        'GetLeaveDetails',
-        getLeaveDetails_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $5.GetLeaveDetailsRequest.fromBuffer(value),
-        ($5.GetLeaveDetailsResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$5.UpdateLeaveRequest, $5.UpdateLeaveResponse>(
-            'UpdateLeave',
-            updateLeave_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $5.UpdateLeaveRequest.fromBuffer(value),
-            ($5.UpdateLeaveResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$5.DeleteLeaveRequest, $5.DeleteLeaveResponse>(
-            'DeleteLeave',
-            deleteLeave_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $5.DeleteLeaveRequest.fromBuffer(value),
-            ($5.DeleteLeaveResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$1.GetSchoolParentSelectionMenuItemsRequest,
             $1.GetSchoolParentSelectionMenuItemsResponse>(
         'GetSchoolParentSelectionMenuItems',
@@ -1037,6 +816,247 @@ abstract class GatewayServiceBase extends $grpc.Service {
                 value),
         ($1.GetActiveAndUpcommingClassesSelectionMenuItemsResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetUserMonthlyAttendanceStatsRequest,
+            $2.GetUserMonthlyAttendanceStatsResponse>(
+        'GetUserMonthlyAttendanceStats',
+        getUserMonthlyAttendanceStats_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetUserMonthlyAttendanceStatsRequest.fromBuffer(value),
+        ($2.GetUserMonthlyAttendanceStatsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetUserAttendanceCalendarRequest,
+            $2.GetUserAttendanceCalendarResponse>(
+        'GetUserAttendanceCalendar',
+        getUserAttendanceCalendar_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetUserAttendanceCalendarRequest.fromBuffer(value),
+        ($2.GetUserAttendanceCalendarResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetUserYearlyAttendanceStatsRequest,
+            $2.GetUserYearlyAttendanceStatsResponse>(
+        'GetUserYearlyAttendanceStats',
+        getUserYearlyAttendanceStats_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetUserYearlyAttendanceStatsRequest.fromBuffer(value),
+        ($2.GetUserYearlyAttendanceStatsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetUserAttendanceDetailsRequest,
+            $2.GetUserAttendanceDetailsResponse>(
+        'GetUserAttendanceDetails',
+        getUserAttendanceDetails_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetUserAttendanceDetailsRequest.fromBuffer(value),
+        ($2.GetUserAttendanceDetailsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetUserShiftOffDaysRequest,
+            $2.GetUserShiftOffDaysResponse>(
+        'GetUserShiftOffDays',
+        getUserShiftOffDays_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetUserShiftOffDaysRequest.fromBuffer(value),
+        ($2.GetUserShiftOffDaysResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetUserHolidaysForMonthRequest,
+            $2.GetUserHolidaysForMonthResponse>(
+        'GetUserHolidaysForMonth',
+        getUserHolidaysForMonth_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetUserHolidaysForMonthRequest.fromBuffer(value),
+        ($2.GetUserHolidaysForMonthResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CreateOrganizationShiftRequest,
+            $2.CreateOrganizationShiftResponse>(
+        'CreateOrganizationShift',
+        createOrganizationShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.CreateOrganizationShiftRequest.fromBuffer(value),
+        ($2.CreateOrganizationShiftResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ListAllOrganizationShiftsRequest,
+            $2.ListAllOrganizationShiftsResponse>(
+        'ListAllOrganizationShifts',
+        listAllOrganizationShifts_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.ListAllOrganizationShiftsRequest.fromBuffer(value),
+        ($2.ListAllOrganizationShiftsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $2.GetOrganizationShiftSelectionMenuItemsRequest,
+            $2.GetOrganizationShiftSelectionMenuItemsResponse>(
+        'GetOrganizationShiftSelectionMenuItems',
+        getOrganizationShiftSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetOrganizationShiftSelectionMenuItemsRequest.fromBuffer(value),
+        ($2.GetOrganizationShiftSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetOrganizationDefaultShiftRequest,
+            $2.GetOrganizationDefaultShiftResponse>(
+        'GetOrganizationDefaultShift',
+        getOrganizationDefaultShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetOrganizationDefaultShiftRequest.fromBuffer(value),
+        ($2.GetOrganizationDefaultShiftResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetParentStudentSelectionDataRequest,
+            $3.GetParentStudentSelectionDataResponse>(
+        'GetParentStudentSelectionData',
+        getParentStudentSelectionData_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.GetParentStudentSelectionDataRequest.fromBuffer(value),
+        ($3.GetParentStudentSelectionDataResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListUserLeavesRequest,
+            $4.ListUserLeavesResponse>(
+        'ListUserLeaves',
+        listUserLeaves_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.ListUserLeavesRequest.fromBuffer(value),
+        ($4.ListUserLeavesResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.CreateLeaveRequest, $4.CreateLeaveResponse>(
+            'CreateLeave',
+            createLeave_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.CreateLeaveRequest.fromBuffer(value),
+            ($4.CreateLeaveResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.GetLeaveDetailsRequest,
+            $4.GetLeaveDetailsResponse>(
+        'GetLeaveDetails',
+        getLeaveDetails_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.GetLeaveDetailsRequest.fromBuffer(value),
+        ($4.GetLeaveDetailsResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.UpdateLeaveRequest, $4.UpdateLeaveResponse>(
+            'UpdateLeave',
+            updateLeave_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.UpdateLeaveRequest.fromBuffer(value),
+            ($4.UpdateLeaveResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$4.DeleteLeaveRequest, $4.DeleteLeaveResponse>(
+            'DeleteLeave',
+            deleteLeave_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $4.DeleteLeaveRequest.fromBuffer(value),
+            ($4.DeleteLeaveResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.GetUserFullNameRequest,
+            $5.GetUserFullNameResponse>(
+        'GetUserFullName',
+        getUserFullName_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.GetUserFullNameRequest.fromBuffer(value),
+        ($5.GetUserFullNameResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.GetUserTimezoneRequest,
+            $5.GetUserTimezoneResponse>(
+        'GetUserTimezone',
+        getUserTimezone_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.GetUserTimezoneRequest.fromBuffer(value),
+        ($5.GetUserTimezoneResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.RegisterTeacherRequest,
+            $5.RegisterTeacherResponse>(
+        'RegisterTeacher',
+        registerTeacher,
+        true,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.RegisterTeacherRequest.fromBuffer(value),
+        ($5.RegisterTeacherResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.RegisterStudentRequest,
+            $5.RegisterStudentResponse>(
+        'RegisterStudent',
+        registerStudent,
+        true,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.RegisterStudentRequest.fromBuffer(value),
+        ($5.RegisterStudentResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.RegisterParentRequest,
+            $5.RegisterParentResponse>(
+        'RegisterParent',
+        registerParent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.RegisterParentRequest.fromBuffer(value),
+        ($5.RegisterParentResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.RegisterSchoolEmployeeRequest,
+            $5.RegisterSchoolEmployeeResponse>(
+        'RegisterSchoolEmployee',
+        registerSchoolEmployee,
+        true,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.RegisterSchoolEmployeeRequest.fromBuffer(value),
+        ($5.RegisterSchoolEmployeeResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.RegisterSchoolAdminRequest,
+            $5.RegisterSchoolAdminResponse>(
+        'RegisterSchoolAdmin',
+        registerSchoolAdmin_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.RegisterSchoolAdminRequest.fromBuffer(value),
+        ($5.RegisterSchoolAdminResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.RegisterSchoolChainAdminRequest,
+            $5.RegisterSchoolChainAdminResponse>(
+        'RegisterSchoolChainAdmin',
+        registerSchoolChainAdmin_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.RegisterSchoolChainAdminRequest.fromBuffer(value),
+        ($5.RegisterSchoolChainAdminResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.RegisterSchoolChainEmployeeRequest,
+            $5.RegisterSchoolChainEmployeeResponse>(
+        'RegisterSchoolChainEmployee',
+        registerSchoolChainEmployee,
+        true,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.RegisterSchoolChainEmployeeRequest.fromBuffer(value),
+        ($5.RegisterSchoolChainEmployeeResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.ListStudentsOfSchoolRequest,
+            $5.ListStudentsOfSchoolResponse>(
+        'ListStudentsOfSchool',
+        listStudentsOfSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.ListStudentsOfSchoolRequest.fromBuffer(value),
+        ($5.ListStudentsOfSchoolResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -1188,219 +1208,6 @@ abstract class GatewayServiceBase extends $grpc.Service {
       getSchoolActiveAndUpcomingSessionMenuItems($grpc.ServiceCall call,
           $1.GetSchoolActiveAndUpcomingSessionMenuItemsRequest request);
 
-  $async.Future<$2.RegisterTeacherResponse> registerTeacher(
-      $grpc.ServiceCall call, $async.Stream<$2.RegisterTeacherRequest> request);
-
-  $async.Future<$2.RegisterStudentResponse> registerStudent(
-      $grpc.ServiceCall call, $async.Stream<$2.RegisterStudentRequest> request);
-
-  $async.Future<$2.RegisterParentResponse> registerParent_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$2.RegisterParentRequest> $request) async {
-    return registerParent($call, await $request);
-  }
-
-  $async.Future<$2.RegisterParentResponse> registerParent(
-      $grpc.ServiceCall call, $2.RegisterParentRequest request);
-
-  $async.Future<$2.RegisterSchoolEmployeeResponse> registerSchoolEmployee(
-      $grpc.ServiceCall call,
-      $async.Stream<$2.RegisterSchoolEmployeeRequest> request);
-
-  $async.Future<$2.RegisterSchoolAdminResponse> registerSchoolAdmin_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$2.RegisterSchoolAdminRequest> $request) async {
-    return registerSchoolAdmin($call, await $request);
-  }
-
-  $async.Future<$2.RegisterSchoolAdminResponse> registerSchoolAdmin(
-      $grpc.ServiceCall call, $2.RegisterSchoolAdminRequest request);
-
-  $async.Future<$2.RegisterSchoolChainAdminResponse>
-      registerSchoolChainAdmin_Pre($grpc.ServiceCall $call,
-          $async.Future<$2.RegisterSchoolChainAdminRequest> $request) async {
-    return registerSchoolChainAdmin($call, await $request);
-  }
-
-  $async.Future<$2.RegisterSchoolChainAdminResponse> registerSchoolChainAdmin(
-      $grpc.ServiceCall call, $2.RegisterSchoolChainAdminRequest request);
-
-  $async.Future<$2.RegisterSchoolChainEmployeeResponse>
-      registerSchoolChainEmployee($grpc.ServiceCall call,
-          $async.Stream<$2.RegisterSchoolChainEmployeeRequest> request);
-
-  $async.Future<$3.GetUserMonthlyAttendanceStatsResponse>
-      getUserMonthlyAttendanceStats_Pre(
-          $grpc.ServiceCall $call,
-          $async.Future<$3.GetUserMonthlyAttendanceStatsRequest>
-              $request) async {
-    return getUserMonthlyAttendanceStats($call, await $request);
-  }
-
-  $async.Future<$3.GetUserMonthlyAttendanceStatsResponse>
-      getUserMonthlyAttendanceStats($grpc.ServiceCall call,
-          $3.GetUserMonthlyAttendanceStatsRequest request);
-
-  $async.Future<$3.GetUserAttendanceCalendarResponse>
-      getUserAttendanceCalendar_Pre($grpc.ServiceCall $call,
-          $async.Future<$3.GetUserAttendanceCalendarRequest> $request) async {
-    return getUserAttendanceCalendar($call, await $request);
-  }
-
-  $async.Future<$3.GetUserAttendanceCalendarResponse> getUserAttendanceCalendar(
-      $grpc.ServiceCall call, $3.GetUserAttendanceCalendarRequest request);
-
-  $async.Future<$3.GetUserYearlyAttendanceStatsResponse>
-      getUserYearlyAttendanceStats_Pre(
-          $grpc.ServiceCall $call,
-          $async.Future<$3.GetUserYearlyAttendanceStatsRequest>
-              $request) async {
-    return getUserYearlyAttendanceStats($call, await $request);
-  }
-
-  $async.Future<$3.GetUserYearlyAttendanceStatsResponse>
-      getUserYearlyAttendanceStats($grpc.ServiceCall call,
-          $3.GetUserYearlyAttendanceStatsRequest request);
-
-  $async.Future<$3.GetUserAttendanceDetailsResponse>
-      getUserAttendanceDetails_Pre($grpc.ServiceCall $call,
-          $async.Future<$3.GetUserAttendanceDetailsRequest> $request) async {
-    return getUserAttendanceDetails($call, await $request);
-  }
-
-  $async.Future<$3.GetUserAttendanceDetailsResponse> getUserAttendanceDetails(
-      $grpc.ServiceCall call, $3.GetUserAttendanceDetailsRequest request);
-
-  $async.Future<$3.GetUserShiftOffDaysResponse> getUserShiftOffDays_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$3.GetUserShiftOffDaysRequest> $request) async {
-    return getUserShiftOffDays($call, await $request);
-  }
-
-  $async.Future<$3.GetUserShiftOffDaysResponse> getUserShiftOffDays(
-      $grpc.ServiceCall call, $3.GetUserShiftOffDaysRequest request);
-
-  $async.Future<$3.GetUserHolidaysForMonthResponse> getUserHolidaysForMonth_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$3.GetUserHolidaysForMonthRequest> $request) async {
-    return getUserHolidaysForMonth($call, await $request);
-  }
-
-  $async.Future<$3.GetUserHolidaysForMonthResponse> getUserHolidaysForMonth(
-      $grpc.ServiceCall call, $3.GetUserHolidaysForMonthRequest request);
-
-  $async.Future<$3.CreateOrganizationShiftResponse> createOrganizationShift_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$3.CreateOrganizationShiftRequest> $request) async {
-    return createOrganizationShift($call, await $request);
-  }
-
-  $async.Future<$3.CreateOrganizationShiftResponse> createOrganizationShift(
-      $grpc.ServiceCall call, $3.CreateOrganizationShiftRequest request);
-
-  $async.Future<$3.ListAllOrganizationShiftsResponse>
-      listAllOrganizationShifts_Pre($grpc.ServiceCall $call,
-          $async.Future<$3.ListAllOrganizationShiftsRequest> $request) async {
-    return listAllOrganizationShifts($call, await $request);
-  }
-
-  $async.Future<$3.ListAllOrganizationShiftsResponse> listAllOrganizationShifts(
-      $grpc.ServiceCall call, $3.ListAllOrganizationShiftsRequest request);
-
-  $async.Future<$3.GetOrganizationShiftSelectionMenuItemsResponse>
-      getOrganizationShiftSelectionMenuItems_Pre(
-          $grpc.ServiceCall $call,
-          $async.Future<$3.GetOrganizationShiftSelectionMenuItemsRequest>
-              $request) async {
-    return getOrganizationShiftSelectionMenuItems($call, await $request);
-  }
-
-  $async.Future<$3.GetOrganizationShiftSelectionMenuItemsResponse>
-      getOrganizationShiftSelectionMenuItems($grpc.ServiceCall call,
-          $3.GetOrganizationShiftSelectionMenuItemsRequest request);
-
-  $async.Future<$3.GetOrganizationDefaultShiftResponse>
-      getOrganizationDefaultShift_Pre($grpc.ServiceCall $call,
-          $async.Future<$3.GetOrganizationDefaultShiftRequest> $request) async {
-    return getOrganizationDefaultShift($call, await $request);
-  }
-
-  $async.Future<$3.GetOrganizationDefaultShiftResponse>
-      getOrganizationDefaultShift($grpc.ServiceCall call,
-          $3.GetOrganizationDefaultShiftRequest request);
-
-  $async.Future<$2.GetUserFullNameResponse> getUserFullName_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$2.GetUserFullNameRequest> $request) async {
-    return getUserFullName($call, await $request);
-  }
-
-  $async.Future<$2.GetUserFullNameResponse> getUserFullName(
-      $grpc.ServiceCall call, $2.GetUserFullNameRequest request);
-
-  $async.Future<$2.GetUserTimezoneResponse> getUserTimezone_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$2.GetUserTimezoneRequest> $request) async {
-    return getUserTimezone($call, await $request);
-  }
-
-  $async.Future<$2.GetUserTimezoneResponse> getUserTimezone(
-      $grpc.ServiceCall call, $2.GetUserTimezoneRequest request);
-
-  $async.Future<$4.GetParentStudentSelectionDataResponse>
-      getParentStudentSelectionData_Pre(
-          $grpc.ServiceCall $call,
-          $async.Future<$4.GetParentStudentSelectionDataRequest>
-              $request) async {
-    return getParentStudentSelectionData($call, await $request);
-  }
-
-  $async.Future<$4.GetParentStudentSelectionDataResponse>
-      getParentStudentSelectionData($grpc.ServiceCall call,
-          $4.GetParentStudentSelectionDataRequest request);
-
-  $async.Future<$5.ListUserLeavesResponse> listUserLeaves_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$5.ListUserLeavesRequest> $request) async {
-    return listUserLeaves($call, await $request);
-  }
-
-  $async.Future<$5.ListUserLeavesResponse> listUserLeaves(
-      $grpc.ServiceCall call, $5.ListUserLeavesRequest request);
-
-  $async.Future<$5.CreateLeaveResponse> createLeave_Pre($grpc.ServiceCall $call,
-      $async.Future<$5.CreateLeaveRequest> $request) async {
-    return createLeave($call, await $request);
-  }
-
-  $async.Future<$5.CreateLeaveResponse> createLeave(
-      $grpc.ServiceCall call, $5.CreateLeaveRequest request);
-
-  $async.Future<$5.GetLeaveDetailsResponse> getLeaveDetails_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$5.GetLeaveDetailsRequest> $request) async {
-    return getLeaveDetails($call, await $request);
-  }
-
-  $async.Future<$5.GetLeaveDetailsResponse> getLeaveDetails(
-      $grpc.ServiceCall call, $5.GetLeaveDetailsRequest request);
-
-  $async.Future<$5.UpdateLeaveResponse> updateLeave_Pre($grpc.ServiceCall $call,
-      $async.Future<$5.UpdateLeaveRequest> $request) async {
-    return updateLeave($call, await $request);
-  }
-
-  $async.Future<$5.UpdateLeaveResponse> updateLeave(
-      $grpc.ServiceCall call, $5.UpdateLeaveRequest request);
-
-  $async.Future<$5.DeleteLeaveResponse> deleteLeave_Pre($grpc.ServiceCall $call,
-      $async.Future<$5.DeleteLeaveRequest> $request) async {
-    return deleteLeave($call, await $request);
-  }
-
-  $async.Future<$5.DeleteLeaveResponse> deleteLeave(
-      $grpc.ServiceCall call, $5.DeleteLeaveRequest request);
-
   $async.Future<$1.GetSchoolParentSelectionMenuItemsResponse>
       getSchoolParentSelectionMenuItems_Pre(
           $grpc.ServiceCall $call,
@@ -1426,4 +1233,226 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$1.GetActiveAndUpcommingClassesSelectionMenuItemsResponse>
       getActiveAndUpcommingClassesSelectionMenuItems($grpc.ServiceCall call,
           $1.GetActiveAndUpcommingClassesSelectionMenuItemsRequest request);
+
+  $async.Future<$2.GetUserMonthlyAttendanceStatsResponse>
+      getUserMonthlyAttendanceStats_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$2.GetUserMonthlyAttendanceStatsRequest>
+              $request) async {
+    return getUserMonthlyAttendanceStats($call, await $request);
+  }
+
+  $async.Future<$2.GetUserMonthlyAttendanceStatsResponse>
+      getUserMonthlyAttendanceStats($grpc.ServiceCall call,
+          $2.GetUserMonthlyAttendanceStatsRequest request);
+
+  $async.Future<$2.GetUserAttendanceCalendarResponse>
+      getUserAttendanceCalendar_Pre($grpc.ServiceCall $call,
+          $async.Future<$2.GetUserAttendanceCalendarRequest> $request) async {
+    return getUserAttendanceCalendar($call, await $request);
+  }
+
+  $async.Future<$2.GetUserAttendanceCalendarResponse> getUserAttendanceCalendar(
+      $grpc.ServiceCall call, $2.GetUserAttendanceCalendarRequest request);
+
+  $async.Future<$2.GetUserYearlyAttendanceStatsResponse>
+      getUserYearlyAttendanceStats_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$2.GetUserYearlyAttendanceStatsRequest>
+              $request) async {
+    return getUserYearlyAttendanceStats($call, await $request);
+  }
+
+  $async.Future<$2.GetUserYearlyAttendanceStatsResponse>
+      getUserYearlyAttendanceStats($grpc.ServiceCall call,
+          $2.GetUserYearlyAttendanceStatsRequest request);
+
+  $async.Future<$2.GetUserAttendanceDetailsResponse>
+      getUserAttendanceDetails_Pre($grpc.ServiceCall $call,
+          $async.Future<$2.GetUserAttendanceDetailsRequest> $request) async {
+    return getUserAttendanceDetails($call, await $request);
+  }
+
+  $async.Future<$2.GetUserAttendanceDetailsResponse> getUserAttendanceDetails(
+      $grpc.ServiceCall call, $2.GetUserAttendanceDetailsRequest request);
+
+  $async.Future<$2.GetUserShiftOffDaysResponse> getUserShiftOffDays_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$2.GetUserShiftOffDaysRequest> $request) async {
+    return getUserShiftOffDays($call, await $request);
+  }
+
+  $async.Future<$2.GetUserShiftOffDaysResponse> getUserShiftOffDays(
+      $grpc.ServiceCall call, $2.GetUserShiftOffDaysRequest request);
+
+  $async.Future<$2.GetUserHolidaysForMonthResponse> getUserHolidaysForMonth_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$2.GetUserHolidaysForMonthRequest> $request) async {
+    return getUserHolidaysForMonth($call, await $request);
+  }
+
+  $async.Future<$2.GetUserHolidaysForMonthResponse> getUserHolidaysForMonth(
+      $grpc.ServiceCall call, $2.GetUserHolidaysForMonthRequest request);
+
+  $async.Future<$2.CreateOrganizationShiftResponse> createOrganizationShift_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$2.CreateOrganizationShiftRequest> $request) async {
+    return createOrganizationShift($call, await $request);
+  }
+
+  $async.Future<$2.CreateOrganizationShiftResponse> createOrganizationShift(
+      $grpc.ServiceCall call, $2.CreateOrganizationShiftRequest request);
+
+  $async.Future<$2.ListAllOrganizationShiftsResponse>
+      listAllOrganizationShifts_Pre($grpc.ServiceCall $call,
+          $async.Future<$2.ListAllOrganizationShiftsRequest> $request) async {
+    return listAllOrganizationShifts($call, await $request);
+  }
+
+  $async.Future<$2.ListAllOrganizationShiftsResponse> listAllOrganizationShifts(
+      $grpc.ServiceCall call, $2.ListAllOrganizationShiftsRequest request);
+
+  $async.Future<$2.GetOrganizationShiftSelectionMenuItemsResponse>
+      getOrganizationShiftSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$2.GetOrganizationShiftSelectionMenuItemsRequest>
+              $request) async {
+    return getOrganizationShiftSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$2.GetOrganizationShiftSelectionMenuItemsResponse>
+      getOrganizationShiftSelectionMenuItems($grpc.ServiceCall call,
+          $2.GetOrganizationShiftSelectionMenuItemsRequest request);
+
+  $async.Future<$2.GetOrganizationDefaultShiftResponse>
+      getOrganizationDefaultShift_Pre($grpc.ServiceCall $call,
+          $async.Future<$2.GetOrganizationDefaultShiftRequest> $request) async {
+    return getOrganizationDefaultShift($call, await $request);
+  }
+
+  $async.Future<$2.GetOrganizationDefaultShiftResponse>
+      getOrganizationDefaultShift($grpc.ServiceCall call,
+          $2.GetOrganizationDefaultShiftRequest request);
+
+  $async.Future<$3.GetParentStudentSelectionDataResponse>
+      getParentStudentSelectionData_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$3.GetParentStudentSelectionDataRequest>
+              $request) async {
+    return getParentStudentSelectionData($call, await $request);
+  }
+
+  $async.Future<$3.GetParentStudentSelectionDataResponse>
+      getParentStudentSelectionData($grpc.ServiceCall call,
+          $3.GetParentStudentSelectionDataRequest request);
+
+  $async.Future<$4.ListUserLeavesResponse> listUserLeaves_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$4.ListUserLeavesRequest> $request) async {
+    return listUserLeaves($call, await $request);
+  }
+
+  $async.Future<$4.ListUserLeavesResponse> listUserLeaves(
+      $grpc.ServiceCall call, $4.ListUserLeavesRequest request);
+
+  $async.Future<$4.CreateLeaveResponse> createLeave_Pre($grpc.ServiceCall $call,
+      $async.Future<$4.CreateLeaveRequest> $request) async {
+    return createLeave($call, await $request);
+  }
+
+  $async.Future<$4.CreateLeaveResponse> createLeave(
+      $grpc.ServiceCall call, $4.CreateLeaveRequest request);
+
+  $async.Future<$4.GetLeaveDetailsResponse> getLeaveDetails_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$4.GetLeaveDetailsRequest> $request) async {
+    return getLeaveDetails($call, await $request);
+  }
+
+  $async.Future<$4.GetLeaveDetailsResponse> getLeaveDetails(
+      $grpc.ServiceCall call, $4.GetLeaveDetailsRequest request);
+
+  $async.Future<$4.UpdateLeaveResponse> updateLeave_Pre($grpc.ServiceCall $call,
+      $async.Future<$4.UpdateLeaveRequest> $request) async {
+    return updateLeave($call, await $request);
+  }
+
+  $async.Future<$4.UpdateLeaveResponse> updateLeave(
+      $grpc.ServiceCall call, $4.UpdateLeaveRequest request);
+
+  $async.Future<$4.DeleteLeaveResponse> deleteLeave_Pre($grpc.ServiceCall $call,
+      $async.Future<$4.DeleteLeaveRequest> $request) async {
+    return deleteLeave($call, await $request);
+  }
+
+  $async.Future<$4.DeleteLeaveResponse> deleteLeave(
+      $grpc.ServiceCall call, $4.DeleteLeaveRequest request);
+
+  $async.Future<$5.GetUserFullNameResponse> getUserFullName_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$5.GetUserFullNameRequest> $request) async {
+    return getUserFullName($call, await $request);
+  }
+
+  $async.Future<$5.GetUserFullNameResponse> getUserFullName(
+      $grpc.ServiceCall call, $5.GetUserFullNameRequest request);
+
+  $async.Future<$5.GetUserTimezoneResponse> getUserTimezone_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$5.GetUserTimezoneRequest> $request) async {
+    return getUserTimezone($call, await $request);
+  }
+
+  $async.Future<$5.GetUserTimezoneResponse> getUserTimezone(
+      $grpc.ServiceCall call, $5.GetUserTimezoneRequest request);
+
+  $async.Future<$5.RegisterTeacherResponse> registerTeacher(
+      $grpc.ServiceCall call, $async.Stream<$5.RegisterTeacherRequest> request);
+
+  $async.Future<$5.RegisterStudentResponse> registerStudent(
+      $grpc.ServiceCall call, $async.Stream<$5.RegisterStudentRequest> request);
+
+  $async.Future<$5.RegisterParentResponse> registerParent_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$5.RegisterParentRequest> $request) async {
+    return registerParent($call, await $request);
+  }
+
+  $async.Future<$5.RegisterParentResponse> registerParent(
+      $grpc.ServiceCall call, $5.RegisterParentRequest request);
+
+  $async.Future<$5.RegisterSchoolEmployeeResponse> registerSchoolEmployee(
+      $grpc.ServiceCall call,
+      $async.Stream<$5.RegisterSchoolEmployeeRequest> request);
+
+  $async.Future<$5.RegisterSchoolAdminResponse> registerSchoolAdmin_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$5.RegisterSchoolAdminRequest> $request) async {
+    return registerSchoolAdmin($call, await $request);
+  }
+
+  $async.Future<$5.RegisterSchoolAdminResponse> registerSchoolAdmin(
+      $grpc.ServiceCall call, $5.RegisterSchoolAdminRequest request);
+
+  $async.Future<$5.RegisterSchoolChainAdminResponse>
+      registerSchoolChainAdmin_Pre($grpc.ServiceCall $call,
+          $async.Future<$5.RegisterSchoolChainAdminRequest> $request) async {
+    return registerSchoolChainAdmin($call, await $request);
+  }
+
+  $async.Future<$5.RegisterSchoolChainAdminResponse> registerSchoolChainAdmin(
+      $grpc.ServiceCall call, $5.RegisterSchoolChainAdminRequest request);
+
+  $async.Future<$5.RegisterSchoolChainEmployeeResponse>
+      registerSchoolChainEmployee($grpc.ServiceCall call,
+          $async.Stream<$5.RegisterSchoolChainEmployeeRequest> request);
+
+  $async.Future<$5.ListStudentsOfSchoolResponse> listStudentsOfSchool_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$5.ListStudentsOfSchoolRequest> $request) async {
+    return listStudentsOfSchool($call, await $request);
+  }
+
+  $async.Future<$5.ListStudentsOfSchoolResponse> listStudentsOfSchool(
+      $grpc.ServiceCall call, $5.ListStudentsOfSchoolRequest request);
 }

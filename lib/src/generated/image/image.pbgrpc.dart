@@ -41,7 +41,8 @@ class ImageServiceClient extends $grpc.Client {
         .single;
   }
 
-  /// GetUserImageURLs returns signed URLs for both thumbnail and full resolution images.
+  /// GetUserImageURLs returns signed URLs for both thumbnail and full resolution
+  /// images.
   $grpc.ResponseFuture<$0.GetUserImageURLsResponse> getUserImageURLs(
     $0.GetUserImageURLsRequest request, {
     $grpc.CallOptions? options,
