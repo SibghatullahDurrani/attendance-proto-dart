@@ -2426,6 +2426,184 @@ class GetOrganizationDefaultShiftResponse extends $pb.GeneratedMessage {
   void clearShiftId() => $_clearField(1);
 }
 
+class GetBulkUserShiftNamesRequest extends $pb.GeneratedMessage {
+  factory GetBulkUserShiftNamesRequest({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    return result;
+  }
+
+  GetBulkUserShiftNamesRequest._();
+
+  factory GetBulkUserShiftNamesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBulkUserShiftNamesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBulkUserShiftNamesRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBulkUserShiftNamesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBulkUserShiftNamesRequest copyWith(
+          void Function(GetBulkUserShiftNamesRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetBulkUserShiftNamesRequest))
+          as GetBulkUserShiftNamesRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBulkUserShiftNamesRequest create() =>
+      GetBulkUserShiftNamesRequest._();
+  @$core.override
+  GetBulkUserShiftNamesRequest createEmptyInstance() => create();
+  static $pb.PbList<GetBulkUserShiftNamesRequest> createRepeated() =>
+      $pb.PbList<GetBulkUserShiftNamesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetBulkUserShiftNamesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBulkUserShiftNamesRequest>(create);
+  static GetBulkUserShiftNamesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
+}
+
+class GetBulkUserShiftNamesResponse extends $pb.GeneratedMessage {
+  factory GetBulkUserShiftNamesResponse({
+    $core.Iterable<UserShiftName>? userShiftNames,
+  }) {
+    final result = create();
+    if (userShiftNames != null) result.userShiftNames.addAll(userShiftNames);
+    return result;
+  }
+
+  GetBulkUserShiftNamesResponse._();
+
+  factory GetBulkUserShiftNamesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBulkUserShiftNamesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBulkUserShiftNamesResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..pPM<UserShiftName>(1, _omitFieldNames ? '' : 'userShiftNames',
+        subBuilder: UserShiftName.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBulkUserShiftNamesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBulkUserShiftNamesResponse copyWith(
+          void Function(GetBulkUserShiftNamesResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetBulkUserShiftNamesResponse))
+          as GetBulkUserShiftNamesResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBulkUserShiftNamesResponse create() =>
+      GetBulkUserShiftNamesResponse._();
+  @$core.override
+  GetBulkUserShiftNamesResponse createEmptyInstance() => create();
+  static $pb.PbList<GetBulkUserShiftNamesResponse> createRepeated() =>
+      $pb.PbList<GetBulkUserShiftNamesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetBulkUserShiftNamesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBulkUserShiftNamesResponse>(create);
+  static GetBulkUserShiftNamesResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<UserShiftName> get userShiftNames => $_getList(0);
+}
+
+class UserShiftName extends $pb.GeneratedMessage {
+  factory UserShiftName({
+    $core.String? userId,
+    $core.String? shiftName,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    if (shiftName != null) result.shiftName = shiftName;
+    return result;
+  }
+
+  UserShiftName._();
+
+  factory UserShiftName.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UserShiftName.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UserShiftName',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..aOS(2, _omitFieldNames ? '' : 'shiftName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserShiftName clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserShiftName copyWith(void Function(UserShiftName) updates) =>
+      super.copyWith((message) => updates(message as UserShiftName))
+          as UserShiftName;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UserShiftName create() => UserShiftName._();
+  @$core.override
+  UserShiftName createEmptyInstance() => create();
+  static $pb.PbList<UserShiftName> createRepeated() =>
+      $pb.PbList<UserShiftName>();
+  @$core.pragma('dart2js:noInline')
+  static UserShiftName getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserShiftName>(create);
+  static UserShiftName? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get shiftName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set shiftName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasShiftName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearShiftName() => $_clearField(2);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

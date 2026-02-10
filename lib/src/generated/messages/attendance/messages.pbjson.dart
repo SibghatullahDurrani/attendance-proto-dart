@@ -719,3 +719,52 @@ final $typed_data.Uint8List getOrganizationDefaultShiftResponseDescriptor =
     $convert.base64Decode(
         'CiNHZXRPcmdhbml6YXRpb25EZWZhdWx0U2hpZnRSZXNwb25zZRIZCghzaGlmdF9pZBgBIAEoCV'
         'IHc2hpZnRJZA==');
+
+@$core.Deprecated('Use getBulkUserShiftNamesRequestDescriptor instead')
+const GetBulkUserShiftNamesRequest$json = {
+  '1': 'GetBulkUserShiftNamesRequest',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `GetBulkUserShiftNamesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBulkUserShiftNamesRequestDescriptor =
+    $convert.base64Decode(
+        'ChxHZXRCdWxrVXNlclNoaWZ0TmFtZXNSZXF1ZXN0EhkKCHVzZXJfaWRzGAEgAygJUgd1c2VySW'
+        'Rz');
+
+@$core.Deprecated('Use getBulkUserShiftNamesResponseDescriptor instead')
+const GetBulkUserShiftNamesResponse$json = {
+  '1': 'GetBulkUserShiftNamesResponse',
+  '2': [
+    {
+      '1': 'user_shift_names',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.UserShiftName',
+      '10': 'userShiftNames'
+    },
+  ],
+};
+
+/// Descriptor for `GetBulkUserShiftNamesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBulkUserShiftNamesResponseDescriptor =
+    $convert.base64Decode(
+        'Ch1HZXRCdWxrVXNlclNoaWZ0TmFtZXNSZXNwb25zZRJMChB1c2VyX3NoaWZ0X25hbWVzGAEgAy'
+        'gLMiIuYXR0ZW5kYW5jZV9tZXNzYWdlcy5Vc2VyU2hpZnROYW1lUg51c2VyU2hpZnROYW1lcw==');
+
+@$core.Deprecated('Use userShiftNameDescriptor instead')
+const UserShiftName$json = {
+  '1': 'UserShiftName',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'shift_name', '3': 2, '4': 1, '5': 9, '10': 'shiftName'},
+  ],
+};
+
+/// Descriptor for `UserShiftName`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userShiftNameDescriptor = $convert.base64Decode(
+    'Cg1Vc2VyU2hpZnROYW1lEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIdCgpzaGlmdF9uYW1lGA'
+    'IgASgJUglzaGlmdE5hbWU=');

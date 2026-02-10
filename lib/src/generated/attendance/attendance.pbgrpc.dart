@@ -127,6 +127,13 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetBulkUserShiftNamesResponse> getBulkUserShiftNames(
+    $0.GetBulkUserShiftNamesRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getBulkUserShiftNames, request, options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -194,6 +201,11 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/GetOrganizationDefaultShift',
       ($0.GetOrganizationDefaultShiftRequest value) => value.writeToBuffer(),
       $0.GetOrganizationDefaultShiftResponse.fromBuffer);
+  static final _$getBulkUserShiftNames = $grpc.ClientMethod<
+          $0.GetBulkUserShiftNamesRequest, $0.GetBulkUserShiftNamesResponse>(
+      '/attendance.AttendanceService/GetBulkUserShiftNames',
+      ($0.GetBulkUserShiftNamesRequest value) => value.writeToBuffer(),
+      $0.GetBulkUserShiftNamesResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -305,6 +317,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
             $0.GetOrganizationDefaultShiftRequest.fromBuffer(value),
         ($0.GetOrganizationDefaultShiftResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetBulkUserShiftNamesRequest,
+            $0.GetBulkUserShiftNamesResponse>(
+        'GetBulkUserShiftNames',
+        getBulkUserShiftNames_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetBulkUserShiftNamesRequest.fromBuffer(value),
+        ($0.GetBulkUserShiftNamesResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -415,4 +436,13 @@ abstract class AttendanceServiceBase extends $grpc.Service {
   $async.Future<$0.GetOrganizationDefaultShiftResponse>
       getOrganizationDefaultShift($grpc.ServiceCall call,
           $0.GetOrganizationDefaultShiftRequest request);
+
+  $async.Future<$0.GetBulkUserShiftNamesResponse> getBulkUserShiftNames_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetBulkUserShiftNamesRequest> $request) async {
+    return getBulkUserShiftNames($call, await $request);
+  }
+
+  $async.Future<$0.GetBulkUserShiftNamesResponse> getBulkUserShiftNames(
+      $grpc.ServiceCall call, $0.GetBulkUserShiftNamesRequest request);
 }
