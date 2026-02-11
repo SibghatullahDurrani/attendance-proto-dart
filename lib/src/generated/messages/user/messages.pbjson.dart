@@ -693,3 +693,111 @@ final $typed_data.Uint8List studentInfoDescriptor = $convert.base64Decode(
     'IAEoCUgDUgVlbWFpbIgBARIkCg5pc19pbWFnZV9hcm1lZBgHIAEoCFIMaXNJbWFnZUFybWVkQg'
     '4KDF9zZWNvbmRfbmFtZUIYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQg8KDV9waG9uZV9udW1i'
     'ZXJCCAoGX2VtYWls');
+
+@$core.Deprecated('Use getParentsInfoRequestDescriptor instead')
+const GetParentsInfoRequest$json = {
+  '1': 'GetParentsInfoRequest',
+  '2': [
+    {'1': 'parent_ids', '3': 1, '4': 3, '5': 9, '10': 'parentIds'},
+  ],
+};
+
+/// Descriptor for `GetParentsInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getParentsInfoRequestDescriptor = $convert.base64Decode(
+    'ChVHZXRQYXJlbnRzSW5mb1JlcXVlc3QSHQoKcGFyZW50X2lkcxgBIAMoCVIJcGFyZW50SWRz');
+
+@$core.Deprecated('Use getParentsInfoResponseDescriptor instead')
+const GetParentsInfoResponse$json = {
+  '1': 'GetParentsInfoResponse',
+  '2': [
+    {
+      '1': 'parents',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.ParentInfo',
+      '10': 'parents'
+    },
+  ],
+};
+
+/// Descriptor for `GetParentsInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getParentsInfoResponseDescriptor =
+    $convert.base64Decode(
+        'ChZHZXRQYXJlbnRzSW5mb1Jlc3BvbnNlEjMKB3BhcmVudHMYASADKAsyGS51c2VyX21lc3NhZ2'
+        'VzLlBhcmVudEluZm9SB3BhcmVudHM=');
+
+@$core.Deprecated('Use parentInfoDescriptor instead')
+const ParentInfo$json = {
+  '1': 'ParentInfo',
+  '2': [
+    {'1': 'parent_id', '3': 1, '4': 1, '5': 9, '10': 'parentId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 5, '4': 1, '5': 9, '10': 'phoneNumber'},
+    {'1': 'email', '3': 6, '4': 1, '5': 9, '9': 1, '10': 'email', '17': true},
+    {
+      '1': 'children',
+      '3': 7,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.ParentChildInfo',
+      '10': 'children'
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_email'},
+  ],
+};
+
+/// Descriptor for `ParentInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List parentInfoDescriptor = $convert.base64Decode(
+    'CgpQYXJlbnRJbmZvEhsKCXBhcmVudF9pZBgBIAEoCVIIcGFyZW50SWQSHQoKZmlyc3RfbmFtZR'
+    'gCIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAMgASgJSABSCnNlY29uZE5hbWWIAQES'
+    'MwoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJUhRpZGVudGlmaWNhdGlvbk51bWJlchIhCg'
+    'xwaG9uZV9udW1iZXIYBSABKAlSC3Bob25lTnVtYmVyEhkKBWVtYWlsGAYgASgJSAFSBWVtYWls'
+    'iAEBEjoKCGNoaWxkcmVuGAcgAygLMh4udXNlcl9tZXNzYWdlcy5QYXJlbnRDaGlsZEluZm9SCG'
+    'NoaWxkcmVuQg4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWw=');
+
+@$core.Deprecated('Use parentChildInfoDescriptor instead')
+const ParentChildInfo$json = {
+  '1': 'ParentChildInfo',
+  '2': [
+    {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+  ],
+};
+
+/// Descriptor for `ParentChildInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List parentChildInfoDescriptor = $convert.base64Decode(
+    'Cg9QYXJlbnRDaGlsZEluZm8SHQoKc3R1ZGVudF9pZBgBIAEoCVIJc3R1ZGVudElkEh0KCmZpcn'
+    'N0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNvbmRfbmFtZRgDIAEoCUgAUgpzZWNvbmRO'
+    'YW1liAEBQg4KDF9zZWNvbmRfbmFtZQ==');

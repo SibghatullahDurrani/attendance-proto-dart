@@ -921,3 +921,189 @@ final $typed_data.Uint8List listStudentsOfSchoolResponseDescriptor =
         'ChxMaXN0U3R1ZGVudHNPZlNjaG9vbFJlc3BvbnNlEkMKCnBhZ2luYXRpb24YASABKAsyIy5jb2'
         '1tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpwYWdpbmF0aW9uEj0KCHN0dWRlbnRz'
         'GAIgAygLMiEuZ2F0ZXdheV9tZXNzYWdlcy5TdHVkZW50T2ZTY2hvb2xSCHN0dWRlbnRz');
+
+@$core.Deprecated('Use listParentsOfSchoolRequestDescriptor instead')
+const ListParentsOfSchoolRequest$json = {
+  '1': 'ListParentsOfSchoolRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'parent_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'parentName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'phone_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'phoneNumber',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_parent_name'},
+    {'1': '_identification_number'},
+    {'1': '_phone_number'},
+  ],
+};
+
+/// Descriptor for `ListParentsOfSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listParentsOfSchoolRequestDescriptor = $convert.base64Decode(
+    'ChpMaXN0UGFyZW50c09mU2Nob29sUmVxdWVzdBJCCgpwYWdpbmF0aW9uGAEgASgLMiIuY29tbW'
+    '9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9uEhsKCXNjaG9vbF9pZBgC'
+    'IAEoCVIIc2Nob29sSWQSJAoLcGFyZW50X25hbWUYAyABKAlIAFIKcGFyZW50TmFtZYgBARI4Ch'
+    'VpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlIAVIUaWRlbnRpZmljYXRpb25OdW1iZXKIAQES'
+    'JgoMcGhvbmVfbnVtYmVyGAUgASgJSAJSC3Bob25lTnVtYmVyiAEBQg4KDF9wYXJlbnRfbmFtZU'
+    'IYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQg8KDV9waG9uZV9udW1iZXI=');
+
+@$core.Deprecated('Use listParentsOfSchoolResponseDescriptor instead')
+const ListParentsOfSchoolResponse$json = {
+  '1': 'ListParentsOfSchoolResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'parents',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.ParentOfSchool',
+      '10': 'parents'
+    },
+  ],
+};
+
+/// Descriptor for `ListParentsOfSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listParentsOfSchoolResponseDescriptor =
+    $convert.base64Decode(
+        'ChtMaXN0UGFyZW50c09mU2Nob29sUmVzcG9uc2USQwoKcGFnaW5hdGlvbhgBIAEoCzIjLmNvbW'
+        '1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9uc2VSCnBhZ2luYXRpb24SOgoHcGFyZW50cxgC'
+        'IAMoCzIgLmdhdGV3YXlfbWVzc2FnZXMuUGFyZW50T2ZTY2hvb2xSB3BhcmVudHM=');
+
+@$core.Deprecated('Use parentOfSchoolDescriptor instead')
+const ParentOfSchool$json = {
+  '1': 'ParentOfSchool',
+  '2': [
+    {'1': 'parent_id', '3': 1, '4': 1, '5': 9, '10': 'parentId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 5, '4': 1, '5': 9, '10': 'phoneNumber'},
+    {'1': 'email', '3': 6, '4': 1, '5': 9, '9': 1, '10': 'email', '17': true},
+    {
+      '1': 'children',
+      '3': 7,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.ParentChild',
+      '10': 'children'
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_email'},
+  ],
+};
+
+/// Descriptor for `ParentOfSchool`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List parentOfSchoolDescriptor = $convert.base64Decode(
+    'Cg5QYXJlbnRPZlNjaG9vbBIbCglwYXJlbnRfaWQYASABKAlSCHBhcmVudElkEh0KCmZpcnN0X2'
+    '5hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNvbmRfbmFtZRgDIAEoCUgAUgpzZWNvbmROYW1l'
+    'iAEBEjMKFWlkZW50aWZpY2F0aW9uX251bWJlchgEIAEoCVIUaWRlbnRpZmljYXRpb25OdW1iZX'
+    'ISIQoMcGhvbmVfbnVtYmVyGAUgASgJUgtwaG9uZU51bWJlchIZCgVlbWFpbBgGIAEoCUgBUgVl'
+    'bWFpbIgBARI5CghjaGlsZHJlbhgHIAMoCzIdLmdhdGV3YXlfbWVzc2FnZXMuUGFyZW50Q2hpbG'
+    'RSCGNoaWxkcmVuQg4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWw=');
+
+@$core.Deprecated('Use parentChildDescriptor instead')
+const ParentChild$json = {
+  '1': 'ParentChild',
+  '2': [
+    {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 2,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_expires_at'},
+  ],
+};
+
+/// Descriptor for `ParentChild`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List parentChildDescriptor = $convert.base64Decode(
+    'CgtQYXJlbnRDaGlsZBIdCgpzdHVkZW50X2lkGAEgASgJUglzdHVkZW50SWQSHQoKZmlyc3Rfbm'
+    'FtZRgCIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAMgASgJSABSCnNlY29uZE5hbWWI'
+    'AQESMQoSdXNlcl90aHVtYm5haWxfdXJsGAQgASgJSAFSEHVzZXJUaHVtYm5haWxVcmyIAQESUQ'
+    'oUdGh1bWJuYWlsX2V4cGlyZXNfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w'
+    'SAJSEnRodW1ibmFpbEV4cGlyZXNBdIgBAUIOCgxfc2Vjb25kX25hbWVCFQoTX3VzZXJfdGh1bW'
+    'JuYWlsX3VybEIXChVfdGh1bWJuYWlsX2V4cGlyZXNfYXQ=');

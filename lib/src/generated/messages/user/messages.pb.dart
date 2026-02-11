@@ -2094,6 +2094,311 @@ class StudentInfo extends $pb.GeneratedMessage {
   void clearIsImageArmed() => $_clearField(7);
 }
 
+class GetParentsInfoRequest extends $pb.GeneratedMessage {
+  factory GetParentsInfoRequest({
+    $core.Iterable<$core.String>? parentIds,
+  }) {
+    final result = create();
+    if (parentIds != null) result.parentIds.addAll(parentIds);
+    return result;
+  }
+
+  GetParentsInfoRequest._();
+
+  factory GetParentsInfoRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetParentsInfoRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetParentsInfoRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'parentIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParentsInfoRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParentsInfoRequest copyWith(
+          void Function(GetParentsInfoRequest) updates) =>
+      super.copyWith((message) => updates(message as GetParentsInfoRequest))
+          as GetParentsInfoRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetParentsInfoRequest create() => GetParentsInfoRequest._();
+  @$core.override
+  GetParentsInfoRequest createEmptyInstance() => create();
+  static $pb.PbList<GetParentsInfoRequest> createRepeated() =>
+      $pb.PbList<GetParentsInfoRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetParentsInfoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetParentsInfoRequest>(create);
+  static GetParentsInfoRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get parentIds => $_getList(0);
+}
+
+class GetParentsInfoResponse extends $pb.GeneratedMessage {
+  factory GetParentsInfoResponse({
+    $core.Iterable<ParentInfo>? parents,
+  }) {
+    final result = create();
+    if (parents != null) result.parents.addAll(parents);
+    return result;
+  }
+
+  GetParentsInfoResponse._();
+
+  factory GetParentsInfoResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetParentsInfoResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetParentsInfoResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPM<ParentInfo>(1, _omitFieldNames ? '' : 'parents',
+        subBuilder: ParentInfo.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParentsInfoResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParentsInfoResponse copyWith(
+          void Function(GetParentsInfoResponse) updates) =>
+      super.copyWith((message) => updates(message as GetParentsInfoResponse))
+          as GetParentsInfoResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetParentsInfoResponse create() => GetParentsInfoResponse._();
+  @$core.override
+  GetParentsInfoResponse createEmptyInstance() => create();
+  static $pb.PbList<GetParentsInfoResponse> createRepeated() =>
+      $pb.PbList<GetParentsInfoResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetParentsInfoResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetParentsInfoResponse>(create);
+  static GetParentsInfoResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<ParentInfo> get parents => $_getList(0);
+}
+
+class ParentInfo extends $pb.GeneratedMessage {
+  factory ParentInfo({
+    $core.String? parentId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? phoneNumber,
+    $core.String? email,
+    $core.Iterable<ParentChildInfo>? children,
+  }) {
+    final result = create();
+    if (parentId != null) result.parentId = parentId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
+    if (email != null) result.email = email;
+    if (children != null) result.children.addAll(children);
+    return result;
+  }
+
+  ParentInfo._();
+
+  factory ParentInfo.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ParentInfo.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ParentInfo',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parentId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'phoneNumber')
+    ..aOS(6, _omitFieldNames ? '' : 'email')
+    ..pPM<ParentChildInfo>(7, _omitFieldNames ? '' : 'children',
+        subBuilder: ParentChildInfo.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParentInfo clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParentInfo copyWith(void Function(ParentInfo) updates) =>
+      super.copyWith((message) => updates(message as ParentInfo)) as ParentInfo;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ParentInfo create() => ParentInfo._();
+  @$core.override
+  ParentInfo createEmptyInstance() => create();
+  static $pb.PbList<ParentInfo> createRepeated() => $pb.PbList<ParentInfo>();
+  @$core.pragma('dart2js:noInline')
+  static ParentInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ParentInfo>(create);
+  static ParentInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasParentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get phoneNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set phoneNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasPhoneNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPhoneNumber() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get email => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set email($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasEmail() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearEmail() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $pb.PbList<ParentChildInfo> get children => $_getList(6);
+}
+
+class ParentChildInfo extends $pb.GeneratedMessage {
+  factory ParentChildInfo({
+    $core.String? studentId,
+    $core.String? firstName,
+    $core.String? secondName,
+  }) {
+    final result = create();
+    if (studentId != null) result.studentId = studentId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    return result;
+  }
+
+  ParentChildInfo._();
+
+  factory ParentChildInfo.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ParentChildInfo.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ParentChildInfo',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'studentId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParentChildInfo clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParentChildInfo copyWith(void Function(ParentChildInfo) updates) =>
+      super.copyWith((message) => updates(message as ParentChildInfo))
+          as ParentChildInfo;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ParentChildInfo create() => ParentChildInfo._();
+  @$core.override
+  ParentChildInfo createEmptyInstance() => create();
+  static $pb.PbList<ParentChildInfo> createRepeated() =>
+      $pb.PbList<ParentChildInfo>();
+  @$core.pragma('dart2js:noInline')
+  static ParentChildInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ParentChildInfo>(create);
+  static ParentChildInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get studentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set studentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasStudentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStudentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

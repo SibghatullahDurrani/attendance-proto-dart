@@ -2452,6 +2452,420 @@ class ListStudentsOfSchoolResponse extends $pb.GeneratedMessage {
   $pb.PbList<StudentOfSchool> get students => $_getList(1);
 }
 
+class ListParentsOfSchoolRequest extends $pb.GeneratedMessage {
+  factory ListParentsOfSchoolRequest({
+    $0.PaginationRequest? pagination,
+    $core.String? schoolId,
+    $core.String? parentName,
+    $core.String? identificationNumber,
+    $core.String? phoneNumber,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (schoolId != null) result.schoolId = schoolId;
+    if (parentName != null) result.parentName = parentName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
+    return result;
+  }
+
+  ListParentsOfSchoolRequest._();
+
+  factory ListParentsOfSchoolRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListParentsOfSchoolRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListParentsOfSchoolRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(3, _omitFieldNames ? '' : 'parentName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'phoneNumber')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListParentsOfSchoolRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListParentsOfSchoolRequest copyWith(
+          void Function(ListParentsOfSchoolRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListParentsOfSchoolRequest))
+          as ListParentsOfSchoolRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListParentsOfSchoolRequest create() => ListParentsOfSchoolRequest._();
+  @$core.override
+  ListParentsOfSchoolRequest createEmptyInstance() => create();
+  static $pb.PbList<ListParentsOfSchoolRequest> createRepeated() =>
+      $pb.PbList<ListParentsOfSchoolRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListParentsOfSchoolRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListParentsOfSchoolRequest>(create);
+  static ListParentsOfSchoolRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get schoolId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set schoolId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSchoolId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSchoolId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get parentName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set parentName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasParentName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearParentName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get phoneNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set phoneNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasPhoneNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPhoneNumber() => $_clearField(5);
+}
+
+class ListParentsOfSchoolResponse extends $pb.GeneratedMessage {
+  factory ListParentsOfSchoolResponse({
+    $0.PaginationResponse? pagination,
+    $core.Iterable<ParentOfSchool>? parents,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (parents != null) result.parents.addAll(parents);
+    return result;
+  }
+
+  ListParentsOfSchoolResponse._();
+
+  factory ListParentsOfSchoolResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListParentsOfSchoolResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListParentsOfSchoolResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationResponse.create)
+    ..pPM<ParentOfSchool>(2, _omitFieldNames ? '' : 'parents',
+        subBuilder: ParentOfSchool.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListParentsOfSchoolResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListParentsOfSchoolResponse copyWith(
+          void Function(ListParentsOfSchoolResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListParentsOfSchoolResponse))
+          as ListParentsOfSchoolResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListParentsOfSchoolResponse create() =>
+      ListParentsOfSchoolResponse._();
+  @$core.override
+  ListParentsOfSchoolResponse createEmptyInstance() => create();
+  static $pb.PbList<ListParentsOfSchoolResponse> createRepeated() =>
+      $pb.PbList<ListParentsOfSchoolResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListParentsOfSchoolResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListParentsOfSchoolResponse>(create);
+  static ListParentsOfSchoolResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<ParentOfSchool> get parents => $_getList(1);
+}
+
+class ParentOfSchool extends $pb.GeneratedMessage {
+  factory ParentOfSchool({
+    $core.String? parentId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? phoneNumber,
+    $core.String? email,
+    $core.Iterable<ParentChild>? children,
+  }) {
+    final result = create();
+    if (parentId != null) result.parentId = parentId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
+    if (email != null) result.email = email;
+    if (children != null) result.children.addAll(children);
+    return result;
+  }
+
+  ParentOfSchool._();
+
+  factory ParentOfSchool.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ParentOfSchool.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ParentOfSchool',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parentId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'phoneNumber')
+    ..aOS(6, _omitFieldNames ? '' : 'email')
+    ..pPM<ParentChild>(7, _omitFieldNames ? '' : 'children',
+        subBuilder: ParentChild.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParentOfSchool clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParentOfSchool copyWith(void Function(ParentOfSchool) updates) =>
+      super.copyWith((message) => updates(message as ParentOfSchool))
+          as ParentOfSchool;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ParentOfSchool create() => ParentOfSchool._();
+  @$core.override
+  ParentOfSchool createEmptyInstance() => create();
+  static $pb.PbList<ParentOfSchool> createRepeated() =>
+      $pb.PbList<ParentOfSchool>();
+  @$core.pragma('dart2js:noInline')
+  static ParentOfSchool getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ParentOfSchool>(create);
+  static ParentOfSchool? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasParentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get phoneNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set phoneNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasPhoneNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPhoneNumber() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get email => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set email($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasEmail() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearEmail() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $pb.PbList<ParentChild> get children => $_getList(6);
+}
+
+class ParentChild extends $pb.GeneratedMessage {
+  factory ParentChild({
+    $core.String? studentId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? userThumbnailUrl,
+    $1.Timestamp? thumbnailExpiresAt,
+  }) {
+    final result = create();
+    if (studentId != null) result.studentId = studentId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
+    if (thumbnailExpiresAt != null)
+      result.thumbnailExpiresAt = thumbnailExpiresAt;
+    return result;
+  }
+
+  ParentChild._();
+
+  factory ParentChild.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ParentChild.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ParentChild',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'studentId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(5, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+        subBuilder: $1.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParentChild clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParentChild copyWith(void Function(ParentChild) updates) =>
+      super.copyWith((message) => updates(message as ParentChild))
+          as ParentChild;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ParentChild create() => ParentChild._();
+  @$core.override
+  ParentChild createEmptyInstance() => create();
+  static $pb.PbList<ParentChild> createRepeated() => $pb.PbList<ParentChild>();
+  @$core.pragma('dart2js:noInline')
+  static ParentChild getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ParentChild>(create);
+  static ParentChild? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get studentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set studentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasStudentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStudentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get userThumbnailUrl => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set userThumbnailUrl($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasUserThumbnailUrl() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUserThumbnailUrl() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(4);
+  @$pb.TagNumber(5)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasThumbnailExpiresAt() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearThumbnailExpiresAt() => $_clearField(5);
+  @$pb.TagNumber(5)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(4);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =
