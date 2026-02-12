@@ -47,20 +47,10 @@ const ListUserLeavesRequest$json = {
       '10': 'monthStartTime',
       '17': true
     },
-    {
-      '1': 'timezone',
-      '3': 5,
-      '4': 1,
-      '5': 9,
-      '9': 2,
-      '10': 'timezone',
-      '17': true
-    },
   ],
   '8': [
     {'1': '_leave_status'},
     {'1': '_month_start_time'},
-    {'1': '_timezone'},
   ],
 };
 
@@ -70,9 +60,8 @@ final $typed_data.Uint8List listUserLeavesRequestDescriptor = $convert.base64Dec
     'NzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhIXCgd1c2VyX2lkGAIgASgJUgZ1'
     'c2VySWQSRAoMbGVhdmVfc3RhdHVzGAMgASgOMhwuY29tbW9uX21lc3NhZ2VzLkxlYXZlU3RhdH'
     'VzSABSC2xlYXZlU3RhdHVziAEBEkkKEG1vbnRoX3N0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUu'
-    'cHJvdG9idWYuVGltZXN0YW1wSAFSDm1vbnRoU3RhcnRUaW1liAEBEh8KCHRpbWV6b25lGAUgAS'
-    'gJSAJSCHRpbWV6b25liAEBQg8KDV9sZWF2ZV9zdGF0dXNCEwoRX21vbnRoX3N0YXJ0X3RpbWVC'
-    'CwoJX3RpbWV6b25l');
+    'cHJvdG9idWYuVGltZXN0YW1wSAFSDm1vbnRoU3RhcnRUaW1liAEBQg8KDV9sZWF2ZV9zdGF0dX'
+    'NCEwoRX21vbnRoX3N0YXJ0X3RpbWU=');
 
 @$core.Deprecated('Use userLeaveDescriptor instead')
 const UserLeave$json = {
@@ -216,7 +205,6 @@ const CreateLeaveRequest$json = {
     },
     {'1': 'user_id', '3': 2, '4': 1, '5': 9, '10': 'userId'},
     {'1': 'belongs_to', '3': 3, '4': 1, '5': 9, '10': 'belongsTo'},
-    {'1': 'timezone', '3': 4, '4': 1, '5': 9, '10': 'timezone'},
     {'1': 'description', '3': 5, '4': 1, '5': 9, '10': 'description'},
     {
       '1': 'dates',
@@ -257,12 +245,11 @@ const CreateLeaveRequest$json = {
 final $typed_data.Uint8List createLeaveRequestDescriptor = $convert.base64Decode(
     'ChJDcmVhdGVMZWF2ZVJlcXVlc3QSOQoKbGVhdmVfdHlwZRgBIAEoDjIaLmNvbW1vbl9tZXNzYW'
     'dlcy5MZWF2ZVR5cGVSCWxlYXZlVHlwZRIXCgd1c2VyX2lkGAIgASgJUgZ1c2VySWQSHQoKYmVs'
-    'b25nc190bxgDIAEoCVIJYmVsb25nc1RvEhoKCHRpbWV6b25lGAQgASgJUgh0aW1lem9uZRIgCg'
-    'tkZXNjcmlwdGlvbhgFIAEoCVILZGVzY3JpcHRpb24SMAoFZGF0ZXMYBiADKAsyGi5nb29nbGUu'
-    'cHJvdG9idWYuVGltZXN0YW1wUgVkYXRlcxI+CgpzdGFydF9kYXRlGAcgASgLMhouZ29vZ2xlLn'
-    'Byb3RvYnVmLlRpbWVzdGFtcEgAUglzdGFydERhdGWIAQESOgoIZW5kX2RhdGUYCCABKAsyGi5n'
-    'b29nbGUucHJvdG9idWYuVGltZXN0YW1wSAFSB2VuZERhdGWIAQFCDQoLX3N0YXJ0X2RhdGVCCw'
-    'oJX2VuZF9kYXRl');
+    'b25nc190bxgDIAEoCVIJYmVsb25nc1RvEiAKC2Rlc2NyaXB0aW9uGAUgASgJUgtkZXNjcmlwdG'
+    'lvbhIwCgVkYXRlcxgGIAMoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSBWRhdGVzEj4K'
+    'CnN0YXJ0X2RhdGUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSABSCXN0YXJ0RG'
+    'F0ZYgBARI6CghlbmRfZGF0ZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAVIH'
+    'ZW5kRGF0ZYgBAUINCgtfc3RhcnRfZGF0ZUILCglfZW5kX2RhdGU=');
 
 @$core.Deprecated('Use createLeaveResponseDescriptor instead')
 const CreateLeaveResponse$json = {
