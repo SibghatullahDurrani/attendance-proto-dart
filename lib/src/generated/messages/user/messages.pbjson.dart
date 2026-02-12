@@ -890,3 +890,94 @@ final $typed_data.Uint8List teacherInfoDescriptor = $convert.base64Decode(
     'IhCgxwaG9uZV9udW1iZXIYBSABKAlSC3Bob25lTnVtYmVyEhkKBWVtYWlsGAYgASgJSAFSBWVt'
     'YWlsiAEBEiQKDmlzX2ltYWdlX2FybWVkGAcgASgIUgxpc0ltYWdlQXJtZWQSJAoNcXVhbGlmaW'
     'NhdGlvbhgIIAEoCVINcXVhbGlmaWNhdGlvbkIOCgxfc2Vjb25kX25hbWVCCAoGX2VtYWls');
+
+@$core.Deprecated('Use getEmployeesInfoRequestDescriptor instead')
+const GetEmployeesInfoRequest$json = {
+  '1': 'GetEmployeesInfoRequest',
+  '2': [
+    {'1': 'employee_ids', '3': 1, '4': 3, '5': 9, '10': 'employeeIds'},
+    {
+      '1': 'is_image_armed',
+      '3': 2,
+      '4': 1,
+      '5': 8,
+      '9': 0,
+      '10': 'isImageArmed',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_is_image_armed'},
+  ],
+};
+
+/// Descriptor for `GetEmployeesInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getEmployeesInfoRequestDescriptor = $convert.base64Decode(
+    'ChdHZXRFbXBsb3llZXNJbmZvUmVxdWVzdBIhCgxlbXBsb3llZV9pZHMYASADKAlSC2VtcGxveW'
+    'VlSWRzEikKDmlzX2ltYWdlX2FybWVkGAIgASgISABSDGlzSW1hZ2VBcm1lZIgBAUIRCg9faXNf'
+    'aW1hZ2VfYXJtZWQ=');
+
+@$core.Deprecated('Use getEmployeesInfoResponseDescriptor instead')
+const GetEmployeesInfoResponse$json = {
+  '1': 'GetEmployeesInfoResponse',
+  '2': [
+    {
+      '1': 'employee_info',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.EmployeeInfo',
+      '10': 'employeeInfo'
+    },
+  ],
+};
+
+/// Descriptor for `GetEmployeesInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getEmployeesInfoResponseDescriptor =
+    $convert.base64Decode(
+        'ChhHZXRFbXBsb3llZXNJbmZvUmVzcG9uc2USQAoNZW1wbG95ZWVfaW5mbxgBIAMoCzIbLnVzZX'
+        'JfbWVzc2FnZXMuRW1wbG95ZWVJbmZvUgxlbXBsb3llZUluZm8=');
+
+@$core.Deprecated('Use employeeInfoDescriptor instead')
+const EmployeeInfo$json = {
+  '1': 'EmployeeInfo',
+  '2': [
+    {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 5, '4': 1, '5': 9, '10': 'phoneNumber'},
+    {'1': 'email', '3': 6, '4': 1, '5': 9, '9': 1, '10': 'email', '17': true},
+    {'1': 'is_image_armed', '3': 7, '4': 1, '5': 8, '10': 'isImageArmed'},
+    {'1': 'qualification', '3': 8, '4': 1, '5': 9, '10': 'qualification'},
+    {'1': 'designation', '3': 9, '4': 1, '5': 9, '10': 'designation'},
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_email'},
+  ],
+};
+
+/// Descriptor for `EmployeeInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List employeeInfoDescriptor = $convert.base64Decode(
+    'CgxFbXBsb3llZUluZm8SHwoLZW1wbG95ZWVfaWQYASABKAlSCmVtcGxveWVlSWQSHQoKZmlyc3'
+    'RfbmFtZRgCIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAMgASgJSABSCnNlY29uZE5h'
+    'bWWIAQESMwoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJUhRpZGVudGlmaWNhdGlvbk51bW'
+    'JlchIhCgxwaG9uZV9udW1iZXIYBSABKAlSC3Bob25lTnVtYmVyEhkKBWVtYWlsGAYgASgJSAFS'
+    'BWVtYWlsiAEBEiQKDmlzX2ltYWdlX2FybWVkGAcgASgIUgxpc0ltYWdlQXJtZWQSJAoNcXVhbG'
+    'lmaWNhdGlvbhgIIAEoCVINcXVhbGlmaWNhdGlvbhIgCgtkZXNpZ25hdGlvbhgJIAEoCVILZGVz'
+    'aWduYXRpb25CDgoMX3NlY29uZF9uYW1lQggKBl9lbWFpbA==');

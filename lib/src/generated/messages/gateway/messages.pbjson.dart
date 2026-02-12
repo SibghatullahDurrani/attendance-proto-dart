@@ -1303,3 +1303,201 @@ final $typed_data.Uint8List teacherOfSchoolDescriptor = $convert.base64Decode(
     'ZnQSIgoKc2hpZnRfbmFtZRgNIAEoCUgFUglzaGlmdE5hbWWIAQFCDgoMX3NlY29uZF9uYW1lQg'
     'gKBl9lbWFpbEIhCh9fY2F1c2Vfb2Zfbm9fYXR0ZW5kYW5jZV9tYXJraW5nQhUKE191c2VyX3Ro'
     'dW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF9leHBpcmVzX2F0Qg0KC19zaGlmdF9uYW1l');
+
+@$core.Deprecated('Use listEmployeesOfSchoolRequestDescriptor instead')
+const ListEmployeesOfSchoolRequest$json = {
+  '1': 'ListEmployeesOfSchoolRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'employee_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'employeeName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'phone_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'phoneNumber',
+      '17': true
+    },
+    {
+      '1': 'ready_for_attendance',
+      '3': 6,
+      '4': 1,
+      '5': 8,
+      '9': 3,
+      '10': 'readyForAttendance',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_employee_name'},
+    {'1': '_identification_number'},
+    {'1': '_phone_number'},
+    {'1': '_ready_for_attendance'},
+  ],
+};
+
+/// Descriptor for `ListEmployeesOfSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listEmployeesOfSchoolRequestDescriptor = $convert.base64Decode(
+    'ChxMaXN0RW1wbG95ZWVzT2ZTY2hvb2xSZXF1ZXN0EkIKCnBhZ2luYXRpb24YASABKAsyIi5jb2'
+    '1tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SGwoJc2Nob29sX2lk'
+    'GAIgASgJUghzY2hvb2xJZBIoCg1lbXBsb3llZV9uYW1lGAMgASgJSABSDGVtcGxveWVlTmFtZY'
+    'gBARI4ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlIAVIUaWRlbnRpZmljYXRpb25OdW1i'
+    'ZXKIAQESJgoMcGhvbmVfbnVtYmVyGAUgASgJSAJSC3Bob25lTnVtYmVyiAEBEjUKFHJlYWR5X2'
+    'Zvcl9hdHRlbmRhbmNlGAYgASgISANSEnJlYWR5Rm9yQXR0ZW5kYW5jZYgBAUIQCg5fZW1wbG95'
+    'ZWVfbmFtZUIYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQg8KDV9waG9uZV9udW1iZXJCFwoVX3'
+    'JlYWR5X2Zvcl9hdHRlbmRhbmNl');
+
+@$core.Deprecated('Use listEmployeesOfSchoolResponseDescriptor instead')
+const ListEmployeesOfSchoolResponse$json = {
+  '1': 'ListEmployeesOfSchoolResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'employees',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.EmployeeOfSchool',
+      '10': 'employees'
+    },
+  ],
+};
+
+/// Descriptor for `ListEmployeesOfSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listEmployeesOfSchoolResponseDescriptor = $convert.base64Decode(
+    'Ch1MaXN0RW1wbG95ZWVzT2ZTY2hvb2xSZXNwb25zZRJDCgpwYWdpbmF0aW9uGAEgASgLMiMuY2'
+    '9tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbhJACgllbXBsb3ll'
+    'ZXMYAiADKAsyIi5nYXRld2F5X21lc3NhZ2VzLkVtcGxveWVlT2ZTY2hvb2xSCWVtcGxveWVlcw'
+    '==');
+
+@$core.Deprecated('Use employeeOfSchoolDescriptor instead')
+const EmployeeOfSchool$json = {
+  '1': 'EmployeeOfSchool',
+  '2': [
+    {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 5, '4': 1, '5': 9, '10': 'phoneNumber'},
+    {'1': 'email', '3': 6, '4': 1, '5': 9, '9': 1, '10': 'email', '17': true},
+    {'1': 'qualification', '3': 7, '4': 1, '5': 9, '10': 'qualification'},
+    {'1': 'designation', '3': 8, '4': 1, '5': 9, '10': 'designation'},
+    {
+      '1': 'ready_for_attendance',
+      '3': 9,
+      '4': 1,
+      '5': 8,
+      '10': 'readyForAttendance'
+    },
+    {
+      '1': 'cause_of_no_attendance_marking',
+      '3': 10,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'causeOfNoAttendanceMarking',
+      '17': true
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 11,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 4,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+    {'1': 'in_a_shift', '3': 13, '4': 1, '5': 8, '10': 'inAShift'},
+    {
+      '1': 'shift_name',
+      '3': 14,
+      '4': 1,
+      '5': 9,
+      '9': 5,
+      '10': 'shiftName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_email'},
+    {'1': '_cause_of_no_attendance_marking'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_expires_at'},
+    {'1': '_shift_name'},
+  ],
+};
+
+/// Descriptor for `EmployeeOfSchool`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List employeeOfSchoolDescriptor = $convert.base64Decode(
+    'ChBFbXBsb3llZU9mU2Nob29sEh8KC2VtcGxveWVlX2lkGAEgASgJUgplbXBsb3llZUlkEh0KCm'
+    'ZpcnN0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNvbmRfbmFtZRgDIAEoCUgAUgpzZWNv'
+    'bmROYW1liAEBEjMKFWlkZW50aWZpY2F0aW9uX251bWJlchgEIAEoCVIUaWRlbnRpZmljYXRpb2'
+    '5OdW1iZXISIQoMcGhvbmVfbnVtYmVyGAUgASgJUgtwaG9uZU51bWJlchIZCgVlbWFpbBgGIAEo'
+    'CUgBUgVlbWFpbIgBARIkCg1xdWFsaWZpY2F0aW9uGAcgASgJUg1xdWFsaWZpY2F0aW9uEiAKC2'
+    'Rlc2lnbmF0aW9uGAggASgJUgtkZXNpZ25hdGlvbhIwChRyZWFkeV9mb3JfYXR0ZW5kYW5jZRgJ'
+    'IAEoCFIScmVhZHlGb3JBdHRlbmRhbmNlEkcKHmNhdXNlX29mX25vX2F0dGVuZGFuY2VfbWFya2'
+    'luZxgKIAEoCUgCUhpjYXVzZU9mTm9BdHRlbmRhbmNlTWFya2luZ4gBARIxChJ1c2VyX3RodW1i'
+    'bmFpbF91cmwYCyABKAlIA1IQdXNlclRodW1ibmFpbFVybIgBARJRChR0aHVtYm5haWxfZXhwaX'
+    'Jlc19hdBgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBFISdGh1bWJuYWlsRXhw'
+    'aXJlc0F0iAEBEhwKCmluX2Ffc2hpZnQYDSABKAhSCGluQVNoaWZ0EiIKCnNoaWZ0X25hbWUYDi'
+    'ABKAlIBVIJc2hpZnROYW1liAEBQg4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWxCIQofX2NhdXNl'
+    'X29mX25vX2F0dGVuZGFuY2VfbWFya2luZ0IVChNfdXNlcl90aHVtYm5haWxfdXJsQhcKFV90aH'
+    'VtYm5haWxfZXhwaXJlc19hdEINCgtfc2hpZnRfbmFtZQ==');

@@ -2654,6 +2654,274 @@ class TeacherInfo extends $pb.GeneratedMessage {
   void clearQualification() => $_clearField(8);
 }
 
+class GetEmployeesInfoRequest extends $pb.GeneratedMessage {
+  factory GetEmployeesInfoRequest({
+    $core.Iterable<$core.String>? employeeIds,
+    $core.bool? isImageArmed,
+  }) {
+    final result = create();
+    if (employeeIds != null) result.employeeIds.addAll(employeeIds);
+    if (isImageArmed != null) result.isImageArmed = isImageArmed;
+    return result;
+  }
+
+  GetEmployeesInfoRequest._();
+
+  factory GetEmployeesInfoRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetEmployeesInfoRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetEmployeesInfoRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'employeeIds')
+    ..aOB(2, _omitFieldNames ? '' : 'isImageArmed')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetEmployeesInfoRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetEmployeesInfoRequest copyWith(
+          void Function(GetEmployeesInfoRequest) updates) =>
+      super.copyWith((message) => updates(message as GetEmployeesInfoRequest))
+          as GetEmployeesInfoRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetEmployeesInfoRequest create() => GetEmployeesInfoRequest._();
+  @$core.override
+  GetEmployeesInfoRequest createEmptyInstance() => create();
+  static $pb.PbList<GetEmployeesInfoRequest> createRepeated() =>
+      $pb.PbList<GetEmployeesInfoRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetEmployeesInfoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetEmployeesInfoRequest>(create);
+  static GetEmployeesInfoRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get employeeIds => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.bool get isImageArmed => $_getBF(1);
+  @$pb.TagNumber(2)
+  set isImageArmed($core.bool value) => $_setBool(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasIsImageArmed() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearIsImageArmed() => $_clearField(2);
+}
+
+class GetEmployeesInfoResponse extends $pb.GeneratedMessage {
+  factory GetEmployeesInfoResponse({
+    $core.Iterable<EmployeeInfo>? employeeInfo,
+  }) {
+    final result = create();
+    if (employeeInfo != null) result.employeeInfo.addAll(employeeInfo);
+    return result;
+  }
+
+  GetEmployeesInfoResponse._();
+
+  factory GetEmployeesInfoResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetEmployeesInfoResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetEmployeesInfoResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPM<EmployeeInfo>(1, _omitFieldNames ? '' : 'employeeInfo',
+        subBuilder: EmployeeInfo.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetEmployeesInfoResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetEmployeesInfoResponse copyWith(
+          void Function(GetEmployeesInfoResponse) updates) =>
+      super.copyWith((message) => updates(message as GetEmployeesInfoResponse))
+          as GetEmployeesInfoResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetEmployeesInfoResponse create() => GetEmployeesInfoResponse._();
+  @$core.override
+  GetEmployeesInfoResponse createEmptyInstance() => create();
+  static $pb.PbList<GetEmployeesInfoResponse> createRepeated() =>
+      $pb.PbList<GetEmployeesInfoResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetEmployeesInfoResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetEmployeesInfoResponse>(create);
+  static GetEmployeesInfoResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<EmployeeInfo> get employeeInfo => $_getList(0);
+}
+
+class EmployeeInfo extends $pb.GeneratedMessage {
+  factory EmployeeInfo({
+    $core.String? employeeId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? phoneNumber,
+    $core.String? email,
+    $core.bool? isImageArmed,
+    $core.String? qualification,
+    $core.String? designation,
+  }) {
+    final result = create();
+    if (employeeId != null) result.employeeId = employeeId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
+    if (email != null) result.email = email;
+    if (isImageArmed != null) result.isImageArmed = isImageArmed;
+    if (qualification != null) result.qualification = qualification;
+    if (designation != null) result.designation = designation;
+    return result;
+  }
+
+  EmployeeInfo._();
+
+  factory EmployeeInfo.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EmployeeInfo.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EmployeeInfo',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'employeeId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'phoneNumber')
+    ..aOS(6, _omitFieldNames ? '' : 'email')
+    ..aOB(7, _omitFieldNames ? '' : 'isImageArmed')
+    ..aOS(8, _omitFieldNames ? '' : 'qualification')
+    ..aOS(9, _omitFieldNames ? '' : 'designation')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EmployeeInfo clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EmployeeInfo copyWith(void Function(EmployeeInfo) updates) =>
+      super.copyWith((message) => updates(message as EmployeeInfo))
+          as EmployeeInfo;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static EmployeeInfo create() => EmployeeInfo._();
+  @$core.override
+  EmployeeInfo createEmptyInstance() => create();
+  static $pb.PbList<EmployeeInfo> createRepeated() =>
+      $pb.PbList<EmployeeInfo>();
+  @$core.pragma('dart2js:noInline')
+  static EmployeeInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EmployeeInfo>(create);
+  static EmployeeInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get employeeId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set employeeId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasEmployeeId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEmployeeId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get phoneNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set phoneNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasPhoneNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPhoneNumber() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get email => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set email($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasEmail() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearEmail() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.bool get isImageArmed => $_getBF(6);
+  @$pb.TagNumber(7)
+  set isImageArmed($core.bool value) => $_setBool(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasIsImageArmed() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearIsImageArmed() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get qualification => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set qualification($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasQualification() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearQualification() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get designation => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set designation($core.String value) => $_setString(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasDesignation() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearDesignation() => $_clearField(9);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

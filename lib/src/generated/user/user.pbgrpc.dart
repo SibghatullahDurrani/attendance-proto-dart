@@ -166,6 +166,13 @@ class UserServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getTeacherInfo, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetEmployeesInfoResponse> getEmployeesInfo(
+    $0.GetEmployeesInfoRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getEmployeesInfo, request, options: options);
+  }
+
   // method descriptors
 
   static final _$createStudent =
@@ -255,6 +262,11 @@ class UserServiceClient extends $grpc.Client {
           '/user.UserService/GetTeacherInfo',
           ($0.GetTeacherInfoRequest value) => value.writeToBuffer(),
           $0.GetTeacherInfoResponse.fromBuffer);
+  static final _$getEmployeesInfo = $grpc.ClientMethod<
+          $0.GetEmployeesInfoRequest, $0.GetEmployeesInfoResponse>(
+      '/user.UserService/GetEmployeesInfo',
+      ($0.GetEmployeesInfoRequest value) => value.writeToBuffer(),
+      $0.GetEmployeesInfoResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('user.UserService')
@@ -417,6 +429,15 @@ abstract class UserServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetTeacherInfoRequest.fromBuffer(value),
         ($0.GetTeacherInfoResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetEmployeesInfoRequest,
+            $0.GetEmployeesInfoResponse>(
+        'GetEmployeesInfo',
+        getEmployeesInfo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetEmployeesInfoRequest.fromBuffer(value),
+        ($0.GetEmployeesInfoResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateStudentResponse> createStudent_Pre(
@@ -575,4 +596,13 @@ abstract class UserServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetTeacherInfoResponse> getTeacherInfo(
       $grpc.ServiceCall call, $0.GetTeacherInfoRequest request);
+
+  $async.Future<$0.GetEmployeesInfoResponse> getEmployeesInfo_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetEmployeesInfoRequest> $request) async {
+    return getEmployeesInfo($call, await $request);
+  }
+
+  $async.Future<$0.GetEmployeesInfoResponse> getEmployeesInfo(
+      $grpc.ServiceCall call, $0.GetEmployeesInfoRequest request);
 }

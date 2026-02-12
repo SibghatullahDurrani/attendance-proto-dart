@@ -2054,3 +2054,83 @@ final $typed_data.Uint8List getTeacherIdsOfSchoolResponseDescriptor =
         'Ch1HZXRUZWFjaGVySWRzT2ZTY2hvb2xSZXNwb25zZRJDCgpwYWdpbmF0aW9uGAEgASgLMiMuY2'
         '9tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbhIfCgt0ZWFjaGVy'
         'X2lkcxgCIAMoCVIKdGVhY2hlcklkcw==');
+
+@$core.Deprecated('Use getEmployeeIdsOfSchoolRequestDescriptor instead')
+const GetEmployeeIdsOfSchoolRequest$json = {
+  '1': 'GetEmployeeIdsOfSchoolRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'parent_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'parentName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'phone_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'phoneNumber',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_parent_name'},
+    {'1': '_identification_number'},
+    {'1': '_phone_number'},
+  ],
+};
+
+/// Descriptor for `GetEmployeeIdsOfSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getEmployeeIdsOfSchoolRequestDescriptor = $convert.base64Decode(
+    'Ch1HZXRFbXBsb3llZUlkc09mU2Nob29sUmVxdWVzdBJCCgpwYWdpbmF0aW9uGAEgASgLMiIuY2'
+    '9tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9uEhsKCXNjaG9vbF9p'
+    'ZBgCIAEoCVIIc2Nob29sSWQSJAoLcGFyZW50X25hbWUYAyABKAlIAFIKcGFyZW50TmFtZYgBAR'
+    'I4ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlIAVIUaWRlbnRpZmljYXRpb25OdW1iZXKI'
+    'AQESJgoMcGhvbmVfbnVtYmVyGAUgASgJSAJSC3Bob25lTnVtYmVyiAEBQg4KDF9wYXJlbnRfbm'
+    'FtZUIYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQg8KDV9waG9uZV9udW1iZXI=');
+
+@$core.Deprecated('Use getEmployeeIdsOfSchoolResponseDescriptor instead')
+const GetEmployeeIdsOfSchoolResponse$json = {
+  '1': 'GetEmployeeIdsOfSchoolResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {'1': 'employee_ids', '3': 2, '4': 3, '5': 9, '10': 'employeeIds'},
+  ],
+};
+
+/// Descriptor for `GetEmployeeIdsOfSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getEmployeeIdsOfSchoolResponseDescriptor =
+    $convert.base64Decode(
+        'Ch5HZXRFbXBsb3llZUlkc09mU2Nob29sUmVzcG9uc2USQwoKcGFnaW5hdGlvbhgBIAEoCzIjLm'
+        'NvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9uc2VSCnBhZ2luYXRpb24SIQoMZW1wbG95'
+        'ZWVfaWRzGAIgAygJUgtlbXBsb3llZUlkcw==');
