@@ -2866,6 +2866,409 @@ class ParentChild extends $pb.GeneratedMessage {
   $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(4);
 }
 
+class ListTeachersOfSchoolRequest extends $pb.GeneratedMessage {
+  factory ListTeachersOfSchoolRequest({
+    $0.PaginationRequest? pagination,
+    $core.String? schoolId,
+    $core.String? teacherName,
+    $core.String? identificationNumber,
+    $core.String? phoneNumber,
+    $core.bool? readyForAttendance,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (schoolId != null) result.schoolId = schoolId;
+    if (teacherName != null) result.teacherName = teacherName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
+    if (readyForAttendance != null)
+      result.readyForAttendance = readyForAttendance;
+    return result;
+  }
+
+  ListTeachersOfSchoolRequest._();
+
+  factory ListTeachersOfSchoolRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListTeachersOfSchoolRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListTeachersOfSchoolRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(3, _omitFieldNames ? '' : 'teacherName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'phoneNumber')
+    ..aOB(6, _omitFieldNames ? '' : 'readyForAttendance')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTeachersOfSchoolRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTeachersOfSchoolRequest copyWith(
+          void Function(ListTeachersOfSchoolRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListTeachersOfSchoolRequest))
+          as ListTeachersOfSchoolRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListTeachersOfSchoolRequest create() =>
+      ListTeachersOfSchoolRequest._();
+  @$core.override
+  ListTeachersOfSchoolRequest createEmptyInstance() => create();
+  static $pb.PbList<ListTeachersOfSchoolRequest> createRepeated() =>
+      $pb.PbList<ListTeachersOfSchoolRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListTeachersOfSchoolRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTeachersOfSchoolRequest>(create);
+  static ListTeachersOfSchoolRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get schoolId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set schoolId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSchoolId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSchoolId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get teacherName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set teacherName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasTeacherName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTeacherName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get phoneNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set phoneNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasPhoneNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPhoneNumber() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.bool get readyForAttendance => $_getBF(5);
+  @$pb.TagNumber(6)
+  set readyForAttendance($core.bool value) => $_setBool(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasReadyForAttendance() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearReadyForAttendance() => $_clearField(6);
+}
+
+class ListTeachersOfSchoolResponse extends $pb.GeneratedMessage {
+  factory ListTeachersOfSchoolResponse({
+    $0.PaginationResponse? pagination,
+    $core.Iterable<TeacherOfSchool>? teachers,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (teachers != null) result.teachers.addAll(teachers);
+    return result;
+  }
+
+  ListTeachersOfSchoolResponse._();
+
+  factory ListTeachersOfSchoolResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListTeachersOfSchoolResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListTeachersOfSchoolResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationResponse.create)
+    ..pPM<TeacherOfSchool>(2, _omitFieldNames ? '' : 'teachers',
+        subBuilder: TeacherOfSchool.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTeachersOfSchoolResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTeachersOfSchoolResponse copyWith(
+          void Function(ListTeachersOfSchoolResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListTeachersOfSchoolResponse))
+          as ListTeachersOfSchoolResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListTeachersOfSchoolResponse create() =>
+      ListTeachersOfSchoolResponse._();
+  @$core.override
+  ListTeachersOfSchoolResponse createEmptyInstance() => create();
+  static $pb.PbList<ListTeachersOfSchoolResponse> createRepeated() =>
+      $pb.PbList<ListTeachersOfSchoolResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListTeachersOfSchoolResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTeachersOfSchoolResponse>(create);
+  static ListTeachersOfSchoolResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<TeacherOfSchool> get teachers => $_getList(1);
+}
+
+class TeacherOfSchool extends $pb.GeneratedMessage {
+  factory TeacherOfSchool({
+    $core.String? teacherId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? phoneNumber,
+    $core.String? email,
+    $core.String? qualification,
+    $core.bool? readyForAttendance,
+    $core.String? causeOfNoAttendanceMarking,
+    $core.String? userThumbnailUrl,
+    $1.Timestamp? thumbnailExpiresAt,
+    $core.bool? inAShift,
+    $core.String? shiftName,
+  }) {
+    final result = create();
+    if (teacherId != null) result.teacherId = teacherId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
+    if (email != null) result.email = email;
+    if (qualification != null) result.qualification = qualification;
+    if (readyForAttendance != null)
+      result.readyForAttendance = readyForAttendance;
+    if (causeOfNoAttendanceMarking != null)
+      result.causeOfNoAttendanceMarking = causeOfNoAttendanceMarking;
+    if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
+    if (thumbnailExpiresAt != null)
+      result.thumbnailExpiresAt = thumbnailExpiresAt;
+    if (inAShift != null) result.inAShift = inAShift;
+    if (shiftName != null) result.shiftName = shiftName;
+    return result;
+  }
+
+  TeacherOfSchool._();
+
+  factory TeacherOfSchool.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TeacherOfSchool.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TeacherOfSchool',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'teacherId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'phoneNumber')
+    ..aOS(6, _omitFieldNames ? '' : 'email')
+    ..aOS(7, _omitFieldNames ? '' : 'qualification')
+    ..aOB(8, _omitFieldNames ? '' : 'readyForAttendance')
+    ..aOS(9, _omitFieldNames ? '' : 'causeOfNoAttendanceMarking')
+    ..aOS(10, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(11, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOB(12, _omitFieldNames ? '' : 'inAShift')
+    ..aOS(13, _omitFieldNames ? '' : 'shiftName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TeacherOfSchool clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TeacherOfSchool copyWith(void Function(TeacherOfSchool) updates) =>
+      super.copyWith((message) => updates(message as TeacherOfSchool))
+          as TeacherOfSchool;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TeacherOfSchool create() => TeacherOfSchool._();
+  @$core.override
+  TeacherOfSchool createEmptyInstance() => create();
+  static $pb.PbList<TeacherOfSchool> createRepeated() =>
+      $pb.PbList<TeacherOfSchool>();
+  @$core.pragma('dart2js:noInline')
+  static TeacherOfSchool getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TeacherOfSchool>(create);
+  static TeacherOfSchool? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get teacherId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set teacherId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasTeacherId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTeacherId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get phoneNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set phoneNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasPhoneNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPhoneNumber() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get email => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set email($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasEmail() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearEmail() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get qualification => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set qualification($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasQualification() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearQualification() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.bool get readyForAttendance => $_getBF(7);
+  @$pb.TagNumber(8)
+  set readyForAttendance($core.bool value) => $_setBool(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasReadyForAttendance() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearReadyForAttendance() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get causeOfNoAttendanceMarking => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set causeOfNoAttendanceMarking($core.String value) => $_setString(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasCauseOfNoAttendanceMarking() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearCauseOfNoAttendanceMarking() => $_clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get userThumbnailUrl => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set userThumbnailUrl($core.String value) => $_setString(9, value);
+  @$pb.TagNumber(10)
+  $core.bool hasUserThumbnailUrl() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearUserThumbnailUrl() => $_clearField(10);
+
+  @$pb.TagNumber(11)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(10);
+  @$pb.TagNumber(11)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(11, value);
+  @$pb.TagNumber(11)
+  $core.bool hasThumbnailExpiresAt() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearThumbnailExpiresAt() => $_clearField(11);
+  @$pb.TagNumber(11)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(10);
+
+  @$pb.TagNumber(12)
+  $core.bool get inAShift => $_getBF(11);
+  @$pb.TagNumber(12)
+  set inAShift($core.bool value) => $_setBool(11, value);
+  @$pb.TagNumber(12)
+  $core.bool hasInAShift() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearInAShift() => $_clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.String get shiftName => $_getSZ(12);
+  @$pb.TagNumber(13)
+  set shiftName($core.String value) => $_setString(12, value);
+  @$pb.TagNumber(13)
+  $core.bool hasShiftName() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearShiftName() => $_clearField(13);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

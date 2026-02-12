@@ -403,6 +403,13 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listParentsOfSchool, request, options: options);
   }
 
+  $grpc.ResponseFuture<$5.ListTeachersOfSchoolResponse> listTeachersOfSchool(
+    $5.ListTeachersOfSchoolRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listTeachersOfSchool, request, options: options);
+  }
+
   // method descriptors
 
   static final _$login = $grpc.ClientMethod<$0.LoginRequest, $0.LoginResponse>(
@@ -653,6 +660,11 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/ListParentsOfSchool',
       ($5.ListParentsOfSchoolRequest value) => value.writeToBuffer(),
       $5.ListParentsOfSchoolResponse.fromBuffer);
+  static final _$listTeachersOfSchool = $grpc.ClientMethod<
+          $5.ListTeachersOfSchoolRequest, $5.ListTeachersOfSchoolResponse>(
+      '/gateway.GatewayService/ListTeachersOfSchool',
+      ($5.ListTeachersOfSchoolRequest value) => value.writeToBuffer(),
+      $5.ListTeachersOfSchoolResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -1078,6 +1090,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $5.ListParentsOfSchoolRequest.fromBuffer(value),
         ($5.ListParentsOfSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.ListTeachersOfSchoolRequest,
+            $5.ListTeachersOfSchoolResponse>(
+        'ListTeachersOfSchool',
+        listTeachersOfSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.ListTeachersOfSchoolRequest.fromBuffer(value),
+        ($5.ListTeachersOfSchoolResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -1485,4 +1506,13 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$5.ListParentsOfSchoolResponse> listParentsOfSchool(
       $grpc.ServiceCall call, $5.ListParentsOfSchoolRequest request);
+
+  $async.Future<$5.ListTeachersOfSchoolResponse> listTeachersOfSchool_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$5.ListTeachersOfSchoolRequest> $request) async {
+    return listTeachersOfSchool($call, await $request);
+  }
+
+  $async.Future<$5.ListTeachersOfSchoolResponse> listTeachersOfSchool(
+      $grpc.ServiceCall call, $5.ListTeachersOfSchoolRequest request);
 }

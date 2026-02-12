@@ -159,6 +159,13 @@ class UserServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getParentsInfo, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetTeacherInfoResponse> getTeacherInfo(
+    $0.GetTeacherInfoRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getTeacherInfo, request, options: options);
+  }
+
   // method descriptors
 
   static final _$createStudent =
@@ -243,6 +250,11 @@ class UserServiceClient extends $grpc.Client {
           '/user.UserService/GetParentsInfo',
           ($0.GetParentsInfoRequest value) => value.writeToBuffer(),
           $0.GetParentsInfoResponse.fromBuffer);
+  static final _$getTeacherInfo =
+      $grpc.ClientMethod<$0.GetTeacherInfoRequest, $0.GetTeacherInfoResponse>(
+          '/user.UserService/GetTeacherInfo',
+          ($0.GetTeacherInfoRequest value) => value.writeToBuffer(),
+          $0.GetTeacherInfoResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('user.UserService')
@@ -396,6 +408,15 @@ abstract class UserServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetParentsInfoRequest.fromBuffer(value),
         ($0.GetParentsInfoResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetTeacherInfoRequest,
+            $0.GetTeacherInfoResponse>(
+        'GetTeacherInfo',
+        getTeacherInfo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetTeacherInfoRequest.fromBuffer(value),
+        ($0.GetTeacherInfoResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateStudentResponse> createStudent_Pre(
@@ -545,4 +566,13 @@ abstract class UserServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetParentsInfoResponse> getParentsInfo(
       $grpc.ServiceCall call, $0.GetParentsInfoRequest request);
+
+  $async.Future<$0.GetTeacherInfoResponse> getTeacherInfo_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetTeacherInfoRequest> $request) async {
+    return getTeacherInfo($call, await $request);
+  }
+
+  $async.Future<$0.GetTeacherInfoResponse> getTeacherInfo(
+      $grpc.ServiceCall call, $0.GetTeacherInfoRequest request);
 }

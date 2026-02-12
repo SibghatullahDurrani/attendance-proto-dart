@@ -801,3 +801,92 @@ final $typed_data.Uint8List parentChildInfoDescriptor = $convert.base64Decode(
     'Cg9QYXJlbnRDaGlsZEluZm8SHQoKc3R1ZGVudF9pZBgBIAEoCVIJc3R1ZGVudElkEh0KCmZpcn'
     'N0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNvbmRfbmFtZRgDIAEoCUgAUgpzZWNvbmRO'
     'YW1liAEBQg4KDF9zZWNvbmRfbmFtZQ==');
+
+@$core.Deprecated('Use getTeacherInfoRequestDescriptor instead')
+const GetTeacherInfoRequest$json = {
+  '1': 'GetTeacherInfoRequest',
+  '2': [
+    {'1': 'teacher_ids', '3': 1, '4': 3, '5': 9, '10': 'teacherIds'},
+    {
+      '1': 'is_image_armed',
+      '3': 2,
+      '4': 1,
+      '5': 8,
+      '9': 0,
+      '10': 'isImageArmed',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_is_image_armed'},
+  ],
+};
+
+/// Descriptor for `GetTeacherInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getTeacherInfoRequestDescriptor = $convert.base64Decode(
+    'ChVHZXRUZWFjaGVySW5mb1JlcXVlc3QSHwoLdGVhY2hlcl9pZHMYASADKAlSCnRlYWNoZXJJZH'
+    'MSKQoOaXNfaW1hZ2VfYXJtZWQYAiABKAhIAFIMaXNJbWFnZUFybWVkiAEBQhEKD19pc19pbWFn'
+    'ZV9hcm1lZA==');
+
+@$core.Deprecated('Use getTeacherInfoResponseDescriptor instead')
+const GetTeacherInfoResponse$json = {
+  '1': 'GetTeacherInfoResponse',
+  '2': [
+    {
+      '1': 'teachers_info',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.TeacherInfo',
+      '10': 'teachersInfo'
+    },
+  ],
+};
+
+/// Descriptor for `GetTeacherInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getTeacherInfoResponseDescriptor =
+    $convert.base64Decode(
+        'ChZHZXRUZWFjaGVySW5mb1Jlc3BvbnNlEj8KDXRlYWNoZXJzX2luZm8YASADKAsyGi51c2VyX2'
+        '1lc3NhZ2VzLlRlYWNoZXJJbmZvUgx0ZWFjaGVyc0luZm8=');
+
+@$core.Deprecated('Use teacherInfoDescriptor instead')
+const TeacherInfo$json = {
+  '1': 'TeacherInfo',
+  '2': [
+    {'1': 'teacher_id', '3': 1, '4': 1, '5': 9, '10': 'teacherId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 5, '4': 1, '5': 9, '10': 'phoneNumber'},
+    {'1': 'email', '3': 6, '4': 1, '5': 9, '9': 1, '10': 'email', '17': true},
+    {'1': 'is_image_armed', '3': 7, '4': 1, '5': 8, '10': 'isImageArmed'},
+    {'1': 'qualification', '3': 8, '4': 1, '5': 9, '10': 'qualification'},
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_email'},
+  ],
+};
+
+/// Descriptor for `TeacherInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List teacherInfoDescriptor = $convert.base64Decode(
+    'CgtUZWFjaGVySW5mbxIdCgp0ZWFjaGVyX2lkGAEgASgJUgl0ZWFjaGVySWQSHQoKZmlyc3Rfbm'
+    'FtZRgCIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAMgASgJSABSCnNlY29uZE5hbWWI'
+    'AQESMwoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJUhRpZGVudGlmaWNhdGlvbk51bWJlch'
+    'IhCgxwaG9uZV9udW1iZXIYBSABKAlSC3Bob25lTnVtYmVyEhkKBWVtYWlsGAYgASgJSAFSBWVt'
+    'YWlsiAEBEiQKDmlzX2ltYWdlX2FybWVkGAcgASgIUgxpc0ltYWdlQXJtZWQSJAoNcXVhbGlmaW'
+    'NhdGlvbhgIIAEoCVINcXVhbGlmaWNhdGlvbkIOCgxfc2Vjb25kX25hbWVCCAoGX2VtYWls');

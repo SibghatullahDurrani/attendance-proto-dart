@@ -1107,3 +1107,199 @@ final $typed_data.Uint8List parentChildDescriptor = $convert.base64Decode(
     'oUdGh1bWJuYWlsX2V4cGlyZXNfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w'
     'SAJSEnRodW1ibmFpbEV4cGlyZXNBdIgBAUIOCgxfc2Vjb25kX25hbWVCFQoTX3VzZXJfdGh1bW'
     'JuYWlsX3VybEIXChVfdGh1bWJuYWlsX2V4cGlyZXNfYXQ=');
+
+@$core.Deprecated('Use listTeachersOfSchoolRequestDescriptor instead')
+const ListTeachersOfSchoolRequest$json = {
+  '1': 'ListTeachersOfSchoolRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'teacher_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'teacherName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'phone_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'phoneNumber',
+      '17': true
+    },
+    {
+      '1': 'ready_for_attendance',
+      '3': 6,
+      '4': 1,
+      '5': 8,
+      '9': 3,
+      '10': 'readyForAttendance',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_teacher_name'},
+    {'1': '_identification_number'},
+    {'1': '_phone_number'},
+    {'1': '_ready_for_attendance'},
+  ],
+};
+
+/// Descriptor for `ListTeachersOfSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listTeachersOfSchoolRequestDescriptor = $convert.base64Decode(
+    'ChtMaXN0VGVhY2hlcnNPZlNjaG9vbFJlcXVlc3QSQgoKcGFnaW5hdGlvbhgBIAEoCzIiLmNvbW'
+    '1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhIbCglzY2hvb2xfaWQY'
+    'AiABKAlSCHNjaG9vbElkEiYKDHRlYWNoZXJfbmFtZRgDIAEoCUgAUgt0ZWFjaGVyTmFtZYgBAR'
+    'I4ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlIAVIUaWRlbnRpZmljYXRpb25OdW1iZXKI'
+    'AQESJgoMcGhvbmVfbnVtYmVyGAUgASgJSAJSC3Bob25lTnVtYmVyiAEBEjUKFHJlYWR5X2Zvcl'
+    '9hdHRlbmRhbmNlGAYgASgISANSEnJlYWR5Rm9yQXR0ZW5kYW5jZYgBAUIPCg1fdGVhY2hlcl9u'
+    'YW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCDwoNX3Bob25lX251bWJlckIXChVfcmVhZH'
+    'lfZm9yX2F0dGVuZGFuY2U=');
+
+@$core.Deprecated('Use listTeachersOfSchoolResponseDescriptor instead')
+const ListTeachersOfSchoolResponse$json = {
+  '1': 'ListTeachersOfSchoolResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'teachers',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.TeacherOfSchool',
+      '10': 'teachers'
+    },
+  ],
+};
+
+/// Descriptor for `ListTeachersOfSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listTeachersOfSchoolResponseDescriptor =
+    $convert.base64Decode(
+        'ChxMaXN0VGVhY2hlcnNPZlNjaG9vbFJlc3BvbnNlEkMKCnBhZ2luYXRpb24YASABKAsyIy5jb2'
+        '1tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpwYWdpbmF0aW9uEj0KCHRlYWNoZXJz'
+        'GAIgAygLMiEuZ2F0ZXdheV9tZXNzYWdlcy5UZWFjaGVyT2ZTY2hvb2xSCHRlYWNoZXJz');
+
+@$core.Deprecated('Use teacherOfSchoolDescriptor instead')
+const TeacherOfSchool$json = {
+  '1': 'TeacherOfSchool',
+  '2': [
+    {'1': 'teacher_id', '3': 1, '4': 1, '5': 9, '10': 'teacherId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 5, '4': 1, '5': 9, '10': 'phoneNumber'},
+    {'1': 'email', '3': 6, '4': 1, '5': 9, '9': 1, '10': 'email', '17': true},
+    {'1': 'qualification', '3': 7, '4': 1, '5': 9, '10': 'qualification'},
+    {
+      '1': 'ready_for_attendance',
+      '3': 8,
+      '4': 1,
+      '5': 8,
+      '10': 'readyForAttendance'
+    },
+    {
+      '1': 'cause_of_no_attendance_marking',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'causeOfNoAttendanceMarking',
+      '17': true
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 10,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 4,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+    {'1': 'in_a_shift', '3': 12, '4': 1, '5': 8, '10': 'inAShift'},
+    {
+      '1': 'shift_name',
+      '3': 13,
+      '4': 1,
+      '5': 9,
+      '9': 5,
+      '10': 'shiftName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_email'},
+    {'1': '_cause_of_no_attendance_marking'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_expires_at'},
+    {'1': '_shift_name'},
+  ],
+};
+
+/// Descriptor for `TeacherOfSchool`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List teacherOfSchoolDescriptor = $convert.base64Decode(
+    'Cg9UZWFjaGVyT2ZTY2hvb2wSHQoKdGVhY2hlcl9pZBgBIAEoCVIJdGVhY2hlcklkEh0KCmZpcn'
+    'N0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNvbmRfbmFtZRgDIAEoCUgAUgpzZWNvbmRO'
+    'YW1liAEBEjMKFWlkZW50aWZpY2F0aW9uX251bWJlchgEIAEoCVIUaWRlbnRpZmljYXRpb25OdW'
+    '1iZXISIQoMcGhvbmVfbnVtYmVyGAUgASgJUgtwaG9uZU51bWJlchIZCgVlbWFpbBgGIAEoCUgB'
+    'UgVlbWFpbIgBARIkCg1xdWFsaWZpY2F0aW9uGAcgASgJUg1xdWFsaWZpY2F0aW9uEjAKFHJlYW'
+    'R5X2Zvcl9hdHRlbmRhbmNlGAggASgIUhJyZWFkeUZvckF0dGVuZGFuY2USRwoeY2F1c2Vfb2Zf'
+    'bm9fYXR0ZW5kYW5jZV9tYXJraW5nGAkgASgJSAJSGmNhdXNlT2ZOb0F0dGVuZGFuY2VNYXJraW'
+    '5niAEBEjEKEnVzZXJfdGh1bWJuYWlsX3VybBgKIAEoCUgDUhB1c2VyVGh1bWJuYWlsVXJsiAEB'
+    'ElEKFHRodW1ibmFpbF9leHBpcmVzX2F0GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdG'
+    'FtcEgEUhJ0aHVtYm5haWxFeHBpcmVzQXSIAQESHAoKaW5fYV9zaGlmdBgMIAEoCFIIaW5BU2hp'
+    'ZnQSIgoKc2hpZnRfbmFtZRgNIAEoCUgFUglzaGlmdE5hbWWIAQFCDgoMX3NlY29uZF9uYW1lQg'
+    'gKBl9lbWFpbEIhCh9fY2F1c2Vfb2Zfbm9fYXR0ZW5kYW5jZV9tYXJraW5nQhUKE191c2VyX3Ro'
+    'dW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF9leHBpcmVzX2F0Qg0KC19zaGlmdF9uYW1l');
