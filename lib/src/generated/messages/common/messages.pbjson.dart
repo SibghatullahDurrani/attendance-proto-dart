@@ -115,6 +115,20 @@ final $typed_data.Uint8List daysDescriptor = $convert.base64Decode(
     'CgREYXlzEgoKBk1PTkRBWRAAEgsKB1RVRVNEQVkQARINCglXRURORVNEQVkQAhIMCghUSFVSU0'
     'RBWRADEgoKBkZSSURBWRAEEgwKCFNBVFVSREFZEAUSCgoGU1VOREFZEAY=');
 
+@$core.Deprecated('Use leaveTypeDescriptor instead')
+const LeaveType$json = {
+  '1': 'LeaveType',
+  '2': [
+    {'1': 'LEAVE_TYPE_DISCRETE', '2': 0},
+    {'1': 'LEAVE_TYPE_RANGE', '2': 1},
+  ],
+};
+
+/// Descriptor for `LeaveType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List leaveTypeDescriptor = $convert.base64Decode(
+    'CglMZWF2ZVR5cGUSFwoTTEVBVkVfVFlQRV9ESVNDUkVURRAAEhQKEExFQVZFX1RZUEVfUkFOR0'
+    'UQAQ==');
+
 @$core.Deprecated('Use paginationRequestDescriptor instead')
 const PaginationRequest$json = {
   '1': 'PaginationRequest',

@@ -172,5 +172,24 @@ class Days extends $pb.ProtobufEnum {
   const Days._(super.value, super.name);
 }
 
+class LeaveType extends $pb.ProtobufEnum {
+  static const LeaveType LEAVE_TYPE_DISCRETE =
+      LeaveType._(0, _omitEnumNames ? '' : 'LEAVE_TYPE_DISCRETE');
+  static const LeaveType LEAVE_TYPE_RANGE =
+      LeaveType._(1, _omitEnumNames ? '' : 'LEAVE_TYPE_RANGE');
+
+  static const $core.List<LeaveType> values = <LeaveType>[
+    LEAVE_TYPE_DISCRETE,
+    LEAVE_TYPE_RANGE,
+  ];
+
+  static final $core.List<LeaveType?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 1);
+  static LeaveType? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const LeaveType._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');

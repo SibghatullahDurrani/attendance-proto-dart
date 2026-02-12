@@ -134,11 +134,19 @@ class ListUserLeavesRequest extends $pb.GeneratedMessage {
 class UserLeave extends $pb.GeneratedMessage {
   factory UserLeave({
     $core.String? leaveId,
+    $0.LeaveType? leaveType,
     $core.Iterable<LeaveDate>? leaveDates,
+    $1.Timestamp? startDate,
+    $1.Timestamp? endDate,
+    $0.LeaveStatus? rangeStatus,
   }) {
     final result = create();
     if (leaveId != null) result.leaveId = leaveId;
+    if (leaveType != null) result.leaveType = leaveType;
     if (leaveDates != null) result.leaveDates.addAll(leaveDates);
+    if (startDate != null) result.startDate = startDate;
+    if (endDate != null) result.endDate = endDate;
+    if (rangeStatus != null) result.rangeStatus = rangeStatus;
     return result;
   }
 
@@ -156,8 +164,16 @@ class UserLeave extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'leaveId')
-    ..pPM<LeaveDate>(2, _omitFieldNames ? '' : 'leaveDates',
+    ..aE<$0.LeaveType>(2, _omitFieldNames ? '' : 'leaveType',
+        enumValues: $0.LeaveType.values)
+    ..pPM<LeaveDate>(3, _omitFieldNames ? '' : 'leaveDates',
         subBuilder: LeaveDate.create)
+    ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'startDate',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(5, _omitFieldNames ? '' : 'endDate',
+        subBuilder: $1.Timestamp.create)
+    ..aE<$0.LeaveStatus>(6, _omitFieldNames ? '' : 'rangeStatus',
+        enumValues: $0.LeaveStatus.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -189,7 +205,49 @@ class UserLeave extends $pb.GeneratedMessage {
   void clearLeaveId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $pb.PbList<LeaveDate> get leaveDates => $_getList(1);
+  $0.LeaveType get leaveType => $_getN(1);
+  @$pb.TagNumber(2)
+  set leaveType($0.LeaveType value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasLeaveType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLeaveType() => $_clearField(2);
+
+  /// For DISCRETE type
+  @$pb.TagNumber(3)
+  $pb.PbList<LeaveDate> get leaveDates => $_getList(2);
+
+  /// For RANGE type
+  @$pb.TagNumber(4)
+  $1.Timestamp get startDate => $_getN(3);
+  @$pb.TagNumber(4)
+  set startDate($1.Timestamp value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasStartDate() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearStartDate() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $1.Timestamp ensureStartDate() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $1.Timestamp get endDate => $_getN(4);
+  @$pb.TagNumber(5)
+  set endDate($1.Timestamp value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasEndDate() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearEndDate() => $_clearField(5);
+  @$pb.TagNumber(5)
+  $1.Timestamp ensureEndDate() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $0.LeaveStatus get rangeStatus => $_getN(5);
+  @$pb.TagNumber(6)
+  set rangeStatus($0.LeaveStatus value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasRangeStatus() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearRangeStatus() => $_clearField(6);
 }
 
 class LeaveDate extends $pb.GeneratedMessage {
@@ -331,18 +389,24 @@ class ListUserLeavesResponse extends $pb.GeneratedMessage {
 
 class CreateLeaveRequest extends $pb.GeneratedMessage {
   factory CreateLeaveRequest({
-    $core.Iterable<$1.Timestamp>? dates,
+    $0.LeaveType? leaveType,
     $core.String? userId,
     $core.String? belongsTo,
     $core.String? timezone,
     $core.String? description,
+    $core.Iterable<$1.Timestamp>? dates,
+    $1.Timestamp? startDate,
+    $1.Timestamp? endDate,
   }) {
     final result = create();
-    if (dates != null) result.dates.addAll(dates);
+    if (leaveType != null) result.leaveType = leaveType;
     if (userId != null) result.userId = userId;
     if (belongsTo != null) result.belongsTo = belongsTo;
     if (timezone != null) result.timezone = timezone;
     if (description != null) result.description = description;
+    if (dates != null) result.dates.addAll(dates);
+    if (startDate != null) result.startDate = startDate;
+    if (endDate != null) result.endDate = endDate;
     return result;
   }
 
@@ -359,12 +423,18 @@ class CreateLeaveRequest extends $pb.GeneratedMessage {
       _omitMessageNames ? '' : 'CreateLeaveRequest',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
-    ..pPM<$1.Timestamp>(1, _omitFieldNames ? '' : 'dates',
-        subBuilder: $1.Timestamp.create)
+    ..aE<$0.LeaveType>(1, _omitFieldNames ? '' : 'leaveType',
+        enumValues: $0.LeaveType.values)
     ..aOS(2, _omitFieldNames ? '' : 'userId')
     ..aOS(3, _omitFieldNames ? '' : 'belongsTo')
     ..aOS(4, _omitFieldNames ? '' : 'timezone')
     ..aOS(5, _omitFieldNames ? '' : 'description')
+    ..pPM<$1.Timestamp>(6, _omitFieldNames ? '' : 'dates',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(7, _omitFieldNames ? '' : 'startDate',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(8, _omitFieldNames ? '' : 'endDate',
+        subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -389,7 +459,13 @@ class CreateLeaveRequest extends $pb.GeneratedMessage {
   static CreateLeaveRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $pb.PbList<$1.Timestamp> get dates => $_getList(0);
+  $0.LeaveType get leaveType => $_getN(0);
+  @$pb.TagNumber(1)
+  set leaveType($0.LeaveType value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasLeaveType() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLeaveType() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get userId => $_getSZ(1);
@@ -426,6 +502,33 @@ class CreateLeaveRequest extends $pb.GeneratedMessage {
   $core.bool hasDescription() => $_has(4);
   @$pb.TagNumber(5)
   void clearDescription() => $_clearField(5);
+
+  /// For DISCRETE type
+  @$pb.TagNumber(6)
+  $pb.PbList<$1.Timestamp> get dates => $_getList(5);
+
+  /// For RANGE type
+  @$pb.TagNumber(7)
+  $1.Timestamp get startDate => $_getN(6);
+  @$pb.TagNumber(7)
+  set startDate($1.Timestamp value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasStartDate() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearStartDate() => $_clearField(7);
+  @$pb.TagNumber(7)
+  $1.Timestamp ensureStartDate() => $_ensure(6);
+
+  @$pb.TagNumber(8)
+  $1.Timestamp get endDate => $_getN(7);
+  @$pb.TagNumber(8)
+  set endDate($1.Timestamp value) => $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasEndDate() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearEndDate() => $_clearField(8);
+  @$pb.TagNumber(8)
+  $1.Timestamp ensureEndDate() => $_ensure(7);
 }
 
 class CreateLeaveResponse extends $pb.GeneratedMessage {
@@ -544,11 +647,19 @@ class GetLeaveDetailsRequest extends $pb.GeneratedMessage {
 class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
   factory GetLeaveDetailsResponse({
     $core.String? description,
+    $0.LeaveType? leaveType,
     $core.Iterable<LeaveDate>? leaveDates,
+    $1.Timestamp? startDate,
+    $1.Timestamp? endDate,
+    $0.LeaveStatus? rangeStatus,
   }) {
     final result = create();
     if (description != null) result.description = description;
+    if (leaveType != null) result.leaveType = leaveType;
     if (leaveDates != null) result.leaveDates.addAll(leaveDates);
+    if (startDate != null) result.startDate = startDate;
+    if (endDate != null) result.endDate = endDate;
+    if (rangeStatus != null) result.rangeStatus = rangeStatus;
     return result;
   }
 
@@ -566,8 +677,16 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'description')
-    ..pPM<LeaveDate>(2, _omitFieldNames ? '' : 'leaveDates',
+    ..aE<$0.LeaveType>(2, _omitFieldNames ? '' : 'leaveType',
+        enumValues: $0.LeaveType.values)
+    ..pPM<LeaveDate>(3, _omitFieldNames ? '' : 'leaveDates',
         subBuilder: LeaveDate.create)
+    ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'startDate',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(5, _omitFieldNames ? '' : 'endDate',
+        subBuilder: $1.Timestamp.create)
+    ..aE<$0.LeaveStatus>(6, _omitFieldNames ? '' : 'rangeStatus',
+        enumValues: $0.LeaveStatus.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -602,21 +721,65 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
   void clearDescription() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $pb.PbList<LeaveDate> get leaveDates => $_getList(1);
+  $0.LeaveType get leaveType => $_getN(1);
+  @$pb.TagNumber(2)
+  set leaveType($0.LeaveType value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasLeaveType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLeaveType() => $_clearField(2);
+
+  /// For DISCRETE type
+  @$pb.TagNumber(3)
+  $pb.PbList<LeaveDate> get leaveDates => $_getList(2);
+
+  /// For RANGE type
+  @$pb.TagNumber(4)
+  $1.Timestamp get startDate => $_getN(3);
+  @$pb.TagNumber(4)
+  set startDate($1.Timestamp value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasStartDate() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearStartDate() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $1.Timestamp ensureStartDate() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $1.Timestamp get endDate => $_getN(4);
+  @$pb.TagNumber(5)
+  set endDate($1.Timestamp value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasEndDate() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearEndDate() => $_clearField(5);
+  @$pb.TagNumber(5)
+  $1.Timestamp ensureEndDate() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $0.LeaveStatus get rangeStatus => $_getN(5);
+  @$pb.TagNumber(6)
+  set rangeStatus($0.LeaveStatus value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasRangeStatus() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearRangeStatus() => $_clearField(6);
 }
 
 class UpdateLeaveRequest extends $pb.GeneratedMessage {
   factory UpdateLeaveRequest({
     $core.String? leaveId,
-    $core.Iterable<$1.Timestamp>? dates,
-    $core.String? timezone,
     $core.String? description,
+    $core.Iterable<$1.Timestamp>? dates,
+    $1.Timestamp? startDate,
+    $1.Timestamp? endDate,
   }) {
     final result = create();
     if (leaveId != null) result.leaveId = leaveId;
-    if (dates != null) result.dates.addAll(dates);
-    if (timezone != null) result.timezone = timezone;
     if (description != null) result.description = description;
+    if (dates != null) result.dates.addAll(dates);
+    if (startDate != null) result.startDate = startDate;
+    if (endDate != null) result.endDate = endDate;
     return result;
   }
 
@@ -634,10 +797,13 @@ class UpdateLeaveRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'leaveId')
-    ..pPM<$1.Timestamp>(2, _omitFieldNames ? '' : 'dates',
+    ..aOS(2, _omitFieldNames ? '' : 'description')
+    ..pPM<$1.Timestamp>(3, _omitFieldNames ? '' : 'dates',
         subBuilder: $1.Timestamp.create)
-    ..aOS(3, _omitFieldNames ? '' : 'timezone')
-    ..aOS(4, _omitFieldNames ? '' : 'description')
+    ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'startDate',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(5, _omitFieldNames ? '' : 'endDate',
+        subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -671,25 +837,40 @@ class UpdateLeaveRequest extends $pb.GeneratedMessage {
   void clearLeaveId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $pb.PbList<$1.Timestamp> get dates => $_getList(1);
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set description($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDescription() => $_clearField(2);
 
+  /// For DISCRETE type - update individual dates
   @$pb.TagNumber(3)
-  $core.String get timezone => $_getSZ(2);
-  @$pb.TagNumber(3)
-  set timezone($core.String value) => $_setString(2, value);
-  @$pb.TagNumber(3)
-  $core.bool hasTimezone() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearTimezone() => $_clearField(3);
+  $pb.PbList<$1.Timestamp> get dates => $_getList(2);
 
+  /// For RANGE type - replace entire range
   @$pb.TagNumber(4)
-  $core.String get description => $_getSZ(3);
+  $1.Timestamp get startDate => $_getN(3);
   @$pb.TagNumber(4)
-  set description($core.String value) => $_setString(3, value);
+  set startDate($1.Timestamp value) => $_setField(4, value);
   @$pb.TagNumber(4)
-  $core.bool hasDescription() => $_has(3);
+  $core.bool hasStartDate() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDescription() => $_clearField(4);
+  void clearStartDate() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $1.Timestamp ensureStartDate() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $1.Timestamp get endDate => $_getN(4);
+  @$pb.TagNumber(5)
+  set endDate($1.Timestamp value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasEndDate() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearEndDate() => $_clearField(5);
+  @$pb.TagNumber(5)
+  $1.Timestamp ensureEndDate() => $_ensure(4);
 }
 
 class UpdateLeaveResponse extends $pb.GeneratedMessage {
@@ -842,6 +1023,60 @@ class DeleteLeaveResponse extends $pb.GeneratedMessage {
   static DeleteLeaveResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteLeaveResponse>(create);
   static DeleteLeaveResponse? _defaultInstance;
+}
+
+/// LeaveConflictDetails is attached to gRPC FailedPrecondition status
+/// when a leave request overlaps with existing leave dates.
+class LeaveConflictDetails extends $pb.GeneratedMessage {
+  factory LeaveConflictDetails({
+    $core.Iterable<$1.Timestamp>? conflictingDates,
+  }) {
+    final result = create();
+    if (conflictingDates != null)
+      result.conflictingDates.addAll(conflictingDates);
+    return result;
+  }
+
+  LeaveConflictDetails._();
+
+  factory LeaveConflictDetails.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory LeaveConflictDetails.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LeaveConflictDetails',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
+      createEmptyInstance: create)
+    ..pPM<$1.Timestamp>(1, _omitFieldNames ? '' : 'conflictingDates',
+        subBuilder: $1.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LeaveConflictDetails clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LeaveConflictDetails copyWith(void Function(LeaveConflictDetails) updates) =>
+      super.copyWith((message) => updates(message as LeaveConflictDetails))
+          as LeaveConflictDetails;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static LeaveConflictDetails create() => LeaveConflictDetails._();
+  @$core.override
+  LeaveConflictDetails createEmptyInstance() => create();
+  static $pb.PbList<LeaveConflictDetails> createRepeated() =>
+      $pb.PbList<LeaveConflictDetails>();
+  @$core.pragma('dart2js:noInline')
+  static LeaveConflictDetails getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LeaveConflictDetails>(create);
+  static LeaveConflictDetails? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$1.Timestamp> get conflictingDates => $_getList(0);
 }
 
 const $core.bool _omitFieldNames =
