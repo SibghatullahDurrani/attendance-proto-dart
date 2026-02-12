@@ -2069,12 +2069,12 @@ const GetEmployeeIdsOfSchoolRequest$json = {
     },
     {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
     {
-      '1': 'parent_name',
+      '1': 'employee_name',
       '3': 3,
       '4': 1,
       '5': 9,
       '9': 0,
-      '10': 'parentName',
+      '10': 'employeeName',
       '17': true
     },
     {
@@ -2097,7 +2097,7 @@ const GetEmployeeIdsOfSchoolRequest$json = {
     },
   ],
   '8': [
-    {'1': '_parent_name'},
+    {'1': '_employee_name'},
     {'1': '_identification_number'},
     {'1': '_phone_number'},
   ],
@@ -2107,10 +2107,10 @@ const GetEmployeeIdsOfSchoolRequest$json = {
 final $typed_data.Uint8List getEmployeeIdsOfSchoolRequestDescriptor = $convert.base64Decode(
     'Ch1HZXRFbXBsb3llZUlkc09mU2Nob29sUmVxdWVzdBJCCgpwYWdpbmF0aW9uGAEgASgLMiIuY2'
     '9tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9uEhsKCXNjaG9vbF9p'
-    'ZBgCIAEoCVIIc2Nob29sSWQSJAoLcGFyZW50X25hbWUYAyABKAlIAFIKcGFyZW50TmFtZYgBAR'
-    'I4ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlIAVIUaWRlbnRpZmljYXRpb25OdW1iZXKI'
-    'AQESJgoMcGhvbmVfbnVtYmVyGAUgASgJSAJSC3Bob25lTnVtYmVyiAEBQg4KDF9wYXJlbnRfbm'
-    'FtZUIYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQg8KDV9waG9uZV9udW1iZXI=');
+    'ZBgCIAEoCVIIc2Nob29sSWQSKAoNZW1wbG95ZWVfbmFtZRgDIAEoCUgAUgxlbXBsb3llZU5hbW'
+    'WIAQESOAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJSAFSFGlkZW50aWZpY2F0aW9uTnVt'
+    'YmVyiAEBEiYKDHBob25lX251bWJlchgFIAEoCUgCUgtwaG9uZU51bWJlcogBAUIQCg5fZW1wbG'
+    '95ZWVfbmFtZUIYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQg8KDV9waG9uZV9udW1iZXI=');
 
 @$core.Deprecated('Use getEmployeeIdsOfSchoolResponseDescriptor instead')
 const GetEmployeeIdsOfSchoolResponse$json = {

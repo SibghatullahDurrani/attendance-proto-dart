@@ -6107,14 +6107,14 @@ class GetEmployeeIdsOfSchoolRequest extends $pb.GeneratedMessage {
   factory GetEmployeeIdsOfSchoolRequest({
     $1.PaginationRequest? pagination,
     $core.String? schoolId,
-    $core.String? parentName,
+    $core.String? employeeName,
     $core.String? identificationNumber,
     $core.String? phoneNumber,
   }) {
     final result = create();
     if (pagination != null) result.pagination = pagination;
     if (schoolId != null) result.schoolId = schoolId;
-    if (parentName != null) result.parentName = parentName;
+    if (employeeName != null) result.employeeName = employeeName;
     if (identificationNumber != null)
       result.identificationNumber = identificationNumber;
     if (phoneNumber != null) result.phoneNumber = phoneNumber;
@@ -6138,7 +6138,7 @@ class GetEmployeeIdsOfSchoolRequest extends $pb.GeneratedMessage {
     ..aOM<$1.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
         subBuilder: $1.PaginationRequest.create)
     ..aOS(2, _omitFieldNames ? '' : 'schoolId')
-    ..aOS(3, _omitFieldNames ? '' : 'parentName')
+    ..aOS(3, _omitFieldNames ? '' : 'employeeName')
     ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
     ..aOS(5, _omitFieldNames ? '' : 'phoneNumber')
     ..hasRequiredFields = false;
@@ -6188,13 +6188,13 @@ class GetEmployeeIdsOfSchoolRequest extends $pb.GeneratedMessage {
   void clearSchoolId() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get parentName => $_getSZ(2);
+  $core.String get employeeName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set parentName($core.String value) => $_setString(2, value);
+  set employeeName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
-  $core.bool hasParentName() => $_has(2);
+  $core.bool hasEmployeeName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearParentName() => $_clearField(3);
+  void clearEmployeeName() => $_clearField(3);
 
   @$pb.TagNumber(4)
   $core.String get identificationNumber => $_getSZ(3);
