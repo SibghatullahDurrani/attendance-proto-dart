@@ -66,3 +66,12 @@ export 'src/generated/leave/leave.pbjson.dart';
 export 'src/generated/messages/leave/messages.pb.dart';
 export 'src/generated/messages/leave/messages.pbenum.dart';
 export 'src/generated/messages/leave/messages.pbjson.dart';
+
+export 'src/generated/media/media.pb.dart';
+export 'src/generated/media/media.pbenum.dart';
+export 'src/generated/media/media.pbgrpc.dart';
+export 'src/generated/media/media.pbjson.dart';
+
+export 'src/generated/messages/media/messages.pb.dart';
+export 'src/generated/messages/media/messages.pbenum.dart';
+export 'src/generated/messages/media/messages.pbjson.dart';

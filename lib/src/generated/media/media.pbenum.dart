@@ -1,6 +1,6 @@
 // This is a generated file - do not edit.
 //
-// Generated from messages/image/messages.proto.
+// Generated from media/media.proto.
 
 // @dart = 3.3
 

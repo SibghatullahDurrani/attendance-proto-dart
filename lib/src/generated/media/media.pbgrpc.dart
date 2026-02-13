@@ -1,6 +1,6 @@
 // This is a generated file - do not edit.
 //
-// Generated from image/image.proto.
+// Generated from media/media.proto.
 
 // @dart = 3.3
 
@@ -16,12 +16,12 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../messages/image/messages.pb.dart' as $0;
+import '../messages/media/messages.pb.dart' as $0;
 
-export 'image.pb.dart';
+export 'media.pb.dart';
 
-@$pb.GrpcServiceName('image.ImageService')
-class ImageServiceClient extends $grpc.Client {
+@$pb.GrpcServiceName('image.MediaService')
+class MediaServiceClient extends $grpc.Client {
   /// The hostname for this service.
   static const $core.String defaultHost = '';
 
@@ -30,7 +30,7 @@ class ImageServiceClient extends $grpc.Client {
     '',
   ];
 
-  ImageServiceClient(super.channel, {super.options, super.interceptors});
+  MediaServiceClient(super.channel, {super.options, super.interceptors});
 
   /// AddUserImage uploads a user's profile image via streaming.
   $grpc.ResponseFuture<$0.AddUserImageResponse> addUserImage(
@@ -67,35 +67,76 @@ class ImageServiceClient extends $grpc.Client {
     return $createUnaryCall(_$deleteUserImage, request, options: options);
   }
 
+  /// AddLeaveAttachment uploads an attachment for a leave request via streaming.
+  /// First message contains metadata, subsequent messages contain file chunks.
+  $grpc.ResponseFuture<$0.AddLeaveAttachmentResponse> addLeaveAttachment(
+    $async.Stream<$0.AddLeaveAttachmentRequest> request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createStreamingCall(_$addLeaveAttachment, request, options: options)
+        .single;
+  }
+
+  /// GetLeaveAttachments returns all attachments for a leave request with download URLs.
+  $grpc.ResponseFuture<$0.GetLeaveAttachmentsResponse> getLeaveAttachments(
+    $0.GetLeaveAttachmentsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getLeaveAttachments, request, options: options);
+  }
+
+  /// DeleteLeaveAttachment deletes an attachment.
+  $grpc.ResponseFuture<$0.DeleteLeaveAttachmentResponse> deleteLeaveAttachment(
+    $0.DeleteLeaveAttachmentRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$deleteLeaveAttachment, request, options: options);
+  }
+
   // method descriptors
 
   static final _$addUserImage =
       $grpc.ClientMethod<$0.AddUserImageRequest, $0.AddUserImageResponse>(
-          '/image.ImageService/AddUserImage',
+          '/image.MediaService/AddUserImage',
           ($0.AddUserImageRequest value) => value.writeToBuffer(),
           $0.AddUserImageResponse.fromBuffer);
   static final _$getUserImageURLs = $grpc.ClientMethod<
           $0.GetUserImageURLsRequest, $0.GetUserImageURLsResponse>(
-      '/image.ImageService/GetUserImageURLs',
+      '/image.MediaService/GetUserImageURLs',
       ($0.GetUserImageURLsRequest value) => value.writeToBuffer(),
       $0.GetUserImageURLsResponse.fromBuffer);
   static final _$getBatchThumbnailURLs = $grpc.ClientMethod<
           $0.GetBatchThumbnailURLsRequest, $0.GetBatchThumbnailURLsResponse>(
-      '/image.ImageService/GetBatchThumbnailURLs',
+      '/image.MediaService/GetBatchThumbnailURLs',
       ($0.GetBatchThumbnailURLsRequest value) => value.writeToBuffer(),
       $0.GetBatchThumbnailURLsResponse.fromBuffer);
   static final _$deleteUserImage =
       $grpc.ClientMethod<$0.DeleteUserImageRequest, $0.DeleteUserImageResponse>(
-          '/image.ImageService/DeleteUserImage',
+          '/image.MediaService/DeleteUserImage',
           ($0.DeleteUserImageRequest value) => value.writeToBuffer(),
           $0.DeleteUserImageResponse.fromBuffer);
+  static final _$addLeaveAttachment = $grpc.ClientMethod<
+          $0.AddLeaveAttachmentRequest, $0.AddLeaveAttachmentResponse>(
+      '/image.MediaService/AddLeaveAttachment',
+      ($0.AddLeaveAttachmentRequest value) => value.writeToBuffer(),
+      $0.AddLeaveAttachmentResponse.fromBuffer);
+  static final _$getLeaveAttachments = $grpc.ClientMethod<
+          $0.GetLeaveAttachmentsRequest, $0.GetLeaveAttachmentsResponse>(
+      '/image.MediaService/GetLeaveAttachments',
+      ($0.GetLeaveAttachmentsRequest value) => value.writeToBuffer(),
+      $0.GetLeaveAttachmentsResponse.fromBuffer);
+  static final _$deleteLeaveAttachment = $grpc.ClientMethod<
+          $0.DeleteLeaveAttachmentRequest, $0.DeleteLeaveAttachmentResponse>(
+      '/image.MediaService/DeleteLeaveAttachment',
+      ($0.DeleteLeaveAttachmentRequest value) => value.writeToBuffer(),
+      $0.DeleteLeaveAttachmentResponse.fromBuffer);
 }
 
-@$pb.GrpcServiceName('image.ImageService')
-abstract class ImageServiceBase extends $grpc.Service {
-  $core.String get $name => 'image.ImageService';
+@$pb.GrpcServiceName('image.MediaService')
+abstract class MediaServiceBase extends $grpc.Service {
+  $core.String get $name => 'image.MediaService';
 
-  ImageServiceBase() {
+  MediaServiceBase() {
     $addMethod(
         $grpc.ServiceMethod<$0.AddUserImageRequest, $0.AddUserImageResponse>(
             'AddUserImage',
@@ -132,6 +173,33 @@ abstract class ImageServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.DeleteUserImageRequest.fromBuffer(value),
         ($0.DeleteUserImageResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AddLeaveAttachmentRequest,
+            $0.AddLeaveAttachmentResponse>(
+        'AddLeaveAttachment',
+        addLeaveAttachment,
+        true,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.AddLeaveAttachmentRequest.fromBuffer(value),
+        ($0.AddLeaveAttachmentResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetLeaveAttachmentsRequest,
+            $0.GetLeaveAttachmentsResponse>(
+        'GetLeaveAttachments',
+        getLeaveAttachments_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetLeaveAttachmentsRequest.fromBuffer(value),
+        ($0.GetLeaveAttachmentsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteLeaveAttachmentRequest,
+            $0.DeleteLeaveAttachmentResponse>(
+        'DeleteLeaveAttachment',
+        deleteLeaveAttachment_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteLeaveAttachmentRequest.fromBuffer(value),
+        ($0.DeleteLeaveAttachmentResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.AddUserImageResponse> addUserImage(
@@ -163,4 +231,26 @@ abstract class ImageServiceBase extends $grpc.Service {
 
   $async.Future<$0.DeleteUserImageResponse> deleteUserImage(
       $grpc.ServiceCall call, $0.DeleteUserImageRequest request);
+
+  $async.Future<$0.AddLeaveAttachmentResponse> addLeaveAttachment(
+      $grpc.ServiceCall call,
+      $async.Stream<$0.AddLeaveAttachmentRequest> request);
+
+  $async.Future<$0.GetLeaveAttachmentsResponse> getLeaveAttachments_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetLeaveAttachmentsRequest> $request) async {
+    return getLeaveAttachments($call, await $request);
+  }
+
+  $async.Future<$0.GetLeaveAttachmentsResponse> getLeaveAttachments(
+      $grpc.ServiceCall call, $0.GetLeaveAttachmentsRequest request);
+
+  $async.Future<$0.DeleteLeaveAttachmentResponse> deleteLeaveAttachment_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.DeleteLeaveAttachmentRequest> $request) async {
+    return deleteLeaveAttachment($call, await $request);
+  }
+
+  $async.Future<$0.DeleteLeaveAttachmentResponse> deleteLeaveAttachment(
+      $grpc.ServiceCall call, $0.DeleteLeaveAttachmentRequest request);
 }

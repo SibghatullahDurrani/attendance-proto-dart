@@ -1,6 +1,6 @@
 // This is a generated file - do not edit.
 //
-// Generated from messages/image/messages.proto.
+// Generated from messages/media/messages.proto.
 
 // @dart = 3.3
 
@@ -12,6 +12,7 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../google/protobuf/timestamp.pb.dart' as $1;
@@ -50,7 +51,7 @@ class AddUserImageRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AddUserImageRequest',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'image_messages'),
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
       createEmptyInstance: create)
     ..oo(0, [1, 2])
     ..aOM<UserId>(1, _omitFieldNames ? '' : 'userId', subBuilder: UserId.create)
@@ -130,7 +131,7 @@ class UserId extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UserId',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'image_messages'),
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'userId')
     ..hasRequiredFields = false;
@@ -184,7 +185,7 @@ class AddUserImageResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AddUserImageResponse',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'image_messages'),
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
       createEmptyInstance: create)
     ..aOB(1, _omitFieldNames ? '' : 'success')
     ..hasRequiredFields = false;
@@ -241,7 +242,7 @@ class GetUserImageURLsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetUserImageURLsRequest',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'image_messages'),
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'userId')
     ..hasRequiredFields = false;
@@ -302,7 +303,7 @@ class GetUserImageURLsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetUserImageURLsResponse',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'image_messages'),
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'thumbnailUrl')
     ..aOS(2, _omitFieldNames ? '' : 'fullUrl')
@@ -383,7 +384,7 @@ class GetBatchThumbnailURLsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetBatchThumbnailURLsRequest',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'image_messages'),
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
       createEmptyInstance: create)
     ..pPS(1, _omitFieldNames ? '' : 'userIds')
     ..hasRequiredFields = false;
@@ -438,7 +439,7 @@ class UserThumbnail extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UserThumbnail',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'image_messages'),
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'userId')
     ..aOS(2, _omitFieldNames ? '' : 'thumbnailUrl')
@@ -506,7 +507,7 @@ class GetBatchThumbnailURLsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetBatchThumbnailURLsResponse',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'image_messages'),
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
       createEmptyInstance: create)
     ..pPM<UserThumbnail>(1, _omitFieldNames ? '' : 'thumbnails',
         subBuilder: UserThumbnail.create)
@@ -574,7 +575,7 @@ class DeleteUserImageRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteUserImageRequest',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'image_messages'),
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'userId')
     ..hasRequiredFields = false;
@@ -631,7 +632,7 @@ class DeleteUserImageResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteUserImageResponse',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'image_messages'),
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
       createEmptyInstance: create)
     ..aOB(1, _omitFieldNames ? '' : 'success')
     ..hasRequiredFields = false;
@@ -666,6 +667,586 @@ class DeleteUserImageResponse extends $pb.GeneratedMessage {
   $core.bool hasSuccess() => $_has(0);
   @$pb.TagNumber(1)
   void clearSuccess() => $_clearField(1);
+}
+
+enum AddLeaveAttachmentRequest_Data { metadata, chunk, notSet }
+
+/// AddLeaveAttachment messages (streaming upload)
+class AddLeaveAttachmentRequest extends $pb.GeneratedMessage {
+  factory AddLeaveAttachmentRequest({
+    LeaveAttachmentMetadata? metadata,
+    $core.List<$core.int>? chunk,
+  }) {
+    final result = create();
+    if (metadata != null) result.metadata = metadata;
+    if (chunk != null) result.chunk = chunk;
+    return result;
+  }
+
+  AddLeaveAttachmentRequest._();
+
+  factory AddLeaveAttachmentRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddLeaveAttachmentRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static const $core.Map<$core.int, AddLeaveAttachmentRequest_Data>
+      _AddLeaveAttachmentRequest_DataByTag = {
+    1: AddLeaveAttachmentRequest_Data.metadata,
+    2: AddLeaveAttachmentRequest_Data.chunk,
+    0: AddLeaveAttachmentRequest_Data.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddLeaveAttachmentRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..aOM<LeaveAttachmentMetadata>(1, _omitFieldNames ? '' : 'metadata',
+        subBuilder: LeaveAttachmentMetadata.create)
+    ..a<$core.List<$core.int>>(
+        2, _omitFieldNames ? '' : 'chunk', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddLeaveAttachmentRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddLeaveAttachmentRequest copyWith(
+          void Function(AddLeaveAttachmentRequest) updates) =>
+      super.copyWith((message) => updates(message as AddLeaveAttachmentRequest))
+          as AddLeaveAttachmentRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddLeaveAttachmentRequest create() => AddLeaveAttachmentRequest._();
+  @$core.override
+  AddLeaveAttachmentRequest createEmptyInstance() => create();
+  static $pb.PbList<AddLeaveAttachmentRequest> createRepeated() =>
+      $pb.PbList<AddLeaveAttachmentRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AddLeaveAttachmentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddLeaveAttachmentRequest>(create);
+  static AddLeaveAttachmentRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  AddLeaveAttachmentRequest_Data whichData() =>
+      _AddLeaveAttachmentRequest_DataByTag[$_whichOneof(0)]!;
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearData() => $_clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  LeaveAttachmentMetadata get metadata => $_getN(0);
+  @$pb.TagNumber(1)
+  set metadata(LeaveAttachmentMetadata value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasMetadata() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMetadata() => $_clearField(1);
+  @$pb.TagNumber(1)
+  LeaveAttachmentMetadata ensureMetadata() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get chunk => $_getN(1);
+  @$pb.TagNumber(2)
+  set chunk($core.List<$core.int> value) => $_setBytes(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasChunk() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearChunk() => $_clearField(2);
+}
+
+class LeaveAttachmentMetadata extends $pb.GeneratedMessage {
+  factory LeaveAttachmentMetadata({
+    $core.String? leaveId,
+    $core.String? originalFilename,
+    $core.String? mimeType,
+  }) {
+    final result = create();
+    if (leaveId != null) result.leaveId = leaveId;
+    if (originalFilename != null) result.originalFilename = originalFilename;
+    if (mimeType != null) result.mimeType = mimeType;
+    return result;
+  }
+
+  LeaveAttachmentMetadata._();
+
+  factory LeaveAttachmentMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory LeaveAttachmentMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LeaveAttachmentMetadata',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'leaveId')
+    ..aOS(2, _omitFieldNames ? '' : 'originalFilename')
+    ..aOS(3, _omitFieldNames ? '' : 'mimeType')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LeaveAttachmentMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LeaveAttachmentMetadata copyWith(
+          void Function(LeaveAttachmentMetadata) updates) =>
+      super.copyWith((message) => updates(message as LeaveAttachmentMetadata))
+          as LeaveAttachmentMetadata;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static LeaveAttachmentMetadata create() => LeaveAttachmentMetadata._();
+  @$core.override
+  LeaveAttachmentMetadata createEmptyInstance() => create();
+  static $pb.PbList<LeaveAttachmentMetadata> createRepeated() =>
+      $pb.PbList<LeaveAttachmentMetadata>();
+  @$core.pragma('dart2js:noInline')
+  static LeaveAttachmentMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LeaveAttachmentMetadata>(create);
+  static LeaveAttachmentMetadata? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get leaveId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set leaveId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasLeaveId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLeaveId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get originalFilename => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set originalFilename($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasOriginalFilename() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearOriginalFilename() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get mimeType => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set mimeType($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasMimeType() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMimeType() => $_clearField(3);
+}
+
+class AddLeaveAttachmentResponse extends $pb.GeneratedMessage {
+  factory AddLeaveAttachmentResponse({
+    $core.String? attachmentId,
+  }) {
+    final result = create();
+    if (attachmentId != null) result.attachmentId = attachmentId;
+    return result;
+  }
+
+  AddLeaveAttachmentResponse._();
+
+  factory AddLeaveAttachmentResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddLeaveAttachmentResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddLeaveAttachmentResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'attachmentId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddLeaveAttachmentResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddLeaveAttachmentResponse copyWith(
+          void Function(AddLeaveAttachmentResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as AddLeaveAttachmentResponse))
+          as AddLeaveAttachmentResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddLeaveAttachmentResponse create() => AddLeaveAttachmentResponse._();
+  @$core.override
+  AddLeaveAttachmentResponse createEmptyInstance() => create();
+  static $pb.PbList<AddLeaveAttachmentResponse> createRepeated() =>
+      $pb.PbList<AddLeaveAttachmentResponse>();
+  @$core.pragma('dart2js:noInline')
+  static AddLeaveAttachmentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddLeaveAttachmentResponse>(create);
+  static AddLeaveAttachmentResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get attachmentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set attachmentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasAttachmentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAttachmentId() => $_clearField(1);
+}
+
+/// GetLeaveAttachments messages
+class GetLeaveAttachmentsRequest extends $pb.GeneratedMessage {
+  factory GetLeaveAttachmentsRequest({
+    $core.String? leaveId,
+  }) {
+    final result = create();
+    if (leaveId != null) result.leaveId = leaveId;
+    return result;
+  }
+
+  GetLeaveAttachmentsRequest._();
+
+  factory GetLeaveAttachmentsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetLeaveAttachmentsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetLeaveAttachmentsRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'leaveId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetLeaveAttachmentsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetLeaveAttachmentsRequest copyWith(
+          void Function(GetLeaveAttachmentsRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetLeaveAttachmentsRequest))
+          as GetLeaveAttachmentsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetLeaveAttachmentsRequest create() => GetLeaveAttachmentsRequest._();
+  @$core.override
+  GetLeaveAttachmentsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetLeaveAttachmentsRequest> createRepeated() =>
+      $pb.PbList<GetLeaveAttachmentsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetLeaveAttachmentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetLeaveAttachmentsRequest>(create);
+  static GetLeaveAttachmentsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get leaveId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set leaveId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasLeaveId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLeaveId() => $_clearField(1);
+}
+
+class GetLeaveAttachmentsResponse extends $pb.GeneratedMessage {
+  factory GetLeaveAttachmentsResponse({
+    $core.Iterable<LeaveAttachment>? attachments,
+  }) {
+    final result = create();
+    if (attachments != null) result.attachments.addAll(attachments);
+    return result;
+  }
+
+  GetLeaveAttachmentsResponse._();
+
+  factory GetLeaveAttachmentsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetLeaveAttachmentsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetLeaveAttachmentsResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..pPM<LeaveAttachment>(1, _omitFieldNames ? '' : 'attachments',
+        subBuilder: LeaveAttachment.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetLeaveAttachmentsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetLeaveAttachmentsResponse copyWith(
+          void Function(GetLeaveAttachmentsResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetLeaveAttachmentsResponse))
+          as GetLeaveAttachmentsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetLeaveAttachmentsResponse create() =>
+      GetLeaveAttachmentsResponse._();
+  @$core.override
+  GetLeaveAttachmentsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetLeaveAttachmentsResponse> createRepeated() =>
+      $pb.PbList<GetLeaveAttachmentsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetLeaveAttachmentsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetLeaveAttachmentsResponse>(create);
+  static GetLeaveAttachmentsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<LeaveAttachment> get attachments => $_getList(0);
+}
+
+class LeaveAttachment extends $pb.GeneratedMessage {
+  factory LeaveAttachment({
+    $core.String? attachmentId,
+    $core.String? originalFilename,
+    $core.String? mimeType,
+    $fixnum.Int64? fileSizeBytes,
+    $core.String? downloadUrl,
+    $1.Timestamp? urlExpiresAt,
+    $1.Timestamp? createdAt,
+  }) {
+    final result = create();
+    if (attachmentId != null) result.attachmentId = attachmentId;
+    if (originalFilename != null) result.originalFilename = originalFilename;
+    if (mimeType != null) result.mimeType = mimeType;
+    if (fileSizeBytes != null) result.fileSizeBytes = fileSizeBytes;
+    if (downloadUrl != null) result.downloadUrl = downloadUrl;
+    if (urlExpiresAt != null) result.urlExpiresAt = urlExpiresAt;
+    if (createdAt != null) result.createdAt = createdAt;
+    return result;
+  }
+
+  LeaveAttachment._();
+
+  factory LeaveAttachment.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory LeaveAttachment.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LeaveAttachment',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'attachmentId')
+    ..aOS(2, _omitFieldNames ? '' : 'originalFilename')
+    ..aOS(3, _omitFieldNames ? '' : 'mimeType')
+    ..aInt64(4, _omitFieldNames ? '' : 'fileSizeBytes')
+    ..aOS(5, _omitFieldNames ? '' : 'downloadUrl')
+    ..aOM<$1.Timestamp>(6, _omitFieldNames ? '' : 'urlExpiresAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(7, _omitFieldNames ? '' : 'createdAt',
+        subBuilder: $1.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LeaveAttachment clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LeaveAttachment copyWith(void Function(LeaveAttachment) updates) =>
+      super.copyWith((message) => updates(message as LeaveAttachment))
+          as LeaveAttachment;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static LeaveAttachment create() => LeaveAttachment._();
+  @$core.override
+  LeaveAttachment createEmptyInstance() => create();
+  static $pb.PbList<LeaveAttachment> createRepeated() =>
+      $pb.PbList<LeaveAttachment>();
+  @$core.pragma('dart2js:noInline')
+  static LeaveAttachment getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LeaveAttachment>(create);
+  static LeaveAttachment? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get attachmentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set attachmentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasAttachmentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAttachmentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get originalFilename => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set originalFilename($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasOriginalFilename() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearOriginalFilename() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get mimeType => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set mimeType($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasMimeType() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMimeType() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get fileSizeBytes => $_getI64(3);
+  @$pb.TagNumber(4)
+  set fileSizeBytes($fixnum.Int64 value) => $_setInt64(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasFileSizeBytes() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearFileSizeBytes() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get downloadUrl => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set downloadUrl($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasDownloadUrl() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDownloadUrl() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $1.Timestamp get urlExpiresAt => $_getN(5);
+  @$pb.TagNumber(6)
+  set urlExpiresAt($1.Timestamp value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasUrlExpiresAt() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearUrlExpiresAt() => $_clearField(6);
+  @$pb.TagNumber(6)
+  $1.Timestamp ensureUrlExpiresAt() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  $1.Timestamp get createdAt => $_getN(6);
+  @$pb.TagNumber(7)
+  set createdAt($1.Timestamp value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasCreatedAt() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearCreatedAt() => $_clearField(7);
+  @$pb.TagNumber(7)
+  $1.Timestamp ensureCreatedAt() => $_ensure(6);
+}
+
+/// DeleteLeaveAttachment messages
+class DeleteLeaveAttachmentRequest extends $pb.GeneratedMessage {
+  factory DeleteLeaveAttachmentRequest({
+    $core.String? attachmentId,
+  }) {
+    final result = create();
+    if (attachmentId != null) result.attachmentId = attachmentId;
+    return result;
+  }
+
+  DeleteLeaveAttachmentRequest._();
+
+  factory DeleteLeaveAttachmentRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteLeaveAttachmentRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteLeaveAttachmentRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'attachmentId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteLeaveAttachmentRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteLeaveAttachmentRequest copyWith(
+          void Function(DeleteLeaveAttachmentRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as DeleteLeaveAttachmentRequest))
+          as DeleteLeaveAttachmentRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DeleteLeaveAttachmentRequest create() =>
+      DeleteLeaveAttachmentRequest._();
+  @$core.override
+  DeleteLeaveAttachmentRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteLeaveAttachmentRequest> createRepeated() =>
+      $pb.PbList<DeleteLeaveAttachmentRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteLeaveAttachmentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteLeaveAttachmentRequest>(create);
+  static DeleteLeaveAttachmentRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get attachmentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set attachmentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasAttachmentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAttachmentId() => $_clearField(1);
+}
+
+class DeleteLeaveAttachmentResponse extends $pb.GeneratedMessage {
+  factory DeleteLeaveAttachmentResponse() => create();
+
+  DeleteLeaveAttachmentResponse._();
+
+  factory DeleteLeaveAttachmentResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteLeaveAttachmentResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteLeaveAttachmentResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteLeaveAttachmentResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteLeaveAttachmentResponse copyWith(
+          void Function(DeleteLeaveAttachmentResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as DeleteLeaveAttachmentResponse))
+          as DeleteLeaveAttachmentResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DeleteLeaveAttachmentResponse create() =>
+      DeleteLeaveAttachmentResponse._();
+  @$core.override
+  DeleteLeaveAttachmentResponse createEmptyInstance() => create();
+  static $pb.PbList<DeleteLeaveAttachmentResponse> createRepeated() =>
+      $pb.PbList<DeleteLeaveAttachmentResponse>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteLeaveAttachmentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteLeaveAttachmentResponse>(create);
+  static DeleteLeaveAttachmentResponse? _defaultInstance;
 }
 
 const $core.bool _omitFieldNames =

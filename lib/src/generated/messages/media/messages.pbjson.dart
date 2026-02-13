@@ -1,6 +1,6 @@
 // This is a generated file - do not edit.
 //
-// Generated from messages/image/messages.proto.
+// Generated from messages/media/messages.proto.
 
 // @dart = 3.3
 
@@ -23,7 +23,7 @@ const AddUserImageRequest$json = {
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.image_messages.UserId',
+      '6': '.media_messages.UserId',
       '9': 0,
       '10': 'userId'
     },
@@ -44,7 +44,7 @@ const AddUserImageRequest$json = {
 
 /// Descriptor for `AddUserImageRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List addUserImageRequestDescriptor = $convert.base64Decode(
-    'ChNBZGRVc2VySW1hZ2VSZXF1ZXN0EjEKB3VzZXJfaWQYASABKAsyFi5pbWFnZV9tZXNzYWdlcy'
+    'ChNBZGRVc2VySW1hZ2VSZXF1ZXN0EjEKB3VzZXJfaWQYASABKAsyFi5tZWRpYV9tZXNzYWdlcy'
     '5Vc2VySWRIAFIGdXNlcklkEj4KC2ltYWdlX2NodW5rGAIgASgLMhsuY29tbW9uX21lc3NhZ2Vz'
     'LkltYWdlQ2h1bmtIAFIKaW1hZ2VDaHVua0IGCgRkYXRh');
 
@@ -157,7 +157,7 @@ const GetBatchThumbnailURLsResponse$json = {
       '3': 1,
       '4': 3,
       '5': 11,
-      '6': '.image_messages.UserThumbnail',
+      '6': '.media_messages.UserThumbnail',
       '10': 'thumbnails'
     },
     {
@@ -174,8 +174,8 @@ const GetBatchThumbnailURLsResponse$json = {
 /// Descriptor for `GetBatchThumbnailURLsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getBatchThumbnailURLsResponseDescriptor =
     $convert.base64Decode(
-        'Ch1HZXRCYXRjaFRodW1ibmFpbFVSTHNSZXNwb25zZRI9Cgp0aHVtYm5haWxzGAEgAygLMh0uaW'
-        '1hZ2VfbWVzc2FnZXMuVXNlclRodW1ibmFpbFIKdGh1bWJuYWlscxI5CgpleHBpcmVzX2F0GAIg'
+        'Ch1HZXRCYXRjaFRodW1ibmFpbFVSTHNSZXNwb25zZRI9Cgp0aHVtYm5haWxzGAEgAygLMh0ubW'
+        'VkaWFfbWVzc2FnZXMuVXNlclRodW1ibmFpbFIKdGh1bWJuYWlscxI5CgpleHBpcmVzX2F0GAIg'
         'ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJZXhwaXJlc0F0');
 
 @$core.Deprecated('Use deleteUserImageRequestDescriptor instead')
@@ -203,3 +203,166 @@ const DeleteUserImageResponse$json = {
 final $typed_data.Uint8List deleteUserImageResponseDescriptor =
     $convert.base64Decode(
         'ChdEZWxldGVVc2VySW1hZ2VSZXNwb25zZRIYCgdzdWNjZXNzGAEgASgIUgdzdWNjZXNz');
+
+@$core.Deprecated('Use addLeaveAttachmentRequestDescriptor instead')
+const AddLeaveAttachmentRequest$json = {
+  '1': 'AddLeaveAttachmentRequest',
+  '2': [
+    {
+      '1': 'metadata',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.media_messages.LeaveAttachmentMetadata',
+      '9': 0,
+      '10': 'metadata'
+    },
+    {'1': 'chunk', '3': 2, '4': 1, '5': 12, '9': 0, '10': 'chunk'},
+  ],
+  '8': [
+    {'1': 'data'},
+  ],
+};
+
+/// Descriptor for `AddLeaveAttachmentRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addLeaveAttachmentRequestDescriptor = $convert.base64Decode(
+    'ChlBZGRMZWF2ZUF0dGFjaG1lbnRSZXF1ZXN0EkUKCG1ldGFkYXRhGAEgASgLMicubWVkaWFfbW'
+    'Vzc2FnZXMuTGVhdmVBdHRhY2htZW50TWV0YWRhdGFIAFIIbWV0YWRhdGESFgoFY2h1bmsYAiAB'
+    'KAxIAFIFY2h1bmtCBgoEZGF0YQ==');
+
+@$core.Deprecated('Use leaveAttachmentMetadataDescriptor instead')
+const LeaveAttachmentMetadata$json = {
+  '1': 'LeaveAttachmentMetadata',
+  '2': [
+    {'1': 'leave_id', '3': 1, '4': 1, '5': 9, '10': 'leaveId'},
+    {
+      '1': 'original_filename',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'originalFilename'
+    },
+    {'1': 'mime_type', '3': 3, '4': 1, '5': 9, '10': 'mimeType'},
+  ],
+};
+
+/// Descriptor for `LeaveAttachmentMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List leaveAttachmentMetadataDescriptor = $convert.base64Decode(
+    'ChdMZWF2ZUF0dGFjaG1lbnRNZXRhZGF0YRIZCghsZWF2ZV9pZBgBIAEoCVIHbGVhdmVJZBIrCh'
+    'FvcmlnaW5hbF9maWxlbmFtZRgCIAEoCVIQb3JpZ2luYWxGaWxlbmFtZRIbCgltaW1lX3R5cGUY'
+    'AyABKAlSCG1pbWVUeXBl');
+
+@$core.Deprecated('Use addLeaveAttachmentResponseDescriptor instead')
+const AddLeaveAttachmentResponse$json = {
+  '1': 'AddLeaveAttachmentResponse',
+  '2': [
+    {'1': 'attachment_id', '3': 1, '4': 1, '5': 9, '10': 'attachmentId'},
+  ],
+};
+
+/// Descriptor for `AddLeaveAttachmentResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addLeaveAttachmentResponseDescriptor =
+    $convert.base64Decode(
+        'ChpBZGRMZWF2ZUF0dGFjaG1lbnRSZXNwb25zZRIjCg1hdHRhY2htZW50X2lkGAEgASgJUgxhdH'
+        'RhY2htZW50SWQ=');
+
+@$core.Deprecated('Use getLeaveAttachmentsRequestDescriptor instead')
+const GetLeaveAttachmentsRequest$json = {
+  '1': 'GetLeaveAttachmentsRequest',
+  '2': [
+    {'1': 'leave_id', '3': 1, '4': 1, '5': 9, '10': 'leaveId'},
+  ],
+};
+
+/// Descriptor for `GetLeaveAttachmentsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getLeaveAttachmentsRequestDescriptor =
+    $convert.base64Decode(
+        'ChpHZXRMZWF2ZUF0dGFjaG1lbnRzUmVxdWVzdBIZCghsZWF2ZV9pZBgBIAEoCVIHbGVhdmVJZA'
+        '==');
+
+@$core.Deprecated('Use getLeaveAttachmentsResponseDescriptor instead')
+const GetLeaveAttachmentsResponse$json = {
+  '1': 'GetLeaveAttachmentsResponse',
+  '2': [
+    {
+      '1': 'attachments',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.media_messages.LeaveAttachment',
+      '10': 'attachments'
+    },
+  ],
+};
+
+/// Descriptor for `GetLeaveAttachmentsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getLeaveAttachmentsResponseDescriptor =
+    $convert.base64Decode(
+        'ChtHZXRMZWF2ZUF0dGFjaG1lbnRzUmVzcG9uc2USQQoLYXR0YWNobWVudHMYASADKAsyHy5tZW'
+        'RpYV9tZXNzYWdlcy5MZWF2ZUF0dGFjaG1lbnRSC2F0dGFjaG1lbnRz');
+
+@$core.Deprecated('Use leaveAttachmentDescriptor instead')
+const LeaveAttachment$json = {
+  '1': 'LeaveAttachment',
+  '2': [
+    {'1': 'attachment_id', '3': 1, '4': 1, '5': 9, '10': 'attachmentId'},
+    {
+      '1': 'original_filename',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'originalFilename'
+    },
+    {'1': 'mime_type', '3': 3, '4': 1, '5': 9, '10': 'mimeType'},
+    {'1': 'file_size_bytes', '3': 4, '4': 1, '5': 3, '10': 'fileSizeBytes'},
+    {'1': 'download_url', '3': 5, '4': 1, '5': 9, '10': 'downloadUrl'},
+    {
+      '1': 'url_expires_at',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'urlExpiresAt'
+    },
+    {
+      '1': 'created_at',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createdAt'
+    },
+  ],
+};
+
+/// Descriptor for `LeaveAttachment`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List leaveAttachmentDescriptor = $convert.base64Decode(
+    'Cg9MZWF2ZUF0dGFjaG1lbnQSIwoNYXR0YWNobWVudF9pZBgBIAEoCVIMYXR0YWNobWVudElkEi'
+    'sKEW9yaWdpbmFsX2ZpbGVuYW1lGAIgASgJUhBvcmlnaW5hbEZpbGVuYW1lEhsKCW1pbWVfdHlw'
+    'ZRgDIAEoCVIIbWltZVR5cGUSJgoPZmlsZV9zaXplX2J5dGVzGAQgASgDUg1maWxlU2l6ZUJ5dG'
+    'VzEiEKDGRvd25sb2FkX3VybBgFIAEoCVILZG93bmxvYWRVcmwSQAoOdXJsX2V4cGlyZXNfYXQY'
+    'BiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgx1cmxFeHBpcmVzQXQSOQoKY3JlYX'
+    'RlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCWNyZWF0ZWRBdA==');
+
+@$core.Deprecated('Use deleteLeaveAttachmentRequestDescriptor instead')
+const DeleteLeaveAttachmentRequest$json = {
+  '1': 'DeleteLeaveAttachmentRequest',
+  '2': [
+    {'1': 'attachment_id', '3': 1, '4': 1, '5': 9, '10': 'attachmentId'},
+  ],
+};
+
+/// Descriptor for `DeleteLeaveAttachmentRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteLeaveAttachmentRequestDescriptor =
+    $convert.base64Decode(
+        'ChxEZWxldGVMZWF2ZUF0dGFjaG1lbnRSZXF1ZXN0EiMKDWF0dGFjaG1lbnRfaWQYASABKAlSDG'
+        'F0dGFjaG1lbnRJZA==');
+
+@$core.Deprecated('Use deleteLeaveAttachmentResponseDescriptor instead')
+const DeleteLeaveAttachmentResponse$json = {
+  '1': 'DeleteLeaveAttachmentResponse',
+};
+
+/// Descriptor for `DeleteLeaveAttachmentResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteLeaveAttachmentResponseDescriptor =
+    $convert.base64Decode('Ch1EZWxldGVMZWF2ZUF0dGFjaG1lbnRSZXNwb25zZQ==');
