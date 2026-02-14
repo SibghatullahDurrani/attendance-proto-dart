@@ -129,6 +129,26 @@ final $typed_data.Uint8List leaveTypeDescriptor = $convert.base64Decode(
     'CglMZWF2ZVR5cGUSFwoTTEVBVkVfVFlQRV9ESVNDUkVURRAAEhQKEExFQVZFX1RZUEVfUkFOR0'
     'UQAQ==');
 
+@$core.Deprecated('Use leaveRoleDescriptor instead')
+const LeaveRole$json = {
+  '1': 'LeaveRole',
+  '2': [
+    {'1': 'LEAVE_ROLE_STUDENT', '2': 0},
+    {'1': 'LEAVE_ROLE_TEACHER', '2': 1},
+    {'1': 'LEAVE_ROLE_SCHOOL_EMPLOYEE', '2': 2},
+    {'1': 'LEAVE_ROLE_ORGANIZATION_EMPLOYEE', '2': 3},
+    {'1': 'LEAVE_ROLE_SUB_ORGANIZATION_EMPLOYEE', '2': 4},
+    {'1': 'LEAVE_ROLE_SCHOOL_CHAIN_EMPLOYEE', '2': 5},
+  ],
+};
+
+/// Descriptor for `LeaveRole`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List leaveRoleDescriptor = $convert.base64Decode(
+    'CglMZWF2ZVJvbGUSFgoSTEVBVkVfUk9MRV9TVFVERU5UEAASFgoSTEVBVkVfUk9MRV9URUFDSE'
+    'VSEAESHgoaTEVBVkVfUk9MRV9TQ0hPT0xfRU1QTE9ZRUUQAhIkCiBMRUFWRV9ST0xFX09SR0FO'
+    'SVpBVElPTl9FTVBMT1lFRRADEigKJExFQVZFX1JPTEVfU1VCX09SR0FOSVpBVElPTl9FTVBMT1'
+    'lFRRAEEiQKIExFQVZFX1JPTEVfU0NIT09MX0NIQUlOX0VNUExPWUVFEAU=');
+
 @$core.Deprecated('Use paginationRequestDescriptor instead')
 const PaginationRequest$json = {
   '1': 'PaginationRequest',

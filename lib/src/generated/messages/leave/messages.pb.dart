@@ -384,6 +384,7 @@ class CreateLeaveRequest extends $pb.GeneratedMessage {
     $core.Iterable<$1.Timestamp>? dates,
     $1.Timestamp? startDate,
     $1.Timestamp? endDate,
+    $0.LeaveRole? role,
   }) {
     final result = create();
     if (leaveType != null) result.leaveType = leaveType;
@@ -393,6 +394,7 @@ class CreateLeaveRequest extends $pb.GeneratedMessage {
     if (dates != null) result.dates.addAll(dates);
     if (startDate != null) result.startDate = startDate;
     if (endDate != null) result.endDate = endDate;
+    if (role != null) result.role = role;
     return result;
   }
 
@@ -420,6 +422,8 @@ class CreateLeaveRequest extends $pb.GeneratedMessage {
         subBuilder: $1.Timestamp.create)
     ..aOM<$1.Timestamp>(8, _omitFieldNames ? '' : 'endDate',
         subBuilder: $1.Timestamp.create)
+    ..aE<$0.LeaveRole>(9, _omitFieldNames ? '' : 'role',
+        enumValues: $0.LeaveRole.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -505,6 +509,15 @@ class CreateLeaveRequest extends $pb.GeneratedMessage {
   void clearEndDate() => $_clearField(8);
   @$pb.TagNumber(8)
   $1.Timestamp ensureEndDate() => $_ensure(6);
+
+  @$pb.TagNumber(9)
+  $0.LeaveRole get role => $_getN(7);
+  @$pb.TagNumber(9)
+  set role($0.LeaveRole value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasRole() => $_has(7);
+  @$pb.TagNumber(9)
+  void clearRole() => $_clearField(9);
 }
 
 class CreateLeaveResponse extends $pb.GeneratedMessage {
@@ -1065,6 +1078,191 @@ class LeaveConflictDetails extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $pb.PbList<$1.Timestamp> get conflictingDates => $_getList(0);
+}
+
+class ListInstitutionLeavesRequest extends $pb.GeneratedMessage {
+  factory ListInstitutionLeavesRequest({
+    $0.PaginationRequest? pagination,
+    $core.String? belongsTo,
+    $0.LeaveStatus? leaveStatus,
+    $1.Timestamp? monthStartTime,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (belongsTo != null) result.belongsTo = belongsTo;
+    if (leaveStatus != null) result.leaveStatus = leaveStatus;
+    if (monthStartTime != null) result.monthStartTime = monthStartTime;
+    return result;
+  }
+
+  ListInstitutionLeavesRequest._();
+
+  factory ListInstitutionLeavesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListInstitutionLeavesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListInstitutionLeavesRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'belongsTo')
+    ..aE<$0.LeaveStatus>(3, _omitFieldNames ? '' : 'leaveStatus',
+        enumValues: $0.LeaveStatus.values)
+    ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'monthStartTime',
+        subBuilder: $1.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListInstitutionLeavesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListInstitutionLeavesRequest copyWith(
+          void Function(ListInstitutionLeavesRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListInstitutionLeavesRequest))
+          as ListInstitutionLeavesRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListInstitutionLeavesRequest create() =>
+      ListInstitutionLeavesRequest._();
+  @$core.override
+  ListInstitutionLeavesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListInstitutionLeavesRequest> createRepeated() =>
+      $pb.PbList<ListInstitutionLeavesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListInstitutionLeavesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInstitutionLeavesRequest>(create);
+  static ListInstitutionLeavesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get belongsTo => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set belongsTo($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasBelongsTo() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearBelongsTo() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $0.LeaveStatus get leaveStatus => $_getN(2);
+  @$pb.TagNumber(3)
+  set leaveStatus($0.LeaveStatus value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasLeaveStatus() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLeaveStatus() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $1.Timestamp get monthStartTime => $_getN(3);
+  @$pb.TagNumber(4)
+  set monthStartTime($1.Timestamp value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasMonthStartTime() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearMonthStartTime() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $1.Timestamp ensureMonthStartTime() => $_ensure(3);
+}
+
+class ListInstitutionLeavesResponse extends $pb.GeneratedMessage {
+  factory ListInstitutionLeavesResponse() => create();
+
+  ListInstitutionLeavesResponse._();
+
+  factory ListInstitutionLeavesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListInstitutionLeavesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListInstitutionLeavesResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListInstitutionLeavesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListInstitutionLeavesResponse copyWith(
+          void Function(ListInstitutionLeavesResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListInstitutionLeavesResponse))
+          as ListInstitutionLeavesResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListInstitutionLeavesResponse create() =>
+      ListInstitutionLeavesResponse._();
+  @$core.override
+  ListInstitutionLeavesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListInstitutionLeavesResponse> createRepeated() =>
+      $pb.PbList<ListInstitutionLeavesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListInstitutionLeavesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInstitutionLeavesResponse>(create);
+  static ListInstitutionLeavesResponse? _defaultInstance;
+}
+
+class InstitutionUserLeave extends $pb.GeneratedMessage {
+  factory InstitutionUserLeave() => create();
+
+  InstitutionUserLeave._();
+
+  factory InstitutionUserLeave.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory InstitutionUserLeave.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'InstitutionUserLeave',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  InstitutionUserLeave clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  InstitutionUserLeave copyWith(void Function(InstitutionUserLeave) updates) =>
+      super.copyWith((message) => updates(message as InstitutionUserLeave))
+          as InstitutionUserLeave;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static InstitutionUserLeave create() => InstitutionUserLeave._();
+  @$core.override
+  InstitutionUserLeave createEmptyInstance() => create();
+  static $pb.PbList<InstitutionUserLeave> createRepeated() =>
+      $pb.PbList<InstitutionUserLeave>();
+  @$core.pragma('dart2js:noInline')
+  static InstitutionUserLeave getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InstitutionUserLeave>(create);
+  static InstitutionUserLeave? _defaultInstance;
 }
 
 const $core.bool _omitFieldNames =

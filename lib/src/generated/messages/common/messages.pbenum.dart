@@ -191,5 +191,36 @@ class LeaveType extends $pb.ProtobufEnum {
   const LeaveType._(super.value, super.name);
 }
 
+class LeaveRole extends $pb.ProtobufEnum {
+  static const LeaveRole LEAVE_ROLE_STUDENT =
+      LeaveRole._(0, _omitEnumNames ? '' : 'LEAVE_ROLE_STUDENT');
+  static const LeaveRole LEAVE_ROLE_TEACHER =
+      LeaveRole._(1, _omitEnumNames ? '' : 'LEAVE_ROLE_TEACHER');
+  static const LeaveRole LEAVE_ROLE_SCHOOL_EMPLOYEE =
+      LeaveRole._(2, _omitEnumNames ? '' : 'LEAVE_ROLE_SCHOOL_EMPLOYEE');
+  static const LeaveRole LEAVE_ROLE_ORGANIZATION_EMPLOYEE =
+      LeaveRole._(3, _omitEnumNames ? '' : 'LEAVE_ROLE_ORGANIZATION_EMPLOYEE');
+  static const LeaveRole LEAVE_ROLE_SUB_ORGANIZATION_EMPLOYEE = LeaveRole._(
+      4, _omitEnumNames ? '' : 'LEAVE_ROLE_SUB_ORGANIZATION_EMPLOYEE');
+  static const LeaveRole LEAVE_ROLE_SCHOOL_CHAIN_EMPLOYEE =
+      LeaveRole._(5, _omitEnumNames ? '' : 'LEAVE_ROLE_SCHOOL_CHAIN_EMPLOYEE');
+
+  static const $core.List<LeaveRole> values = <LeaveRole>[
+    LEAVE_ROLE_STUDENT,
+    LEAVE_ROLE_TEACHER,
+    LEAVE_ROLE_SCHOOL_EMPLOYEE,
+    LEAVE_ROLE_ORGANIZATION_EMPLOYEE,
+    LEAVE_ROLE_SUB_ORGANIZATION_EMPLOYEE,
+    LEAVE_ROLE_SCHOOL_CHAIN_EMPLOYEE,
+  ];
+
+  static final $core.List<LeaveRole?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 5);
+  static LeaveRole? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const LeaveRole._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');
