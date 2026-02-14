@@ -628,6 +628,7 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
     $1.Timestamp? startDate,
     $1.Timestamp? endDate,
     $0.LeaveStatus? rangeStatus,
+    $core.String? remarks,
   }) {
     final result = create();
     if (description != null) result.description = description;
@@ -636,6 +637,7 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
     if (startDate != null) result.startDate = startDate;
     if (endDate != null) result.endDate = endDate;
     if (rangeStatus != null) result.rangeStatus = rangeStatus;
+    if (remarks != null) result.remarks = remarks;
     return result;
   }
 
@@ -663,6 +665,7 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
         subBuilder: $1.Timestamp.create)
     ..aE<$0.LeaveStatus>(6, _omitFieldNames ? '' : 'rangeStatus',
         enumValues: $0.LeaveStatus.values)
+    ..aOS(7, _omitFieldNames ? '' : 'remarks')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -740,6 +743,15 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
   $core.bool hasRangeStatus() => $_has(5);
   @$pb.TagNumber(6)
   void clearRangeStatus() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get remarks => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set remarks($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasRemarks() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearRemarks() => $_clearField(7);
 }
 
 class UpdateLeaveRequest extends $pb.GeneratedMessage {

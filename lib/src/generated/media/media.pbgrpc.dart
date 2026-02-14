@@ -77,7 +77,8 @@ class MediaServiceClient extends $grpc.Client {
         .single;
   }
 
-  /// GetLeaveAttachments returns all attachments for a leave request with download URLs.
+  /// GetLeaveAttachments returns all attachments for a leave request with
+  /// download URLs.
   $grpc.ResponseFuture<$0.GetLeaveAttachmentsResponse> getLeaveAttachments(
     $0.GetLeaveAttachmentsRequest request, {
     $grpc.CallOptions? options,

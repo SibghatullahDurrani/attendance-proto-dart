@@ -328,11 +328,21 @@ const GetLeaveDetailsResponse$json = {
       '10': 'rangeStatus',
       '17': true
     },
+    {
+      '1': 'remarks',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'remarks',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_start_date'},
     {'1': '_end_date'},
     {'1': '_range_status'},
+    {'1': '_remarks'},
   ],
 };
 
@@ -344,8 +354,9 @@ final $typed_data.Uint8List getLeaveDetailsResponseDescriptor = $convert.base64D
     'IKbGVhdmVEYXRlcxI+CgpzdGFydF9kYXRlGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz'
     'dGFtcEgAUglzdGFydERhdGWIAQESOgoIZW5kX2RhdGUYBSABKAsyGi5nb29nbGUucHJvdG9idW'
     'YuVGltZXN0YW1wSAFSB2VuZERhdGWIAQESRAoMcmFuZ2Vfc3RhdHVzGAYgASgOMhwuY29tbW9u'
-    'X21lc3NhZ2VzLkxlYXZlU3RhdHVzSAJSC3JhbmdlU3RhdHVziAEBQg0KC19zdGFydF9kYXRlQg'
-    'sKCV9lbmRfZGF0ZUIPCg1fcmFuZ2Vfc3RhdHVz');
+    'X21lc3NhZ2VzLkxlYXZlU3RhdHVzSAJSC3JhbmdlU3RhdHVziAEBEh0KB3JlbWFya3MYByABKA'
+    'lIA1IHcmVtYXJrc4gBAUINCgtfc3RhcnRfZGF0ZUILCglfZW5kX2RhdGVCDwoNX3JhbmdlX3N0'
+    'YXR1c0IKCghfcmVtYXJrcw==');
 
 @$core.Deprecated('Use updateLeaveRequestDescriptor instead')
 const UpdateLeaveRequest$json = {
