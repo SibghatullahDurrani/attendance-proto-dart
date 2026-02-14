@@ -20,6 +20,7 @@ import '../messages/attendance/messages.pb.dart' as $2;
 import '../messages/auth/messages.pb.dart' as $0;
 import '../messages/gateway/messages.pb.dart' as $5;
 import '../messages/leave/messages.pb.dart' as $4;
+import '../messages/media/messages.pb.dart' as $6;
 import '../messages/school/messages.pb.dart' as $1;
 import '../messages/user/messages.pb.dart' as $3;
 
@@ -417,6 +418,29 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listEmployeesOfSchool, request, options: options);
   }
 
+  /// Media Rpcs
+  $grpc.ResponseFuture<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
+    $async.Stream<$6.AddLeaveAttachmentRequest> request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createStreamingCall(_$addLeaveAttachment, request, options: options)
+        .single;
+  }
+
+  $grpc.ResponseFuture<$6.GetLeaveAttachmentsResponse> getLeaveAttachments(
+    $6.GetLeaveAttachmentsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getLeaveAttachments, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$6.DeleteLeaveAttachmentResponse> deleteLeaveAttachment(
+    $6.DeleteLeaveAttachmentRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$deleteLeaveAttachment, request, options: options);
+  }
+
   // method descriptors
 
   static final _$login = $grpc.ClientMethod<$0.LoginRequest, $0.LoginResponse>(
@@ -677,6 +701,21 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/ListEmployeesOfSchool',
       ($5.ListEmployeesOfSchoolRequest value) => value.writeToBuffer(),
       $5.ListEmployeesOfSchoolResponse.fromBuffer);
+  static final _$addLeaveAttachment = $grpc.ClientMethod<
+          $6.AddLeaveAttachmentRequest, $6.AddLeaveAttachmentResponse>(
+      '/gateway.GatewayService/AddLeaveAttachment',
+      ($6.AddLeaveAttachmentRequest value) => value.writeToBuffer(),
+      $6.AddLeaveAttachmentResponse.fromBuffer);
+  static final _$getLeaveAttachments = $grpc.ClientMethod<
+          $6.GetLeaveAttachmentsRequest, $6.GetLeaveAttachmentsResponse>(
+      '/gateway.GatewayService/GetLeaveAttachments',
+      ($6.GetLeaveAttachmentsRequest value) => value.writeToBuffer(),
+      $6.GetLeaveAttachmentsResponse.fromBuffer);
+  static final _$deleteLeaveAttachment = $grpc.ClientMethod<
+          $6.DeleteLeaveAttachmentRequest, $6.DeleteLeaveAttachmentResponse>(
+      '/gateway.GatewayService/DeleteLeaveAttachment',
+      ($6.DeleteLeaveAttachmentRequest value) => value.writeToBuffer(),
+      $6.DeleteLeaveAttachmentResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -1120,6 +1159,33 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $5.ListEmployeesOfSchoolRequest.fromBuffer(value),
         ($5.ListEmployeesOfSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.AddLeaveAttachmentRequest,
+            $6.AddLeaveAttachmentResponse>(
+        'AddLeaveAttachment',
+        addLeaveAttachment,
+        true,
+        false,
+        ($core.List<$core.int> value) =>
+            $6.AddLeaveAttachmentRequest.fromBuffer(value),
+        ($6.AddLeaveAttachmentResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.GetLeaveAttachmentsRequest,
+            $6.GetLeaveAttachmentsResponse>(
+        'GetLeaveAttachments',
+        getLeaveAttachments_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $6.GetLeaveAttachmentsRequest.fromBuffer(value),
+        ($6.GetLeaveAttachmentsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.DeleteLeaveAttachmentRequest,
+            $6.DeleteLeaveAttachmentResponse>(
+        'DeleteLeaveAttachment',
+        deleteLeaveAttachment_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $6.DeleteLeaveAttachmentRequest.fromBuffer(value),
+        ($6.DeleteLeaveAttachmentResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -1545,4 +1611,26 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$5.ListEmployeesOfSchoolResponse> listEmployeesOfSchool(
       $grpc.ServiceCall call, $5.ListEmployeesOfSchoolRequest request);
+
+  $async.Future<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
+      $grpc.ServiceCall call,
+      $async.Stream<$6.AddLeaveAttachmentRequest> request);
+
+  $async.Future<$6.GetLeaveAttachmentsResponse> getLeaveAttachments_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$6.GetLeaveAttachmentsRequest> $request) async {
+    return getLeaveAttachments($call, await $request);
+  }
+
+  $async.Future<$6.GetLeaveAttachmentsResponse> getLeaveAttachments(
+      $grpc.ServiceCall call, $6.GetLeaveAttachmentsRequest request);
+
+  $async.Future<$6.DeleteLeaveAttachmentResponse> deleteLeaveAttachment_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$6.DeleteLeaveAttachmentRequest> $request) async {
+    return deleteLeaveAttachment($call, await $request);
+  }
+
+  $async.Future<$6.DeleteLeaveAttachmentResponse> deleteLeaveAttachment(
+      $grpc.ServiceCall call, $6.DeleteLeaveAttachmentRequest request);
 }
