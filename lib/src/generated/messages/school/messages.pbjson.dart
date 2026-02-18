@@ -2526,3 +2526,72 @@ final $typed_data.Uint8List getClassesSelectionMenuItemsResponseDescriptor =
         'EoCzIjLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9uc2VSCnBhZ2luYXRpb24SRgoK'
         'bWVudV9pdGVtcxgCIAMoCzInLnNjaG9vbF9tZXNzYWdlcy5DbGFzc1NlbGVjdGlvbk1lbnVJdG'
         'VtUgltZW51SXRlbXM=');
+
+@$core.Deprecated(
+    'Use getBatchStudentLatestEnrollmentInfoRequestDescriptor instead')
+const GetBatchStudentLatestEnrollmentInfoRequest$json = {
+  '1': 'GetBatchStudentLatestEnrollmentInfoRequest',
+  '2': [
+    {'1': 'student_ids', '3': 1, '4': 3, '5': 9, '10': 'studentIds'},
+  ],
+};
+
+/// Descriptor for `GetBatchStudentLatestEnrollmentInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getBatchStudentLatestEnrollmentInfoRequestDescriptor =
+    $convert.base64Decode(
+        'CipHZXRCYXRjaFN0dWRlbnRMYXRlc3RFbnJvbGxtZW50SW5mb1JlcXVlc3QSHwoLc3R1ZGVudF'
+        '9pZHMYASADKAlSCnN0dWRlbnRJZHM=');
+
+@$core.Deprecated(
+    'Use getBatchStudentLatestEnrollmentInfoResponseDescriptor instead')
+const GetBatchStudentLatestEnrollmentInfoResponse$json = {
+  '1': 'GetBatchStudentLatestEnrollmentInfoResponse',
+  '2': [
+    {
+      '1': 'latest_enrollment',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.StudentLatestEnrollmentInfo',
+      '10': 'latestEnrollment'
+    },
+  ],
+};
+
+/// Descriptor for `GetBatchStudentLatestEnrollmentInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getBatchStudentLatestEnrollmentInfoResponseDescriptor =
+    $convert.base64Decode(
+        'CitHZXRCYXRjaFN0dWRlbnRMYXRlc3RFbnJvbGxtZW50SW5mb1Jlc3BvbnNlElkKEWxhdGVzdF'
+        '9lbnJvbGxtZW50GAEgAygLMiwuc2Nob29sX21lc3NhZ2VzLlN0dWRlbnRMYXRlc3RFbnJvbGxt'
+        'ZW50SW5mb1IQbGF0ZXN0RW5yb2xsbWVudA==');
+
+@$core.Deprecated('Use studentLatestEnrollmentInfoDescriptor instead')
+const StudentLatestEnrollmentInfo$json = {
+  '1': 'StudentLatestEnrollmentInfo',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'last_attended_class_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'lastAttendedClassName'
+    },
+    {
+      '1': 'last_attended_section_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'lastAttendedSectionName'
+    },
+  ],
+};
+
+/// Descriptor for `StudentLatestEnrollmentInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List studentLatestEnrollmentInfoDescriptor = $convert.base64Decode(
+    'ChtTdHVkZW50TGF0ZXN0RW5yb2xsbWVudEluZm8SFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEj'
+    'cKGGxhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZRgCIAEoCVIVbGFzdEF0dGVuZGVkQ2xhc3NOYW1l'
+    'EjsKGmxhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1lGAMgASgJUhdsYXN0QXR0ZW5kZWRTZWN0aW'
+    '9uTmFtZQ==');

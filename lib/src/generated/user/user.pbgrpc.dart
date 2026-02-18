@@ -173,6 +173,33 @@ class UserServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getEmployeesInfo, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetBatchShortStudentInfoResponse>
+      getBatchShortStudentInfo(
+    $0.GetBatchShortStudentInfoRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getBatchShortStudentInfo, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetBatchShortTeacherInfoResponse>
+      getBatchShortTeacherInfo(
+    $0.GetBatchShortTeacherInfoRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getBatchShortTeacherInfo, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetBatchShortEmployeeInfoResponse>
+      getBatchShortEmployeeInfo(
+    $0.GetBatchShortEmployeeInfoRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getBatchShortEmployeeInfo, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createStudent =
@@ -267,6 +294,24 @@ class UserServiceClient extends $grpc.Client {
       '/user.UserService/GetEmployeesInfo',
       ($0.GetEmployeesInfoRequest value) => value.writeToBuffer(),
       $0.GetEmployeesInfoResponse.fromBuffer);
+  static final _$getBatchShortStudentInfo = $grpc.ClientMethod<
+          $0.GetBatchShortStudentInfoRequest,
+          $0.GetBatchShortStudentInfoResponse>(
+      '/user.UserService/GetBatchShortStudentInfo',
+      ($0.GetBatchShortStudentInfoRequest value) => value.writeToBuffer(),
+      $0.GetBatchShortStudentInfoResponse.fromBuffer);
+  static final _$getBatchShortTeacherInfo = $grpc.ClientMethod<
+          $0.GetBatchShortTeacherInfoRequest,
+          $0.GetBatchShortTeacherInfoResponse>(
+      '/user.UserService/GetBatchShortTeacherInfo',
+      ($0.GetBatchShortTeacherInfoRequest value) => value.writeToBuffer(),
+      $0.GetBatchShortTeacherInfoResponse.fromBuffer);
+  static final _$getBatchShortEmployeeInfo = $grpc.ClientMethod<
+          $0.GetBatchShortEmployeeInfoRequest,
+          $0.GetBatchShortEmployeeInfoResponse>(
+      '/user.UserService/GetBatchShortEmployeeInfo',
+      ($0.GetBatchShortEmployeeInfoRequest value) => value.writeToBuffer(),
+      $0.GetBatchShortEmployeeInfoResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('user.UserService')
@@ -438,6 +483,33 @@ abstract class UserServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetEmployeesInfoRequest.fromBuffer(value),
         ($0.GetEmployeesInfoResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetBatchShortStudentInfoRequest,
+            $0.GetBatchShortStudentInfoResponse>(
+        'GetBatchShortStudentInfo',
+        getBatchShortStudentInfo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetBatchShortStudentInfoRequest.fromBuffer(value),
+        ($0.GetBatchShortStudentInfoResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetBatchShortTeacherInfoRequest,
+            $0.GetBatchShortTeacherInfoResponse>(
+        'GetBatchShortTeacherInfo',
+        getBatchShortTeacherInfo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetBatchShortTeacherInfoRequest.fromBuffer(value),
+        ($0.GetBatchShortTeacherInfoResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetBatchShortEmployeeInfoRequest,
+            $0.GetBatchShortEmployeeInfoResponse>(
+        'GetBatchShortEmployeeInfo',
+        getBatchShortEmployeeInfo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetBatchShortEmployeeInfoRequest.fromBuffer(value),
+        ($0.GetBatchShortEmployeeInfoResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateStudentResponse> createStudent_Pre(
@@ -605,4 +677,31 @@ abstract class UserServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetEmployeesInfoResponse> getEmployeesInfo(
       $grpc.ServiceCall call, $0.GetEmployeesInfoRequest request);
+
+  $async.Future<$0.GetBatchShortStudentInfoResponse>
+      getBatchShortStudentInfo_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetBatchShortStudentInfoRequest> $request) async {
+    return getBatchShortStudentInfo($call, await $request);
+  }
+
+  $async.Future<$0.GetBatchShortStudentInfoResponse> getBatchShortStudentInfo(
+      $grpc.ServiceCall call, $0.GetBatchShortStudentInfoRequest request);
+
+  $async.Future<$0.GetBatchShortTeacherInfoResponse>
+      getBatchShortTeacherInfo_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetBatchShortTeacherInfoRequest> $request) async {
+    return getBatchShortTeacherInfo($call, await $request);
+  }
+
+  $async.Future<$0.GetBatchShortTeacherInfoResponse> getBatchShortTeacherInfo(
+      $grpc.ServiceCall call, $0.GetBatchShortTeacherInfoRequest request);
+
+  $async.Future<$0.GetBatchShortEmployeeInfoResponse>
+      getBatchShortEmployeeInfo_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetBatchShortEmployeeInfoRequest> $request) async {
+    return getBatchShortEmployeeInfo($call, await $request);
+  }
+
+  $async.Future<$0.GetBatchShortEmployeeInfoResponse> getBatchShortEmployeeInfo(
+      $grpc.ServiceCall call, $0.GetBatchShortEmployeeInfoRequest request);
 }

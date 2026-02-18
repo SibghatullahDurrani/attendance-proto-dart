@@ -981,3 +981,216 @@ final $typed_data.Uint8List employeeInfoDescriptor = $convert.base64Decode(
     'BWVtYWlsiAEBEiQKDmlzX2ltYWdlX2FybWVkGAcgASgIUgxpc0ltYWdlQXJtZWQSJAoNcXVhbG'
     'lmaWNhdGlvbhgIIAEoCVINcXVhbGlmaWNhdGlvbhIgCgtkZXNpZ25hdGlvbhgJIAEoCVILZGVz'
     'aWduYXRpb25CDgoMX3NlY29uZF9uYW1lQggKBl9lbWFpbA==');
+
+@$core.Deprecated('Use getBatchShortStudentInfoRequestDescriptor instead')
+const GetBatchShortStudentInfoRequest$json = {
+  '1': 'GetBatchShortStudentInfoRequest',
+  '2': [
+    {'1': 'student_ids', '3': 1, '4': 3, '5': 9, '10': 'studentIds'},
+  ],
+};
+
+/// Descriptor for `GetBatchShortStudentInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBatchShortStudentInfoRequestDescriptor =
+    $convert.base64Decode(
+        'Ch9HZXRCYXRjaFNob3J0U3R1ZGVudEluZm9SZXF1ZXN0Eh8KC3N0dWRlbnRfaWRzGAEgAygJUg'
+        'pzdHVkZW50SWRz');
+
+@$core.Deprecated('Use getBatchShortStudentInfoResponseDescriptor instead')
+const GetBatchShortStudentInfoResponse$json = {
+  '1': 'GetBatchShortStudentInfoResponse',
+  '2': [
+    {
+      '1': 'students_info',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.ShortStudentInfo',
+      '10': 'studentsInfo'
+    },
+  ],
+};
+
+/// Descriptor for `GetBatchShortStudentInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBatchShortStudentInfoResponseDescriptor =
+    $convert.base64Decode(
+        'CiBHZXRCYXRjaFNob3J0U3R1ZGVudEluZm9SZXNwb25zZRJECg1zdHVkZW50c19pbmZvGAEgAy'
+        'gLMh8udXNlcl9tZXNzYWdlcy5TaG9ydFN0dWRlbnRJbmZvUgxzdHVkZW50c0luZm8=');
+
+@$core.Deprecated('Use shortStudentInfoDescriptor instead')
+const ShortStudentInfo$json = {
+  '1': 'ShortStudentInfo',
+  '2': [
+    {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_identification_number'},
+  ],
+};
+
+/// Descriptor for `ShortStudentInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List shortStudentInfoDescriptor = $convert.base64Decode(
+    'ChBTaG9ydFN0dWRlbnRJbmZvEh0KCnN0dWRlbnRfaWQYASABKAlSCXN0dWRlbnRJZBIdCgpmaX'
+    'JzdF9uYW1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAyABKAlIAFIKc2Vjb25k'
+    'TmFtZYgBARI4ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlIAVIUaWRlbnRpZmljYXRpb2'
+    '5OdW1iZXKIAQFCDgoMX3NlY29uZF9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXI=');
+
+@$core.Deprecated('Use getBatchShortTeacherInfoRequestDescriptor instead')
+const GetBatchShortTeacherInfoRequest$json = {
+  '1': 'GetBatchShortTeacherInfoRequest',
+  '2': [
+    {'1': 'teacher_ids', '3': 1, '4': 3, '5': 9, '10': 'teacherIds'},
+  ],
+};
+
+/// Descriptor for `GetBatchShortTeacherInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBatchShortTeacherInfoRequestDescriptor =
+    $convert.base64Decode(
+        'Ch9HZXRCYXRjaFNob3J0VGVhY2hlckluZm9SZXF1ZXN0Eh8KC3RlYWNoZXJfaWRzGAEgAygJUg'
+        'p0ZWFjaGVySWRz');
+
+@$core.Deprecated('Use getBatchShortTeacherInfoResponseDescriptor instead')
+const GetBatchShortTeacherInfoResponse$json = {
+  '1': 'GetBatchShortTeacherInfoResponse',
+  '2': [
+    {
+      '1': 'teachers_info',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.ShortTeacherInfo',
+      '10': 'teachersInfo'
+    },
+  ],
+};
+
+/// Descriptor for `GetBatchShortTeacherInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBatchShortTeacherInfoResponseDescriptor =
+    $convert.base64Decode(
+        'CiBHZXRCYXRjaFNob3J0VGVhY2hlckluZm9SZXNwb25zZRJECg10ZWFjaGVyc19pbmZvGAEgAy'
+        'gLMh8udXNlcl9tZXNzYWdlcy5TaG9ydFRlYWNoZXJJbmZvUgx0ZWFjaGVyc0luZm8=');
+
+@$core.Deprecated('Use shortTeacherInfoDescriptor instead')
+const ShortTeacherInfo$json = {
+  '1': 'ShortTeacherInfo',
+  '2': [
+    {'1': 'teacher_id', '3': 1, '4': 1, '5': 9, '10': 'teacherId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+  ],
+};
+
+/// Descriptor for `ShortTeacherInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List shortTeacherInfoDescriptor = $convert.base64Decode(
+    'ChBTaG9ydFRlYWNoZXJJbmZvEh0KCnRlYWNoZXJfaWQYASABKAlSCXRlYWNoZXJJZBIdCgpmaX'
+    'JzdF9uYW1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAyABKAlIAFIKc2Vjb25k'
+    'TmFtZYgBARIzChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlSFGlkZW50aWZpY2F0aW9uTn'
+    'VtYmVyQg4KDF9zZWNvbmRfbmFtZQ==');
+
+@$core.Deprecated('Use getBatchShortEmployeeInfoRequestDescriptor instead')
+const GetBatchShortEmployeeInfoRequest$json = {
+  '1': 'GetBatchShortEmployeeInfoRequest',
+  '2': [
+    {'1': 'employee_ids', '3': 1, '4': 3, '5': 9, '10': 'employeeIds'},
+  ],
+};
+
+/// Descriptor for `GetBatchShortEmployeeInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBatchShortEmployeeInfoRequestDescriptor =
+    $convert.base64Decode(
+        'CiBHZXRCYXRjaFNob3J0RW1wbG95ZWVJbmZvUmVxdWVzdBIhCgxlbXBsb3llZV9pZHMYASADKA'
+        'lSC2VtcGxveWVlSWRz');
+
+@$core.Deprecated('Use getBatchShortEmployeeInfoResponseDescriptor instead')
+const GetBatchShortEmployeeInfoResponse$json = {
+  '1': 'GetBatchShortEmployeeInfoResponse',
+  '2': [
+    {
+      '1': 'employees_info',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.ShortEmployeeInfo',
+      '10': 'employeesInfo'
+    },
+  ],
+};
+
+/// Descriptor for `GetBatchShortEmployeeInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBatchShortEmployeeInfoResponseDescriptor =
+    $convert.base64Decode(
+        'CiFHZXRCYXRjaFNob3J0RW1wbG95ZWVJbmZvUmVzcG9uc2USRwoOZW1wbG95ZWVzX2luZm8YAS'
+        'ADKAsyIC51c2VyX21lc3NhZ2VzLlNob3J0RW1wbG95ZWVJbmZvUg1lbXBsb3llZXNJbmZv');
+
+@$core.Deprecated('Use shortEmployeeInfoDescriptor instead')
+const ShortEmployeeInfo$json = {
+  '1': 'ShortEmployeeInfo',
+  '2': [
+    {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+  ],
+};
+
+/// Descriptor for `ShortEmployeeInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List shortEmployeeInfoDescriptor = $convert.base64Decode(
+    'ChFTaG9ydEVtcGxveWVlSW5mbxIfCgtlbXBsb3llZV9pZBgBIAEoCVIKZW1wbG95ZWVJZBIdCg'
+    'pmaXJzdF9uYW1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAyABKAlIAFIKc2Vj'
+    'b25kTmFtZYgBARIzChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlSFGlkZW50aWZpY2F0aW'
+    '9uTnVtYmVyQg4KDF9zZWNvbmRfbmFtZQ==');

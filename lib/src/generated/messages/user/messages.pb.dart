@@ -2922,6 +2922,616 @@ class EmployeeInfo extends $pb.GeneratedMessage {
   void clearDesignation() => $_clearField(9);
 }
 
+class GetBatchShortStudentInfoRequest extends $pb.GeneratedMessage {
+  factory GetBatchShortStudentInfoRequest({
+    $core.Iterable<$core.String>? studentIds,
+  }) {
+    final result = create();
+    if (studentIds != null) result.studentIds.addAll(studentIds);
+    return result;
+  }
+
+  GetBatchShortStudentInfoRequest._();
+
+  factory GetBatchShortStudentInfoRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchShortStudentInfoRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBatchShortStudentInfoRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'studentIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchShortStudentInfoRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchShortStudentInfoRequest copyWith(
+          void Function(GetBatchShortStudentInfoRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetBatchShortStudentInfoRequest))
+          as GetBatchShortStudentInfoRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchShortStudentInfoRequest create() =>
+      GetBatchShortStudentInfoRequest._();
+  @$core.override
+  GetBatchShortStudentInfoRequest createEmptyInstance() => create();
+  static $pb.PbList<GetBatchShortStudentInfoRequest> createRepeated() =>
+      $pb.PbList<GetBatchShortStudentInfoRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchShortStudentInfoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBatchShortStudentInfoRequest>(
+          create);
+  static GetBatchShortStudentInfoRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get studentIds => $_getList(0);
+}
+
+class GetBatchShortStudentInfoResponse extends $pb.GeneratedMessage {
+  factory GetBatchShortStudentInfoResponse({
+    $core.Iterable<ShortStudentInfo>? studentsInfo,
+  }) {
+    final result = create();
+    if (studentsInfo != null) result.studentsInfo.addAll(studentsInfo);
+    return result;
+  }
+
+  GetBatchShortStudentInfoResponse._();
+
+  factory GetBatchShortStudentInfoResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchShortStudentInfoResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBatchShortStudentInfoResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPM<ShortStudentInfo>(1, _omitFieldNames ? '' : 'studentsInfo',
+        subBuilder: ShortStudentInfo.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchShortStudentInfoResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchShortStudentInfoResponse copyWith(
+          void Function(GetBatchShortStudentInfoResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetBatchShortStudentInfoResponse))
+          as GetBatchShortStudentInfoResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchShortStudentInfoResponse create() =>
+      GetBatchShortStudentInfoResponse._();
+  @$core.override
+  GetBatchShortStudentInfoResponse createEmptyInstance() => create();
+  static $pb.PbList<GetBatchShortStudentInfoResponse> createRepeated() =>
+      $pb.PbList<GetBatchShortStudentInfoResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchShortStudentInfoResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBatchShortStudentInfoResponse>(
+          create);
+  static GetBatchShortStudentInfoResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<ShortStudentInfo> get studentsInfo => $_getList(0);
+}
+
+class ShortStudentInfo extends $pb.GeneratedMessage {
+  factory ShortStudentInfo({
+    $core.String? studentId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+  }) {
+    final result = create();
+    if (studentId != null) result.studentId = studentId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    return result;
+  }
+
+  ShortStudentInfo._();
+
+  factory ShortStudentInfo.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ShortStudentInfo.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ShortStudentInfo',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'studentId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ShortStudentInfo clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ShortStudentInfo copyWith(void Function(ShortStudentInfo) updates) =>
+      super.copyWith((message) => updates(message as ShortStudentInfo))
+          as ShortStudentInfo;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ShortStudentInfo create() => ShortStudentInfo._();
+  @$core.override
+  ShortStudentInfo createEmptyInstance() => create();
+  static $pb.PbList<ShortStudentInfo> createRepeated() =>
+      $pb.PbList<ShortStudentInfo>();
+  @$core.pragma('dart2js:noInline')
+  static ShortStudentInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ShortStudentInfo>(create);
+  static ShortStudentInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get studentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set studentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasStudentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStudentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+}
+
+class GetBatchShortTeacherInfoRequest extends $pb.GeneratedMessage {
+  factory GetBatchShortTeacherInfoRequest({
+    $core.Iterable<$core.String>? teacherIds,
+  }) {
+    final result = create();
+    if (teacherIds != null) result.teacherIds.addAll(teacherIds);
+    return result;
+  }
+
+  GetBatchShortTeacherInfoRequest._();
+
+  factory GetBatchShortTeacherInfoRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchShortTeacherInfoRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBatchShortTeacherInfoRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'teacherIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchShortTeacherInfoRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchShortTeacherInfoRequest copyWith(
+          void Function(GetBatchShortTeacherInfoRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetBatchShortTeacherInfoRequest))
+          as GetBatchShortTeacherInfoRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchShortTeacherInfoRequest create() =>
+      GetBatchShortTeacherInfoRequest._();
+  @$core.override
+  GetBatchShortTeacherInfoRequest createEmptyInstance() => create();
+  static $pb.PbList<GetBatchShortTeacherInfoRequest> createRepeated() =>
+      $pb.PbList<GetBatchShortTeacherInfoRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchShortTeacherInfoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBatchShortTeacherInfoRequest>(
+          create);
+  static GetBatchShortTeacherInfoRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get teacherIds => $_getList(0);
+}
+
+class GetBatchShortTeacherInfoResponse extends $pb.GeneratedMessage {
+  factory GetBatchShortTeacherInfoResponse({
+    $core.Iterable<ShortTeacherInfo>? teachersInfo,
+  }) {
+    final result = create();
+    if (teachersInfo != null) result.teachersInfo.addAll(teachersInfo);
+    return result;
+  }
+
+  GetBatchShortTeacherInfoResponse._();
+
+  factory GetBatchShortTeacherInfoResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchShortTeacherInfoResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBatchShortTeacherInfoResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPM<ShortTeacherInfo>(1, _omitFieldNames ? '' : 'teachersInfo',
+        subBuilder: ShortTeacherInfo.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchShortTeacherInfoResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchShortTeacherInfoResponse copyWith(
+          void Function(GetBatchShortTeacherInfoResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetBatchShortTeacherInfoResponse))
+          as GetBatchShortTeacherInfoResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchShortTeacherInfoResponse create() =>
+      GetBatchShortTeacherInfoResponse._();
+  @$core.override
+  GetBatchShortTeacherInfoResponse createEmptyInstance() => create();
+  static $pb.PbList<GetBatchShortTeacherInfoResponse> createRepeated() =>
+      $pb.PbList<GetBatchShortTeacherInfoResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchShortTeacherInfoResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBatchShortTeacherInfoResponse>(
+          create);
+  static GetBatchShortTeacherInfoResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<ShortTeacherInfo> get teachersInfo => $_getList(0);
+}
+
+class ShortTeacherInfo extends $pb.GeneratedMessage {
+  factory ShortTeacherInfo({
+    $core.String? teacherId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+  }) {
+    final result = create();
+    if (teacherId != null) result.teacherId = teacherId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    return result;
+  }
+
+  ShortTeacherInfo._();
+
+  factory ShortTeacherInfo.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ShortTeacherInfo.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ShortTeacherInfo',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'teacherId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ShortTeacherInfo clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ShortTeacherInfo copyWith(void Function(ShortTeacherInfo) updates) =>
+      super.copyWith((message) => updates(message as ShortTeacherInfo))
+          as ShortTeacherInfo;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ShortTeacherInfo create() => ShortTeacherInfo._();
+  @$core.override
+  ShortTeacherInfo createEmptyInstance() => create();
+  static $pb.PbList<ShortTeacherInfo> createRepeated() =>
+      $pb.PbList<ShortTeacherInfo>();
+  @$core.pragma('dart2js:noInline')
+  static ShortTeacherInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ShortTeacherInfo>(create);
+  static ShortTeacherInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get teacherId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set teacherId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasTeacherId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTeacherId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+}
+
+class GetBatchShortEmployeeInfoRequest extends $pb.GeneratedMessage {
+  factory GetBatchShortEmployeeInfoRequest({
+    $core.Iterable<$core.String>? employeeIds,
+  }) {
+    final result = create();
+    if (employeeIds != null) result.employeeIds.addAll(employeeIds);
+    return result;
+  }
+
+  GetBatchShortEmployeeInfoRequest._();
+
+  factory GetBatchShortEmployeeInfoRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchShortEmployeeInfoRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBatchShortEmployeeInfoRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'employeeIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchShortEmployeeInfoRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchShortEmployeeInfoRequest copyWith(
+          void Function(GetBatchShortEmployeeInfoRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetBatchShortEmployeeInfoRequest))
+          as GetBatchShortEmployeeInfoRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchShortEmployeeInfoRequest create() =>
+      GetBatchShortEmployeeInfoRequest._();
+  @$core.override
+  GetBatchShortEmployeeInfoRequest createEmptyInstance() => create();
+  static $pb.PbList<GetBatchShortEmployeeInfoRequest> createRepeated() =>
+      $pb.PbList<GetBatchShortEmployeeInfoRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchShortEmployeeInfoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBatchShortEmployeeInfoRequest>(
+          create);
+  static GetBatchShortEmployeeInfoRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get employeeIds => $_getList(0);
+}
+
+class GetBatchShortEmployeeInfoResponse extends $pb.GeneratedMessage {
+  factory GetBatchShortEmployeeInfoResponse({
+    $core.Iterable<ShortEmployeeInfo>? employeesInfo,
+  }) {
+    final result = create();
+    if (employeesInfo != null) result.employeesInfo.addAll(employeesInfo);
+    return result;
+  }
+
+  GetBatchShortEmployeeInfoResponse._();
+
+  factory GetBatchShortEmployeeInfoResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchShortEmployeeInfoResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBatchShortEmployeeInfoResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPM<ShortEmployeeInfo>(1, _omitFieldNames ? '' : 'employeesInfo',
+        subBuilder: ShortEmployeeInfo.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchShortEmployeeInfoResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchShortEmployeeInfoResponse copyWith(
+          void Function(GetBatchShortEmployeeInfoResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetBatchShortEmployeeInfoResponse))
+          as GetBatchShortEmployeeInfoResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchShortEmployeeInfoResponse create() =>
+      GetBatchShortEmployeeInfoResponse._();
+  @$core.override
+  GetBatchShortEmployeeInfoResponse createEmptyInstance() => create();
+  static $pb.PbList<GetBatchShortEmployeeInfoResponse> createRepeated() =>
+      $pb.PbList<GetBatchShortEmployeeInfoResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchShortEmployeeInfoResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBatchShortEmployeeInfoResponse>(
+          create);
+  static GetBatchShortEmployeeInfoResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<ShortEmployeeInfo> get employeesInfo => $_getList(0);
+}
+
+class ShortEmployeeInfo extends $pb.GeneratedMessage {
+  factory ShortEmployeeInfo({
+    $core.String? employeeId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+  }) {
+    final result = create();
+    if (employeeId != null) result.employeeId = employeeId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    return result;
+  }
+
+  ShortEmployeeInfo._();
+
+  factory ShortEmployeeInfo.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ShortEmployeeInfo.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ShortEmployeeInfo',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'employeeId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ShortEmployeeInfo clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ShortEmployeeInfo copyWith(void Function(ShortEmployeeInfo) updates) =>
+      super.copyWith((message) => updates(message as ShortEmployeeInfo))
+          as ShortEmployeeInfo;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ShortEmployeeInfo create() => ShortEmployeeInfo._();
+  @$core.override
+  ShortEmployeeInfo createEmptyInstance() => create();
+  static $pb.PbList<ShortEmployeeInfo> createRepeated() =>
+      $pb.PbList<ShortEmployeeInfo>();
+  @$core.pragma('dart2js:noInline')
+  static ShortEmployeeInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ShortEmployeeInfo>(create);
+  static ShortEmployeeInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get employeeId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set employeeId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasEmployeeId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEmployeeId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

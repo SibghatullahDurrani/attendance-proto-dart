@@ -372,6 +372,15 @@ class SchoolServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetBatchStudentLatestEnrollmentInfoResponse>
+      getBatchStudentLatestEnrollmentInfo(
+    $0.GetBatchStudentLatestEnrollmentInfoRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getBatchStudentLatestEnrollmentInfo, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -606,6 +615,13 @@ class SchoolServiceClient extends $grpc.Client {
       '/school.SchoolService/GetClassesSelectionMenuItems',
       ($0.GetClassesSelectionMenuItemsRequest value) => value.writeToBuffer(),
       $0.GetClassesSelectionMenuItemsResponse.fromBuffer);
+  static final _$getBatchStudentLatestEnrollmentInfo = $grpc.ClientMethod<
+          $0.GetBatchStudentLatestEnrollmentInfoRequest,
+          $0.GetBatchStudentLatestEnrollmentInfoResponse>(
+      '/school.SchoolService/GetBatchStudentLatestEnrollmentInfo',
+      ($0.GetBatchStudentLatestEnrollmentInfoRequest value) =>
+          value.writeToBuffer(),
+      $0.GetBatchStudentLatestEnrollmentInfoResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -1011,6 +1027,17 @@ abstract class SchoolServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetClassesSelectionMenuItemsRequest.fromBuffer(value),
         ($0.GetClassesSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.GetBatchStudentLatestEnrollmentInfoRequest,
+            $0.GetBatchStudentLatestEnrollmentInfoResponse>(
+        'GetBatchStudentLatestEnrollmentInfo',
+        getBatchStudentLatestEnrollmentInfo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetBatchStudentLatestEnrollmentInfoRequest.fromBuffer(value),
+        ($0.GetBatchStudentLatestEnrollmentInfoResponse value) =>
             value.writeToBuffer()));
   }
 
@@ -1420,4 +1447,16 @@ abstract class SchoolServiceBase extends $grpc.Service {
   $async.Future<$0.GetClassesSelectionMenuItemsResponse>
       getClassesSelectionMenuItems($grpc.ServiceCall call,
           $0.GetClassesSelectionMenuItemsRequest request);
+
+  $async.Future<$0.GetBatchStudentLatestEnrollmentInfoResponse>
+      getBatchStudentLatestEnrollmentInfo_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetBatchStudentLatestEnrollmentInfoRequest>
+              $request) async {
+    return getBatchStudentLatestEnrollmentInfo($call, await $request);
+  }
+
+  $async.Future<$0.GetBatchStudentLatestEnrollmentInfoResponse>
+      getBatchStudentLatestEnrollmentInfo($grpc.ServiceCall call,
+          $0.GetBatchStudentLatestEnrollmentInfoRequest request);
 }

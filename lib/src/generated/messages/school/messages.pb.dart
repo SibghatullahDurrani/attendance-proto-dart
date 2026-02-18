@@ -7326,6 +7326,210 @@ class GetClassesSelectionMenuItemsResponse extends $pb.GeneratedMessage {
   $pb.PbList<ClassSelectionMenuItem> get menuItems => $_getList(1);
 }
 
+class GetBatchStudentLatestEnrollmentInfoRequest extends $pb.GeneratedMessage {
+  factory GetBatchStudentLatestEnrollmentInfoRequest({
+    $core.Iterable<$core.String>? studentIds,
+  }) {
+    final result = create();
+    if (studentIds != null) result.studentIds.addAll(studentIds);
+    return result;
+  }
+
+  GetBatchStudentLatestEnrollmentInfoRequest._();
+
+  factory GetBatchStudentLatestEnrollmentInfoRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchStudentLatestEnrollmentInfoRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBatchStudentLatestEnrollmentInfoRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'studentIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchStudentLatestEnrollmentInfoRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchStudentLatestEnrollmentInfoRequest copyWith(
+          void Function(GetBatchStudentLatestEnrollmentInfoRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetBatchStudentLatestEnrollmentInfoRequest))
+          as GetBatchStudentLatestEnrollmentInfoRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchStudentLatestEnrollmentInfoRequest create() =>
+      GetBatchStudentLatestEnrollmentInfoRequest._();
+  @$core.override
+  GetBatchStudentLatestEnrollmentInfoRequest createEmptyInstance() => create();
+  static $pb.PbList<GetBatchStudentLatestEnrollmentInfoRequest>
+      createRepeated() =>
+          $pb.PbList<GetBatchStudentLatestEnrollmentInfoRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchStudentLatestEnrollmentInfoRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetBatchStudentLatestEnrollmentInfoRequest>(create);
+  static GetBatchStudentLatestEnrollmentInfoRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get studentIds => $_getList(0);
+}
+
+class GetBatchStudentLatestEnrollmentInfoResponse extends $pb.GeneratedMessage {
+  factory GetBatchStudentLatestEnrollmentInfoResponse({
+    $core.Iterable<StudentLatestEnrollmentInfo>? latestEnrollment,
+  }) {
+    final result = create();
+    if (latestEnrollment != null)
+      result.latestEnrollment.addAll(latestEnrollment);
+    return result;
+  }
+
+  GetBatchStudentLatestEnrollmentInfoResponse._();
+
+  factory GetBatchStudentLatestEnrollmentInfoResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchStudentLatestEnrollmentInfoResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBatchStudentLatestEnrollmentInfoResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..pPM<StudentLatestEnrollmentInfo>(
+        1, _omitFieldNames ? '' : 'latestEnrollment',
+        subBuilder: StudentLatestEnrollmentInfo.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchStudentLatestEnrollmentInfoResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchStudentLatestEnrollmentInfoResponse copyWith(
+          void Function(GetBatchStudentLatestEnrollmentInfoResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetBatchStudentLatestEnrollmentInfoResponse))
+          as GetBatchStudentLatestEnrollmentInfoResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchStudentLatestEnrollmentInfoResponse create() =>
+      GetBatchStudentLatestEnrollmentInfoResponse._();
+  @$core.override
+  GetBatchStudentLatestEnrollmentInfoResponse createEmptyInstance() => create();
+  static $pb.PbList<GetBatchStudentLatestEnrollmentInfoResponse>
+      createRepeated() =>
+          $pb.PbList<GetBatchStudentLatestEnrollmentInfoResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchStudentLatestEnrollmentInfoResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetBatchStudentLatestEnrollmentInfoResponse>(create);
+  static GetBatchStudentLatestEnrollmentInfoResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<StudentLatestEnrollmentInfo> get latestEnrollment => $_getList(0);
+}
+
+class StudentLatestEnrollmentInfo extends $pb.GeneratedMessage {
+  factory StudentLatestEnrollmentInfo({
+    $core.String? userId,
+    $core.String? lastAttendedClassName,
+    $core.String? lastAttendedSectionName,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    if (lastAttendedClassName != null)
+      result.lastAttendedClassName = lastAttendedClassName;
+    if (lastAttendedSectionName != null)
+      result.lastAttendedSectionName = lastAttendedSectionName;
+    return result;
+  }
+
+  StudentLatestEnrollmentInfo._();
+
+  factory StudentLatestEnrollmentInfo.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StudentLatestEnrollmentInfo.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StudentLatestEnrollmentInfo',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..aOS(2, _omitFieldNames ? '' : 'lastAttendedClassName')
+    ..aOS(3, _omitFieldNames ? '' : 'lastAttendedSectionName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StudentLatestEnrollmentInfo clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StudentLatestEnrollmentInfo copyWith(
+          void Function(StudentLatestEnrollmentInfo) updates) =>
+      super.copyWith(
+              (message) => updates(message as StudentLatestEnrollmentInfo))
+          as StudentLatestEnrollmentInfo;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static StudentLatestEnrollmentInfo create() =>
+      StudentLatestEnrollmentInfo._();
+  @$core.override
+  StudentLatestEnrollmentInfo createEmptyInstance() => create();
+  static $pb.PbList<StudentLatestEnrollmentInfo> createRepeated() =>
+      $pb.PbList<StudentLatestEnrollmentInfo>();
+  @$core.pragma('dart2js:noInline')
+  static StudentLatestEnrollmentInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StudentLatestEnrollmentInfo>(create);
+  static StudentLatestEnrollmentInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get lastAttendedClassName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set lastAttendedClassName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasLastAttendedClassName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLastAttendedClassName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get lastAttendedSectionName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set lastAttendedSectionName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasLastAttendedSectionName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLastAttendedSectionName() => $_clearField(3);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =
