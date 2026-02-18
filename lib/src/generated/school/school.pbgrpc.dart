@@ -363,6 +363,15 @@ class SchoolServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetClassesSelectionMenuItemsResponse>
+      getClassesSelectionMenuItems(
+    $0.GetClassesSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getClassesSelectionMenuItems, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -591,6 +600,12 @@ class SchoolServiceClient extends $grpc.Client {
           ($0.GetEmployeesSelectionMenuItemsPersonalInfoRequest value) =>
               value.writeToBuffer(),
           $0.GetEmployeesSelectionMenuItemsPersonalInfoResponse.fromBuffer);
+  static final _$getClassesSelectionMenuItems = $grpc.ClientMethod<
+          $0.GetClassesSelectionMenuItemsRequest,
+          $0.GetClassesSelectionMenuItemsResponse>(
+      '/school.SchoolService/GetClassesSelectionMenuItems',
+      ($0.GetClassesSelectionMenuItemsRequest value) => value.writeToBuffer(),
+      $0.GetClassesSelectionMenuItemsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -986,6 +1001,16 @@ abstract class SchoolServiceBase extends $grpc.Service {
             $0.GetEmployeesSelectionMenuItemsPersonalInfoRequest.fromBuffer(
                 value),
         ($0.GetEmployeesSelectionMenuItemsPersonalInfoResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetClassesSelectionMenuItemsRequest,
+            $0.GetClassesSelectionMenuItemsResponse>(
+        'GetClassesSelectionMenuItems',
+        getClassesSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetClassesSelectionMenuItemsRequest.fromBuffer(value),
+        ($0.GetClassesSelectionMenuItemsResponse value) =>
             value.writeToBuffer()));
   }
 
@@ -1383,4 +1408,16 @@ abstract class SchoolServiceBase extends $grpc.Service {
   $async.Future<$0.GetEmployeesSelectionMenuItemsPersonalInfoResponse>
       getEmployeesSelectionMenuItemsPersonalInfo($grpc.ServiceCall call,
           $0.GetEmployeesSelectionMenuItemsPersonalInfoRequest request);
+
+  $async.Future<$0.GetClassesSelectionMenuItemsResponse>
+      getClassesSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetClassesSelectionMenuItemsRequest>
+              $request) async {
+    return getClassesSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$0.GetClassesSelectionMenuItemsResponse>
+      getClassesSelectionMenuItems($grpc.ServiceCall call,
+          $0.GetClassesSelectionMenuItemsRequest request);
 }

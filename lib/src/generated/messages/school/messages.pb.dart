@@ -7153,6 +7153,179 @@ class EmployeeSelectionMenuItemPersonalInfo extends $pb.GeneratedMessage {
   void clearPhoneNumber() => $_clearField(5);
 }
 
+class GetClassesSelectionMenuItemsRequest extends $pb.GeneratedMessage {
+  factory GetClassesSelectionMenuItemsRequest({
+    $1.PaginationRequest? pagination,
+    $core.String? schoolId,
+    $core.String? sessionName,
+    $core.String? className,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (schoolId != null) result.schoolId = schoolId;
+    if (sessionName != null) result.sessionName = sessionName;
+    if (className != null) result.className = className;
+    return result;
+  }
+
+  GetClassesSelectionMenuItemsRequest._();
+
+  factory GetClassesSelectionMenuItemsRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetClassesSelectionMenuItemsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetClassesSelectionMenuItemsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOM<$1.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(3, _omitFieldNames ? '' : 'sessionName')
+    ..aOS(4, _omitFieldNames ? '' : 'className')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetClassesSelectionMenuItemsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetClassesSelectionMenuItemsRequest copyWith(
+          void Function(GetClassesSelectionMenuItemsRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetClassesSelectionMenuItemsRequest))
+          as GetClassesSelectionMenuItemsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetClassesSelectionMenuItemsRequest create() =>
+      GetClassesSelectionMenuItemsRequest._();
+  @$core.override
+  GetClassesSelectionMenuItemsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetClassesSelectionMenuItemsRequest> createRepeated() =>
+      $pb.PbList<GetClassesSelectionMenuItemsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetClassesSelectionMenuItemsRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetClassesSelectionMenuItemsRequest>(create);
+  static GetClassesSelectionMenuItemsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($1.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get schoolId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set schoolId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSchoolId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSchoolId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get sessionName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set sessionName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSessionName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSessionName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get className => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set className($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasClassName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearClassName() => $_clearField(4);
+}
+
+class GetClassesSelectionMenuItemsResponse extends $pb.GeneratedMessage {
+  factory GetClassesSelectionMenuItemsResponse({
+    $1.PaginationResponse? pagination,
+    $core.Iterable<ClassSelectionMenuItem>? menuItems,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (menuItems != null) result.menuItems.addAll(menuItems);
+    return result;
+  }
+
+  GetClassesSelectionMenuItemsResponse._();
+
+  factory GetClassesSelectionMenuItemsResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetClassesSelectionMenuItemsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetClassesSelectionMenuItemsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOM<$1.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationResponse.create)
+    ..pPM<ClassSelectionMenuItem>(2, _omitFieldNames ? '' : 'menuItems',
+        subBuilder: ClassSelectionMenuItem.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetClassesSelectionMenuItemsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetClassesSelectionMenuItemsResponse copyWith(
+          void Function(GetClassesSelectionMenuItemsResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetClassesSelectionMenuItemsResponse))
+          as GetClassesSelectionMenuItemsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetClassesSelectionMenuItemsResponse create() =>
+      GetClassesSelectionMenuItemsResponse._();
+  @$core.override
+  GetClassesSelectionMenuItemsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetClassesSelectionMenuItemsResponse> createRepeated() =>
+      $pb.PbList<GetClassesSelectionMenuItemsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetClassesSelectionMenuItemsResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetClassesSelectionMenuItemsResponse>(create);
+  static GetClassesSelectionMenuItemsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($1.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<ClassSelectionMenuItem> get menuItems => $_getList(1);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

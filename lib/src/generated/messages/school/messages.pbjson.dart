@@ -2448,3 +2448,81 @@ final $typed_data.Uint8List employeeSelectionMenuItemPersonalInfoDescriptor =
         'bmRfbmFtZRgDIAEoCUgAUgpzZWNvbmROYW1liAEBEjMKFWlkZW50aWZpY2F0aW9uX251bWJlch'
         'gEIAEoCVIUaWRlbnRpZmljYXRpb25OdW1iZXISIQoMcGhvbmVfbnVtYmVyGAUgASgJUgtwaG9u'
         'ZU51bWJlckIOCgxfc2Vjb25kX25hbWU=');
+
+@$core.Deprecated('Use getClassesSelectionMenuItemsRequestDescriptor instead')
+const GetClassesSelectionMenuItemsRequest$json = {
+  '1': 'GetClassesSelectionMenuItemsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'session_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'sessionName',
+      '17': true
+    },
+    {
+      '1': 'class_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'className',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_session_name'},
+    {'1': '_class_name'},
+  ],
+};
+
+/// Descriptor for `GetClassesSelectionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getClassesSelectionMenuItemsRequestDescriptor =
+    $convert.base64Decode(
+        'CiNHZXRDbGFzc2VzU2VsZWN0aW9uTWVudUl0ZW1zUmVxdWVzdBJCCgpwYWdpbmF0aW9uGAEgAS'
+        'gLMiIuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9uEhsKCXNj'
+        'aG9vbF9pZBgCIAEoCVIIc2Nob29sSWQSJgoMc2Vzc2lvbl9uYW1lGAMgASgJSABSC3Nlc3Npb2'
+        '5OYW1liAEBEiIKCmNsYXNzX25hbWUYBCABKAlIAVIJY2xhc3NOYW1liAEBQg8KDV9zZXNzaW9u'
+        'X25hbWVCDQoLX2NsYXNzX25hbWU=');
+
+@$core.Deprecated('Use getClassesSelectionMenuItemsResponseDescriptor instead')
+const GetClassesSelectionMenuItemsResponse$json = {
+  '1': 'GetClassesSelectionMenuItemsResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'menu_items',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.ClassSelectionMenuItem',
+      '10': 'menuItems'
+    },
+  ],
+};
+
+/// Descriptor for `GetClassesSelectionMenuItemsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getClassesSelectionMenuItemsResponseDescriptor =
+    $convert.base64Decode(
+        'CiRHZXRDbGFzc2VzU2VsZWN0aW9uTWVudUl0ZW1zUmVzcG9uc2USQwoKcGFnaW5hdGlvbhgBIA'
+        'EoCzIjLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9uc2VSCnBhZ2luYXRpb24SRgoK'
+        'bWVudV9pdGVtcxgCIAMoCzInLnNjaG9vbF9tZXNzYWdlcy5DbGFzc1NlbGVjdGlvbk1lbnVJdG'
+        'VtUgltZW51SXRlbXM=');

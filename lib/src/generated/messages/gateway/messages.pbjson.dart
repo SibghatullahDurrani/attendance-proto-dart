@@ -2054,8 +2054,192 @@ final $typed_data.Uint8List listInstitutionLeavesRequestDescriptor = $convert.ba
 @$core.Deprecated('Use listInstitutionLeavesResponseDescriptor instead')
 const ListInstitutionLeavesResponse$json = {
   '1': 'ListInstitutionLeavesResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'leaves',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.InstitutionLeaves',
+      '10': 'leaves'
+    },
+  ],
 };
 
 /// Descriptor for `ListInstitutionLeavesResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listInstitutionLeavesResponseDescriptor =
-    $convert.base64Decode('Ch1MaXN0SW5zdGl0dXRpb25MZWF2ZXNSZXNwb25zZQ==');
+    $convert.base64Decode(
+        'Ch1MaXN0SW5zdGl0dXRpb25MZWF2ZXNSZXNwb25zZRJDCgpwYWdpbmF0aW9uGAEgASgLMiMuY2'
+        '9tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbhI7CgZsZWF2ZXMY'
+        'AiADKAsyIy5nYXRld2F5X21lc3NhZ2VzLkluc3RpdHV0aW9uTGVhdmVzUgZsZWF2ZXM=');
+
+@$core.Deprecated('Use institutionLeavesDescriptor instead')
+const InstitutionLeaves$json = {
+  '1': 'InstitutionLeaves',
+  '2': [
+    {'1': 'leave_id', '3': 1, '4': 1, '5': 9, '10': 'leaveId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'leave_type',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveType',
+      '10': 'leaveType'
+    },
+    {
+      '1': 'leave_role',
+      '3': 6,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveRole',
+      '10': 'leaveRole'
+    },
+    {
+      '1': 'last_attended_class_name',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'lastAttendedClassName',
+      '17': true
+    },
+    {
+      '1': 'last_attended_section_name',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'lastAttendedSectionName',
+      '17': true
+    },
+    {
+      '1': 'leave_dates',
+      '3': 9,
+      '4': 3,
+      '5': 11,
+      '6': '.leave_messages.LeaveDate',
+      '10': 'leaveDates'
+    },
+    {
+      '1': 'start_date',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 4,
+      '10': 'startDate',
+      '17': true
+    },
+    {
+      '1': 'end_date',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 5,
+      '10': 'endDate',
+      '17': true
+    },
+    {
+      '1': 'range_status',
+      '3': 12,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveStatus',
+      '9': 6,
+      '10': 'rangeStatus',
+      '17': true
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 13,
+      '4': 1,
+      '5': 9,
+      '9': 7,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_updated_at',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 8,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 15,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 9,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_identification_number'},
+    {'1': '_last_attended_class_name'},
+    {'1': '_last_attended_section_name'},
+    {'1': '_start_date'},
+    {'1': '_end_date'},
+    {'1': '_range_status'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
+    {'1': '_thumbnail_expires_at'},
+  ],
+};
+
+/// Descriptor for `InstitutionLeaves`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List institutionLeavesDescriptor = $convert.base64Decode(
+    'ChFJbnN0aXR1dGlvbkxlYXZlcxIZCghsZWF2ZV9pZBgBIAEoCVIHbGVhdmVJZBIdCgpmaXJzdF'
+    '9uYW1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAyABKAlIAFIKc2Vjb25kTmFt'
+    'ZYgBARI4ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlIAVIUaWRlbnRpZmljYXRpb25OdW'
+    '1iZXKIAQESOQoKbGVhdmVfdHlwZRgFIAEoDjIaLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVR5cGVS'
+    'CWxlYXZlVHlwZRI5CgpsZWF2ZV9yb2xlGAYgASgOMhouY29tbW9uX21lc3NhZ2VzLkxlYXZlUm'
+    '9sZVIJbGVhdmVSb2xlEjwKGGxhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZRgHIAEoCUgCUhVsYXN0'
+    'QXR0ZW5kZWRDbGFzc05hbWWIAQESQAoabGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWUYCCABKA'
+    'lIA1IXbGFzdEF0dGVuZGVkU2VjdGlvbk5hbWWIAQESOgoLbGVhdmVfZGF0ZXMYCSADKAsyGS5s'
+    'ZWF2ZV9tZXNzYWdlcy5MZWF2ZURhdGVSCmxlYXZlRGF0ZXMSPgoKc3RhcnRfZGF0ZRgKIAEoCz'
+    'IaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBFIJc3RhcnREYXRliAEBEjoKCGVuZF9kYXRl'
+    'GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgFUgdlbmREYXRliAEBEkQKDHJhbm'
+    'dlX3N0YXR1cxgMIAEoDjIcLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVN0YXR1c0gGUgtyYW5nZVN0'
+    'YXR1c4gBARIxChJ1c2VyX3RodW1ibmFpbF91cmwYDSABKAlIB1IQdXNlclRodW1ibmFpbFVybI'
+    'gBARJRChR0aHVtYm5haWxfdXBkYXRlZF9hdBgOIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l'
+    'c3RhbXBICFISdGh1bWJuYWlsVXBkYXRlZEF0iAEBElEKFHRodW1ibmFpbF9leHBpcmVzX2F0GA'
+    '8gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgJUhJ0aHVtYm5haWxFeHBpcmVzQXSI'
+    'AQFCDgoMX3NlY29uZF9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCGwoZX2xhc3RfYX'
+    'R0ZW5kZWRfY2xhc3NfbmFtZUIdChtfbGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWVCDQoLX3N0'
+    'YXJ0X2RhdGVCCwoJX2VuZF9kYXRlQg8KDV9yYW5nZV9zdGF0dXNCFQoTX3VzZXJfdGh1bWJuYW'
+    'lsX3VybEIXChVfdGh1bWJuYWlsX3VwZGF0ZWRfYXRCFwoVX3RodW1ibmFpbF9leHBpcmVzX2F0');
