@@ -514,6 +514,7 @@ const ListInstitutionLeavesRequest$json = {
       '10': 'monthStartTime',
       '17': true
     },
+    {'1': 'user_ids', '3': 6, '4': 3, '5': 9, '10': 'userIds'},
   ],
   '8': [
     {'1': '_leave_status'},
@@ -527,8 +528,9 @@ final $typed_data.Uint8List listInstitutionLeavesRequestDescriptor = $convert.ba
     '1tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SHQoKYmVsb25nc190'
     'bxgCIAEoCVIJYmVsb25nc1RvEkQKDGxlYXZlX3N0YXR1cxgDIAEoDjIcLmNvbW1vbl9tZXNzYW'
     'dlcy5MZWF2ZVN0YXR1c0gAUgtsZWF2ZVN0YXR1c4gBARJJChBtb250aF9zdGFydF90aW1lGAQg'
-    'ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBUg5tb250aFN0YXJ0VGltZYgBAUIPCg'
-    '1fbGVhdmVfc3RhdHVzQhMKEV9tb250aF9zdGFydF90aW1l');
+    'ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBUg5tb250aFN0YXJ0VGltZYgBARIZCg'
+    'h1c2VyX2lkcxgGIAMoCVIHdXNlcklkc0IPCg1fbGVhdmVfc3RhdHVzQhMKEV9tb250aF9zdGFy'
+    'dF90aW1l');
 
 @$core.Deprecated('Use listInstitutionLeavesResponseDescriptor instead')
 const ListInstitutionLeavesResponse$json = {

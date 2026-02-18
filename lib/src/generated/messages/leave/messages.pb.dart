@@ -1086,12 +1086,14 @@ class ListInstitutionLeavesRequest extends $pb.GeneratedMessage {
     $core.String? belongsTo,
     $0.LeaveStatus? leaveStatus,
     $1.Timestamp? monthStartTime,
+    $core.Iterable<$core.String>? userIds,
   }) {
     final result = create();
     if (pagination != null) result.pagination = pagination;
     if (belongsTo != null) result.belongsTo = belongsTo;
     if (leaveStatus != null) result.leaveStatus = leaveStatus;
     if (monthStartTime != null) result.monthStartTime = monthStartTime;
+    if (userIds != null) result.userIds.addAll(userIds);
     return result;
   }
 
@@ -1115,6 +1117,7 @@ class ListInstitutionLeavesRequest extends $pb.GeneratedMessage {
         enumValues: $0.LeaveStatus.values)
     ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'monthStartTime',
         subBuilder: $1.Timestamp.create)
+    ..pPS(6, _omitFieldNames ? '' : 'userIds')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1180,6 +1183,9 @@ class ListInstitutionLeavesRequest extends $pb.GeneratedMessage {
   void clearMonthStartTime() => $_clearField(4);
   @$pb.TagNumber(4)
   $1.Timestamp ensureMonthStartTime() => $_ensure(3);
+
+  @$pb.TagNumber(6)
+  $pb.PbList<$core.String> get userIds => $_getList(4);
 }
 
 class ListInstitutionLeavesResponse extends $pb.GeneratedMessage {
