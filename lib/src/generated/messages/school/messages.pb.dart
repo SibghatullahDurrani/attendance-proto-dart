@@ -6286,10 +6286,12 @@ class GetEmployeeIdsOfSchoolResponse extends $pb.GeneratedMessage {
 
 class GetStudentsSelectionMenuItemsRequest extends $pb.GeneratedMessage {
   factory GetStudentsSelectionMenuItemsRequest({
+    $core.String? schoolId,
     $1.PaginationRequest? pagination,
     $core.String? name,
   }) {
     final result = create();
+    if (schoolId != null) result.schoolId = schoolId;
     if (pagination != null) result.pagination = pagination;
     if (name != null) result.name = name;
     return result;
@@ -6310,9 +6312,10 @@ class GetStudentsSelectionMenuItemsRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
-    ..aOM<$1.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+    ..aOS(1, _omitFieldNames ? '' : 'schoolId')
+    ..aOM<$1.PaginationRequest>(2, _omitFieldNames ? '' : 'pagination',
         subBuilder: $1.PaginationRequest.create)
-    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..aOS(3, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -6341,24 +6344,33 @@ class GetStudentsSelectionMenuItemsRequest extends $pb.GeneratedMessage {
   static GetStudentsSelectionMenuItemsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $1.PaginationRequest get pagination => $_getN(0);
+  $core.String get schoolId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set pagination($1.PaginationRequest value) => $_setField(1, value);
+  set schoolId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasPagination() => $_has(0);
+  $core.bool hasSchoolId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPagination() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $1.PaginationRequest ensurePagination() => $_ensure(0);
+  void clearSchoolId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get name => $_getSZ(1);
+  $1.PaginationRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set name($core.String value) => $_setString(1, value);
+  set pagination($1.PaginationRequest value) => $_setField(2, value);
   @$pb.TagNumber(2)
-  $core.bool hasName() => $_has(1);
+  $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
-  void clearName() => $_clearField(2);
+  void clearPagination() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $1.PaginationRequest ensurePagination() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set name($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearName() => $_clearField(3);
 }
 
 class GetStudentsSelectionMenuItemsResponse extends $pb.GeneratedMessage {
@@ -6543,10 +6555,12 @@ class StudentsSelectionMenuItem extends $pb.GeneratedMessage {
 
 class GetTeachersSelectionMenuItemsRequest extends $pb.GeneratedMessage {
   factory GetTeachersSelectionMenuItemsRequest({
+    $core.String? schoolId,
     $1.PaginationRequest? pagination,
     $core.String? name,
   }) {
     final result = create();
+    if (schoolId != null) result.schoolId = schoolId;
     if (pagination != null) result.pagination = pagination;
     if (name != null) result.name = name;
     return result;
@@ -6567,9 +6581,10 @@ class GetTeachersSelectionMenuItemsRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
-    ..aOM<$1.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+    ..aOS(1, _omitFieldNames ? '' : 'schoolId')
+    ..aOM<$1.PaginationRequest>(2, _omitFieldNames ? '' : 'pagination',
         subBuilder: $1.PaginationRequest.create)
-    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..aOS(3, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -6598,24 +6613,33 @@ class GetTeachersSelectionMenuItemsRequest extends $pb.GeneratedMessage {
   static GetTeachersSelectionMenuItemsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $1.PaginationRequest get pagination => $_getN(0);
+  $core.String get schoolId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set pagination($1.PaginationRequest value) => $_setField(1, value);
+  set schoolId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasPagination() => $_has(0);
+  $core.bool hasSchoolId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPagination() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $1.PaginationRequest ensurePagination() => $_ensure(0);
+  void clearSchoolId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get name => $_getSZ(1);
+  $1.PaginationRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set name($core.String value) => $_setString(1, value);
+  set pagination($1.PaginationRequest value) => $_setField(2, value);
   @$pb.TagNumber(2)
-  $core.bool hasName() => $_has(1);
+  $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
-  void clearName() => $_clearField(2);
+  void clearPagination() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $1.PaginationRequest ensurePagination() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set name($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearName() => $_clearField(3);
 }
 
 class GetTeachersSelectionMenuItemsResponse extends $pb.GeneratedMessage {
@@ -6799,10 +6823,12 @@ class TeacherSelectionMenuItem extends $pb.GeneratedMessage {
 
 class GetEmployeesSelectionMenuItemsRequest extends $pb.GeneratedMessage {
   factory GetEmployeesSelectionMenuItemsRequest({
+    $core.String? schoolId,
     $1.PaginationRequest? pagination,
     $core.String? name,
   }) {
     final result = create();
+    if (schoolId != null) result.schoolId = schoolId;
     if (pagination != null) result.pagination = pagination;
     if (name != null) result.name = name;
     return result;
@@ -6823,9 +6849,10 @@ class GetEmployeesSelectionMenuItemsRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
-    ..aOM<$1.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+    ..aOS(1, _omitFieldNames ? '' : 'schoolId')
+    ..aOM<$1.PaginationRequest>(2, _omitFieldNames ? '' : 'pagination',
         subBuilder: $1.PaginationRequest.create)
-    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..aOS(3, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -6854,24 +6881,33 @@ class GetEmployeesSelectionMenuItemsRequest extends $pb.GeneratedMessage {
   static GetEmployeesSelectionMenuItemsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $1.PaginationRequest get pagination => $_getN(0);
+  $core.String get schoolId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set pagination($1.PaginationRequest value) => $_setField(1, value);
+  set schoolId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasPagination() => $_has(0);
+  $core.bool hasSchoolId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPagination() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $1.PaginationRequest ensurePagination() => $_ensure(0);
+  void clearSchoolId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get name => $_getSZ(1);
+  $1.PaginationRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set name($core.String value) => $_setString(1, value);
+  set pagination($1.PaginationRequest value) => $_setField(2, value);
   @$pb.TagNumber(2)
-  $core.bool hasName() => $_has(1);
+  $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
-  void clearName() => $_clearField(2);
+  void clearPagination() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $1.PaginationRequest ensurePagination() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set name($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearName() => $_clearField(3);
 }
 
 class GetEmployeesSelectionMenuItemsResponse extends $pb.GeneratedMessage {

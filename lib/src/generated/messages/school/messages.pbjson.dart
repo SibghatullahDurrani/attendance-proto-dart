@@ -2139,15 +2139,16 @@ final $typed_data.Uint8List getEmployeeIdsOfSchoolResponseDescriptor =
 const GetStudentsSelectionMenuItemsRequest$json = {
   '1': 'GetStudentsSelectionMenuItemsRequest',
   '2': [
+    {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
     {
       '1': 'pagination',
-      '3': 1,
+      '3': 2,
       '4': 1,
       '5': 11,
       '6': '.common_messages.PaginationRequest',
       '10': 'pagination'
     },
-    {'1': 'name', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'name', '17': true},
+    {'1': 'name', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'name', '17': true},
   ],
   '8': [
     {'1': '_name'},
@@ -2157,9 +2158,10 @@ const GetStudentsSelectionMenuItemsRequest$json = {
 /// Descriptor for `GetStudentsSelectionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getStudentsSelectionMenuItemsRequestDescriptor =
     $convert.base64Decode(
-        'CiRHZXRTdHVkZW50c1NlbGVjdGlvbk1lbnVJdGVtc1JlcXVlc3QSQgoKcGFnaW5hdGlvbhgBIA'
-        'EoCzIiLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhIXCgRu'
-        'YW1lGAIgASgJSABSBG5hbWWIAQFCBwoFX25hbWU=');
+        'CiRHZXRTdHVkZW50c1NlbGVjdGlvbk1lbnVJdGVtc1JlcXVlc3QSGwoJc2Nob29sX2lkGAEgAS'
+        'gJUghzY2hvb2xJZBJCCgpwYWdpbmF0aW9uGAIgASgLMiIuY29tbW9uX21lc3NhZ2VzLlBhZ2lu'
+        'YXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9uEhcKBG5hbWUYAyABKAlIAFIEbmFtZYgBAUIHCgVfbm'
+        'FtZQ==');
 
 @$core.Deprecated('Use getStudentsSelectionMenuItemsResponseDescriptor instead')
 const GetStudentsSelectionMenuItemsResponse$json = {
@@ -2246,15 +2248,16 @@ final $typed_data.Uint8List studentsSelectionMenuItemDescriptor = $convert.base6
 const GetTeachersSelectionMenuItemsRequest$json = {
   '1': 'GetTeachersSelectionMenuItemsRequest',
   '2': [
+    {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
     {
       '1': 'pagination',
-      '3': 1,
+      '3': 2,
       '4': 1,
       '5': 11,
       '6': '.common_messages.PaginationRequest',
       '10': 'pagination'
     },
-    {'1': 'name', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'name', '17': true},
+    {'1': 'name', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'name', '17': true},
   ],
   '8': [
     {'1': '_name'},
@@ -2264,9 +2267,10 @@ const GetTeachersSelectionMenuItemsRequest$json = {
 /// Descriptor for `GetTeachersSelectionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getTeachersSelectionMenuItemsRequestDescriptor =
     $convert.base64Decode(
-        'CiRHZXRUZWFjaGVyc1NlbGVjdGlvbk1lbnVJdGVtc1JlcXVlc3QSQgoKcGFnaW5hdGlvbhgBIA'
-        'EoCzIiLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhIXCgRu'
-        'YW1lGAIgASgJSABSBG5hbWWIAQFCBwoFX25hbWU=');
+        'CiRHZXRUZWFjaGVyc1NlbGVjdGlvbk1lbnVJdGVtc1JlcXVlc3QSGwoJc2Nob29sX2lkGAEgAS'
+        'gJUghzY2hvb2xJZBJCCgpwYWdpbmF0aW9uGAIgASgLMiIuY29tbW9uX21lc3NhZ2VzLlBhZ2lu'
+        'YXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9uEhcKBG5hbWUYAyABKAlIAFIEbmFtZYgBAUIHCgVfbm'
+        'FtZQ==');
 
 @$core.Deprecated('Use getTeachersSelectionMenuItemsResponseDescriptor instead')
 const GetTeachersSelectionMenuItemsResponse$json = {
@@ -2340,15 +2344,16 @@ final $typed_data.Uint8List teacherSelectionMenuItemDescriptor = $convert.base64
 const GetEmployeesSelectionMenuItemsRequest$json = {
   '1': 'GetEmployeesSelectionMenuItemsRequest',
   '2': [
+    {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
     {
       '1': 'pagination',
-      '3': 1,
+      '3': 2,
       '4': 1,
       '5': 11,
       '6': '.common_messages.PaginationRequest',
       '10': 'pagination'
     },
-    {'1': 'name', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'name', '17': true},
+    {'1': 'name', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'name', '17': true},
   ],
   '8': [
     {'1': '_name'},
@@ -2358,9 +2363,10 @@ const GetEmployeesSelectionMenuItemsRequest$json = {
 /// Descriptor for `GetEmployeesSelectionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getEmployeesSelectionMenuItemsRequestDescriptor =
     $convert.base64Decode(
-        'CiVHZXRFbXBsb3llZXNTZWxlY3Rpb25NZW51SXRlbXNSZXF1ZXN0EkIKCnBhZ2luYXRpb24YAS'
-        'ABKAsyIi5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SFwoE'
-        'bmFtZRgCIAEoCUgAUgRuYW1liAEBQgcKBV9uYW1l');
+        'CiVHZXRFbXBsb3llZXNTZWxlY3Rpb25NZW51SXRlbXNSZXF1ZXN0EhsKCXNjaG9vbF9pZBgBIA'
+        'EoCVIIc2Nob29sSWQSQgoKcGFnaW5hdGlvbhgCIAEoCzIiLmNvbW1vbl9tZXNzYWdlcy5QYWdp'
+        'bmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhIXCgRuYW1lGAMgASgJSABSBG5hbWWIAQFCBwoFX2'
+        '5hbWU=');
 
 @$core
     .Deprecated('Use getEmployeesSelectionMenuItemsResponseDescriptor instead')
