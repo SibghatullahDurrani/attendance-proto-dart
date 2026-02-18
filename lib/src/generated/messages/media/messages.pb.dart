@@ -284,11 +284,13 @@ class GetUserImageURLsResponse extends $pb.GeneratedMessage {
     $core.String? thumbnailUrl,
     $core.String? fullUrl,
     $1.Timestamp? expiresAt,
+    $1.Timestamp? updatedAt,
   }) {
     final result = create();
     if (thumbnailUrl != null) result.thumbnailUrl = thumbnailUrl;
     if (fullUrl != null) result.fullUrl = fullUrl;
     if (expiresAt != null) result.expiresAt = expiresAt;
+    if (updatedAt != null) result.updatedAt = updatedAt;
     return result;
   }
 
@@ -308,6 +310,8 @@ class GetUserImageURLsResponse extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'thumbnailUrl')
     ..aOS(2, _omitFieldNames ? '' : 'fullUrl')
     ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'expiresAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'updatedAt',
         subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
@@ -361,6 +365,17 @@ class GetUserImageURLsResponse extends $pb.GeneratedMessage {
   void clearExpiresAt() => $_clearField(3);
   @$pb.TagNumber(3)
   $1.Timestamp ensureExpiresAt() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $1.Timestamp get updatedAt => $_getN(3);
+  @$pb.TagNumber(4)
+  set updatedAt($1.Timestamp value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasUpdatedAt() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUpdatedAt() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $1.Timestamp ensureUpdatedAt() => $_ensure(3);
 }
 
 /// GetBatchThumbnailURLs messages (batch signed URLs for thumbnails)
@@ -421,10 +436,12 @@ class UserThumbnail extends $pb.GeneratedMessage {
   factory UserThumbnail({
     $core.String? userId,
     $core.String? thumbnailUrl,
+    $1.Timestamp? updatedAt,
   }) {
     final result = create();
     if (userId != null) result.userId = userId;
     if (thumbnailUrl != null) result.thumbnailUrl = thumbnailUrl;
+    if (updatedAt != null) result.updatedAt = updatedAt;
     return result;
   }
 
@@ -443,6 +460,8 @@ class UserThumbnail extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'userId')
     ..aOS(2, _omitFieldNames ? '' : 'thumbnailUrl')
+    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'updatedAt',
+        subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -483,6 +502,17 @@ class UserThumbnail extends $pb.GeneratedMessage {
   $core.bool hasThumbnailUrl() => $_has(1);
   @$pb.TagNumber(2)
   void clearThumbnailUrl() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $1.Timestamp get updatedAt => $_getN(2);
+  @$pb.TagNumber(3)
+  set updatedAt($1.Timestamp value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasUpdatedAt() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUpdatedAt() => $_clearField(3);
+  @$pb.TagNumber(3)
+  $1.Timestamp ensureUpdatedAt() => $_ensure(2);
 }
 
 class GetBatchThumbnailURLsResponse extends $pb.GeneratedMessage {

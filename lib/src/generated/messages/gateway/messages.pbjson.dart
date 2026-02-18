@@ -834,22 +834,32 @@ const StudentOfSchool$json = {
       '17': true
     },
     {
-      '1': 'thumbnail_expires_at',
+      '1': 'thumbnail_updated_at',
       '3': 14,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
       '9': 9,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 15,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 10,
       '10': 'thumbnailExpiresAt',
       '17': true
     },
-    {'1': 'in_a_shift', '3': 15, '4': 1, '5': 8, '10': 'inAShift'},
+    {'1': 'in_a_shift', '3': 16, '4': 1, '5': 8, '10': 'inAShift'},
     {
       '1': 'shift_name',
-      '3': 16,
+      '3': 17,
       '4': 1,
       '5': 9,
-      '9': 10,
+      '9': 11,
       '10': 'shiftName',
       '17': true
     },
@@ -864,6 +874,7 @@ const StudentOfSchool$json = {
     {'1': '_last_attended_section_name'},
     {'1': '_cause_of_no_attendance_marking'},
     {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
     {'1': '_thumbnail_expires_at'},
     {'1': '_shift_name'},
   ],
@@ -883,14 +894,16 @@ final $typed_data.Uint8List studentOfSchoolDescriptor = $convert.base64Decode(
     'VuZGFuY2UYCyABKAhSEnJlYWR5Rm9yQXR0ZW5kYW5jZRJHCh5jYXVzZV9vZl9ub19hdHRlbmRh'
     'bmNlX21hcmtpbmcYDCABKAlIB1IaY2F1c2VPZk5vQXR0ZW5kYW5jZU1hcmtpbmeIAQESMQoSdX'
     'Nlcl90aHVtYm5haWxfdXJsGA0gASgJSAhSEHVzZXJUaHVtYm5haWxVcmyIAQESUQoUdGh1bWJu'
-    'YWlsX2V4cGlyZXNfYXQYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAlSEnRodW'
-    '1ibmFpbEV4cGlyZXNBdIgBARIcCgppbl9hX3NoaWZ0GA8gASgIUghpbkFTaGlmdBIiCgpzaGlm'
-    'dF9uYW1lGBAgASgJSApSCXNoaWZ0TmFtZYgBAUIOCgxfc2Vjb25kX25hbWVCGAoWX2lkZW50aW'
-    'ZpY2F0aW9uX251bWJlckIPCg1fcGhvbmVfbnVtYmVyQggKBl9lbWFpbEIdChtfbGFzdF9hdHRl'
-    'bmRlZF9zZXNzaW9uX25hbWVCGwoZX2xhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZUIdChtfbGFzdF'
-    '9hdHRlbmRlZF9zZWN0aW9uX25hbWVCIQofX2NhdXNlX29mX25vX2F0dGVuZGFuY2VfbWFya2lu'
-    'Z0IVChNfdXNlcl90aHVtYm5haWxfdXJsQhcKFV90aHVtYm5haWxfZXhwaXJlc19hdEINCgtfc2'
-    'hpZnRfbmFtZQ==');
+    'YWlsX3VwZGF0ZWRfYXQYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAlSEnRodW'
+    '1ibmFpbFVwZGF0ZWRBdIgBARJRChR0aHVtYm5haWxfZXhwaXJlc19hdBgPIAEoCzIaLmdvb2ds'
+    'ZS5wcm90b2J1Zi5UaW1lc3RhbXBIClISdGh1bWJuYWlsRXhwaXJlc0F0iAEBEhwKCmluX2Ffc2'
+    'hpZnQYECABKAhSCGluQVNoaWZ0EiIKCnNoaWZ0X25hbWUYESABKAlIC1IJc2hpZnROYW1liAEB'
+    'Qg4KDF9zZWNvbmRfbmFtZUIYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQg8KDV9waG9uZV9udW'
+    '1iZXJCCAoGX2VtYWlsQh0KG19sYXN0X2F0dGVuZGVkX3Nlc3Npb25fbmFtZUIbChlfbGFzdF9h'
+    'dHRlbmRlZF9jbGFzc19uYW1lQh0KG19sYXN0X2F0dGVuZGVkX3NlY3Rpb25fbmFtZUIhCh9fY2'
+    'F1c2Vfb2Zfbm9fYXR0ZW5kYW5jZV9tYXJraW5nQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoV'
+    'X3RodW1ibmFpbF91cGRhdGVkX2F0QhcKFV90aHVtYm5haWxfZXhwaXJlc19hdEINCgtfc2hpZn'
+    'RfbmFtZQ==');
 
 @$core.Deprecated('Use listStudentsOfSchoolResponseDescriptor instead')
 const ListStudentsOfSchoolResponse$json = {
@@ -1082,12 +1095,22 @@ const ParentChild$json = {
       '17': true
     },
     {
-      '1': 'thumbnail_expires_at',
+      '1': 'thumbnail_updated_at',
       '3': 5,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
       '9': 2,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 3,
       '10': 'thumbnailExpiresAt',
       '17': true
     },
@@ -1095,6 +1118,7 @@ const ParentChild$json = {
   '8': [
     {'1': '_second_name'},
     {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
     {'1': '_thumbnail_expires_at'},
   ],
 };
@@ -1104,9 +1128,11 @@ final $typed_data.Uint8List parentChildDescriptor = $convert.base64Decode(
     'CgtQYXJlbnRDaGlsZBIdCgpzdHVkZW50X2lkGAEgASgJUglzdHVkZW50SWQSHQoKZmlyc3Rfbm'
     'FtZRgCIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAMgASgJSABSCnNlY29uZE5hbWWI'
     'AQESMQoSdXNlcl90aHVtYm5haWxfdXJsGAQgASgJSAFSEHVzZXJUaHVtYm5haWxVcmyIAQESUQ'
-    'oUdGh1bWJuYWlsX2V4cGlyZXNfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w'
-    'SAJSEnRodW1ibmFpbEV4cGlyZXNBdIgBAUIOCgxfc2Vjb25kX25hbWVCFQoTX3VzZXJfdGh1bW'
-    'JuYWlsX3VybEIXChVfdGh1bWJuYWlsX2V4cGlyZXNfYXQ=');
+    'oUdGh1bWJuYWlsX3VwZGF0ZWRfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w'
+    'SAJSEnRodW1ibmFpbFVwZGF0ZWRBdIgBARJRChR0aHVtYm5haWxfZXhwaXJlc19hdBgGIAEoCz'
+    'IaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIA1ISdGh1bWJuYWlsRXhwaXJlc0F0iAEBQg4K'
+    'DF9zZWNvbmRfbmFtZUIVChNfdXNlcl90aHVtYm5haWxfdXJsQhcKFV90aHVtYm5haWxfdXBkYX'
+    'RlZF9hdEIXChVfdGh1bWJuYWlsX2V4cGlyZXNfYXQ=');
 
 @$core.Deprecated('Use listTeachersOfSchoolRequestDescriptor instead')
 const ListTeachersOfSchoolRequest$json = {
@@ -1258,22 +1284,32 @@ const TeacherOfSchool$json = {
       '17': true
     },
     {
-      '1': 'thumbnail_expires_at',
+      '1': 'thumbnail_updated_at',
       '3': 11,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
       '9': 4,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 5,
       '10': 'thumbnailExpiresAt',
       '17': true
     },
-    {'1': 'in_a_shift', '3': 12, '4': 1, '5': 8, '10': 'inAShift'},
+    {'1': 'in_a_shift', '3': 13, '4': 1, '5': 8, '10': 'inAShift'},
     {
       '1': 'shift_name',
-      '3': 13,
+      '3': 14,
       '4': 1,
       '5': 9,
-      '9': 5,
+      '9': 6,
       '10': 'shiftName',
       '17': true
     },
@@ -1283,6 +1319,7 @@ const TeacherOfSchool$json = {
     {'1': '_email'},
     {'1': '_cause_of_no_attendance_marking'},
     {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
     {'1': '_thumbnail_expires_at'},
     {'1': '_shift_name'},
   ],
@@ -1298,11 +1335,13 @@ final $typed_data.Uint8List teacherOfSchoolDescriptor = $convert.base64Decode(
     'R5X2Zvcl9hdHRlbmRhbmNlGAggASgIUhJyZWFkeUZvckF0dGVuZGFuY2USRwoeY2F1c2Vfb2Zf'
     'bm9fYXR0ZW5kYW5jZV9tYXJraW5nGAkgASgJSAJSGmNhdXNlT2ZOb0F0dGVuZGFuY2VNYXJraW'
     '5niAEBEjEKEnVzZXJfdGh1bWJuYWlsX3VybBgKIAEoCUgDUhB1c2VyVGh1bWJuYWlsVXJsiAEB'
-    'ElEKFHRodW1ibmFpbF9leHBpcmVzX2F0GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdG'
-    'FtcEgEUhJ0aHVtYm5haWxFeHBpcmVzQXSIAQESHAoKaW5fYV9zaGlmdBgMIAEoCFIIaW5BU2hp'
-    'ZnQSIgoKc2hpZnRfbmFtZRgNIAEoCUgFUglzaGlmdE5hbWWIAQFCDgoMX3NlY29uZF9uYW1lQg'
-    'gKBl9lbWFpbEIhCh9fY2F1c2Vfb2Zfbm9fYXR0ZW5kYW5jZV9tYXJraW5nQhUKE191c2VyX3Ro'
-    'dW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF9leHBpcmVzX2F0Qg0KC19zaGlmdF9uYW1l');
+    'ElEKFHRodW1ibmFpbF91cGRhdGVkX2F0GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdG'
+    'FtcEgEUhJ0aHVtYm5haWxVcGRhdGVkQXSIAQESUQoUdGh1bWJuYWlsX2V4cGlyZXNfYXQYDCAB'
+    'KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAVSEnRodW1ibmFpbEV4cGlyZXNBdIgBAR'
+    'IcCgppbl9hX3NoaWZ0GA0gASgIUghpbkFTaGlmdBIiCgpzaGlmdF9uYW1lGA4gASgJSAZSCXNo'
+    'aWZ0TmFtZYgBAUIOCgxfc2Vjb25kX25hbWVCCAoGX2VtYWlsQiEKH19jYXVzZV9vZl9ub19hdH'
+    'RlbmRhbmNlX21hcmtpbmdCFQoTX3VzZXJfdGh1bWJuYWlsX3VybEIXChVfdGh1bWJuYWlsX3Vw'
+    'ZGF0ZWRfYXRCFwoVX3RodW1ibmFpbF9leHBpcmVzX2F0Qg0KC19zaGlmdF9uYW1l');
 
 @$core.Deprecated('Use listEmployeesOfSchoolRequestDescriptor instead')
 const ListEmployeesOfSchoolRequest$json = {
@@ -1455,22 +1494,32 @@ const EmployeeOfSchool$json = {
       '17': true
     },
     {
-      '1': 'thumbnail_expires_at',
+      '1': 'thumbnail_updated_at',
       '3': 12,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
       '9': 4,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 5,
       '10': 'thumbnailExpiresAt',
       '17': true
     },
-    {'1': 'in_a_shift', '3': 13, '4': 1, '5': 8, '10': 'inAShift'},
+    {'1': 'in_a_shift', '3': 14, '4': 1, '5': 8, '10': 'inAShift'},
     {
       '1': 'shift_name',
-      '3': 14,
+      '3': 15,
       '4': 1,
       '5': 9,
-      '9': 5,
+      '9': 6,
       '10': 'shiftName',
       '17': true
     },
@@ -1480,6 +1529,7 @@ const EmployeeOfSchool$json = {
     {'1': '_email'},
     {'1': '_cause_of_no_attendance_marking'},
     {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
     {'1': '_thumbnail_expires_at'},
     {'1': '_shift_name'},
   ],
@@ -1495,9 +1545,419 @@ final $typed_data.Uint8List employeeOfSchoolDescriptor = $convert.base64Decode(
     'Rlc2lnbmF0aW9uGAggASgJUgtkZXNpZ25hdGlvbhIwChRyZWFkeV9mb3JfYXR0ZW5kYW5jZRgJ'
     'IAEoCFIScmVhZHlGb3JBdHRlbmRhbmNlEkcKHmNhdXNlX29mX25vX2F0dGVuZGFuY2VfbWFya2'
     'luZxgKIAEoCUgCUhpjYXVzZU9mTm9BdHRlbmRhbmNlTWFya2luZ4gBARIxChJ1c2VyX3RodW1i'
-    'bmFpbF91cmwYCyABKAlIA1IQdXNlclRodW1ibmFpbFVybIgBARJRChR0aHVtYm5haWxfZXhwaX'
-    'Jlc19hdBgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBFISdGh1bWJuYWlsRXhw'
-    'aXJlc0F0iAEBEhwKCmluX2Ffc2hpZnQYDSABKAhSCGluQVNoaWZ0EiIKCnNoaWZ0X25hbWUYDi'
-    'ABKAlIBVIJc2hpZnROYW1liAEBQg4KDF9zZWNvbmRfbmFtZUIICgZfZW1haWxCIQofX2NhdXNl'
-    'X29mX25vX2F0dGVuZGFuY2VfbWFya2luZ0IVChNfdXNlcl90aHVtYm5haWxfdXJsQhcKFV90aH'
-    'VtYm5haWxfZXhwaXJlc19hdEINCgtfc2hpZnRfbmFtZQ==');
+    'bmFpbF91cmwYCyABKAlIA1IQdXNlclRodW1ibmFpbFVybIgBARJRChR0aHVtYm5haWxfdXBkYX'
+    'RlZF9hdBgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBFISdGh1bWJuYWlsVXBk'
+    'YXRlZEF0iAEBElEKFHRodW1ibmFpbF9leHBpcmVzX2F0GA0gASgLMhouZ29vZ2xlLnByb3RvYn'
+    'VmLlRpbWVzdGFtcEgFUhJ0aHVtYm5haWxFeHBpcmVzQXSIAQESHAoKaW5fYV9zaGlmdBgOIAEo'
+    'CFIIaW5BU2hpZnQSIgoKc2hpZnRfbmFtZRgPIAEoCUgGUglzaGlmdE5hbWWIAQFCDgoMX3NlY2'
+    '9uZF9uYW1lQggKBl9lbWFpbEIhCh9fY2F1c2Vfb2Zfbm9fYXR0ZW5kYW5jZV9tYXJraW5nQhUK'
+    'E191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0QhcKFV90aHVtYm'
+    '5haWxfZXhwaXJlc19hdEINCgtfc2hpZnRfbmFtZQ==');
+
+@$core.Deprecated('Use getStudentsSelectionMenuItemsRequestDescriptor instead')
+const GetStudentsSelectionMenuItemsRequest$json = {
+  '1': 'GetStudentsSelectionMenuItemsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'name', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'name', '17': true},
+  ],
+  '8': [
+    {'1': '_name'},
+  ],
+};
+
+/// Descriptor for `GetStudentsSelectionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getStudentsSelectionMenuItemsRequestDescriptor =
+    $convert.base64Decode(
+        'CiRHZXRTdHVkZW50c1NlbGVjdGlvbk1lbnVJdGVtc1JlcXVlc3QSQgoKcGFnaW5hdGlvbhgBIA'
+        'EoCzIiLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhIXCgRu'
+        'YW1lGAIgASgJSABSBG5hbWWIAQFCBwoFX25hbWU=');
+
+@$core.Deprecated('Use getStudentsSelectionMenuItemsResponseDescriptor instead')
+const GetStudentsSelectionMenuItemsResponse$json = {
+  '1': 'GetStudentsSelectionMenuItemsResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'students',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.StudentsSelectionMenuItem',
+      '10': 'students'
+    },
+  ],
+};
+
+/// Descriptor for `GetStudentsSelectionMenuItemsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getStudentsSelectionMenuItemsResponseDescriptor =
+    $convert.base64Decode(
+        'CiVHZXRTdHVkZW50c1NlbGVjdGlvbk1lbnVJdGVtc1Jlc3BvbnNlEkMKCnBhZ2luYXRpb24YAS'
+        'ABKAsyIy5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpwYWdpbmF0aW9uEkcK'
+        'CHN0dWRlbnRzGAIgAygLMisuZ2F0ZXdheV9tZXNzYWdlcy5TdHVkZW50c1NlbGVjdGlvbk1lbn'
+        'VJdGVtUghzdHVkZW50cw==');
+
+@$core.Deprecated('Use studentsSelectionMenuItemDescriptor instead')
+const StudentsSelectionMenuItem$json = {
+  '1': 'StudentsSelectionMenuItem',
+  '2': [
+    {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'last_attended_class_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'lastAttendedClassName',
+      '17': true
+    },
+    {
+      '1': 'last_attended_section_name',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'lastAttendedSectionName',
+      '17': true
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_updated_at',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 4,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 5,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_last_attended_class_name'},
+    {'1': '_last_attended_section_name'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
+    {'1': '_thumbnail_expires_at'},
+  ],
+};
+
+/// Descriptor for `StudentsSelectionMenuItem`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List studentsSelectionMenuItemDescriptor = $convert.base64Decode(
+    'ChlTdHVkZW50c1NlbGVjdGlvbk1lbnVJdGVtEh0KCnN0dWRlbnRfaWQYASABKAlSCXN0dWRlbn'
+    'RJZBIdCgpmaXJzdF9uYW1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAyABKAlI'
+    'AFIKc2Vjb25kTmFtZYgBARI8ChhsYXN0X2F0dGVuZGVkX2NsYXNzX25hbWUYBCABKAlIAVIVbG'
+    'FzdEF0dGVuZGVkQ2xhc3NOYW1liAEBEkAKGmxhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1lGAUg'
+    'ASgJSAJSF2xhc3RBdHRlbmRlZFNlY3Rpb25OYW1liAEBEjEKEnVzZXJfdGh1bWJuYWlsX3VybB'
+    'gGIAEoCUgDUhB1c2VyVGh1bWJuYWlsVXJsiAEBElEKFHRodW1ibmFpbF91cGRhdGVkX2F0GAcg'
+    'ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgEUhJ0aHVtYm5haWxVcGRhdGVkQXSIAQ'
+    'ESUQoUdGh1bWJuYWlsX2V4cGlyZXNfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0'
+    'YW1wSAVSEnRodW1ibmFpbEV4cGlyZXNBdIgBAUIOCgxfc2Vjb25kX25hbWVCGwoZX2xhc3RfYX'
+    'R0ZW5kZWRfY2xhc3NfbmFtZUIdChtfbGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWVCFQoTX3Vz'
+    'ZXJfdGh1bWJuYWlsX3VybEIXChVfdGh1bWJuYWlsX3VwZGF0ZWRfYXRCFwoVX3RodW1ibmFpbF'
+    '9leHBpcmVzX2F0');
+
+@$core.Deprecated('Use getTeachersSelectionMenuItemsRequestDescriptor instead')
+const GetTeachersSelectionMenuItemsRequest$json = {
+  '1': 'GetTeachersSelectionMenuItemsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'name', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'name', '17': true},
+  ],
+  '8': [
+    {'1': '_name'},
+  ],
+};
+
+/// Descriptor for `GetTeachersSelectionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getTeachersSelectionMenuItemsRequestDescriptor =
+    $convert.base64Decode(
+        'CiRHZXRUZWFjaGVyc1NlbGVjdGlvbk1lbnVJdGVtc1JlcXVlc3QSQgoKcGFnaW5hdGlvbhgBIA'
+        'EoCzIiLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhIXCgRu'
+        'YW1lGAIgASgJSABSBG5hbWWIAQFCBwoFX25hbWU=');
+
+@$core.Deprecated('Use getTeachersSelectionMenuItemsResponseDescriptor instead')
+const GetTeachersSelectionMenuItemsResponse$json = {
+  '1': 'GetTeachersSelectionMenuItemsResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'teachers',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.TeacherSelectionMenuItem',
+      '10': 'teachers'
+    },
+  ],
+};
+
+/// Descriptor for `GetTeachersSelectionMenuItemsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getTeachersSelectionMenuItemsResponseDescriptor =
+    $convert.base64Decode(
+        'CiVHZXRUZWFjaGVyc1NlbGVjdGlvbk1lbnVJdGVtc1Jlc3BvbnNlEkMKCnBhZ2luYXRpb24YAS'
+        'ABKAsyIy5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpwYWdpbmF0aW9uEkYK'
+        'CHRlYWNoZXJzGAIgAygLMiouZ2F0ZXdheV9tZXNzYWdlcy5UZWFjaGVyU2VsZWN0aW9uTWVudU'
+        'l0ZW1SCHRlYWNoZXJz');
+
+@$core.Deprecated('Use teacherSelectionMenuItemDescriptor instead')
+const TeacherSelectionMenuItem$json = {
+  '1': 'TeacherSelectionMenuItem',
+  '2': [
+    {'1': 'teacher_id', '3': 1, '4': 1, '5': 9, '10': 'teacherId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 5, '4': 1, '5': 9, '10': 'phoneNumber'},
+    {
+      '1': 'user_thumbnail_url',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_updated_at',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 2,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 3,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
+    {'1': '_thumbnail_expires_at'},
+  ],
+};
+
+/// Descriptor for `TeacherSelectionMenuItem`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List teacherSelectionMenuItemDescriptor = $convert.base64Decode(
+    'ChhUZWFjaGVyU2VsZWN0aW9uTWVudUl0ZW0SHQoKdGVhY2hlcl9pZBgBIAEoCVIJdGVhY2hlck'
+    'lkEh0KCmZpcnN0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNvbmRfbmFtZRgDIAEoCUgA'
+    'UgpzZWNvbmROYW1liAEBEjMKFWlkZW50aWZpY2F0aW9uX251bWJlchgEIAEoCVIUaWRlbnRpZm'
+    'ljYXRpb25OdW1iZXISIQoMcGhvbmVfbnVtYmVyGAUgASgJUgtwaG9uZU51bWJlchIxChJ1c2Vy'
+    'X3RodW1ibmFpbF91cmwYBiABKAlIAVIQdXNlclRodW1ibmFpbFVybIgBARJRChR0aHVtYm5haW'
+    'xfdXBkYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAlISdGh1bWJu'
+    'YWlsVXBkYXRlZEF0iAEBElEKFHRodW1ibmFpbF9leHBpcmVzX2F0GAggASgLMhouZ29vZ2xlLn'
+    'Byb3RvYnVmLlRpbWVzdGFtcEgDUhJ0aHVtYm5haWxFeHBpcmVzQXSIAQFCDgoMX3NlY29uZF9u'
+    'YW1lQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0QhcKFV'
+    '90aHVtYm5haWxfZXhwaXJlc19hdA==');
+
+@$core.Deprecated('Use getEmployeesSelectionMenuItemsRequestDescriptor instead')
+const GetEmployeesSelectionMenuItemsRequest$json = {
+  '1': 'GetEmployeesSelectionMenuItemsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'name', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'name', '17': true},
+  ],
+  '8': [
+    {'1': '_name'},
+  ],
+};
+
+/// Descriptor for `GetEmployeesSelectionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getEmployeesSelectionMenuItemsRequestDescriptor =
+    $convert.base64Decode(
+        'CiVHZXRFbXBsb3llZXNTZWxlY3Rpb25NZW51SXRlbXNSZXF1ZXN0EkIKCnBhZ2luYXRpb24YAS'
+        'ABKAsyIi5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SFwoE'
+        'bmFtZRgCIAEoCUgAUgRuYW1liAEBQgcKBV9uYW1l');
+
+@$core
+    .Deprecated('Use getEmployeesSelectionMenuItemsResponseDescriptor instead')
+const GetEmployeesSelectionMenuItemsResponse$json = {
+  '1': 'GetEmployeesSelectionMenuItemsResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'employees',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.EmployeeSelectionMenuItem',
+      '10': 'employees'
+    },
+  ],
+};
+
+/// Descriptor for `GetEmployeesSelectionMenuItemsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getEmployeesSelectionMenuItemsResponseDescriptor =
+    $convert.base64Decode(
+        'CiZHZXRFbXBsb3llZXNTZWxlY3Rpb25NZW51SXRlbXNSZXNwb25zZRJDCgpwYWdpbmF0aW9uGA'
+        'EgASgLMiMuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbhJJ'
+        'CgllbXBsb3llZXMYAiADKAsyKy5nYXRld2F5X21lc3NhZ2VzLkVtcGxveWVlU2VsZWN0aW9uTW'
+        'VudUl0ZW1SCWVtcGxveWVlcw==');
+
+@$core.Deprecated('Use employeeSelectionMenuItemDescriptor instead')
+const EmployeeSelectionMenuItem$json = {
+  '1': 'EmployeeSelectionMenuItem',
+  '2': [
+    {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {'1': 'phone_number', '3': 5, '4': 1, '5': 9, '10': 'phoneNumber'},
+    {
+      '1': 'user_thumbnail_url',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_updated_at',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 2,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 3,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
+    {'1': '_thumbnail_expires_at'},
+  ],
+};
+
+/// Descriptor for `EmployeeSelectionMenuItem`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List employeeSelectionMenuItemDescriptor = $convert.base64Decode(
+    'ChlFbXBsb3llZVNlbGVjdGlvbk1lbnVJdGVtEh8KC2VtcGxveWVlX2lkGAEgASgJUgplbXBsb3'
+    'llZUlkEh0KCmZpcnN0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNvbmRfbmFtZRgDIAEo'
+    'CUgAUgpzZWNvbmROYW1liAEBEjMKFWlkZW50aWZpY2F0aW9uX251bWJlchgEIAEoCVIUaWRlbn'
+    'RpZmljYXRpb25OdW1iZXISIQoMcGhvbmVfbnVtYmVyGAUgASgJUgtwaG9uZU51bWJlchIxChJ1'
+    'c2VyX3RodW1ibmFpbF91cmwYBiABKAlIAVIQdXNlclRodW1ibmFpbFVybIgBARJRChR0aHVtYm'
+    '5haWxfdXBkYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAlISdGh1'
+    'bWJuYWlsVXBkYXRlZEF0iAEBElEKFHRodW1ibmFpbF9leHBpcmVzX2F0GAggASgLMhouZ29vZ2'
+    'xlLnByb3RvYnVmLlRpbWVzdGFtcEgDUhJ0aHVtYm5haWxFeHBpcmVzQXSIAQFCDgoMX3NlY29u'
+    'ZF9uYW1lQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0Qh'
+    'cKFV90aHVtYm5haWxfZXhwaXJlc19hdA==');

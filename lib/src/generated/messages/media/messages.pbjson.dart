@@ -100,6 +100,19 @@ const GetUserImageURLsResponse$json = {
       '6': '.google.protobuf.Timestamp',
       '10': 'expiresAt'
     },
+    {
+      '1': 'updated_at',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 0,
+      '10': 'updatedAt',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_updated_at'},
   ],
 };
 
@@ -107,7 +120,9 @@ const GetUserImageURLsResponse$json = {
 final $typed_data.Uint8List getUserImageURLsResponseDescriptor = $convert.base64Decode(
     'ChhHZXRVc2VySW1hZ2VVUkxzUmVzcG9uc2USIwoNdGh1bWJuYWlsX3VybBgBIAEoCVIMdGh1bW'
     'JuYWlsVXJsEhkKCGZ1bGxfdXJsGAIgASgJUgdmdWxsVXJsEjkKCmV4cGlyZXNfYXQYAyABKAsy'
-    'Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglleHBpcmVzQXQ=');
+    'Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglleHBpcmVzQXQSPgoKdXBkYXRlZF9hdBgEIA'
+    'EoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAFIJdXBkYXRlZEF0iAEBQg0KC191cGRh'
+    'dGVkX2F0');
 
 @$core.Deprecated('Use getBatchThumbnailURLsRequestDescriptor instead')
 const GetBatchThumbnailURLsRequest$json = {
@@ -137,16 +152,29 @@ const UserThumbnail$json = {
       '10': 'thumbnailUrl',
       '17': true
     },
+    {
+      '1': 'updated_at',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 1,
+      '10': 'updatedAt',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_thumbnail_url'},
+    {'1': '_updated_at'},
   ],
 };
 
 /// Descriptor for `UserThumbnail`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userThumbnailDescriptor = $convert.base64Decode(
     'Cg1Vc2VyVGh1bWJuYWlsEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIoCg10aHVtYm5haWxfdX'
-    'JsGAIgASgJSABSDHRodW1ibmFpbFVybIgBAUIQCg5fdGh1bWJuYWlsX3VybA==');
+    'JsGAIgASgJSABSDHRodW1ibmFpbFVybIgBARI+Cgp1cGRhdGVkX2F0GAMgASgLMhouZ29vZ2xl'
+    'LnByb3RvYnVmLlRpbWVzdGFtcEgBUgl1cGRhdGVkQXSIAQFCEAoOX3RodW1ibmFpbF91cmxCDQ'
+    'oLX3VwZGF0ZWRfYXQ=');
 
 @$core.Deprecated('Use getBatchThumbnailURLsResponseDescriptor instead')
 const GetBatchThumbnailURLsResponse$json = {

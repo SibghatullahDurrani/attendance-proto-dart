@@ -418,6 +418,33 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listEmployeesOfSchool, request, options: options);
   }
 
+  $grpc.ResponseFuture<$5.GetStudentsSelectionMenuItemsResponse>
+      getStudentsSelectionMenuItems(
+    $5.GetStudentsSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getStudentsSelectionMenuItems, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$5.GetTeachersSelectionMenuItemsResponse>
+      getTeachersSelectionMenuItems(
+    $5.GetTeachersSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getTeachersSelectionMenuItems, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$5.GetEmployeesSelectionMenuItemsResponse>
+      getEmployeesSelectionMenuItems(
+    $5.GetEmployeesSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getEmployeesSelectionMenuItems, request,
+        options: options);
+  }
+
   /// Media Rpcs
   $grpc.ResponseFuture<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
     $async.Stream<$6.AddLeaveAttachmentRequest> request, {
@@ -701,6 +728,24 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/ListEmployeesOfSchool',
       ($5.ListEmployeesOfSchoolRequest value) => value.writeToBuffer(),
       $5.ListEmployeesOfSchoolResponse.fromBuffer);
+  static final _$getStudentsSelectionMenuItems = $grpc.ClientMethod<
+          $5.GetStudentsSelectionMenuItemsRequest,
+          $5.GetStudentsSelectionMenuItemsResponse>(
+      '/gateway.GatewayService/GetStudentsSelectionMenuItems',
+      ($5.GetStudentsSelectionMenuItemsRequest value) => value.writeToBuffer(),
+      $5.GetStudentsSelectionMenuItemsResponse.fromBuffer);
+  static final _$getTeachersSelectionMenuItems = $grpc.ClientMethod<
+          $5.GetTeachersSelectionMenuItemsRequest,
+          $5.GetTeachersSelectionMenuItemsResponse>(
+      '/gateway.GatewayService/GetTeachersSelectionMenuItems',
+      ($5.GetTeachersSelectionMenuItemsRequest value) => value.writeToBuffer(),
+      $5.GetTeachersSelectionMenuItemsResponse.fromBuffer);
+  static final _$getEmployeesSelectionMenuItems = $grpc.ClientMethod<
+          $5.GetEmployeesSelectionMenuItemsRequest,
+          $5.GetEmployeesSelectionMenuItemsResponse>(
+      '/gateway.GatewayService/GetEmployeesSelectionMenuItems',
+      ($5.GetEmployeesSelectionMenuItemsRequest value) => value.writeToBuffer(),
+      $5.GetEmployeesSelectionMenuItemsResponse.fromBuffer);
   static final _$addLeaveAttachment = $grpc.ClientMethod<
           $6.AddLeaveAttachmentRequest, $6.AddLeaveAttachmentResponse>(
       '/gateway.GatewayService/AddLeaveAttachment',
@@ -1159,6 +1204,36 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $5.ListEmployeesOfSchoolRequest.fromBuffer(value),
         ($5.ListEmployeesOfSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.GetStudentsSelectionMenuItemsRequest,
+            $5.GetStudentsSelectionMenuItemsResponse>(
+        'GetStudentsSelectionMenuItems',
+        getStudentsSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.GetStudentsSelectionMenuItemsRequest.fromBuffer(value),
+        ($5.GetStudentsSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.GetTeachersSelectionMenuItemsRequest,
+            $5.GetTeachersSelectionMenuItemsResponse>(
+        'GetTeachersSelectionMenuItems',
+        getTeachersSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.GetTeachersSelectionMenuItemsRequest.fromBuffer(value),
+        ($5.GetTeachersSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.GetEmployeesSelectionMenuItemsRequest,
+            $5.GetEmployeesSelectionMenuItemsResponse>(
+        'GetEmployeesSelectionMenuItems',
+        getEmployeesSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.GetEmployeesSelectionMenuItemsRequest.fromBuffer(value),
+        ($5.GetEmployeesSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$6.AddLeaveAttachmentRequest,
             $6.AddLeaveAttachmentResponse>(
         'AddLeaveAttachment',
@@ -1611,6 +1686,42 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$5.ListEmployeesOfSchoolResponse> listEmployeesOfSchool(
       $grpc.ServiceCall call, $5.ListEmployeesOfSchoolRequest request);
+
+  $async.Future<$5.GetStudentsSelectionMenuItemsResponse>
+      getStudentsSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$5.GetStudentsSelectionMenuItemsRequest>
+              $request) async {
+    return getStudentsSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$5.GetStudentsSelectionMenuItemsResponse>
+      getStudentsSelectionMenuItems($grpc.ServiceCall call,
+          $5.GetStudentsSelectionMenuItemsRequest request);
+
+  $async.Future<$5.GetTeachersSelectionMenuItemsResponse>
+      getTeachersSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$5.GetTeachersSelectionMenuItemsRequest>
+              $request) async {
+    return getTeachersSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$5.GetTeachersSelectionMenuItemsResponse>
+      getTeachersSelectionMenuItems($grpc.ServiceCall call,
+          $5.GetTeachersSelectionMenuItemsRequest request);
+
+  $async.Future<$5.GetEmployeesSelectionMenuItemsResponse>
+      getEmployeesSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$5.GetEmployeesSelectionMenuItemsRequest>
+              $request) async {
+    return getEmployeesSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$5.GetEmployeesSelectionMenuItemsResponse>
+      getEmployeesSelectionMenuItems($grpc.ServiceCall call,
+          $5.GetEmployeesSelectionMenuItemsRequest request);
 
   $async.Future<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
       $grpc.ServiceCall call,
