@@ -1080,12 +1080,13 @@ class LeaveConflictDetails extends $pb.GeneratedMessage {
   $pb.PbList<$1.Timestamp> get conflictingDates => $_getList(0);
 }
 
-class ListInstitutionLeavesRequest extends $pb.GeneratedMessage {
-  factory ListInstitutionLeavesRequest({
+class GetInstitutionLeavesDataRequest extends $pb.GeneratedMessage {
+  factory GetInstitutionLeavesDataRequest({
     $0.PaginationRequest? pagination,
     $core.String? belongsTo,
     $0.LeaveStatus? leaveStatus,
     $1.Timestamp? monthStartTime,
+    $0.LeaveRole? leaveRole,
     $core.Iterable<$core.String>? userIds,
   }) {
     final result = create();
@@ -1093,21 +1094,22 @@ class ListInstitutionLeavesRequest extends $pb.GeneratedMessage {
     if (belongsTo != null) result.belongsTo = belongsTo;
     if (leaveStatus != null) result.leaveStatus = leaveStatus;
     if (monthStartTime != null) result.monthStartTime = monthStartTime;
+    if (leaveRole != null) result.leaveRole = leaveRole;
     if (userIds != null) result.userIds.addAll(userIds);
     return result;
   }
 
-  ListInstitutionLeavesRequest._();
+  GetInstitutionLeavesDataRequest._();
 
-  factory ListInstitutionLeavesRequest.fromBuffer($core.List<$core.int> data,
+  factory GetInstitutionLeavesDataRequest.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory ListInstitutionLeavesRequest.fromJson($core.String json,
+  factory GetInstitutionLeavesDataRequest.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ListInstitutionLeavesRequest',
+      _omitMessageNames ? '' : 'GetInstitutionLeavesDataRequest',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
     ..aOM<$0.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
@@ -1117,32 +1119,35 @@ class ListInstitutionLeavesRequest extends $pb.GeneratedMessage {
         enumValues: $0.LeaveStatus.values)
     ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'monthStartTime',
         subBuilder: $1.Timestamp.create)
-    ..pPS(6, _omitFieldNames ? '' : 'userIds')
+    ..aE<$0.LeaveRole>(5, _omitFieldNames ? '' : 'leaveRole',
+        enumValues: $0.LeaveRole.values)
+    ..pPS(7, _omitFieldNames ? '' : 'userIds')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListInstitutionLeavesRequest clone() => deepCopy();
+  GetInstitutionLeavesDataRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListInstitutionLeavesRequest copyWith(
-          void Function(ListInstitutionLeavesRequest) updates) =>
+  GetInstitutionLeavesDataRequest copyWith(
+          void Function(GetInstitutionLeavesDataRequest) updates) =>
       super.copyWith(
-              (message) => updates(message as ListInstitutionLeavesRequest))
-          as ListInstitutionLeavesRequest;
+              (message) => updates(message as GetInstitutionLeavesDataRequest))
+          as GetInstitutionLeavesDataRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ListInstitutionLeavesRequest create() =>
-      ListInstitutionLeavesRequest._();
+  static GetInstitutionLeavesDataRequest create() =>
+      GetInstitutionLeavesDataRequest._();
   @$core.override
-  ListInstitutionLeavesRequest createEmptyInstance() => create();
-  static $pb.PbList<ListInstitutionLeavesRequest> createRepeated() =>
-      $pb.PbList<ListInstitutionLeavesRequest>();
+  GetInstitutionLeavesDataRequest createEmptyInstance() => create();
+  static $pb.PbList<GetInstitutionLeavesDataRequest> createRepeated() =>
+      $pb.PbList<GetInstitutionLeavesDataRequest>();
   @$core.pragma('dart2js:noInline')
-  static ListInstitutionLeavesRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ListInstitutionLeavesRequest>(create);
-  static ListInstitutionLeavesRequest? _defaultInstance;
+  static GetInstitutionLeavesDataRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetInstitutionLeavesDataRequest>(
+          create);
+  static GetInstitutionLeavesDataRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $0.PaginationRequest get pagination => $_getN(0);
@@ -1184,55 +1189,84 @@ class ListInstitutionLeavesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $1.Timestamp ensureMonthStartTime() => $_ensure(3);
 
-  @$pb.TagNumber(6)
-  $pb.PbList<$core.String> get userIds => $_getList(4);
+  @$pb.TagNumber(5)
+  $0.LeaveRole get leaveRole => $_getN(4);
+  @$pb.TagNumber(5)
+  set leaveRole($0.LeaveRole value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasLeaveRole() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearLeaveRole() => $_clearField(5);
+
+  @$pb.TagNumber(7)
+  $pb.PbList<$core.String> get userIds => $_getList(5);
 }
 
-class ListInstitutionLeavesResponse extends $pb.GeneratedMessage {
-  factory ListInstitutionLeavesResponse() => create();
+class GetInstitutionLeavesDataResponse extends $pb.GeneratedMessage {
+  factory GetInstitutionLeavesDataResponse() => create();
 
-  ListInstitutionLeavesResponse._();
+  GetInstitutionLeavesDataResponse._();
 
-  factory ListInstitutionLeavesResponse.fromBuffer($core.List<$core.int> data,
+  factory GetInstitutionLeavesDataResponse.fromBuffer(
+          $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory ListInstitutionLeavesResponse.fromJson($core.String json,
+  factory GetInstitutionLeavesDataResponse.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ListInstitutionLeavesResponse',
+      _omitMessageNames ? '' : 'GetInstitutionLeavesDataResponse',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListInstitutionLeavesResponse clone() => deepCopy();
+  GetInstitutionLeavesDataResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListInstitutionLeavesResponse copyWith(
-          void Function(ListInstitutionLeavesResponse) updates) =>
+  GetInstitutionLeavesDataResponse copyWith(
+          void Function(GetInstitutionLeavesDataResponse) updates) =>
       super.copyWith(
-              (message) => updates(message as ListInstitutionLeavesResponse))
-          as ListInstitutionLeavesResponse;
+              (message) => updates(message as GetInstitutionLeavesDataResponse))
+          as GetInstitutionLeavesDataResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ListInstitutionLeavesResponse create() =>
-      ListInstitutionLeavesResponse._();
+  static GetInstitutionLeavesDataResponse create() =>
+      GetInstitutionLeavesDataResponse._();
   @$core.override
-  ListInstitutionLeavesResponse createEmptyInstance() => create();
-  static $pb.PbList<ListInstitutionLeavesResponse> createRepeated() =>
-      $pb.PbList<ListInstitutionLeavesResponse>();
+  GetInstitutionLeavesDataResponse createEmptyInstance() => create();
+  static $pb.PbList<GetInstitutionLeavesDataResponse> createRepeated() =>
+      $pb.PbList<GetInstitutionLeavesDataResponse>();
   @$core.pragma('dart2js:noInline')
-  static ListInstitutionLeavesResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ListInstitutionLeavesResponse>(create);
-  static ListInstitutionLeavesResponse? _defaultInstance;
+  static GetInstitutionLeavesDataResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetInstitutionLeavesDataResponse>(
+          create);
+  static GetInstitutionLeavesDataResponse? _defaultInstance;
 }
 
 class InstitutionUserLeave extends $pb.GeneratedMessage {
-  factory InstitutionUserLeave() => create();
+  factory InstitutionUserLeave({
+    $core.String? leaveId,
+    $core.String? userId,
+    $0.LeaveType? leaveType,
+    $core.Iterable<LeaveDate>? leaveDates,
+    $1.Timestamp? startDate,
+    $1.Timestamp? endDate,
+    $0.LeaveStatus? rangeStatus,
+  }) {
+    final result = create();
+    if (leaveId != null) result.leaveId = leaveId;
+    if (userId != null) result.userId = userId;
+    if (leaveType != null) result.leaveType = leaveType;
+    if (leaveDates != null) result.leaveDates.addAll(leaveDates);
+    if (startDate != null) result.startDate = startDate;
+    if (endDate != null) result.endDate = endDate;
+    if (rangeStatus != null) result.rangeStatus = rangeStatus;
+    return result;
+  }
 
   InstitutionUserLeave._();
 
@@ -1247,6 +1281,18 @@ class InstitutionUserLeave extends $pb.GeneratedMessage {
       _omitMessageNames ? '' : 'InstitutionUserLeave',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'leaveId')
+    ..aOS(2, _omitFieldNames ? '' : 'userId')
+    ..aE<$0.LeaveType>(3, _omitFieldNames ? '' : 'leaveType',
+        enumValues: $0.LeaveType.values)
+    ..pPM<LeaveDate>(4, _omitFieldNames ? '' : 'leaveDates',
+        subBuilder: LeaveDate.create)
+    ..aOM<$1.Timestamp>(5, _omitFieldNames ? '' : 'startDate',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(6, _omitFieldNames ? '' : 'endDate',
+        subBuilder: $1.Timestamp.create)
+    ..aE<$0.LeaveStatus>(7, _omitFieldNames ? '' : 'rangeStatus',
+        enumValues: $0.LeaveStatus.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1269,6 +1315,69 @@ class InstitutionUserLeave extends $pb.GeneratedMessage {
   static InstitutionUserLeave getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<InstitutionUserLeave>(create);
   static InstitutionUserLeave? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get leaveId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set leaveId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasLeaveId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLeaveId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get userId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set userId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUserId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUserId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $0.LeaveType get leaveType => $_getN(2);
+  @$pb.TagNumber(3)
+  set leaveType($0.LeaveType value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasLeaveType() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLeaveType() => $_clearField(3);
+
+  /// For DISCRETE type
+  @$pb.TagNumber(4)
+  $pb.PbList<LeaveDate> get leaveDates => $_getList(3);
+
+  /// For RANGE type
+  @$pb.TagNumber(5)
+  $1.Timestamp get startDate => $_getN(4);
+  @$pb.TagNumber(5)
+  set startDate($1.Timestamp value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasStartDate() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearStartDate() => $_clearField(5);
+  @$pb.TagNumber(5)
+  $1.Timestamp ensureStartDate() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $1.Timestamp get endDate => $_getN(5);
+  @$pb.TagNumber(6)
+  set endDate($1.Timestamp value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasEndDate() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearEndDate() => $_clearField(6);
+  @$pb.TagNumber(6)
+  $1.Timestamp ensureEndDate() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  $0.LeaveStatus get rangeStatus => $_getN(6);
+  @$pb.TagNumber(7)
+  set rangeStatus($0.LeaveStatus value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasRangeStatus() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearRangeStatus() => $_clearField(7);
 }
 
 const $core.bool _omitFieldNames =

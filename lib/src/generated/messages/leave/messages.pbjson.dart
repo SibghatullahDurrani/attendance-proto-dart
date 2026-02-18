@@ -481,9 +481,9 @@ final $typed_data.Uint8List leaveConflictDetailsDescriptor = $convert.base64Deco
     'ChRMZWF2ZUNvbmZsaWN0RGV0YWlscxJHChFjb25mbGljdGluZ19kYXRlcxgBIAMoCzIaLmdvb2'
     'dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSEGNvbmZsaWN0aW5nRGF0ZXM=');
 
-@$core.Deprecated('Use listInstitutionLeavesRequestDescriptor instead')
-const ListInstitutionLeavesRequest$json = {
-  '1': 'ListInstitutionLeavesRequest',
+@$core.Deprecated('Use getInstitutionLeavesDataRequestDescriptor instead')
+const GetInstitutionLeavesDataRequest$json = {
+  '1': 'GetInstitutionLeavesDataRequest',
   '2': [
     {
       '1': 'pagination',
@@ -514,38 +514,112 @@ const ListInstitutionLeavesRequest$json = {
       '10': 'monthStartTime',
       '17': true
     },
-    {'1': 'user_ids', '3': 6, '4': 3, '5': 9, '10': 'userIds'},
+    {
+      '1': 'leave_role',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveRole',
+      '9': 2,
+      '10': 'leaveRole',
+      '17': true
+    },
+    {'1': 'user_ids', '3': 7, '4': 3, '5': 9, '10': 'userIds'},
   ],
   '8': [
     {'1': '_leave_status'},
     {'1': '_month_start_time'},
+    {'1': '_leave_role'},
   ],
 };
 
-/// Descriptor for `ListInstitutionLeavesRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List listInstitutionLeavesRequestDescriptor = $convert.base64Decode(
-    'ChxMaXN0SW5zdGl0dXRpb25MZWF2ZXNSZXF1ZXN0EkIKCnBhZ2luYXRpb24YASABKAsyIi5jb2'
-    '1tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SHQoKYmVsb25nc190'
-    'bxgCIAEoCVIJYmVsb25nc1RvEkQKDGxlYXZlX3N0YXR1cxgDIAEoDjIcLmNvbW1vbl9tZXNzYW'
-    'dlcy5MZWF2ZVN0YXR1c0gAUgtsZWF2ZVN0YXR1c4gBARJJChBtb250aF9zdGFydF90aW1lGAQg'
-    'ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBUg5tb250aFN0YXJ0VGltZYgBARIZCg'
-    'h1c2VyX2lkcxgGIAMoCVIHdXNlcklkc0IPCg1fbGVhdmVfc3RhdHVzQhMKEV9tb250aF9zdGFy'
-    'dF90aW1l');
+/// Descriptor for `GetInstitutionLeavesDataRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getInstitutionLeavesDataRequestDescriptor = $convert.base64Decode(
+    'Ch9HZXRJbnN0aXR1dGlvbkxlYXZlc0RhdGFSZXF1ZXN0EkIKCnBhZ2luYXRpb24YASABKAsyIi'
+    '5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SHQoKYmVsb25n'
+    'c190bxgCIAEoCVIJYmVsb25nc1RvEkQKDGxlYXZlX3N0YXR1cxgDIAEoDjIcLmNvbW1vbl9tZX'
+    'NzYWdlcy5MZWF2ZVN0YXR1c0gAUgtsZWF2ZVN0YXR1c4gBARJJChBtb250aF9zdGFydF90aW1l'
+    'GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBUg5tb250aFN0YXJ0VGltZYgBAR'
+    'I+CgpsZWF2ZV9yb2xlGAUgASgOMhouY29tbW9uX21lc3NhZ2VzLkxlYXZlUm9sZUgCUglsZWF2'
+    'ZVJvbGWIAQESGQoIdXNlcl9pZHMYByADKAlSB3VzZXJJZHNCDwoNX2xlYXZlX3N0YXR1c0ITCh'
+    'FfbW9udGhfc3RhcnRfdGltZUINCgtfbGVhdmVfcm9sZQ==');
 
-@$core.Deprecated('Use listInstitutionLeavesResponseDescriptor instead')
-const ListInstitutionLeavesResponse$json = {
-  '1': 'ListInstitutionLeavesResponse',
+@$core.Deprecated('Use getInstitutionLeavesDataResponseDescriptor instead')
+const GetInstitutionLeavesDataResponse$json = {
+  '1': 'GetInstitutionLeavesDataResponse',
 };
 
-/// Descriptor for `ListInstitutionLeavesResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List listInstitutionLeavesResponseDescriptor =
-    $convert.base64Decode('Ch1MaXN0SW5zdGl0dXRpb25MZWF2ZXNSZXNwb25zZQ==');
+/// Descriptor for `GetInstitutionLeavesDataResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getInstitutionLeavesDataResponseDescriptor =
+    $convert.base64Decode('CiBHZXRJbnN0aXR1dGlvbkxlYXZlc0RhdGFSZXNwb25zZQ==');
 
 @$core.Deprecated('Use institutionUserLeaveDescriptor instead')
 const InstitutionUserLeave$json = {
   '1': 'InstitutionUserLeave',
+  '2': [
+    {'1': 'leave_id', '3': 1, '4': 1, '5': 9, '10': 'leaveId'},
+    {'1': 'user_id', '3': 2, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'leave_type',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveType',
+      '10': 'leaveType'
+    },
+    {
+      '1': 'leave_dates',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.leave_messages.LeaveDate',
+      '10': 'leaveDates'
+    },
+    {
+      '1': 'start_date',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 0,
+      '10': 'startDate',
+      '17': true
+    },
+    {
+      '1': 'end_date',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 1,
+      '10': 'endDate',
+      '17': true
+    },
+    {
+      '1': 'range_status',
+      '3': 7,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveStatus',
+      '9': 2,
+      '10': 'rangeStatus',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_start_date'},
+    {'1': '_end_date'},
+    {'1': '_range_status'},
+  ],
 };
 
 /// Descriptor for `InstitutionUserLeave`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List institutionUserLeaveDescriptor =
-    $convert.base64Decode('ChRJbnN0aXR1dGlvblVzZXJMZWF2ZQ==');
+final $typed_data.Uint8List institutionUserLeaveDescriptor = $convert.base64Decode(
+    'ChRJbnN0aXR1dGlvblVzZXJMZWF2ZRIZCghsZWF2ZV9pZBgBIAEoCVIHbGVhdmVJZBIXCgd1c2'
+    'VyX2lkGAIgASgJUgZ1c2VySWQSOQoKbGVhdmVfdHlwZRgDIAEoDjIaLmNvbW1vbl9tZXNzYWdl'
+    'cy5MZWF2ZVR5cGVSCWxlYXZlVHlwZRI6CgtsZWF2ZV9kYXRlcxgEIAMoCzIZLmxlYXZlX21lc3'
+    'NhZ2VzLkxlYXZlRGF0ZVIKbGVhdmVEYXRlcxI+CgpzdGFydF9kYXRlGAUgASgLMhouZ29vZ2xl'
+    'LnByb3RvYnVmLlRpbWVzdGFtcEgAUglzdGFydERhdGWIAQESOgoIZW5kX2RhdGUYBiABKAsyGi'
+    '5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAFSB2VuZERhdGWIAQESRAoMcmFuZ2Vfc3RhdHVz'
+    'GAcgASgOMhwuY29tbW9uX21lc3NhZ2VzLkxlYXZlU3RhdHVzSAJSC3JhbmdlU3RhdHVziAEBQg'
+    '0KC19zdGFydF9kYXRlQgsKCV9lbmRfZGF0ZUIPCg1fcmFuZ2Vfc3RhdHVz');

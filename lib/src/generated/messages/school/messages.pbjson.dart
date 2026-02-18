@@ -1694,7 +1694,7 @@ const GetActiveAndUpcommingClassesSelectionMenuItemsResponse$json = {
       '3': 2,
       '4': 3,
       '5': 11,
-      '6': '.school_messages.ActiveAndUpcommingClassesSelectionMenuItem',
+      '6': '.school_messages.ClassSelectionMenuItem',
       '10': 'menuItems'
     },
   ],
@@ -1706,27 +1706,25 @@ final $typed_data.Uint8List
     $convert.base64Decode(
         'CjZHZXRBY3RpdmVBbmRVcGNvbW1pbmdDbGFzc2VzU2VsZWN0aW9uTWVudUl0ZW1zUmVzcG9uc2'
         'USQwoKcGFnaW5hdGlvbhgBIAEoCzIjLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9u'
-        'c2VSCnBhZ2luYXRpb24SWgoKbWVudV9pdGVtcxgCIAMoCzI7LnNjaG9vbF9tZXNzYWdlcy5BY3'
-        'RpdmVBbmRVcGNvbW1pbmdDbGFzc2VzU2VsZWN0aW9uTWVudUl0ZW1SCW1lbnVJdGVtcw==');
+        'c2VSCnBhZ2luYXRpb24SRgoKbWVudV9pdGVtcxgCIAMoCzInLnNjaG9vbF9tZXNzYWdlcy5DbG'
+        'Fzc1NlbGVjdGlvbk1lbnVJdGVtUgltZW51SXRlbXM=');
 
-@$core.Deprecated(
-    'Use activeAndUpcommingClassesSelectionMenuItemDescriptor instead')
-const ActiveAndUpcommingClassesSelectionMenuItem$json = {
-  '1': 'ActiveAndUpcommingClassesSelectionMenuItem',
+@$core.Deprecated('Use classSelectionMenuItemDescriptor instead')
+const ClassSelectionMenuItem$json = {
+  '1': 'ClassSelectionMenuItem',
   '2': [
     {'1': 'class_id', '3': 1, '4': 1, '5': 9, '10': 'classId'},
     {'1': 'class_name', '3': 2, '4': 1, '5': 9, '10': 'className'},
-    {'1': 'session_name', '3': 3, '4': 1, '5': 9, '10': 'sessionName'},
+    {'1': 'section_name', '3': 3, '4': 1, '5': 9, '10': 'sectionName'},
+    {'1': 'session_name', '3': 4, '4': 1, '5': 9, '10': 'sessionName'},
   ],
 };
 
-/// Descriptor for `ActiveAndUpcommingClassesSelectionMenuItem`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List
-    activeAndUpcommingClassesSelectionMenuItemDescriptor =
-    $convert.base64Decode(
-        'CipBY3RpdmVBbmRVcGNvbW1pbmdDbGFzc2VzU2VsZWN0aW9uTWVudUl0ZW0SGQoIY2xhc3NfaW'
-        'QYASABKAlSB2NsYXNzSWQSHQoKY2xhc3NfbmFtZRgCIAEoCVIJY2xhc3NOYW1lEiEKDHNlc3Np'
-        'b25fbmFtZRgDIAEoCVILc2Vzc2lvbk5hbWU=');
+/// Descriptor for `ClassSelectionMenuItem`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List classSelectionMenuItemDescriptor = $convert.base64Decode(
+    'ChZDbGFzc1NlbGVjdGlvbk1lbnVJdGVtEhkKCGNsYXNzX2lkGAEgASgJUgdjbGFzc0lkEh0KCm'
+    'NsYXNzX25hbWUYAiABKAlSCWNsYXNzTmFtZRIhCgxzZWN0aW9uX25hbWUYAyABKAlSC3NlY3Rp'
+    'b25OYW1lEiEKDHNlc3Npb25fbmFtZRgEIAEoCVILc2Vzc2lvbk5hbWU=');
 
 @$core.Deprecated('Use getStudentEnrollmentInfoRequestDescriptor instead')
 const GetStudentEnrollmentInfoRequest$json = {

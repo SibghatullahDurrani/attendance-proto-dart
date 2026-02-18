@@ -445,6 +445,13 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$5.ListInstitutionLeavesResponse> listInstitutionLeaves(
+    $5.ListInstitutionLeavesRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listInstitutionLeaves, request, options: options);
+  }
+
   /// Media Rpcs
   $grpc.ResponseFuture<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
     $async.Stream<$6.AddLeaveAttachmentRequest> request, {
@@ -746,6 +753,11 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/GetEmployeesSelectionMenuItems',
       ($5.GetEmployeesSelectionMenuItemsRequest value) => value.writeToBuffer(),
       $5.GetEmployeesSelectionMenuItemsResponse.fromBuffer);
+  static final _$listInstitutionLeaves = $grpc.ClientMethod<
+          $5.ListInstitutionLeavesRequest, $5.ListInstitutionLeavesResponse>(
+      '/gateway.GatewayService/ListInstitutionLeaves',
+      ($5.ListInstitutionLeavesRequest value) => value.writeToBuffer(),
+      $5.ListInstitutionLeavesResponse.fromBuffer);
   static final _$addLeaveAttachment = $grpc.ClientMethod<
           $6.AddLeaveAttachmentRequest, $6.AddLeaveAttachmentResponse>(
       '/gateway.GatewayService/AddLeaveAttachment',
@@ -1234,6 +1246,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
             $5.GetEmployeesSelectionMenuItemsRequest.fromBuffer(value),
         ($5.GetEmployeesSelectionMenuItemsResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.ListInstitutionLeavesRequest,
+            $5.ListInstitutionLeavesResponse>(
+        'ListInstitutionLeaves',
+        listInstitutionLeaves_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.ListInstitutionLeavesRequest.fromBuffer(value),
+        ($5.ListInstitutionLeavesResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$6.AddLeaveAttachmentRequest,
             $6.AddLeaveAttachmentResponse>(
         'AddLeaveAttachment',
@@ -1722,6 +1743,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$5.GetEmployeesSelectionMenuItemsResponse>
       getEmployeesSelectionMenuItems($grpc.ServiceCall call,
           $5.GetEmployeesSelectionMenuItemsRequest request);
+
+  $async.Future<$5.ListInstitutionLeavesResponse> listInstitutionLeaves_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$5.ListInstitutionLeavesRequest> $request) async {
+    return listInstitutionLeaves($call, await $request);
+  }
+
+  $async.Future<$5.ListInstitutionLeavesResponse> listInstitutionLeaves(
+      $grpc.ServiceCall call, $5.ListInstitutionLeavesRequest request);
 
   $async.Future<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
       $grpc.ServiceCall call,

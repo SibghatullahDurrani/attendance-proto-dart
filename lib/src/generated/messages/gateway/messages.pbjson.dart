@@ -1967,3 +1967,95 @@ final $typed_data.Uint8List employeeSelectionMenuItemDescriptor = $convert.base6
     'xlLnByb3RvYnVmLlRpbWVzdGFtcEgDUhJ0aHVtYm5haWxFeHBpcmVzQXSIAQFCDgoMX3NlY29u'
     'ZF9uYW1lQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0Qh'
     'cKFV90aHVtYm5haWxfZXhwaXJlc19hdA==');
+
+@$core.Deprecated('Use listInstitutionLeavesRequestDescriptor instead')
+const ListInstitutionLeavesRequest$json = {
+  '1': 'ListInstitutionLeavesRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'belongs_to', '3': 2, '4': 1, '5': 9, '10': 'belongsTo'},
+    {
+      '1': 'leave_status',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveStatus',
+      '9': 0,
+      '10': 'leaveStatus',
+      '17': true
+    },
+    {
+      '1': 'month_start_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 1,
+      '10': 'monthStartTime',
+      '17': true
+    },
+    {
+      '1': 'leave_role',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveRole',
+      '9': 2,
+      '10': 'leaveRole',
+      '17': true
+    },
+    {
+      '1': 'user_id',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'userId',
+      '17': true
+    },
+    {
+      '1': 'class_id',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '9': 4,
+      '10': 'classId',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_leave_status'},
+    {'1': '_month_start_time'},
+    {'1': '_leave_role'},
+    {'1': '_user_id'},
+    {'1': '_class_id'},
+  ],
+};
+
+/// Descriptor for `ListInstitutionLeavesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listInstitutionLeavesRequestDescriptor = $convert.base64Decode(
+    'ChxMaXN0SW5zdGl0dXRpb25MZWF2ZXNSZXF1ZXN0EkIKCnBhZ2luYXRpb24YASABKAsyIi5jb2'
+    '1tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SHQoKYmVsb25nc190'
+    'bxgCIAEoCVIJYmVsb25nc1RvEkQKDGxlYXZlX3N0YXR1cxgDIAEoDjIcLmNvbW1vbl9tZXNzYW'
+    'dlcy5MZWF2ZVN0YXR1c0gAUgtsZWF2ZVN0YXR1c4gBARJJChBtb250aF9zdGFydF90aW1lGAQg'
+    'ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBUg5tb250aFN0YXJ0VGltZYgBARI+Cg'
+    'psZWF2ZV9yb2xlGAUgASgOMhouY29tbW9uX21lc3NhZ2VzLkxlYXZlUm9sZUgCUglsZWF2ZVJv'
+    'bGWIAQESHAoHdXNlcl9pZBgGIAEoCUgDUgZ1c2VySWSIAQESHgoIY2xhc3NfaWQYByABKAlIBF'
+    'IHY2xhc3NJZIgBAUIPCg1fbGVhdmVfc3RhdHVzQhMKEV9tb250aF9zdGFydF90aW1lQg0KC19s'
+    'ZWF2ZV9yb2xlQgoKCF91c2VyX2lkQgsKCV9jbGFzc19pZA==');
+
+@$core.Deprecated('Use listInstitutionLeavesResponseDescriptor instead')
+const ListInstitutionLeavesResponse$json = {
+  '1': 'ListInstitutionLeavesResponse',
+};
+
+/// Descriptor for `ListInstitutionLeavesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listInstitutionLeavesResponseDescriptor =
+    $convert.base64Decode('Ch1MaXN0SW5zdGl0dXRpb25MZWF2ZXNSZXNwb25zZQ==');

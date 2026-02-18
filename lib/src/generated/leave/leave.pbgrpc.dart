@@ -67,11 +67,13 @@ class LeaveServiceClient extends $grpc.Client {
     return $createUnaryCall(_$deleteLeave, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.ListInstitutionLeavesResponse> listInstutionLeaves(
-    $0.ListInstitutionLeavesRequest request, {
+  $grpc.ResponseFuture<$0.GetInstitutionLeavesDataResponse>
+      getInstitutionLeavesData(
+    $0.GetInstitutionLeavesDataRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$listInstutionLeaves, request, options: options);
+    return $createUnaryCall(_$getInstitutionLeavesData, request,
+        options: options);
   }
 
   // method descriptors
@@ -101,11 +103,12 @@ class LeaveServiceClient extends $grpc.Client {
           '/leave.LeaveService/DeleteLeave',
           ($0.DeleteLeaveRequest value) => value.writeToBuffer(),
           $0.DeleteLeaveResponse.fromBuffer);
-  static final _$listInstutionLeaves = $grpc.ClientMethod<
-          $0.ListInstitutionLeavesRequest, $0.ListInstitutionLeavesResponse>(
-      '/leave.LeaveService/ListInstutionLeaves',
-      ($0.ListInstitutionLeavesRequest value) => value.writeToBuffer(),
-      $0.ListInstitutionLeavesResponse.fromBuffer);
+  static final _$getInstitutionLeavesData = $grpc.ClientMethod<
+          $0.GetInstitutionLeavesDataRequest,
+          $0.GetInstitutionLeavesDataResponse>(
+      '/leave.LeaveService/GetInstitutionLeavesData',
+      ($0.GetInstitutionLeavesDataRequest value) => value.writeToBuffer(),
+      $0.GetInstitutionLeavesDataResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('leave.LeaveService')
@@ -158,15 +161,15 @@ abstract class LeaveServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $0.DeleteLeaveRequest.fromBuffer(value),
             ($0.DeleteLeaveResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.ListInstitutionLeavesRequest,
-            $0.ListInstitutionLeavesResponse>(
-        'ListInstutionLeaves',
-        listInstutionLeaves_Pre,
+    $addMethod($grpc.ServiceMethod<$0.GetInstitutionLeavesDataRequest,
+            $0.GetInstitutionLeavesDataResponse>(
+        'GetInstitutionLeavesData',
+        getInstitutionLeavesData_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.ListInstitutionLeavesRequest.fromBuffer(value),
-        ($0.ListInstitutionLeavesResponse value) => value.writeToBuffer()));
+            $0.GetInstitutionLeavesDataRequest.fromBuffer(value),
+        ($0.GetInstitutionLeavesDataResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.ListUserLeavesResponse> listUserLeaves_Pre(
@@ -211,12 +214,12 @@ abstract class LeaveServiceBase extends $grpc.Service {
   $async.Future<$0.DeleteLeaveResponse> deleteLeave(
       $grpc.ServiceCall call, $0.DeleteLeaveRequest request);
 
-  $async.Future<$0.ListInstitutionLeavesResponse> listInstutionLeaves_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$0.ListInstitutionLeavesRequest> $request) async {
-    return listInstutionLeaves($call, await $request);
+  $async.Future<$0.GetInstitutionLeavesDataResponse>
+      getInstitutionLeavesData_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetInstitutionLeavesDataRequest> $request) async {
+    return getInstitutionLeavesData($call, await $request);
   }
 
-  $async.Future<$0.ListInstitutionLeavesResponse> listInstutionLeaves(
-      $grpc.ServiceCall call, $0.ListInstitutionLeavesRequest request);
+  $async.Future<$0.GetInstitutionLeavesDataResponse> getInstitutionLeavesData(
+      $grpc.ServiceCall call, $0.GetInstitutionLeavesDataRequest request);
 }
