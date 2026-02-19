@@ -7530,6 +7530,120 @@ class StudentLatestEnrollmentInfo extends $pb.GeneratedMessage {
   void clearLastAttendedSectionName() => $_clearField(3);
 }
 
+class GetStudentIdsOfClassRequest extends $pb.GeneratedMessage {
+  factory GetStudentIdsOfClassRequest({
+    $core.String? classId,
+  }) {
+    final result = create();
+    if (classId != null) result.classId = classId;
+    return result;
+  }
+
+  GetStudentIdsOfClassRequest._();
+
+  factory GetStudentIdsOfClassRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetStudentIdsOfClassRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetStudentIdsOfClassRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'classId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetStudentIdsOfClassRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetStudentIdsOfClassRequest copyWith(
+          void Function(GetStudentIdsOfClassRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetStudentIdsOfClassRequest))
+          as GetStudentIdsOfClassRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetStudentIdsOfClassRequest create() =>
+      GetStudentIdsOfClassRequest._();
+  @$core.override
+  GetStudentIdsOfClassRequest createEmptyInstance() => create();
+  static $pb.PbList<GetStudentIdsOfClassRequest> createRepeated() =>
+      $pb.PbList<GetStudentIdsOfClassRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetStudentIdsOfClassRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetStudentIdsOfClassRequest>(create);
+  static GetStudentIdsOfClassRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get classId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set classId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasClassId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearClassId() => $_clearField(1);
+}
+
+class GetStudentIdsOfClassResponse extends $pb.GeneratedMessage {
+  factory GetStudentIdsOfClassResponse({
+    $core.Iterable<$core.String>? studentIds,
+  }) {
+    final result = create();
+    if (studentIds != null) result.studentIds.addAll(studentIds);
+    return result;
+  }
+
+  GetStudentIdsOfClassResponse._();
+
+  factory GetStudentIdsOfClassResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetStudentIdsOfClassResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetStudentIdsOfClassResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'studentIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetStudentIdsOfClassResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetStudentIdsOfClassResponse copyWith(
+          void Function(GetStudentIdsOfClassResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetStudentIdsOfClassResponse))
+          as GetStudentIdsOfClassResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetStudentIdsOfClassResponse create() =>
+      GetStudentIdsOfClassResponse._();
+  @$core.override
+  GetStudentIdsOfClassResponse createEmptyInstance() => create();
+  static $pb.PbList<GetStudentIdsOfClassResponse> createRepeated() =>
+      $pb.PbList<GetStudentIdsOfClassResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetStudentIdsOfClassResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetStudentIdsOfClassResponse>(create);
+  static GetStudentIdsOfClassResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get studentIds => $_getList(0);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

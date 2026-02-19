@@ -5052,7 +5052,7 @@ class InstitutionLeaves extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearLeaveRole() => $_clearField(6);
 
-  /// Only for LEAVE_ROLE_STUDENT
+  /// For LEAVE_ROLE_STUDENT only
   @$pb.TagNumber(7)
   $core.String get lastAttendedClassName => $_getSZ(6);
   @$pb.TagNumber(7)

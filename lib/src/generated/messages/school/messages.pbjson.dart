@@ -2595,3 +2595,31 @@ final $typed_data.Uint8List studentLatestEnrollmentInfoDescriptor = $convert.bas
     'cKGGxhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZRgCIAEoCVIVbGFzdEF0dGVuZGVkQ2xhc3NOYW1l'
     'EjsKGmxhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1lGAMgASgJUhdsYXN0QXR0ZW5kZWRTZWN0aW'
     '9uTmFtZQ==');
+
+@$core.Deprecated('Use getStudentIdsOfClassRequestDescriptor instead')
+const GetStudentIdsOfClassRequest$json = {
+  '1': 'GetStudentIdsOfClassRequest',
+  '2': [
+    {'1': 'class_id', '3': 1, '4': 1, '5': 9, '10': 'classId'},
+  ],
+};
+
+/// Descriptor for `GetStudentIdsOfClassRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getStudentIdsOfClassRequestDescriptor =
+    $convert.base64Decode(
+        'ChtHZXRTdHVkZW50SWRzT2ZDbGFzc1JlcXVlc3QSGQoIY2xhc3NfaWQYASABKAlSB2NsYXNzSW'
+        'Q=');
+
+@$core.Deprecated('Use getStudentIdsOfClassResponseDescriptor instead')
+const GetStudentIdsOfClassResponse$json = {
+  '1': 'GetStudentIdsOfClassResponse',
+  '2': [
+    {'1': 'student_ids', '3': 1, '4': 3, '5': 9, '10': 'studentIds'},
+  ],
+};
+
+/// Descriptor for `GetStudentIdsOfClassResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getStudentIdsOfClassResponseDescriptor =
+    $convert.base64Decode(
+        'ChxHZXRTdHVkZW50SWRzT2ZDbGFzc1Jlc3BvbnNlEh8KC3N0dWRlbnRfaWRzGAEgAygJUgpzdH'
+        'VkZW50SWRz');
