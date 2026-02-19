@@ -4899,6 +4899,7 @@ class ListInstitutionLeavesResponse extends $pb.GeneratedMessage {
 class InstitutionLeaves extends $pb.GeneratedMessage {
   factory InstitutionLeaves({
     $core.String? leaveId,
+    $core.String? userId,
     $core.String? firstName,
     $core.String? secondName,
     $core.String? identificationNumber,
@@ -4916,6 +4917,7 @@ class InstitutionLeaves extends $pb.GeneratedMessage {
   }) {
     final result = create();
     if (leaveId != null) result.leaveId = leaveId;
+    if (userId != null) result.userId = userId;
     if (firstName != null) result.firstName = firstName;
     if (secondName != null) result.secondName = secondName;
     if (identificationNumber != null)
@@ -4953,27 +4955,28 @@ class InstitutionLeaves extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'leaveId')
-    ..aOS(2, _omitFieldNames ? '' : 'firstName')
-    ..aOS(3, _omitFieldNames ? '' : 'secondName')
-    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
-    ..aE<$0.LeaveType>(5, _omitFieldNames ? '' : 'leaveType',
+    ..aOS(2, _omitFieldNames ? '' : 'userId')
+    ..aOS(3, _omitFieldNames ? '' : 'firstName')
+    ..aOS(4, _omitFieldNames ? '' : 'secondName')
+    ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
+    ..aE<$0.LeaveType>(6, _omitFieldNames ? '' : 'leaveType',
         enumValues: $0.LeaveType.values)
-    ..aE<$0.LeaveRole>(6, _omitFieldNames ? '' : 'leaveRole',
+    ..aE<$0.LeaveRole>(7, _omitFieldNames ? '' : 'leaveRole',
         enumValues: $0.LeaveRole.values)
-    ..aOS(7, _omitFieldNames ? '' : 'lastAttendedClassName')
-    ..aOS(8, _omitFieldNames ? '' : 'lastAttendedSectionName')
-    ..pPM<$2.LeaveDate>(9, _omitFieldNames ? '' : 'leaveDates',
+    ..aOS(8, _omitFieldNames ? '' : 'lastAttendedClassName')
+    ..aOS(9, _omitFieldNames ? '' : 'lastAttendedSectionName')
+    ..pPM<$2.LeaveDate>(10, _omitFieldNames ? '' : 'leaveDates',
         subBuilder: $2.LeaveDate.create)
-    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'startDate',
+    ..aOM<$1.Timestamp>(11, _omitFieldNames ? '' : 'startDate',
         subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(11, _omitFieldNames ? '' : 'endDate',
+    ..aOM<$1.Timestamp>(12, _omitFieldNames ? '' : 'endDate',
         subBuilder: $1.Timestamp.create)
-    ..aE<$0.LeaveStatus>(12, _omitFieldNames ? '' : 'rangeStatus',
+    ..aE<$0.LeaveStatus>(13, _omitFieldNames ? '' : 'rangeStatus',
         enumValues: $0.LeaveStatus.values)
-    ..aOS(13, _omitFieldNames ? '' : 'userThumbnailUrl')
-    ..aOM<$1.Timestamp>(14, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+    ..aOS(14, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(15, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
         subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(15, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+    ..aOM<$1.Timestamp>(16, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
@@ -5008,135 +5011,144 @@ class InstitutionLeaves extends $pb.GeneratedMessage {
   void clearLeaveId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get firstName => $_getSZ(1);
+  $core.String get userId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set firstName($core.String value) => $_setString(1, value);
+  set userId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
-  $core.bool hasFirstName() => $_has(1);
+  $core.bool hasUserId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFirstName() => $_clearField(2);
+  void clearUserId() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get secondName => $_getSZ(2);
+  $core.String get firstName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set secondName($core.String value) => $_setString(2, value);
+  set firstName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
-  $core.bool hasSecondName() => $_has(2);
+  $core.bool hasFirstName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSecondName() => $_clearField(3);
+  void clearFirstName() => $_clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get identificationNumber => $_getSZ(3);
+  $core.String get secondName => $_getSZ(3);
   @$pb.TagNumber(4)
-  set identificationNumber($core.String value) => $_setString(3, value);
+  set secondName($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
-  $core.bool hasIdentificationNumber() => $_has(3);
+  $core.bool hasSecondName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIdentificationNumber() => $_clearField(4);
+  void clearSecondName() => $_clearField(4);
 
   @$pb.TagNumber(5)
-  $0.LeaveType get leaveType => $_getN(4);
+  $core.String get identificationNumber => $_getSZ(4);
   @$pb.TagNumber(5)
-  set leaveType($0.LeaveType value) => $_setField(5, value);
+  set identificationNumber($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
-  $core.bool hasLeaveType() => $_has(4);
+  $core.bool hasIdentificationNumber() => $_has(4);
   @$pb.TagNumber(5)
-  void clearLeaveType() => $_clearField(5);
+  void clearIdentificationNumber() => $_clearField(5);
 
   @$pb.TagNumber(6)
-  $0.LeaveRole get leaveRole => $_getN(5);
+  $0.LeaveType get leaveType => $_getN(5);
   @$pb.TagNumber(6)
-  set leaveRole($0.LeaveRole value) => $_setField(6, value);
+  set leaveType($0.LeaveType value) => $_setField(6, value);
   @$pb.TagNumber(6)
-  $core.bool hasLeaveRole() => $_has(5);
+  $core.bool hasLeaveType() => $_has(5);
   @$pb.TagNumber(6)
-  void clearLeaveRole() => $_clearField(6);
+  void clearLeaveType() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $0.LeaveRole get leaveRole => $_getN(6);
+  @$pb.TagNumber(7)
+  set leaveRole($0.LeaveRole value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasLeaveRole() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearLeaveRole() => $_clearField(7);
 
   /// For LEAVE_ROLE_STUDENT only
-  @$pb.TagNumber(7)
-  $core.String get lastAttendedClassName => $_getSZ(6);
-  @$pb.TagNumber(7)
-  set lastAttendedClassName($core.String value) => $_setString(6, value);
-  @$pb.TagNumber(7)
-  $core.bool hasLastAttendedClassName() => $_has(6);
-  @$pb.TagNumber(7)
-  void clearLastAttendedClassName() => $_clearField(7);
+  @$pb.TagNumber(8)
+  $core.String get lastAttendedClassName => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set lastAttendedClassName($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasLastAttendedClassName() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearLastAttendedClassName() => $_clearField(8);
 
-  @$pb.TagNumber(8)
-  $core.String get lastAttendedSectionName => $_getSZ(7);
-  @$pb.TagNumber(8)
-  set lastAttendedSectionName($core.String value) => $_setString(7, value);
-  @$pb.TagNumber(8)
-  $core.bool hasLastAttendedSectionName() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearLastAttendedSectionName() => $_clearField(8);
+  @$pb.TagNumber(9)
+  $core.String get lastAttendedSectionName => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set lastAttendedSectionName($core.String value) => $_setString(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasLastAttendedSectionName() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearLastAttendedSectionName() => $_clearField(9);
 
   /// For DISCRETE type
-  @$pb.TagNumber(9)
-  $pb.PbList<$2.LeaveDate> get leaveDates => $_getList(8);
+  @$pb.TagNumber(10)
+  $pb.PbList<$2.LeaveDate> get leaveDates => $_getList(9);
 
   /// For RANGE type
-  @$pb.TagNumber(10)
-  $1.Timestamp get startDate => $_getN(9);
-  @$pb.TagNumber(10)
-  set startDate($1.Timestamp value) => $_setField(10, value);
-  @$pb.TagNumber(10)
-  $core.bool hasStartDate() => $_has(9);
-  @$pb.TagNumber(10)
-  void clearStartDate() => $_clearField(10);
-  @$pb.TagNumber(10)
-  $1.Timestamp ensureStartDate() => $_ensure(9);
-
   @$pb.TagNumber(11)
-  $1.Timestamp get endDate => $_getN(10);
+  $1.Timestamp get startDate => $_getN(10);
   @$pb.TagNumber(11)
-  set endDate($1.Timestamp value) => $_setField(11, value);
+  set startDate($1.Timestamp value) => $_setField(11, value);
   @$pb.TagNumber(11)
-  $core.bool hasEndDate() => $_has(10);
+  $core.bool hasStartDate() => $_has(10);
   @$pb.TagNumber(11)
-  void clearEndDate() => $_clearField(11);
+  void clearStartDate() => $_clearField(11);
   @$pb.TagNumber(11)
-  $1.Timestamp ensureEndDate() => $_ensure(10);
+  $1.Timestamp ensureStartDate() => $_ensure(10);
 
   @$pb.TagNumber(12)
-  $0.LeaveStatus get rangeStatus => $_getN(11);
+  $1.Timestamp get endDate => $_getN(11);
   @$pb.TagNumber(12)
-  set rangeStatus($0.LeaveStatus value) => $_setField(12, value);
+  set endDate($1.Timestamp value) => $_setField(12, value);
   @$pb.TagNumber(12)
-  $core.bool hasRangeStatus() => $_has(11);
+  $core.bool hasEndDate() => $_has(11);
   @$pb.TagNumber(12)
-  void clearRangeStatus() => $_clearField(12);
+  void clearEndDate() => $_clearField(12);
+  @$pb.TagNumber(12)
+  $1.Timestamp ensureEndDate() => $_ensure(11);
 
   @$pb.TagNumber(13)
-  $core.String get userThumbnailUrl => $_getSZ(12);
+  $0.LeaveStatus get rangeStatus => $_getN(12);
   @$pb.TagNumber(13)
-  set userThumbnailUrl($core.String value) => $_setString(12, value);
+  set rangeStatus($0.LeaveStatus value) => $_setField(13, value);
   @$pb.TagNumber(13)
-  $core.bool hasUserThumbnailUrl() => $_has(12);
+  $core.bool hasRangeStatus() => $_has(12);
   @$pb.TagNumber(13)
-  void clearUserThumbnailUrl() => $_clearField(13);
+  void clearRangeStatus() => $_clearField(13);
 
   @$pb.TagNumber(14)
-  $1.Timestamp get thumbnailUpdatedAt => $_getN(13);
+  $core.String get userThumbnailUrl => $_getSZ(13);
   @$pb.TagNumber(14)
-  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(14, value);
+  set userThumbnailUrl($core.String value) => $_setString(13, value);
   @$pb.TagNumber(14)
-  $core.bool hasThumbnailUpdatedAt() => $_has(13);
+  $core.bool hasUserThumbnailUrl() => $_has(13);
   @$pb.TagNumber(14)
-  void clearThumbnailUpdatedAt() => $_clearField(14);
-  @$pb.TagNumber(14)
-  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(13);
+  void clearUserThumbnailUrl() => $_clearField(14);
 
   @$pb.TagNumber(15)
-  $1.Timestamp get thumbnailExpiresAt => $_getN(14);
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(14);
   @$pb.TagNumber(15)
-  set thumbnailExpiresAt($1.Timestamp value) => $_setField(15, value);
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(15, value);
   @$pb.TagNumber(15)
-  $core.bool hasThumbnailExpiresAt() => $_has(14);
+  $core.bool hasThumbnailUpdatedAt() => $_has(14);
   @$pb.TagNumber(15)
-  void clearThumbnailExpiresAt() => $_clearField(15);
+  void clearThumbnailUpdatedAt() => $_clearField(15);
   @$pb.TagNumber(15)
-  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(14);
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(14);
+
+  @$pb.TagNumber(16)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(15);
+  @$pb.TagNumber(16)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(16, value);
+  @$pb.TagNumber(16)
+  $core.bool hasThumbnailExpiresAt() => $_has(15);
+  @$pb.TagNumber(16)
+  void clearThumbnailExpiresAt() => $_clearField(16);
+  @$pb.TagNumber(16)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(15);
 }
 
 const $core.bool _omitFieldNames =

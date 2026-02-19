@@ -2086,10 +2086,11 @@ const InstitutionLeaves$json = {
   '1': 'InstitutionLeaves',
   '2': [
     {'1': 'leave_id', '3': 1, '4': 1, '5': 9, '10': 'leaveId'},
-    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {'1': 'user_id', '3': 2, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'first_name', '3': 3, '4': 1, '5': 9, '10': 'firstName'},
     {
       '1': 'second_name',
-      '3': 3,
+      '3': 4,
       '4': 1,
       '5': 9,
       '9': 0,
@@ -2098,7 +2099,7 @@ const InstitutionLeaves$json = {
     },
     {
       '1': 'identification_number',
-      '3': 4,
+      '3': 5,
       '4': 1,
       '5': 9,
       '9': 1,
@@ -2107,7 +2108,7 @@ const InstitutionLeaves$json = {
     },
     {
       '1': 'leave_type',
-      '3': 5,
+      '3': 6,
       '4': 1,
       '5': 14,
       '6': '.common_messages.LeaveType',
@@ -2115,7 +2116,7 @@ const InstitutionLeaves$json = {
     },
     {
       '1': 'leave_role',
-      '3': 6,
+      '3': 7,
       '4': 1,
       '5': 14,
       '6': '.common_messages.LeaveRole',
@@ -2123,7 +2124,7 @@ const InstitutionLeaves$json = {
     },
     {
       '1': 'last_attended_class_name',
-      '3': 7,
+      '3': 8,
       '4': 1,
       '5': 9,
       '9': 2,
@@ -2132,7 +2133,7 @@ const InstitutionLeaves$json = {
     },
     {
       '1': 'last_attended_section_name',
-      '3': 8,
+      '3': 9,
       '4': 1,
       '5': 9,
       '9': 3,
@@ -2141,7 +2142,7 @@ const InstitutionLeaves$json = {
     },
     {
       '1': 'leave_dates',
-      '3': 9,
+      '3': 10,
       '4': 3,
       '5': 11,
       '6': '.leave_messages.LeaveDate',
@@ -2149,7 +2150,7 @@ const InstitutionLeaves$json = {
     },
     {
       '1': 'start_date',
-      '3': 10,
+      '3': 11,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
@@ -2159,7 +2160,7 @@ const InstitutionLeaves$json = {
     },
     {
       '1': 'end_date',
-      '3': 11,
+      '3': 12,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
@@ -2169,7 +2170,7 @@ const InstitutionLeaves$json = {
     },
     {
       '1': 'range_status',
-      '3': 12,
+      '3': 13,
       '4': 1,
       '5': 14,
       '6': '.common_messages.LeaveStatus',
@@ -2179,7 +2180,7 @@ const InstitutionLeaves$json = {
     },
     {
       '1': 'user_thumbnail_url',
-      '3': 13,
+      '3': 14,
       '4': 1,
       '5': 9,
       '9': 7,
@@ -2188,7 +2189,7 @@ const InstitutionLeaves$json = {
     },
     {
       '1': 'thumbnail_updated_at',
-      '3': 14,
+      '3': 15,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
@@ -2198,7 +2199,7 @@ const InstitutionLeaves$json = {
     },
     {
       '1': 'thumbnail_expires_at',
-      '3': 15,
+      '3': 16,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
@@ -2223,23 +2224,24 @@ const InstitutionLeaves$json = {
 
 /// Descriptor for `InstitutionLeaves`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List institutionLeavesDescriptor = $convert.base64Decode(
-    'ChFJbnN0aXR1dGlvbkxlYXZlcxIZCghsZWF2ZV9pZBgBIAEoCVIHbGVhdmVJZBIdCgpmaXJzdF'
-    '9uYW1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAyABKAlIAFIKc2Vjb25kTmFt'
-    'ZYgBARI4ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlIAVIUaWRlbnRpZmljYXRpb25OdW'
-    '1iZXKIAQESOQoKbGVhdmVfdHlwZRgFIAEoDjIaLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVR5cGVS'
-    'CWxlYXZlVHlwZRI5CgpsZWF2ZV9yb2xlGAYgASgOMhouY29tbW9uX21lc3NhZ2VzLkxlYXZlUm'
-    '9sZVIJbGVhdmVSb2xlEjwKGGxhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZRgHIAEoCUgCUhVsYXN0'
-    'QXR0ZW5kZWRDbGFzc05hbWWIAQESQAoabGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWUYCCABKA'
-    'lIA1IXbGFzdEF0dGVuZGVkU2VjdGlvbk5hbWWIAQESOgoLbGVhdmVfZGF0ZXMYCSADKAsyGS5s'
-    'ZWF2ZV9tZXNzYWdlcy5MZWF2ZURhdGVSCmxlYXZlRGF0ZXMSPgoKc3RhcnRfZGF0ZRgKIAEoCz'
-    'IaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBFIJc3RhcnREYXRliAEBEjoKCGVuZF9kYXRl'
-    'GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgFUgdlbmREYXRliAEBEkQKDHJhbm'
-    'dlX3N0YXR1cxgMIAEoDjIcLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVN0YXR1c0gGUgtyYW5nZVN0'
-    'YXR1c4gBARIxChJ1c2VyX3RodW1ibmFpbF91cmwYDSABKAlIB1IQdXNlclRodW1ibmFpbFVybI'
-    'gBARJRChR0aHVtYm5haWxfdXBkYXRlZF9hdBgOIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l'
-    'c3RhbXBICFISdGh1bWJuYWlsVXBkYXRlZEF0iAEBElEKFHRodW1ibmFpbF9leHBpcmVzX2F0GA'
-    '8gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgJUhJ0aHVtYm5haWxFeHBpcmVzQXSI'
-    'AQFCDgoMX3NlY29uZF9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCGwoZX2xhc3RfYX'
-    'R0ZW5kZWRfY2xhc3NfbmFtZUIdChtfbGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWVCDQoLX3N0'
-    'YXJ0X2RhdGVCCwoJX2VuZF9kYXRlQg8KDV9yYW5nZV9zdGF0dXNCFQoTX3VzZXJfdGh1bWJuYW'
-    'lsX3VybEIXChVfdGh1bWJuYWlsX3VwZGF0ZWRfYXRCFwoVX3RodW1ibmFpbF9leHBpcmVzX2F0');
+    'ChFJbnN0aXR1dGlvbkxlYXZlcxIZCghsZWF2ZV9pZBgBIAEoCVIHbGVhdmVJZBIXCgd1c2VyX2'
+    'lkGAIgASgJUgZ1c2VySWQSHQoKZmlyc3RfbmFtZRgDIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29u'
+    'ZF9uYW1lGAQgASgJSABSCnNlY29uZE5hbWWIAQESOAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGA'
+    'UgASgJSAFSFGlkZW50aWZpY2F0aW9uTnVtYmVyiAEBEjkKCmxlYXZlX3R5cGUYBiABKA4yGi5j'
+    'b21tb25fbWVzc2FnZXMuTGVhdmVUeXBlUglsZWF2ZVR5cGUSOQoKbGVhdmVfcm9sZRgHIAEoDj'
+    'IaLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVJvbGVSCWxlYXZlUm9sZRI8ChhsYXN0X2F0dGVuZGVk'
+    'X2NsYXNzX25hbWUYCCABKAlIAlIVbGFzdEF0dGVuZGVkQ2xhc3NOYW1liAEBEkAKGmxhc3RfYX'
+    'R0ZW5kZWRfc2VjdGlvbl9uYW1lGAkgASgJSANSF2xhc3RBdHRlbmRlZFNlY3Rpb25OYW1liAEB'
+    'EjoKC2xlYXZlX2RhdGVzGAogAygLMhkubGVhdmVfbWVzc2FnZXMuTGVhdmVEYXRlUgpsZWF2ZU'
+    'RhdGVzEj4KCnN0YXJ0X2RhdGUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSARS'
+    'CXN0YXJ0RGF0ZYgBARI6CghlbmRfZGF0ZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3'
+    'RhbXBIBVIHZW5kRGF0ZYgBARJECgxyYW5nZV9zdGF0dXMYDSABKA4yHC5jb21tb25fbWVzc2Fn'
+    'ZXMuTGVhdmVTdGF0dXNIBlILcmFuZ2VTdGF0dXOIAQESMQoSdXNlcl90aHVtYm5haWxfdXJsGA'
+    '4gASgJSAdSEHVzZXJUaHVtYm5haWxVcmyIAQESUQoUdGh1bWJuYWlsX3VwZGF0ZWRfYXQYDyAB'
+    'KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAhSEnRodW1ibmFpbFVwZGF0ZWRBdIgBAR'
+    'JRChR0aHVtYm5haWxfZXhwaXJlc19hdBgQIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh'
+    'bXBICVISdGh1bWJuYWlsRXhwaXJlc0F0iAEBQg4KDF9zZWNvbmRfbmFtZUIYChZfaWRlbnRpZm'
+    'ljYXRpb25fbnVtYmVyQhsKGV9sYXN0X2F0dGVuZGVkX2NsYXNzX25hbWVCHQobX2xhc3RfYXR0'
+    'ZW5kZWRfc2VjdGlvbl9uYW1lQg0KC19zdGFydF9kYXRlQgsKCV9lbmRfZGF0ZUIPCg1fcmFuZ2'
+    'Vfc3RhdHVzQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0'
+    'QhcKFV90aHVtYm5haWxfZXhwaXJlc19hdA==');
