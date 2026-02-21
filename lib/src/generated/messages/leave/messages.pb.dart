@@ -1431,6 +1431,151 @@ class InstitutionLeaveData extends $pb.GeneratedMessage {
   void clearRangeStatus() => $_clearField(8);
 }
 
+class RespondToLeaveRequest extends $pb.GeneratedMessage {
+  factory RespondToLeaveRequest({
+    $core.String? leaveId,
+    $0.LeaveType? leaveType,
+    $core.Iterable<$core.String>? acceptedLeaveDateIds,
+    $0.LeaveStatus? rangeStatus,
+    $core.String? remarks,
+  }) {
+    final result = create();
+    if (leaveId != null) result.leaveId = leaveId;
+    if (leaveType != null) result.leaveType = leaveType;
+    if (acceptedLeaveDateIds != null)
+      result.acceptedLeaveDateIds.addAll(acceptedLeaveDateIds);
+    if (rangeStatus != null) result.rangeStatus = rangeStatus;
+    if (remarks != null) result.remarks = remarks;
+    return result;
+  }
+
+  RespondToLeaveRequest._();
+
+  factory RespondToLeaveRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RespondToLeaveRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RespondToLeaveRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'leaveId')
+    ..aE<$0.LeaveType>(2, _omitFieldNames ? '' : 'leaveType',
+        enumValues: $0.LeaveType.values)
+    ..pPS(3, _omitFieldNames ? '' : 'acceptedLeaveDateIds')
+    ..aE<$0.LeaveStatus>(4, _omitFieldNames ? '' : 'rangeStatus',
+        enumValues: $0.LeaveStatus.values)
+    ..aOS(5, _omitFieldNames ? '' : 'remarks')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RespondToLeaveRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RespondToLeaveRequest copyWith(
+          void Function(RespondToLeaveRequest) updates) =>
+      super.copyWith((message) => updates(message as RespondToLeaveRequest))
+          as RespondToLeaveRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RespondToLeaveRequest create() => RespondToLeaveRequest._();
+  @$core.override
+  RespondToLeaveRequest createEmptyInstance() => create();
+  static $pb.PbList<RespondToLeaveRequest> createRepeated() =>
+      $pb.PbList<RespondToLeaveRequest>();
+  @$core.pragma('dart2js:noInline')
+  static RespondToLeaveRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RespondToLeaveRequest>(create);
+  static RespondToLeaveRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get leaveId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set leaveId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasLeaveId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLeaveId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.LeaveType get leaveType => $_getN(1);
+  @$pb.TagNumber(2)
+  set leaveType($0.LeaveType value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasLeaveType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLeaveType() => $_clearField(2);
+
+  /// For Discrete leave type;
+  @$pb.TagNumber(3)
+  $pb.PbList<$core.String> get acceptedLeaveDateIds => $_getList(2);
+
+  /// For Range leave type
+  @$pb.TagNumber(4)
+  $0.LeaveStatus get rangeStatus => $_getN(3);
+  @$pb.TagNumber(4)
+  set rangeStatus($0.LeaveStatus value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasRangeStatus() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearRangeStatus() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get remarks => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set remarks($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasRemarks() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearRemarks() => $_clearField(5);
+}
+
+class RespondToLeaveResponse extends $pb.GeneratedMessage {
+  factory RespondToLeaveResponse() => create();
+
+  RespondToLeaveResponse._();
+
+  factory RespondToLeaveResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RespondToLeaveResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RespondToLeaveResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RespondToLeaveResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RespondToLeaveResponse copyWith(
+          void Function(RespondToLeaveResponse) updates) =>
+      super.copyWith((message) => updates(message as RespondToLeaveResponse))
+          as RespondToLeaveResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RespondToLeaveResponse create() => RespondToLeaveResponse._();
+  @$core.override
+  RespondToLeaveResponse createEmptyInstance() => create();
+  static $pb.PbList<RespondToLeaveResponse> createRepeated() =>
+      $pb.PbList<RespondToLeaveResponse>();
+  @$core.pragma('dart2js:noInline')
+  static RespondToLeaveResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RespondToLeaveResponse>(create);
+  static RespondToLeaveResponse? _defaultInstance;
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

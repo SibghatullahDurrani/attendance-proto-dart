@@ -76,6 +76,13 @@ class LeaveServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.RespondToLeaveResponse> respondToLeave(
+    $0.RespondToLeaveRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$respondToLeave, request, options: options);
+  }
+
   // method descriptors
 
   static final _$listUserLeaves =
@@ -109,6 +116,11 @@ class LeaveServiceClient extends $grpc.Client {
       '/leave.LeaveService/GetInstitutionLeavesData',
       ($0.GetInstitutionLeavesDataRequest value) => value.writeToBuffer(),
       $0.GetInstitutionLeavesDataResponse.fromBuffer);
+  static final _$respondToLeave =
+      $grpc.ClientMethod<$0.RespondToLeaveRequest, $0.RespondToLeaveResponse>(
+          '/leave.LeaveService/RespondToLeave',
+          ($0.RespondToLeaveRequest value) => value.writeToBuffer(),
+          $0.RespondToLeaveResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('leave.LeaveService')
@@ -170,6 +182,15 @@ abstract class LeaveServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetInstitutionLeavesDataRequest.fromBuffer(value),
         ($0.GetInstitutionLeavesDataResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RespondToLeaveRequest,
+            $0.RespondToLeaveResponse>(
+        'RespondToLeave',
+        respondToLeave_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.RespondToLeaveRequest.fromBuffer(value),
+        ($0.RespondToLeaveResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.ListUserLeavesResponse> listUserLeaves_Pre(
@@ -222,4 +243,13 @@ abstract class LeaveServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetInstitutionLeavesDataResponse> getInstitutionLeavesData(
       $grpc.ServiceCall call, $0.GetInstitutionLeavesDataRequest request);
+
+  $async.Future<$0.RespondToLeaveResponse> respondToLeave_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.RespondToLeaveRequest> $request) async {
+    return respondToLeave($call, await $request);
+  }
+
+  $async.Future<$0.RespondToLeaveResponse> respondToLeave(
+      $grpc.ServiceCall call, $0.RespondToLeaveRequest request);
 }

@@ -654,3 +654,67 @@ final $typed_data.Uint8List institutionLeaveDataDescriptor = $convert.base64Deco
     'CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAVIHZW5kRGF0ZYgBARJECgxyYW5nZV9zdG'
     'F0dXMYCCABKA4yHC5jb21tb25fbWVzc2FnZXMuTGVhdmVTdGF0dXNIAlILcmFuZ2VTdGF0dXOI'
     'AQFCDQoLX3N0YXJ0X2RhdGVCCwoJX2VuZF9kYXRlQg8KDV9yYW5nZV9zdGF0dXM=');
+
+@$core.Deprecated('Use respondToLeaveRequestDescriptor instead')
+const RespondToLeaveRequest$json = {
+  '1': 'RespondToLeaveRequest',
+  '2': [
+    {'1': 'leave_id', '3': 1, '4': 1, '5': 9, '10': 'leaveId'},
+    {
+      '1': 'leave_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveType',
+      '10': 'leaveType'
+    },
+    {
+      '1': 'accepted_leave_date_ids',
+      '3': 3,
+      '4': 3,
+      '5': 9,
+      '10': 'acceptedLeaveDateIds'
+    },
+    {
+      '1': 'range_status',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveStatus',
+      '9': 0,
+      '10': 'rangeStatus',
+      '17': true
+    },
+    {
+      '1': 'remarks',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'remarks',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_range_status'},
+    {'1': '_remarks'},
+  ],
+};
+
+/// Descriptor for `RespondToLeaveRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List respondToLeaveRequestDescriptor = $convert.base64Decode(
+    'ChVSZXNwb25kVG9MZWF2ZVJlcXVlc3QSGQoIbGVhdmVfaWQYASABKAlSB2xlYXZlSWQSOQoKbG'
+    'VhdmVfdHlwZRgCIAEoDjIaLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVR5cGVSCWxlYXZlVHlwZRI1'
+    'ChdhY2NlcHRlZF9sZWF2ZV9kYXRlX2lkcxgDIAMoCVIUYWNjZXB0ZWRMZWF2ZURhdGVJZHMSRA'
+    'oMcmFuZ2Vfc3RhdHVzGAQgASgOMhwuY29tbW9uX21lc3NhZ2VzLkxlYXZlU3RhdHVzSABSC3Jh'
+    'bmdlU3RhdHVziAEBEh0KB3JlbWFya3MYBSABKAlIAVIHcmVtYXJrc4gBAUIPCg1fcmFuZ2Vfc3'
+    'RhdHVzQgoKCF9yZW1hcmtz');
+
+@$core.Deprecated('Use respondToLeaveResponseDescriptor instead')
+const RespondToLeaveResponse$json = {
+  '1': 'RespondToLeaveResponse',
+};
+
+/// Descriptor for `RespondToLeaveResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List respondToLeaveResponseDescriptor =
+    $convert.base64Decode('ChZSZXNwb25kVG9MZWF2ZVJlc3BvbnNl');
