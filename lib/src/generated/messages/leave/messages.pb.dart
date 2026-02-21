@@ -240,10 +240,12 @@ class UserLeave extends $pb.GeneratedMessage {
 
 class LeaveDate extends $pb.GeneratedMessage {
   factory LeaveDate({
+    $core.String? id,
     $1.Timestamp? dates,
     $0.LeaveStatus? leaveStatus,
   }) {
     final result = create();
+    if (id != null) result.id = id;
     if (dates != null) result.dates = dates;
     if (leaveStatus != null) result.leaveStatus = leaveStatus;
     return result;
@@ -262,9 +264,10 @@ class LeaveDate extends $pb.GeneratedMessage {
       _omitMessageNames ? '' : 'LeaveDate',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
-    ..aOM<$1.Timestamp>(1, _omitFieldNames ? '' : 'dates',
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOM<$1.Timestamp>(2, _omitFieldNames ? '' : 'dates',
         subBuilder: $1.Timestamp.create)
-    ..aE<$0.LeaveStatus>(2, _omitFieldNames ? '' : 'leaveStatus',
+    ..aE<$0.LeaveStatus>(3, _omitFieldNames ? '' : 'leaveStatus',
         enumValues: $0.LeaveStatus.values)
     ..hasRequiredFields = false;
 
@@ -288,24 +291,33 @@ class LeaveDate extends $pb.GeneratedMessage {
   static LeaveDate? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $1.Timestamp get dates => $_getN(0);
+  $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set dates($1.Timestamp value) => $_setField(1, value);
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasDates() => $_has(0);
+  $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDates() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $1.Timestamp ensureDates() => $_ensure(0);
+  void clearId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $0.LeaveStatus get leaveStatus => $_getN(1);
+  $1.Timestamp get dates => $_getN(1);
   @$pb.TagNumber(2)
-  set leaveStatus($0.LeaveStatus value) => $_setField(2, value);
+  set dates($1.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
-  $core.bool hasLeaveStatus() => $_has(1);
+  $core.bool hasDates() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLeaveStatus() => $_clearField(2);
+  void clearDates() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $1.Timestamp ensureDates() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $0.LeaveStatus get leaveStatus => $_getN(2);
+  @$pb.TagNumber(3)
+  set leaveStatus($0.LeaveStatus value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasLeaveStatus() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLeaveStatus() => $_clearField(3);
 }
 
 class ListUserLeavesResponse extends $pb.GeneratedMessage {
