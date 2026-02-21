@@ -134,6 +134,20 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getBulkUserShiftNames, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.MarkLeaveOfUserResponse> markLeaveOfUser(
+    $0.MarkLeaveOfUserRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$markLeaveOfUser, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.UserBelongsToShiftResponse> userBelongsToShift(
+    $0.UserBelongsToShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$userBelongsToShift, request, options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -206,6 +220,16 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/GetBulkUserShiftNames',
       ($0.GetBulkUserShiftNamesRequest value) => value.writeToBuffer(),
       $0.GetBulkUserShiftNamesResponse.fromBuffer);
+  static final _$markLeaveOfUser =
+      $grpc.ClientMethod<$0.MarkLeaveOfUserRequest, $0.MarkLeaveOfUserResponse>(
+          '/attendance.AttendanceService/MarkLeaveOfUser',
+          ($0.MarkLeaveOfUserRequest value) => value.writeToBuffer(),
+          $0.MarkLeaveOfUserResponse.fromBuffer);
+  static final _$userBelongsToShift = $grpc.ClientMethod<
+          $0.UserBelongsToShiftRequest, $0.UserBelongsToShiftResponse>(
+      '/attendance.AttendanceService/UserBelongsToShift',
+      ($0.UserBelongsToShiftRequest value) => value.writeToBuffer(),
+      $0.UserBelongsToShiftResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -326,6 +350,24 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetBulkUserShiftNamesRequest.fromBuffer(value),
         ($0.GetBulkUserShiftNamesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.MarkLeaveOfUserRequest,
+            $0.MarkLeaveOfUserResponse>(
+        'MarkLeaveOfUser',
+        markLeaveOfUser_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.MarkLeaveOfUserRequest.fromBuffer(value),
+        ($0.MarkLeaveOfUserResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UserBelongsToShiftRequest,
+            $0.UserBelongsToShiftResponse>(
+        'UserBelongsToShift',
+        userBelongsToShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UserBelongsToShiftRequest.fromBuffer(value),
+        ($0.UserBelongsToShiftResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -445,4 +487,22 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetBulkUserShiftNamesResponse> getBulkUserShiftNames(
       $grpc.ServiceCall call, $0.GetBulkUserShiftNamesRequest request);
+
+  $async.Future<$0.MarkLeaveOfUserResponse> markLeaveOfUser_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.MarkLeaveOfUserRequest> $request) async {
+    return markLeaveOfUser($call, await $request);
+  }
+
+  $async.Future<$0.MarkLeaveOfUserResponse> markLeaveOfUser(
+      $grpc.ServiceCall call, $0.MarkLeaveOfUserRequest request);
+
+  $async.Future<$0.UserBelongsToShiftResponse> userBelongsToShift_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.UserBelongsToShiftRequest> $request) async {
+    return userBelongsToShift($call, await $request);
+  }
+
+  $async.Future<$0.UserBelongsToShiftResponse> userBelongsToShift(
+      $grpc.ServiceCall call, $0.UserBelongsToShiftRequest request);
 }

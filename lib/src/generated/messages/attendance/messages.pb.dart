@@ -2604,6 +2604,260 @@ class UserShiftName extends $pb.GeneratedMessage {
   void clearShiftName() => $_clearField(2);
 }
 
+class MarkLeaveOfUserRequest extends $pb.GeneratedMessage {
+  factory MarkLeaveOfUserRequest({
+    $core.String? userId,
+    $core.Iterable<$0.Timestamp>? dates,
+    $0.Timestamp? startDate,
+    $0.Timestamp? endDate,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    if (dates != null) result.dates.addAll(dates);
+    if (startDate != null) result.startDate = startDate;
+    if (endDate != null) result.endDate = endDate;
+    return result;
+  }
+
+  MarkLeaveOfUserRequest._();
+
+  factory MarkLeaveOfUserRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory MarkLeaveOfUserRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MarkLeaveOfUserRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..pPM<$0.Timestamp>(2, _omitFieldNames ? '' : 'dates',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'startDate',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(4, _omitFieldNames ? '' : 'endDate',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MarkLeaveOfUserRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MarkLeaveOfUserRequest copyWith(
+          void Function(MarkLeaveOfUserRequest) updates) =>
+      super.copyWith((message) => updates(message as MarkLeaveOfUserRequest))
+          as MarkLeaveOfUserRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static MarkLeaveOfUserRequest create() => MarkLeaveOfUserRequest._();
+  @$core.override
+  MarkLeaveOfUserRequest createEmptyInstance() => create();
+  static $pb.PbList<MarkLeaveOfUserRequest> createRepeated() =>
+      $pb.PbList<MarkLeaveOfUserRequest>();
+  @$core.pragma('dart2js:noInline')
+  static MarkLeaveOfUserRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MarkLeaveOfUserRequest>(create);
+  static MarkLeaveOfUserRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<$0.Timestamp> get dates => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $0.Timestamp get startDate => $_getN(2);
+  @$pb.TagNumber(3)
+  set startDate($0.Timestamp value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasStartDate() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearStartDate() => $_clearField(3);
+  @$pb.TagNumber(3)
+  $0.Timestamp ensureStartDate() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $0.Timestamp get endDate => $_getN(3);
+  @$pb.TagNumber(4)
+  set endDate($0.Timestamp value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasEndDate() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearEndDate() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $0.Timestamp ensureEndDate() => $_ensure(3);
+}
+
+class MarkLeaveOfUserResponse extends $pb.GeneratedMessage {
+  factory MarkLeaveOfUserResponse() => create();
+
+  MarkLeaveOfUserResponse._();
+
+  factory MarkLeaveOfUserResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory MarkLeaveOfUserResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MarkLeaveOfUserResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MarkLeaveOfUserResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MarkLeaveOfUserResponse copyWith(
+          void Function(MarkLeaveOfUserResponse) updates) =>
+      super.copyWith((message) => updates(message as MarkLeaveOfUserResponse))
+          as MarkLeaveOfUserResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static MarkLeaveOfUserResponse create() => MarkLeaveOfUserResponse._();
+  @$core.override
+  MarkLeaveOfUserResponse createEmptyInstance() => create();
+  static $pb.PbList<MarkLeaveOfUserResponse> createRepeated() =>
+      $pb.PbList<MarkLeaveOfUserResponse>();
+  @$core.pragma('dart2js:noInline')
+  static MarkLeaveOfUserResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MarkLeaveOfUserResponse>(create);
+  static MarkLeaveOfUserResponse? _defaultInstance;
+}
+
+class UserBelongsToShiftRequest extends $pb.GeneratedMessage {
+  factory UserBelongsToShiftRequest({
+    $core.String? userId,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    return result;
+  }
+
+  UserBelongsToShiftRequest._();
+
+  factory UserBelongsToShiftRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UserBelongsToShiftRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UserBelongsToShiftRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserBelongsToShiftRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserBelongsToShiftRequest copyWith(
+          void Function(UserBelongsToShiftRequest) updates) =>
+      super.copyWith((message) => updates(message as UserBelongsToShiftRequest))
+          as UserBelongsToShiftRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UserBelongsToShiftRequest create() => UserBelongsToShiftRequest._();
+  @$core.override
+  UserBelongsToShiftRequest createEmptyInstance() => create();
+  static $pb.PbList<UserBelongsToShiftRequest> createRepeated() =>
+      $pb.PbList<UserBelongsToShiftRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UserBelongsToShiftRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserBelongsToShiftRequest>(create);
+  static UserBelongsToShiftRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+}
+
+class UserBelongsToShiftResponse extends $pb.GeneratedMessage {
+  factory UserBelongsToShiftResponse({
+    $core.bool? belongs,
+  }) {
+    final result = create();
+    if (belongs != null) result.belongs = belongs;
+    return result;
+  }
+
+  UserBelongsToShiftResponse._();
+
+  factory UserBelongsToShiftResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UserBelongsToShiftResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UserBelongsToShiftResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'belongs')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserBelongsToShiftResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserBelongsToShiftResponse copyWith(
+          void Function(UserBelongsToShiftResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as UserBelongsToShiftResponse))
+          as UserBelongsToShiftResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UserBelongsToShiftResponse create() => UserBelongsToShiftResponse._();
+  @$core.override
+  UserBelongsToShiftResponse createEmptyInstance() => create();
+  static $pb.PbList<UserBelongsToShiftResponse> createRepeated() =>
+      $pb.PbList<UserBelongsToShiftResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UserBelongsToShiftResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserBelongsToShiftResponse>(create);
+  static UserBelongsToShiftResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get belongs => $_getBF(0);
+  @$pb.TagNumber(1)
+  set belongs($core.bool value) => $_setBool(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasBelongs() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBelongs() => $_clearField(1);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

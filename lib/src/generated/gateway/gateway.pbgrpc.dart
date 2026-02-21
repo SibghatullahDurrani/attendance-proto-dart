@@ -279,6 +279,13 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$2.UserBelongsToShiftResponse> userBelongsToShift(
+    $2.UserBelongsToShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$userBelongsToShift, request, options: options);
+  }
+
   /// User RPCs
   $grpc.ResponseFuture<$3.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData(
@@ -659,6 +666,11 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/GetOrganizationDefaultShift',
       ($2.GetOrganizationDefaultShiftRequest value) => value.writeToBuffer(),
       $2.GetOrganizationDefaultShiftResponse.fromBuffer);
+  static final _$userBelongsToShift = $grpc.ClientMethod<
+          $2.UserBelongsToShiftRequest, $2.UserBelongsToShiftResponse>(
+      '/gateway.GatewayService/UserBelongsToShift',
+      ($2.UserBelongsToShiftRequest value) => value.writeToBuffer(),
+      $2.UserBelongsToShiftResponse.fromBuffer);
   static final _$getParentStudentSelectionData = $grpc.ClientMethod<
           $3.GetParentStudentSelectionDataRequest,
           $3.GetParentStudentSelectionDataResponse>(
@@ -1080,6 +1092,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
             $2.GetOrganizationDefaultShiftRequest.fromBuffer(value),
         ($2.GetOrganizationDefaultShiftResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UserBelongsToShiftRequest,
+            $2.UserBelongsToShiftResponse>(
+        'UserBelongsToShift',
+        userBelongsToShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.UserBelongsToShiftRequest.fromBuffer(value),
+        ($2.UserBelongsToShiftResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$3.GetParentStudentSelectionDataRequest,
             $3.GetParentStudentSelectionDataResponse>(
         'GetParentStudentSelectionData',
@@ -1616,6 +1637,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$2.GetOrganizationDefaultShiftResponse>
       getOrganizationDefaultShift($grpc.ServiceCall call,
           $2.GetOrganizationDefaultShiftRequest request);
+
+  $async.Future<$2.UserBelongsToShiftResponse> userBelongsToShift_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$2.UserBelongsToShiftRequest> $request) async {
+    return userBelongsToShift($call, await $request);
+  }
+
+  $async.Future<$2.UserBelongsToShiftResponse> userBelongsToShift(
+      $grpc.ServiceCall call, $2.UserBelongsToShiftRequest request);
 
   $async.Future<$3.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData_Pre(

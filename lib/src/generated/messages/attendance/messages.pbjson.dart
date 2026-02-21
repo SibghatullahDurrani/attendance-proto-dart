@@ -768,3 +768,86 @@ const UserShiftName$json = {
 final $typed_data.Uint8List userShiftNameDescriptor = $convert.base64Decode(
     'Cg1Vc2VyU2hpZnROYW1lEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIdCgpzaGlmdF9uYW1lGA'
     'IgASgJUglzaGlmdE5hbWU=');
+
+@$core.Deprecated('Use markLeaveOfUserRequestDescriptor instead')
+const MarkLeaveOfUserRequest$json = {
+  '1': 'MarkLeaveOfUserRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'dates',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'dates'
+    },
+    {
+      '1': 'start_date',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 0,
+      '10': 'startDate',
+      '17': true
+    },
+    {
+      '1': 'end_date',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 1,
+      '10': 'endDate',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_start_date'},
+    {'1': '_end_date'},
+  ],
+};
+
+/// Descriptor for `MarkLeaveOfUserRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List markLeaveOfUserRequestDescriptor = $convert.base64Decode(
+    'ChZNYXJrTGVhdmVPZlVzZXJSZXF1ZXN0EhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIwCgVkYX'
+    'RlcxgCIAMoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSBWRhdGVzEj4KCnN0YXJ0X2Rh'
+    'dGUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSABSCXN0YXJ0RGF0ZYgBARI6Cg'
+    'hlbmRfZGF0ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAVIHZW5kRGF0ZYgB'
+    'AUINCgtfc3RhcnRfZGF0ZUILCglfZW5kX2RhdGU=');
+
+@$core.Deprecated('Use markLeaveOfUserResponseDescriptor instead')
+const MarkLeaveOfUserResponse$json = {
+  '1': 'MarkLeaveOfUserResponse',
+};
+
+/// Descriptor for `MarkLeaveOfUserResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List markLeaveOfUserResponseDescriptor =
+    $convert.base64Decode('ChdNYXJrTGVhdmVPZlVzZXJSZXNwb25zZQ==');
+
+@$core.Deprecated('Use userBelongsToShiftRequestDescriptor instead')
+const UserBelongsToShiftRequest$json = {
+  '1': 'UserBelongsToShiftRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+  ],
+};
+
+/// Descriptor for `UserBelongsToShiftRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userBelongsToShiftRequestDescriptor =
+    $convert.base64Decode(
+        'ChlVc2VyQmVsb25nc1RvU2hpZnRSZXF1ZXN0EhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZA==');
+
+@$core.Deprecated('Use userBelongsToShiftResponseDescriptor instead')
+const UserBelongsToShiftResponse$json = {
+  '1': 'UserBelongsToShiftResponse',
+  '2': [
+    {'1': 'belongs', '3': 1, '4': 1, '5': 8, '10': 'belongs'},
+  ],
+};
+
+/// Descriptor for `UserBelongsToShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userBelongsToShiftResponseDescriptor =
+    $convert.base64Decode(
+        'ChpVc2VyQmVsb25nc1RvU2hpZnRSZXNwb25zZRIYCgdiZWxvbmdzGAEgASgIUgdiZWxvbmdz');
