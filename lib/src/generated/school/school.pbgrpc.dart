@@ -388,6 +388,15 @@ class SchoolServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getStudentIdsOfClass, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.IsStudentAttendingClassResponse>
+      isStudentAttendingClass(
+    $0.IsStudentAttendingClassRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$isStudentAttendingClass, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -634,6 +643,12 @@ class SchoolServiceClient extends $grpc.Client {
       '/school.SchoolService/GetStudentIdsOfClass',
       ($0.GetStudentIdsOfClassRequest value) => value.writeToBuffer(),
       $0.GetStudentIdsOfClassResponse.fromBuffer);
+  static final _$isStudentAttendingClass = $grpc.ClientMethod<
+          $0.IsStudentAttendingClassRequest,
+          $0.IsStudentAttendingClassResponse>(
+      '/school.SchoolService/IsStudentAttendingClass',
+      ($0.IsStudentAttendingClassRequest value) => value.writeToBuffer(),
+      $0.IsStudentAttendingClassResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -1060,6 +1075,15 @@ abstract class SchoolServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetStudentIdsOfClassRequest.fromBuffer(value),
         ($0.GetStudentIdsOfClassResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.IsStudentAttendingClassRequest,
+            $0.IsStudentAttendingClassResponse>(
+        'IsStudentAttendingClass',
+        isStudentAttendingClass_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.IsStudentAttendingClassRequest.fromBuffer(value),
+        ($0.IsStudentAttendingClassResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -1489,4 +1513,13 @@ abstract class SchoolServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetStudentIdsOfClassResponse> getStudentIdsOfClass(
       $grpc.ServiceCall call, $0.GetStudentIdsOfClassRequest request);
+
+  $async.Future<$0.IsStudentAttendingClassResponse> isStudentAttendingClass_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.IsStudentAttendingClassRequest> $request) async {
+    return isStudentAttendingClass($call, await $request);
+  }
+
+  $async.Future<$0.IsStudentAttendingClassResponse> isStudentAttendingClass(
+      $grpc.ServiceCall call, $0.IsStudentAttendingClassRequest request);
 }

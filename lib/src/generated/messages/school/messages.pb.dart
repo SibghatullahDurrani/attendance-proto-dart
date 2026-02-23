@@ -7644,6 +7644,127 @@ class GetStudentIdsOfClassResponse extends $pb.GeneratedMessage {
   $pb.PbList<$core.String> get studentIds => $_getList(0);
 }
 
+class IsStudentAttendingClassRequest extends $pb.GeneratedMessage {
+  factory IsStudentAttendingClassRequest({
+    $core.String? studentId,
+  }) {
+    final result = create();
+    if (studentId != null) result.studentId = studentId;
+    return result;
+  }
+
+  IsStudentAttendingClassRequest._();
+
+  factory IsStudentAttendingClassRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory IsStudentAttendingClassRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IsStudentAttendingClassRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'studentId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  IsStudentAttendingClassRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  IsStudentAttendingClassRequest copyWith(
+          void Function(IsStudentAttendingClassRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as IsStudentAttendingClassRequest))
+          as IsStudentAttendingClassRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static IsStudentAttendingClassRequest create() =>
+      IsStudentAttendingClassRequest._();
+  @$core.override
+  IsStudentAttendingClassRequest createEmptyInstance() => create();
+  static $pb.PbList<IsStudentAttendingClassRequest> createRepeated() =>
+      $pb.PbList<IsStudentAttendingClassRequest>();
+  @$core.pragma('dart2js:noInline')
+  static IsStudentAttendingClassRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<IsStudentAttendingClassRequest>(create);
+  static IsStudentAttendingClassRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get studentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set studentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasStudentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStudentId() => $_clearField(1);
+}
+
+class IsStudentAttendingClassResponse extends $pb.GeneratedMessage {
+  factory IsStudentAttendingClassResponse({
+    $core.bool? isAttendingClass,
+  }) {
+    final result = create();
+    if (isAttendingClass != null) result.isAttendingClass = isAttendingClass;
+    return result;
+  }
+
+  IsStudentAttendingClassResponse._();
+
+  factory IsStudentAttendingClassResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory IsStudentAttendingClassResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IsStudentAttendingClassResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'isAttendingClass')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  IsStudentAttendingClassResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  IsStudentAttendingClassResponse copyWith(
+          void Function(IsStudentAttendingClassResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as IsStudentAttendingClassResponse))
+          as IsStudentAttendingClassResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static IsStudentAttendingClassResponse create() =>
+      IsStudentAttendingClassResponse._();
+  @$core.override
+  IsStudentAttendingClassResponse createEmptyInstance() => create();
+  static $pb.PbList<IsStudentAttendingClassResponse> createRepeated() =>
+      $pb.PbList<IsStudentAttendingClassResponse>();
+  @$core.pragma('dart2js:noInline')
+  static IsStudentAttendingClassResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<IsStudentAttendingClassResponse>(
+          create);
+  static IsStudentAttendingClassResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get isAttendingClass => $_getBF(0);
+  @$pb.TagNumber(1)
+  set isAttendingClass($core.bool value) => $_setBool(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasIsAttendingClass() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearIsAttendingClass() => $_clearField(1);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

@@ -2623,3 +2623,37 @@ final $typed_data.Uint8List getStudentIdsOfClassResponseDescriptor =
     $convert.base64Decode(
         'ChxHZXRTdHVkZW50SWRzT2ZDbGFzc1Jlc3BvbnNlEh8KC3N0dWRlbnRfaWRzGAEgAygJUgpzdH'
         'VkZW50SWRz');
+
+@$core.Deprecated('Use isStudentAttendingClassRequestDescriptor instead')
+const IsStudentAttendingClassRequest$json = {
+  '1': 'IsStudentAttendingClassRequest',
+  '2': [
+    {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
+  ],
+};
+
+/// Descriptor for `IsStudentAttendingClassRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List isStudentAttendingClassRequestDescriptor =
+    $convert.base64Decode(
+        'Ch5Jc1N0dWRlbnRBdHRlbmRpbmdDbGFzc1JlcXVlc3QSHQoKc3R1ZGVudF9pZBgBIAEoCVIJc3'
+        'R1ZGVudElk');
+
+@$core.Deprecated('Use isStudentAttendingClassResponseDescriptor instead')
+const IsStudentAttendingClassResponse$json = {
+  '1': 'IsStudentAttendingClassResponse',
+  '2': [
+    {
+      '1': 'is_attending_class',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '10': 'isAttendingClass'
+    },
+  ],
+};
+
+/// Descriptor for `IsStudentAttendingClassResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List isStudentAttendingClassResponseDescriptor =
+    $convert.base64Decode(
+        'Ch9Jc1N0dWRlbnRBdHRlbmRpbmdDbGFzc1Jlc3BvbnNlEiwKEmlzX2F0dGVuZGluZ19jbGFzcx'
+        'gBIAEoCFIQaXNBdHRlbmRpbmdDbGFzcw==');
