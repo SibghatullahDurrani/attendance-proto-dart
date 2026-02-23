@@ -2245,3 +2245,39 @@ final $typed_data.Uint8List institutionLeavesDescriptor = $convert.base64Decode(
     'ZW5kZWRfc2VjdGlvbl9uYW1lQg0KC19zdGFydF9kYXRlQgsKCV9lbmRfZGF0ZUIPCg1fcmFuZ2'
     'Vfc3RhdHVzQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0'
     'QhcKFV90aHVtYm5haWxfZXhwaXJlc19hdA==');
+
+@$core.Deprecated('Use canRequestLeaveRequestDescriptor instead')
+const CanRequestLeaveRequest$json = {
+  '1': 'CanRequestLeaveRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'role',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.Role',
+      '10': 'role'
+    },
+  ],
+};
+
+/// Descriptor for `CanRequestLeaveRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List canRequestLeaveRequestDescriptor =
+    $convert.base64Decode(
+        'ChZDYW5SZXF1ZXN0TGVhdmVSZXF1ZXN0EhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIpCgRyb2'
+        'xlGAIgASgOMhUuY29tbW9uX21lc3NhZ2VzLlJvbGVSBHJvbGU=');
+
+@$core.Deprecated('Use canRequestLeaveResponseDescriptor instead')
+const CanRequestLeaveResponse$json = {
+  '1': 'CanRequestLeaveResponse',
+  '2': [
+    {'1': 'can_request_leave', '3': 1, '4': 1, '5': 8, '10': 'canRequestLeave'},
+  ],
+};
+
+/// Descriptor for `CanRequestLeaveResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List canRequestLeaveResponseDescriptor =
+    $convert.base64Decode(
+        'ChdDYW5SZXF1ZXN0TGVhdmVSZXNwb25zZRIqChFjYW5fcmVxdWVzdF9sZWF2ZRgBIAEoCFIPY2'
+        'FuUmVxdWVzdExlYXZl');

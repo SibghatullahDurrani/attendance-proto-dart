@@ -279,13 +279,6 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
-  $grpc.ResponseFuture<$2.UserBelongsToShiftResponse> userBelongsToShift(
-    $2.UserBelongsToShiftRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$userBelongsToShift, request, options: options);
-  }
-
   /// User RPCs
   $grpc.ResponseFuture<$3.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData(
@@ -473,6 +466,13 @@ class GatewayServiceClient extends $grpc.Client {
     $grpc.CallOptions? options,
   }) {
     return $createUnaryCall(_$respondToLeave, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$5.CanRequestLeaveResponse> canRequestLeave(
+    $5.CanRequestLeaveRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$canRequestLeave, request, options: options);
   }
 
   /// Media Rpcs
@@ -666,11 +666,6 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/GetOrganizationDefaultShift',
       ($2.GetOrganizationDefaultShiftRequest value) => value.writeToBuffer(),
       $2.GetOrganizationDefaultShiftResponse.fromBuffer);
-  static final _$userBelongsToShift = $grpc.ClientMethod<
-          $2.UserBelongsToShiftRequest, $2.UserBelongsToShiftResponse>(
-      '/gateway.GatewayService/UserBelongsToShift',
-      ($2.UserBelongsToShiftRequest value) => value.writeToBuffer(),
-      $2.UserBelongsToShiftResponse.fromBuffer);
   static final _$getParentStudentSelectionData = $grpc.ClientMethod<
           $3.GetParentStudentSelectionDataRequest,
           $3.GetParentStudentSelectionDataResponse>(
@@ -797,6 +792,11 @@ class GatewayServiceClient extends $grpc.Client {
           '/gateway.GatewayService/RespondToLeave',
           ($4.RespondToLeaveRequest value) => value.writeToBuffer(),
           $4.RespondToLeaveResponse.fromBuffer);
+  static final _$canRequestLeave =
+      $grpc.ClientMethod<$5.CanRequestLeaveRequest, $5.CanRequestLeaveResponse>(
+          '/gateway.GatewayService/CanRequestLeave',
+          ($5.CanRequestLeaveRequest value) => value.writeToBuffer(),
+          $5.CanRequestLeaveResponse.fromBuffer);
   static final _$addLeaveAttachment = $grpc.ClientMethod<
           $6.AddLeaveAttachmentRequest, $6.AddLeaveAttachmentResponse>(
       '/gateway.GatewayService/AddLeaveAttachment',
@@ -1092,15 +1092,6 @@ abstract class GatewayServiceBase extends $grpc.Service {
             $2.GetOrganizationDefaultShiftRequest.fromBuffer(value),
         ($2.GetOrganizationDefaultShiftResponse value) =>
             value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.UserBelongsToShiftRequest,
-            $2.UserBelongsToShiftResponse>(
-        'UserBelongsToShift',
-        userBelongsToShift_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $2.UserBelongsToShiftRequest.fromBuffer(value),
-        ($2.UserBelongsToShiftResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$3.GetParentStudentSelectionDataRequest,
             $3.GetParentStudentSelectionDataResponse>(
         'GetParentStudentSelectionData',
@@ -1322,6 +1313,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $4.RespondToLeaveRequest.fromBuffer(value),
         ($4.RespondToLeaveResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.CanRequestLeaveRequest,
+            $5.CanRequestLeaveResponse>(
+        'CanRequestLeave',
+        canRequestLeave_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.CanRequestLeaveRequest.fromBuffer(value),
+        ($5.CanRequestLeaveResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$6.AddLeaveAttachmentRequest,
             $6.AddLeaveAttachmentResponse>(
         'AddLeaveAttachment',
@@ -1638,15 +1638,6 @@ abstract class GatewayServiceBase extends $grpc.Service {
       getOrganizationDefaultShift($grpc.ServiceCall call,
           $2.GetOrganizationDefaultShiftRequest request);
 
-  $async.Future<$2.UserBelongsToShiftResponse> userBelongsToShift_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$2.UserBelongsToShiftRequest> $request) async {
-    return userBelongsToShift($call, await $request);
-  }
-
-  $async.Future<$2.UserBelongsToShiftResponse> userBelongsToShift(
-      $grpc.ServiceCall call, $2.UserBelongsToShiftRequest request);
-
   $async.Future<$3.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData_Pre(
           $grpc.ServiceCall $call,
@@ -1849,6 +1840,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$4.RespondToLeaveResponse> respondToLeave(
       $grpc.ServiceCall call, $4.RespondToLeaveRequest request);
+
+  $async.Future<$5.CanRequestLeaveResponse> canRequestLeave_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$5.CanRequestLeaveRequest> $request) async {
+    return canRequestLeave($call, await $request);
+  }
+
+  $async.Future<$5.CanRequestLeaveResponse> canRequestLeave(
+      $grpc.ServiceCall call, $5.CanRequestLeaveRequest request);
 
   $async.Future<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
       $grpc.ServiceCall call,

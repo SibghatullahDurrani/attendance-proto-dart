@@ -5151,6 +5151,134 @@ class InstitutionLeaves extends $pb.GeneratedMessage {
   $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(15);
 }
 
+class CanRequestLeaveRequest extends $pb.GeneratedMessage {
+  factory CanRequestLeaveRequest({
+    $core.String? userId,
+    $0.Role? role,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    if (role != null) result.role = role;
+    return result;
+  }
+
+  CanRequestLeaveRequest._();
+
+  factory CanRequestLeaveRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CanRequestLeaveRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CanRequestLeaveRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..aE<$0.Role>(2, _omitFieldNames ? '' : 'role', enumValues: $0.Role.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CanRequestLeaveRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CanRequestLeaveRequest copyWith(
+          void Function(CanRequestLeaveRequest) updates) =>
+      super.copyWith((message) => updates(message as CanRequestLeaveRequest))
+          as CanRequestLeaveRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CanRequestLeaveRequest create() => CanRequestLeaveRequest._();
+  @$core.override
+  CanRequestLeaveRequest createEmptyInstance() => create();
+  static $pb.PbList<CanRequestLeaveRequest> createRepeated() =>
+      $pb.PbList<CanRequestLeaveRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CanRequestLeaveRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CanRequestLeaveRequest>(create);
+  static CanRequestLeaveRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.Role get role => $_getN(1);
+  @$pb.TagNumber(2)
+  set role($0.Role value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasRole() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRole() => $_clearField(2);
+}
+
+class CanRequestLeaveResponse extends $pb.GeneratedMessage {
+  factory CanRequestLeaveResponse({
+    $core.bool? canRequestLeave,
+  }) {
+    final result = create();
+    if (canRequestLeave != null) result.canRequestLeave = canRequestLeave;
+    return result;
+  }
+
+  CanRequestLeaveResponse._();
+
+  factory CanRequestLeaveResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CanRequestLeaveResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CanRequestLeaveResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'canRequestLeave')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CanRequestLeaveResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CanRequestLeaveResponse copyWith(
+          void Function(CanRequestLeaveResponse) updates) =>
+      super.copyWith((message) => updates(message as CanRequestLeaveResponse))
+          as CanRequestLeaveResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CanRequestLeaveResponse create() => CanRequestLeaveResponse._();
+  @$core.override
+  CanRequestLeaveResponse createEmptyInstance() => create();
+  static $pb.PbList<CanRequestLeaveResponse> createRepeated() =>
+      $pb.PbList<CanRequestLeaveResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CanRequestLeaveResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CanRequestLeaveResponse>(create);
+  static CanRequestLeaveResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get canRequestLeave => $_getBF(0);
+  @$pb.TagNumber(1)
+  set canRequestLeave($core.bool value) => $_setBool(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasCanRequestLeave() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCanRequestLeave() => $_clearField(1);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =
