@@ -1871,10 +1871,12 @@ class AddUserToShiftRequest extends $pb.GeneratedMessage {
   factory AddUserToShiftRequest({
     $core.String? userId,
     $core.String? shiftId,
+    $1.Role? role,
   }) {
     final result = create();
     if (userId != null) result.userId = userId;
     if (shiftId != null) result.shiftId = shiftId;
+    if (role != null) result.role = role;
     return result;
   }
 
@@ -1894,6 +1896,7 @@ class AddUserToShiftRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'userId')
     ..aOS(2, _omitFieldNames ? '' : 'shiftId')
+    ..aE<$1.Role>(3, _omitFieldNames ? '' : 'role', enumValues: $1.Role.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1935,6 +1938,15 @@ class AddUserToShiftRequest extends $pb.GeneratedMessage {
   $core.bool hasShiftId() => $_has(1);
   @$pb.TagNumber(2)
   void clearShiftId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $1.Role get role => $_getN(2);
+  @$pb.TagNumber(3)
+  set role($1.Role value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasRole() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearRole() => $_clearField(3);
 }
 
 class AddUserToShiftResponse extends $pb.GeneratedMessage {
@@ -2856,6 +2868,128 @@ class UserBelongsToShiftResponse extends $pb.GeneratedMessage {
   $core.bool hasBelongs() => $_has(0);
   @$pb.TagNumber(1)
   void clearBelongs() => $_clearField(1);
+}
+
+class ChangeUsersShiftRequest extends $pb.GeneratedMessage {
+  factory ChangeUsersShiftRequest({
+    $core.Iterable<$core.String>? userIds,
+    $core.String? shiftId,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    if (shiftId != null) result.shiftId = shiftId;
+    return result;
+  }
+
+  ChangeUsersShiftRequest._();
+
+  factory ChangeUsersShiftRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ChangeUsersShiftRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ChangeUsersShiftRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..aOS(2, _omitFieldNames ? '' : 'shiftId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ChangeUsersShiftRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ChangeUsersShiftRequest copyWith(
+          void Function(ChangeUsersShiftRequest) updates) =>
+      super.copyWith((message) => updates(message as ChangeUsersShiftRequest))
+          as ChangeUsersShiftRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ChangeUsersShiftRequest create() => ChangeUsersShiftRequest._();
+  @$core.override
+  ChangeUsersShiftRequest createEmptyInstance() => create();
+  static $pb.PbList<ChangeUsersShiftRequest> createRepeated() =>
+      $pb.PbList<ChangeUsersShiftRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ChangeUsersShiftRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ChangeUsersShiftRequest>(create);
+  static ChangeUsersShiftRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get shiftId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set shiftId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasShiftId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearShiftId() => $_clearField(2);
+}
+
+class ChangeUsersShiftResponse extends $pb.GeneratedMessage {
+  factory ChangeUsersShiftResponse({
+    $core.bool? success,
+  }) {
+    final result = create();
+    if (success != null) result.success = success;
+    return result;
+  }
+
+  ChangeUsersShiftResponse._();
+
+  factory ChangeUsersShiftResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ChangeUsersShiftResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ChangeUsersShiftResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'success')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ChangeUsersShiftResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ChangeUsersShiftResponse copyWith(
+          void Function(ChangeUsersShiftResponse) updates) =>
+      super.copyWith((message) => updates(message as ChangeUsersShiftResponse))
+          as ChangeUsersShiftResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ChangeUsersShiftResponse create() => ChangeUsersShiftResponse._();
+  @$core.override
+  ChangeUsersShiftResponse createEmptyInstance() => create();
+  static $pb.PbList<ChangeUsersShiftResponse> createRepeated() =>
+      $pb.PbList<ChangeUsersShiftResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ChangeUsersShiftResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ChangeUsersShiftResponse>(create);
+  static ChangeUsersShiftResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get success => $_getBF(0);
+  @$pb.TagNumber(1)
+  set success($core.bool value) => $_setBool(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSuccess() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSuccess() => $_clearField(1);
 }
 
 const $core.bool _omitFieldNames =

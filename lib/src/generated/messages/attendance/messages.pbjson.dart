@@ -570,13 +570,22 @@ const AddUserToShiftRequest$json = {
   '2': [
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
     {'1': 'shift_id', '3': 2, '4': 1, '5': 9, '10': 'shiftId'},
+    {
+      '1': 'role',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.Role',
+      '10': 'role'
+    },
   ],
 };
 
 /// Descriptor for `AddUserToShiftRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List addUserToShiftRequestDescriptor = $convert.base64Decode(
     'ChVBZGRVc2VyVG9TaGlmdFJlcXVlc3QSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEhkKCHNoaW'
-    'Z0X2lkGAIgASgJUgdzaGlmdElk');
+    'Z0X2lkGAIgASgJUgdzaGlmdElkEikKBHJvbGUYAyABKA4yFS5jb21tb25fbWVzc2FnZXMuUm9s'
+    'ZVIEcm9sZQ==');
 
 @$core.Deprecated('Use addUserToShiftResponseDescriptor instead')
 const AddUserToShiftResponse$json = {
@@ -851,3 +860,31 @@ const UserBelongsToShiftResponse$json = {
 final $typed_data.Uint8List userBelongsToShiftResponseDescriptor =
     $convert.base64Decode(
         'ChpVc2VyQmVsb25nc1RvU2hpZnRSZXNwb25zZRIYCgdiZWxvbmdzGAEgASgIUgdiZWxvbmdz');
+
+@$core.Deprecated('Use changeUsersShiftRequestDescriptor instead')
+const ChangeUsersShiftRequest$json = {
+  '1': 'ChangeUsersShiftRequest',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+    {'1': 'shift_id', '3': 2, '4': 1, '5': 9, '10': 'shiftId'},
+  ],
+};
+
+/// Descriptor for `ChangeUsersShiftRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List changeUsersShiftRequestDescriptor =
+    $convert.base64Decode(
+        'ChdDaGFuZ2VVc2Vyc1NoaWZ0UmVxdWVzdBIZCgh1c2VyX2lkcxgBIAMoCVIHdXNlcklkcxIZCg'
+        'hzaGlmdF9pZBgCIAEoCVIHc2hpZnRJZA==');
+
+@$core.Deprecated('Use changeUsersShiftResponseDescriptor instead')
+const ChangeUsersShiftResponse$json = {
+  '1': 'ChangeUsersShiftResponse',
+  '2': [
+    {'1': 'success', '3': 1, '4': 1, '5': 8, '10': 'success'},
+  ],
+};
+
+/// Descriptor for `ChangeUsersShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List changeUsersShiftResponseDescriptor =
+    $convert.base64Decode(
+        'ChhDaGFuZ2VVc2Vyc1NoaWZ0UmVzcG9uc2USGAoHc3VjY2VzcxgBIAEoCFIHc3VjY2Vzcw==');

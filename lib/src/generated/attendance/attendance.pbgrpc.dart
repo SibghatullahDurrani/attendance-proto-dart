@@ -148,6 +148,13 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$userBelongsToShift, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.ChangeUsersShiftResponse> changeUsersShift(
+    $0.ChangeUsersShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$changeUsersShift, request, options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -230,6 +237,11 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/UserBelongsToShift',
       ($0.UserBelongsToShiftRequest value) => value.writeToBuffer(),
       $0.UserBelongsToShiftResponse.fromBuffer);
+  static final _$changeUsersShift = $grpc.ClientMethod<
+          $0.ChangeUsersShiftRequest, $0.ChangeUsersShiftResponse>(
+      '/attendance.AttendanceService/ChangeUsersShift',
+      ($0.ChangeUsersShiftRequest value) => value.writeToBuffer(),
+      $0.ChangeUsersShiftResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -368,6 +380,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.UserBelongsToShiftRequest.fromBuffer(value),
         ($0.UserBelongsToShiftResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ChangeUsersShiftRequest,
+            $0.ChangeUsersShiftResponse>(
+        'ChangeUsersShift',
+        changeUsersShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ChangeUsersShiftRequest.fromBuffer(value),
+        ($0.ChangeUsersShiftResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -505,4 +526,13 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.UserBelongsToShiftResponse> userBelongsToShift(
       $grpc.ServiceCall call, $0.UserBelongsToShiftRequest request);
+
+  $async.Future<$0.ChangeUsersShiftResponse> changeUsersShift_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.ChangeUsersShiftRequest> $request) async {
+    return changeUsersShift($call, await $request);
+  }
+
+  $async.Future<$0.ChangeUsersShiftResponse> changeUsersShift(
+      $grpc.ServiceCall call, $0.ChangeUsersShiftRequest request);
 }
