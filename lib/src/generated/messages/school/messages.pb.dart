@@ -7765,6 +7765,195 @@ class IsStudentAttendingClassResponse extends $pb.GeneratedMessage {
   void clearIsAttendingClass() => $_clearField(1);
 }
 
+class BulkAreStudentsAttendingClassRequest extends $pb.GeneratedMessage {
+  factory BulkAreStudentsAttendingClassRequest({
+    $core.Iterable<$core.String>? studentIds,
+  }) {
+    final result = create();
+    if (studentIds != null) result.studentIds.addAll(studentIds);
+    return result;
+  }
+
+  BulkAreStudentsAttendingClassRequest._();
+
+  factory BulkAreStudentsAttendingClassRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkAreStudentsAttendingClassRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkAreStudentsAttendingClassRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'studentIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkAreStudentsAttendingClassRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkAreStudentsAttendingClassRequest copyWith(
+          void Function(BulkAreStudentsAttendingClassRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as BulkAreStudentsAttendingClassRequest))
+          as BulkAreStudentsAttendingClassRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkAreStudentsAttendingClassRequest create() =>
+      BulkAreStudentsAttendingClassRequest._();
+  @$core.override
+  BulkAreStudentsAttendingClassRequest createEmptyInstance() => create();
+  static $pb.PbList<BulkAreStudentsAttendingClassRequest> createRepeated() =>
+      $pb.PbList<BulkAreStudentsAttendingClassRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BulkAreStudentsAttendingClassRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          BulkAreStudentsAttendingClassRequest>(create);
+  static BulkAreStudentsAttendingClassRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get studentIds => $_getList(0);
+}
+
+class BulkAreStudentsAttendingClassResponse extends $pb.GeneratedMessage {
+  factory BulkAreStudentsAttendingClassResponse({
+    $core.Iterable<StudentAttendingClassStatus>? studentsAttendingClassStatuses,
+  }) {
+    final result = create();
+    if (studentsAttendingClassStatuses != null)
+      result.studentsAttendingClassStatuses
+          .addAll(studentsAttendingClassStatuses);
+    return result;
+  }
+
+  BulkAreStudentsAttendingClassResponse._();
+
+  factory BulkAreStudentsAttendingClassResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkAreStudentsAttendingClassResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkAreStudentsAttendingClassResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..pPM<StudentAttendingClassStatus>(
+        1, _omitFieldNames ? '' : 'studentsAttendingClassStatuses',
+        subBuilder: StudentAttendingClassStatus.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkAreStudentsAttendingClassResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkAreStudentsAttendingClassResponse copyWith(
+          void Function(BulkAreStudentsAttendingClassResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as BulkAreStudentsAttendingClassResponse))
+          as BulkAreStudentsAttendingClassResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkAreStudentsAttendingClassResponse create() =>
+      BulkAreStudentsAttendingClassResponse._();
+  @$core.override
+  BulkAreStudentsAttendingClassResponse createEmptyInstance() => create();
+  static $pb.PbList<BulkAreStudentsAttendingClassResponse> createRepeated() =>
+      $pb.PbList<BulkAreStudentsAttendingClassResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BulkAreStudentsAttendingClassResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          BulkAreStudentsAttendingClassResponse>(create);
+  static BulkAreStudentsAttendingClassResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<StudentAttendingClassStatus> get studentsAttendingClassStatuses =>
+      $_getList(0);
+}
+
+class StudentAttendingClassStatus extends $pb.GeneratedMessage {
+  factory StudentAttendingClassStatus({
+    $core.String? studentId,
+    $core.bool? isAttendingClass,
+  }) {
+    final result = create();
+    if (studentId != null) result.studentId = studentId;
+    if (isAttendingClass != null) result.isAttendingClass = isAttendingClass;
+    return result;
+  }
+
+  StudentAttendingClassStatus._();
+
+  factory StudentAttendingClassStatus.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StudentAttendingClassStatus.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StudentAttendingClassStatus',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'studentId')
+    ..aOB(2, _omitFieldNames ? '' : 'isAttendingClass')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StudentAttendingClassStatus clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StudentAttendingClassStatus copyWith(
+          void Function(StudentAttendingClassStatus) updates) =>
+      super.copyWith(
+              (message) => updates(message as StudentAttendingClassStatus))
+          as StudentAttendingClassStatus;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static StudentAttendingClassStatus create() =>
+      StudentAttendingClassStatus._();
+  @$core.override
+  StudentAttendingClassStatus createEmptyInstance() => create();
+  static $pb.PbList<StudentAttendingClassStatus> createRepeated() =>
+      $pb.PbList<StudentAttendingClassStatus>();
+  @$core.pragma('dart2js:noInline')
+  static StudentAttendingClassStatus getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StudentAttendingClassStatus>(create);
+  static StudentAttendingClassStatus? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get studentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set studentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasStudentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStudentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.bool get isAttendingClass => $_getBF(1);
+  @$pb.TagNumber(2)
+  set isAttendingClass($core.bool value) => $_setBool(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasIsAttendingClass() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearIsAttendingClass() => $_clearField(2);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

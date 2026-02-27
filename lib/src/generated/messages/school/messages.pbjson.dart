@@ -2657,3 +2657,60 @@ final $typed_data.Uint8List isStudentAttendingClassResponseDescriptor =
     $convert.base64Decode(
         'Ch9Jc1N0dWRlbnRBdHRlbmRpbmdDbGFzc1Jlc3BvbnNlEiwKEmlzX2F0dGVuZGluZ19jbGFzcx'
         'gBIAEoCFIQaXNBdHRlbmRpbmdDbGFzcw==');
+
+@$core.Deprecated('Use bulkAreStudentsAttendingClassRequestDescriptor instead')
+const BulkAreStudentsAttendingClassRequest$json = {
+  '1': 'BulkAreStudentsAttendingClassRequest',
+  '2': [
+    {'1': 'student_ids', '3': 1, '4': 3, '5': 9, '10': 'studentIds'},
+  ],
+};
+
+/// Descriptor for `BulkAreStudentsAttendingClassRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAreStudentsAttendingClassRequestDescriptor =
+    $convert.base64Decode(
+        'CiRCdWxrQXJlU3R1ZGVudHNBdHRlbmRpbmdDbGFzc1JlcXVlc3QSHwoLc3R1ZGVudF9pZHMYAS'
+        'ADKAlSCnN0dWRlbnRJZHM=');
+
+@$core.Deprecated('Use bulkAreStudentsAttendingClassResponseDescriptor instead')
+const BulkAreStudentsAttendingClassResponse$json = {
+  '1': 'BulkAreStudentsAttendingClassResponse',
+  '2': [
+    {
+      '1': 'students_attending_class_statuses',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.StudentAttendingClassStatus',
+      '10': 'studentsAttendingClassStatuses'
+    },
+  ],
+};
+
+/// Descriptor for `BulkAreStudentsAttendingClassResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAreStudentsAttendingClassResponseDescriptor =
+    $convert.base64Decode(
+        'CiVCdWxrQXJlU3R1ZGVudHNBdHRlbmRpbmdDbGFzc1Jlc3BvbnNlEncKIXN0dWRlbnRzX2F0dG'
+        'VuZGluZ19jbGFzc19zdGF0dXNlcxgBIAMoCzIsLnNjaG9vbF9tZXNzYWdlcy5TdHVkZW50QXR0'
+        'ZW5kaW5nQ2xhc3NTdGF0dXNSHnN0dWRlbnRzQXR0ZW5kaW5nQ2xhc3NTdGF0dXNlcw==');
+
+@$core.Deprecated('Use studentAttendingClassStatusDescriptor instead')
+const StudentAttendingClassStatus$json = {
+  '1': 'StudentAttendingClassStatus',
+  '2': [
+    {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
+    {
+      '1': 'is_attending_class',
+      '3': 2,
+      '4': 1,
+      '5': 8,
+      '10': 'isAttendingClass'
+    },
+  ],
+};
+
+/// Descriptor for `StudentAttendingClassStatus`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List studentAttendingClassStatusDescriptor =
+    $convert.base64Decode(
+        'ChtTdHVkZW50QXR0ZW5kaW5nQ2xhc3NTdGF0dXMSHQoKc3R1ZGVudF9pZBgBIAEoCVIJc3R1ZG'
+        'VudElkEiwKEmlzX2F0dGVuZGluZ19jbGFzcxgCIAEoCFIQaXNBdHRlbmRpbmdDbGFzcw==');

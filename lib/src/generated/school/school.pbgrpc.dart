@@ -397,6 +397,15 @@ class SchoolServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.BulkAreStudentsAttendingClassResponse>
+      bulkAreStudentsAttendingClass(
+    $0.BulkAreStudentsAttendingClassRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkAreStudentsAttendingClass, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -649,6 +658,12 @@ class SchoolServiceClient extends $grpc.Client {
       '/school.SchoolService/IsStudentAttendingClass',
       ($0.IsStudentAttendingClassRequest value) => value.writeToBuffer(),
       $0.IsStudentAttendingClassResponse.fromBuffer);
+  static final _$bulkAreStudentsAttendingClass = $grpc.ClientMethod<
+          $0.BulkAreStudentsAttendingClassRequest,
+          $0.BulkAreStudentsAttendingClassResponse>(
+      '/school.SchoolService/BulkAreStudentsAttendingClass',
+      ($0.BulkAreStudentsAttendingClassRequest value) => value.writeToBuffer(),
+      $0.BulkAreStudentsAttendingClassResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -1084,6 +1099,16 @@ abstract class SchoolServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.IsStudentAttendingClassRequest.fromBuffer(value),
         ($0.IsStudentAttendingClassResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkAreStudentsAttendingClassRequest,
+            $0.BulkAreStudentsAttendingClassResponse>(
+        'BulkAreStudentsAttendingClass',
+        bulkAreStudentsAttendingClass_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkAreStudentsAttendingClassRequest.fromBuffer(value),
+        ($0.BulkAreStudentsAttendingClassResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -1522,4 +1547,16 @@ abstract class SchoolServiceBase extends $grpc.Service {
 
   $async.Future<$0.IsStudentAttendingClassResponse> isStudentAttendingClass(
       $grpc.ServiceCall call, $0.IsStudentAttendingClassRequest request);
+
+  $async.Future<$0.BulkAreStudentsAttendingClassResponse>
+      bulkAreStudentsAttendingClass_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.BulkAreStudentsAttendingClassRequest>
+              $request) async {
+    return bulkAreStudentsAttendingClass($call, await $request);
+  }
+
+  $async.Future<$0.BulkAreStudentsAttendingClassResponse>
+      bulkAreStudentsAttendingClass($grpc.ServiceCall call,
+          $0.BulkAreStudentsAttendingClassRequest request);
 }
