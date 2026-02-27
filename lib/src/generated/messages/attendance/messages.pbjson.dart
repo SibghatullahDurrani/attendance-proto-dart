@@ -888,3 +888,24 @@ const ChangeUsersShiftResponse$json = {
 final $typed_data.Uint8List changeUsersShiftResponseDescriptor =
     $convert.base64Decode(
         'ChhDaGFuZ2VVc2Vyc1NoaWZ0UmVzcG9uc2USGAoHc3VjY2VzcxgBIAEoCFIHc3VjY2Vzcw==');
+
+@$core.Deprecated('Use attendanceEventDescriptor instead')
+const AttendanceEvent$json = {
+  '1': 'AttendanceEvent',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'timestamp',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'timestamp'
+    },
+  ],
+};
+
+/// Descriptor for `AttendanceEvent`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List attendanceEventDescriptor = $convert.base64Decode(
+    'Cg9BdHRlbmRhbmNlRXZlbnQSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEjgKCXRpbWVzdGFtcB'
+    'gCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXRpbWVzdGFtcA==');

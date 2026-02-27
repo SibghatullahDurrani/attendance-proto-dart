@@ -2992,6 +2992,78 @@ class ChangeUsersShiftResponse extends $pb.GeneratedMessage {
   void clearSuccess() => $_clearField(1);
 }
 
+class AttendanceEvent extends $pb.GeneratedMessage {
+  factory AttendanceEvent({
+    $core.String? userId,
+    $0.Timestamp? timestamp,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    if (timestamp != null) result.timestamp = timestamp;
+    return result;
+  }
+
+  AttendanceEvent._();
+
+  factory AttendanceEvent.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AttendanceEvent.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AttendanceEvent',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'timestamp',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AttendanceEvent clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AttendanceEvent copyWith(void Function(AttendanceEvent) updates) =>
+      super.copyWith((message) => updates(message as AttendanceEvent))
+          as AttendanceEvent;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AttendanceEvent create() => AttendanceEvent._();
+  @$core.override
+  AttendanceEvent createEmptyInstance() => create();
+  static $pb.PbList<AttendanceEvent> createRepeated() =>
+      $pb.PbList<AttendanceEvent>();
+  @$core.pragma('dart2js:noInline')
+  static AttendanceEvent getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AttendanceEvent>(create);
+  static AttendanceEvent? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.Timestamp get timestamp => $_getN(1);
+  @$pb.TagNumber(2)
+  set timestamp($0.Timestamp value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasTimestamp() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTimestamp() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $0.Timestamp ensureTimestamp() => $_ensure(1);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =
