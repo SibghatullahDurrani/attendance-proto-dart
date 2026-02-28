@@ -475,6 +475,15 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$canRequestLeave, request, options: options);
   }
 
+  $grpc.ResponseFuture<$5.ListShiftUserRegistrationsResponse>
+      listShiftUserRegistrations(
+    $5.ListShiftUserRegistrationsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listShiftUserRegistrations, request,
+        options: options);
+  }
+
   /// Media Rpcs
   $grpc.ResponseFuture<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
     $async.Stream<$6.AddLeaveAttachmentRequest> request, {
@@ -797,6 +806,12 @@ class GatewayServiceClient extends $grpc.Client {
           '/gateway.GatewayService/CanRequestLeave',
           ($5.CanRequestLeaveRequest value) => value.writeToBuffer(),
           $5.CanRequestLeaveResponse.fromBuffer);
+  static final _$listShiftUserRegistrations = $grpc.ClientMethod<
+          $5.ListShiftUserRegistrationsRequest,
+          $5.ListShiftUserRegistrationsResponse>(
+      '/gateway.GatewayService/ListShiftUserRegistrations',
+      ($5.ListShiftUserRegistrationsRequest value) => value.writeToBuffer(),
+      $5.ListShiftUserRegistrationsResponse.fromBuffer);
   static final _$addLeaveAttachment = $grpc.ClientMethod<
           $6.AddLeaveAttachmentRequest, $6.AddLeaveAttachmentResponse>(
       '/gateway.GatewayService/AddLeaveAttachment',
@@ -1322,6 +1337,16 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $5.CanRequestLeaveRequest.fromBuffer(value),
         ($5.CanRequestLeaveResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.ListShiftUserRegistrationsRequest,
+            $5.ListShiftUserRegistrationsResponse>(
+        'ListShiftUserRegistrations',
+        listShiftUserRegistrations_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.ListShiftUserRegistrationsRequest.fromBuffer(value),
+        ($5.ListShiftUserRegistrationsResponse value) =>
+            value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$6.AddLeaveAttachmentRequest,
             $6.AddLeaveAttachmentResponse>(
         'AddLeaveAttachment',
@@ -1849,6 +1874,16 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$5.CanRequestLeaveResponse> canRequestLeave(
       $grpc.ServiceCall call, $5.CanRequestLeaveRequest request);
+
+  $async.Future<$5.ListShiftUserRegistrationsResponse>
+      listShiftUserRegistrations_Pre($grpc.ServiceCall $call,
+          $async.Future<$5.ListShiftUserRegistrationsRequest> $request) async {
+    return listShiftUserRegistrations($call, await $request);
+  }
+
+  $async.Future<$5.ListShiftUserRegistrationsResponse>
+      listShiftUserRegistrations(
+          $grpc.ServiceCall call, $5.ListShiftUserRegistrationsRequest request);
 
   $async.Future<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
       $grpc.ServiceCall call,

@@ -5279,6 +5279,290 @@ class CanRequestLeaveResponse extends $pb.GeneratedMessage {
   void clearCanRequestLeave() => $_clearField(1);
 }
 
+class ListShiftUserRegistrationsRequest extends $pb.GeneratedMessage {
+  factory ListShiftUserRegistrationsRequest({
+    $0.PaginationRequest? pagination,
+    $core.String? shiftId,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (shiftId != null) result.shiftId = shiftId;
+    return result;
+  }
+
+  ListShiftUserRegistrationsRequest._();
+
+  factory ListShiftUserRegistrationsRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListShiftUserRegistrationsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListShiftUserRegistrationsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'shiftId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListShiftUserRegistrationsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListShiftUserRegistrationsRequest copyWith(
+          void Function(ListShiftUserRegistrationsRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as ListShiftUserRegistrationsRequest))
+          as ListShiftUserRegistrationsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListShiftUserRegistrationsRequest create() =>
+      ListShiftUserRegistrationsRequest._();
+  @$core.override
+  ListShiftUserRegistrationsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListShiftUserRegistrationsRequest> createRepeated() =>
+      $pb.PbList<ListShiftUserRegistrationsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListShiftUserRegistrationsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListShiftUserRegistrationsRequest>(
+          create);
+  static ListShiftUserRegistrationsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get shiftId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set shiftId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasShiftId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearShiftId() => $_clearField(2);
+}
+
+class ListShiftUserRegistrationsResponse extends $pb.GeneratedMessage {
+  factory ListShiftUserRegistrationsResponse({
+    $0.PaginationResponse? pagination,
+    $core.Iterable<ShiftUserRegistration>? shiftUserRegistrations,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (shiftUserRegistrations != null)
+      result.shiftUserRegistrations.addAll(shiftUserRegistrations);
+    return result;
+  }
+
+  ListShiftUserRegistrationsResponse._();
+
+  factory ListShiftUserRegistrationsResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListShiftUserRegistrationsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListShiftUserRegistrationsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationResponse>(2, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationResponse.create)
+    ..pPM<ShiftUserRegistration>(
+        3, _omitFieldNames ? '' : 'shiftUserRegistrations',
+        subBuilder: ShiftUserRegistration.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListShiftUserRegistrationsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListShiftUserRegistrationsResponse copyWith(
+          void Function(ListShiftUserRegistrationsResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as ListShiftUserRegistrationsResponse))
+          as ListShiftUserRegistrationsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListShiftUserRegistrationsResponse create() =>
+      ListShiftUserRegistrationsResponse._();
+  @$core.override
+  ListShiftUserRegistrationsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListShiftUserRegistrationsResponse> createRepeated() =>
+      $pb.PbList<ListShiftUserRegistrationsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListShiftUserRegistrationsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListShiftUserRegistrationsResponse>(
+          create);
+  static ListShiftUserRegistrationsResponse? _defaultInstance;
+
+  @$pb.TagNumber(2)
+  $0.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(2)
+  set pagination($0.PaginationResponse value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(2)
+  void clearPagination() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $0.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(3)
+  $pb.PbList<ShiftUserRegistration> get shiftUserRegistrations => $_getList(1);
+}
+
+class ShiftUserRegistration extends $pb.GeneratedMessage {
+  factory ShiftUserRegistration({
+    $core.String? userId,
+    $0.Role? role,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? lastAttendedClassName,
+    $core.String? lastAttendedSectionName,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    if (role != null) result.role = role;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (lastAttendedClassName != null)
+      result.lastAttendedClassName = lastAttendedClassName;
+    if (lastAttendedSectionName != null)
+      result.lastAttendedSectionName = lastAttendedSectionName;
+    return result;
+  }
+
+  ShiftUserRegistration._();
+
+  factory ShiftUserRegistration.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ShiftUserRegistration.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ShiftUserRegistration',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..aE<$0.Role>(2, _omitFieldNames ? '' : 'role', enumValues: $0.Role.values)
+    ..aOS(3, _omitFieldNames ? '' : 'firstName')
+    ..aOS(4, _omitFieldNames ? '' : 'secondName')
+    ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(6, _omitFieldNames ? '' : 'lastAttendedClassName')
+    ..aOS(7, _omitFieldNames ? '' : 'lastAttendedSectionName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ShiftUserRegistration clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ShiftUserRegistration copyWith(
+          void Function(ShiftUserRegistration) updates) =>
+      super.copyWith((message) => updates(message as ShiftUserRegistration))
+          as ShiftUserRegistration;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ShiftUserRegistration create() => ShiftUserRegistration._();
+  @$core.override
+  ShiftUserRegistration createEmptyInstance() => create();
+  static $pb.PbList<ShiftUserRegistration> createRepeated() =>
+      $pb.PbList<ShiftUserRegistration>();
+  @$core.pragma('dart2js:noInline')
+  static ShiftUserRegistration getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ShiftUserRegistration>(create);
+  static ShiftUserRegistration? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.Role get role => $_getN(1);
+  @$pb.TagNumber(2)
+  set role($0.Role value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasRole() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRole() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get firstName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set firstName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasFirstName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFirstName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get secondName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set secondName($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasSecondName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSecondName() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get identificationNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set identificationNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasIdentificationNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIdentificationNumber() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get lastAttendedClassName => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set lastAttendedClassName($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasLastAttendedClassName() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearLastAttendedClassName() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get lastAttendedSectionName => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set lastAttendedSectionName($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasLastAttendedSectionName() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearLastAttendedSectionName() => $_clearField(7);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

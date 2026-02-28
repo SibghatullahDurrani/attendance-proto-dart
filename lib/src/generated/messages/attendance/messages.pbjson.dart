@@ -861,34 +861,6 @@ final $typed_data.Uint8List userBelongsToShiftResponseDescriptor =
     $convert.base64Decode(
         'ChpVc2VyQmVsb25nc1RvU2hpZnRSZXNwb25zZRIYCgdiZWxvbmdzGAEgASgIUgdiZWxvbmdz');
 
-@$core.Deprecated('Use changeUsersShiftRequestDescriptor instead')
-const ChangeUsersShiftRequest$json = {
-  '1': 'ChangeUsersShiftRequest',
-  '2': [
-    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
-    {'1': 'shift_id', '3': 2, '4': 1, '5': 9, '10': 'shiftId'},
-  ],
-};
-
-/// Descriptor for `ChangeUsersShiftRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List changeUsersShiftRequestDescriptor =
-    $convert.base64Decode(
-        'ChdDaGFuZ2VVc2Vyc1NoaWZ0UmVxdWVzdBIZCgh1c2VyX2lkcxgBIAMoCVIHdXNlcklkcxIZCg'
-        'hzaGlmdF9pZBgCIAEoCVIHc2hpZnRJZA==');
-
-@$core.Deprecated('Use changeUsersShiftResponseDescriptor instead')
-const ChangeUsersShiftResponse$json = {
-  '1': 'ChangeUsersShiftResponse',
-  '2': [
-    {'1': 'success', '3': 1, '4': 1, '5': 8, '10': 'success'},
-  ],
-};
-
-/// Descriptor for `ChangeUsersShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List changeUsersShiftResponseDescriptor =
-    $convert.base64Decode(
-        'ChhDaGFuZ2VVc2Vyc1NoaWZ0UmVzcG9uc2USGAoHc3VjY2VzcxgBIAEoCFIHc3VjY2Vzcw==');
-
 @$core.Deprecated('Use attendanceEventDescriptor instead')
 const AttendanceEvent$json = {
   '1': 'AttendanceEvent',
@@ -909,3 +881,78 @@ const AttendanceEvent$json = {
 final $typed_data.Uint8List attendanceEventDescriptor = $convert.base64Decode(
     'Cg9BdHRlbmRhbmNlRXZlbnQSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEjgKCXRpbWVzdGFtcB'
     'gCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXRpbWVzdGFtcA==');
+
+@$core.Deprecated('Use getUserRegisteredInShiftRequestDescriptor instead')
+const GetUserRegisteredInShiftRequest$json = {
+  '1': 'GetUserRegisteredInShiftRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'shift_id', '3': 2, '4': 1, '5': 9, '10': 'shiftId'},
+  ],
+};
+
+/// Descriptor for `GetUserRegisteredInShiftRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserRegisteredInShiftRequestDescriptor =
+    $convert.base64Decode(
+        'Ch9HZXRVc2VyUmVnaXN0ZXJlZEluU2hpZnRSZXF1ZXN0EkIKCnBhZ2luYXRpb24YASABKAsyIi'
+        '5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SGQoIc2hpZnRf'
+        'aWQYAiABKAlSB3NoaWZ0SWQ=');
+
+@$core.Deprecated('Use getUserRegisteredInShiftResponseDescriptor instead')
+const GetUserRegisteredInShiftResponse$json = {
+  '1': 'GetUserRegisteredInShiftResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'user_shift_registrations',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.UserShiftRegistration',
+      '10': 'userShiftRegistrations'
+    },
+  ],
+};
+
+/// Descriptor for `GetUserRegisteredInShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserRegisteredInShiftResponseDescriptor =
+    $convert.base64Decode(
+        'CiBHZXRVc2VyUmVnaXN0ZXJlZEluU2hpZnRSZXNwb25zZRJDCgpwYWdpbmF0aW9uGAEgASgLMi'
+        'MuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbhJkChh1c2Vy'
+        'X3NoaWZ0X3JlZ2lzdHJhdGlvbnMYAiADKAsyKi5hdHRlbmRhbmNlX21lc3NhZ2VzLlVzZXJTaG'
+        'lmdFJlZ2lzdHJhdGlvblIWdXNlclNoaWZ0UmVnaXN0cmF0aW9ucw==');
+
+@$core.Deprecated('Use userShiftRegistrationDescriptor instead')
+const UserShiftRegistration$json = {
+  '1': 'UserShiftRegistration',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'role',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.Role',
+      '10': 'role'
+    },
+  ],
+};
+
+/// Descriptor for `UserShiftRegistration`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userShiftRegistrationDescriptor = $convert.base64Decode(
+    'ChVVc2VyU2hpZnRSZWdpc3RyYXRpb24SFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEikKBHJvbG'
+    'UYAiABKA4yFS5jb21tb25fbWVzc2FnZXMuUm9sZVIEcm9sZQ==');

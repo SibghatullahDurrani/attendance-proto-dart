@@ -148,11 +148,13 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$userBelongsToShift, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.ChangeUsersShiftResponse> changeUsersShift(
-    $0.ChangeUsersShiftRequest request, {
+  $grpc.ResponseFuture<$0.GetUserRegisteredInShiftResponse>
+      getUserRegisteredInShift(
+    $0.GetUserRegisteredInShiftRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$changeUsersShift, request, options: options);
+    return $createUnaryCall(_$getUserRegisteredInShift, request,
+        options: options);
   }
 
   // method descriptors
@@ -237,11 +239,12 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/UserBelongsToShift',
       ($0.UserBelongsToShiftRequest value) => value.writeToBuffer(),
       $0.UserBelongsToShiftResponse.fromBuffer);
-  static final _$changeUsersShift = $grpc.ClientMethod<
-          $0.ChangeUsersShiftRequest, $0.ChangeUsersShiftResponse>(
-      '/attendance.AttendanceService/ChangeUsersShift',
-      ($0.ChangeUsersShiftRequest value) => value.writeToBuffer(),
-      $0.ChangeUsersShiftResponse.fromBuffer);
+  static final _$getUserRegisteredInShift = $grpc.ClientMethod<
+          $0.GetUserRegisteredInShiftRequest,
+          $0.GetUserRegisteredInShiftResponse>(
+      '/attendance.AttendanceService/GetUserRegisteredInShift',
+      ($0.GetUserRegisteredInShiftRequest value) => value.writeToBuffer(),
+      $0.GetUserRegisteredInShiftResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -380,15 +383,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.UserBelongsToShiftRequest.fromBuffer(value),
         ($0.UserBelongsToShiftResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.ChangeUsersShiftRequest,
-            $0.ChangeUsersShiftResponse>(
-        'ChangeUsersShift',
-        changeUsersShift_Pre,
+    $addMethod($grpc.ServiceMethod<$0.GetUserRegisteredInShiftRequest,
+            $0.GetUserRegisteredInShiftResponse>(
+        'GetUserRegisteredInShift',
+        getUserRegisteredInShift_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.ChangeUsersShiftRequest.fromBuffer(value),
-        ($0.ChangeUsersShiftResponse value) => value.writeToBuffer()));
+            $0.GetUserRegisteredInShiftRequest.fromBuffer(value),
+        ($0.GetUserRegisteredInShiftResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -527,12 +530,12 @@ abstract class AttendanceServiceBase extends $grpc.Service {
   $async.Future<$0.UserBelongsToShiftResponse> userBelongsToShift(
       $grpc.ServiceCall call, $0.UserBelongsToShiftRequest request);
 
-  $async.Future<$0.ChangeUsersShiftResponse> changeUsersShift_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$0.ChangeUsersShiftRequest> $request) async {
-    return changeUsersShift($call, await $request);
+  $async.Future<$0.GetUserRegisteredInShiftResponse>
+      getUserRegisteredInShift_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetUserRegisteredInShiftRequest> $request) async {
+    return getUserRegisteredInShift($call, await $request);
   }
 
-  $async.Future<$0.ChangeUsersShiftResponse> changeUsersShift(
-      $grpc.ServiceCall call, $0.ChangeUsersShiftRequest request);
+  $async.Future<$0.GetUserRegisteredInShiftResponse> getUserRegisteredInShift(
+      $grpc.ServiceCall call, $0.GetUserRegisteredInShiftRequest request);
 }

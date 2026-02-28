@@ -2782,3 +2782,59 @@ final $typed_data.Uint8List studentAttendingClassStatusDescriptor = $convert.bas
     'bGFzc19pZBgDIAEoCUgAUgdjbGFzc0lkiAEBEiIKCmNsYXNzX25hbWUYBCABKAlIAVIJY2xhc3'
     'NOYW1liAEBEiYKDHNlY3Rpb25fbmFtZRgFIAEoCUgCUgtzZWN0aW9uTmFtZYgBAUILCglfY2xh'
     'c3NfaWRCDQoLX2NsYXNzX25hbWVCDwoNX3NlY3Rpb25fbmFtZQ==');
+
+@$core.Deprecated('Use getSchoolParentChainIdRequestDescriptor instead')
+const GetSchoolParentChainIdRequest$json = {
+  '1': 'GetSchoolParentChainIdRequest',
+  '2': [
+    {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
+  ],
+};
+
+/// Descriptor for `GetSchoolParentChainIdRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolParentChainIdRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1HZXRTY2hvb2xQYXJlbnRDaGFpbklkUmVxdWVzdBIbCglzY2hvb2xfaWQYASABKAlSCHNjaG'
+        '9vbElk');
+
+@$core.Deprecated('Use getSchoolParentChainIdResponseDescriptor instead')
+const GetSchoolParentChainIdResponse$json = {
+  '1': 'GetSchoolParentChainIdResponse',
+  '2': [
+    {'1': 'school_chain_id', '3': 2, '4': 1, '5': 9, '10': 'schoolChainId'},
+  ],
+};
+
+/// Descriptor for `GetSchoolParentChainIdResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolParentChainIdResponseDescriptor =
+    $convert.base64Decode(
+        'Ch5HZXRTY2hvb2xQYXJlbnRDaGFpbklkUmVzcG9uc2USJgoPc2Nob29sX2NoYWluX2lkGAIgAS'
+        'gJUg1zY2hvb2xDaGFpbklk');
+
+@$core.Deprecated('Use getSchoolIdsInSchoolChainRequestDescriptor instead')
+const GetSchoolIdsInSchoolChainRequest$json = {
+  '1': 'GetSchoolIdsInSchoolChainRequest',
+  '2': [
+    {'1': 'school_chain_id', '3': 1, '4': 1, '5': 9, '10': 'schoolChainId'},
+  ],
+};
+
+/// Descriptor for `GetSchoolIdsInSchoolChainRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolIdsInSchoolChainRequestDescriptor =
+    $convert.base64Decode(
+        'CiBHZXRTY2hvb2xJZHNJblNjaG9vbENoYWluUmVxdWVzdBImCg9zY2hvb2xfY2hhaW5faWQYAS'
+        'ABKAlSDXNjaG9vbENoYWluSWQ=');
+
+@$core.Deprecated('Use getSchoolIdsInSchoolChainResponseDescriptor instead')
+const GetSchoolIdsInSchoolChainResponse$json = {
+  '1': 'GetSchoolIdsInSchoolChainResponse',
+  '2': [
+    {'1': 'school_ids', '3': 2, '4': 3, '5': 9, '10': 'schoolIds'},
+  ],
+};
+
+/// Descriptor for `GetSchoolIdsInSchoolChainResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchoolIdsInSchoolChainResponseDescriptor =
+    $convert.base64Decode(
+        'CiFHZXRTY2hvb2xJZHNJblNjaG9vbENoYWluUmVzcG9uc2USHQoKc2Nob29sX2lkcxgCIAMoCV'
+        'IJc2Nob29sSWRz');

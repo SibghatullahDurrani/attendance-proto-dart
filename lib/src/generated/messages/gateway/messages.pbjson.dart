@@ -2281,3 +2281,128 @@ final $typed_data.Uint8List canRequestLeaveResponseDescriptor =
     $convert.base64Decode(
         'ChdDYW5SZXF1ZXN0TGVhdmVSZXNwb25zZRIqChFjYW5fcmVxdWVzdF9sZWF2ZRgBIAEoCFIPY2'
         'FuUmVxdWVzdExlYXZl');
+
+@$core.Deprecated('Use listShiftUserRegistrationsRequestDescriptor instead')
+const ListShiftUserRegistrationsRequest$json = {
+  '1': 'ListShiftUserRegistrationsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'shift_id', '3': 2, '4': 1, '5': 9, '10': 'shiftId'},
+  ],
+};
+
+/// Descriptor for `ListShiftUserRegistrationsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listShiftUserRegistrationsRequestDescriptor =
+    $convert.base64Decode(
+        'CiFMaXN0U2hpZnRVc2VyUmVnaXN0cmF0aW9uc1JlcXVlc3QSQgoKcGFnaW5hdGlvbhgBIAEoCz'
+        'IiLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhIZCghzaGlm'
+        'dF9pZBgCIAEoCVIHc2hpZnRJZA==');
+
+@$core.Deprecated('Use listShiftUserRegistrationsResponseDescriptor instead')
+const ListShiftUserRegistrationsResponse$json = {
+  '1': 'ListShiftUserRegistrationsResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'shift_user_registrations',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.ShiftUserRegistration',
+      '10': 'shiftUserRegistrations'
+    },
+  ],
+};
+
+/// Descriptor for `ListShiftUserRegistrationsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listShiftUserRegistrationsResponseDescriptor =
+    $convert.base64Decode(
+        'CiJMaXN0U2hpZnRVc2VyUmVnaXN0cmF0aW9uc1Jlc3BvbnNlEkMKCnBhZ2luYXRpb24YAiABKA'
+        'syIy5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpwYWdpbmF0aW9uEmEKGHNo'
+        'aWZ0X3VzZXJfcmVnaXN0cmF0aW9ucxgDIAMoCzInLmdhdGV3YXlfbWVzc2FnZXMuU2hpZnRVc2'
+        'VyUmVnaXN0cmF0aW9uUhZzaGlmdFVzZXJSZWdpc3RyYXRpb25z');
+
+@$core.Deprecated('Use shiftUserRegistrationDescriptor instead')
+const ShiftUserRegistration$json = {
+  '1': 'ShiftUserRegistration',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'role',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.Role',
+      '10': 'role'
+    },
+    {'1': 'first_name', '3': 3, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'last_attended_class_name',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'lastAttendedClassName',
+      '17': true
+    },
+    {
+      '1': 'last_attended_section_name',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'lastAttendedSectionName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_identification_number'},
+    {'1': '_last_attended_class_name'},
+    {'1': '_last_attended_section_name'},
+  ],
+};
+
+/// Descriptor for `ShiftUserRegistration`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List shiftUserRegistrationDescriptor = $convert.base64Decode(
+    'ChVTaGlmdFVzZXJSZWdpc3RyYXRpb24SFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEikKBHJvbG'
+    'UYAiABKA4yFS5jb21tb25fbWVzc2FnZXMuUm9sZVIEcm9sZRIdCgpmaXJzdF9uYW1lGAMgASgJ'
+    'UglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYBCABKAlIAFIKc2Vjb25kTmFtZYgBARI4ChVpZG'
+    'VudGlmaWNhdGlvbl9udW1iZXIYBSABKAlIAVIUaWRlbnRpZmljYXRpb25OdW1iZXKIAQESPAoY'
+    'bGFzdF9hdHRlbmRlZF9jbGFzc19uYW1lGAYgASgJSAJSFWxhc3RBdHRlbmRlZENsYXNzTmFtZY'
+    'gBARJAChpsYXN0X2F0dGVuZGVkX3NlY3Rpb25fbmFtZRgHIAEoCUgDUhdsYXN0QXR0ZW5kZWRT'
+    'ZWN0aW9uTmFtZYgBAUIOCgxfc2Vjb25kX25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX251bWJlck'
+    'IbChlfbGFzdF9hdHRlbmRlZF9jbGFzc19uYW1lQh0KG19sYXN0X2F0dGVuZGVkX3NlY3Rpb25f'
+    'bmFtZQ==');
