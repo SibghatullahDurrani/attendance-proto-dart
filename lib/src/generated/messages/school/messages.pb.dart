@@ -7707,9 +7707,15 @@ class IsStudentAttendingClassRequest extends $pb.GeneratedMessage {
 class IsStudentAttendingClassResponse extends $pb.GeneratedMessage {
   factory IsStudentAttendingClassResponse({
     $core.bool? isAttendingClass,
+    $core.String? classId,
+    $core.String? className,
+    $core.String? sectionName,
   }) {
     final result = create();
     if (isAttendingClass != null) result.isAttendingClass = isAttendingClass;
+    if (classId != null) result.classId = classId;
+    if (className != null) result.className = className;
+    if (sectionName != null) result.sectionName = sectionName;
     return result;
   }
 
@@ -7728,6 +7734,9 @@ class IsStudentAttendingClassResponse extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
     ..aOB(1, _omitFieldNames ? '' : 'isAttendingClass')
+    ..aOS(2, _omitFieldNames ? '' : 'classId')
+    ..aOS(3, _omitFieldNames ? '' : 'className')
+    ..aOS(4, _omitFieldNames ? '' : 'sectionName')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -7763,6 +7772,33 @@ class IsStudentAttendingClassResponse extends $pb.GeneratedMessage {
   $core.bool hasIsAttendingClass() => $_has(0);
   @$pb.TagNumber(1)
   void clearIsAttendingClass() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get classId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set classId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasClassId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearClassId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get className => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set className($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasClassName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearClassName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get sectionName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set sectionName($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasSectionName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSectionName() => $_clearField(4);
 }
 
 class BulkAreStudentsAttendingClassRequest extends $pb.GeneratedMessage {
@@ -7886,10 +7922,16 @@ class StudentAttendingClassStatus extends $pb.GeneratedMessage {
   factory StudentAttendingClassStatus({
     $core.String? studentId,
     $core.bool? isAttendingClass,
+    $core.String? classId,
+    $core.String? className,
+    $core.String? sectionName,
   }) {
     final result = create();
     if (studentId != null) result.studentId = studentId;
     if (isAttendingClass != null) result.isAttendingClass = isAttendingClass;
+    if (classId != null) result.classId = classId;
+    if (className != null) result.className = className;
+    if (sectionName != null) result.sectionName = sectionName;
     return result;
   }
 
@@ -7909,6 +7951,9 @@ class StudentAttendingClassStatus extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'studentId')
     ..aOB(2, _omitFieldNames ? '' : 'isAttendingClass')
+    ..aOS(3, _omitFieldNames ? '' : 'classId')
+    ..aOS(4, _omitFieldNames ? '' : 'className')
+    ..aOS(5, _omitFieldNames ? '' : 'sectionName')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -7952,6 +7997,33 @@ class StudentAttendingClassStatus extends $pb.GeneratedMessage {
   $core.bool hasIsAttendingClass() => $_has(1);
   @$pb.TagNumber(2)
   void clearIsAttendingClass() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get classId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set classId($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasClassId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearClassId() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get className => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set className($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasClassName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearClassName() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get sectionName => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set sectionName($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasSectionName() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearSectionName() => $_clearField(5);
 }
 
 const $core.bool _omitFieldNames =

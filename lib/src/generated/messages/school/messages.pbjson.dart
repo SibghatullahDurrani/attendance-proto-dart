@@ -2649,14 +2649,48 @@ const IsStudentAttendingClassResponse$json = {
       '5': 8,
       '10': 'isAttendingClass'
     },
+    {
+      '1': 'class_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'classId',
+      '17': true
+    },
+    {
+      '1': 'class_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'className',
+      '17': true
+    },
+    {
+      '1': 'section_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'sectionName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_class_id'},
+    {'1': '_class_name'},
+    {'1': '_section_name'},
   ],
 };
 
 /// Descriptor for `IsStudentAttendingClassResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List isStudentAttendingClassResponseDescriptor =
-    $convert.base64Decode(
-        'Ch9Jc1N0dWRlbnRBdHRlbmRpbmdDbGFzc1Jlc3BvbnNlEiwKEmlzX2F0dGVuZGluZ19jbGFzcx'
-        'gBIAEoCFIQaXNBdHRlbmRpbmdDbGFzcw==');
+final $typed_data.Uint8List isStudentAttendingClassResponseDescriptor = $convert.base64Decode(
+    'Ch9Jc1N0dWRlbnRBdHRlbmRpbmdDbGFzc1Jlc3BvbnNlEiwKEmlzX2F0dGVuZGluZ19jbGFzcx'
+    'gBIAEoCFIQaXNBdHRlbmRpbmdDbGFzcxIeCghjbGFzc19pZBgCIAEoCUgAUgdjbGFzc0lkiAEB'
+    'EiIKCmNsYXNzX25hbWUYAyABKAlIAVIJY2xhc3NOYW1liAEBEiYKDHNlY3Rpb25fbmFtZRgEIA'
+    'EoCUgCUgtzZWN0aW9uTmFtZYgBAUILCglfY2xhc3NfaWRCDQoLX2NsYXNzX25hbWVCDwoNX3Nl'
+    'Y3Rpb25fbmFtZQ==');
 
 @$core.Deprecated('Use bulkAreStudentsAttendingClassRequestDescriptor instead')
 const BulkAreStudentsAttendingClassRequest$json = {
@@ -2706,11 +2740,45 @@ const StudentAttendingClassStatus$json = {
       '5': 8,
       '10': 'isAttendingClass'
     },
+    {
+      '1': 'class_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'classId',
+      '17': true
+    },
+    {
+      '1': 'class_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'className',
+      '17': true
+    },
+    {
+      '1': 'section_name',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'sectionName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_class_id'},
+    {'1': '_class_name'},
+    {'1': '_section_name'},
   ],
 };
 
 /// Descriptor for `StudentAttendingClassStatus`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List studentAttendingClassStatusDescriptor =
-    $convert.base64Decode(
-        'ChtTdHVkZW50QXR0ZW5kaW5nQ2xhc3NTdGF0dXMSHQoKc3R1ZGVudF9pZBgBIAEoCVIJc3R1ZG'
-        'VudElkEiwKEmlzX2F0dGVuZGluZ19jbGFzcxgCIAEoCFIQaXNBdHRlbmRpbmdDbGFzcw==');
+final $typed_data.Uint8List studentAttendingClassStatusDescriptor = $convert.base64Decode(
+    'ChtTdHVkZW50QXR0ZW5kaW5nQ2xhc3NTdGF0dXMSHQoKc3R1ZGVudF9pZBgBIAEoCVIJc3R1ZG'
+    'VudElkEiwKEmlzX2F0dGVuZGluZ19jbGFzcxgCIAEoCFIQaXNBdHRlbmRpbmdDbGFzcxIeCghj'
+    'bGFzc19pZBgDIAEoCUgAUgdjbGFzc0lkiAEBEiIKCmNsYXNzX25hbWUYBCABKAlIAVIJY2xhc3'
+    'NOYW1liAEBEiYKDHNlY3Rpb25fbmFtZRgFIAEoCUgCUgtzZWN0aW9uTmFtZYgBAUILCglfY2xh'
+    'c3NfaWRCDQoLX2NsYXNzX25hbWVCDwoNX3NlY3Rpb25fbmFtZQ==');
