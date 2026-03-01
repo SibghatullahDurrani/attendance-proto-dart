@@ -956,3 +956,81 @@ const UserShiftRegistration$json = {
 final $typed_data.Uint8List userShiftRegistrationDescriptor = $convert.base64Decode(
     'ChVVc2VyU2hpZnRSZWdpc3RyYXRpb24SFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEikKBHJvbG'
     'UYAiABKA4yFS5jb21tb25fbWVzc2FnZXMuUm9sZVIEcm9sZQ==');
+
+@$core.Deprecated('Use getUserIdsRegisteredToShiftRequestDescriptor instead')
+const GetUserIdsRegisteredToShiftRequest$json = {
+  '1': 'GetUserIdsRegisteredToShiftRequest',
+  '2': [
+    {'1': 'shift_id', '3': 1, '4': 1, '5': 9, '10': 'shiftId'},
+  ],
+};
+
+/// Descriptor for `GetUserIdsRegisteredToShiftRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserIdsRegisteredToShiftRequestDescriptor =
+    $convert.base64Decode(
+        'CiJHZXRVc2VySWRzUmVnaXN0ZXJlZFRvU2hpZnRSZXF1ZXN0EhkKCHNoaWZ0X2lkGAEgASgJUg'
+        'dzaGlmdElk');
+
+@$core.Deprecated('Use getUserIdsRegisteredToShiftResponseDescriptor instead')
+const GetUserIdsRegisteredToShiftResponse$json = {
+  '1': 'GetUserIdsRegisteredToShiftResponse',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 3, '5': 9, '10': 'userId'},
+  ],
+};
+
+/// Descriptor for `GetUserIdsRegisteredToShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserIdsRegisteredToShiftResponseDescriptor =
+    $convert.base64Decode(
+        'CiNHZXRVc2VySWRzUmVnaXN0ZXJlZFRvU2hpZnRSZXNwb25zZRIXCgd1c2VyX2lkGAEgAygJUg'
+        'Z1c2VySWQ=');
+
+@$core.Deprecated(
+    'Use getPaginatedUserIdsRegisteredToShiftRequestDescriptor instead')
+const GetPaginatedUserIdsRegisteredToShiftRequest$json = {
+  '1': 'GetPaginatedUserIdsRegisteredToShiftRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'shift_id', '3': 2, '4': 1, '5': 9, '10': 'shiftId'},
+  ],
+};
+
+/// Descriptor for `GetPaginatedUserIdsRegisteredToShiftRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getPaginatedUserIdsRegisteredToShiftRequestDescriptor =
+    $convert.base64Decode(
+        'CitHZXRQYWdpbmF0ZWRVc2VySWRzUmVnaXN0ZXJlZFRvU2hpZnRSZXF1ZXN0EkIKCnBhZ2luYX'
+        'Rpb24YASABKAsyIi5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRp'
+        'b24SGQoIc2hpZnRfaWQYAiABKAlSB3NoaWZ0SWQ=');
+
+@$core.Deprecated(
+    'Use getPaginatedUserIdsRegisteredToShiftResponseDescriptor instead')
+const GetPaginatedUserIdsRegisteredToShiftResponse$json = {
+  '1': 'GetPaginatedUserIdsRegisteredToShiftResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {'1': 'user_ids', '3': 2, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `GetPaginatedUserIdsRegisteredToShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getPaginatedUserIdsRegisteredToShiftResponseDescriptor =
+    $convert.base64Decode(
+        'CixHZXRQYWdpbmF0ZWRVc2VySWRzUmVnaXN0ZXJlZFRvU2hpZnRSZXNwb25zZRJDCgpwYWdpbm'
+        'F0aW9uGAEgASgLMiMuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5h'
+        'dGlvbhIZCgh1c2VyX2lkcxgCIAMoCVIHdXNlcklkcw==');

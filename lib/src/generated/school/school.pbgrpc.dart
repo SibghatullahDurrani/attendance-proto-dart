@@ -424,6 +424,13 @@ class SchoolServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetStudentIdsOfSchoolResponse> getStudentIdsOfSchool(
+    $0.GetStudentIdsOfSchoolRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getStudentIdsOfSchool, request, options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -693,6 +700,11 @@ class SchoolServiceClient extends $grpc.Client {
       '/school.SchoolService/GetSchoolIdsInSchoolChain',
       ($0.GetSchoolIdsInSchoolChainRequest value) => value.writeToBuffer(),
       $0.GetSchoolIdsInSchoolChainResponse.fromBuffer);
+  static final _$getStudentIdsOfSchool = $grpc.ClientMethod<
+          $0.GetStudentIdsOfSchoolRequest, $0.GetStudentIdsOfSchoolResponse>(
+      '/school.SchoolService/GetStudentIdsOfSchool',
+      ($0.GetStudentIdsOfSchoolRequest value) => value.writeToBuffer(),
+      $0.GetStudentIdsOfSchoolResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -1156,6 +1168,15 @@ abstract class SchoolServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetSchoolIdsInSchoolChainRequest.fromBuffer(value),
         ($0.GetSchoolIdsInSchoolChainResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetStudentIdsOfSchoolRequest,
+            $0.GetStudentIdsOfSchoolResponse>(
+        'GetStudentIdsOfSchool',
+        getStudentIdsOfSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetStudentIdsOfSchoolRequest.fromBuffer(value),
+        ($0.GetStudentIdsOfSchoolResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -1624,4 +1645,13 @@ abstract class SchoolServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetSchoolIdsInSchoolChainResponse> getSchoolIdsInSchoolChain(
       $grpc.ServiceCall call, $0.GetSchoolIdsInSchoolChainRequest request);
+
+  $async.Future<$0.GetStudentIdsOfSchoolResponse> getStudentIdsOfSchool_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetStudentIdsOfSchoolRequest> $request) async {
+    return getStudentIdsOfSchool($call, await $request);
+  }
+
+  $async.Future<$0.GetStudentIdsOfSchoolResponse> getStudentIdsOfSchool(
+      $grpc.ServiceCall call, $0.GetStudentIdsOfSchoolRequest request);
 }

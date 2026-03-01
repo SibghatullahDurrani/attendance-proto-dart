@@ -484,6 +484,42 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$5.ListStudentsOfSchoolForShiftAllocationResponse>
+      listStudentsOfSchoolForShiftAllocation(
+    $5.ListStudentsOfSchoolForShiftAllocationRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listStudentsOfSchoolForShiftAllocation, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$5.ListTeachersOfSchoolForShiftAllocationResponse>
+      listTeachersOfSchoolForShiftAllocation(
+    $5.ListTeachersOfSchoolForShiftAllocationRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listTeachersOfSchoolForShiftAllocation, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$5.ListEmployeesOfSchoolForShiftAllocationResponse>
+      listEmployeesOfSchoolForShiftAllocation(
+    $5.ListEmployeesOfSchoolForShiftAllocationRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listEmployeesOfSchoolForShiftAllocation, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$5.ListUsersOfShiftForShiftAllocationResponse>
+      listUsersOfShiftForShiftAllocation(
+    $5.ListUsersOfShiftForShiftAllocationRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listUsersOfShiftForShiftAllocation, request,
+        options: options);
+  }
+
   /// Media Rpcs
   $grpc.ResponseFuture<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
     $async.Stream<$6.AddLeaveAttachmentRequest> request, {
@@ -812,6 +848,34 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/ListShiftUserRegistrations',
       ($5.ListShiftUserRegistrationsRequest value) => value.writeToBuffer(),
       $5.ListShiftUserRegistrationsResponse.fromBuffer);
+  static final _$listStudentsOfSchoolForShiftAllocation = $grpc.ClientMethod<
+          $5.ListStudentsOfSchoolForShiftAllocationRequest,
+          $5.ListStudentsOfSchoolForShiftAllocationResponse>(
+      '/gateway.GatewayService/ListStudentsOfSchoolForShiftAllocation',
+      ($5.ListStudentsOfSchoolForShiftAllocationRequest value) =>
+          value.writeToBuffer(),
+      $5.ListStudentsOfSchoolForShiftAllocationResponse.fromBuffer);
+  static final _$listTeachersOfSchoolForShiftAllocation = $grpc.ClientMethod<
+          $5.ListTeachersOfSchoolForShiftAllocationRequest,
+          $5.ListTeachersOfSchoolForShiftAllocationResponse>(
+      '/gateway.GatewayService/ListTeachersOfSchoolForShiftAllocation',
+      ($5.ListTeachersOfSchoolForShiftAllocationRequest value) =>
+          value.writeToBuffer(),
+      $5.ListTeachersOfSchoolForShiftAllocationResponse.fromBuffer);
+  static final _$listEmployeesOfSchoolForShiftAllocation = $grpc.ClientMethod<
+          $5.ListEmployeesOfSchoolForShiftAllocationRequest,
+          $5.ListEmployeesOfSchoolForShiftAllocationResponse>(
+      '/gateway.GatewayService/ListEmployeesOfSchoolForShiftAllocation',
+      ($5.ListEmployeesOfSchoolForShiftAllocationRequest value) =>
+          value.writeToBuffer(),
+      $5.ListEmployeesOfSchoolForShiftAllocationResponse.fromBuffer);
+  static final _$listUsersOfShiftForShiftAllocation = $grpc.ClientMethod<
+          $5.ListUsersOfShiftForShiftAllocationRequest,
+          $5.ListUsersOfShiftForShiftAllocationResponse>(
+      '/gateway.GatewayService/ListUsersOfShiftForShiftAllocation',
+      ($5.ListUsersOfShiftForShiftAllocationRequest value) =>
+          value.writeToBuffer(),
+      $5.ListUsersOfShiftForShiftAllocationResponse.fromBuffer);
   static final _$addLeaveAttachment = $grpc.ClientMethod<
           $6.AddLeaveAttachmentRequest, $6.AddLeaveAttachmentResponse>(
       '/gateway.GatewayService/AddLeaveAttachment',
@@ -1346,6 +1410,49 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $5.ListShiftUserRegistrationsRequest.fromBuffer(value),
         ($5.ListShiftUserRegistrationsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $5.ListStudentsOfSchoolForShiftAllocationRequest,
+            $5.ListStudentsOfSchoolForShiftAllocationResponse>(
+        'ListStudentsOfSchoolForShiftAllocation',
+        listStudentsOfSchoolForShiftAllocation_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.ListStudentsOfSchoolForShiftAllocationRequest.fromBuffer(value),
+        ($5.ListStudentsOfSchoolForShiftAllocationResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $5.ListTeachersOfSchoolForShiftAllocationRequest,
+            $5.ListTeachersOfSchoolForShiftAllocationResponse>(
+        'ListTeachersOfSchoolForShiftAllocation',
+        listTeachersOfSchoolForShiftAllocation_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.ListTeachersOfSchoolForShiftAllocationRequest.fromBuffer(value),
+        ($5.ListTeachersOfSchoolForShiftAllocationResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $5.ListEmployeesOfSchoolForShiftAllocationRequest,
+            $5.ListEmployeesOfSchoolForShiftAllocationResponse>(
+        'ListEmployeesOfSchoolForShiftAllocation',
+        listEmployeesOfSchoolForShiftAllocation_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.ListEmployeesOfSchoolForShiftAllocationRequest.fromBuffer(value),
+        ($5.ListEmployeesOfSchoolForShiftAllocationResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.ListUsersOfShiftForShiftAllocationRequest,
+            $5.ListUsersOfShiftForShiftAllocationResponse>(
+        'ListUsersOfShiftForShiftAllocation',
+        listUsersOfShiftForShiftAllocation_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.ListUsersOfShiftForShiftAllocationRequest.fromBuffer(value),
+        ($5.ListUsersOfShiftForShiftAllocationResponse value) =>
             value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$6.AddLeaveAttachmentRequest,
             $6.AddLeaveAttachmentResponse>(
@@ -1884,6 +1991,54 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$5.ListShiftUserRegistrationsResponse>
       listShiftUserRegistrations(
           $grpc.ServiceCall call, $5.ListShiftUserRegistrationsRequest request);
+
+  $async.Future<$5.ListStudentsOfSchoolForShiftAllocationResponse>
+      listStudentsOfSchoolForShiftAllocation_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$5.ListStudentsOfSchoolForShiftAllocationRequest>
+              $request) async {
+    return listStudentsOfSchoolForShiftAllocation($call, await $request);
+  }
+
+  $async.Future<$5.ListStudentsOfSchoolForShiftAllocationResponse>
+      listStudentsOfSchoolForShiftAllocation($grpc.ServiceCall call,
+          $5.ListStudentsOfSchoolForShiftAllocationRequest request);
+
+  $async.Future<$5.ListTeachersOfSchoolForShiftAllocationResponse>
+      listTeachersOfSchoolForShiftAllocation_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$5.ListTeachersOfSchoolForShiftAllocationRequest>
+              $request) async {
+    return listTeachersOfSchoolForShiftAllocation($call, await $request);
+  }
+
+  $async.Future<$5.ListTeachersOfSchoolForShiftAllocationResponse>
+      listTeachersOfSchoolForShiftAllocation($grpc.ServiceCall call,
+          $5.ListTeachersOfSchoolForShiftAllocationRequest request);
+
+  $async.Future<$5.ListEmployeesOfSchoolForShiftAllocationResponse>
+      listEmployeesOfSchoolForShiftAllocation_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$5.ListEmployeesOfSchoolForShiftAllocationRequest>
+              $request) async {
+    return listEmployeesOfSchoolForShiftAllocation($call, await $request);
+  }
+
+  $async.Future<$5.ListEmployeesOfSchoolForShiftAllocationResponse>
+      listEmployeesOfSchoolForShiftAllocation($grpc.ServiceCall call,
+          $5.ListEmployeesOfSchoolForShiftAllocationRequest request);
+
+  $async.Future<$5.ListUsersOfShiftForShiftAllocationResponse>
+      listUsersOfShiftForShiftAllocation_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$5.ListUsersOfShiftForShiftAllocationRequest>
+              $request) async {
+    return listUsersOfShiftForShiftAllocation($call, await $request);
+  }
+
+  $async.Future<$5.ListUsersOfShiftForShiftAllocationResponse>
+      listUsersOfShiftForShiftAllocation($grpc.ServiceCall call,
+          $5.ListUsersOfShiftForShiftAllocationRequest request);
 
   $async.Future<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
       $grpc.ServiceCall call,

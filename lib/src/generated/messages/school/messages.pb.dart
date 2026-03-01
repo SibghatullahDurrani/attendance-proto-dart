@@ -8264,6 +8264,187 @@ class GetSchoolIdsInSchoolChainResponse extends $pb.GeneratedMessage {
   $pb.PbList<$core.String> get schoolIds => $_getList(0);
 }
 
+class GetStudentIdsOfSchoolRequest extends $pb.GeneratedMessage {
+  factory GetStudentIdsOfSchoolRequest({
+    $1.PaginationRequest? pagination,
+    $core.String? schoolId,
+    $core.String? classId,
+    $core.String? studentName,
+    $core.String? identificationNumber,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (schoolId != null) result.schoolId = schoolId;
+    if (classId != null) result.classId = classId;
+    if (studentName != null) result.studentName = studentName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    return result;
+  }
+
+  GetStudentIdsOfSchoolRequest._();
+
+  factory GetStudentIdsOfSchoolRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetStudentIdsOfSchoolRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetStudentIdsOfSchoolRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOM<$1.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(3, _omitFieldNames ? '' : 'classId')
+    ..aOS(4, _omitFieldNames ? '' : 'studentName')
+    ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetStudentIdsOfSchoolRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetStudentIdsOfSchoolRequest copyWith(
+          void Function(GetStudentIdsOfSchoolRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetStudentIdsOfSchoolRequest))
+          as GetStudentIdsOfSchoolRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetStudentIdsOfSchoolRequest create() =>
+      GetStudentIdsOfSchoolRequest._();
+  @$core.override
+  GetStudentIdsOfSchoolRequest createEmptyInstance() => create();
+  static $pb.PbList<GetStudentIdsOfSchoolRequest> createRepeated() =>
+      $pb.PbList<GetStudentIdsOfSchoolRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetStudentIdsOfSchoolRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetStudentIdsOfSchoolRequest>(create);
+  static GetStudentIdsOfSchoolRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($1.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get schoolId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set schoolId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSchoolId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSchoolId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get classId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set classId($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasClassId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearClassId() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get studentName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set studentName($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasStudentName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearStudentName() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get identificationNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set identificationNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasIdentificationNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIdentificationNumber() => $_clearField(5);
+}
+
+class GetStudentIdsOfSchoolResponse extends $pb.GeneratedMessage {
+  factory GetStudentIdsOfSchoolResponse({
+    $1.PaginationResponse? pagination,
+    $core.Iterable<$core.String>? studentIds,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (studentIds != null) result.studentIds.addAll(studentIds);
+    return result;
+  }
+
+  GetStudentIdsOfSchoolResponse._();
+
+  factory GetStudentIdsOfSchoolResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetStudentIdsOfSchoolResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetStudentIdsOfSchoolResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOM<$1.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationResponse.create)
+    ..pPS(2, _omitFieldNames ? '' : 'studentIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetStudentIdsOfSchoolResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetStudentIdsOfSchoolResponse copyWith(
+          void Function(GetStudentIdsOfSchoolResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetStudentIdsOfSchoolResponse))
+          as GetStudentIdsOfSchoolResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetStudentIdsOfSchoolResponse create() =>
+      GetStudentIdsOfSchoolResponse._();
+  @$core.override
+  GetStudentIdsOfSchoolResponse createEmptyInstance() => create();
+  static $pb.PbList<GetStudentIdsOfSchoolResponse> createRepeated() =>
+      $pb.PbList<GetStudentIdsOfSchoolResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetStudentIdsOfSchoolResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetStudentIdsOfSchoolResponse>(create);
+  static GetStudentIdsOfSchoolResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($1.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<$core.String> get studentIds => $_getList(1);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

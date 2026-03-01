@@ -5439,6 +5439,9 @@ class ShiftUserRegistration extends $pb.GeneratedMessage {
     $core.String? identificationNumber,
     $core.String? lastAttendedClassName,
     $core.String? lastAttendedSectionName,
+    $core.String? userThumbnailUrl,
+    $1.Timestamp? thumbnailUpdatedAt,
+    $1.Timestamp? thumbnailExpiresAt,
   }) {
     final result = create();
     if (userId != null) result.userId = userId;
@@ -5451,6 +5454,11 @@ class ShiftUserRegistration extends $pb.GeneratedMessage {
       result.lastAttendedClassName = lastAttendedClassName;
     if (lastAttendedSectionName != null)
       result.lastAttendedSectionName = lastAttendedSectionName;
+    if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
+    if (thumbnailUpdatedAt != null)
+      result.thumbnailUpdatedAt = thumbnailUpdatedAt;
+    if (thumbnailExpiresAt != null)
+      result.thumbnailExpiresAt = thumbnailExpiresAt;
     return result;
   }
 
@@ -5475,6 +5483,11 @@ class ShiftUserRegistration extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
     ..aOS(6, _omitFieldNames ? '' : 'lastAttendedClassName')
     ..aOS(7, _omitFieldNames ? '' : 'lastAttendedSectionName')
+    ..aOS(8, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(9, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+        subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -5544,6 +5557,7 @@ class ShiftUserRegistration extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearIdentificationNumber() => $_clearField(5);
 
+  /// Only for student role
   @$pb.TagNumber(6)
   $core.String get lastAttendedClassName => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -5561,6 +5575,1463 @@ class ShiftUserRegistration extends $pb.GeneratedMessage {
   $core.bool hasLastAttendedSectionName() => $_has(6);
   @$pb.TagNumber(7)
   void clearLastAttendedSectionName() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get userThumbnailUrl => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set userThumbnailUrl($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasUserThumbnailUrl() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearUserThumbnailUrl() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(8);
+  @$pb.TagNumber(9)
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasThumbnailUpdatedAt() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearThumbnailUpdatedAt() => $_clearField(9);
+  @$pb.TagNumber(9)
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(8);
+
+  @$pb.TagNumber(10)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(9);
+  @$pb.TagNumber(10)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(10, value);
+  @$pb.TagNumber(10)
+  $core.bool hasThumbnailExpiresAt() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearThumbnailExpiresAt() => $_clearField(10);
+  @$pb.TagNumber(10)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(9);
+}
+
+class ListStudentsOfSchoolForShiftAllocationRequest
+    extends $pb.GeneratedMessage {
+  factory ListStudentsOfSchoolForShiftAllocationRequest({
+    $0.PaginationRequest? pagination,
+    $core.String? schoolId,
+    $core.String? classId,
+    $core.String? studentName,
+    $core.String? identificationNumber,
+    $core.String? shiftId,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (schoolId != null) result.schoolId = schoolId;
+    if (classId != null) result.classId = classId;
+    if (studentName != null) result.studentName = studentName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (shiftId != null) result.shiftId = shiftId;
+    return result;
+  }
+
+  ListStudentsOfSchoolForShiftAllocationRequest._();
+
+  factory ListStudentsOfSchoolForShiftAllocationRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListStudentsOfSchoolForShiftAllocationRequest.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListStudentsOfSchoolForShiftAllocationRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(3, _omitFieldNames ? '' : 'classId')
+    ..aOS(4, _omitFieldNames ? '' : 'studentName')
+    ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(6, _omitFieldNames ? '' : 'shiftId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListStudentsOfSchoolForShiftAllocationRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListStudentsOfSchoolForShiftAllocationRequest copyWith(
+          void Function(ListStudentsOfSchoolForShiftAllocationRequest)
+              updates) =>
+      super.copyWith((message) =>
+              updates(message as ListStudentsOfSchoolForShiftAllocationRequest))
+          as ListStudentsOfSchoolForShiftAllocationRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListStudentsOfSchoolForShiftAllocationRequest create() =>
+      ListStudentsOfSchoolForShiftAllocationRequest._();
+  @$core.override
+  ListStudentsOfSchoolForShiftAllocationRequest createEmptyInstance() =>
+      create();
+  static $pb.PbList<ListStudentsOfSchoolForShiftAllocationRequest>
+      createRepeated() =>
+          $pb.PbList<ListStudentsOfSchoolForShiftAllocationRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListStudentsOfSchoolForShiftAllocationRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListStudentsOfSchoolForShiftAllocationRequest>(create);
+  static ListStudentsOfSchoolForShiftAllocationRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get schoolId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set schoolId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSchoolId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSchoolId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get classId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set classId($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasClassId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearClassId() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get studentName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set studentName($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasStudentName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearStudentName() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get identificationNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set identificationNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasIdentificationNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIdentificationNumber() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get shiftId => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set shiftId($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasShiftId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearShiftId() => $_clearField(6);
+}
+
+class StudentOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
+  factory StudentOfSchoolForShiftAllocation({
+    $core.String? studentId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? lastAttendedClassName,
+    $core.String? lastAttendedSectionName,
+    $core.String? userThumbnailUrl,
+    $1.Timestamp? thumbnailUpdatedAt,
+    $1.Timestamp? thumbnailExpiresAt,
+    $core.String? shiftName,
+  }) {
+    final result = create();
+    if (studentId != null) result.studentId = studentId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (lastAttendedClassName != null)
+      result.lastAttendedClassName = lastAttendedClassName;
+    if (lastAttendedSectionName != null)
+      result.lastAttendedSectionName = lastAttendedSectionName;
+    if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
+    if (thumbnailUpdatedAt != null)
+      result.thumbnailUpdatedAt = thumbnailUpdatedAt;
+    if (thumbnailExpiresAt != null)
+      result.thumbnailExpiresAt = thumbnailExpiresAt;
+    if (shiftName != null) result.shiftName = shiftName;
+    return result;
+  }
+
+  StudentOfSchoolForShiftAllocation._();
+
+  factory StudentOfSchoolForShiftAllocation.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StudentOfSchoolForShiftAllocation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StudentOfSchoolForShiftAllocation',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'studentId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'lastAttendedClassName')
+    ..aOS(6, _omitFieldNames ? '' : 'lastAttendedSectionName')
+    ..aOS(7, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(8, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(9, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOS(10, _omitFieldNames ? '' : 'shiftName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StudentOfSchoolForShiftAllocation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StudentOfSchoolForShiftAllocation copyWith(
+          void Function(StudentOfSchoolForShiftAllocation) updates) =>
+      super.copyWith((message) =>
+              updates(message as StudentOfSchoolForShiftAllocation))
+          as StudentOfSchoolForShiftAllocation;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static StudentOfSchoolForShiftAllocation create() =>
+      StudentOfSchoolForShiftAllocation._();
+  @$core.override
+  StudentOfSchoolForShiftAllocation createEmptyInstance() => create();
+  static $pb.PbList<StudentOfSchoolForShiftAllocation> createRepeated() =>
+      $pb.PbList<StudentOfSchoolForShiftAllocation>();
+  @$core.pragma('dart2js:noInline')
+  static StudentOfSchoolForShiftAllocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StudentOfSchoolForShiftAllocation>(
+          create);
+  static StudentOfSchoolForShiftAllocation? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get studentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set studentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasStudentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStudentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get lastAttendedClassName => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set lastAttendedClassName($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasLastAttendedClassName() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearLastAttendedClassName() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get lastAttendedSectionName => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set lastAttendedSectionName($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasLastAttendedSectionName() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearLastAttendedSectionName() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get userThumbnailUrl => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set userThumbnailUrl($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasUserThumbnailUrl() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearUserThumbnailUrl() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(7);
+  @$pb.TagNumber(8)
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasThumbnailUpdatedAt() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearThumbnailUpdatedAt() => $_clearField(8);
+  @$pb.TagNumber(8)
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(8);
+  @$pb.TagNumber(9)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasThumbnailExpiresAt() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearThumbnailExpiresAt() => $_clearField(9);
+  @$pb.TagNumber(9)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(8);
+
+  @$pb.TagNumber(10)
+  $core.String get shiftName => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set shiftName($core.String value) => $_setString(9, value);
+  @$pb.TagNumber(10)
+  $core.bool hasShiftName() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearShiftName() => $_clearField(10);
+}
+
+class ListStudentsOfSchoolForShiftAllocationResponse
+    extends $pb.GeneratedMessage {
+  factory ListStudentsOfSchoolForShiftAllocationResponse({
+    $0.PaginationResponse? pagination,
+    $core.Iterable<StudentOfSchoolForShiftAllocation>? students,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (students != null) result.students.addAll(students);
+    return result;
+  }
+
+  ListStudentsOfSchoolForShiftAllocationResponse._();
+
+  factory ListStudentsOfSchoolForShiftAllocationResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListStudentsOfSchoolForShiftAllocationResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListStudentsOfSchoolForShiftAllocationResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationResponse.create)
+    ..pPM<StudentOfSchoolForShiftAllocation>(
+        2, _omitFieldNames ? '' : 'students',
+        subBuilder: StudentOfSchoolForShiftAllocation.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListStudentsOfSchoolForShiftAllocationResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListStudentsOfSchoolForShiftAllocationResponse copyWith(
+          void Function(ListStudentsOfSchoolForShiftAllocationResponse)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as ListStudentsOfSchoolForShiftAllocationResponse))
+          as ListStudentsOfSchoolForShiftAllocationResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListStudentsOfSchoolForShiftAllocationResponse create() =>
+      ListStudentsOfSchoolForShiftAllocationResponse._();
+  @$core.override
+  ListStudentsOfSchoolForShiftAllocationResponse createEmptyInstance() =>
+      create();
+  static $pb.PbList<ListStudentsOfSchoolForShiftAllocationResponse>
+      createRepeated() =>
+          $pb.PbList<ListStudentsOfSchoolForShiftAllocationResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListStudentsOfSchoolForShiftAllocationResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListStudentsOfSchoolForShiftAllocationResponse>(create);
+  static ListStudentsOfSchoolForShiftAllocationResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<StudentOfSchoolForShiftAllocation> get students => $_getList(1);
+}
+
+class ListTeachersOfSchoolForShiftAllocationRequest
+    extends $pb.GeneratedMessage {
+  factory ListTeachersOfSchoolForShiftAllocationRequest({
+    $0.PaginationRequest? pagination,
+    $core.String? schoolId,
+    $core.String? teacherName,
+    $core.String? identificationNumber,
+    $core.String? shiftId,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (schoolId != null) result.schoolId = schoolId;
+    if (teacherName != null) result.teacherName = teacherName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (shiftId != null) result.shiftId = shiftId;
+    return result;
+  }
+
+  ListTeachersOfSchoolForShiftAllocationRequest._();
+
+  factory ListTeachersOfSchoolForShiftAllocationRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListTeachersOfSchoolForShiftAllocationRequest.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListTeachersOfSchoolForShiftAllocationRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(3, _omitFieldNames ? '' : 'teacherName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'shiftId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTeachersOfSchoolForShiftAllocationRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTeachersOfSchoolForShiftAllocationRequest copyWith(
+          void Function(ListTeachersOfSchoolForShiftAllocationRequest)
+              updates) =>
+      super.copyWith((message) =>
+              updates(message as ListTeachersOfSchoolForShiftAllocationRequest))
+          as ListTeachersOfSchoolForShiftAllocationRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListTeachersOfSchoolForShiftAllocationRequest create() =>
+      ListTeachersOfSchoolForShiftAllocationRequest._();
+  @$core.override
+  ListTeachersOfSchoolForShiftAllocationRequest createEmptyInstance() =>
+      create();
+  static $pb.PbList<ListTeachersOfSchoolForShiftAllocationRequest>
+      createRepeated() =>
+          $pb.PbList<ListTeachersOfSchoolForShiftAllocationRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListTeachersOfSchoolForShiftAllocationRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListTeachersOfSchoolForShiftAllocationRequest>(create);
+  static ListTeachersOfSchoolForShiftAllocationRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get schoolId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set schoolId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSchoolId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSchoolId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get teacherName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set teacherName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasTeacherName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTeacherName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get shiftId => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set shiftId($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasShiftId() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearShiftId() => $_clearField(5);
+}
+
+class TeacherOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
+  factory TeacherOfSchoolForShiftAllocation({
+    $core.String? teacherId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? userThumbnailUrl,
+    $1.Timestamp? thumbnailUpdatedAt,
+    $1.Timestamp? thumbnailExpiresAt,
+    $core.String? shiftName,
+  }) {
+    final result = create();
+    if (teacherId != null) result.teacherId = teacherId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
+    if (thumbnailUpdatedAt != null)
+      result.thumbnailUpdatedAt = thumbnailUpdatedAt;
+    if (thumbnailExpiresAt != null)
+      result.thumbnailExpiresAt = thumbnailExpiresAt;
+    if (shiftName != null) result.shiftName = shiftName;
+    return result;
+  }
+
+  TeacherOfSchoolForShiftAllocation._();
+
+  factory TeacherOfSchoolForShiftAllocation.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TeacherOfSchoolForShiftAllocation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TeacherOfSchoolForShiftAllocation',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'teacherId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(6, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(7, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOS(8, _omitFieldNames ? '' : 'shiftName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TeacherOfSchoolForShiftAllocation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TeacherOfSchoolForShiftAllocation copyWith(
+          void Function(TeacherOfSchoolForShiftAllocation) updates) =>
+      super.copyWith((message) =>
+              updates(message as TeacherOfSchoolForShiftAllocation))
+          as TeacherOfSchoolForShiftAllocation;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TeacherOfSchoolForShiftAllocation create() =>
+      TeacherOfSchoolForShiftAllocation._();
+  @$core.override
+  TeacherOfSchoolForShiftAllocation createEmptyInstance() => create();
+  static $pb.PbList<TeacherOfSchoolForShiftAllocation> createRepeated() =>
+      $pb.PbList<TeacherOfSchoolForShiftAllocation>();
+  @$core.pragma('dart2js:noInline')
+  static TeacherOfSchoolForShiftAllocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TeacherOfSchoolForShiftAllocation>(
+          create);
+  static TeacherOfSchoolForShiftAllocation? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get teacherId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set teacherId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasTeacherId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTeacherId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get userThumbnailUrl => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set userThumbnailUrl($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasUserThumbnailUrl() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUserThumbnailUrl() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(5);
+  @$pb.TagNumber(6)
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasThumbnailUpdatedAt() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearThumbnailUpdatedAt() => $_clearField(6);
+  @$pb.TagNumber(6)
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(6);
+  @$pb.TagNumber(7)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasThumbnailExpiresAt() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearThumbnailExpiresAt() => $_clearField(7);
+  @$pb.TagNumber(7)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(6);
+
+  @$pb.TagNumber(8)
+  $core.String get shiftName => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set shiftName($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasShiftName() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearShiftName() => $_clearField(8);
+}
+
+class ListTeachersOfSchoolForShiftAllocationResponse
+    extends $pb.GeneratedMessage {
+  factory ListTeachersOfSchoolForShiftAllocationResponse({
+    $0.PaginationResponse? pagination,
+    $core.Iterable<TeacherOfSchoolForShiftAllocation>? teachers,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (teachers != null) result.teachers.addAll(teachers);
+    return result;
+  }
+
+  ListTeachersOfSchoolForShiftAllocationResponse._();
+
+  factory ListTeachersOfSchoolForShiftAllocationResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListTeachersOfSchoolForShiftAllocationResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListTeachersOfSchoolForShiftAllocationResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationResponse.create)
+    ..pPM<TeacherOfSchoolForShiftAllocation>(
+        2, _omitFieldNames ? '' : 'teachers',
+        subBuilder: TeacherOfSchoolForShiftAllocation.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTeachersOfSchoolForShiftAllocationResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTeachersOfSchoolForShiftAllocationResponse copyWith(
+          void Function(ListTeachersOfSchoolForShiftAllocationResponse)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as ListTeachersOfSchoolForShiftAllocationResponse))
+          as ListTeachersOfSchoolForShiftAllocationResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListTeachersOfSchoolForShiftAllocationResponse create() =>
+      ListTeachersOfSchoolForShiftAllocationResponse._();
+  @$core.override
+  ListTeachersOfSchoolForShiftAllocationResponse createEmptyInstance() =>
+      create();
+  static $pb.PbList<ListTeachersOfSchoolForShiftAllocationResponse>
+      createRepeated() =>
+          $pb.PbList<ListTeachersOfSchoolForShiftAllocationResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListTeachersOfSchoolForShiftAllocationResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListTeachersOfSchoolForShiftAllocationResponse>(create);
+  static ListTeachersOfSchoolForShiftAllocationResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<TeacherOfSchoolForShiftAllocation> get teachers => $_getList(1);
+}
+
+class ListEmployeesOfSchoolForShiftAllocationRequest
+    extends $pb.GeneratedMessage {
+  factory ListEmployeesOfSchoolForShiftAllocationRequest({
+    $0.PaginationRequest? pagination,
+    $core.String? schoolId,
+    $core.String? employeeName,
+    $core.String? identificationNumber,
+    $core.String? shiftId,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (schoolId != null) result.schoolId = schoolId;
+    if (employeeName != null) result.employeeName = employeeName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (shiftId != null) result.shiftId = shiftId;
+    return result;
+  }
+
+  ListEmployeesOfSchoolForShiftAllocationRequest._();
+
+  factory ListEmployeesOfSchoolForShiftAllocationRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListEmployeesOfSchoolForShiftAllocationRequest.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListEmployeesOfSchoolForShiftAllocationRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(3, _omitFieldNames ? '' : 'employeeName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'shiftId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListEmployeesOfSchoolForShiftAllocationRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListEmployeesOfSchoolForShiftAllocationRequest copyWith(
+          void Function(ListEmployeesOfSchoolForShiftAllocationRequest)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as ListEmployeesOfSchoolForShiftAllocationRequest))
+          as ListEmployeesOfSchoolForShiftAllocationRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListEmployeesOfSchoolForShiftAllocationRequest create() =>
+      ListEmployeesOfSchoolForShiftAllocationRequest._();
+  @$core.override
+  ListEmployeesOfSchoolForShiftAllocationRequest createEmptyInstance() =>
+      create();
+  static $pb.PbList<ListEmployeesOfSchoolForShiftAllocationRequest>
+      createRepeated() =>
+          $pb.PbList<ListEmployeesOfSchoolForShiftAllocationRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListEmployeesOfSchoolForShiftAllocationRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListEmployeesOfSchoolForShiftAllocationRequest>(create);
+  static ListEmployeesOfSchoolForShiftAllocationRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get schoolId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set schoolId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSchoolId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSchoolId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get employeeName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set employeeName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasEmployeeName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearEmployeeName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get shiftId => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set shiftId($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasShiftId() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearShiftId() => $_clearField(5);
+}
+
+class EmployeeOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
+  factory EmployeeOfSchoolForShiftAllocation({
+    $core.String? employeeId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? userThumbnailUrl,
+    $1.Timestamp? thumbnailUpdatedAt,
+    $1.Timestamp? thumbnailExpiresAt,
+    $core.String? shiftName,
+  }) {
+    final result = create();
+    if (employeeId != null) result.employeeId = employeeId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
+    if (thumbnailUpdatedAt != null)
+      result.thumbnailUpdatedAt = thumbnailUpdatedAt;
+    if (thumbnailExpiresAt != null)
+      result.thumbnailExpiresAt = thumbnailExpiresAt;
+    if (shiftName != null) result.shiftName = shiftName;
+    return result;
+  }
+
+  EmployeeOfSchoolForShiftAllocation._();
+
+  factory EmployeeOfSchoolForShiftAllocation.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EmployeeOfSchoolForShiftAllocation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EmployeeOfSchoolForShiftAllocation',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'employeeId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(6, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(7, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOS(8, _omitFieldNames ? '' : 'shiftName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EmployeeOfSchoolForShiftAllocation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EmployeeOfSchoolForShiftAllocation copyWith(
+          void Function(EmployeeOfSchoolForShiftAllocation) updates) =>
+      super.copyWith((message) =>
+              updates(message as EmployeeOfSchoolForShiftAllocation))
+          as EmployeeOfSchoolForShiftAllocation;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static EmployeeOfSchoolForShiftAllocation create() =>
+      EmployeeOfSchoolForShiftAllocation._();
+  @$core.override
+  EmployeeOfSchoolForShiftAllocation createEmptyInstance() => create();
+  static $pb.PbList<EmployeeOfSchoolForShiftAllocation> createRepeated() =>
+      $pb.PbList<EmployeeOfSchoolForShiftAllocation>();
+  @$core.pragma('dart2js:noInline')
+  static EmployeeOfSchoolForShiftAllocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EmployeeOfSchoolForShiftAllocation>(
+          create);
+  static EmployeeOfSchoolForShiftAllocation? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get employeeId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set employeeId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasEmployeeId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEmployeeId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get userThumbnailUrl => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set userThumbnailUrl($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasUserThumbnailUrl() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUserThumbnailUrl() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(5);
+  @$pb.TagNumber(6)
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasThumbnailUpdatedAt() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearThumbnailUpdatedAt() => $_clearField(6);
+  @$pb.TagNumber(6)
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(6);
+  @$pb.TagNumber(7)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasThumbnailExpiresAt() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearThumbnailExpiresAt() => $_clearField(7);
+  @$pb.TagNumber(7)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(6);
+
+  @$pb.TagNumber(8)
+  $core.String get shiftName => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set shiftName($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasShiftName() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearShiftName() => $_clearField(8);
+}
+
+class ListEmployeesOfSchoolForShiftAllocationResponse
+    extends $pb.GeneratedMessage {
+  factory ListEmployeesOfSchoolForShiftAllocationResponse({
+    $0.PaginationResponse? pagination,
+    $core.Iterable<EmployeeOfSchoolForShiftAllocation>? employees,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (employees != null) result.employees.addAll(employees);
+    return result;
+  }
+
+  ListEmployeesOfSchoolForShiftAllocationResponse._();
+
+  factory ListEmployeesOfSchoolForShiftAllocationResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListEmployeesOfSchoolForShiftAllocationResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'ListEmployeesOfSchoolForShiftAllocationResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationResponse.create)
+    ..pPM<EmployeeOfSchoolForShiftAllocation>(
+        2, _omitFieldNames ? '' : 'employees',
+        subBuilder: EmployeeOfSchoolForShiftAllocation.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListEmployeesOfSchoolForShiftAllocationResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListEmployeesOfSchoolForShiftAllocationResponse copyWith(
+          void Function(ListEmployeesOfSchoolForShiftAllocationResponse)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as ListEmployeesOfSchoolForShiftAllocationResponse))
+          as ListEmployeesOfSchoolForShiftAllocationResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListEmployeesOfSchoolForShiftAllocationResponse create() =>
+      ListEmployeesOfSchoolForShiftAllocationResponse._();
+  @$core.override
+  ListEmployeesOfSchoolForShiftAllocationResponse createEmptyInstance() =>
+      create();
+  static $pb.PbList<ListEmployeesOfSchoolForShiftAllocationResponse>
+      createRepeated() =>
+          $pb.PbList<ListEmployeesOfSchoolForShiftAllocationResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListEmployeesOfSchoolForShiftAllocationResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListEmployeesOfSchoolForShiftAllocationResponse>(create);
+  static ListEmployeesOfSchoolForShiftAllocationResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<EmployeeOfSchoolForShiftAllocation> get employees => $_getList(1);
+}
+
+class ListUsersOfShiftForShiftAllocationRequest extends $pb.GeneratedMessage {
+  factory ListUsersOfShiftForShiftAllocationRequest({
+    $0.PaginationRequest? pagination,
+    $core.String? shiftId,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (shiftId != null) result.shiftId = shiftId;
+    return result;
+  }
+
+  ListUsersOfShiftForShiftAllocationRequest._();
+
+  factory ListUsersOfShiftForShiftAllocationRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListUsersOfShiftForShiftAllocationRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListUsersOfShiftForShiftAllocationRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'shiftId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListUsersOfShiftForShiftAllocationRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListUsersOfShiftForShiftAllocationRequest copyWith(
+          void Function(ListUsersOfShiftForShiftAllocationRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as ListUsersOfShiftForShiftAllocationRequest))
+          as ListUsersOfShiftForShiftAllocationRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListUsersOfShiftForShiftAllocationRequest create() =>
+      ListUsersOfShiftForShiftAllocationRequest._();
+  @$core.override
+  ListUsersOfShiftForShiftAllocationRequest createEmptyInstance() => create();
+  static $pb.PbList<ListUsersOfShiftForShiftAllocationRequest>
+      createRepeated() =>
+          $pb.PbList<ListUsersOfShiftForShiftAllocationRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListUsersOfShiftForShiftAllocationRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListUsersOfShiftForShiftAllocationRequest>(create);
+  static ListUsersOfShiftForShiftAllocationRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get shiftId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set shiftId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasShiftId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearShiftId() => $_clearField(2);
+}
+
+class ListUsersOfShiftForShiftAllocationResponse extends $pb.GeneratedMessage {
+  factory ListUsersOfShiftForShiftAllocationResponse({
+    $0.PaginationResponse? pagination,
+    $core.Iterable<UserOfShiftForShiftAllocation>? users,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (users != null) result.users.addAll(users);
+    return result;
+  }
+
+  ListUsersOfShiftForShiftAllocationResponse._();
+
+  factory ListUsersOfShiftForShiftAllocationResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListUsersOfShiftForShiftAllocationResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListUsersOfShiftForShiftAllocationResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationResponse.create)
+    ..pPM<UserOfShiftForShiftAllocation>(2, _omitFieldNames ? '' : 'users',
+        subBuilder: UserOfShiftForShiftAllocation.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListUsersOfShiftForShiftAllocationResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListUsersOfShiftForShiftAllocationResponse copyWith(
+          void Function(ListUsersOfShiftForShiftAllocationResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as ListUsersOfShiftForShiftAllocationResponse))
+          as ListUsersOfShiftForShiftAllocationResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListUsersOfShiftForShiftAllocationResponse create() =>
+      ListUsersOfShiftForShiftAllocationResponse._();
+  @$core.override
+  ListUsersOfShiftForShiftAllocationResponse createEmptyInstance() => create();
+  static $pb.PbList<ListUsersOfShiftForShiftAllocationResponse>
+      createRepeated() =>
+          $pb.PbList<ListUsersOfShiftForShiftAllocationResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListUsersOfShiftForShiftAllocationResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListUsersOfShiftForShiftAllocationResponse>(create);
+  static ListUsersOfShiftForShiftAllocationResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<UserOfShiftForShiftAllocation> get users => $_getList(1);
+}
+
+class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
+  factory UserOfShiftForShiftAllocation({
+    $core.String? studentId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? lastAttendedClassName,
+    $core.String? lastAttendedSectionName,
+    $core.String? userThumbnailUrl,
+    $1.Timestamp? thumbnailUpdatedAt,
+    $1.Timestamp? thumbnailExpiresAt,
+    $core.String? shiftName,
+  }) {
+    final result = create();
+    if (studentId != null) result.studentId = studentId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (lastAttendedClassName != null)
+      result.lastAttendedClassName = lastAttendedClassName;
+    if (lastAttendedSectionName != null)
+      result.lastAttendedSectionName = lastAttendedSectionName;
+    if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
+    if (thumbnailUpdatedAt != null)
+      result.thumbnailUpdatedAt = thumbnailUpdatedAt;
+    if (thumbnailExpiresAt != null)
+      result.thumbnailExpiresAt = thumbnailExpiresAt;
+    if (shiftName != null) result.shiftName = shiftName;
+    return result;
+  }
+
+  UserOfShiftForShiftAllocation._();
+
+  factory UserOfShiftForShiftAllocation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UserOfShiftForShiftAllocation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UserOfShiftForShiftAllocation',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'studentId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'lastAttendedClassName')
+    ..aOS(6, _omitFieldNames ? '' : 'lastAttendedSectionName')
+    ..aOS(7, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(8, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(9, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOS(10, _omitFieldNames ? '' : 'shiftName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserOfShiftForShiftAllocation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserOfShiftForShiftAllocation copyWith(
+          void Function(UserOfShiftForShiftAllocation) updates) =>
+      super.copyWith(
+              (message) => updates(message as UserOfShiftForShiftAllocation))
+          as UserOfShiftForShiftAllocation;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UserOfShiftForShiftAllocation create() =>
+      UserOfShiftForShiftAllocation._();
+  @$core.override
+  UserOfShiftForShiftAllocation createEmptyInstance() => create();
+  static $pb.PbList<UserOfShiftForShiftAllocation> createRepeated() =>
+      $pb.PbList<UserOfShiftForShiftAllocation>();
+  @$core.pragma('dart2js:noInline')
+  static UserOfShiftForShiftAllocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserOfShiftForShiftAllocation>(create);
+  static UserOfShiftForShiftAllocation? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get studentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set studentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasStudentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStudentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get lastAttendedClassName => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set lastAttendedClassName($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasLastAttendedClassName() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearLastAttendedClassName() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get lastAttendedSectionName => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set lastAttendedSectionName($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasLastAttendedSectionName() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearLastAttendedSectionName() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get userThumbnailUrl => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set userThumbnailUrl($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasUserThumbnailUrl() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearUserThumbnailUrl() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(7);
+  @$pb.TagNumber(8)
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasThumbnailUpdatedAt() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearThumbnailUpdatedAt() => $_clearField(8);
+  @$pb.TagNumber(8)
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(8);
+  @$pb.TagNumber(9)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasThumbnailExpiresAt() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearThumbnailExpiresAt() => $_clearField(9);
+  @$pb.TagNumber(9)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(8);
+
+  @$pb.TagNumber(10)
+  $core.String get shiftName => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set shiftName($core.String value) => $_setString(9, value);
+  @$pb.TagNumber(10)
+  $core.bool hasShiftName() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearShiftName() => $_clearField(10);
 }
 
 const $core.bool _omitFieldNames =

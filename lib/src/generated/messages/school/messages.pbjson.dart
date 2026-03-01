@@ -2838,3 +2838,83 @@ final $typed_data.Uint8List getSchoolIdsInSchoolChainResponseDescriptor =
     $convert.base64Decode(
         'CiFHZXRTY2hvb2xJZHNJblNjaG9vbENoYWluUmVzcG9uc2USHQoKc2Nob29sX2lkcxgCIAMoCV'
         'IJc2Nob29sSWRz');
+
+@$core.Deprecated('Use getStudentIdsOfSchoolRequestDescriptor instead')
+const GetStudentIdsOfSchoolRequest$json = {
+  '1': 'GetStudentIdsOfSchoolRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'class_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'classId',
+      '17': true
+    },
+    {
+      '1': 'student_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'studentName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'identificationNumber',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_class_id'},
+    {'1': '_student_name'},
+    {'1': '_identification_number'},
+  ],
+};
+
+/// Descriptor for `GetStudentIdsOfSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getStudentIdsOfSchoolRequestDescriptor = $convert.base64Decode(
+    'ChxHZXRTdHVkZW50SWRzT2ZTY2hvb2xSZXF1ZXN0EkIKCnBhZ2luYXRpb24YASABKAsyIi5jb2'
+    '1tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SGwoJc2Nob29sX2lk'
+    'GAIgASgJUghzY2hvb2xJZBIeCghjbGFzc19pZBgDIAEoCUgAUgdjbGFzc0lkiAEBEiYKDHN0dW'
+    'RlbnRfbmFtZRgEIAEoCUgBUgtzdHVkZW50TmFtZYgBARI4ChVpZGVudGlmaWNhdGlvbl9udW1i'
+    'ZXIYBSABKAlIAlIUaWRlbnRpZmljYXRpb25OdW1iZXKIAQFCCwoJX2NsYXNzX2lkQg8KDV9zdH'
+    'VkZW50X25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX251bWJlcg==');
+
+@$core.Deprecated('Use getStudentIdsOfSchoolResponseDescriptor instead')
+const GetStudentIdsOfSchoolResponse$json = {
+  '1': 'GetStudentIdsOfSchoolResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {'1': 'student_ids', '3': 2, '4': 3, '5': 9, '10': 'studentIds'},
+  ],
+};
+
+/// Descriptor for `GetStudentIdsOfSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getStudentIdsOfSchoolResponseDescriptor =
+    $convert.base64Decode(
+        'Ch1HZXRTdHVkZW50SWRzT2ZTY2hvb2xSZXNwb25zZRJDCgpwYWdpbmF0aW9uGAEgASgLMiMuY2'
+        '9tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbhIfCgtzdHVkZW50'
+        'X2lkcxgCIAMoCVIKc3R1ZGVudElkcw==');

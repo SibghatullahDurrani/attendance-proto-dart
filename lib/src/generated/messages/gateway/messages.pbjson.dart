@@ -2386,12 +2386,44 @@ const ShiftUserRegistration$json = {
       '10': 'lastAttendedSectionName',
       '17': true
     },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '9': 4,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_updated_at',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 5,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 6,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_second_name'},
     {'1': '_identification_number'},
     {'1': '_last_attended_class_name'},
     {'1': '_last_attended_section_name'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
+    {'1': '_thumbnail_expires_at'},
   ],
 };
 
@@ -2403,6 +2435,745 @@ final $typed_data.Uint8List shiftUserRegistrationDescriptor = $convert.base64Dec
     'VudGlmaWNhdGlvbl9udW1iZXIYBSABKAlIAVIUaWRlbnRpZmljYXRpb25OdW1iZXKIAQESPAoY'
     'bGFzdF9hdHRlbmRlZF9jbGFzc19uYW1lGAYgASgJSAJSFWxhc3RBdHRlbmRlZENsYXNzTmFtZY'
     'gBARJAChpsYXN0X2F0dGVuZGVkX3NlY3Rpb25fbmFtZRgHIAEoCUgDUhdsYXN0QXR0ZW5kZWRT'
-    'ZWN0aW9uTmFtZYgBAUIOCgxfc2Vjb25kX25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX251bWJlck'
-    'IbChlfbGFzdF9hdHRlbmRlZF9jbGFzc19uYW1lQh0KG19sYXN0X2F0dGVuZGVkX3NlY3Rpb25f'
-    'bmFtZQ==');
+    'ZWN0aW9uTmFtZYgBARIxChJ1c2VyX3RodW1ibmFpbF91cmwYCCABKAlIBFIQdXNlclRodW1ibm'
+    'FpbFVybIgBARJRChR0aHVtYm5haWxfdXBkYXRlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1'
+    'Zi5UaW1lc3RhbXBIBVISdGh1bWJuYWlsVXBkYXRlZEF0iAEBElEKFHRodW1ibmFpbF9leHBpcm'
+    'VzX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgGUhJ0aHVtYm5haWxFeHBp'
+    'cmVzQXSIAQFCDgoMX3NlY29uZF9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCGwoZX2'
+    'xhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZUIdChtfbGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWVC'
+    'FQoTX3VzZXJfdGh1bWJuYWlsX3VybEIXChVfdGh1bWJuYWlsX3VwZGF0ZWRfYXRCFwoVX3RodW'
+    '1ibmFpbF9leHBpcmVzX2F0');
+
+@$core.Deprecated(
+    'Use listStudentsOfSchoolForShiftAllocationRequestDescriptor instead')
+const ListStudentsOfSchoolForShiftAllocationRequest$json = {
+  '1': 'ListStudentsOfSchoolForShiftAllocationRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'class_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'classId',
+      '17': true
+    },
+    {
+      '1': 'student_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'studentName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'shift_id',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'shiftId',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_class_id'},
+    {'1': '_student_name'},
+    {'1': '_identification_number'},
+    {'1': '_shift_id'},
+  ],
+};
+
+/// Descriptor for `ListStudentsOfSchoolForShiftAllocationRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    listStudentsOfSchoolForShiftAllocationRequestDescriptor =
+    $convert.base64Decode(
+        'Ci1MaXN0U3R1ZGVudHNPZlNjaG9vbEZvclNoaWZ0QWxsb2NhdGlvblJlcXVlc3QSQgoKcGFnaW'
+        '5hdGlvbhgBIAEoCzIiLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5h'
+        'dGlvbhIbCglzY2hvb2xfaWQYAiABKAlSCHNjaG9vbElkEh4KCGNsYXNzX2lkGAMgASgJSABSB2'
+        'NsYXNzSWSIAQESJgoMc3R1ZGVudF9uYW1lGAQgASgJSAFSC3N0dWRlbnROYW1liAEBEjgKFWlk'
+        'ZW50aWZpY2F0aW9uX251bWJlchgFIAEoCUgCUhRpZGVudGlmaWNhdGlvbk51bWJlcogBARIeCg'
+        'hzaGlmdF9pZBgGIAEoCUgDUgdzaGlmdElkiAEBQgsKCV9jbGFzc19pZEIPCg1fc3R1ZGVudF9u'
+        'YW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCCwoJX3NoaWZ0X2lk');
+
+@$core.Deprecated('Use studentOfSchoolForShiftAllocationDescriptor instead')
+const StudentOfSchoolForShiftAllocation$json = {
+  '1': 'StudentOfSchoolForShiftAllocation',
+  '2': [
+    {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'last_attended_class_name',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'lastAttendedClassName',
+      '17': true
+    },
+    {
+      '1': 'last_attended_section_name',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'lastAttendedSectionName',
+      '17': true
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '9': 4,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_updated_at',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 5,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 6,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+    {
+      '1': 'shift_name',
+      '3': 10,
+      '4': 1,
+      '5': 9,
+      '9': 7,
+      '10': 'shiftName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_identification_number'},
+    {'1': '_last_attended_class_name'},
+    {'1': '_last_attended_section_name'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
+    {'1': '_thumbnail_expires_at'},
+    {'1': '_shift_name'},
+  ],
+};
+
+/// Descriptor for `StudentOfSchoolForShiftAllocation`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List studentOfSchoolForShiftAllocationDescriptor = $convert.base64Decode(
+    'CiFTdHVkZW50T2ZTY2hvb2xGb3JTaGlmdEFsbG9jYXRpb24SHQoKc3R1ZGVudF9pZBgBIAEoCV'
+    'IJc3R1ZGVudElkEh0KCmZpcnN0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNvbmRfbmFt'
+    'ZRgDIAEoCUgAUgpzZWNvbmROYW1liAEBEjgKFWlkZW50aWZpY2F0aW9uX251bWJlchgEIAEoCU'
+    'gBUhRpZGVudGlmaWNhdGlvbk51bWJlcogBARI8ChhsYXN0X2F0dGVuZGVkX2NsYXNzX25hbWUY'
+    'BSABKAlIAlIVbGFzdEF0dGVuZGVkQ2xhc3NOYW1liAEBEkAKGmxhc3RfYXR0ZW5kZWRfc2VjdG'
+    'lvbl9uYW1lGAYgASgJSANSF2xhc3RBdHRlbmRlZFNlY3Rpb25OYW1liAEBEjEKEnVzZXJfdGh1'
+    'bWJuYWlsX3VybBgHIAEoCUgEUhB1c2VyVGh1bWJuYWlsVXJsiAEBElEKFHRodW1ibmFpbF91cG'
+    'RhdGVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgFUhJ0aHVtYm5haWxV'
+    'cGRhdGVkQXSIAQESUQoUdGh1bWJuYWlsX2V4cGlyZXNfYXQYCSABKAsyGi5nb29nbGUucHJvdG'
+    '9idWYuVGltZXN0YW1wSAZSEnRodW1ibmFpbEV4cGlyZXNBdIgBARIiCgpzaGlmdF9uYW1lGAog'
+    'ASgJSAdSCXNoaWZ0TmFtZYgBAUIOCgxfc2Vjb25kX25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX2'
+    '51bWJlckIbChlfbGFzdF9hdHRlbmRlZF9jbGFzc19uYW1lQh0KG19sYXN0X2F0dGVuZGVkX3Nl'
+    'Y3Rpb25fbmFtZUIVChNfdXNlcl90aHVtYm5haWxfdXJsQhcKFV90aHVtYm5haWxfdXBkYXRlZF'
+    '9hdEIXChVfdGh1bWJuYWlsX2V4cGlyZXNfYXRCDQoLX3NoaWZ0X25hbWU=');
+
+@$core.Deprecated(
+    'Use listStudentsOfSchoolForShiftAllocationResponseDescriptor instead')
+const ListStudentsOfSchoolForShiftAllocationResponse$json = {
+  '1': 'ListStudentsOfSchoolForShiftAllocationResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'students',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.StudentOfSchoolForShiftAllocation',
+      '10': 'students'
+    },
+  ],
+};
+
+/// Descriptor for `ListStudentsOfSchoolForShiftAllocationResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    listStudentsOfSchoolForShiftAllocationResponseDescriptor =
+    $convert.base64Decode(
+        'Ci5MaXN0U3R1ZGVudHNPZlNjaG9vbEZvclNoaWZ0QWxsb2NhdGlvblJlc3BvbnNlEkMKCnBhZ2'
+        'luYXRpb24YASABKAsyIy5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpwYWdp'
+        'bmF0aW9uEk8KCHN0dWRlbnRzGAIgAygLMjMuZ2F0ZXdheV9tZXNzYWdlcy5TdHVkZW50T2ZTY2'
+        'hvb2xGb3JTaGlmdEFsbG9jYXRpb25SCHN0dWRlbnRz');
+
+@$core.Deprecated(
+    'Use listTeachersOfSchoolForShiftAllocationRequestDescriptor instead')
+const ListTeachersOfSchoolForShiftAllocationRequest$json = {
+  '1': 'ListTeachersOfSchoolForShiftAllocationRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'teacher_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'teacherName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'shift_id',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'shiftId',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_teacher_name'},
+    {'1': '_identification_number'},
+    {'1': '_shift_id'},
+  ],
+};
+
+/// Descriptor for `ListTeachersOfSchoolForShiftAllocationRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    listTeachersOfSchoolForShiftAllocationRequestDescriptor =
+    $convert.base64Decode(
+        'Ci1MaXN0VGVhY2hlcnNPZlNjaG9vbEZvclNoaWZ0QWxsb2NhdGlvblJlcXVlc3QSQgoKcGFnaW'
+        '5hdGlvbhgBIAEoCzIiLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5h'
+        'dGlvbhIbCglzY2hvb2xfaWQYAiABKAlSCHNjaG9vbElkEiYKDHRlYWNoZXJfbmFtZRgDIAEoCU'
+        'gAUgt0ZWFjaGVyTmFtZYgBARI4ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlIAVIUaWRl'
+        'bnRpZmljYXRpb25OdW1iZXKIAQESHgoIc2hpZnRfaWQYBSABKAlIAlIHc2hpZnRJZIgBAUIPCg'
+        '1fdGVhY2hlcl9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCCwoJX3NoaWZ0X2lk');
+
+@$core.Deprecated('Use teacherOfSchoolForShiftAllocationDescriptor instead')
+const TeacherOfSchoolForShiftAllocation$json = {
+  '1': 'TeacherOfSchoolForShiftAllocation',
+  '2': [
+    {'1': 'teacher_id', '3': 1, '4': 1, '5': 9, '10': 'teacherId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_updated_at',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 2,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 3,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+    {
+      '1': 'shift_name',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '9': 4,
+      '10': 'shiftName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
+    {'1': '_thumbnail_expires_at'},
+    {'1': '_shift_name'},
+  ],
+};
+
+/// Descriptor for `TeacherOfSchoolForShiftAllocation`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List teacherOfSchoolForShiftAllocationDescriptor = $convert.base64Decode(
+    'CiFUZWFjaGVyT2ZTY2hvb2xGb3JTaGlmdEFsbG9jYXRpb24SHQoKdGVhY2hlcl9pZBgBIAEoCV'
+    'IJdGVhY2hlcklkEh0KCmZpcnN0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNvbmRfbmFt'
+    'ZRgDIAEoCUgAUgpzZWNvbmROYW1liAEBEjMKFWlkZW50aWZpY2F0aW9uX251bWJlchgEIAEoCV'
+    'IUaWRlbnRpZmljYXRpb25OdW1iZXISMQoSdXNlcl90aHVtYm5haWxfdXJsGAUgASgJSAFSEHVz'
+    'ZXJUaHVtYm5haWxVcmyIAQESUQoUdGh1bWJuYWlsX3VwZGF0ZWRfYXQYBiABKAsyGi5nb29nbG'
+    'UucHJvdG9idWYuVGltZXN0YW1wSAJSEnRodW1ibmFpbFVwZGF0ZWRBdIgBARJRChR0aHVtYm5h'
+    'aWxfZXhwaXJlc19hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIA1ISdGh1bW'
+    'JuYWlsRXhwaXJlc0F0iAEBEiIKCnNoaWZ0X25hbWUYCCABKAlIBFIJc2hpZnROYW1liAEBQg4K'
+    'DF9zZWNvbmRfbmFtZUIVChNfdXNlcl90aHVtYm5haWxfdXJsQhcKFV90aHVtYm5haWxfdXBkYX'
+    'RlZF9hdEIXChVfdGh1bWJuYWlsX2V4cGlyZXNfYXRCDQoLX3NoaWZ0X25hbWU=');
+
+@$core.Deprecated(
+    'Use listTeachersOfSchoolForShiftAllocationResponseDescriptor instead')
+const ListTeachersOfSchoolForShiftAllocationResponse$json = {
+  '1': 'ListTeachersOfSchoolForShiftAllocationResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'teachers',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.TeacherOfSchoolForShiftAllocation',
+      '10': 'teachers'
+    },
+  ],
+};
+
+/// Descriptor for `ListTeachersOfSchoolForShiftAllocationResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    listTeachersOfSchoolForShiftAllocationResponseDescriptor =
+    $convert.base64Decode(
+        'Ci5MaXN0VGVhY2hlcnNPZlNjaG9vbEZvclNoaWZ0QWxsb2NhdGlvblJlc3BvbnNlEkMKCnBhZ2'
+        'luYXRpb24YASABKAsyIy5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpwYWdp'
+        'bmF0aW9uEk8KCHRlYWNoZXJzGAIgAygLMjMuZ2F0ZXdheV9tZXNzYWdlcy5UZWFjaGVyT2ZTY2'
+        'hvb2xGb3JTaGlmdEFsbG9jYXRpb25SCHRlYWNoZXJz');
+
+@$core.Deprecated(
+    'Use listEmployeesOfSchoolForShiftAllocationRequestDescriptor instead')
+const ListEmployeesOfSchoolForShiftAllocationRequest$json = {
+  '1': 'ListEmployeesOfSchoolForShiftAllocationRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'employee_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'employeeName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'shift_id',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'shiftId',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_employee_name'},
+    {'1': '_identification_number'},
+    {'1': '_shift_id'},
+  ],
+};
+
+/// Descriptor for `ListEmployeesOfSchoolForShiftAllocationRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    listEmployeesOfSchoolForShiftAllocationRequestDescriptor =
+    $convert.base64Decode(
+        'Ci5MaXN0RW1wbG95ZWVzT2ZTY2hvb2xGb3JTaGlmdEFsbG9jYXRpb25SZXF1ZXN0EkIKCnBhZ2'
+        'luYXRpb24YASABKAsyIi5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2lu'
+        'YXRpb24SGwoJc2Nob29sX2lkGAIgASgJUghzY2hvb2xJZBIoCg1lbXBsb3llZV9uYW1lGAMgAS'
+        'gJSABSDGVtcGxveWVlTmFtZYgBARI4ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlIAVIU'
+        'aWRlbnRpZmljYXRpb25OdW1iZXKIAQESHgoIc2hpZnRfaWQYBSABKAlIAlIHc2hpZnRJZIgBAU'
+        'IQCg5fZW1wbG95ZWVfbmFtZUIYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQgsKCV9zaGlmdF9p'
+        'ZA==');
+
+@$core.Deprecated('Use employeeOfSchoolForShiftAllocationDescriptor instead')
+const EmployeeOfSchoolForShiftAllocation$json = {
+  '1': 'EmployeeOfSchoolForShiftAllocation',
+  '2': [
+    {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'identificationNumber'
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_updated_at',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 2,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 3,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+    {
+      '1': 'shift_name',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '9': 4,
+      '10': 'shiftName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
+    {'1': '_thumbnail_expires_at'},
+    {'1': '_shift_name'},
+  ],
+};
+
+/// Descriptor for `EmployeeOfSchoolForShiftAllocation`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List employeeOfSchoolForShiftAllocationDescriptor = $convert.base64Decode(
+    'CiJFbXBsb3llZU9mU2Nob29sRm9yU2hpZnRBbGxvY2F0aW9uEh8KC2VtcGxveWVlX2lkGAEgAS'
+    'gJUgplbXBsb3llZUlkEh0KCmZpcnN0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNvbmRf'
+    'bmFtZRgDIAEoCUgAUgpzZWNvbmROYW1liAEBEjMKFWlkZW50aWZpY2F0aW9uX251bWJlchgEIA'
+    'EoCVIUaWRlbnRpZmljYXRpb25OdW1iZXISMQoSdXNlcl90aHVtYm5haWxfdXJsGAUgASgJSAFS'
+    'EHVzZXJUaHVtYm5haWxVcmyIAQESUQoUdGh1bWJuYWlsX3VwZGF0ZWRfYXQYBiABKAsyGi5nb2'
+    '9nbGUucHJvdG9idWYuVGltZXN0YW1wSAJSEnRodW1ibmFpbFVwZGF0ZWRBdIgBARJRChR0aHVt'
+    'Ym5haWxfZXhwaXJlc19hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIA1ISdG'
+    'h1bWJuYWlsRXhwaXJlc0F0iAEBEiIKCnNoaWZ0X25hbWUYCCABKAlIBFIJc2hpZnROYW1liAEB'
+    'Qg4KDF9zZWNvbmRfbmFtZUIVChNfdXNlcl90aHVtYm5haWxfdXJsQhcKFV90aHVtYm5haWxfdX'
+    'BkYXRlZF9hdEIXChVfdGh1bWJuYWlsX2V4cGlyZXNfYXRCDQoLX3NoaWZ0X25hbWU=');
+
+@$core.Deprecated(
+    'Use listEmployeesOfSchoolForShiftAllocationResponseDescriptor instead')
+const ListEmployeesOfSchoolForShiftAllocationResponse$json = {
+  '1': 'ListEmployeesOfSchoolForShiftAllocationResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'employees',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.EmployeeOfSchoolForShiftAllocation',
+      '10': 'employees'
+    },
+  ],
+};
+
+/// Descriptor for `ListEmployeesOfSchoolForShiftAllocationResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    listEmployeesOfSchoolForShiftAllocationResponseDescriptor =
+    $convert.base64Decode(
+        'Ci9MaXN0RW1wbG95ZWVzT2ZTY2hvb2xGb3JTaGlmdEFsbG9jYXRpb25SZXNwb25zZRJDCgpwYW'
+        'dpbmF0aW9uGAEgASgLMiMuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFn'
+        'aW5hdGlvbhJSCgllbXBsb3llZXMYAiADKAsyNC5nYXRld2F5X21lc3NhZ2VzLkVtcGxveWVlT2'
+        'ZTY2hvb2xGb3JTaGlmdEFsbG9jYXRpb25SCWVtcGxveWVlcw==');
+
+@$core.Deprecated(
+    'Use listUsersOfShiftForShiftAllocationRequestDescriptor instead')
+const ListUsersOfShiftForShiftAllocationRequest$json = {
+  '1': 'ListUsersOfShiftForShiftAllocationRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'shift_id', '3': 2, '4': 1, '5': 9, '10': 'shiftId'},
+  ],
+};
+
+/// Descriptor for `ListUsersOfShiftForShiftAllocationRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    listUsersOfShiftForShiftAllocationRequestDescriptor = $convert.base64Decode(
+        'CilMaXN0VXNlcnNPZlNoaWZ0Rm9yU2hpZnRBbGxvY2F0aW9uUmVxdWVzdBJCCgpwYWdpbmF0aW'
+        '9uGAEgASgLMiIuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9u'
+        'EhkKCHNoaWZ0X2lkGAIgASgJUgdzaGlmdElk');
+
+@$core.Deprecated(
+    'Use listUsersOfShiftForShiftAllocationResponseDescriptor instead')
+const ListUsersOfShiftForShiftAllocationResponse$json = {
+  '1': 'ListUsersOfShiftForShiftAllocationResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'users',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.UserOfShiftForShiftAllocation',
+      '10': 'users'
+    },
+  ],
+};
+
+/// Descriptor for `ListUsersOfShiftForShiftAllocationResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    listUsersOfShiftForShiftAllocationResponseDescriptor =
+    $convert.base64Decode(
+        'CipMaXN0VXNlcnNPZlNoaWZ0Rm9yU2hpZnRBbGxvY2F0aW9uUmVzcG9uc2USQwoKcGFnaW5hdG'
+        'lvbhgBIAEoCzIjLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9uc2VSCnBhZ2luYXRp'
+        'b24SRQoFdXNlcnMYAiADKAsyLy5nYXRld2F5X21lc3NhZ2VzLlVzZXJPZlNoaWZ0Rm9yU2hpZn'
+        'RBbGxvY2F0aW9uUgV1c2Vycw==');
+
+@$core.Deprecated('Use userOfShiftForShiftAllocationDescriptor instead')
+const UserOfShiftForShiftAllocation$json = {
+  '1': 'UserOfShiftForShiftAllocation',
+  '2': [
+    {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'last_attended_class_name',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'lastAttendedClassName',
+      '17': true
+    },
+    {
+      '1': 'last_attended_section_name',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'lastAttendedSectionName',
+      '17': true
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '9': 4,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_updated_at',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 5,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 6,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+    {
+      '1': 'shift_name',
+      '3': 10,
+      '4': 1,
+      '5': 9,
+      '9': 7,
+      '10': 'shiftName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_identification_number'},
+    {'1': '_last_attended_class_name'},
+    {'1': '_last_attended_section_name'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
+    {'1': '_thumbnail_expires_at'},
+    {'1': '_shift_name'},
+  ],
+};
+
+/// Descriptor for `UserOfShiftForShiftAllocation`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userOfShiftForShiftAllocationDescriptor = $convert.base64Decode(
+    'Ch1Vc2VyT2ZTaGlmdEZvclNoaWZ0QWxsb2NhdGlvbhIdCgpzdHVkZW50X2lkGAEgASgJUglzdH'
+    'VkZW50SWQSHQoKZmlyc3RfbmFtZRgCIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAMg'
+    'ASgJSABSCnNlY29uZE5hbWWIAQESOAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJSAFSFG'
+    'lkZW50aWZpY2F0aW9uTnVtYmVyiAEBEjwKGGxhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZRgFIAEo'
+    'CUgCUhVsYXN0QXR0ZW5kZWRDbGFzc05hbWWIAQESQAoabGFzdF9hdHRlbmRlZF9zZWN0aW9uX2'
+    '5hbWUYBiABKAlIA1IXbGFzdEF0dGVuZGVkU2VjdGlvbk5hbWWIAQESMQoSdXNlcl90aHVtYm5h'
+    'aWxfdXJsGAcgASgJSARSEHVzZXJUaHVtYm5haWxVcmyIAQESUQoUdGh1bWJuYWlsX3VwZGF0ZW'
+    'RfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAVSEnRodW1ibmFpbFVwZGF0'
+    'ZWRBdIgBARJRChR0aHVtYm5haWxfZXhwaXJlc19hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi'
+    '5UaW1lc3RhbXBIBlISdGh1bWJuYWlsRXhwaXJlc0F0iAEBEiIKCnNoaWZ0X25hbWUYCiABKAlI'
+    'B1IJc2hpZnROYW1liAEBQg4KDF9zZWNvbmRfbmFtZUIYChZfaWRlbnRpZmljYXRpb25fbnVtYm'
+    'VyQhsKGV9sYXN0X2F0dGVuZGVkX2NsYXNzX25hbWVCHQobX2xhc3RfYXR0ZW5kZWRfc2VjdGlv'
+    'bl9uYW1lQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0Qh'
+    'cKFV90aHVtYm5haWxfZXhwaXJlc19hdEINCgtfc2hpZnRfbmFtZQ==');

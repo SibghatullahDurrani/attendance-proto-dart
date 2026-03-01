@@ -157,6 +157,24 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetUserIdsRegisteredToShiftResponse>
+      getUserIdsRegisteredToShift(
+    $0.GetUserIdsRegisteredToShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserIdsRegisteredToShift, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetPaginatedUserIdsRegisteredToShiftResponse>
+      getPaginatedUserIdsRegisteredToShift(
+    $0.GetPaginatedUserIdsRegisteredToShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getPaginatedUserIdsRegisteredToShift, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -245,6 +263,19 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/GetUserRegisteredInShift',
       ($0.GetUserRegisteredInShiftRequest value) => value.writeToBuffer(),
       $0.GetUserRegisteredInShiftResponse.fromBuffer);
+  static final _$getUserIdsRegisteredToShift = $grpc.ClientMethod<
+          $0.GetUserIdsRegisteredToShiftRequest,
+          $0.GetUserIdsRegisteredToShiftResponse>(
+      '/attendance.AttendanceService/GetUserIdsRegisteredToShift',
+      ($0.GetUserIdsRegisteredToShiftRequest value) => value.writeToBuffer(),
+      $0.GetUserIdsRegisteredToShiftResponse.fromBuffer);
+  static final _$getPaginatedUserIdsRegisteredToShift = $grpc.ClientMethod<
+          $0.GetPaginatedUserIdsRegisteredToShiftRequest,
+          $0.GetPaginatedUserIdsRegisteredToShiftResponse>(
+      '/attendance.AttendanceService/GetPaginatedUserIdsRegisteredToShift',
+      ($0.GetPaginatedUserIdsRegisteredToShiftRequest value) =>
+          value.writeToBuffer(),
+      $0.GetPaginatedUserIdsRegisteredToShiftResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -392,6 +423,27 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetUserRegisteredInShiftRequest.fromBuffer(value),
         ($0.GetUserRegisteredInShiftResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetUserIdsRegisteredToShiftRequest,
+            $0.GetUserIdsRegisteredToShiftResponse>(
+        'GetUserIdsRegisteredToShift',
+        getUserIdsRegisteredToShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetUserIdsRegisteredToShiftRequest.fromBuffer(value),
+        ($0.GetUserIdsRegisteredToShiftResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.GetPaginatedUserIdsRegisteredToShiftRequest,
+            $0.GetPaginatedUserIdsRegisteredToShiftResponse>(
+        'GetPaginatedUserIdsRegisteredToShift',
+        getPaginatedUserIdsRegisteredToShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetPaginatedUserIdsRegisteredToShiftRequest.fromBuffer(value),
+        ($0.GetPaginatedUserIdsRegisteredToShiftResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -538,4 +590,26 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetUserRegisteredInShiftResponse> getUserRegisteredInShift(
       $grpc.ServiceCall call, $0.GetUserRegisteredInShiftRequest request);
+
+  $async.Future<$0.GetUserIdsRegisteredToShiftResponse>
+      getUserIdsRegisteredToShift_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetUserIdsRegisteredToShiftRequest> $request) async {
+    return getUserIdsRegisteredToShift($call, await $request);
+  }
+
+  $async.Future<$0.GetUserIdsRegisteredToShiftResponse>
+      getUserIdsRegisteredToShift($grpc.ServiceCall call,
+          $0.GetUserIdsRegisteredToShiftRequest request);
+
+  $async.Future<$0.GetPaginatedUserIdsRegisteredToShiftResponse>
+      getPaginatedUserIdsRegisteredToShift_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetPaginatedUserIdsRegisteredToShiftRequest>
+              $request) async {
+    return getPaginatedUserIdsRegisteredToShift($call, await $request);
+  }
+
+  $async.Future<$0.GetPaginatedUserIdsRegisteredToShiftResponse>
+      getPaginatedUserIdsRegisteredToShift($grpc.ServiceCall call,
+          $0.GetPaginatedUserIdsRegisteredToShiftRequest request);
 }
