@@ -175,6 +175,13 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.AllocateUsersShiftResponse> allocateUsersShift(
+    $0.AllocateUsersShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$allocateUsersShift, request, options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -276,6 +283,11 @@ class AttendanceServiceClient extends $grpc.Client {
       ($0.GetPaginatedUserIdsRegisteredToShiftRequest value) =>
           value.writeToBuffer(),
       $0.GetPaginatedUserIdsRegisteredToShiftResponse.fromBuffer);
+  static final _$allocateUsersShift = $grpc.ClientMethod<
+          $0.AllocateUsersShiftRequest, $0.AllocateUsersShiftResponse>(
+      '/attendance.AttendanceService/AllocateUsersShift',
+      ($0.AllocateUsersShiftRequest value) => value.writeToBuffer(),
+      $0.AllocateUsersShiftResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -444,6 +456,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
             $0.GetPaginatedUserIdsRegisteredToShiftRequest.fromBuffer(value),
         ($0.GetPaginatedUserIdsRegisteredToShiftResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AllocateUsersShiftRequest,
+            $0.AllocateUsersShiftResponse>(
+        'AllocateUsersShift',
+        allocateUsersShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.AllocateUsersShiftRequest.fromBuffer(value),
+        ($0.AllocateUsersShiftResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -612,4 +633,13 @@ abstract class AttendanceServiceBase extends $grpc.Service {
   $async.Future<$0.GetPaginatedUserIdsRegisteredToShiftResponse>
       getPaginatedUserIdsRegisteredToShift($grpc.ServiceCall call,
           $0.GetPaginatedUserIdsRegisteredToShiftRequest request);
+
+  $async.Future<$0.AllocateUsersShiftResponse> allocateUsersShift_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.AllocateUsersShiftRequest> $request) async {
+    return allocateUsersShift($call, await $request);
+  }
+
+  $async.Future<$0.AllocateUsersShiftResponse> allocateUsersShift(
+      $grpc.ServiceCall call, $0.AllocateUsersShiftRequest request);
 }

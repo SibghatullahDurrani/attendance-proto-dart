@@ -1034,3 +1034,55 @@ final $typed_data.Uint8List
         'CixHZXRQYWdpbmF0ZWRVc2VySWRzUmVnaXN0ZXJlZFRvU2hpZnRSZXNwb25zZRJDCgpwYWdpbm'
         'F0aW9uGAEgASgLMiMuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5h'
         'dGlvbhIZCgh1c2VyX2lkcxgCIAMoCVIHdXNlcklkcw==');
+
+@$core.Deprecated('Use allocateUsersShiftRequestDescriptor instead')
+const AllocateUsersShiftRequest$json = {
+  '1': 'AllocateUsersShiftRequest',
+  '2': [
+    {
+      '1': 'users',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.ShiftAllocationUser',
+      '10': 'users'
+    },
+    {'1': 'shift_id', '3': 2, '4': 1, '5': 9, '10': 'shiftId'},
+  ],
+};
+
+/// Descriptor for `AllocateUsersShiftRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List allocateUsersShiftRequestDescriptor = $convert.base64Decode(
+    'ChlBbGxvY2F0ZVVzZXJzU2hpZnRSZXF1ZXN0Ej4KBXVzZXJzGAEgAygLMiguYXR0ZW5kYW5jZV'
+    '9tZXNzYWdlcy5TaGlmdEFsbG9jYXRpb25Vc2VyUgV1c2VycxIZCghzaGlmdF9pZBgCIAEoCVIH'
+    'c2hpZnRJZA==');
+
+@$core.Deprecated('Use shiftAllocationUserDescriptor instead')
+const ShiftAllocationUser$json = {
+  '1': 'ShiftAllocationUser',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'role',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.Role',
+      '10': 'role'
+    },
+  ],
+};
+
+/// Descriptor for `ShiftAllocationUser`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List shiftAllocationUserDescriptor = $convert.base64Decode(
+    'ChNTaGlmdEFsbG9jYXRpb25Vc2VyEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIpCgRyb2xlGA'
+    'IgASgOMhUuY29tbW9uX21lc3NhZ2VzLlJvbGVSBHJvbGU=');
+
+@$core.Deprecated('Use allocateUsersShiftResponseDescriptor instead')
+const AllocateUsersShiftResponse$json = {
+  '1': 'AllocateUsersShiftResponse',
+};
+
+/// Descriptor for `AllocateUsersShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List allocateUsersShiftResponseDescriptor =
+    $convert.base64Decode('ChpBbGxvY2F0ZVVzZXJzU2hpZnRSZXNwb25zZQ==');

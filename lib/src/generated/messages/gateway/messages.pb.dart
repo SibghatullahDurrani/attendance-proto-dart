@@ -6857,7 +6857,7 @@ class ListUsersOfShiftForShiftAllocationResponse extends $pb.GeneratedMessage {
 
 class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
   factory UserOfShiftForShiftAllocation({
-    $core.String? studentId,
+    $core.String? userId,
     $core.String? firstName,
     $core.String? secondName,
     $core.String? identificationNumber,
@@ -6869,7 +6869,7 @@ class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
     $core.String? shiftName,
   }) {
     final result = create();
-    if (studentId != null) result.studentId = studentId;
+    if (userId != null) result.userId = userId;
     if (firstName != null) result.firstName = firstName;
     if (secondName != null) result.secondName = secondName;
     if (identificationNumber != null)
@@ -6901,7 +6901,7 @@ class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'studentId')
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
     ..aOS(2, _omitFieldNames ? '' : 'firstName')
     ..aOS(3, _omitFieldNames ? '' : 'secondName')
     ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
@@ -6940,13 +6940,13 @@ class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
   static UserOfShiftForShiftAllocation? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get studentId => $_getSZ(0);
+  $core.String get userId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set studentId($core.String value) => $_setString(0, value);
+  set userId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasStudentId() => $_has(0);
+  $core.bool hasUserId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStudentId() => $_clearField(1);
+  void clearUserId() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get firstName => $_getSZ(1);

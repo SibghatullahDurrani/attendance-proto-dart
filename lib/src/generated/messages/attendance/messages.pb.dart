@@ -3435,6 +3435,183 @@ class GetPaginatedUserIdsRegisteredToShiftResponse
   $pb.PbList<$core.String> get userIds => $_getList(1);
 }
 
+class AllocateUsersShiftRequest extends $pb.GeneratedMessage {
+  factory AllocateUsersShiftRequest({
+    $core.Iterable<ShiftAllocationUser>? users,
+    $core.String? shiftId,
+  }) {
+    final result = create();
+    if (users != null) result.users.addAll(users);
+    if (shiftId != null) result.shiftId = shiftId;
+    return result;
+  }
+
+  AllocateUsersShiftRequest._();
+
+  factory AllocateUsersShiftRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AllocateUsersShiftRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AllocateUsersShiftRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..pPM<ShiftAllocationUser>(1, _omitFieldNames ? '' : 'users',
+        subBuilder: ShiftAllocationUser.create)
+    ..aOS(2, _omitFieldNames ? '' : 'shiftId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AllocateUsersShiftRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AllocateUsersShiftRequest copyWith(
+          void Function(AllocateUsersShiftRequest) updates) =>
+      super.copyWith((message) => updates(message as AllocateUsersShiftRequest))
+          as AllocateUsersShiftRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AllocateUsersShiftRequest create() => AllocateUsersShiftRequest._();
+  @$core.override
+  AllocateUsersShiftRequest createEmptyInstance() => create();
+  static $pb.PbList<AllocateUsersShiftRequest> createRepeated() =>
+      $pb.PbList<AllocateUsersShiftRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AllocateUsersShiftRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AllocateUsersShiftRequest>(create);
+  static AllocateUsersShiftRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<ShiftAllocationUser> get users => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get shiftId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set shiftId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasShiftId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearShiftId() => $_clearField(2);
+}
+
+class ShiftAllocationUser extends $pb.GeneratedMessage {
+  factory ShiftAllocationUser({
+    $core.String? userId,
+    $1.Role? role,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    if (role != null) result.role = role;
+    return result;
+  }
+
+  ShiftAllocationUser._();
+
+  factory ShiftAllocationUser.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ShiftAllocationUser.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ShiftAllocationUser',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..aE<$1.Role>(2, _omitFieldNames ? '' : 'role', enumValues: $1.Role.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ShiftAllocationUser clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ShiftAllocationUser copyWith(void Function(ShiftAllocationUser) updates) =>
+      super.copyWith((message) => updates(message as ShiftAllocationUser))
+          as ShiftAllocationUser;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ShiftAllocationUser create() => ShiftAllocationUser._();
+  @$core.override
+  ShiftAllocationUser createEmptyInstance() => create();
+  static $pb.PbList<ShiftAllocationUser> createRepeated() =>
+      $pb.PbList<ShiftAllocationUser>();
+  @$core.pragma('dart2js:noInline')
+  static ShiftAllocationUser getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ShiftAllocationUser>(create);
+  static ShiftAllocationUser? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $1.Role get role => $_getN(1);
+  @$pb.TagNumber(2)
+  set role($1.Role value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasRole() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRole() => $_clearField(2);
+}
+
+class AllocateUsersShiftResponse extends $pb.GeneratedMessage {
+  factory AllocateUsersShiftResponse() => create();
+
+  AllocateUsersShiftResponse._();
+
+  factory AllocateUsersShiftResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AllocateUsersShiftResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AllocateUsersShiftResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AllocateUsersShiftResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AllocateUsersShiftResponse copyWith(
+          void Function(AllocateUsersShiftResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as AllocateUsersShiftResponse))
+          as AllocateUsersShiftResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AllocateUsersShiftResponse create() => AllocateUsersShiftResponse._();
+  @$core.override
+  AllocateUsersShiftResponse createEmptyInstance() => create();
+  static $pb.PbList<AllocateUsersShiftResponse> createRepeated() =>
+      $pb.PbList<AllocateUsersShiftResponse>();
+  @$core.pragma('dart2js:noInline')
+  static AllocateUsersShiftResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AllocateUsersShiftResponse>(create);
+  static AllocateUsersShiftResponse? _defaultInstance;
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =
