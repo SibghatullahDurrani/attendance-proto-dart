@@ -279,6 +279,13 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$2.AllocateUsersShiftResponse> allocateUsersShift(
+    $2.AllocateUsersShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$allocateUsersShift, request, options: options);
+  }
+
   /// User RPCs
   $grpc.ResponseFuture<$3.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData(
@@ -711,6 +718,11 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/GetOrganizationDefaultShift',
       ($2.GetOrganizationDefaultShiftRequest value) => value.writeToBuffer(),
       $2.GetOrganizationDefaultShiftResponse.fromBuffer);
+  static final _$allocateUsersShift = $grpc.ClientMethod<
+          $2.AllocateUsersShiftRequest, $2.AllocateUsersShiftResponse>(
+      '/gateway.GatewayService/AllocateUsersShift',
+      ($2.AllocateUsersShiftRequest value) => value.writeToBuffer(),
+      $2.AllocateUsersShiftResponse.fromBuffer);
   static final _$getParentStudentSelectionData = $grpc.ClientMethod<
           $3.GetParentStudentSelectionDataRequest,
           $3.GetParentStudentSelectionDataResponse>(
@@ -1171,6 +1183,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
             $2.GetOrganizationDefaultShiftRequest.fromBuffer(value),
         ($2.GetOrganizationDefaultShiftResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.AllocateUsersShiftRequest,
+            $2.AllocateUsersShiftResponse>(
+        'AllocateUsersShift',
+        allocateUsersShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.AllocateUsersShiftRequest.fromBuffer(value),
+        ($2.AllocateUsersShiftResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$3.GetParentStudentSelectionDataRequest,
             $3.GetParentStudentSelectionDataResponse>(
         'GetParentStudentSelectionData',
@@ -1769,6 +1790,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$2.GetOrganizationDefaultShiftResponse>
       getOrganizationDefaultShift($grpc.ServiceCall call,
           $2.GetOrganizationDefaultShiftRequest request);
+
+  $async.Future<$2.AllocateUsersShiftResponse> allocateUsersShift_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$2.AllocateUsersShiftRequest> $request) async {
+    return allocateUsersShift($call, await $request);
+  }
+
+  $async.Future<$2.AllocateUsersShiftResponse> allocateUsersShift(
+      $grpc.ServiceCall call, $2.AllocateUsersShiftRequest request);
 
   $async.Future<$3.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData_Pre(
