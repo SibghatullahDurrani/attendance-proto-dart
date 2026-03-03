@@ -166,15 +166,6 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetPaginatedUserIdsRegisteredToShiftResponse>
-      getPaginatedUserIdsRegisteredToShift(
-    $0.GetPaginatedUserIdsRegisteredToShiftRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$getPaginatedUserIdsRegisteredToShift, request,
-        options: options);
-  }
-
   $grpc.ResponseFuture<$0.AllocateUsersShiftResponse> allocateUsersShift(
     $0.AllocateUsersShiftRequest request, {
     $grpc.CallOptions? options,
@@ -276,13 +267,6 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/GetUserIdsRegisteredToShift',
       ($0.GetUserIdsRegisteredToShiftRequest value) => value.writeToBuffer(),
       $0.GetUserIdsRegisteredToShiftResponse.fromBuffer);
-  static final _$getPaginatedUserIdsRegisteredToShift = $grpc.ClientMethod<
-          $0.GetPaginatedUserIdsRegisteredToShiftRequest,
-          $0.GetPaginatedUserIdsRegisteredToShiftResponse>(
-      '/attendance.AttendanceService/GetPaginatedUserIdsRegisteredToShift',
-      ($0.GetPaginatedUserIdsRegisteredToShiftRequest value) =>
-          value.writeToBuffer(),
-      $0.GetPaginatedUserIdsRegisteredToShiftResponse.fromBuffer);
   static final _$allocateUsersShift = $grpc.ClientMethod<
           $0.AllocateUsersShiftRequest, $0.AllocateUsersShiftResponse>(
       '/attendance.AttendanceService/AllocateUsersShift',
@@ -444,17 +428,6 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetUserIdsRegisteredToShiftRequest.fromBuffer(value),
         ($0.GetUserIdsRegisteredToShiftResponse value) =>
-            value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<
-            $0.GetPaginatedUserIdsRegisteredToShiftRequest,
-            $0.GetPaginatedUserIdsRegisteredToShiftResponse>(
-        'GetPaginatedUserIdsRegisteredToShift',
-        getPaginatedUserIdsRegisteredToShift_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.GetPaginatedUserIdsRegisteredToShiftRequest.fromBuffer(value),
-        ($0.GetPaginatedUserIdsRegisteredToShiftResponse value) =>
             value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.AllocateUsersShiftRequest,
             $0.AllocateUsersShiftResponse>(
@@ -621,18 +594,6 @@ abstract class AttendanceServiceBase extends $grpc.Service {
   $async.Future<$0.GetUserIdsRegisteredToShiftResponse>
       getUserIdsRegisteredToShift($grpc.ServiceCall call,
           $0.GetUserIdsRegisteredToShiftRequest request);
-
-  $async.Future<$0.GetPaginatedUserIdsRegisteredToShiftResponse>
-      getPaginatedUserIdsRegisteredToShift_Pre(
-          $grpc.ServiceCall $call,
-          $async.Future<$0.GetPaginatedUserIdsRegisteredToShiftRequest>
-              $request) async {
-    return getPaginatedUserIdsRegisteredToShift($call, await $request);
-  }
-
-  $async.Future<$0.GetPaginatedUserIdsRegisteredToShiftResponse>
-      getPaginatedUserIdsRegisteredToShift($grpc.ServiceCall call,
-          $0.GetPaginatedUserIdsRegisteredToShiftRequest request);
 
   $async.Future<$0.AllocateUsersShiftResponse> allocateUsersShift_Pre(
       $grpc.ServiceCall $call,
