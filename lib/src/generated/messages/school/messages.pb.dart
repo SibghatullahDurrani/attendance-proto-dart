@@ -8109,7 +8109,7 @@ class GetSchoolParentChainIdResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
-    ..aOS(2, _omitFieldNames ? '' : 'schoolChainId')
+    ..aOS(1, _omitFieldNames ? '' : 'schoolChainId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -8136,14 +8136,14 @@ class GetSchoolParentChainIdResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetSchoolParentChainIdResponse>(create);
   static GetSchoolParentChainIdResponse? _defaultInstance;
 
-  @$pb.TagNumber(2)
+  @$pb.TagNumber(1)
   $core.String get schoolChainId => $_getSZ(0);
-  @$pb.TagNumber(2)
+  @$pb.TagNumber(1)
   set schoolChainId($core.String value) => $_setString(0, value);
-  @$pb.TagNumber(2)
+  @$pb.TagNumber(1)
   $core.bool hasSchoolChainId() => $_has(0);
-  @$pb.TagNumber(2)
-  void clearSchoolChainId() => $_clearField(2);
+  @$pb.TagNumber(1)
+  void clearSchoolChainId() => $_clearField(1);
 }
 
 class GetSchoolIdsInSchoolChainRequest extends $pb.GeneratedMessage {

@@ -2801,15 +2801,26 @@ final $typed_data.Uint8List getSchoolParentChainIdRequestDescriptor =
 const GetSchoolParentChainIdResponse$json = {
   '1': 'GetSchoolParentChainIdResponse',
   '2': [
-    {'1': 'school_chain_id', '3': 2, '4': 1, '5': 9, '10': 'schoolChainId'},
+    {
+      '1': 'school_chain_id',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'schoolChainId',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_school_chain_id'},
   ],
 };
 
 /// Descriptor for `GetSchoolParentChainIdResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getSchoolParentChainIdResponseDescriptor =
     $convert.base64Decode(
-        'Ch5HZXRTY2hvb2xQYXJlbnRDaGFpbklkUmVzcG9uc2USJgoPc2Nob29sX2NoYWluX2lkGAIgAS'
-        'gJUg1zY2hvb2xDaGFpbklk');
+        'Ch5HZXRTY2hvb2xQYXJlbnRDaGFpbklkUmVzcG9uc2USKwoPc2Nob29sX2NoYWluX2lkGAEgAS'
+        'gJSABSDXNjaG9vbENoYWluSWSIAQFCEgoQX3NjaG9vbF9jaGFpbl9pZA==');
 
 @$core.Deprecated('Use getSchoolIdsInSchoolChainRequestDescriptor instead')
 const GetSchoolIdsInSchoolChainRequest$json = {
