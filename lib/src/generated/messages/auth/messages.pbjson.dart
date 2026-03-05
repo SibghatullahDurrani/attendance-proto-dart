@@ -34,15 +34,13 @@ const LoginResponse$json = {
   '2': [
     {'1': 'access_token', '3': 1, '4': 1, '5': 9, '10': 'accessToken'},
     {'1': 'refresh_token', '3': 2, '4': 1, '5': 9, '10': 'refreshToken'},
-    {'1': 'firebase_token', '3': 3, '4': 1, '5': 9, '10': 'firebaseToken'},
   ],
 };
 
 /// Descriptor for `LoginResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List loginResponseDescriptor = $convert.base64Decode(
     'Cg1Mb2dpblJlc3BvbnNlEiEKDGFjY2Vzc190b2tlbhgBIAEoCVILYWNjZXNzVG9rZW4SIwoNcm'
-    'VmcmVzaF90b2tlbhgCIAEoCVIMcmVmcmVzaFRva2VuEiUKDmZpcmViYXNlX3Rva2VuGAMgASgJ'
-    'Ug1maXJlYmFzZVRva2Vu');
+    'VmcmVzaF90b2tlbhgCIAEoCVIMcmVmcmVzaFRva2Vu');
 
 @$core.Deprecated('Use addUserRequestDescriptor instead')
 const AddUserRequest$json = {

@@ -90,12 +90,10 @@ class LoginResponse extends $pb.GeneratedMessage {
   factory LoginResponse({
     $core.String? accessToken,
     $core.String? refreshToken,
-    $core.String? firebaseToken,
   }) {
     final result = create();
     if (accessToken != null) result.accessToken = accessToken;
     if (refreshToken != null) result.refreshToken = refreshToken;
-    if (firebaseToken != null) result.firebaseToken = firebaseToken;
     return result;
   }
 
@@ -114,7 +112,6 @@ class LoginResponse extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'accessToken')
     ..aOS(2, _omitFieldNames ? '' : 'refreshToken')
-    ..aOS(3, _omitFieldNames ? '' : 'firebaseToken')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -155,15 +152,6 @@ class LoginResponse extends $pb.GeneratedMessage {
   $core.bool hasRefreshToken() => $_has(1);
   @$pb.TagNumber(2)
   void clearRefreshToken() => $_clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.String get firebaseToken => $_getSZ(2);
-  @$pb.TagNumber(3)
-  set firebaseToken($core.String value) => $_setString(2, value);
-  @$pb.TagNumber(3)
-  $core.bool hasFirebaseToken() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearFirebaseToken() => $_clearField(3);
 }
 
 class AddUserRequest extends $pb.GeneratedMessage {
