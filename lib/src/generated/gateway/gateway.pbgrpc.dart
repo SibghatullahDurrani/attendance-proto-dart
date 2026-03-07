@@ -286,6 +286,13 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$allocateUsersShift, request, options: options);
   }
 
+  $grpc.ResponseFuture<$2.EditShiftResponse> editShift(
+    $2.EditShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$editShift, request, options: options);
+  }
+
   /// User RPCs
   $grpc.ResponseFuture<$3.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData(
@@ -723,6 +730,11 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/AllocateUsersShift',
       ($2.AllocateUsersShiftRequest value) => value.writeToBuffer(),
       $2.AllocateUsersShiftResponse.fromBuffer);
+  static final _$editShift =
+      $grpc.ClientMethod<$2.EditShiftRequest, $2.EditShiftResponse>(
+          '/gateway.GatewayService/EditShift',
+          ($2.EditShiftRequest value) => value.writeToBuffer(),
+          $2.EditShiftResponse.fromBuffer);
   static final _$getParentStudentSelectionData = $grpc.ClientMethod<
           $3.GetParentStudentSelectionDataRequest,
           $3.GetParentStudentSelectionDataResponse>(
@@ -1192,6 +1204,13 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.AllocateUsersShiftRequest.fromBuffer(value),
         ($2.AllocateUsersShiftResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.EditShiftRequest, $2.EditShiftResponse>(
+        'EditShift',
+        editShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.EditShiftRequest.fromBuffer(value),
+        ($2.EditShiftResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$3.GetParentStudentSelectionDataRequest,
             $3.GetParentStudentSelectionDataResponse>(
         'GetParentStudentSelectionData',
@@ -1799,6 +1818,14 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$2.AllocateUsersShiftResponse> allocateUsersShift(
       $grpc.ServiceCall call, $2.AllocateUsersShiftRequest request);
+
+  $async.Future<$2.EditShiftResponse> editShift_Pre($grpc.ServiceCall $call,
+      $async.Future<$2.EditShiftRequest> $request) async {
+    return editShift($call, await $request);
+  }
+
+  $async.Future<$2.EditShiftResponse> editShift(
+      $grpc.ServiceCall call, $2.EditShiftRequest request);
 
   $async.Future<$3.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData_Pre(
