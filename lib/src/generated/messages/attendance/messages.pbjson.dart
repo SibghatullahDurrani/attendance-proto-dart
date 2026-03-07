@@ -1086,3 +1086,83 @@ const AllocateUsersShiftResponse$json = {
 /// Descriptor for `AllocateUsersShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List allocateUsersShiftResponseDescriptor =
     $convert.base64Decode('ChpBbGxvY2F0ZVVzZXJzU2hpZnRSZXNwb25zZQ==');
+
+@$core.Deprecated('Use editShiftRequestDescriptor instead')
+const EditShiftRequest$json = {
+  '1': 'EditShiftRequest',
+  '2': [
+    {'1': 'shift_id', '3': 1, '4': 1, '5': 9, '10': 'shiftId'},
+    {'1': 'name', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'name', '17': true},
+    {
+      '1': 'check_in_hour',
+      '3': 3,
+      '4': 1,
+      '5': 5,
+      '9': 1,
+      '10': 'checkInHour',
+      '17': true
+    },
+    {
+      '1': 'check_in_minute',
+      '3': 4,
+      '4': 1,
+      '5': 5,
+      '9': 2,
+      '10': 'checkInMinute',
+      '17': true
+    },
+    {
+      '1': 'check_out_hour',
+      '3': 5,
+      '4': 1,
+      '5': 5,
+      '9': 3,
+      '10': 'checkOutHour',
+      '17': true
+    },
+    {
+      '1': 'check_out_minute',
+      '3': 6,
+      '4': 1,
+      '5': 5,
+      '9': 4,
+      '10': 'checkOutMinute',
+      '17': true
+    },
+    {
+      '1': 'working_days',
+      '3': 7,
+      '4': 3,
+      '5': 14,
+      '6': '.common_messages.Days',
+      '10': 'workingDays'
+    },
+  ],
+  '8': [
+    {'1': '_name'},
+    {'1': '_check_in_hour'},
+    {'1': '_check_in_minute'},
+    {'1': '_check_out_hour'},
+    {'1': '_check_out_minute'},
+  ],
+};
+
+/// Descriptor for `EditShiftRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List editShiftRequestDescriptor = $convert.base64Decode(
+    'ChBFZGl0U2hpZnRSZXF1ZXN0EhkKCHNoaWZ0X2lkGAEgASgJUgdzaGlmdElkEhcKBG5hbWUYAi'
+    'ABKAlIAFIEbmFtZYgBARInCg1jaGVja19pbl9ob3VyGAMgASgFSAFSC2NoZWNrSW5Ib3VyiAEB'
+    'EisKD2NoZWNrX2luX21pbnV0ZRgEIAEoBUgCUg1jaGVja0luTWludXRliAEBEikKDmNoZWNrX2'
+    '91dF9ob3VyGAUgASgFSANSDGNoZWNrT3V0SG91cogBARItChBjaGVja19vdXRfbWludXRlGAYg'
+    'ASgFSARSDmNoZWNrT3V0TWludXRliAEBEjgKDHdvcmtpbmdfZGF5cxgHIAMoDjIVLmNvbW1vbl'
+    '9tZXNzYWdlcy5EYXlzUgt3b3JraW5nRGF5c0IHCgVfbmFtZUIQCg5fY2hlY2tfaW5faG91ckIS'
+    'ChBfY2hlY2tfaW5fbWludXRlQhEKD19jaGVja19vdXRfaG91ckITChFfY2hlY2tfb3V0X21pbn'
+    'V0ZQ==');
+
+@$core.Deprecated('Use editShiftResponseDescriptor instead')
+const EditShiftResponse$json = {
+  '1': 'EditShiftResponse',
+};
+
+/// Descriptor for `EditShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List editShiftResponseDescriptor =
+    $convert.base64Decode('ChFFZGl0U2hpZnRSZXNwb25zZQ==');

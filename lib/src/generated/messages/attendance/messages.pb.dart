@@ -3612,6 +3612,173 @@ class AllocateUsersShiftResponse extends $pb.GeneratedMessage {
   static AllocateUsersShiftResponse? _defaultInstance;
 }
 
+class EditShiftRequest extends $pb.GeneratedMessage {
+  factory EditShiftRequest({
+    $core.String? shiftId,
+    $core.String? name,
+    $core.int? checkInHour,
+    $core.int? checkInMinute,
+    $core.int? checkOutHour,
+    $core.int? checkOutMinute,
+    $core.Iterable<$1.Days>? workingDays,
+  }) {
+    final result = create();
+    if (shiftId != null) result.shiftId = shiftId;
+    if (name != null) result.name = name;
+    if (checkInHour != null) result.checkInHour = checkInHour;
+    if (checkInMinute != null) result.checkInMinute = checkInMinute;
+    if (checkOutHour != null) result.checkOutHour = checkOutHour;
+    if (checkOutMinute != null) result.checkOutMinute = checkOutMinute;
+    if (workingDays != null) result.workingDays.addAll(workingDays);
+    return result;
+  }
+
+  EditShiftRequest._();
+
+  factory EditShiftRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EditShiftRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EditShiftRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'shiftId')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..aI(3, _omitFieldNames ? '' : 'checkInHour')
+    ..aI(4, _omitFieldNames ? '' : 'checkInMinute')
+    ..aI(5, _omitFieldNames ? '' : 'checkOutHour')
+    ..aI(6, _omitFieldNames ? '' : 'checkOutMinute')
+    ..pc<$1.Days>(7, _omitFieldNames ? '' : 'workingDays', $pb.PbFieldType.KE,
+        valueOf: $1.Days.valueOf,
+        enumValues: $1.Days.values,
+        defaultEnumValue: $1.Days.MONDAY)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EditShiftRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EditShiftRequest copyWith(void Function(EditShiftRequest) updates) =>
+      super.copyWith((message) => updates(message as EditShiftRequest))
+          as EditShiftRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static EditShiftRequest create() => EditShiftRequest._();
+  @$core.override
+  EditShiftRequest createEmptyInstance() => create();
+  static $pb.PbList<EditShiftRequest> createRepeated() =>
+      $pb.PbList<EditShiftRequest>();
+  @$core.pragma('dart2js:noInline')
+  static EditShiftRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EditShiftRequest>(create);
+  static EditShiftRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get shiftId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set shiftId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasShiftId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearShiftId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set name($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get checkInHour => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set checkInHour($core.int value) => $_setSignedInt32(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasCheckInHour() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCheckInHour() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get checkInMinute => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set checkInMinute($core.int value) => $_setSignedInt32(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasCheckInMinute() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCheckInMinute() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get checkOutHour => $_getIZ(4);
+  @$pb.TagNumber(5)
+  set checkOutHour($core.int value) => $_setSignedInt32(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasCheckOutHour() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearCheckOutHour() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.int get checkOutMinute => $_getIZ(5);
+  @$pb.TagNumber(6)
+  set checkOutMinute($core.int value) => $_setSignedInt32(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasCheckOutMinute() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearCheckOutMinute() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $pb.PbList<$1.Days> get workingDays => $_getList(6);
+}
+
+class EditShiftResponse extends $pb.GeneratedMessage {
+  factory EditShiftResponse() => create();
+
+  EditShiftResponse._();
+
+  factory EditShiftResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EditShiftResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EditShiftResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EditShiftResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EditShiftResponse copyWith(void Function(EditShiftResponse) updates) =>
+      super.copyWith((message) => updates(message as EditShiftResponse))
+          as EditShiftResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static EditShiftResponse create() => EditShiftResponse._();
+  @$core.override
+  EditShiftResponse createEmptyInstance() => create();
+  static $pb.PbList<EditShiftResponse> createRepeated() =>
+      $pb.PbList<EditShiftResponse>();
+  @$core.pragma('dart2js:noInline')
+  static EditShiftResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EditShiftResponse>(create);
+  static EditShiftResponse? _defaultInstance;
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

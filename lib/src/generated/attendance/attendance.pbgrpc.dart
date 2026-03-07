@@ -173,6 +173,13 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$allocateUsersShift, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.EditShiftResponse> editShift(
+    $0.EditShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$editShift, request, options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -272,6 +279,11 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/AllocateUsersShift',
       ($0.AllocateUsersShiftRequest value) => value.writeToBuffer(),
       $0.AllocateUsersShiftResponse.fromBuffer);
+  static final _$editShift =
+      $grpc.ClientMethod<$0.EditShiftRequest, $0.EditShiftResponse>(
+          '/attendance.AttendanceService/EditShift',
+          ($0.EditShiftRequest value) => value.writeToBuffer(),
+          $0.EditShiftResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -438,6 +450,13 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.AllocateUsersShiftRequest.fromBuffer(value),
         ($0.AllocateUsersShiftResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.EditShiftRequest, $0.EditShiftResponse>(
+        'EditShift',
+        editShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.EditShiftRequest.fromBuffer(value),
+        ($0.EditShiftResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -603,4 +622,12 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.AllocateUsersShiftResponse> allocateUsersShift(
       $grpc.ServiceCall call, $0.AllocateUsersShiftRequest request);
+
+  $async.Future<$0.EditShiftResponse> editShift_Pre($grpc.ServiceCall $call,
+      $async.Future<$0.EditShiftRequest> $request) async {
+    return editShift($call, await $request);
+  }
+
+  $async.Future<$0.EditShiftResponse> editShift(
+      $grpc.ServiceCall call, $0.EditShiftRequest request);
 }
