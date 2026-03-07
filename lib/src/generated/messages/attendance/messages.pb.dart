@@ -3620,6 +3620,7 @@ class EditShiftRequest extends $pb.GeneratedMessage {
     $core.int? checkInMinute,
     $core.int? checkOutHour,
     $core.int? checkOutMinute,
+    $core.bool? isDefault,
     $core.Iterable<$1.Days>? workingDays,
   }) {
     final result = create();
@@ -3629,6 +3630,7 @@ class EditShiftRequest extends $pb.GeneratedMessage {
     if (checkInMinute != null) result.checkInMinute = checkInMinute;
     if (checkOutHour != null) result.checkOutHour = checkOutHour;
     if (checkOutMinute != null) result.checkOutMinute = checkOutMinute;
+    if (isDefault != null) result.isDefault = isDefault;
     if (workingDays != null) result.workingDays.addAll(workingDays);
     return result;
   }
@@ -3653,7 +3655,8 @@ class EditShiftRequest extends $pb.GeneratedMessage {
     ..aI(4, _omitFieldNames ? '' : 'checkInMinute')
     ..aI(5, _omitFieldNames ? '' : 'checkOutHour')
     ..aI(6, _omitFieldNames ? '' : 'checkOutMinute')
-    ..pc<$1.Days>(7, _omitFieldNames ? '' : 'workingDays', $pb.PbFieldType.KE,
+    ..aOB(7, _omitFieldNames ? '' : 'isDefault')
+    ..pc<$1.Days>(8, _omitFieldNames ? '' : 'workingDays', $pb.PbFieldType.KE,
         valueOf: $1.Days.valueOf,
         enumValues: $1.Days.values,
         defaultEnumValue: $1.Days.MONDAY)
@@ -3735,7 +3738,16 @@ class EditShiftRequest extends $pb.GeneratedMessage {
   void clearCheckOutMinute() => $_clearField(6);
 
   @$pb.TagNumber(7)
-  $pb.PbList<$1.Days> get workingDays => $_getList(6);
+  $core.bool get isDefault => $_getBF(6);
+  @$pb.TagNumber(7)
+  set isDefault($core.bool value) => $_setBool(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasIsDefault() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearIsDefault() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $pb.PbList<$1.Days> get workingDays => $_getList(7);
 }
 
 class EditShiftResponse extends $pb.GeneratedMessage {

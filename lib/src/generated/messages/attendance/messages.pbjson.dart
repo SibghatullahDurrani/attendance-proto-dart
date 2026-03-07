@@ -1130,8 +1130,17 @@ const EditShiftRequest$json = {
       '17': true
     },
     {
-      '1': 'working_days',
+      '1': 'is_default',
       '3': 7,
+      '4': 1,
+      '5': 8,
+      '9': 5,
+      '10': 'isDefault',
+      '17': true
+    },
+    {
+      '1': 'working_days',
+      '3': 8,
       '4': 3,
       '5': 14,
       '6': '.common_messages.Days',
@@ -1144,6 +1153,7 @@ const EditShiftRequest$json = {
     {'1': '_check_in_minute'},
     {'1': '_check_out_hour'},
     {'1': '_check_out_minute'},
+    {'1': '_is_default'},
   ],
 };
 
@@ -1153,10 +1163,10 @@ final $typed_data.Uint8List editShiftRequestDescriptor = $convert.base64Decode(
     'ABKAlIAFIEbmFtZYgBARInCg1jaGVja19pbl9ob3VyGAMgASgFSAFSC2NoZWNrSW5Ib3VyiAEB'
     'EisKD2NoZWNrX2luX21pbnV0ZRgEIAEoBUgCUg1jaGVja0luTWludXRliAEBEikKDmNoZWNrX2'
     '91dF9ob3VyGAUgASgFSANSDGNoZWNrT3V0SG91cogBARItChBjaGVja19vdXRfbWludXRlGAYg'
-    'ASgFSARSDmNoZWNrT3V0TWludXRliAEBEjgKDHdvcmtpbmdfZGF5cxgHIAMoDjIVLmNvbW1vbl'
-    '9tZXNzYWdlcy5EYXlzUgt3b3JraW5nRGF5c0IHCgVfbmFtZUIQCg5fY2hlY2tfaW5faG91ckIS'
-    'ChBfY2hlY2tfaW5fbWludXRlQhEKD19jaGVja19vdXRfaG91ckITChFfY2hlY2tfb3V0X21pbn'
-    'V0ZQ==');
+    'ASgFSARSDmNoZWNrT3V0TWludXRliAEBEiIKCmlzX2RlZmF1bHQYByABKAhIBVIJaXNEZWZhdW'
+    'x0iAEBEjgKDHdvcmtpbmdfZGF5cxgIIAMoDjIVLmNvbW1vbl9tZXNzYWdlcy5EYXlzUgt3b3Jr'
+    'aW5nRGF5c0IHCgVfbmFtZUIQCg5fY2hlY2tfaW5faG91ckISChBfY2hlY2tfaW5fbWludXRlQh'
+    'EKD19jaGVja19vdXRfaG91ckITChFfY2hlY2tfb3V0X21pbnV0ZUINCgtfaXNfZGVmYXVsdA==');
 
 @$core.Deprecated('Use editShiftResponseDescriptor instead')
 const EditShiftResponse$json = {
