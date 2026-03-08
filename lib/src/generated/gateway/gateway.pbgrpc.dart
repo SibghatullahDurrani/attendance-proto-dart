@@ -21,6 +21,7 @@ import '../messages/auth/messages.pb.dart' as $0;
 import '../messages/gateway/messages.pb.dart' as $5;
 import '../messages/leave/messages.pb.dart' as $4;
 import '../messages/media/messages.pb.dart' as $6;
+import '../messages/saga/messages.pb.dart' as $7;
 import '../messages/school/messages.pb.dart' as $1;
 import '../messages/user/messages.pb.dart' as $3;
 
@@ -475,13 +476,6 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listInstitutionLeaves, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.RespondToLeaveResponse> respondToLeave(
-    $4.RespondToLeaveRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$respondToLeave, request, options: options);
-  }
-
   $grpc.ResponseFuture<$5.CanRequestLeaveResponse> canRequestLeave(
     $5.CanRequestLeaveRequest request, {
     $grpc.CallOptions? options,
@@ -555,6 +549,16 @@ class GatewayServiceClient extends $grpc.Client {
     $grpc.CallOptions? options,
   }) {
     return $createUnaryCall(_$deleteLeaveAttachment, request, options: options);
+  }
+
+  /// Saga Rpcs
+  $grpc.ResponseFuture<$7.HandleLeaveResponseSagaResponse>
+      handleLeaveResponseSaga(
+    $7.HandleLeaveResponseSagaRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$handleLeaveResponseSaga, request,
+        options: options);
   }
 
   // method descriptors
@@ -856,11 +860,6 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/ListInstitutionLeaves',
       ($5.ListInstitutionLeavesRequest value) => value.writeToBuffer(),
       $5.ListInstitutionLeavesResponse.fromBuffer);
-  static final _$respondToLeave =
-      $grpc.ClientMethod<$4.RespondToLeaveRequest, $4.RespondToLeaveResponse>(
-          '/gateway.GatewayService/RespondToLeave',
-          ($4.RespondToLeaveRequest value) => value.writeToBuffer(),
-          $4.RespondToLeaveResponse.fromBuffer);
   static final _$canRequestLeave =
       $grpc.ClientMethod<$5.CanRequestLeaveRequest, $5.CanRequestLeaveResponse>(
           '/gateway.GatewayService/CanRequestLeave',
@@ -915,6 +914,12 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/DeleteLeaveAttachment',
       ($6.DeleteLeaveAttachmentRequest value) => value.writeToBuffer(),
       $6.DeleteLeaveAttachmentResponse.fromBuffer);
+  static final _$handleLeaveResponseSaga = $grpc.ClientMethod<
+          $7.HandleLeaveResponseSagaRequest,
+          $7.HandleLeaveResponseSagaResponse>(
+      '/gateway.GatewayService/HandleLeaveResponseSaga',
+      ($7.HandleLeaveResponseSagaRequest value) => value.writeToBuffer(),
+      $7.HandleLeaveResponseSagaResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -1423,15 +1428,6 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $5.ListInstitutionLeavesRequest.fromBuffer(value),
         ($5.ListInstitutionLeavesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.RespondToLeaveRequest,
-            $4.RespondToLeaveResponse>(
-        'RespondToLeave',
-        respondToLeave_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $4.RespondToLeaveRequest.fromBuffer(value),
-        ($4.RespondToLeaveResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$5.CanRequestLeaveRequest,
             $5.CanRequestLeaveResponse>(
         'CanRequestLeave',
@@ -1521,6 +1517,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $6.DeleteLeaveAttachmentRequest.fromBuffer(value),
         ($6.DeleteLeaveAttachmentResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$7.HandleLeaveResponseSagaRequest,
+            $7.HandleLeaveResponseSagaResponse>(
+        'HandleLeaveResponseSaga',
+        handleLeaveResponseSaga_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $7.HandleLeaveResponseSagaRequest.fromBuffer(value),
+        ($7.HandleLeaveResponseSagaResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -2021,15 +2026,6 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$5.ListInstitutionLeavesResponse> listInstitutionLeaves(
       $grpc.ServiceCall call, $5.ListInstitutionLeavesRequest request);
 
-  $async.Future<$4.RespondToLeaveResponse> respondToLeave_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$4.RespondToLeaveRequest> $request) async {
-    return respondToLeave($call, await $request);
-  }
-
-  $async.Future<$4.RespondToLeaveResponse> respondToLeave(
-      $grpc.ServiceCall call, $4.RespondToLeaveRequest request);
-
   $async.Future<$5.CanRequestLeaveResponse> canRequestLeave_Pre(
       $grpc.ServiceCall $call,
       $async.Future<$5.CanRequestLeaveRequest> $request) async {
@@ -2118,4 +2114,13 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$6.DeleteLeaveAttachmentResponse> deleteLeaveAttachment(
       $grpc.ServiceCall call, $6.DeleteLeaveAttachmentRequest request);
+
+  $async.Future<$7.HandleLeaveResponseSagaResponse> handleLeaveResponseSaga_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$7.HandleLeaveResponseSagaRequest> $request) async {
+    return handleLeaveResponseSaga($call, await $request);
+  }
+
+  $async.Future<$7.HandleLeaveResponseSagaResponse> handleLeaveResponseSaga(
+      $grpc.ServiceCall call, $7.HandleLeaveResponseSagaRequest request);
 }
