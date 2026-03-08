@@ -1292,6 +1292,7 @@ class RegisterSchoolChainEmployeeSagaResponse extends $pb.GeneratedMessage {
 class HandleLeaveResponseSagaRequest extends $pb.GeneratedMessage {
   factory HandleLeaveResponseSagaRequest({
     $core.String? leaveId,
+    $core.String? userId,
     $0.LeaveType? leaveType,
     $core.Iterable<$core.String>? acceptedLeaveDateIds,
     $0.LeaveStatus? rangeStatus,
@@ -1299,6 +1300,7 @@ class HandleLeaveResponseSagaRequest extends $pb.GeneratedMessage {
   }) {
     final result = create();
     if (leaveId != null) result.leaveId = leaveId;
+    if (userId != null) result.userId = userId;
     if (leaveType != null) result.leaveType = leaveType;
     if (acceptedLeaveDateIds != null)
       result.acceptedLeaveDateIds.addAll(acceptedLeaveDateIds);
@@ -1321,12 +1323,13 @@ class HandleLeaveResponseSagaRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'leaveId')
-    ..aE<$0.LeaveType>(2, _omitFieldNames ? '' : 'leaveType',
+    ..aOS(2, _omitFieldNames ? '' : 'userId')
+    ..aE<$0.LeaveType>(3, _omitFieldNames ? '' : 'leaveType',
         enumValues: $0.LeaveType.values)
-    ..pPS(3, _omitFieldNames ? '' : 'acceptedLeaveDateIds')
-    ..aE<$0.LeaveStatus>(4, _omitFieldNames ? '' : 'rangeStatus',
+    ..pPS(4, _omitFieldNames ? '' : 'acceptedLeaveDateIds')
+    ..aE<$0.LeaveStatus>(5, _omitFieldNames ? '' : 'rangeStatus',
         enumValues: $0.LeaveStatus.values)
-    ..aOS(5, _omitFieldNames ? '' : 'remarks')
+    ..aOS(6, _omitFieldNames ? '' : 'remarks')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1363,36 +1366,45 @@ class HandleLeaveResponseSagaRequest extends $pb.GeneratedMessage {
   void clearLeaveId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $0.LeaveType get leaveType => $_getN(1);
+  $core.String get userId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set leaveType($0.LeaveType value) => $_setField(2, value);
+  set userId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
-  $core.bool hasLeaveType() => $_has(1);
+  $core.bool hasUserId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLeaveType() => $_clearField(2);
+  void clearUserId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $0.LeaveType get leaveType => $_getN(2);
+  @$pb.TagNumber(3)
+  set leaveType($0.LeaveType value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasLeaveType() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLeaveType() => $_clearField(3);
 
   /// For Discrete leave type;
-  @$pb.TagNumber(3)
-  $pb.PbList<$core.String> get acceptedLeaveDateIds => $_getList(2);
+  @$pb.TagNumber(4)
+  $pb.PbList<$core.String> get acceptedLeaveDateIds => $_getList(3);
 
   /// For Range leave type
-  @$pb.TagNumber(4)
-  $0.LeaveStatus get rangeStatus => $_getN(3);
-  @$pb.TagNumber(4)
-  set rangeStatus($0.LeaveStatus value) => $_setField(4, value);
-  @$pb.TagNumber(4)
-  $core.bool hasRangeStatus() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearRangeStatus() => $_clearField(4);
+  @$pb.TagNumber(5)
+  $0.LeaveStatus get rangeStatus => $_getN(4);
+  @$pb.TagNumber(5)
+  set rangeStatus($0.LeaveStatus value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasRangeStatus() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearRangeStatus() => $_clearField(5);
 
-  @$pb.TagNumber(5)
-  $core.String get remarks => $_getSZ(4);
-  @$pb.TagNumber(5)
-  set remarks($core.String value) => $_setString(4, value);
-  @$pb.TagNumber(5)
-  $core.bool hasRemarks() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearRemarks() => $_clearField(5);
+  @$pb.TagNumber(6)
+  $core.String get remarks => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set remarks($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasRemarks() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearRemarks() => $_clearField(6);
 }
 
 class HandleLeaveResponseSagaResponse extends $pb.GeneratedMessage {

@@ -431,9 +431,10 @@ const HandleLeaveResponseSagaRequest$json = {
   '1': 'HandleLeaveResponseSagaRequest',
   '2': [
     {'1': 'leave_id', '3': 1, '4': 1, '5': 9, '10': 'leaveId'},
+    {'1': 'user_id', '3': 2, '4': 1, '5': 9, '10': 'userId'},
     {
       '1': 'leave_type',
-      '3': 2,
+      '3': 3,
       '4': 1,
       '5': 14,
       '6': '.common_messages.LeaveType',
@@ -441,14 +442,14 @@ const HandleLeaveResponseSagaRequest$json = {
     },
     {
       '1': 'accepted_leave_date_ids',
-      '3': 3,
+      '3': 4,
       '4': 3,
       '5': 9,
       '10': 'acceptedLeaveDateIds'
     },
     {
       '1': 'range_status',
-      '3': 4,
+      '3': 5,
       '4': 1,
       '5': 14,
       '6': '.common_messages.LeaveStatus',
@@ -458,7 +459,7 @@ const HandleLeaveResponseSagaRequest$json = {
     },
     {
       '1': 'remarks',
-      '3': 5,
+      '3': 6,
       '4': 1,
       '5': 9,
       '9': 1,
@@ -475,11 +476,11 @@ const HandleLeaveResponseSagaRequest$json = {
 /// Descriptor for `HandleLeaveResponseSagaRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List handleLeaveResponseSagaRequestDescriptor = $convert.base64Decode(
     'Ch5IYW5kbGVMZWF2ZVJlc3BvbnNlU2FnYVJlcXVlc3QSGQoIbGVhdmVfaWQYASABKAlSB2xlYX'
-    'ZlSWQSOQoKbGVhdmVfdHlwZRgCIAEoDjIaLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVR5cGVSCWxl'
-    'YXZlVHlwZRI1ChdhY2NlcHRlZF9sZWF2ZV9kYXRlX2lkcxgDIAMoCVIUYWNjZXB0ZWRMZWF2ZU'
-    'RhdGVJZHMSRAoMcmFuZ2Vfc3RhdHVzGAQgASgOMhwuY29tbW9uX21lc3NhZ2VzLkxlYXZlU3Rh'
-    'dHVzSABSC3JhbmdlU3RhdHVziAEBEh0KB3JlbWFya3MYBSABKAlIAVIHcmVtYXJrc4gBAUIPCg'
-    '1fcmFuZ2Vfc3RhdHVzQgoKCF9yZW1hcmtz');
+    'ZlSWQSFwoHdXNlcl9pZBgCIAEoCVIGdXNlcklkEjkKCmxlYXZlX3R5cGUYAyABKA4yGi5jb21t'
+    'b25fbWVzc2FnZXMuTGVhdmVUeXBlUglsZWF2ZVR5cGUSNQoXYWNjZXB0ZWRfbGVhdmVfZGF0ZV'
+    '9pZHMYBCADKAlSFGFjY2VwdGVkTGVhdmVEYXRlSWRzEkQKDHJhbmdlX3N0YXR1cxgFIAEoDjIc'
+    'LmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVN0YXR1c0gAUgtyYW5nZVN0YXR1c4gBARIdCgdyZW1hcm'
+    'tzGAYgASgJSAFSB3JlbWFya3OIAQFCDwoNX3JhbmdlX3N0YXR1c0IKCghfcmVtYXJrcw==');
 
 @$core.Deprecated('Use handleLeaveResponseSagaResponseDescriptor instead')
 const HandleLeaveResponseSagaResponse$json = {
