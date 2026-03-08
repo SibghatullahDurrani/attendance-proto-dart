@@ -89,6 +89,15 @@ class SagaServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.HandleLeaveResponseSagaResponse>
+      handleLeaveResponseSaga(
+    $0.HandleLeaveResponseSagaRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$handleLeaveResponseSaga, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$registerStudentSaga = $grpc.ClientMethod<
@@ -131,6 +140,12 @@ class SagaServiceClient extends $grpc.Client {
       ($0.RegisterSchoolChainEmployeeSagaRequest value) =>
           value.writeToBuffer(),
       $0.RegisterSchoolChainEmployeeSagaResponse.fromBuffer);
+  static final _$handleLeaveResponseSaga = $grpc.ClientMethod<
+          $0.HandleLeaveResponseSagaRequest,
+          $0.HandleLeaveResponseSagaResponse>(
+      '/saga.SagaService/HandleLeaveResponseSaga',
+      ($0.HandleLeaveResponseSagaRequest value) => value.writeToBuffer(),
+      $0.HandleLeaveResponseSagaResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('saga.SagaService')
@@ -204,6 +219,15 @@ abstract class SagaServiceBase extends $grpc.Service {
             $0.RegisterSchoolChainEmployeeSagaRequest.fromBuffer(value),
         ($0.RegisterSchoolChainEmployeeSagaResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.HandleLeaveResponseSagaRequest,
+            $0.HandleLeaveResponseSagaResponse>(
+        'HandleLeaveResponseSaga',
+        handleLeaveResponseSaga_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.HandleLeaveResponseSagaRequest.fromBuffer(value),
+        ($0.HandleLeaveResponseSagaResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.RegisterStudentSagaResponse> registerStudentSaga_Pre(
@@ -275,4 +299,13 @@ abstract class SagaServiceBase extends $grpc.Service {
   $async.Future<$0.RegisterSchoolChainEmployeeSagaResponse>
       registerSchoolChainEmployeeSaga($grpc.ServiceCall call,
           $0.RegisterSchoolChainEmployeeSagaRequest request);
+
+  $async.Future<$0.HandleLeaveResponseSagaResponse> handleLeaveResponseSaga_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.HandleLeaveResponseSagaRequest> $request) async {
+    return handleLeaveResponseSaga($call, await $request);
+  }
+
+  $async.Future<$0.HandleLeaveResponseSagaResponse> handleLeaveResponseSaga(
+      $grpc.ServiceCall call, $0.HandleLeaveResponseSagaRequest request);
 }

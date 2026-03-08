@@ -710,11 +710,89 @@ final $typed_data.Uint8List respondToLeaveRequestDescriptor = $convert.base64Dec
     'bmdlU3RhdHVziAEBEh0KB3JlbWFya3MYBSABKAlIAVIHcmVtYXJrc4gBAUIPCg1fcmFuZ2Vfc3'
     'RhdHVzQgoKCF9yZW1hcmtz');
 
+@$core.Deprecated('Use leaveDateStatusDescriptor instead')
+const LeaveDateStatus$json = {
+  '1': 'LeaveDateStatus',
+  '2': [
+    {'1': 'date_id', '3': 1, '4': 1, '5': 9, '10': 'dateId'},
+    {
+      '1': 'status',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveStatus',
+      '10': 'status'
+    },
+  ],
+};
+
+/// Descriptor for `LeaveDateStatus`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List leaveDateStatusDescriptor = $convert.base64Decode(
+    'Cg9MZWF2ZURhdGVTdGF0dXMSFwoHZGF0ZV9pZBgBIAEoCVIGZGF0ZUlkEjQKBnN0YXR1cxgCIA'
+    'EoDjIcLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVN0YXR1c1IGc3RhdHVz');
+
 @$core.Deprecated('Use respondToLeaveResponseDescriptor instead')
 const RespondToLeaveResponse$json = {
   '1': 'RespondToLeaveResponse',
+  '2': [
+    {'1': 'leave_id', '3': 1, '4': 1, '5': 9, '10': 'leaveId'},
+    {
+      '1': 'leave_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveType',
+      '10': 'leaveType'
+    },
+    {
+      '1': 'previous_date_statuses',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.leave_messages.LeaveDateStatus',
+      '10': 'previousDateStatuses'
+    },
+    {
+      '1': 'previous_range_status',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveStatus',
+      '9': 0,
+      '10': 'previousRangeStatus',
+      '17': true
+    },
+    {
+      '1': 'previous_remarks',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'previousRemarks',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_previous_range_status'},
+    {'1': '_previous_remarks'},
+  ],
 };
 
 /// Descriptor for `RespondToLeaveResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List respondToLeaveResponseDescriptor =
-    $convert.base64Decode('ChZSZXNwb25kVG9MZWF2ZVJlc3BvbnNl');
+final $typed_data.Uint8List respondToLeaveResponseDescriptor = $convert.base64Decode(
+    'ChZSZXNwb25kVG9MZWF2ZVJlc3BvbnNlEhkKCGxlYXZlX2lkGAEgASgJUgdsZWF2ZUlkEjkKCm'
+    'xlYXZlX3R5cGUYAiABKA4yGi5jb21tb25fbWVzc2FnZXMuTGVhdmVUeXBlUglsZWF2ZVR5cGUS'
+    'VQoWcHJldmlvdXNfZGF0ZV9zdGF0dXNlcxgDIAMoCzIfLmxlYXZlX21lc3NhZ2VzLkxlYXZlRG'
+    'F0ZVN0YXR1c1IUcHJldmlvdXNEYXRlU3RhdHVzZXMSVQoVcHJldmlvdXNfcmFuZ2Vfc3RhdHVz'
+    'GAQgASgOMhwuY29tbW9uX21lc3NhZ2VzLkxlYXZlU3RhdHVzSABSE3ByZXZpb3VzUmFuZ2VTdG'
+    'F0dXOIAQESLgoQcHJldmlvdXNfcmVtYXJrcxgFIAEoCUgBUg9wcmV2aW91c1JlbWFya3OIAQFC'
+    'GAoWX3ByZXZpb3VzX3JhbmdlX3N0YXR1c0ITChFfcHJldmlvdXNfcmVtYXJrcw==');
+
+@$core.Deprecated('Use compensateRespondToLeaveResponseDescriptor instead')
+const CompensateRespondToLeaveResponse$json = {
+  '1': 'CompensateRespondToLeaveResponse',
+};
+
+/// Descriptor for `CompensateRespondToLeaveResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List compensateRespondToLeaveResponseDescriptor =
+    $convert.base64Decode('CiBDb21wZW5zYXRlUmVzcG9uZFRvTGVhdmVSZXNwb25zZQ==');

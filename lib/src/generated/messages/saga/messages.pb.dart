@@ -14,6 +14,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../common/messages.pbenum.dart' as $0;
+
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 class RegisterStudentSagaRequest extends $pb.GeneratedMessage {
@@ -1285,6 +1287,172 @@ class RegisterSchoolChainEmployeeSagaResponse extends $pb.GeneratedMessage {
   $core.bool hasEmployeeId() => $_has(0);
   @$pb.TagNumber(1)
   void clearEmployeeId() => $_clearField(1);
+}
+
+class HandleLeaveResponseSagaRequest extends $pb.GeneratedMessage {
+  factory HandleLeaveResponseSagaRequest({
+    $core.String? leaveId,
+    $0.LeaveType? leaveType,
+    $core.Iterable<$core.String>? acceptedLeaveDateIds,
+    $0.LeaveStatus? rangeStatus,
+    $core.String? remarks,
+  }) {
+    final result = create();
+    if (leaveId != null) result.leaveId = leaveId;
+    if (leaveType != null) result.leaveType = leaveType;
+    if (acceptedLeaveDateIds != null)
+      result.acceptedLeaveDateIds.addAll(acceptedLeaveDateIds);
+    if (rangeStatus != null) result.rangeStatus = rangeStatus;
+    if (remarks != null) result.remarks = remarks;
+    return result;
+  }
+
+  HandleLeaveResponseSagaRequest._();
+
+  factory HandleLeaveResponseSagaRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory HandleLeaveResponseSagaRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'HandleLeaveResponseSagaRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'leaveId')
+    ..aE<$0.LeaveType>(2, _omitFieldNames ? '' : 'leaveType',
+        enumValues: $0.LeaveType.values)
+    ..pPS(3, _omitFieldNames ? '' : 'acceptedLeaveDateIds')
+    ..aE<$0.LeaveStatus>(4, _omitFieldNames ? '' : 'rangeStatus',
+        enumValues: $0.LeaveStatus.values)
+    ..aOS(5, _omitFieldNames ? '' : 'remarks')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  HandleLeaveResponseSagaRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  HandleLeaveResponseSagaRequest copyWith(
+          void Function(HandleLeaveResponseSagaRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as HandleLeaveResponseSagaRequest))
+          as HandleLeaveResponseSagaRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static HandleLeaveResponseSagaRequest create() =>
+      HandleLeaveResponseSagaRequest._();
+  @$core.override
+  HandleLeaveResponseSagaRequest createEmptyInstance() => create();
+  static $pb.PbList<HandleLeaveResponseSagaRequest> createRepeated() =>
+      $pb.PbList<HandleLeaveResponseSagaRequest>();
+  @$core.pragma('dart2js:noInline')
+  static HandleLeaveResponseSagaRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HandleLeaveResponseSagaRequest>(create);
+  static HandleLeaveResponseSagaRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get leaveId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set leaveId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasLeaveId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLeaveId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.LeaveType get leaveType => $_getN(1);
+  @$pb.TagNumber(2)
+  set leaveType($0.LeaveType value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasLeaveType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLeaveType() => $_clearField(2);
+
+  /// For Discrete leave type;
+  @$pb.TagNumber(3)
+  $pb.PbList<$core.String> get acceptedLeaveDateIds => $_getList(2);
+
+  /// For Range leave type
+  @$pb.TagNumber(4)
+  $0.LeaveStatus get rangeStatus => $_getN(3);
+  @$pb.TagNumber(4)
+  set rangeStatus($0.LeaveStatus value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasRangeStatus() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearRangeStatus() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get remarks => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set remarks($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasRemarks() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearRemarks() => $_clearField(5);
+}
+
+class HandleLeaveResponseSagaResponse extends $pb.GeneratedMessage {
+  factory HandleLeaveResponseSagaResponse({
+    $core.bool? success,
+  }) {
+    final result = create();
+    if (success != null) result.success = success;
+    return result;
+  }
+
+  HandleLeaveResponseSagaResponse._();
+
+  factory HandleLeaveResponseSagaResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory HandleLeaveResponseSagaResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'HandleLeaveResponseSagaResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'success')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  HandleLeaveResponseSagaResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  HandleLeaveResponseSagaResponse copyWith(
+          void Function(HandleLeaveResponseSagaResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as HandleLeaveResponseSagaResponse))
+          as HandleLeaveResponseSagaResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static HandleLeaveResponseSagaResponse create() =>
+      HandleLeaveResponseSagaResponse._();
+  @$core.override
+  HandleLeaveResponseSagaResponse createEmptyInstance() => create();
+  static $pb.PbList<HandleLeaveResponseSagaResponse> createRepeated() =>
+      $pb.PbList<HandleLeaveResponseSagaResponse>();
+  @$core.pragma('dart2js:noInline')
+  static HandleLeaveResponseSagaResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HandleLeaveResponseSagaResponse>(
+          create);
+  static HandleLeaveResponseSagaResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get success => $_getBF(0);
+  @$pb.TagNumber(1)
+  set success($core.bool value) => $_setBool(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSuccess() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSuccess() => $_clearField(1);
 }
 
 const $core.bool _omitFieldNames =

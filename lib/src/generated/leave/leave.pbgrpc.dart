@@ -83,6 +83,19 @@ class LeaveServiceClient extends $grpc.Client {
     return $createUnaryCall(_$respondToLeave, request, options: options);
   }
 
+  /// CompensateRespondToLeave rolls back a RespondToLeave operation.
+  /// Used by saga orchestrator when subsequent operations fail.
+  /// Takes the RespondToLeaveResponse (which contains the previous state)
+  /// and restores the leave to that state.
+  $grpc.ResponseFuture<$0.CompensateRespondToLeaveResponse>
+      compensateRespondToLeave(
+    $0.RespondToLeaveResponse request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$compensateRespondToLeave, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$listUserLeaves =
@@ -121,6 +134,11 @@ class LeaveServiceClient extends $grpc.Client {
           '/leave.LeaveService/RespondToLeave',
           ($0.RespondToLeaveRequest value) => value.writeToBuffer(),
           $0.RespondToLeaveResponse.fromBuffer);
+  static final _$compensateRespondToLeave = $grpc.ClientMethod<
+          $0.RespondToLeaveResponse, $0.CompensateRespondToLeaveResponse>(
+      '/leave.LeaveService/CompensateRespondToLeave',
+      ($0.RespondToLeaveResponse value) => value.writeToBuffer(),
+      $0.CompensateRespondToLeaveResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('leave.LeaveService')
@@ -191,6 +209,15 @@ abstract class LeaveServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.RespondToLeaveRequest.fromBuffer(value),
         ($0.RespondToLeaveResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RespondToLeaveResponse,
+            $0.CompensateRespondToLeaveResponse>(
+        'CompensateRespondToLeave',
+        compensateRespondToLeave_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.RespondToLeaveResponse.fromBuffer(value),
+        ($0.CompensateRespondToLeaveResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.ListUserLeavesResponse> listUserLeaves_Pre(
@@ -252,4 +279,13 @@ abstract class LeaveServiceBase extends $grpc.Service {
 
   $async.Future<$0.RespondToLeaveResponse> respondToLeave(
       $grpc.ServiceCall call, $0.RespondToLeaveRequest request);
+
+  $async.Future<$0.CompensateRespondToLeaveResponse>
+      compensateRespondToLeave_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.RespondToLeaveResponse> $request) async {
+    return compensateRespondToLeave($call, await $request);
+  }
+
+  $async.Future<$0.CompensateRespondToLeaveResponse> compensateRespondToLeave(
+      $grpc.ServiceCall call, $0.RespondToLeaveResponse request);
 }

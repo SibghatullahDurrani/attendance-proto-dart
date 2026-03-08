@@ -425,3 +425,72 @@ final $typed_data.Uint8List registerSchoolChainEmployeeSagaResponseDescriptor =
     $convert.base64Decode(
         'CidSZWdpc3RlclNjaG9vbENoYWluRW1wbG95ZWVTYWdhUmVzcG9uc2USHwoLZW1wbG95ZWVfaW'
         'QYASABKAlSCmVtcGxveWVlSWQ=');
+
+@$core.Deprecated('Use handleLeaveResponseSagaRequestDescriptor instead')
+const HandleLeaveResponseSagaRequest$json = {
+  '1': 'HandleLeaveResponseSagaRequest',
+  '2': [
+    {'1': 'leave_id', '3': 1, '4': 1, '5': 9, '10': 'leaveId'},
+    {
+      '1': 'leave_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveType',
+      '10': 'leaveType'
+    },
+    {
+      '1': 'accepted_leave_date_ids',
+      '3': 3,
+      '4': 3,
+      '5': 9,
+      '10': 'acceptedLeaveDateIds'
+    },
+    {
+      '1': 'range_status',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.LeaveStatus',
+      '9': 0,
+      '10': 'rangeStatus',
+      '17': true
+    },
+    {
+      '1': 'remarks',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'remarks',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_range_status'},
+    {'1': '_remarks'},
+  ],
+};
+
+/// Descriptor for `HandleLeaveResponseSagaRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List handleLeaveResponseSagaRequestDescriptor = $convert.base64Decode(
+    'Ch5IYW5kbGVMZWF2ZVJlc3BvbnNlU2FnYVJlcXVlc3QSGQoIbGVhdmVfaWQYASABKAlSB2xlYX'
+    'ZlSWQSOQoKbGVhdmVfdHlwZRgCIAEoDjIaLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVR5cGVSCWxl'
+    'YXZlVHlwZRI1ChdhY2NlcHRlZF9sZWF2ZV9kYXRlX2lkcxgDIAMoCVIUYWNjZXB0ZWRMZWF2ZU'
+    'RhdGVJZHMSRAoMcmFuZ2Vfc3RhdHVzGAQgASgOMhwuY29tbW9uX21lc3NhZ2VzLkxlYXZlU3Rh'
+    'dHVzSABSC3JhbmdlU3RhdHVziAEBEh0KB3JlbWFya3MYBSABKAlIAVIHcmVtYXJrc4gBAUIPCg'
+    '1fcmFuZ2Vfc3RhdHVzQgoKCF9yZW1hcmtz');
+
+@$core.Deprecated('Use handleLeaveResponseSagaResponseDescriptor instead')
+const HandleLeaveResponseSagaResponse$json = {
+  '1': 'HandleLeaveResponseSagaResponse',
+  '2': [
+    {'1': 'success', '3': 1, '4': 1, '5': 8, '10': 'success'},
+  ],
+};
+
+/// Descriptor for `HandleLeaveResponseSagaResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List handleLeaveResponseSagaResponseDescriptor =
+    $convert.base64Decode(
+        'Ch9IYW5kbGVMZWF2ZVJlc3BvbnNlU2FnYVJlc3BvbnNlEhgKB3N1Y2Nlc3MYASABKAhSB3N1Y2'
+        'Nlc3M=');

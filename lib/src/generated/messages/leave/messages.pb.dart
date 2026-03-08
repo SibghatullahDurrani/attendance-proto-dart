@@ -1535,8 +1535,95 @@ class RespondToLeaveRequest extends $pb.GeneratedMessage {
   void clearRemarks() => $_clearField(5);
 }
 
+/// LeaveDateStatus captures the previous status of a single leave date.
+/// Used for compensation/rollback in saga patterns.
+class LeaveDateStatus extends $pb.GeneratedMessage {
+  factory LeaveDateStatus({
+    $core.String? dateId,
+    $0.LeaveStatus? status,
+  }) {
+    final result = create();
+    if (dateId != null) result.dateId = dateId;
+    if (status != null) result.status = status;
+    return result;
+  }
+
+  LeaveDateStatus._();
+
+  factory LeaveDateStatus.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory LeaveDateStatus.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LeaveDateStatus',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'dateId')
+    ..aE<$0.LeaveStatus>(2, _omitFieldNames ? '' : 'status',
+        enumValues: $0.LeaveStatus.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LeaveDateStatus clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LeaveDateStatus copyWith(void Function(LeaveDateStatus) updates) =>
+      super.copyWith((message) => updates(message as LeaveDateStatus))
+          as LeaveDateStatus;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static LeaveDateStatus create() => LeaveDateStatus._();
+  @$core.override
+  LeaveDateStatus createEmptyInstance() => create();
+  static $pb.PbList<LeaveDateStatus> createRepeated() =>
+      $pb.PbList<LeaveDateStatus>();
+  @$core.pragma('dart2js:noInline')
+  static LeaveDateStatus getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LeaveDateStatus>(create);
+  static LeaveDateStatus? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get dateId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set dateId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasDateId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDateId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.LeaveStatus get status => $_getN(1);
+  @$pb.TagNumber(2)
+  set status($0.LeaveStatus value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStatus() => $_clearField(2);
+}
+
 class RespondToLeaveResponse extends $pb.GeneratedMessage {
-  factory RespondToLeaveResponse() => create();
+  factory RespondToLeaveResponse({
+    $core.String? leaveId,
+    $0.LeaveType? leaveType,
+    $core.Iterable<LeaveDateStatus>? previousDateStatuses,
+    $0.LeaveStatus? previousRangeStatus,
+    $core.String? previousRemarks,
+  }) {
+    final result = create();
+    if (leaveId != null) result.leaveId = leaveId;
+    if (leaveType != null) result.leaveType = leaveType;
+    if (previousDateStatuses != null)
+      result.previousDateStatuses.addAll(previousDateStatuses);
+    if (previousRangeStatus != null)
+      result.previousRangeStatus = previousRangeStatus;
+    if (previousRemarks != null) result.previousRemarks = previousRemarks;
+    return result;
+  }
 
   RespondToLeaveResponse._();
 
@@ -1551,6 +1638,14 @@ class RespondToLeaveResponse extends $pb.GeneratedMessage {
       _omitMessageNames ? '' : 'RespondToLeaveResponse',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
       createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'leaveId')
+    ..aE<$0.LeaveType>(2, _omitFieldNames ? '' : 'leaveType',
+        enumValues: $0.LeaveType.values)
+    ..pPM<LeaveDateStatus>(3, _omitFieldNames ? '' : 'previousDateStatuses',
+        subBuilder: LeaveDateStatus.create)
+    ..aE<$0.LeaveStatus>(4, _omitFieldNames ? '' : 'previousRangeStatus',
+        enumValues: $0.LeaveStatus.values)
+    ..aOS(5, _omitFieldNames ? '' : 'previousRemarks')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1574,6 +1669,95 @@ class RespondToLeaveResponse extends $pb.GeneratedMessage {
   static RespondToLeaveResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RespondToLeaveResponse>(create);
   static RespondToLeaveResponse? _defaultInstance;
+
+  /// Fields needed for compensation/rollback
+  @$pb.TagNumber(1)
+  $core.String get leaveId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set leaveId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasLeaveId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLeaveId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.LeaveType get leaveType => $_getN(1);
+  @$pb.TagNumber(2)
+  set leaveType($0.LeaveType value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasLeaveType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLeaveType() => $_clearField(2);
+
+  /// For DISCRETE type - previous statuses of each date
+  @$pb.TagNumber(3)
+  $pb.PbList<LeaveDateStatus> get previousDateStatuses => $_getList(2);
+
+  /// For RANGE type - previous status of the range
+  @$pb.TagNumber(4)
+  $0.LeaveStatus get previousRangeStatus => $_getN(3);
+  @$pb.TagNumber(4)
+  set previousRangeStatus($0.LeaveStatus value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasPreviousRangeStatus() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPreviousRangeStatus() => $_clearField(4);
+
+  /// Previous remarks (if any)
+  @$pb.TagNumber(5)
+  $core.String get previousRemarks => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set previousRemarks($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasPreviousRemarks() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPreviousRemarks() => $_clearField(5);
+}
+
+/// CompensateRespondToLeaveResponse is returned after successful compensation.
+class CompensateRespondToLeaveResponse extends $pb.GeneratedMessage {
+  factory CompensateRespondToLeaveResponse() => create();
+
+  CompensateRespondToLeaveResponse._();
+
+  factory CompensateRespondToLeaveResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CompensateRespondToLeaveResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CompensateRespondToLeaveResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'leave_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CompensateRespondToLeaveResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CompensateRespondToLeaveResponse copyWith(
+          void Function(CompensateRespondToLeaveResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as CompensateRespondToLeaveResponse))
+          as CompensateRespondToLeaveResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CompensateRespondToLeaveResponse create() =>
+      CompensateRespondToLeaveResponse._();
+  @$core.override
+  CompensateRespondToLeaveResponse createEmptyInstance() => create();
+  static $pb.PbList<CompensateRespondToLeaveResponse> createRepeated() =>
+      $pb.PbList<CompensateRespondToLeaveResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CompensateRespondToLeaveResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CompensateRespondToLeaveResponse>(
+          create);
+  static CompensateRespondToLeaveResponse? _defaultInstance;
 }
 
 const $core.bool _omitFieldNames =
