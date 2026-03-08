@@ -292,9 +292,10 @@ const GetLeaveDetailsResponse$json = {
   '1': 'GetLeaveDetailsResponse',
   '2': [
     {'1': 'description', '3': 1, '4': 1, '5': 9, '10': 'description'},
+    {'1': 'user_id', '3': 2, '4': 1, '5': 9, '10': 'userId'},
     {
       '1': 'leave_type',
-      '3': 2,
+      '3': 3,
       '4': 1,
       '5': 14,
       '6': '.common_messages.LeaveType',
@@ -302,7 +303,7 @@ const GetLeaveDetailsResponse$json = {
     },
     {
       '1': 'leave_dates',
-      '3': 3,
+      '3': 4,
       '4': 3,
       '5': 11,
       '6': '.leave_messages.LeaveDate',
@@ -310,7 +311,7 @@ const GetLeaveDetailsResponse$json = {
     },
     {
       '1': 'start_date',
-      '3': 4,
+      '3': 5,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
@@ -320,7 +321,7 @@ const GetLeaveDetailsResponse$json = {
     },
     {
       '1': 'end_date',
-      '3': 5,
+      '3': 6,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
@@ -330,7 +331,7 @@ const GetLeaveDetailsResponse$json = {
     },
     {
       '1': 'range_status',
-      '3': 6,
+      '3': 7,
       '4': 1,
       '5': 14,
       '6': '.common_messages.LeaveStatus',
@@ -340,7 +341,7 @@ const GetLeaveDetailsResponse$json = {
     },
     {
       '1': 'remarks',
-      '3': 7,
+      '3': 8,
       '4': 1,
       '5': 9,
       '9': 3,
@@ -359,14 +360,14 @@ const GetLeaveDetailsResponse$json = {
 /// Descriptor for `GetLeaveDetailsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getLeaveDetailsResponseDescriptor = $convert.base64Decode(
     'ChdHZXRMZWF2ZURldGFpbHNSZXNwb25zZRIgCgtkZXNjcmlwdGlvbhgBIAEoCVILZGVzY3JpcH'
-    'Rpb24SOQoKbGVhdmVfdHlwZRgCIAEoDjIaLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVR5cGVSCWxl'
-    'YXZlVHlwZRI6CgtsZWF2ZV9kYXRlcxgDIAMoCzIZLmxlYXZlX21lc3NhZ2VzLkxlYXZlRGF0ZV'
-    'IKbGVhdmVEYXRlcxI+CgpzdGFydF9kYXRlGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz'
-    'dGFtcEgAUglzdGFydERhdGWIAQESOgoIZW5kX2RhdGUYBSABKAsyGi5nb29nbGUucHJvdG9idW'
-    'YuVGltZXN0YW1wSAFSB2VuZERhdGWIAQESRAoMcmFuZ2Vfc3RhdHVzGAYgASgOMhwuY29tbW9u'
-    'X21lc3NhZ2VzLkxlYXZlU3RhdHVzSAJSC3JhbmdlU3RhdHVziAEBEh0KB3JlbWFya3MYByABKA'
-    'lIA1IHcmVtYXJrc4gBAUINCgtfc3RhcnRfZGF0ZUILCglfZW5kX2RhdGVCDwoNX3JhbmdlX3N0'
-    'YXR1c0IKCghfcmVtYXJrcw==');
+    'Rpb24SFwoHdXNlcl9pZBgCIAEoCVIGdXNlcklkEjkKCmxlYXZlX3R5cGUYAyABKA4yGi5jb21t'
+    'b25fbWVzc2FnZXMuTGVhdmVUeXBlUglsZWF2ZVR5cGUSOgoLbGVhdmVfZGF0ZXMYBCADKAsyGS'
+    '5sZWF2ZV9tZXNzYWdlcy5MZWF2ZURhdGVSCmxlYXZlRGF0ZXMSPgoKc3RhcnRfZGF0ZRgFIAEo'
+    'CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAFIJc3RhcnREYXRliAEBEjoKCGVuZF9kYX'
+    'RlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBUgdlbmREYXRliAEBEkQKDHJh'
+    'bmdlX3N0YXR1cxgHIAEoDjIcLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVN0YXR1c0gCUgtyYW5nZV'
+    'N0YXR1c4gBARIdCgdyZW1hcmtzGAggASgJSANSB3JlbWFya3OIAQFCDQoLX3N0YXJ0X2RhdGVC'
+    'CwoJX2VuZF9kYXRlQg8KDV9yYW5nZV9zdGF0dXNCCgoIX3JlbWFya3M=');
 
 @$core.Deprecated('Use updateLeaveRequestDescriptor instead')
 const UpdateLeaveRequest$json = {
