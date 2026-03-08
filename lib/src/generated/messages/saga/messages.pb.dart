@@ -14,7 +14,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../common/messages.pbenum.dart' as $0;
+import '../../google/protobuf/timestamp.pb.dart' as $0;
+import '../common/messages.pbenum.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
@@ -1293,10 +1294,13 @@ class HandleLeaveResponseSagaRequest extends $pb.GeneratedMessage {
   factory HandleLeaveResponseSagaRequest({
     $core.String? leaveId,
     $core.String? userId,
-    $0.LeaveType? leaveType,
+    $1.LeaveType? leaveType,
     $core.Iterable<$core.String>? acceptedLeaveDateIds,
-    $0.LeaveStatus? rangeStatus,
+    $1.LeaveStatus? rangeStatus,
     $core.String? remarks,
+    $core.Iterable<$0.Timestamp>? dates,
+    $0.Timestamp? startDate,
+    $0.Timestamp? endDate,
   }) {
     final result = create();
     if (leaveId != null) result.leaveId = leaveId;
@@ -1306,6 +1310,9 @@ class HandleLeaveResponseSagaRequest extends $pb.GeneratedMessage {
       result.acceptedLeaveDateIds.addAll(acceptedLeaveDateIds);
     if (rangeStatus != null) result.rangeStatus = rangeStatus;
     if (remarks != null) result.remarks = remarks;
+    if (dates != null) result.dates.addAll(dates);
+    if (startDate != null) result.startDate = startDate;
+    if (endDate != null) result.endDate = endDate;
     return result;
   }
 
@@ -1324,12 +1331,18 @@ class HandleLeaveResponseSagaRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'leaveId')
     ..aOS(2, _omitFieldNames ? '' : 'userId')
-    ..aE<$0.LeaveType>(3, _omitFieldNames ? '' : 'leaveType',
-        enumValues: $0.LeaveType.values)
+    ..aE<$1.LeaveType>(3, _omitFieldNames ? '' : 'leaveType',
+        enumValues: $1.LeaveType.values)
     ..pPS(4, _omitFieldNames ? '' : 'acceptedLeaveDateIds')
-    ..aE<$0.LeaveStatus>(5, _omitFieldNames ? '' : 'rangeStatus',
-        enumValues: $0.LeaveStatus.values)
+    ..aE<$1.LeaveStatus>(5, _omitFieldNames ? '' : 'rangeStatus',
+        enumValues: $1.LeaveStatus.values)
     ..aOS(6, _omitFieldNames ? '' : 'remarks')
+    ..pPM<$0.Timestamp>(7, _omitFieldNames ? '' : 'dates',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(8, _omitFieldNames ? '' : 'startDate',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(9, _omitFieldNames ? '' : 'endDate',
+        subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1375,9 +1388,9 @@ class HandleLeaveResponseSagaRequest extends $pb.GeneratedMessage {
   void clearUserId() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $0.LeaveType get leaveType => $_getN(2);
+  $1.LeaveType get leaveType => $_getN(2);
   @$pb.TagNumber(3)
-  set leaveType($0.LeaveType value) => $_setField(3, value);
+  set leaveType($1.LeaveType value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasLeaveType() => $_has(2);
   @$pb.TagNumber(3)
@@ -1389,9 +1402,9 @@ class HandleLeaveResponseSagaRequest extends $pb.GeneratedMessage {
 
   /// For Range leave type
   @$pb.TagNumber(5)
-  $0.LeaveStatus get rangeStatus => $_getN(4);
+  $1.LeaveStatus get rangeStatus => $_getN(4);
   @$pb.TagNumber(5)
-  set rangeStatus($0.LeaveStatus value) => $_setField(5, value);
+  set rangeStatus($1.LeaveStatus value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasRangeStatus() => $_has(4);
   @$pb.TagNumber(5)
@@ -1405,6 +1418,31 @@ class HandleLeaveResponseSagaRequest extends $pb.GeneratedMessage {
   $core.bool hasRemarks() => $_has(5);
   @$pb.TagNumber(6)
   void clearRemarks() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $pb.PbList<$0.Timestamp> get dates => $_getList(6);
+
+  @$pb.TagNumber(8)
+  $0.Timestamp get startDate => $_getN(7);
+  @$pb.TagNumber(8)
+  set startDate($0.Timestamp value) => $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasStartDate() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearStartDate() => $_clearField(8);
+  @$pb.TagNumber(8)
+  $0.Timestamp ensureStartDate() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  $0.Timestamp get endDate => $_getN(8);
+  @$pb.TagNumber(9)
+  set endDate($0.Timestamp value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasEndDate() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearEndDate() => $_clearField(9);
+  @$pb.TagNumber(9)
+  $0.Timestamp ensureEndDate() => $_ensure(8);
 }
 
 class HandleLeaveResponseSagaResponse extends $pb.GeneratedMessage {

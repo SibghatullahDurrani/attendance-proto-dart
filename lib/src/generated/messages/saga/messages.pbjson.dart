@@ -466,10 +466,40 @@ const HandleLeaveResponseSagaRequest$json = {
       '10': 'remarks',
       '17': true
     },
+    {
+      '1': 'dates',
+      '3': 7,
+      '4': 3,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'dates'
+    },
+    {
+      '1': 'start_date',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 2,
+      '10': 'startDate',
+      '17': true
+    },
+    {
+      '1': 'end_date',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 3,
+      '10': 'endDate',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_range_status'},
     {'1': '_remarks'},
+    {'1': '_start_date'},
+    {'1': '_end_date'},
   ],
 };
 
@@ -480,7 +510,11 @@ final $typed_data.Uint8List handleLeaveResponseSagaRequestDescriptor = $convert.
     'b25fbWVzc2FnZXMuTGVhdmVUeXBlUglsZWF2ZVR5cGUSNQoXYWNjZXB0ZWRfbGVhdmVfZGF0ZV'
     '9pZHMYBCADKAlSFGFjY2VwdGVkTGVhdmVEYXRlSWRzEkQKDHJhbmdlX3N0YXR1cxgFIAEoDjIc'
     'LmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVN0YXR1c0gAUgtyYW5nZVN0YXR1c4gBARIdCgdyZW1hcm'
-    'tzGAYgASgJSAFSB3JlbWFya3OIAQFCDwoNX3JhbmdlX3N0YXR1c0IKCghfcmVtYXJrcw==');
+    'tzGAYgASgJSAFSB3JlbWFya3OIAQESMAoFZGF0ZXMYByADKAsyGi5nb29nbGUucHJvdG9idWYu'
+    'VGltZXN0YW1wUgVkYXRlcxI+CgpzdGFydF9kYXRlGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLl'
+    'RpbWVzdGFtcEgCUglzdGFydERhdGWIAQESOgoIZW5kX2RhdGUYCSABKAsyGi5nb29nbGUucHJv'
+    'dG9idWYuVGltZXN0YW1wSANSB2VuZERhdGWIAQFCDwoNX3JhbmdlX3N0YXR1c0IKCghfcmVtYX'
+    'Jrc0INCgtfc3RhcnRfZGF0ZUILCglfZW5kX2RhdGU=');
 
 @$core.Deprecated('Use handleLeaveResponseSagaResponseDescriptor instead')
 const HandleLeaveResponseSagaResponse$json = {
