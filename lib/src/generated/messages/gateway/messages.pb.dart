@@ -7034,6 +7034,386 @@ class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
   void clearShiftName() => $_clearField(10);
 }
 
+class GetBatchUsersInfoOfSchoolForLiveFeedRequest extends $pb.GeneratedMessage {
+  factory GetBatchUsersInfoOfSchoolForLiveFeedRequest({
+    $core.Iterable<UserOfLiveFeed>? users,
+  }) {
+    final result = create();
+    if (users != null) result.users.addAll(users);
+    return result;
+  }
+
+  GetBatchUsersInfoOfSchoolForLiveFeedRequest._();
+
+  factory GetBatchUsersInfoOfSchoolForLiveFeedRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchUsersInfoOfSchoolForLiveFeedRequest.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBatchUsersInfoOfSchoolForLiveFeedRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..pPM<UserOfLiveFeed>(1, _omitFieldNames ? '' : 'users',
+        subBuilder: UserOfLiveFeed.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchUsersInfoOfSchoolForLiveFeedRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchUsersInfoOfSchoolForLiveFeedRequest copyWith(
+          void Function(GetBatchUsersInfoOfSchoolForLiveFeedRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetBatchUsersInfoOfSchoolForLiveFeedRequest))
+          as GetBatchUsersInfoOfSchoolForLiveFeedRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchUsersInfoOfSchoolForLiveFeedRequest create() =>
+      GetBatchUsersInfoOfSchoolForLiveFeedRequest._();
+  @$core.override
+  GetBatchUsersInfoOfSchoolForLiveFeedRequest createEmptyInstance() => create();
+  static $pb.PbList<GetBatchUsersInfoOfSchoolForLiveFeedRequest>
+      createRepeated() =>
+          $pb.PbList<GetBatchUsersInfoOfSchoolForLiveFeedRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchUsersInfoOfSchoolForLiveFeedRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetBatchUsersInfoOfSchoolForLiveFeedRequest>(create);
+  static GetBatchUsersInfoOfSchoolForLiveFeedRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<UserOfLiveFeed> get users => $_getList(0);
+}
+
+class UserOfLiveFeed extends $pb.GeneratedMessage {
+  factory UserOfLiveFeed({
+    $core.String? userId,
+    $0.Role? role,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    if (role != null) result.role = role;
+    return result;
+  }
+
+  UserOfLiveFeed._();
+
+  factory UserOfLiveFeed.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UserOfLiveFeed.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UserOfLiveFeed',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..aE<$0.Role>(2, _omitFieldNames ? '' : 'role', enumValues: $0.Role.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserOfLiveFeed clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserOfLiveFeed copyWith(void Function(UserOfLiveFeed) updates) =>
+      super.copyWith((message) => updates(message as UserOfLiveFeed))
+          as UserOfLiveFeed;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UserOfLiveFeed create() => UserOfLiveFeed._();
+  @$core.override
+  UserOfLiveFeed createEmptyInstance() => create();
+  static $pb.PbList<UserOfLiveFeed> createRepeated() =>
+      $pb.PbList<UserOfLiveFeed>();
+  @$core.pragma('dart2js:noInline')
+  static UserOfLiveFeed getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserOfLiveFeed>(create);
+  static UserOfLiveFeed? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.Role get role => $_getN(1);
+  @$pb.TagNumber(2)
+  set role($0.Role value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasRole() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRole() => $_clearField(2);
+}
+
+class GetBatchUsersInfoOfSchoolForLiveFeedResponse
+    extends $pb.GeneratedMessage {
+  factory GetBatchUsersInfoOfSchoolForLiveFeedResponse({
+    $core.Iterable<SchoolUserInfoForLiveFeed>? usersInfo,
+  }) {
+    final result = create();
+    if (usersInfo != null) result.usersInfo.addAll(usersInfo);
+    return result;
+  }
+
+  GetBatchUsersInfoOfSchoolForLiveFeedResponse._();
+
+  factory GetBatchUsersInfoOfSchoolForLiveFeedResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchUsersInfoOfSchoolForLiveFeedResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBatchUsersInfoOfSchoolForLiveFeedResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..pPM<SchoolUserInfoForLiveFeed>(1, _omitFieldNames ? '' : 'usersInfo',
+        subBuilder: SchoolUserInfoForLiveFeed.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchUsersInfoOfSchoolForLiveFeedResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchUsersInfoOfSchoolForLiveFeedResponse copyWith(
+          void Function(GetBatchUsersInfoOfSchoolForLiveFeedResponse)
+              updates) =>
+      super.copyWith((message) =>
+              updates(message as GetBatchUsersInfoOfSchoolForLiveFeedResponse))
+          as GetBatchUsersInfoOfSchoolForLiveFeedResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchUsersInfoOfSchoolForLiveFeedResponse create() =>
+      GetBatchUsersInfoOfSchoolForLiveFeedResponse._();
+  @$core.override
+  GetBatchUsersInfoOfSchoolForLiveFeedResponse createEmptyInstance() =>
+      create();
+  static $pb.PbList<GetBatchUsersInfoOfSchoolForLiveFeedResponse>
+      createRepeated() =>
+          $pb.PbList<GetBatchUsersInfoOfSchoolForLiveFeedResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchUsersInfoOfSchoolForLiveFeedResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetBatchUsersInfoOfSchoolForLiveFeedResponse>(create);
+  static GetBatchUsersInfoOfSchoolForLiveFeedResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<SchoolUserInfoForLiveFeed> get usersInfo => $_getList(0);
+}
+
+class SchoolUserInfoForLiveFeed extends $pb.GeneratedMessage {
+  factory SchoolUserInfoForLiveFeed({
+    $core.String? userId,
+    $0.Role? role,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? lastAttendanceClassName,
+    $core.String? lastAttendedSectionName,
+    $core.String? shiftName,
+    $core.String? userThumbnailUrl,
+    $1.Timestamp? thumbnailUpdatedAt,
+    $1.Timestamp? thumbnailExpiresAt,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    if (role != null) result.role = role;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (lastAttendanceClassName != null)
+      result.lastAttendanceClassName = lastAttendanceClassName;
+    if (lastAttendedSectionName != null)
+      result.lastAttendedSectionName = lastAttendedSectionName;
+    if (shiftName != null) result.shiftName = shiftName;
+    if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
+    if (thumbnailUpdatedAt != null)
+      result.thumbnailUpdatedAt = thumbnailUpdatedAt;
+    if (thumbnailExpiresAt != null)
+      result.thumbnailExpiresAt = thumbnailExpiresAt;
+    return result;
+  }
+
+  SchoolUserInfoForLiveFeed._();
+
+  factory SchoolUserInfoForLiveFeed.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SchoolUserInfoForLiveFeed.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SchoolUserInfoForLiveFeed',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..aE<$0.Role>(2, _omitFieldNames ? '' : 'role', enumValues: $0.Role.values)
+    ..aOS(3, _omitFieldNames ? '' : 'firstName')
+    ..aOS(4, _omitFieldNames ? '' : 'secondName')
+    ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(6, _omitFieldNames ? '' : 'lastAttendanceClassName')
+    ..aOS(7, _omitFieldNames ? '' : 'lastAttendedSectionName')
+    ..aOS(8, _omitFieldNames ? '' : 'shiftName')
+    ..aOS(9, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(11, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+        subBuilder: $1.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SchoolUserInfoForLiveFeed clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SchoolUserInfoForLiveFeed copyWith(
+          void Function(SchoolUserInfoForLiveFeed) updates) =>
+      super.copyWith((message) => updates(message as SchoolUserInfoForLiveFeed))
+          as SchoolUserInfoForLiveFeed;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SchoolUserInfoForLiveFeed create() => SchoolUserInfoForLiveFeed._();
+  @$core.override
+  SchoolUserInfoForLiveFeed createEmptyInstance() => create();
+  static $pb.PbList<SchoolUserInfoForLiveFeed> createRepeated() =>
+      $pb.PbList<SchoolUserInfoForLiveFeed>();
+  @$core.pragma('dart2js:noInline')
+  static SchoolUserInfoForLiveFeed getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SchoolUserInfoForLiveFeed>(create);
+  static SchoolUserInfoForLiveFeed? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.Role get role => $_getN(1);
+  @$pb.TagNumber(2)
+  set role($0.Role value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasRole() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRole() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get firstName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set firstName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasFirstName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFirstName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get secondName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set secondName($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasSecondName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSecondName() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get identificationNumber => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set identificationNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasIdentificationNumber() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIdentificationNumber() => $_clearField(5);
+
+  /// ONLY FOR STUDENTS
+  @$pb.TagNumber(6)
+  $core.String get lastAttendanceClassName => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set lastAttendanceClassName($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasLastAttendanceClassName() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearLastAttendanceClassName() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get lastAttendedSectionName => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set lastAttendedSectionName($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasLastAttendedSectionName() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearLastAttendedSectionName() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get shiftName => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set shiftName($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasShiftName() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearShiftName() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get userThumbnailUrl => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set userThumbnailUrl($core.String value) => $_setString(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasUserThumbnailUrl() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearUserThumbnailUrl() => $_clearField(9);
+
+  @$pb.TagNumber(10)
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(9);
+  @$pb.TagNumber(10)
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(10, value);
+  @$pb.TagNumber(10)
+  $core.bool hasThumbnailUpdatedAt() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearThumbnailUpdatedAt() => $_clearField(10);
+  @$pb.TagNumber(10)
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(9);
+
+  @$pb.TagNumber(11)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(10);
+  @$pb.TagNumber(11)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(11, value);
+  @$pb.TagNumber(11)
+  $core.bool hasThumbnailExpiresAt() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearThumbnailExpiresAt() => $_clearField(11);
+  @$pb.TagNumber(11)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(10);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

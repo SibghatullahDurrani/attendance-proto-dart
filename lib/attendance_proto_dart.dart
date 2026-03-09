@@ -75,3 +75,7 @@ export 'src/generated/media/media.pbjson.dart';
 export 'src/generated/messages/media/messages.pb.dart';
 export 'src/generated/messages/media/messages.pbenum.dart';
 export 'src/generated/messages/media/messages.pbjson.dart';
+
+export 'src/generated/messages/saga/messages.pb.dart';
+export 'src/generated/messages/saga/messages.pbenum.dart';
+export 'src/generated/messages/saga/messages.pbjson.dart';

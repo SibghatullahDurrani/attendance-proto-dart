@@ -3177,3 +3177,190 @@ final $typed_data.Uint8List userOfShiftForShiftAllocationDescriptor = $convert.b
     '9sYXN0X2F0dGVuZGVkX2NsYXNzX25hbWVCHQobX2xhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1l'
     'QhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0QhcKFV90aH'
     'VtYm5haWxfZXhwaXJlc19hdEINCgtfc2hpZnRfbmFtZQ==');
+
+@$core.Deprecated(
+    'Use getBatchUsersInfoOfSchoolForLiveFeedRequestDescriptor instead')
+const GetBatchUsersInfoOfSchoolForLiveFeedRequest$json = {
+  '1': 'GetBatchUsersInfoOfSchoolForLiveFeedRequest',
+  '2': [
+    {
+      '1': 'users',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.UserOfLiveFeed',
+      '10': 'users'
+    },
+  ],
+};
+
+/// Descriptor for `GetBatchUsersInfoOfSchoolForLiveFeedRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getBatchUsersInfoOfSchoolForLiveFeedRequestDescriptor =
+    $convert.base64Decode(
+        'CitHZXRCYXRjaFVzZXJzSW5mb09mU2Nob29sRm9yTGl2ZUZlZWRSZXF1ZXN0EjYKBXVzZXJzGA'
+        'EgAygLMiAuZ2F0ZXdheV9tZXNzYWdlcy5Vc2VyT2ZMaXZlRmVlZFIFdXNlcnM=');
+
+@$core.Deprecated('Use userOfLiveFeedDescriptor instead')
+const UserOfLiveFeed$json = {
+  '1': 'UserOfLiveFeed',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'role',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.Role',
+      '10': 'role'
+    },
+  ],
+};
+
+/// Descriptor for `UserOfLiveFeed`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userOfLiveFeedDescriptor = $convert.base64Decode(
+    'Cg5Vc2VyT2ZMaXZlRmVlZBIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQSKQoEcm9sZRgCIAEoDj'
+    'IVLmNvbW1vbl9tZXNzYWdlcy5Sb2xlUgRyb2xl');
+
+@$core.Deprecated(
+    'Use getBatchUsersInfoOfSchoolForLiveFeedResponseDescriptor instead')
+const GetBatchUsersInfoOfSchoolForLiveFeedResponse$json = {
+  '1': 'GetBatchUsersInfoOfSchoolForLiveFeedResponse',
+  '2': [
+    {
+      '1': 'users_info',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.SchoolUserInfoForLiveFeed',
+      '10': 'usersInfo'
+    },
+  ],
+};
+
+/// Descriptor for `GetBatchUsersInfoOfSchoolForLiveFeedResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getBatchUsersInfoOfSchoolForLiveFeedResponseDescriptor =
+    $convert.base64Decode(
+        'CixHZXRCYXRjaFVzZXJzSW5mb09mU2Nob29sRm9yTGl2ZUZlZWRSZXNwb25zZRJKCgp1c2Vyc1'
+        '9pbmZvGAEgAygLMisuZ2F0ZXdheV9tZXNzYWdlcy5TY2hvb2xVc2VySW5mb0ZvckxpdmVGZWVk'
+        'Ugl1c2Vyc0luZm8=');
+
+@$core.Deprecated('Use schoolUserInfoForLiveFeedDescriptor instead')
+const SchoolUserInfoForLiveFeed$json = {
+  '1': 'SchoolUserInfoForLiveFeed',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'role',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.Role',
+      '10': 'role'
+    },
+    {'1': 'first_name', '3': 3, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'last_attendance_class_name',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'lastAttendanceClassName',
+      '17': true
+    },
+    {
+      '1': 'last_attended_section_name',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'lastAttendedSectionName',
+      '17': true
+    },
+    {
+      '1': 'shift_name',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '9': 4,
+      '10': 'shiftName',
+      '17': true
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '9': 5,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_updated_at',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 6,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 7,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_identification_number'},
+    {'1': '_last_attendance_class_name'},
+    {'1': '_last_attended_section_name'},
+    {'1': '_shift_name'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
+    {'1': '_thumbnail_expires_at'},
+  ],
+};
+
+/// Descriptor for `SchoolUserInfoForLiveFeed`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schoolUserInfoForLiveFeedDescriptor = $convert.base64Decode(
+    'ChlTY2hvb2xVc2VySW5mb0ZvckxpdmVGZWVkEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIpCg'
+    'Ryb2xlGAIgASgOMhUuY29tbW9uX21lc3NhZ2VzLlJvbGVSBHJvbGUSHQoKZmlyc3RfbmFtZRgD'
+    'IAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAQgASgJSABSCnNlY29uZE5hbWWIAQESOA'
+    'oVaWRlbnRpZmljYXRpb25fbnVtYmVyGAUgASgJSAFSFGlkZW50aWZpY2F0aW9uTnVtYmVyiAEB'
+    'EkAKGmxhc3RfYXR0ZW5kYW5jZV9jbGFzc19uYW1lGAYgASgJSAJSF2xhc3RBdHRlbmRhbmNlQ2'
+    'xhc3NOYW1liAEBEkAKGmxhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1lGAcgASgJSANSF2xhc3RB'
+    'dHRlbmRlZFNlY3Rpb25OYW1liAEBEiIKCnNoaWZ0X25hbWUYCCABKAlIBFIJc2hpZnROYW1liA'
+    'EBEjEKEnVzZXJfdGh1bWJuYWlsX3VybBgJIAEoCUgFUhB1c2VyVGh1bWJuYWlsVXJsiAEBElEK'
+    'FHRodW1ibmFpbF91cGRhdGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcE'
+    'gGUhJ0aHVtYm5haWxVcGRhdGVkQXSIAQESUQoUdGh1bWJuYWlsX2V4cGlyZXNfYXQYCyABKAsy'
+    'Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAdSEnRodW1ibmFpbEV4cGlyZXNBdIgBAUIOCg'
+    'xfc2Vjb25kX25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX251bWJlckIdChtfbGFzdF9hdHRlbmRh'
+    'bmNlX2NsYXNzX25hbWVCHQobX2xhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1lQg0KC19zaGlmdF'
+    '9uYW1lQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0QhcK'
+    'FV90aHVtYm5haWxfZXhwaXJlc19hdA==');
