@@ -10,6 +10,11 @@ export 'src/generated/auth/auth.pbenum.dart';
 export 'src/generated/auth/auth.pbgrpc.dart';
 export 'src/generated/auth/auth.pbjson.dart';
 
+export 'src/generated/organization/organization.pb.dart';
+export 'src/generated/organization/organization.pbenum.dart';
+export 'src/generated/organization/organization.pbgrpc.dart';
+export 'src/generated/organization/organization.pbjson.dart';
+
 export 'src/generated/gateway/gateway.pb.dart';
 export 'src/generated/gateway/gateway.pbenum.dart';
 export 'src/generated/gateway/gateway.pbgrpc.dart';
@@ -28,6 +33,10 @@ export 'src/generated/user/user.pbjson.dart';
 export 'src/generated/messages/auth/messages.pb.dart';
 export 'src/generated/messages/auth/messages.pbenum.dart';
 export 'src/generated/messages/auth/messages.pbjson.dart';
+
+export 'src/generated/messages/organization/messages.pb.dart';
+export 'src/generated/messages/organization/messages.pbenum.dart';
+export 'src/generated/messages/organization/messages.pbjson.dart';
 
 export 'src/generated/messages/common/messages.pb.dart';
 export 'src/generated/messages/common/messages.pbenum.dart';
