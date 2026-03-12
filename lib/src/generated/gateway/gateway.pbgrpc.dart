@@ -537,6 +537,15 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$5.ListStudentsOfSchoolOfClassResponse>
+      listStudentsOfSchoolOfClass(
+    $5.ListStudentsOfSchoolOfClassRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listStudentsOfSchoolOfClass, request,
+        options: options);
+  }
+
   /// Media Rpcs
   $grpc.ResponseFuture<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
     $async.Stream<$6.AddLeaveAttachmentRequest> request, {
@@ -915,6 +924,12 @@ class GatewayServiceClient extends $grpc.Client {
       ($5.GetBatchUsersInfoOfSchoolForLiveFeedRequest value) =>
           value.writeToBuffer(),
       $5.GetBatchUsersInfoOfSchoolForLiveFeedResponse.fromBuffer);
+  static final _$listStudentsOfSchoolOfClass = $grpc.ClientMethod<
+          $5.ListStudentsOfSchoolOfClassRequest,
+          $5.ListStudentsOfSchoolOfClassResponse>(
+      '/gateway.GatewayService/ListStudentsOfSchoolOfClass',
+      ($5.ListStudentsOfSchoolOfClassRequest value) => value.writeToBuffer(),
+      $5.ListStudentsOfSchoolOfClassResponse.fromBuffer);
   static final _$addLeaveAttachment = $grpc.ClientMethod<
           $6.AddLeaveAttachmentRequest, $6.AddLeaveAttachmentResponse>(
       '/gateway.GatewayService/AddLeaveAttachment',
@@ -1516,6 +1531,16 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $5.GetBatchUsersInfoOfSchoolForLiveFeedRequest.fromBuffer(value),
         ($5.GetBatchUsersInfoOfSchoolForLiveFeedResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.ListStudentsOfSchoolOfClassRequest,
+            $5.ListStudentsOfSchoolOfClassResponse>(
+        'ListStudentsOfSchoolOfClass',
+        listStudentsOfSchoolOfClass_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.ListStudentsOfSchoolOfClassRequest.fromBuffer(value),
+        ($5.ListStudentsOfSchoolOfClassResponse value) =>
             value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$6.AddLeaveAttachmentRequest,
             $6.AddLeaveAttachmentResponse>(
@@ -2131,6 +2156,16 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$5.GetBatchUsersInfoOfSchoolForLiveFeedResponse>
       getBatchUsersInfoOfSchoolForLiveFeed($grpc.ServiceCall call,
           $5.GetBatchUsersInfoOfSchoolForLiveFeedRequest request);
+
+  $async.Future<$5.ListStudentsOfSchoolOfClassResponse>
+      listStudentsOfSchoolOfClass_Pre($grpc.ServiceCall $call,
+          $async.Future<$5.ListStudentsOfSchoolOfClassRequest> $request) async {
+    return listStudentsOfSchoolOfClass($call, await $request);
+  }
+
+  $async.Future<$5.ListStudentsOfSchoolOfClassResponse>
+      listStudentsOfSchoolOfClass($grpc.ServiceCall call,
+          $5.ListStudentsOfSchoolOfClassRequest request);
 
   $async.Future<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
       $grpc.ServiceCall call,

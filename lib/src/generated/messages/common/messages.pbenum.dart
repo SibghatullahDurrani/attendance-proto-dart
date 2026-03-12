@@ -222,5 +222,35 @@ class LeaveRole extends $pb.ProtobufEnum {
   const LeaveRole._(super.value, super.name);
 }
 
+class StudentEnrollmentStatus extends $pb.ProtobufEnum {
+  static const StudentEnrollmentStatus ENROLLMENT_STATUS_ATTENDING =
+      StudentEnrollmentStatus._(
+          0, _omitEnumNames ? '' : 'ENROLLMENT_STATUS_ATTENDING');
+  static const StudentEnrollmentStatus ENROLLMENT_STATUS_UPCOMING =
+      StudentEnrollmentStatus._(
+          1, _omitEnumNames ? '' : 'ENROLLMENT_STATUS_UPCOMING');
+  static const StudentEnrollmentStatus ENROLLMENT_STATUS_COMPLETED =
+      StudentEnrollmentStatus._(
+          2, _omitEnumNames ? '' : 'ENROLLMENT_STATUS_COMPLETED');
+  static const StudentEnrollmentStatus ENROLLMENT_STATUS_WITHDRAWN =
+      StudentEnrollmentStatus._(
+          3, _omitEnumNames ? '' : 'ENROLLMENT_STATUS_WITHDRAWN');
+
+  static const $core.List<StudentEnrollmentStatus> values =
+      <StudentEnrollmentStatus>[
+    ENROLLMENT_STATUS_ATTENDING,
+    ENROLLMENT_STATUS_UPCOMING,
+    ENROLLMENT_STATUS_COMPLETED,
+    ENROLLMENT_STATUS_WITHDRAWN,
+  ];
+
+  static final $core.List<StudentEnrollmentStatus?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static StudentEnrollmentStatus? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const StudentEnrollmentStatus._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');

@@ -149,6 +149,23 @@ final $typed_data.Uint8List leaveRoleDescriptor = $convert.base64Decode(
     'SVpBVElPTl9FTVBMT1lFRRADEigKJExFQVZFX1JPTEVfU1VCX09SR0FOSVpBVElPTl9FTVBMT1'
     'lFRRAEEiQKIExFQVZFX1JPTEVfU0NIT09MX0NIQUlOX0VNUExPWUVFEAU=');
 
+@$core.Deprecated('Use studentEnrollmentStatusDescriptor instead')
+const StudentEnrollmentStatus$json = {
+  '1': 'StudentEnrollmentStatus',
+  '2': [
+    {'1': 'ENROLLMENT_STATUS_ATTENDING', '2': 0},
+    {'1': 'ENROLLMENT_STATUS_UPCOMING', '2': 1},
+    {'1': 'ENROLLMENT_STATUS_COMPLETED', '2': 2},
+    {'1': 'ENROLLMENT_STATUS_WITHDRAWN', '2': 3},
+  ],
+};
+
+/// Descriptor for `StudentEnrollmentStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List studentEnrollmentStatusDescriptor = $convert.base64Decode(
+    'ChdTdHVkZW50RW5yb2xsbWVudFN0YXR1cxIfChtFTlJPTExNRU5UX1NUQVRVU19BVFRFTkRJTk'
+    'cQABIeChpFTlJPTExNRU5UX1NUQVRVU19VUENPTUlORxABEh8KG0VOUk9MTE1FTlRfU1RBVFVT'
+    'X0NPTVBMRVRFRBACEh8KG0VOUk9MTE1FTlRfU1RBVFVTX1dJVEhEUkFXThAD');
+
 @$core.Deprecated('Use paginationRequestDescriptor instead')
 const PaginationRequest$json = {
   '1': 'PaginationRequest',

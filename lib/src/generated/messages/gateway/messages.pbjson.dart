@@ -3364,3 +3364,143 @@ final $typed_data.Uint8List schoolUserInfoForLiveFeedDescriptor = $convert.base6
     'bmNlX2NsYXNzX25hbWVCHQobX2xhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1lQg0KC19zaGlmdF'
     '9uYW1lQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0QhcK'
     'FV90aHVtYm5haWxfZXhwaXJlc19hdA==');
+
+@$core.Deprecated('Use listStudentsOfSchoolOfClassRequestDescriptor instead')
+const ListStudentsOfSchoolOfClassRequest$json = {
+  '1': 'ListStudentsOfSchoolOfClassRequest',
+  '2': [
+    {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
+    {'1': 'class_id', '3': 2, '4': 1, '5': 9, '10': 'classId'},
+    {
+      '1': 'pagination',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+  ],
+};
+
+/// Descriptor for `ListStudentsOfSchoolOfClassRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listStudentsOfSchoolOfClassRequestDescriptor =
+    $convert.base64Decode(
+        'CiJMaXN0U3R1ZGVudHNPZlNjaG9vbE9mQ2xhc3NSZXF1ZXN0EhsKCXNjaG9vbF9pZBgBIAEoCV'
+        'IIc2Nob29sSWQSGQoIY2xhc3NfaWQYAiABKAlSB2NsYXNzSWQSQgoKcGFnaW5hdGlvbhgDIAEo'
+        'CzIiLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbg==');
+
+@$core.Deprecated('Use listStudentsOfSchoolOfClassResponseDescriptor instead')
+const ListStudentsOfSchoolOfClassResponse$json = {
+  '1': 'ListStudentsOfSchoolOfClassResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'students',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.StudentOfSchoolOfClass',
+      '10': 'students'
+    },
+  ],
+};
+
+/// Descriptor for `ListStudentsOfSchoolOfClassResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listStudentsOfSchoolOfClassResponseDescriptor =
+    $convert.base64Decode(
+        'CiNMaXN0U3R1ZGVudHNPZlNjaG9vbE9mQ2xhc3NSZXNwb25zZRJDCgpwYWdpbmF0aW9uGAEgAS'
+        'gLMiMuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbhJECghz'
+        'dHVkZW50cxgCIAMoCzIoLmdhdGV3YXlfbWVzc2FnZXMuU3R1ZGVudE9mU2Nob29sT2ZDbGFzc1'
+        'IIc3R1ZGVudHM=');
+
+@$core.Deprecated('Use studentOfSchoolOfClassDescriptor instead')
+const StudentOfSchoolOfClass$json = {
+  '1': 'StudentOfSchoolOfClass',
+  '2': [
+    {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'enrollment_status',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.StudentEnrollmentStatus',
+      '10': 'enrollmentStatus'
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_updated_at',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 3,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 4,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_identification_number'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
+    {'1': '_thumbnail_expires_at'},
+  ],
+};
+
+/// Descriptor for `StudentOfSchoolOfClass`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List studentOfSchoolOfClassDescriptor = $convert.base64Decode(
+    'ChZTdHVkZW50T2ZTY2hvb2xPZkNsYXNzEh0KCnN0dWRlbnRfaWQYASABKAlSCXN0dWRlbnRJZB'
+    'IdCgpmaXJzdF9uYW1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAyABKAlIAFIK'
+    'c2Vjb25kTmFtZYgBARI4ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlIAVIUaWRlbnRpZm'
+    'ljYXRpb25OdW1iZXKIAQESVQoRZW5yb2xsbWVudF9zdGF0dXMYBSABKA4yKC5jb21tb25fbWVz'
+    'c2FnZXMuU3R1ZGVudEVucm9sbG1lbnRTdGF0dXNSEGVucm9sbG1lbnRTdGF0dXMSMQoSdXNlcl'
+    '90aHVtYm5haWxfdXJsGAYgASgJSAJSEHVzZXJUaHVtYm5haWxVcmyIAQESUQoUdGh1bWJuYWls'
+    'X3VwZGF0ZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSANSEnRodW1ibm'
+    'FpbFVwZGF0ZWRBdIgBARJRChR0aHVtYm5haWxfZXhwaXJlc19hdBgIIAEoCzIaLmdvb2dsZS5w'
+    'cm90b2J1Zi5UaW1lc3RhbXBIBFISdGh1bWJuYWlsRXhwaXJlc0F0iAEBQg4KDF9zZWNvbmRfbm'
+    'FtZUIYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoV'
+    'X3RodW1ibmFpbF91cGRhdGVkX2F0QhcKFV90aHVtYm5haWxfZXhwaXJlc19hdA==');
