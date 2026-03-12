@@ -8445,6 +8445,233 @@ class GetStudentIdsOfSchoolResponse extends $pb.GeneratedMessage {
   $pb.PbList<$core.String> get studentIds => $_getList(1);
 }
 
+class GetStudentClassEnrollmentStatusRequest extends $pb.GeneratedMessage {
+  factory GetStudentClassEnrollmentStatusRequest({
+    $core.String? classId,
+    $1.PaginationRequest? pagination,
+  }) {
+    final result = create();
+    if (classId != null) result.classId = classId;
+    if (pagination != null) result.pagination = pagination;
+    return result;
+  }
+
+  GetStudentClassEnrollmentStatusRequest._();
+
+  factory GetStudentClassEnrollmentStatusRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetStudentClassEnrollmentStatusRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetStudentClassEnrollmentStatusRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'classId')
+    ..aOM<$1.PaginationRequest>(2, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationRequest.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetStudentClassEnrollmentStatusRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetStudentClassEnrollmentStatusRequest copyWith(
+          void Function(GetStudentClassEnrollmentStatusRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetStudentClassEnrollmentStatusRequest))
+          as GetStudentClassEnrollmentStatusRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetStudentClassEnrollmentStatusRequest create() =>
+      GetStudentClassEnrollmentStatusRequest._();
+  @$core.override
+  GetStudentClassEnrollmentStatusRequest createEmptyInstance() => create();
+  static $pb.PbList<GetStudentClassEnrollmentStatusRequest> createRepeated() =>
+      $pb.PbList<GetStudentClassEnrollmentStatusRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetStudentClassEnrollmentStatusRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetStudentClassEnrollmentStatusRequest>(create);
+  static GetStudentClassEnrollmentStatusRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get classId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set classId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasClassId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearClassId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $1.PaginationRequest get pagination => $_getN(1);
+  @$pb.TagNumber(2)
+  set pagination($1.PaginationRequest value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasPagination() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPagination() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $1.PaginationRequest ensurePagination() => $_ensure(1);
+}
+
+class GetStudentClassEnrollmentStatusResponse extends $pb.GeneratedMessage {
+  factory GetStudentClassEnrollmentStatusResponse({
+    $1.PaginationResponse? pagination,
+    $core.Iterable<StudentClassEnrollmentStatus>? enrollmentStatuses,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (enrollmentStatuses != null)
+      result.enrollmentStatuses.addAll(enrollmentStatuses);
+    return result;
+  }
+
+  GetStudentClassEnrollmentStatusResponse._();
+
+  factory GetStudentClassEnrollmentStatusResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetStudentClassEnrollmentStatusResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetStudentClassEnrollmentStatusResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOM<$1.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationResponse.create)
+    ..pPM<StudentClassEnrollmentStatus>(
+        2, _omitFieldNames ? '' : 'enrollmentStatuses',
+        subBuilder: StudentClassEnrollmentStatus.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetStudentClassEnrollmentStatusResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetStudentClassEnrollmentStatusResponse copyWith(
+          void Function(GetStudentClassEnrollmentStatusResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetStudentClassEnrollmentStatusResponse))
+          as GetStudentClassEnrollmentStatusResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetStudentClassEnrollmentStatusResponse create() =>
+      GetStudentClassEnrollmentStatusResponse._();
+  @$core.override
+  GetStudentClassEnrollmentStatusResponse createEmptyInstance() => create();
+  static $pb.PbList<GetStudentClassEnrollmentStatusResponse> createRepeated() =>
+      $pb.PbList<GetStudentClassEnrollmentStatusResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetStudentClassEnrollmentStatusResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetStudentClassEnrollmentStatusResponse>(create);
+  static GetStudentClassEnrollmentStatusResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($1.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<StudentClassEnrollmentStatus> get enrollmentStatuses =>
+      $_getList(1);
+}
+
+class StudentClassEnrollmentStatus extends $pb.GeneratedMessage {
+  factory StudentClassEnrollmentStatus({
+    $core.String? studentId,
+    $1.StudentEnrollmentStatus? enrollmentStatus,
+  }) {
+    final result = create();
+    if (studentId != null) result.studentId = studentId;
+    if (enrollmentStatus != null) result.enrollmentStatus = enrollmentStatus;
+    return result;
+  }
+
+  StudentClassEnrollmentStatus._();
+
+  factory StudentClassEnrollmentStatus.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StudentClassEnrollmentStatus.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StudentClassEnrollmentStatus',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'studentId')
+    ..aE<$1.StudentEnrollmentStatus>(
+        2, _omitFieldNames ? '' : 'enrollmentStatus',
+        enumValues: $1.StudentEnrollmentStatus.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StudentClassEnrollmentStatus clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StudentClassEnrollmentStatus copyWith(
+          void Function(StudentClassEnrollmentStatus) updates) =>
+      super.copyWith(
+              (message) => updates(message as StudentClassEnrollmentStatus))
+          as StudentClassEnrollmentStatus;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static StudentClassEnrollmentStatus create() =>
+      StudentClassEnrollmentStatus._();
+  @$core.override
+  StudentClassEnrollmentStatus createEmptyInstance() => create();
+  static $pb.PbList<StudentClassEnrollmentStatus> createRepeated() =>
+      $pb.PbList<StudentClassEnrollmentStatus>();
+  @$core.pragma('dart2js:noInline')
+  static StudentClassEnrollmentStatus getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StudentClassEnrollmentStatus>(create);
+  static StudentClassEnrollmentStatus? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get studentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set studentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasStudentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStudentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $1.StudentEnrollmentStatus get enrollmentStatus => $_getN(1);
+  @$pb.TagNumber(2)
+  set enrollmentStatus($1.StudentEnrollmentStatus value) =>
+      $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasEnrollmentStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEnrollmentStatus() => $_clearField(2);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

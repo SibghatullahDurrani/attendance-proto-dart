@@ -2929,3 +2929,82 @@ final $typed_data.Uint8List getStudentIdsOfSchoolResponseDescriptor =
         'Ch1HZXRTdHVkZW50SWRzT2ZTY2hvb2xSZXNwb25zZRJDCgpwYWdpbmF0aW9uGAEgASgLMiMuY2'
         '9tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbhIfCgtzdHVkZW50'
         'X2lkcxgCIAMoCVIKc3R1ZGVudElkcw==');
+
+@$core
+    .Deprecated('Use getStudentClassEnrollmentStatusRequestDescriptor instead')
+const GetStudentClassEnrollmentStatusRequest$json = {
+  '1': 'GetStudentClassEnrollmentStatusRequest',
+  '2': [
+    {'1': 'class_id', '3': 1, '4': 1, '5': 9, '10': 'classId'},
+    {
+      '1': 'pagination',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+  ],
+};
+
+/// Descriptor for `GetStudentClassEnrollmentStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getStudentClassEnrollmentStatusRequestDescriptor =
+    $convert.base64Decode(
+        'CiZHZXRTdHVkZW50Q2xhc3NFbnJvbGxtZW50U3RhdHVzUmVxdWVzdBIZCghjbGFzc19pZBgBIA'
+        'EoCVIHY2xhc3NJZBJCCgpwYWdpbmF0aW9uGAIgASgLMiIuY29tbW9uX21lc3NhZ2VzLlBhZ2lu'
+        'YXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9u');
+
+@$core
+    .Deprecated('Use getStudentClassEnrollmentStatusResponseDescriptor instead')
+const GetStudentClassEnrollmentStatusResponse$json = {
+  '1': 'GetStudentClassEnrollmentStatusResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'enrollment_statuses',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.StudentClassEnrollmentStatus',
+      '10': 'enrollmentStatuses'
+    },
+  ],
+};
+
+/// Descriptor for `GetStudentClassEnrollmentStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getStudentClassEnrollmentStatusResponseDescriptor =
+    $convert.base64Decode(
+        'CidHZXRTdHVkZW50Q2xhc3NFbnJvbGxtZW50U3RhdHVzUmVzcG9uc2USQwoKcGFnaW5hdGlvbh'
+        'gBIAEoCzIjLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9uc2VSCnBhZ2luYXRpb24S'
+        'XgoTZW5yb2xsbWVudF9zdGF0dXNlcxgCIAMoCzItLnNjaG9vbF9tZXNzYWdlcy5TdHVkZW50Q2'
+        'xhc3NFbnJvbGxtZW50U3RhdHVzUhJlbnJvbGxtZW50U3RhdHVzZXM=');
+
+@$core.Deprecated('Use studentClassEnrollmentStatusDescriptor instead')
+const StudentClassEnrollmentStatus$json = {
+  '1': 'StudentClassEnrollmentStatus',
+  '2': [
+    {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
+    {
+      '1': 'enrollment_status',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.StudentEnrollmentStatus',
+      '10': 'enrollmentStatus'
+    },
+  ],
+};
+
+/// Descriptor for `StudentClassEnrollmentStatus`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List studentClassEnrollmentStatusDescriptor =
+    $convert.base64Decode(
+        'ChxTdHVkZW50Q2xhc3NFbnJvbGxtZW50U3RhdHVzEh0KCnN0dWRlbnRfaWQYASABKAlSCXN0dW'
+        'RlbnRJZBJVChFlbnJvbGxtZW50X3N0YXR1cxgCIAEoDjIoLmNvbW1vbl9tZXNzYWdlcy5TdHVk'
+        'ZW50RW5yb2xsbWVudFN0YXR1c1IQZW5yb2xsbWVudFN0YXR1cw==');

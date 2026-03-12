@@ -3369,11 +3369,10 @@ final $typed_data.Uint8List schoolUserInfoForLiveFeedDescriptor = $convert.base6
 const ListStudentsOfSchoolOfClassRequest$json = {
   '1': 'ListStudentsOfSchoolOfClassRequest',
   '2': [
-    {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
-    {'1': 'class_id', '3': 2, '4': 1, '5': 9, '10': 'classId'},
+    {'1': 'class_id', '3': 1, '4': 1, '5': 9, '10': 'classId'},
     {
       '1': 'pagination',
-      '3': 3,
+      '3': 2,
       '4': 1,
       '5': 11,
       '6': '.common_messages.PaginationRequest',
@@ -3385,9 +3384,9 @@ const ListStudentsOfSchoolOfClassRequest$json = {
 /// Descriptor for `ListStudentsOfSchoolOfClassRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listStudentsOfSchoolOfClassRequestDescriptor =
     $convert.base64Decode(
-        'CiJMaXN0U3R1ZGVudHNPZlNjaG9vbE9mQ2xhc3NSZXF1ZXN0EhsKCXNjaG9vbF9pZBgBIAEoCV'
-        'IIc2Nob29sSWQSGQoIY2xhc3NfaWQYAiABKAlSB2NsYXNzSWQSQgoKcGFnaW5hdGlvbhgDIAEo'
-        'CzIiLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbg==');
+        'CiJMaXN0U3R1ZGVudHNPZlNjaG9vbE9mQ2xhc3NSZXF1ZXN0EhkKCGNsYXNzX2lkGAEgASgJUg'
+        'djbGFzc0lkEkIKCnBhZ2luYXRpb24YAiABKAsyIi5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlv'
+        'blJlcXVlc3RSCnBhZ2luYXRpb24=');
 
 @$core.Deprecated('Use listStudentsOfSchoolOfClassResponseDescriptor instead')
 const ListStudentsOfSchoolOfClassResponse$json = {

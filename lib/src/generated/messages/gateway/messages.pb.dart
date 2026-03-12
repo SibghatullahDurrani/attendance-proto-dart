@@ -7416,12 +7416,10 @@ class SchoolUserInfoForLiveFeed extends $pb.GeneratedMessage {
 
 class ListStudentsOfSchoolOfClassRequest extends $pb.GeneratedMessage {
   factory ListStudentsOfSchoolOfClassRequest({
-    $core.String? schoolId,
     $core.String? classId,
     $0.PaginationRequest? pagination,
   }) {
     final result = create();
-    if (schoolId != null) result.schoolId = schoolId;
     if (classId != null) result.classId = classId;
     if (pagination != null) result.pagination = pagination;
     return result;
@@ -7442,9 +7440,8 @@ class ListStudentsOfSchoolOfClassRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'schoolId')
-    ..aOS(2, _omitFieldNames ? '' : 'classId')
-    ..aOM<$0.PaginationRequest>(3, _omitFieldNames ? '' : 'pagination',
+    ..aOS(1, _omitFieldNames ? '' : 'classId')
+    ..aOM<$0.PaginationRequest>(2, _omitFieldNames ? '' : 'pagination',
         subBuilder: $0.PaginationRequest.create)
     ..hasRequiredFields = false;
 
@@ -7474,33 +7471,24 @@ class ListStudentsOfSchoolOfClassRequest extends $pb.GeneratedMessage {
   static ListStudentsOfSchoolOfClassRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get schoolId => $_getSZ(0);
+  $core.String get classId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set schoolId($core.String value) => $_setString(0, value);
+  set classId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasSchoolId() => $_has(0);
+  $core.bool hasClassId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSchoolId() => $_clearField(1);
+  void clearClassId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get classId => $_getSZ(1);
+  $0.PaginationRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set classId($core.String value) => $_setString(1, value);
+  set pagination($0.PaginationRequest value) => $_setField(2, value);
   @$pb.TagNumber(2)
-  $core.bool hasClassId() => $_has(1);
+  $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
-  void clearClassId() => $_clearField(2);
-
-  @$pb.TagNumber(3)
-  $0.PaginationRequest get pagination => $_getN(2);
-  @$pb.TagNumber(3)
-  set pagination($0.PaginationRequest value) => $_setField(3, value);
-  @$pb.TagNumber(3)
-  $core.bool hasPagination() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearPagination() => $_clearField(3);
-  @$pb.TagNumber(3)
-  $0.PaginationRequest ensurePagination() => $_ensure(2);
+  void clearPagination() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $0.PaginationRequest ensurePagination() => $_ensure(1);
 }
 
 class ListStudentsOfSchoolOfClassResponse extends $pb.GeneratedMessage {
