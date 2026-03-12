@@ -1366,19 +1366,20 @@ final $typed_data.Uint8List listAllClassesOfSchoolResponseDescriptor =
 const SchoolClass$json = {
   '1': 'SchoolClass',
   '2': [
-    {'1': 'class_name', '3': 1, '4': 1, '5': 9, '10': 'className'},
-    {'1': 'section', '3': 2, '4': 1, '5': 9, '10': 'section'},
+    {'1': 'class_id', '3': 1, '4': 1, '5': 9, '10': 'classId'},
+    {'1': 'class_name', '3': 2, '4': 1, '5': 9, '10': 'className'},
+    {'1': 'section', '3': 3, '4': 1, '5': 9, '10': 'section'},
     {
       '1': 'total_students_in_class',
-      '3': 3,
+      '3': 4,
       '4': 1,
       '5': 5,
       '10': 'totalStudentsInClass'
     },
-    {'1': 'session_name', '3': 4, '4': 1, '5': 9, '10': 'sessionName'},
+    {'1': 'session_name', '3': 6, '4': 1, '5': 9, '10': 'sessionName'},
     {
       '1': 'session_status',
-      '3': 5,
+      '3': 7,
       '4': 1,
       '5': 14,
       '6': '.common_messages.SessionStatus',
@@ -1389,11 +1390,11 @@ const SchoolClass$json = {
 
 /// Descriptor for `SchoolClass`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List schoolClassDescriptor = $convert.base64Decode(
-    'CgtTY2hvb2xDbGFzcxIdCgpjbGFzc19uYW1lGAEgASgJUgljbGFzc05hbWUSGAoHc2VjdGlvbh'
-    'gCIAEoCVIHc2VjdGlvbhI1Chd0b3RhbF9zdHVkZW50c19pbl9jbGFzcxgDIAEoBVIUdG90YWxT'
-    'dHVkZW50c0luQ2xhc3MSIQoMc2Vzc2lvbl9uYW1lGAQgASgJUgtzZXNzaW9uTmFtZRJFCg5zZX'
-    'NzaW9uX3N0YXR1cxgFIAEoDjIeLmNvbW1vbl9tZXNzYWdlcy5TZXNzaW9uU3RhdHVzUg1zZXNz'
-    'aW9uU3RhdHVz');
+    'CgtTY2hvb2xDbGFzcxIZCghjbGFzc19pZBgBIAEoCVIHY2xhc3NJZBIdCgpjbGFzc19uYW1lGA'
+    'IgASgJUgljbGFzc05hbWUSGAoHc2VjdGlvbhgDIAEoCVIHc2VjdGlvbhI1Chd0b3RhbF9zdHVk'
+    'ZW50c19pbl9jbGFzcxgEIAEoBVIUdG90YWxTdHVkZW50c0luQ2xhc3MSIQoMc2Vzc2lvbl9uYW'
+    '1lGAYgASgJUgtzZXNzaW9uTmFtZRJFCg5zZXNzaW9uX3N0YXR1cxgHIAEoDjIeLmNvbW1vbl9t'
+    'ZXNzYWdlcy5TZXNzaW9uU3RhdHVzUg1zZXNzaW9uU3RhdHVz');
 
 @$core.Deprecated(
     'Use getSchoolActiveAndUpcomingSessionMenuItemsRequestDescriptor instead')

@@ -4335,6 +4335,7 @@ class ListAllClassesOfSchoolResponse extends $pb.GeneratedMessage {
 
 class SchoolClass extends $pb.GeneratedMessage {
   factory SchoolClass({
+    $core.String? classId,
     $core.String? className,
     $core.String? section,
     $core.int? totalStudentsInClass,
@@ -4342,6 +4343,7 @@ class SchoolClass extends $pb.GeneratedMessage {
     $1.SessionStatus? sessionStatus,
   }) {
     final result = create();
+    if (classId != null) result.classId = classId;
     if (className != null) result.className = className;
     if (section != null) result.section = section;
     if (totalStudentsInClass != null)
@@ -4365,11 +4367,12 @@ class SchoolClass extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'className')
-    ..aOS(2, _omitFieldNames ? '' : 'section')
-    ..aI(3, _omitFieldNames ? '' : 'totalStudentsInClass')
-    ..aOS(4, _omitFieldNames ? '' : 'sessionName')
-    ..aE<$1.SessionStatus>(5, _omitFieldNames ? '' : 'sessionStatus',
+    ..aOS(1, _omitFieldNames ? '' : 'classId')
+    ..aOS(2, _omitFieldNames ? '' : 'className')
+    ..aOS(3, _omitFieldNames ? '' : 'section')
+    ..aI(4, _omitFieldNames ? '' : 'totalStudentsInClass')
+    ..aOS(6, _omitFieldNames ? '' : 'sessionName')
+    ..aE<$1.SessionStatus>(7, _omitFieldNames ? '' : 'sessionStatus',
         enumValues: $1.SessionStatus.values)
     ..hasRequiredFields = false;
 
@@ -4394,49 +4397,58 @@ class SchoolClass extends $pb.GeneratedMessage {
   static SchoolClass? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get className => $_getSZ(0);
+  $core.String get classId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set className($core.String value) => $_setString(0, value);
+  set classId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasClassName() => $_has(0);
+  $core.bool hasClassId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearClassName() => $_clearField(1);
+  void clearClassId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get section => $_getSZ(1);
+  $core.String get className => $_getSZ(1);
   @$pb.TagNumber(2)
-  set section($core.String value) => $_setString(1, value);
+  set className($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
-  $core.bool hasSection() => $_has(1);
+  $core.bool hasClassName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSection() => $_clearField(2);
+  void clearClassName() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $core.int get totalStudentsInClass => $_getIZ(2);
+  $core.String get section => $_getSZ(2);
   @$pb.TagNumber(3)
-  set totalStudentsInClass($core.int value) => $_setSignedInt32(2, value);
+  set section($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
-  $core.bool hasTotalStudentsInClass() => $_has(2);
+  $core.bool hasSection() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTotalStudentsInClass() => $_clearField(3);
+  void clearSection() => $_clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get sessionName => $_getSZ(3);
+  $core.int get totalStudentsInClass => $_getIZ(3);
   @$pb.TagNumber(4)
-  set sessionName($core.String value) => $_setString(3, value);
+  set totalStudentsInClass($core.int value) => $_setSignedInt32(3, value);
   @$pb.TagNumber(4)
-  $core.bool hasSessionName() => $_has(3);
+  $core.bool hasTotalStudentsInClass() => $_has(3);
   @$pb.TagNumber(4)
-  void clearSessionName() => $_clearField(4);
+  void clearTotalStudentsInClass() => $_clearField(4);
 
-  @$pb.TagNumber(5)
-  $1.SessionStatus get sessionStatus => $_getN(4);
-  @$pb.TagNumber(5)
-  set sessionStatus($1.SessionStatus value) => $_setField(5, value);
-  @$pb.TagNumber(5)
-  $core.bool hasSessionStatus() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearSessionStatus() => $_clearField(5);
+  @$pb.TagNumber(6)
+  $core.String get sessionName => $_getSZ(4);
+  @$pb.TagNumber(6)
+  set sessionName($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(6)
+  $core.bool hasSessionName() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearSessionName() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $1.SessionStatus get sessionStatus => $_getN(5);
+  @$pb.TagNumber(7)
+  set sessionStatus($1.SessionStatus value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasSessionStatus() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearSessionStatus() => $_clearField(7);
 }
 
 class GetSchoolActiveAndUpcomingSessionMenuItemsRequest
