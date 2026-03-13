@@ -2147,7 +2147,7 @@ class StudentOfSchool extends $pb.GeneratedMessage {
     $core.String? lastAttendedSessionName,
     $core.String? lastAttendedClassName,
     $core.String? lastAttendedSectionName,
-    $core.bool? isAttendingClass,
+    $0.StudentEnrollmentStatus? lastAttendedClassEnrollmentStatus,
     $core.bool? readyForAttendance,
     $core.String? causeOfNoAttendanceMarking,
     $core.String? userThumbnailUrl,
@@ -2170,7 +2170,9 @@ class StudentOfSchool extends $pb.GeneratedMessage {
       result.lastAttendedClassName = lastAttendedClassName;
     if (lastAttendedSectionName != null)
       result.lastAttendedSectionName = lastAttendedSectionName;
-    if (isAttendingClass != null) result.isAttendingClass = isAttendingClass;
+    if (lastAttendedClassEnrollmentStatus != null)
+      result.lastAttendedClassEnrollmentStatus =
+          lastAttendedClassEnrollmentStatus;
     if (readyForAttendance != null)
       result.readyForAttendance = readyForAttendance;
     if (causeOfNoAttendanceMarking != null)
@@ -2208,7 +2210,9 @@ class StudentOfSchool extends $pb.GeneratedMessage {
     ..aOS(7, _omitFieldNames ? '' : 'lastAttendedSessionName')
     ..aOS(8, _omitFieldNames ? '' : 'lastAttendedClassName')
     ..aOS(9, _omitFieldNames ? '' : 'lastAttendedSectionName')
-    ..aOB(10, _omitFieldNames ? '' : 'isAttendingClass')
+    ..aE<$0.StudentEnrollmentStatus>(
+        10, _omitFieldNames ? '' : 'lastAttendedClassEnrollmentStatus',
+        enumValues: $0.StudentEnrollmentStatus.values)
     ..aOB(11, _omitFieldNames ? '' : 'readyForAttendance')
     ..aOS(12, _omitFieldNames ? '' : 'causeOfNoAttendanceMarking')
     ..aOS(13, _omitFieldNames ? '' : 'userThumbnailUrl')
@@ -2323,13 +2327,14 @@ class StudentOfSchool extends $pb.GeneratedMessage {
   void clearLastAttendedSectionName() => $_clearField(9);
 
   @$pb.TagNumber(10)
-  $core.bool get isAttendingClass => $_getBF(9);
+  $0.StudentEnrollmentStatus get lastAttendedClassEnrollmentStatus => $_getN(9);
   @$pb.TagNumber(10)
-  set isAttendingClass($core.bool value) => $_setBool(9, value);
+  set lastAttendedClassEnrollmentStatus($0.StudentEnrollmentStatus value) =>
+      $_setField(10, value);
   @$pb.TagNumber(10)
-  $core.bool hasIsAttendingClass() => $_has(9);
+  $core.bool hasLastAttendedClassEnrollmentStatus() => $_has(9);
   @$pb.TagNumber(10)
-  void clearIsAttendingClass() => $_clearField(10);
+  void clearLastAttendedClassEnrollmentStatus() => $_clearField(10);
 
   @$pb.TagNumber(11)
   $core.bool get readyForAttendance => $_getBF(10);

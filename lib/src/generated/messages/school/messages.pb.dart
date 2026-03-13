@@ -5655,7 +5655,7 @@ class StudentEnrollmentInfo extends $pb.GeneratedMessage {
     $core.String? lastAttendedSessionName,
     $core.String? lastAttendedClassName,
     $core.String? lastAttendedSectionName,
-    $core.bool? isAttendingClass,
+    $1.StudentEnrollmentStatus? lastAttendedClassEnrollmentStatus,
   }) {
     final result = create();
     if (studentId != null) result.studentId = studentId;
@@ -5665,7 +5665,9 @@ class StudentEnrollmentInfo extends $pb.GeneratedMessage {
       result.lastAttendedClassName = lastAttendedClassName;
     if (lastAttendedSectionName != null)
       result.lastAttendedSectionName = lastAttendedSectionName;
-    if (isAttendingClass != null) result.isAttendingClass = isAttendingClass;
+    if (lastAttendedClassEnrollmentStatus != null)
+      result.lastAttendedClassEnrollmentStatus =
+          lastAttendedClassEnrollmentStatus;
     return result;
   }
 
@@ -5687,7 +5689,9 @@ class StudentEnrollmentInfo extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'lastAttendedSessionName')
     ..aOS(3, _omitFieldNames ? '' : 'lastAttendedClassName')
     ..aOS(4, _omitFieldNames ? '' : 'lastAttendedSectionName')
-    ..aOB(5, _omitFieldNames ? '' : 'isAttendingClass')
+    ..aE<$1.StudentEnrollmentStatus>(
+        5, _omitFieldNames ? '' : 'lastAttendedClassEnrollmentStatus',
+        enumValues: $1.StudentEnrollmentStatus.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -5749,13 +5753,14 @@ class StudentEnrollmentInfo extends $pb.GeneratedMessage {
   void clearLastAttendedSectionName() => $_clearField(4);
 
   @$pb.TagNumber(5)
-  $core.bool get isAttendingClass => $_getBF(4);
+  $1.StudentEnrollmentStatus get lastAttendedClassEnrollmentStatus => $_getN(4);
   @$pb.TagNumber(5)
-  set isAttendingClass($core.bool value) => $_setBool(4, value);
+  set lastAttendedClassEnrollmentStatus($1.StudentEnrollmentStatus value) =>
+      $_setField(5, value);
   @$pb.TagNumber(5)
-  $core.bool hasIsAttendingClass() => $_has(4);
+  $core.bool hasLastAttendedClassEnrollmentStatus() => $_has(4);
   @$pb.TagNumber(5)
-  void clearIsAttendingClass() => $_clearField(5);
+  void clearLastAttendedClassEnrollmentStatus() => $_clearField(5);
 }
 
 class GetParentIdsOfSchoolRequest extends $pb.GeneratedMessage {

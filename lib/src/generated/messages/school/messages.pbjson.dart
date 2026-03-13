@@ -1870,17 +1870,21 @@ const StudentEnrollmentInfo$json = {
       '17': true
     },
     {
-      '1': 'is_attending_class',
+      '1': 'last_attended_class_enrollment_status',
       '3': 5,
       '4': 1,
-      '5': 8,
-      '10': 'isAttendingClass'
+      '5': 14,
+      '6': '.common_messages.StudentEnrollmentStatus',
+      '9': 3,
+      '10': 'lastAttendedClassEnrollmentStatus',
+      '17': true
     },
   ],
   '8': [
     {'1': '_last_attended_session_name'},
     {'1': '_last_attended_class_name'},
     {'1': '_last_attended_section_name'},
+    {'1': '_last_attended_class_enrollment_status'},
   ],
 };
 
@@ -1890,9 +1894,12 @@ final $typed_data.Uint8List studentEnrollmentInfoDescriptor = $convert.base64Dec
     'AKGmxhc3RfYXR0ZW5kZWRfc2Vzc2lvbl9uYW1lGAIgASgJSABSF2xhc3RBdHRlbmRlZFNlc3Np'
     'b25OYW1liAEBEjwKGGxhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZRgDIAEoCUgBUhVsYXN0QXR0ZW'
     '5kZWRDbGFzc05hbWWIAQESQAoabGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWUYBCABKAlIAlIX'
-    'bGFzdEF0dGVuZGVkU2VjdGlvbk5hbWWIAQESLAoSaXNfYXR0ZW5kaW5nX2NsYXNzGAUgASgIUh'
-    'Bpc0F0dGVuZGluZ0NsYXNzQh0KG19sYXN0X2F0dGVuZGVkX3Nlc3Npb25fbmFtZUIbChlfbGFz'
-    'dF9hdHRlbmRlZF9jbGFzc19uYW1lQh0KG19sYXN0X2F0dGVuZGVkX3NlY3Rpb25fbmFtZQ==');
+    'bGFzdEF0dGVuZGVkU2VjdGlvbk5hbWWIAQESfwolbGFzdF9hdHRlbmRlZF9jbGFzc19lbnJvbG'
+    'xtZW50X3N0YXR1cxgFIAEoDjIoLmNvbW1vbl9tZXNzYWdlcy5TdHVkZW50RW5yb2xsbWVudFN0'
+    'YXR1c0gDUiFsYXN0QXR0ZW5kZWRDbGFzc0Vucm9sbG1lbnRTdGF0dXOIAQFCHQobX2xhc3RfYX'
+    'R0ZW5kZWRfc2Vzc2lvbl9uYW1lQhsKGV9sYXN0X2F0dGVuZGVkX2NsYXNzX25hbWVCHQobX2xh'
+    'c3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1lQigKJl9sYXN0X2F0dGVuZGVkX2NsYXNzX2Vucm9sbG'
+    '1lbnRfc3RhdHVz');
 
 @$core.Deprecated('Use getParentIdsOfSchoolRequestDescriptor instead')
 const GetParentIdsOfSchoolRequest$json = {
