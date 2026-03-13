@@ -447,6 +447,15 @@ class SchoolServiceClient extends $grpc.Client {
     return $createUnaryCall(_$enrollStudentsToClass, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.ListStudentsOfSchoolForEnrollmentResponse>
+      listStudentsOfSchoolForEnrollment(
+    $0.ListStudentsOfSchoolForEnrollmentRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listStudentsOfSchoolForEnrollment, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -733,6 +742,13 @@ class SchoolServiceClient extends $grpc.Client {
       '/school.SchoolService/EnrollStudentsToClass',
       ($0.EnrollStudentsToClassRequest value) => value.writeToBuffer(),
       $0.EnrollStudentsToClassResponse.fromBuffer);
+  static final _$listStudentsOfSchoolForEnrollment = $grpc.ClientMethod<
+          $0.ListStudentsOfSchoolForEnrollmentRequest,
+          $0.ListStudentsOfSchoolForEnrollmentResponse>(
+      '/school.SchoolService/ListStudentsOfSchoolForEnrollment',
+      ($0.ListStudentsOfSchoolForEnrollmentRequest value) =>
+          value.writeToBuffer(),
+      $0.ListStudentsOfSchoolForEnrollmentResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -1224,6 +1240,16 @@ abstract class SchoolServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.EnrollStudentsToClassRequest.fromBuffer(value),
         ($0.EnrollStudentsToClassResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListStudentsOfSchoolForEnrollmentRequest,
+            $0.ListStudentsOfSchoolForEnrollmentResponse>(
+        'ListStudentsOfSchoolForEnrollment',
+        listStudentsOfSchoolForEnrollment_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListStudentsOfSchoolForEnrollmentRequest.fromBuffer(value),
+        ($0.ListStudentsOfSchoolForEnrollmentResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -1722,4 +1748,16 @@ abstract class SchoolServiceBase extends $grpc.Service {
 
   $async.Future<$0.EnrollStudentsToClassResponse> enrollStudentsToClass(
       $grpc.ServiceCall call, $0.EnrollStudentsToClassRequest request);
+
+  $async.Future<$0.ListStudentsOfSchoolForEnrollmentResponse>
+      listStudentsOfSchoolForEnrollment_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.ListStudentsOfSchoolForEnrollmentRequest>
+              $request) async {
+    return listStudentsOfSchoolForEnrollment($call, await $request);
+  }
+
+  $async.Future<$0.ListStudentsOfSchoolForEnrollmentResponse>
+      listStudentsOfSchoolForEnrollment($grpc.ServiceCall call,
+          $0.ListStudentsOfSchoolForEnrollmentRequest request);
 }
