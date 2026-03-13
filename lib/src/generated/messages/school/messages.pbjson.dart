@@ -3055,8 +3055,17 @@ const ListStudentsOfSchoolForEnrollmentRequest$json = {
       '17': true
     },
     {
-      '1': 'pagination',
+      '1': 'student_name',
       '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'studentName',
+      '17': true
+    },
+    {
+      '1': 'pagination',
+      '3': 4,
       '4': 1,
       '5': 11,
       '6': '.common_messages.PaginationRequest',
@@ -3065,6 +3074,7 @@ const ListStudentsOfSchoolForEnrollmentRequest$json = {
   ],
   '8': [
     {'1': '_class_id'},
+    {'1': '_student_name'},
   ],
 };
 
@@ -3072,9 +3082,10 @@ const ListStudentsOfSchoolForEnrollmentRequest$json = {
 final $typed_data.Uint8List listStudentsOfSchoolForEnrollmentRequestDescriptor =
     $convert.base64Decode(
         'CihMaXN0U3R1ZGVudHNPZlNjaG9vbEZvckVucm9sbG1lbnRSZXF1ZXN0EhsKCXNjaG9vbF9pZB'
-        'gBIAEoCVIIc2Nob29sSWQSHgoIY2xhc3NfaWQYAiABKAlIAFIHY2xhc3NJZIgBARJCCgpwYWdp'
-        'bmF0aW9uGAMgASgLMiIuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0UgpwYWdpbm'
-        'F0aW9uQgsKCV9jbGFzc19pZA==');
+        'gBIAEoCVIIc2Nob29sSWQSHgoIY2xhc3NfaWQYAiABKAlIAFIHY2xhc3NJZIgBARImCgxzdHVk'
+        'ZW50X25hbWUYAyABKAlIAVILc3R1ZGVudE5hbWWIAQESQgoKcGFnaW5hdGlvbhgEIAEoCzIiLm'
+        'NvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbkILCglfY2xhc3Nf'
+        'aWRCDwoNX3N0dWRlbnRfbmFtZQ==');
 
 @$core.Deprecated(
     'Use listStudentsOfSchoolForEnrollmentResponseDescriptor instead')
