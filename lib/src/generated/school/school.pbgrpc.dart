@@ -440,6 +440,13 @@ class SchoolServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.EnrollStudentsToClassResponse> enrollStudentsToClass(
+    $0.EnrollStudentsToClassRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$enrollStudentsToClass, request, options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -721,6 +728,11 @@ class SchoolServiceClient extends $grpc.Client {
       ($0.GetStudentClassEnrollmentStatusRequest value) =>
           value.writeToBuffer(),
       $0.GetStudentClassEnrollmentStatusResponse.fromBuffer);
+  static final _$enrollStudentsToClass = $grpc.ClientMethod<
+          $0.EnrollStudentsToClassRequest, $0.EnrollStudentsToClassResponse>(
+      '/school.SchoolService/EnrollStudentsToClass',
+      ($0.EnrollStudentsToClassRequest value) => value.writeToBuffer(),
+      $0.EnrollStudentsToClassResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -1203,6 +1215,15 @@ abstract class SchoolServiceBase extends $grpc.Service {
             $0.GetStudentClassEnrollmentStatusRequest.fromBuffer(value),
         ($0.GetStudentClassEnrollmentStatusResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.EnrollStudentsToClassRequest,
+            $0.EnrollStudentsToClassResponse>(
+        'EnrollStudentsToClass',
+        enrollStudentsToClass_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.EnrollStudentsToClassRequest.fromBuffer(value),
+        ($0.EnrollStudentsToClassResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -1692,4 +1713,13 @@ abstract class SchoolServiceBase extends $grpc.Service {
   $async.Future<$0.GetStudentClassEnrollmentStatusResponse>
       getStudentClassEnrollmentStatus($grpc.ServiceCall call,
           $0.GetStudentClassEnrollmentStatusRequest request);
+
+  $async.Future<$0.EnrollStudentsToClassResponse> enrollStudentsToClass_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.EnrollStudentsToClassRequest> $request) async {
+    return enrollStudentsToClass($call, await $request);
+  }
+
+  $async.Future<$0.EnrollStudentsToClassResponse> enrollStudentsToClass(
+      $grpc.ServiceCall call, $0.EnrollStudentsToClassRequest request);
 }

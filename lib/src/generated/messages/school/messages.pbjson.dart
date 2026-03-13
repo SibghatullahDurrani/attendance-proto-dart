@@ -3009,3 +3009,32 @@ final $typed_data.Uint8List studentClassEnrollmentStatusDescriptor =
         'ChxTdHVkZW50Q2xhc3NFbnJvbGxtZW50U3RhdHVzEh0KCnN0dWRlbnRfaWQYASABKAlSCXN0dW'
         'RlbnRJZBJVChFlbnJvbGxtZW50X3N0YXR1cxgCIAEoDjIoLmNvbW1vbl9tZXNzYWdlcy5TdHVk'
         'ZW50RW5yb2xsbWVudFN0YXR1c1IQZW5yb2xsbWVudFN0YXR1cw==');
+
+@$core.Deprecated('Use enrollStudentsToClassRequestDescriptor instead')
+const EnrollStudentsToClassRequest$json = {
+  '1': 'EnrollStudentsToClassRequest',
+  '2': [
+    {'1': 'class_id', '3': 1, '4': 1, '5': 9, '10': 'classId'},
+    {'1': 'student_ids', '3': 2, '4': 3, '5': 9, '10': 'studentIds'},
+  ],
+};
+
+/// Descriptor for `EnrollStudentsToClassRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List enrollStudentsToClassRequestDescriptor =
+    $convert.base64Decode(
+        'ChxFbnJvbGxTdHVkZW50c1RvQ2xhc3NSZXF1ZXN0EhkKCGNsYXNzX2lkGAEgASgJUgdjbGFzc0'
+        'lkEh8KC3N0dWRlbnRfaWRzGAIgAygJUgpzdHVkZW50SWRz');
+
+@$core.Deprecated('Use enrollStudentsToClassResponseDescriptor instead')
+const EnrollStudentsToClassResponse$json = {
+  '1': 'EnrollStudentsToClassResponse',
+  '2': [
+    {'1': 'success', '3': 1, '4': 1, '5': 8, '10': 'success'},
+  ],
+};
+
+/// Descriptor for `EnrollStudentsToClassResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List enrollStudentsToClassResponseDescriptor =
+    $convert.base64Decode(
+        'Ch1FbnJvbGxTdHVkZW50c1RvQ2xhc3NSZXNwb25zZRIYCgdzdWNjZXNzGAEgASgIUgdzdWNjZX'
+        'Nz');
