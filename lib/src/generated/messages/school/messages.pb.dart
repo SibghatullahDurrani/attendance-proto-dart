@@ -8810,8 +8810,8 @@ class EnrollStudentsToClassResponse extends $pb.GeneratedMessage {
   void clearSuccess() => $_clearField(1);
 }
 
-class ListStudentsOfSchoolForEnrollmentRequest extends $pb.GeneratedMessage {
-  factory ListStudentsOfSchoolForEnrollmentRequest({
+class GetStudentsInfoOfSchoolForEnrollmentRequest extends $pb.GeneratedMessage {
+  factory GetStudentsInfoOfSchoolForEnrollmentRequest({
     $core.String? schoolId,
     $core.String? classId,
     $core.String? studentName,
@@ -8825,18 +8825,19 @@ class ListStudentsOfSchoolForEnrollmentRequest extends $pb.GeneratedMessage {
     return result;
   }
 
-  ListStudentsOfSchoolForEnrollmentRequest._();
+  GetStudentsInfoOfSchoolForEnrollmentRequest._();
 
-  factory ListStudentsOfSchoolForEnrollmentRequest.fromBuffer(
+  factory GetStudentsInfoOfSchoolForEnrollmentRequest.fromBuffer(
           $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory ListStudentsOfSchoolForEnrollmentRequest.fromJson($core.String json,
+  factory GetStudentsInfoOfSchoolForEnrollmentRequest.fromJson(
+          $core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ListStudentsOfSchoolForEnrollmentRequest',
+      _omitMessageNames ? '' : 'GetStudentsInfoOfSchoolForEnrollmentRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -8848,30 +8849,30 @@ class ListStudentsOfSchoolForEnrollmentRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListStudentsOfSchoolForEnrollmentRequest clone() => deepCopy();
+  GetStudentsInfoOfSchoolForEnrollmentRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListStudentsOfSchoolForEnrollmentRequest copyWith(
-          void Function(ListStudentsOfSchoolForEnrollmentRequest) updates) =>
+  GetStudentsInfoOfSchoolForEnrollmentRequest copyWith(
+          void Function(GetStudentsInfoOfSchoolForEnrollmentRequest) updates) =>
       super.copyWith((message) =>
-              updates(message as ListStudentsOfSchoolForEnrollmentRequest))
-          as ListStudentsOfSchoolForEnrollmentRequest;
+              updates(message as GetStudentsInfoOfSchoolForEnrollmentRequest))
+          as GetStudentsInfoOfSchoolForEnrollmentRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ListStudentsOfSchoolForEnrollmentRequest create() =>
-      ListStudentsOfSchoolForEnrollmentRequest._();
+  static GetStudentsInfoOfSchoolForEnrollmentRequest create() =>
+      GetStudentsInfoOfSchoolForEnrollmentRequest._();
   @$core.override
-  ListStudentsOfSchoolForEnrollmentRequest createEmptyInstance() => create();
-  static $pb.PbList<ListStudentsOfSchoolForEnrollmentRequest>
+  GetStudentsInfoOfSchoolForEnrollmentRequest createEmptyInstance() => create();
+  static $pb.PbList<GetStudentsInfoOfSchoolForEnrollmentRequest>
       createRepeated() =>
-          $pb.PbList<ListStudentsOfSchoolForEnrollmentRequest>();
+          $pb.PbList<GetStudentsInfoOfSchoolForEnrollmentRequest>();
   @$core.pragma('dart2js:noInline')
-  static ListStudentsOfSchoolForEnrollmentRequest getDefault() =>
+  static GetStudentsInfoOfSchoolForEnrollmentRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          ListStudentsOfSchoolForEnrollmentRequest>(create);
-  static ListStudentsOfSchoolForEnrollmentRequest? _defaultInstance;
+          GetStudentsInfoOfSchoolForEnrollmentRequest>(create);
+  static GetStudentsInfoOfSchoolForEnrollmentRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get schoolId => $_getSZ(0);
@@ -8912,63 +8913,68 @@ class ListStudentsOfSchoolForEnrollmentRequest extends $pb.GeneratedMessage {
   $1.PaginationRequest ensurePagination() => $_ensure(3);
 }
 
-class ListStudentsOfSchoolForEnrollmentResponse extends $pb.GeneratedMessage {
-  factory ListStudentsOfSchoolForEnrollmentResponse({
+class GetStudentsInfoOfSchoolForEnrollmentResponse
+    extends $pb.GeneratedMessage {
+  factory GetStudentsInfoOfSchoolForEnrollmentResponse({
     $1.PaginationResponse? pagination,
-    $core.Iterable<StudentOfSchoolForEnrollment>? students,
+    $core.Iterable<StudentInfoOfSchoolForEnrollment>? studentsInfo,
   }) {
     final result = create();
     if (pagination != null) result.pagination = pagination;
-    if (students != null) result.students.addAll(students);
+    if (studentsInfo != null) result.studentsInfo.addAll(studentsInfo);
     return result;
   }
 
-  ListStudentsOfSchoolForEnrollmentResponse._();
+  GetStudentsInfoOfSchoolForEnrollmentResponse._();
 
-  factory ListStudentsOfSchoolForEnrollmentResponse.fromBuffer(
+  factory GetStudentsInfoOfSchoolForEnrollmentResponse.fromBuffer(
           $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory ListStudentsOfSchoolForEnrollmentResponse.fromJson($core.String json,
+  factory GetStudentsInfoOfSchoolForEnrollmentResponse.fromJson(
+          $core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ListStudentsOfSchoolForEnrollmentResponse',
+      _omitMessageNames ? '' : 'GetStudentsInfoOfSchoolForEnrollmentResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
     ..aOM<$1.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
         subBuilder: $1.PaginationResponse.create)
-    ..pPM<StudentOfSchoolForEnrollment>(2, _omitFieldNames ? '' : 'students',
-        subBuilder: StudentOfSchoolForEnrollment.create)
+    ..pPM<StudentInfoOfSchoolForEnrollment>(
+        2, _omitFieldNames ? '' : 'studentsInfo',
+        subBuilder: StudentInfoOfSchoolForEnrollment.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListStudentsOfSchoolForEnrollmentResponse clone() => deepCopy();
+  GetStudentsInfoOfSchoolForEnrollmentResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListStudentsOfSchoolForEnrollmentResponse copyWith(
-          void Function(ListStudentsOfSchoolForEnrollmentResponse) updates) =>
+  GetStudentsInfoOfSchoolForEnrollmentResponse copyWith(
+          void Function(GetStudentsInfoOfSchoolForEnrollmentResponse)
+              updates) =>
       super.copyWith((message) =>
-              updates(message as ListStudentsOfSchoolForEnrollmentResponse))
-          as ListStudentsOfSchoolForEnrollmentResponse;
+              updates(message as GetStudentsInfoOfSchoolForEnrollmentResponse))
+          as GetStudentsInfoOfSchoolForEnrollmentResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ListStudentsOfSchoolForEnrollmentResponse create() =>
-      ListStudentsOfSchoolForEnrollmentResponse._();
+  static GetStudentsInfoOfSchoolForEnrollmentResponse create() =>
+      GetStudentsInfoOfSchoolForEnrollmentResponse._();
   @$core.override
-  ListStudentsOfSchoolForEnrollmentResponse createEmptyInstance() => create();
-  static $pb.PbList<ListStudentsOfSchoolForEnrollmentResponse>
+  GetStudentsInfoOfSchoolForEnrollmentResponse createEmptyInstance() =>
+      create();
+  static $pb.PbList<GetStudentsInfoOfSchoolForEnrollmentResponse>
       createRepeated() =>
-          $pb.PbList<ListStudentsOfSchoolForEnrollmentResponse>();
+          $pb.PbList<GetStudentsInfoOfSchoolForEnrollmentResponse>();
   @$core.pragma('dart2js:noInline')
-  static ListStudentsOfSchoolForEnrollmentResponse getDefault() =>
+  static GetStudentsInfoOfSchoolForEnrollmentResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          ListStudentsOfSchoolForEnrollmentResponse>(create);
-  static ListStudentsOfSchoolForEnrollmentResponse? _defaultInstance;
+          GetStudentsInfoOfSchoolForEnrollmentResponse>(create);
+  static GetStudentsInfoOfSchoolForEnrollmentResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $1.PaginationResponse get pagination => $_getN(0);
@@ -8982,11 +8988,11 @@ class ListStudentsOfSchoolForEnrollmentResponse extends $pb.GeneratedMessage {
   $1.PaginationResponse ensurePagination() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $pb.PbList<StudentOfSchoolForEnrollment> get students => $_getList(1);
+  $pb.PbList<StudentInfoOfSchoolForEnrollment> get studentsInfo => $_getList(1);
 }
 
-class StudentOfSchoolForEnrollment extends $pb.GeneratedMessage {
-  factory StudentOfSchoolForEnrollment({
+class StudentInfoOfSchoolForEnrollment extends $pb.GeneratedMessage {
+  factory StudentInfoOfSchoolForEnrollment({
     $core.String? studentId,
     $core.String? firstName,
     $core.String? secondName,
@@ -9014,17 +9020,18 @@ class StudentOfSchoolForEnrollment extends $pb.GeneratedMessage {
     return result;
   }
 
-  StudentOfSchoolForEnrollment._();
+  StudentInfoOfSchoolForEnrollment._();
 
-  factory StudentOfSchoolForEnrollment.fromBuffer($core.List<$core.int> data,
+  factory StudentInfoOfSchoolForEnrollment.fromBuffer(
+          $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory StudentOfSchoolForEnrollment.fromJson($core.String json,
+  factory StudentInfoOfSchoolForEnrollment.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'StudentOfSchoolForEnrollment',
+      _omitMessageNames ? '' : 'StudentInfoOfSchoolForEnrollment',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -9041,28 +9048,29 @@ class StudentOfSchoolForEnrollment extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  StudentOfSchoolForEnrollment clone() => deepCopy();
+  StudentInfoOfSchoolForEnrollment clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  StudentOfSchoolForEnrollment copyWith(
-          void Function(StudentOfSchoolForEnrollment) updates) =>
+  StudentInfoOfSchoolForEnrollment copyWith(
+          void Function(StudentInfoOfSchoolForEnrollment) updates) =>
       super.copyWith(
-              (message) => updates(message as StudentOfSchoolForEnrollment))
-          as StudentOfSchoolForEnrollment;
+              (message) => updates(message as StudentInfoOfSchoolForEnrollment))
+          as StudentInfoOfSchoolForEnrollment;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static StudentOfSchoolForEnrollment create() =>
-      StudentOfSchoolForEnrollment._();
+  static StudentInfoOfSchoolForEnrollment create() =>
+      StudentInfoOfSchoolForEnrollment._();
   @$core.override
-  StudentOfSchoolForEnrollment createEmptyInstance() => create();
-  static $pb.PbList<StudentOfSchoolForEnrollment> createRepeated() =>
-      $pb.PbList<StudentOfSchoolForEnrollment>();
+  StudentInfoOfSchoolForEnrollment createEmptyInstance() => create();
+  static $pb.PbList<StudentInfoOfSchoolForEnrollment> createRepeated() =>
+      $pb.PbList<StudentInfoOfSchoolForEnrollment>();
   @$core.pragma('dart2js:noInline')
-  static StudentOfSchoolForEnrollment getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<StudentOfSchoolForEnrollment>(create);
-  static StudentOfSchoolForEnrollment? _defaultInstance;
+  static StudentInfoOfSchoolForEnrollment getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StudentInfoOfSchoolForEnrollment>(
+          create);
+  static StudentInfoOfSchoolForEnrollment? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get studentId => $_getSZ(0);

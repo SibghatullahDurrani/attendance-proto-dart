@@ -447,12 +447,12 @@ class SchoolServiceClient extends $grpc.Client {
     return $createUnaryCall(_$enrollStudentsToClass, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.ListStudentsOfSchoolForEnrollmentResponse>
-      listStudentsOfSchoolForEnrollment(
-    $0.ListStudentsOfSchoolForEnrollmentRequest request, {
+  $grpc.ResponseFuture<$0.GetStudentsInfoOfSchoolForEnrollmentResponse>
+      getStudentsInfoOfSchoolForEnrollment(
+    $0.GetStudentsInfoOfSchoolForEnrollmentRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$listStudentsOfSchoolForEnrollment, request,
+    return $createUnaryCall(_$getStudentsInfoOfSchoolForEnrollment, request,
         options: options);
   }
 
@@ -742,13 +742,13 @@ class SchoolServiceClient extends $grpc.Client {
       '/school.SchoolService/EnrollStudentsToClass',
       ($0.EnrollStudentsToClassRequest value) => value.writeToBuffer(),
       $0.EnrollStudentsToClassResponse.fromBuffer);
-  static final _$listStudentsOfSchoolForEnrollment = $grpc.ClientMethod<
-          $0.ListStudentsOfSchoolForEnrollmentRequest,
-          $0.ListStudentsOfSchoolForEnrollmentResponse>(
-      '/school.SchoolService/ListStudentsOfSchoolForEnrollment',
-      ($0.ListStudentsOfSchoolForEnrollmentRequest value) =>
+  static final _$getStudentsInfoOfSchoolForEnrollment = $grpc.ClientMethod<
+          $0.GetStudentsInfoOfSchoolForEnrollmentRequest,
+          $0.GetStudentsInfoOfSchoolForEnrollmentResponse>(
+      '/school.SchoolService/GetStudentsInfoOfSchoolForEnrollment',
+      ($0.GetStudentsInfoOfSchoolForEnrollmentRequest value) =>
           value.writeToBuffer(),
-      $0.ListStudentsOfSchoolForEnrollmentResponse.fromBuffer);
+      $0.GetStudentsInfoOfSchoolForEnrollmentResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -1240,15 +1240,16 @@ abstract class SchoolServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.EnrollStudentsToClassRequest.fromBuffer(value),
         ($0.EnrollStudentsToClassResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.ListStudentsOfSchoolForEnrollmentRequest,
-            $0.ListStudentsOfSchoolForEnrollmentResponse>(
-        'ListStudentsOfSchoolForEnrollment',
-        listStudentsOfSchoolForEnrollment_Pre,
+    $addMethod($grpc.ServiceMethod<
+            $0.GetStudentsInfoOfSchoolForEnrollmentRequest,
+            $0.GetStudentsInfoOfSchoolForEnrollmentResponse>(
+        'GetStudentsInfoOfSchoolForEnrollment',
+        getStudentsInfoOfSchoolForEnrollment_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.ListStudentsOfSchoolForEnrollmentRequest.fromBuffer(value),
-        ($0.ListStudentsOfSchoolForEnrollmentResponse value) =>
+            $0.GetStudentsInfoOfSchoolForEnrollmentRequest.fromBuffer(value),
+        ($0.GetStudentsInfoOfSchoolForEnrollmentResponse value) =>
             value.writeToBuffer()));
   }
 
@@ -1749,15 +1750,15 @@ abstract class SchoolServiceBase extends $grpc.Service {
   $async.Future<$0.EnrollStudentsToClassResponse> enrollStudentsToClass(
       $grpc.ServiceCall call, $0.EnrollStudentsToClassRequest request);
 
-  $async.Future<$0.ListStudentsOfSchoolForEnrollmentResponse>
-      listStudentsOfSchoolForEnrollment_Pre(
+  $async.Future<$0.GetStudentsInfoOfSchoolForEnrollmentResponse>
+      getStudentsInfoOfSchoolForEnrollment_Pre(
           $grpc.ServiceCall $call,
-          $async.Future<$0.ListStudentsOfSchoolForEnrollmentRequest>
+          $async.Future<$0.GetStudentsInfoOfSchoolForEnrollmentRequest>
               $request) async {
-    return listStudentsOfSchoolForEnrollment($call, await $request);
+    return getStudentsInfoOfSchoolForEnrollment($call, await $request);
   }
 
-  $async.Future<$0.ListStudentsOfSchoolForEnrollmentResponse>
-      listStudentsOfSchoolForEnrollment($grpc.ServiceCall call,
-          $0.ListStudentsOfSchoolForEnrollmentRequest request);
+  $async.Future<$0.GetStudentsInfoOfSchoolForEnrollmentResponse>
+      getStudentsInfoOfSchoolForEnrollment($grpc.ServiceCall call,
+          $0.GetStudentsInfoOfSchoolForEnrollmentRequest request);
 }

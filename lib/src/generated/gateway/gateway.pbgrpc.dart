@@ -198,15 +198,6 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$enrollStudentsToClass, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.ListStudentsOfSchoolForEnrollmentResponse>
-      listStudentsOfSchoolForEnrollment(
-    $1.ListStudentsOfSchoolForEnrollmentRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$listStudentsOfSchoolForEnrollment, request,
-        options: options);
-  }
-
   /// Attendance RPCS
   $grpc.ResponseFuture<$2.GetUserMonthlyAttendanceStatsResponse>
       getUserMonthlyAttendanceStats(
@@ -562,6 +553,15 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$5.ListStudentsOfSchoolForEnrollmentResponse>
+      listStudentsOfSchoolForEnrollment(
+    $5.ListStudentsOfSchoolForEnrollmentRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listStudentsOfSchoolForEnrollment, request,
+        options: options);
+  }
+
   /// Media Rpcs
   $grpc.ResponseFuture<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
     $async.Stream<$6.AddLeaveAttachmentRequest> request, {
@@ -708,13 +708,6 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/EnrollStudentsToClass',
       ($1.EnrollStudentsToClassRequest value) => value.writeToBuffer(),
       $1.EnrollStudentsToClassResponse.fromBuffer);
-  static final _$listStudentsOfSchoolForEnrollment = $grpc.ClientMethod<
-          $1.ListStudentsOfSchoolForEnrollmentRequest,
-          $1.ListStudentsOfSchoolForEnrollmentResponse>(
-      '/gateway.GatewayService/ListStudentsOfSchoolForEnrollment',
-      ($1.ListStudentsOfSchoolForEnrollmentRequest value) =>
-          value.writeToBuffer(),
-      $1.ListStudentsOfSchoolForEnrollmentResponse.fromBuffer);
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
           $2.GetUserMonthlyAttendanceStatsRequest,
           $2.GetUserMonthlyAttendanceStatsResponse>(
@@ -958,6 +951,13 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/ListStudentsOfSchoolOfClass',
       ($5.ListStudentsOfSchoolOfClassRequest value) => value.writeToBuffer(),
       $5.ListStudentsOfSchoolOfClassResponse.fromBuffer);
+  static final _$listStudentsOfSchoolForEnrollment = $grpc.ClientMethod<
+          $5.ListStudentsOfSchoolForEnrollmentRequest,
+          $5.ListStudentsOfSchoolForEnrollmentResponse>(
+      '/gateway.GatewayService/ListStudentsOfSchoolForEnrollment',
+      ($5.ListStudentsOfSchoolForEnrollmentRequest value) =>
+          value.writeToBuffer(),
+      $5.ListStudentsOfSchoolForEnrollmentResponse.fromBuffer);
   static final _$addLeaveAttachment = $grpc.ClientMethod<
           $6.AddLeaveAttachmentRequest, $6.AddLeaveAttachmentResponse>(
       '/gateway.GatewayService/AddLeaveAttachment',
@@ -1173,16 +1173,6 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $1.EnrollStudentsToClassRequest.fromBuffer(value),
         ($1.EnrollStudentsToClassResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.ListStudentsOfSchoolForEnrollmentRequest,
-            $1.ListStudentsOfSchoolForEnrollmentResponse>(
-        'ListStudentsOfSchoolForEnrollment',
-        listStudentsOfSchoolForEnrollment_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $1.ListStudentsOfSchoolForEnrollmentRequest.fromBuffer(value),
-        ($1.ListStudentsOfSchoolForEnrollmentResponse value) =>
-            value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.GetUserMonthlyAttendanceStatsRequest,
             $2.GetUserMonthlyAttendanceStatsResponse>(
         'GetUserMonthlyAttendanceStats',
@@ -1589,6 +1579,16 @@ abstract class GatewayServiceBase extends $grpc.Service {
             $5.ListStudentsOfSchoolOfClassRequest.fromBuffer(value),
         ($5.ListStudentsOfSchoolOfClassResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$5.ListStudentsOfSchoolForEnrollmentRequest,
+            $5.ListStudentsOfSchoolForEnrollmentResponse>(
+        'ListStudentsOfSchoolForEnrollment',
+        listStudentsOfSchoolForEnrollment_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.ListStudentsOfSchoolForEnrollmentRequest.fromBuffer(value),
+        ($5.ListStudentsOfSchoolForEnrollmentResponse value) =>
+            value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$6.AddLeaveAttachmentRequest,
             $6.AddLeaveAttachmentResponse>(
         'AddLeaveAttachment',
@@ -1822,18 +1822,6 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$1.EnrollStudentsToClassResponse> enrollStudentsToClass(
       $grpc.ServiceCall call, $1.EnrollStudentsToClassRequest request);
-
-  $async.Future<$1.ListStudentsOfSchoolForEnrollmentResponse>
-      listStudentsOfSchoolForEnrollment_Pre(
-          $grpc.ServiceCall $call,
-          $async.Future<$1.ListStudentsOfSchoolForEnrollmentRequest>
-              $request) async {
-    return listStudentsOfSchoolForEnrollment($call, await $request);
-  }
-
-  $async.Future<$1.ListStudentsOfSchoolForEnrollmentResponse>
-      listStudentsOfSchoolForEnrollment($grpc.ServiceCall call,
-          $1.ListStudentsOfSchoolForEnrollmentRequest request);
 
   $async.Future<$2.GetUserMonthlyAttendanceStatsResponse>
       getUserMonthlyAttendanceStats_Pre(
@@ -2234,6 +2222,18 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$5.ListStudentsOfSchoolOfClassResponse>
       listStudentsOfSchoolOfClass($grpc.ServiceCall call,
           $5.ListStudentsOfSchoolOfClassRequest request);
+
+  $async.Future<$5.ListStudentsOfSchoolForEnrollmentResponse>
+      listStudentsOfSchoolForEnrollment_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$5.ListStudentsOfSchoolForEnrollmentRequest>
+              $request) async {
+    return listStudentsOfSchoolForEnrollment($call, await $request);
+  }
+
+  $async.Future<$5.ListStudentsOfSchoolForEnrollmentResponse>
+      listStudentsOfSchoolForEnrollment($grpc.ServiceCall call,
+          $5.ListStudentsOfSchoolForEnrollmentRequest request);
 
   $async.Future<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
       $grpc.ServiceCall call,

@@ -7717,6 +7717,378 @@ class StudentOfSchoolOfClass extends $pb.GeneratedMessage {
   $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(7);
 }
 
+class ListStudentsOfSchoolForEnrollmentRequest extends $pb.GeneratedMessage {
+  factory ListStudentsOfSchoolForEnrollmentRequest({
+    $core.String? schoolId,
+    $core.String? classId,
+    $core.String? studentName,
+    $0.PaginationRequest? pagination,
+  }) {
+    final result = create();
+    if (schoolId != null) result.schoolId = schoolId;
+    if (classId != null) result.classId = classId;
+    if (studentName != null) result.studentName = studentName;
+    if (pagination != null) result.pagination = pagination;
+    return result;
+  }
+
+  ListStudentsOfSchoolForEnrollmentRequest._();
+
+  factory ListStudentsOfSchoolForEnrollmentRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListStudentsOfSchoolForEnrollmentRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListStudentsOfSchoolForEnrollmentRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'schoolId')
+    ..aOS(2, _omitFieldNames ? '' : 'classId')
+    ..aOS(3, _omitFieldNames ? '' : 'studentName')
+    ..aOM<$0.PaginationRequest>(4, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationRequest.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListStudentsOfSchoolForEnrollmentRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListStudentsOfSchoolForEnrollmentRequest copyWith(
+          void Function(ListStudentsOfSchoolForEnrollmentRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as ListStudentsOfSchoolForEnrollmentRequest))
+          as ListStudentsOfSchoolForEnrollmentRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListStudentsOfSchoolForEnrollmentRequest create() =>
+      ListStudentsOfSchoolForEnrollmentRequest._();
+  @$core.override
+  ListStudentsOfSchoolForEnrollmentRequest createEmptyInstance() => create();
+  static $pb.PbList<ListStudentsOfSchoolForEnrollmentRequest>
+      createRepeated() =>
+          $pb.PbList<ListStudentsOfSchoolForEnrollmentRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListStudentsOfSchoolForEnrollmentRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListStudentsOfSchoolForEnrollmentRequest>(create);
+  static ListStudentsOfSchoolForEnrollmentRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get schoolId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set schoolId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchoolId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchoolId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get classId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set classId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasClassId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearClassId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get studentName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set studentName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasStudentName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearStudentName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $0.PaginationRequest get pagination => $_getN(3);
+  @$pb.TagNumber(4)
+  set pagination($0.PaginationRequest value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasPagination() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPagination() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $0.PaginationRequest ensurePagination() => $_ensure(3);
+}
+
+class ListStudentsOfSchoolForEnrollmentResponse extends $pb.GeneratedMessage {
+  factory ListStudentsOfSchoolForEnrollmentResponse({
+    $0.PaginationResponse? pagination,
+    $core.Iterable<StudentOfSchoolForEnrollment>? students,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (students != null) result.students.addAll(students);
+    return result;
+  }
+
+  ListStudentsOfSchoolForEnrollmentResponse._();
+
+  factory ListStudentsOfSchoolForEnrollmentResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListStudentsOfSchoolForEnrollmentResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListStudentsOfSchoolForEnrollmentResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationResponse.create)
+    ..pPM<StudentOfSchoolForEnrollment>(2, _omitFieldNames ? '' : 'students',
+        subBuilder: StudentOfSchoolForEnrollment.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListStudentsOfSchoolForEnrollmentResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListStudentsOfSchoolForEnrollmentResponse copyWith(
+          void Function(ListStudentsOfSchoolForEnrollmentResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as ListStudentsOfSchoolForEnrollmentResponse))
+          as ListStudentsOfSchoolForEnrollmentResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListStudentsOfSchoolForEnrollmentResponse create() =>
+      ListStudentsOfSchoolForEnrollmentResponse._();
+  @$core.override
+  ListStudentsOfSchoolForEnrollmentResponse createEmptyInstance() => create();
+  static $pb.PbList<ListStudentsOfSchoolForEnrollmentResponse>
+      createRepeated() =>
+          $pb.PbList<ListStudentsOfSchoolForEnrollmentResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListStudentsOfSchoolForEnrollmentResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListStudentsOfSchoolForEnrollmentResponse>(create);
+  static ListStudentsOfSchoolForEnrollmentResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<StudentOfSchoolForEnrollment> get students => $_getList(1);
+}
+
+class StudentOfSchoolForEnrollment extends $pb.GeneratedMessage {
+  factory StudentOfSchoolForEnrollment({
+    $core.String? studentId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? lastAttendedClassName,
+    $core.String? lastAttendedSectionName,
+    $core.String? lastAttendedSessionName,
+    $0.StudentEnrollmentStatus? lastAttendedClassEnrollmentStatus,
+    $core.String? userThumbnailUrl,
+    $1.Timestamp? thumbnailUpdatedAt,
+    $1.Timestamp? thumbnailExpiresAt,
+  }) {
+    final result = create();
+    if (studentId != null) result.studentId = studentId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (lastAttendedClassName != null)
+      result.lastAttendedClassName = lastAttendedClassName;
+    if (lastAttendedSectionName != null)
+      result.lastAttendedSectionName = lastAttendedSectionName;
+    if (lastAttendedSessionName != null)
+      result.lastAttendedSessionName = lastAttendedSessionName;
+    if (lastAttendedClassEnrollmentStatus != null)
+      result.lastAttendedClassEnrollmentStatus =
+          lastAttendedClassEnrollmentStatus;
+    if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
+    if (thumbnailUpdatedAt != null)
+      result.thumbnailUpdatedAt = thumbnailUpdatedAt;
+    if (thumbnailExpiresAt != null)
+      result.thumbnailExpiresAt = thumbnailExpiresAt;
+    return result;
+  }
+
+  StudentOfSchoolForEnrollment._();
+
+  factory StudentOfSchoolForEnrollment.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StudentOfSchoolForEnrollment.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StudentOfSchoolForEnrollment',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'studentId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'lastAttendedClassName')
+    ..aOS(6, _omitFieldNames ? '' : 'lastAttendedSectionName')
+    ..aOS(7, _omitFieldNames ? '' : 'lastAttendedSessionName')
+    ..aE<$0.StudentEnrollmentStatus>(
+        8, _omitFieldNames ? '' : 'lastAttendedClassEnrollmentStatus',
+        enumValues: $0.StudentEnrollmentStatus.values)
+    ..aOS(9, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(11, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+        subBuilder: $1.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StudentOfSchoolForEnrollment clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StudentOfSchoolForEnrollment copyWith(
+          void Function(StudentOfSchoolForEnrollment) updates) =>
+      super.copyWith(
+              (message) => updates(message as StudentOfSchoolForEnrollment))
+          as StudentOfSchoolForEnrollment;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static StudentOfSchoolForEnrollment create() =>
+      StudentOfSchoolForEnrollment._();
+  @$core.override
+  StudentOfSchoolForEnrollment createEmptyInstance() => create();
+  static $pb.PbList<StudentOfSchoolForEnrollment> createRepeated() =>
+      $pb.PbList<StudentOfSchoolForEnrollment>();
+  @$core.pragma('dart2js:noInline')
+  static StudentOfSchoolForEnrollment getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StudentOfSchoolForEnrollment>(create);
+  static StudentOfSchoolForEnrollment? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get studentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set studentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasStudentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStudentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get lastAttendedClassName => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set lastAttendedClassName($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasLastAttendedClassName() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearLastAttendedClassName() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get lastAttendedSectionName => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set lastAttendedSectionName($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasLastAttendedSectionName() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearLastAttendedSectionName() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get lastAttendedSessionName => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set lastAttendedSessionName($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasLastAttendedSessionName() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearLastAttendedSessionName() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $0.StudentEnrollmentStatus get lastAttendedClassEnrollmentStatus => $_getN(7);
+  @$pb.TagNumber(8)
+  set lastAttendedClassEnrollmentStatus($0.StudentEnrollmentStatus value) =>
+      $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasLastAttendedClassEnrollmentStatus() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearLastAttendedClassEnrollmentStatus() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get userThumbnailUrl => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set userThumbnailUrl($core.String value) => $_setString(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasUserThumbnailUrl() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearUserThumbnailUrl() => $_clearField(9);
+
+  @$pb.TagNumber(10)
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(9);
+  @$pb.TagNumber(10)
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(10, value);
+  @$pb.TagNumber(10)
+  $core.bool hasThumbnailUpdatedAt() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearThumbnailUpdatedAt() => $_clearField(10);
+  @$pb.TagNumber(10)
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(9);
+
+  @$pb.TagNumber(11)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(10);
+  @$pb.TagNumber(11)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(11, value);
+  @$pb.TagNumber(11)
+  $core.bool hasThumbnailExpiresAt() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearThumbnailExpiresAt() => $_clearField(11);
+  @$pb.TagNumber(11)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(10);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =
