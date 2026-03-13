@@ -191,6 +191,13 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$1.EnrollStudentsToClassResponse> enrollStudentsToClass(
+    $1.EnrollStudentsToClassRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$enrollStudentsToClass, request, options: options);
+  }
+
   /// Attendance RPCS
   $grpc.ResponseFuture<$2.GetUserMonthlyAttendanceStatsResponse>
       getUserMonthlyAttendanceStats(
@@ -687,6 +694,11 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/GetClassesSelectionMenuItems',
       ($1.GetClassesSelectionMenuItemsRequest value) => value.writeToBuffer(),
       $1.GetClassesSelectionMenuItemsResponse.fromBuffer);
+  static final _$enrollStudentsToClass = $grpc.ClientMethod<
+          $1.EnrollStudentsToClassRequest, $1.EnrollStudentsToClassResponse>(
+      '/gateway.GatewayService/EnrollStudentsToClass',
+      ($1.EnrollStudentsToClassRequest value) => value.writeToBuffer(),
+      $1.EnrollStudentsToClassResponse.fromBuffer);
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
           $2.GetUserMonthlyAttendanceStatsRequest,
           $2.GetUserMonthlyAttendanceStatsResponse>(
@@ -1136,6 +1148,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
             $1.GetClassesSelectionMenuItemsRequest.fromBuffer(value),
         ($1.GetClassesSelectionMenuItemsResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.EnrollStudentsToClassRequest,
+            $1.EnrollStudentsToClassResponse>(
+        'EnrollStudentsToClass',
+        enrollStudentsToClass_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $1.EnrollStudentsToClassRequest.fromBuffer(value),
+        ($1.EnrollStudentsToClassResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.GetUserMonthlyAttendanceStatsRequest,
             $2.GetUserMonthlyAttendanceStatsResponse>(
         'GetUserMonthlyAttendanceStats',
@@ -1766,6 +1787,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$1.GetClassesSelectionMenuItemsResponse>
       getClassesSelectionMenuItems($grpc.ServiceCall call,
           $1.GetClassesSelectionMenuItemsRequest request);
+
+  $async.Future<$1.EnrollStudentsToClassResponse> enrollStudentsToClass_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$1.EnrollStudentsToClassRequest> $request) async {
+    return enrollStudentsToClass($call, await $request);
+  }
+
+  $async.Future<$1.EnrollStudentsToClassResponse> enrollStudentsToClass(
+      $grpc.ServiceCall call, $1.EnrollStudentsToClassRequest request);
 
   $async.Future<$2.GetUserMonthlyAttendanceStatsResponse>
       getUserMonthlyAttendanceStats_Pre(
