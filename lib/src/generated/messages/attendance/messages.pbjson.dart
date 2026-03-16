@@ -1363,7 +1363,9 @@ const UserDateAttendance$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
-      '10': 'checkIn'
+      '9': 0,
+      '10': 'checkIn',
+      '17': true
     },
     {
       '1': 'check_out',
@@ -1371,14 +1373,21 @@ const UserDateAttendance$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
-      '10': 'checkOut'
+      '9': 1,
+      '10': 'checkOut',
+      '17': true
     },
+  ],
+  '8': [
+    {'1': '_check_in'},
+    {'1': '_check_out'},
   ],
 };
 
 /// Descriptor for `UserDateAttendance`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDateAttendanceDescriptor = $convert.base64Decode(
     'ChJVc2VyRGF0ZUF0dGVuZGFuY2USTgoRYXR0ZW5kYW5jZV9zdGF0dXMYASABKA4yIS5jb21tb2'
-    '5fbWVzc2FnZXMuQXR0ZW5kYW5jZVN0YXR1c1IQYXR0ZW5kYW5jZVN0YXR1cxI1CghjaGVja19p'
-    'bhgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSB2NoZWNrSW4SNwoJY2hlY2tfb3'
-    'V0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIIY2hlY2tPdXQ=');
+    '5fbWVzc2FnZXMuQXR0ZW5kYW5jZVN0YXR1c1IQYXR0ZW5kYW5jZVN0YXR1cxI6CghjaGVja19p'
+    'bhgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAFIHY2hlY2tJbogBARI8CgljaG'
+    'Vja19vdXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAFSCGNoZWNrT3V0iAEB'
+    'QgsKCV9jaGVja19pbkIMCgpfY2hlY2tfb3V0');
