@@ -180,6 +180,15 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$editShift, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetUserAttendanceReportAttendancesResponse>
+      getUserAttendanceReportAttendances(
+    $0.GetUserAttendanceReportAttendanceRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserAttendanceReportAttendances, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -284,6 +293,13 @@ class AttendanceServiceClient extends $grpc.Client {
           '/attendance.AttendanceService/EditShift',
           ($0.EditShiftRequest value) => value.writeToBuffer(),
           $0.EditShiftResponse.fromBuffer);
+  static final _$getUserAttendanceReportAttendances = $grpc.ClientMethod<
+          $0.GetUserAttendanceReportAttendanceRequest,
+          $0.GetUserAttendanceReportAttendancesResponse>(
+      '/attendance.AttendanceService/GetUserAttendanceReportAttendances',
+      ($0.GetUserAttendanceReportAttendanceRequest value) =>
+          value.writeToBuffer(),
+      $0.GetUserAttendanceReportAttendancesResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -457,6 +473,16 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.EditShiftRequest.fromBuffer(value),
         ($0.EditShiftResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetUserAttendanceReportAttendanceRequest,
+            $0.GetUserAttendanceReportAttendancesResponse>(
+        'GetUserAttendanceReportAttendances',
+        getUserAttendanceReportAttendances_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetUserAttendanceReportAttendanceRequest.fromBuffer(value),
+        ($0.GetUserAttendanceReportAttendancesResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -630,4 +656,16 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.EditShiftResponse> editShift(
       $grpc.ServiceCall call, $0.EditShiftRequest request);
+
+  $async.Future<$0.GetUserAttendanceReportAttendancesResponse>
+      getUserAttendanceReportAttendances_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetUserAttendanceReportAttendanceRequest>
+              $request) async {
+    return getUserAttendanceReportAttendances($call, await $request);
+  }
+
+  $async.Future<$0.GetUserAttendanceReportAttendancesResponse>
+      getUserAttendanceReportAttendances($grpc.ServiceCall call,
+          $0.GetUserAttendanceReportAttendanceRequest request);
 }

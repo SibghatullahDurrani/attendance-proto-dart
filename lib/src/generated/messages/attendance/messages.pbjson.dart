@@ -14,6 +14,21 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use attendanceReportTypeDescriptor instead')
+const AttendanceReportType$json = {
+  '1': 'AttendanceReportType',
+  '2': [
+    {'1': 'SINGLE_DATE', '2': 0},
+    {'1': 'RANGE', '2': 2},
+    {'1': 'MONTH', '2': 3},
+  ],
+};
+
+/// Descriptor for `AttendanceReportType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List attendanceReportTypeDescriptor = $convert.base64Decode(
+    'ChRBdHRlbmRhbmNlUmVwb3J0VHlwZRIPCgtTSU5HTEVfREFURRAAEgkKBVJBTkdFEAISCQoFTU'
+    '9OVEgQAw==');
+
 @$core.Deprecated('Use getUserMonthlyAttendanceStatsRequestDescriptor instead')
 const GetUserMonthlyAttendanceStatsRequest$json = {
   '1': 'GetUserMonthlyAttendanceStatsRequest',
@@ -1176,3 +1191,201 @@ const EditShiftResponse$json = {
 /// Descriptor for `EditShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List editShiftResponseDescriptor =
     $convert.base64Decode('ChFFZGl0U2hpZnRSZXNwb25zZQ==');
+
+@$core.Deprecated(
+    'Use getUserAttendanceReportAttendanceRequestDescriptor instead')
+const GetUserAttendanceReportAttendanceRequest$json = {
+  '1': 'GetUserAttendanceReportAttendanceRequest',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+    {
+      '1': 'report_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.attendance_messages.AttendanceReportType',
+      '10': 'reportType'
+    },
+    {
+      '1': 'month_start_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 0,
+      '10': 'monthStartTime',
+      '17': true
+    },
+    {
+      '1': 'start_date',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 1,
+      '10': 'startDate',
+      '17': true
+    },
+    {
+      '1': 'end_date',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 2,
+      '10': 'endDate',
+      '17': true
+    },
+    {
+      '1': 'date',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 3,
+      '10': 'date',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_month_start_time'},
+    {'1': '_start_date'},
+    {'1': '_end_date'},
+    {'1': '_date'},
+  ],
+};
+
+/// Descriptor for `GetUserAttendanceReportAttendanceRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserAttendanceReportAttendanceRequestDescriptor = $convert.base64Decode(
+    'CihHZXRVc2VyQXR0ZW5kYW5jZVJlcG9ydEF0dGVuZGFuY2VSZXF1ZXN0EhkKCHVzZXJfaWRzGA'
+    'EgAygJUgd1c2VySWRzEkoKC3JlcG9ydF90eXBlGAIgASgOMikuYXR0ZW5kYW5jZV9tZXNzYWdl'
+    'cy5BdHRlbmRhbmNlUmVwb3J0VHlwZVIKcmVwb3J0VHlwZRJJChBtb250aF9zdGFydF90aW1lGA'
+    'MgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAUg5tb250aFN0YXJ0VGltZYgBARI+'
+    'CgpzdGFydF9kYXRlGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBUglzdGFydE'
+    'RhdGWIAQESOgoIZW5kX2RhdGUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAJS'
+    'B2VuZERhdGWIAQESMwoEZGF0ZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIA1'
+    'IEZGF0ZYgBAUITChFfbW9udGhfc3RhcnRfdGltZUINCgtfc3RhcnRfZGF0ZUILCglfZW5kX2Rh'
+    'dGVCBwoFX2RhdGU=');
+
+@$core.Deprecated(
+    'Use getUserAttendanceReportAttendancesResponseDescriptor instead')
+const GetUserAttendanceReportAttendancesResponse$json = {
+  '1': 'GetUserAttendanceReportAttendancesResponse',
+  '2': [
+    {
+      '1': 'user_attendance_report',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.UserAttendanceReport',
+      '10': 'userAttendanceReport'
+    },
+  ],
+};
+
+/// Descriptor for `GetUserAttendanceReportAttendancesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getUserAttendanceReportAttendancesResponseDescriptor =
+    $convert.base64Decode(
+        'CipHZXRVc2VyQXR0ZW5kYW5jZVJlcG9ydEF0dGVuZGFuY2VzUmVzcG9uc2USXwoWdXNlcl9hdH'
+        'RlbmRhbmNlX3JlcG9ydBgBIAMoCzIpLmF0dGVuZGFuY2VfbWVzc2FnZXMuVXNlckF0dGVuZGFu'
+        'Y2VSZXBvcnRSFHVzZXJBdHRlbmRhbmNlUmVwb3J0');
+
+@$core.Deprecated('Use userAttendanceReportDescriptor instead')
+const UserAttendanceReport$json = {
+  '1': 'UserAttendanceReport',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'user_date_attendances',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.UserAttendanceReport.UserDateAttendanceMap',
+      '10': 'userDateAttendances'
+    },
+  ],
+  '3': [UserAttendanceReport_UserDateAttendanceMap$json],
+};
+
+@$core.Deprecated('Use userAttendanceReportDescriptor instead')
+const UserAttendanceReport_UserDateAttendanceMap$json = {
+  '1': 'UserDateAttendanceMap',
+  '2': [
+    {
+      '1': 'date',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'date'
+    },
+    {
+      '1': 'attendance',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.attendance_messages.UserDateAttendance',
+      '10': 'attendance'
+    },
+  ],
+};
+
+/// Descriptor for `UserAttendanceReport`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userAttendanceReportDescriptor = $convert.base64Decode(
+    'ChRVc2VyQXR0ZW5kYW5jZVJlcG9ydBIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQScwoVdXNlcl'
+    '9kYXRlX2F0dGVuZGFuY2VzGAIgAygLMj8uYXR0ZW5kYW5jZV9tZXNzYWdlcy5Vc2VyQXR0ZW5k'
+    'YW5jZVJlcG9ydC5Vc2VyRGF0ZUF0dGVuZGFuY2VNYXBSE3VzZXJEYXRlQXR0ZW5kYW5jZXMakA'
+    'EKFVVzZXJEYXRlQXR0ZW5kYW5jZU1hcBIuCgRkYXRlGAEgASgLMhouZ29vZ2xlLnByb3RvYnVm'
+    'LlRpbWVzdGFtcFIEZGF0ZRJHCgphdHRlbmRhbmNlGAIgASgLMicuYXR0ZW5kYW5jZV9tZXNzYW'
+    'dlcy5Vc2VyRGF0ZUF0dGVuZGFuY2VSCmF0dGVuZGFuY2U=');
+
+@$core.Deprecated('Use userDateAttendanceDescriptor instead')
+const UserDateAttendance$json = {
+  '1': 'UserDateAttendance',
+  '2': [
+    {
+      '1': 'attendance_status',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.AttendanceStatus',
+      '9': 0,
+      '10': 'attendanceStatus',
+      '17': true
+    },
+    {
+      '1': 'check_in',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 1,
+      '10': 'checkIn',
+      '17': true
+    },
+    {
+      '1': 'check_out',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 2,
+      '10': 'checkOut',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_attendance_status'},
+    {'1': '_check_in'},
+    {'1': '_check_out'},
+  ],
+};
+
+/// Descriptor for `UserDateAttendance`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userDateAttendanceDescriptor = $convert.base64Decode(
+    'ChJVc2VyRGF0ZUF0dGVuZGFuY2USUwoRYXR0ZW5kYW5jZV9zdGF0dXMYASABKA4yIS5jb21tb2'
+    '5fbWVzc2FnZXMuQXR0ZW5kYW5jZVN0YXR1c0gAUhBhdHRlbmRhbmNlU3RhdHVziAEBEjoKCGNo'
+    'ZWNrX2luGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBUgdjaGVja0luiAEBEj'
+    'wKCWNoZWNrX291dBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAlIIY2hlY2tP'
+    'dXSIAQFCFAoSX2F0dGVuZGFuY2Vfc3RhdHVzQgsKCV9jaGVja19pbkIMCgpfY2hlY2tfb3V0');
