@@ -3714,3 +3714,209 @@ final $typed_data.Uint8List studentOfSchoolForEnrollmentDescriptor = $convert.ba
     'obX2xhc3RfYXR0ZW5kZWRfc2Vzc2lvbl9uYW1lQigKJl9sYXN0X2F0dGVuZGVkX2NsYXNzX2Vu'
     'cm9sbG1lbnRfc3RhdHVzQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cG'
     'RhdGVkX2F0QhcKFV90aHVtYm5haWxfZXhwaXJlc19hdA==');
+
+@$core.Deprecated('Use listUserAttendanceReportsRequestDescriptor instead')
+const ListUserAttendanceReportsRequest$json = {
+  '1': 'ListUserAttendanceReportsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'school_id', '3': 2, '4': 1, '5': 9, '10': 'schoolId'},
+    {
+      '1': 'user_type',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.UserType',
+      '10': 'userType'
+    },
+    {
+      '1': 'user_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'userName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'phone_number',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'phoneNumber',
+      '17': true
+    },
+    {
+      '1': 'class_id',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'classId',
+      '17': true
+    },
+    {
+      '1': 'report_type',
+      '3': 8,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.AttendanceReportType',
+      '10': 'reportType'
+    },
+    {
+      '1': 'month_start_time',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 4,
+      '10': 'monthStartTime',
+      '17': true
+    },
+    {
+      '1': 'start_date',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 5,
+      '10': 'startDate',
+      '17': true
+    },
+    {
+      '1': 'end_date',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 6,
+      '10': 'endDate',
+      '17': true
+    },
+    {
+      '1': 'date',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 7,
+      '10': 'date',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_user_name'},
+    {'1': '_identification_number'},
+    {'1': '_phone_number'},
+    {'1': '_class_id'},
+    {'1': '_month_start_time'},
+    {'1': '_start_date'},
+    {'1': '_end_date'},
+    {'1': '_date'},
+  ],
+};
+
+/// Descriptor for `ListUserAttendanceReportsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listUserAttendanceReportsRequestDescriptor = $convert.base64Decode(
+    'CiBMaXN0VXNlckF0dGVuZGFuY2VSZXBvcnRzUmVxdWVzdBJCCgpwYWdpbmF0aW9uGAEgASgLMi'
+    'IuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9uEhsKCXNjaG9v'
+    'bF9pZBgCIAEoCVIIc2Nob29sSWQSNgoJdXNlcl90eXBlGAMgASgOMhkuY29tbW9uX21lc3NhZ2'
+    'VzLlVzZXJUeXBlUgh1c2VyVHlwZRIgCgl1c2VyX25hbWUYBCABKAlIAFIIdXNlck5hbWWIAQES'
+    'OAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAUgASgJSAFSFGlkZW50aWZpY2F0aW9uTnVtYmVyiA'
+    'EBEiYKDHBob25lX251bWJlchgGIAEoCUgCUgtwaG9uZU51bWJlcogBARIeCghjbGFzc19pZBgH'
+    'IAEoCUgDUgdjbGFzc0lkiAEBEkYKC3JlcG9ydF90eXBlGAggASgOMiUuY29tbW9uX21lc3NhZ2'
+    'VzLkF0dGVuZGFuY2VSZXBvcnRUeXBlUgpyZXBvcnRUeXBlEkkKEG1vbnRoX3N0YXJ0X3RpbWUY'
+    'CSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSARSDm1vbnRoU3RhcnRUaW1liAEBEj'
+    '4KCnN0YXJ0X2RhdGUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAVSCXN0YXJ0'
+    'RGF0ZYgBARI6CghlbmRfZGF0ZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBl'
+    'IHZW5kRGF0ZYgBARIzCgRkYXRlGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgH'
+    'UgRkYXRliAEBQgwKCl91c2VyX25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX251bWJlckIPCg1fcG'
+    'hvbmVfbnVtYmVyQgsKCV9jbGFzc19pZEITChFfbW9udGhfc3RhcnRfdGltZUINCgtfc3RhcnRf'
+    'ZGF0ZUILCglfZW5kX2RhdGVCBwoFX2RhdGU=');
+
+@$core.Deprecated('Use listUserAttendanceReportsResponseDescriptor instead')
+const ListUserAttendanceReportsResponse$json = {
+  '1': 'ListUserAttendanceReportsResponse',
+  '2': [
+    {
+      '1': 'user_attendance_report',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.UserAttendanceReport',
+      '10': 'userAttendanceReport'
+    },
+  ],
+};
+
+/// Descriptor for `ListUserAttendanceReportsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listUserAttendanceReportsResponseDescriptor =
+    $convert.base64Decode(
+        'CiFMaXN0VXNlckF0dGVuZGFuY2VSZXBvcnRzUmVzcG9uc2USXAoWdXNlcl9hdHRlbmRhbmNlX3'
+        'JlcG9ydBgBIAMoCzImLmdhdGV3YXlfbWVzc2FnZXMuVXNlckF0dGVuZGFuY2VSZXBvcnRSFHVz'
+        'ZXJBdHRlbmRhbmNlUmVwb3J0');
+
+@$core.Deprecated('Use userAttendanceReportDescriptor instead')
+const UserAttendanceReport$json = {
+  '1': 'UserAttendanceReport',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'user_date_attendances',
+      '3': 5,
+      '4': 3,
+      '5': 11,
+      '6': '.common_messages.UserDateAttendanceMap',
+      '10': 'userDateAttendances'
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_identification_number'},
+  ],
+};
+
+/// Descriptor for `UserAttendanceReport`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userAttendanceReportDescriptor = $convert.base64Decode(
+    'ChRVc2VyQXR0ZW5kYW5jZVJlcG9ydBIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQSHQoKZmlyc3'
+    'RfbmFtZRgCIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAMgASgJSABSCnNlY29uZE5h'
+    'bWWIAQESOAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJSAFSFGlkZW50aWZpY2F0aW9uTn'
+    'VtYmVyiAEBEloKFXVzZXJfZGF0ZV9hdHRlbmRhbmNlcxgFIAMoCzImLmNvbW1vbl9tZXNzYWdl'
+    'cy5Vc2VyRGF0ZUF0dGVuZGFuY2VNYXBSE3VzZXJEYXRlQXR0ZW5kYW5jZXNCDgoMX3NlY29uZF'
+    '9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXI=');

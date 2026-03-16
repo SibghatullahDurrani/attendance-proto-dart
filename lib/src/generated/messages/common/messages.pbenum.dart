@@ -252,5 +252,49 @@ class StudentEnrollmentStatus extends $pb.ProtobufEnum {
   const StudentEnrollmentStatus._(super.value, super.name);
 }
 
+class AttendanceReportType extends $pb.ProtobufEnum {
+  static const AttendanceReportType SINGLE_DATE =
+      AttendanceReportType._(0, _omitEnumNames ? '' : 'SINGLE_DATE');
+  static const AttendanceReportType RANGE =
+      AttendanceReportType._(2, _omitEnumNames ? '' : 'RANGE');
+  static const AttendanceReportType MONTH =
+      AttendanceReportType._(3, _omitEnumNames ? '' : 'MONTH');
+
+  static const $core.List<AttendanceReportType> values = <AttendanceReportType>[
+    SINGLE_DATE,
+    RANGE,
+    MONTH,
+  ];
+
+  static final $core.List<AttendanceReportType?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static AttendanceReportType? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const AttendanceReportType._(super.value, super.name);
+}
+
+class UserType extends $pb.ProtobufEnum {
+  static const UserType STUDENT =
+      UserType._(0, _omitEnumNames ? '' : 'STUDENT');
+  static const UserType TEACHER =
+      UserType._(1, _omitEnumNames ? '' : 'TEACHER');
+  static const UserType EMPLOYEE =
+      UserType._(2, _omitEnumNames ? '' : 'EMPLOYEE');
+
+  static const $core.List<UserType> values = <UserType>[
+    STUDENT,
+    TEACHER,
+    EMPLOYEE,
+  ];
+
+  static final $core.List<UserType?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static UserType? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const UserType._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');

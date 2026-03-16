@@ -17,11 +17,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../google/protobuf/timestamp.pb.dart' as $0;
 import '../common/messages.pb.dart' as $1;
-import 'messages.pbenum.dart';
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
-
-export 'messages.pbenum.dart';
 
 class GetUserMonthlyAttendanceStatsRequest extends $pb.GeneratedMessage {
   factory GetUserMonthlyAttendanceStatsRequest({
@@ -3797,7 +3794,7 @@ class EditShiftResponse extends $pb.GeneratedMessage {
 class GetUserAttendanceReportAttendanceRequest extends $pb.GeneratedMessage {
   factory GetUserAttendanceReportAttendanceRequest({
     $core.Iterable<$core.String>? userIds,
-    AttendanceReportType? reportType,
+    $1.AttendanceReportType? reportType,
     $0.Timestamp? monthStartTime,
     $0.Timestamp? startDate,
     $0.Timestamp? endDate,
@@ -3829,8 +3826,8 @@ class GetUserAttendanceReportAttendanceRequest extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
       createEmptyInstance: create)
     ..pPS(1, _omitFieldNames ? '' : 'userIds')
-    ..aE<AttendanceReportType>(2, _omitFieldNames ? '' : 'reportType',
-        enumValues: AttendanceReportType.values)
+    ..aE<$1.AttendanceReportType>(2, _omitFieldNames ? '' : 'reportType',
+        enumValues: $1.AttendanceReportType.values)
     ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'monthStartTime',
         subBuilder: $0.Timestamp.create)
     ..aOM<$0.Timestamp>(4, _omitFieldNames ? '' : 'startDate',
@@ -3871,9 +3868,9 @@ class GetUserAttendanceReportAttendanceRequest extends $pb.GeneratedMessage {
   $pb.PbList<$core.String> get userIds => $_getList(0);
 
   @$pb.TagNumber(2)
-  AttendanceReportType get reportType => $_getN(1);
+  $1.AttendanceReportType get reportType => $_getN(1);
   @$pb.TagNumber(2)
-  set reportType(AttendanceReportType value) => $_setField(2, value);
+  set reportType($1.AttendanceReportType value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasReportType() => $_has(1);
   @$pb.TagNumber(2)
@@ -3929,11 +3926,10 @@ class GetUserAttendanceReportAttendanceRequest extends $pb.GeneratedMessage {
 
 class GetUserAttendanceReportAttendancesResponse extends $pb.GeneratedMessage {
   factory GetUserAttendanceReportAttendancesResponse({
-    $core.Iterable<UserAttendanceReport>? userAttendanceReport,
+    $core.Iterable<UserAttendance>? userAttendance,
   }) {
     final result = create();
-    if (userAttendanceReport != null)
-      result.userAttendanceReport.addAll(userAttendanceReport);
+    if (userAttendance != null) result.userAttendance.addAll(userAttendance);
     return result;
   }
 
@@ -3952,9 +3948,8 @@ class GetUserAttendanceReportAttendancesResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
       createEmptyInstance: create)
-    ..pPM<UserAttendanceReport>(
-        1, _omitFieldNames ? '' : 'userAttendanceReport',
-        subBuilder: UserAttendanceReport.create)
+    ..pPM<UserAttendance>(1, _omitFieldNames ? '' : 'userAttendance',
+        subBuilder: UserAttendance.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -3984,95 +3979,13 @@ class GetUserAttendanceReportAttendancesResponse extends $pb.GeneratedMessage {
   static GetUserAttendanceReportAttendancesResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $pb.PbList<UserAttendanceReport> get userAttendanceReport => $_getList(0);
+  $pb.PbList<UserAttendance> get userAttendance => $_getList(0);
 }
 
-class UserAttendanceReport_UserDateAttendanceMap extends $pb.GeneratedMessage {
-  factory UserAttendanceReport_UserDateAttendanceMap({
-    $0.Timestamp? date,
-    UserDateAttendance? attendance,
-  }) {
-    final result = create();
-    if (date != null) result.date = date;
-    if (attendance != null) result.attendance = attendance;
-    return result;
-  }
-
-  UserAttendanceReport_UserDateAttendanceMap._();
-
-  factory UserAttendanceReport_UserDateAttendanceMap.fromBuffer(
-          $core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory UserAttendanceReport_UserDateAttendanceMap.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UserAttendanceReport.UserDateAttendanceMap',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
-      createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'date',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<UserDateAttendance>(2, _omitFieldNames ? '' : 'attendance',
-        subBuilder: UserDateAttendance.create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UserAttendanceReport_UserDateAttendanceMap clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UserAttendanceReport_UserDateAttendanceMap copyWith(
-          void Function(UserAttendanceReport_UserDateAttendanceMap) updates) =>
-      super.copyWith((message) =>
-              updates(message as UserAttendanceReport_UserDateAttendanceMap))
-          as UserAttendanceReport_UserDateAttendanceMap;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static UserAttendanceReport_UserDateAttendanceMap create() =>
-      UserAttendanceReport_UserDateAttendanceMap._();
-  @$core.override
-  UserAttendanceReport_UserDateAttendanceMap createEmptyInstance() => create();
-  static $pb.PbList<UserAttendanceReport_UserDateAttendanceMap>
-      createRepeated() =>
-          $pb.PbList<UserAttendanceReport_UserDateAttendanceMap>();
-  @$core.pragma('dart2js:noInline')
-  static UserAttendanceReport_UserDateAttendanceMap getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          UserAttendanceReport_UserDateAttendanceMap>(create);
-  static UserAttendanceReport_UserDateAttendanceMap? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $0.Timestamp get date => $_getN(0);
-  @$pb.TagNumber(1)
-  set date($0.Timestamp value) => $_setField(1, value);
-  @$pb.TagNumber(1)
-  $core.bool hasDate() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearDate() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $0.Timestamp ensureDate() => $_ensure(0);
-
-  @$pb.TagNumber(2)
-  UserDateAttendance get attendance => $_getN(1);
-  @$pb.TagNumber(2)
-  set attendance(UserDateAttendance value) => $_setField(2, value);
-  @$pb.TagNumber(2)
-  $core.bool hasAttendance() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearAttendance() => $_clearField(2);
-  @$pb.TagNumber(2)
-  UserDateAttendance ensureAttendance() => $_ensure(1);
-}
-
-class UserAttendanceReport extends $pb.GeneratedMessage {
-  factory UserAttendanceReport({
+class UserAttendance extends $pb.GeneratedMessage {
+  factory UserAttendance({
     $core.String? userId,
-    $core.Iterable<UserAttendanceReport_UserDateAttendanceMap>?
-        userDateAttendances,
+    $core.Iterable<$1.UserDateAttendanceMap>? userDateAttendances,
   }) {
     final result = create();
     if (userId != null) result.userId = userId;
@@ -4081,46 +3994,46 @@ class UserAttendanceReport extends $pb.GeneratedMessage {
     return result;
   }
 
-  UserAttendanceReport._();
+  UserAttendance._();
 
-  factory UserAttendanceReport.fromBuffer($core.List<$core.int> data,
+  factory UserAttendance.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory UserAttendanceReport.fromJson($core.String json,
+  factory UserAttendance.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UserAttendanceReport',
+      _omitMessageNames ? '' : 'UserAttendance',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'userId')
-    ..pPM<UserAttendanceReport_UserDateAttendanceMap>(
+    ..pPM<$1.UserDateAttendanceMap>(
         2, _omitFieldNames ? '' : 'userDateAttendances',
-        subBuilder: UserAttendanceReport_UserDateAttendanceMap.create)
+        subBuilder: $1.UserDateAttendanceMap.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UserAttendanceReport clone() => deepCopy();
+  UserAttendance clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UserAttendanceReport copyWith(void Function(UserAttendanceReport) updates) =>
-      super.copyWith((message) => updates(message as UserAttendanceReport))
-          as UserAttendanceReport;
+  UserAttendance copyWith(void Function(UserAttendance) updates) =>
+      super.copyWith((message) => updates(message as UserAttendance))
+          as UserAttendance;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static UserAttendanceReport create() => UserAttendanceReport._();
+  static UserAttendance create() => UserAttendance._();
   @$core.override
-  UserAttendanceReport createEmptyInstance() => create();
-  static $pb.PbList<UserAttendanceReport> createRepeated() =>
-      $pb.PbList<UserAttendanceReport>();
+  UserAttendance createEmptyInstance() => create();
+  static $pb.PbList<UserAttendance> createRepeated() =>
+      $pb.PbList<UserAttendance>();
   @$core.pragma('dart2js:noInline')
-  static UserAttendanceReport getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<UserAttendanceReport>(create);
-  static UserAttendanceReport? _defaultInstance;
+  static UserAttendance getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserAttendance>(create);
+  static UserAttendance? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get userId => $_getSZ(0);
@@ -4132,96 +4045,7 @@ class UserAttendanceReport extends $pb.GeneratedMessage {
   void clearUserId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $pb.PbList<UserAttendanceReport_UserDateAttendanceMap>
-      get userDateAttendances => $_getList(1);
-}
-
-class UserDateAttendance extends $pb.GeneratedMessage {
-  factory UserDateAttendance({
-    $1.AttendanceStatus? attendanceStatus,
-    $0.Timestamp? checkIn,
-    $0.Timestamp? checkOut,
-  }) {
-    final result = create();
-    if (attendanceStatus != null) result.attendanceStatus = attendanceStatus;
-    if (checkIn != null) result.checkIn = checkIn;
-    if (checkOut != null) result.checkOut = checkOut;
-    return result;
-  }
-
-  UserDateAttendance._();
-
-  factory UserDateAttendance.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory UserDateAttendance.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UserDateAttendance',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
-      createEmptyInstance: create)
-    ..aE<$1.AttendanceStatus>(1, _omitFieldNames ? '' : 'attendanceStatus',
-        enumValues: $1.AttendanceStatus.values)
-    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'checkIn',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'checkOut',
-        subBuilder: $0.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UserDateAttendance clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UserDateAttendance copyWith(void Function(UserDateAttendance) updates) =>
-      super.copyWith((message) => updates(message as UserDateAttendance))
-          as UserDateAttendance;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static UserDateAttendance create() => UserDateAttendance._();
-  @$core.override
-  UserDateAttendance createEmptyInstance() => create();
-  static $pb.PbList<UserDateAttendance> createRepeated() =>
-      $pb.PbList<UserDateAttendance>();
-  @$core.pragma('dart2js:noInline')
-  static UserDateAttendance getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<UserDateAttendance>(create);
-  static UserDateAttendance? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $1.AttendanceStatus get attendanceStatus => $_getN(0);
-  @$pb.TagNumber(1)
-  set attendanceStatus($1.AttendanceStatus value) => $_setField(1, value);
-  @$pb.TagNumber(1)
-  $core.bool hasAttendanceStatus() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearAttendanceStatus() => $_clearField(1);
-
-  @$pb.TagNumber(2)
-  $0.Timestamp get checkIn => $_getN(1);
-  @$pb.TagNumber(2)
-  set checkIn($0.Timestamp value) => $_setField(2, value);
-  @$pb.TagNumber(2)
-  $core.bool hasCheckIn() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearCheckIn() => $_clearField(2);
-  @$pb.TagNumber(2)
-  $0.Timestamp ensureCheckIn() => $_ensure(1);
-
-  @$pb.TagNumber(3)
-  $0.Timestamp get checkOut => $_getN(2);
-  @$pb.TagNumber(3)
-  set checkOut($0.Timestamp value) => $_setField(3, value);
-  @$pb.TagNumber(3)
-  $core.bool hasCheckOut() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearCheckOut() => $_clearField(3);
-  @$pb.TagNumber(3)
-  $0.Timestamp ensureCheckOut() => $_ensure(2);
+  $pb.PbList<$1.UserDateAttendanceMap> get userDateAttendances => $_getList(1);
 }
 
 const $core.bool _omitFieldNames =

@@ -166,6 +166,35 @@ final $typed_data.Uint8List studentEnrollmentStatusDescriptor = $convert.base64D
     'cQABIeChpFTlJPTExNRU5UX1NUQVRVU19VUENPTUlORxABEh8KG0VOUk9MTE1FTlRfU1RBVFVT'
     'X0NPTVBMRVRFRBACEh8KG0VOUk9MTE1FTlRfU1RBVFVTX1dJVEhEUkFXThAD');
 
+@$core.Deprecated('Use attendanceReportTypeDescriptor instead')
+const AttendanceReportType$json = {
+  '1': 'AttendanceReportType',
+  '2': [
+    {'1': 'SINGLE_DATE', '2': 0},
+    {'1': 'RANGE', '2': 2},
+    {'1': 'MONTH', '2': 3},
+  ],
+};
+
+/// Descriptor for `AttendanceReportType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List attendanceReportTypeDescriptor = $convert.base64Decode(
+    'ChRBdHRlbmRhbmNlUmVwb3J0VHlwZRIPCgtTSU5HTEVfREFURRAAEgkKBVJBTkdFEAISCQoFTU'
+    '9OVEgQAw==');
+
+@$core.Deprecated('Use userTypeDescriptor instead')
+const UserType$json = {
+  '1': 'UserType',
+  '2': [
+    {'1': 'STUDENT', '2': 0},
+    {'1': 'TEACHER', '2': 1},
+    {'1': 'EMPLOYEE', '2': 2},
+  ],
+};
+
+/// Descriptor for `UserType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List userTypeDescriptor = $convert.base64Decode(
+    'CghVc2VyVHlwZRILCgdTVFVERU5UEAASCwoHVEVBQ0hFUhABEgwKCEVNUExPWUVFEAI=');
+
 @$core.Deprecated('Use paginationRequestDescriptor instead')
 const PaginationRequest$json = {
   '1': 'PaginationRequest',
@@ -205,3 +234,84 @@ const ImageChunk$json = {
 /// Descriptor for `ImageChunk`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List imageChunkDescriptor = $convert.base64Decode(
     'CgpJbWFnZUNodW5rEh8KC2ltYWdlX2J5dGVzGAEgASgMUgppbWFnZUJ5dGVz');
+
+@$core.Deprecated('Use userDateAttendanceDescriptor instead')
+const UserDateAttendance$json = {
+  '1': 'UserDateAttendance',
+  '2': [
+    {
+      '1': 'attendance_status',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.AttendanceStatus',
+      '10': 'attendanceStatus'
+    },
+    {
+      '1': 'check_in',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 0,
+      '10': 'checkIn',
+      '17': true
+    },
+    {
+      '1': 'check_out',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 1,
+      '10': 'checkOut',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_check_in'},
+    {'1': '_check_out'},
+  ],
+};
+
+/// Descriptor for `UserDateAttendance`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userDateAttendanceDescriptor = $convert.base64Decode(
+    'ChJVc2VyRGF0ZUF0dGVuZGFuY2USTgoRYXR0ZW5kYW5jZV9zdGF0dXMYASABKA4yIS5jb21tb2'
+    '5fbWVzc2FnZXMuQXR0ZW5kYW5jZVN0YXR1c1IQYXR0ZW5kYW5jZVN0YXR1cxI6CghjaGVja19p'
+    'bhgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAFIHY2hlY2tJbogBARI8CgljaG'
+    'Vja19vdXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAFSCGNoZWNrT3V0iAEB'
+    'QgsKCV9jaGVja19pbkIMCgpfY2hlY2tfb3V0');
+
+@$core.Deprecated('Use userDateAttendanceMapDescriptor instead')
+const UserDateAttendanceMap$json = {
+  '1': 'UserDateAttendanceMap',
+  '2': [
+    {
+      '1': 'date',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'date'
+    },
+    {
+      '1': 'attendance',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.UserDateAttendance',
+      '9': 0,
+      '10': 'attendance',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_attendance'},
+  ],
+};
+
+/// Descriptor for `UserDateAttendanceMap`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userDateAttendanceMapDescriptor = $convert.base64Decode(
+    'ChVVc2VyRGF0ZUF0dGVuZGFuY2VNYXASLgoEZGF0ZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi'
+    '5UaW1lc3RhbXBSBGRhdGUSSAoKYXR0ZW5kYW5jZRgCIAEoCzIjLmNvbW1vbl9tZXNzYWdlcy5V'
+    'c2VyRGF0ZUF0dGVuZGFuY2VIAFIKYXR0ZW5kYW5jZYgBAUINCgtfYXR0ZW5kYW5jZQ==');
