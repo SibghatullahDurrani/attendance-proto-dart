@@ -3856,8 +3856,16 @@ const ListUserAttendanceReportsResponse$json = {
   '1': 'ListUserAttendanceReportsResponse',
   '2': [
     {
-      '1': 'user_attendance_report',
+      '1': 'pagination',
       '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'user_attendance_report',
+      '3': 2,
       '4': 3,
       '5': 11,
       '6': '.gateway_messages.UserAttendanceReport',
@@ -3869,9 +3877,10 @@ const ListUserAttendanceReportsResponse$json = {
 /// Descriptor for `ListUserAttendanceReportsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listUserAttendanceReportsResponseDescriptor =
     $convert.base64Decode(
-        'CiFMaXN0VXNlckF0dGVuZGFuY2VSZXBvcnRzUmVzcG9uc2USXAoWdXNlcl9hdHRlbmRhbmNlX3'
-        'JlcG9ydBgBIAMoCzImLmdhdGV3YXlfbWVzc2FnZXMuVXNlckF0dGVuZGFuY2VSZXBvcnRSFHVz'
-        'ZXJBdHRlbmRhbmNlUmVwb3J0');
+        'CiFMaXN0VXNlckF0dGVuZGFuY2VSZXBvcnRzUmVzcG9uc2USQwoKcGFnaW5hdGlvbhgBIAEoCz'
+        'IjLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9uc2VSCnBhZ2luYXRpb24SXAoWdXNl'
+        'cl9hdHRlbmRhbmNlX3JlcG9ydBgCIAMoCzImLmdhdGV3YXlfbWVzc2FnZXMuVXNlckF0dGVuZG'
+        'FuY2VSZXBvcnRSFHVzZXJBdHRlbmRhbmNlUmVwb3J0');
 
 @$core.Deprecated('Use userAttendanceReportDescriptor instead')
 const UserAttendanceReport$json = {

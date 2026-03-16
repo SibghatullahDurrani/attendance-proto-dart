@@ -8311,9 +8311,11 @@ class ListUserAttendanceReportsRequest extends $pb.GeneratedMessage {
 
 class ListUserAttendanceReportsResponse extends $pb.GeneratedMessage {
   factory ListUserAttendanceReportsResponse({
+    $0.PaginationResponse? pagination,
     $core.Iterable<UserAttendanceReport>? userAttendanceReport,
   }) {
     final result = create();
+    if (pagination != null) result.pagination = pagination;
     if (userAttendanceReport != null)
       result.userAttendanceReport.addAll(userAttendanceReport);
     return result;
@@ -8334,8 +8336,10 @@ class ListUserAttendanceReportsResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
       createEmptyInstance: create)
+    ..aOM<$0.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationResponse.create)
     ..pPM<UserAttendanceReport>(
-        1, _omitFieldNames ? '' : 'userAttendanceReport',
+        2, _omitFieldNames ? '' : 'userAttendanceReport',
         subBuilder: UserAttendanceReport.create)
     ..hasRequiredFields = false;
 
@@ -8365,7 +8369,18 @@ class ListUserAttendanceReportsResponse extends $pb.GeneratedMessage {
   static ListUserAttendanceReportsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $pb.PbList<UserAttendanceReport> get userAttendanceReport => $_getList(0);
+  $0.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<UserAttendanceReport> get userAttendanceReport => $_getList(1);
 }
 
 class UserAttendanceReport extends $pb.GeneratedMessage {
