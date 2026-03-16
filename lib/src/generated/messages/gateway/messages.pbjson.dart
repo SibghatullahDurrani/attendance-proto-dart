@@ -3905,10 +3905,42 @@ const UserAttendanceReport$json = {
       '6': '.common_messages.UserDateAttendanceMap',
       '10': 'userDateAttendances'
     },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_updated_at',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 3,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 4,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_second_name'},
     {'1': '_identification_number'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
+    {'1': '_thumbnail_expires_at'},
   ],
 };
 
@@ -3918,5 +3950,10 @@ final $typed_data.Uint8List userAttendanceReportDescriptor = $convert.base64Deco
     'RfbmFtZRgCIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAMgASgJSABSCnNlY29uZE5h'
     'bWWIAQESOAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJSAFSFGlkZW50aWZpY2F0aW9uTn'
     'VtYmVyiAEBEloKFXVzZXJfZGF0ZV9hdHRlbmRhbmNlcxgFIAMoCzImLmNvbW1vbl9tZXNzYWdl'
-    'cy5Vc2VyRGF0ZUF0dGVuZGFuY2VNYXBSE3VzZXJEYXRlQXR0ZW5kYW5jZXNCDgoMX3NlY29uZF'
-    '9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXI=');
+    'cy5Vc2VyRGF0ZUF0dGVuZGFuY2VNYXBSE3VzZXJEYXRlQXR0ZW5kYW5jZXMSMQoSdXNlcl90aH'
+    'VtYm5haWxfdXJsGAYgASgJSAJSEHVzZXJUaHVtYm5haWxVcmyIAQESUQoUdGh1bWJuYWlsX3Vw'
+    'ZGF0ZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSANSEnRodW1ibmFpbF'
+    'VwZGF0ZWRBdIgBARJRChR0aHVtYm5haWxfZXhwaXJlc19hdBgIIAEoCzIaLmdvb2dsZS5wcm90'
+    'b2J1Zi5UaW1lc3RhbXBIBFISdGh1bWJuYWlsRXhwaXJlc0F0iAEBQg4KDF9zZWNvbmRfbmFtZU'
+    'IYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3Ro'
+    'dW1ibmFpbF91cGRhdGVkX2F0QhcKFV90aHVtYm5haWxfZXhwaXJlc19hdA==');

@@ -8375,6 +8375,9 @@ class UserAttendanceReport extends $pb.GeneratedMessage {
     $core.String? secondName,
     $core.String? identificationNumber,
     $core.Iterable<$0.UserDateAttendanceMap>? userDateAttendances,
+    $core.String? userThumbnailUrl,
+    $1.Timestamp? thumbnailUpdatedAt,
+    $1.Timestamp? thumbnailExpiresAt,
   }) {
     final result = create();
     if (userId != null) result.userId = userId;
@@ -8384,6 +8387,11 @@ class UserAttendanceReport extends $pb.GeneratedMessage {
       result.identificationNumber = identificationNumber;
     if (userDateAttendances != null)
       result.userDateAttendances.addAll(userDateAttendances);
+    if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
+    if (thumbnailUpdatedAt != null)
+      result.thumbnailUpdatedAt = thumbnailUpdatedAt;
+    if (thumbnailExpiresAt != null)
+      result.thumbnailExpiresAt = thumbnailExpiresAt;
     return result;
   }
 
@@ -8408,6 +8416,11 @@ class UserAttendanceReport extends $pb.GeneratedMessage {
     ..pPM<$0.UserDateAttendanceMap>(
         5, _omitFieldNames ? '' : 'userDateAttendances',
         subBuilder: $0.UserDateAttendanceMap.create)
+    ..aOS(6, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(7, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(8, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+        subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -8469,6 +8482,37 @@ class UserAttendanceReport extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(5)
   $pb.PbList<$0.UserDateAttendanceMap> get userDateAttendances => $_getList(4);
+
+  @$pb.TagNumber(6)
+  $core.String get userThumbnailUrl => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set userThumbnailUrl($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasUserThumbnailUrl() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearUserThumbnailUrl() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(6);
+  @$pb.TagNumber(7)
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasThumbnailUpdatedAt() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearThumbnailUpdatedAt() => $_clearField(7);
+  @$pb.TagNumber(7)
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(6);
+
+  @$pb.TagNumber(8)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(7);
+  @$pb.TagNumber(8)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasThumbnailExpiresAt() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearThumbnailExpiresAt() => $_clearField(8);
+  @$pb.TagNumber(8)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(7);
 }
 
 const $core.bool _omitFieldNames =
