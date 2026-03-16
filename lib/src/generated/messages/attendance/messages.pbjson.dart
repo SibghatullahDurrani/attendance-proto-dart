@@ -1326,8 +1326,13 @@ const UserAttendanceReport_UserDateAttendanceMap$json = {
       '4': 1,
       '5': 11,
       '6': '.attendance_messages.UserDateAttendance',
-      '10': 'attendance'
+      '9': 0,
+      '10': 'attendance',
+      '17': true
     },
+  ],
+  '8': [
+    {'1': '_attendance'},
   ],
 };
 
@@ -1335,10 +1340,10 @@ const UserAttendanceReport_UserDateAttendanceMap$json = {
 final $typed_data.Uint8List userAttendanceReportDescriptor = $convert.base64Decode(
     'ChRVc2VyQXR0ZW5kYW5jZVJlcG9ydBIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQScwoVdXNlcl'
     '9kYXRlX2F0dGVuZGFuY2VzGAIgAygLMj8uYXR0ZW5kYW5jZV9tZXNzYWdlcy5Vc2VyQXR0ZW5k'
-    'YW5jZVJlcG9ydC5Vc2VyRGF0ZUF0dGVuZGFuY2VNYXBSE3VzZXJEYXRlQXR0ZW5kYW5jZXMakA'
+    'YW5jZVJlcG9ydC5Vc2VyRGF0ZUF0dGVuZGFuY2VNYXBSE3VzZXJEYXRlQXR0ZW5kYW5jZXMapA'
     'EKFVVzZXJEYXRlQXR0ZW5kYW5jZU1hcBIuCgRkYXRlGAEgASgLMhouZ29vZ2xlLnByb3RvYnVm'
-    'LlRpbWVzdGFtcFIEZGF0ZRJHCgphdHRlbmRhbmNlGAIgASgLMicuYXR0ZW5kYW5jZV9tZXNzYW'
-    'dlcy5Vc2VyRGF0ZUF0dGVuZGFuY2VSCmF0dGVuZGFuY2U=');
+    'LlRpbWVzdGFtcFIEZGF0ZRJMCgphdHRlbmRhbmNlGAIgASgLMicuYXR0ZW5kYW5jZV9tZXNzYW'
+    'dlcy5Vc2VyRGF0ZUF0dGVuZGFuY2VIAFIKYXR0ZW5kYW5jZYgBAUINCgtfYXR0ZW5kYW5jZQ==');
 
 @$core.Deprecated('Use userDateAttendanceDescriptor instead')
 const UserDateAttendance$json = {
@@ -1350,9 +1355,7 @@ const UserDateAttendance$json = {
       '4': 1,
       '5': 14,
       '6': '.common_messages.AttendanceStatus',
-      '9': 0,
-      '10': 'attendanceStatus',
-      '17': true
+      '10': 'attendanceStatus'
     },
     {
       '1': 'check_in',
@@ -1360,9 +1363,7 @@ const UserDateAttendance$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
-      '9': 1,
-      '10': 'checkIn',
-      '17': true
+      '10': 'checkIn'
     },
     {
       '1': 'check_out',
@@ -1370,22 +1371,14 @@ const UserDateAttendance$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
-      '9': 2,
-      '10': 'checkOut',
-      '17': true
+      '10': 'checkOut'
     },
-  ],
-  '8': [
-    {'1': '_attendance_status'},
-    {'1': '_check_in'},
-    {'1': '_check_out'},
   ],
 };
 
 /// Descriptor for `UserDateAttendance`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDateAttendanceDescriptor = $convert.base64Decode(
-    'ChJVc2VyRGF0ZUF0dGVuZGFuY2USUwoRYXR0ZW5kYW5jZV9zdGF0dXMYASABKA4yIS5jb21tb2'
-    '5fbWVzc2FnZXMuQXR0ZW5kYW5jZVN0YXR1c0gAUhBhdHRlbmRhbmNlU3RhdHVziAEBEjoKCGNo'
-    'ZWNrX2luGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBUgdjaGVja0luiAEBEj'
-    'wKCWNoZWNrX291dBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAlIIY2hlY2tP'
-    'dXSIAQFCFAoSX2F0dGVuZGFuY2Vfc3RhdHVzQgsKCV9jaGVja19pbkIMCgpfY2hlY2tfb3V0');
+    'ChJVc2VyRGF0ZUF0dGVuZGFuY2USTgoRYXR0ZW5kYW5jZV9zdGF0dXMYASABKA4yIS5jb21tb2'
+    '5fbWVzc2FnZXMuQXR0ZW5kYW5jZVN0YXR1c1IQYXR0ZW5kYW5jZVN0YXR1cxI1CghjaGVja19p'
+    'bhgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSB2NoZWNrSW4SNwoJY2hlY2tfb3'
+    'V0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIIY2hlY2tPdXQ=');
