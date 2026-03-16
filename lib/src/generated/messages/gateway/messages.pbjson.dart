@@ -3898,8 +3898,26 @@ const UserAttendanceReport$json = {
       '17': true
     },
     {
-      '1': 'user_date_attendances',
+      '1': 'last_attended_class_name',
       '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'lastAttendedClassName',
+      '17': true
+    },
+    {
+      '1': 'last_attended_section_name',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'lastAttendedSectionName',
+      '17': true
+    },
+    {
+      '1': 'user_date_attendances',
+      '3': 7,
       '4': 3,
       '5': 11,
       '6': '.common_messages.UserDateAttendanceMap',
@@ -3907,30 +3925,30 @@ const UserAttendanceReport$json = {
     },
     {
       '1': 'user_thumbnail_url',
-      '3': 6,
+      '3': 8,
       '4': 1,
       '5': 9,
-      '9': 2,
+      '9': 4,
       '10': 'userThumbnailUrl',
       '17': true
     },
     {
       '1': 'thumbnail_updated_at',
-      '3': 7,
+      '3': 9,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
-      '9': 3,
+      '9': 5,
       '10': 'thumbnailUpdatedAt',
       '17': true
     },
     {
       '1': 'thumbnail_expires_at',
-      '3': 8,
+      '3': 10,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
-      '9': 4,
+      '9': 6,
       '10': 'thumbnailExpiresAt',
       '17': true
     },
@@ -3938,6 +3956,8 @@ const UserAttendanceReport$json = {
   '8': [
     {'1': '_second_name'},
     {'1': '_identification_number'},
+    {'1': '_last_attended_class_name'},
+    {'1': '_last_attended_section_name'},
     {'1': '_user_thumbnail_url'},
     {'1': '_thumbnail_updated_at'},
     {'1': '_thumbnail_expires_at'},
@@ -3949,11 +3969,15 @@ final $typed_data.Uint8List userAttendanceReportDescriptor = $convert.base64Deco
     'ChRVc2VyQXR0ZW5kYW5jZVJlcG9ydBIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQSHQoKZmlyc3'
     'RfbmFtZRgCIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAMgASgJSABSCnNlY29uZE5h'
     'bWWIAQESOAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJSAFSFGlkZW50aWZpY2F0aW9uTn'
-    'VtYmVyiAEBEloKFXVzZXJfZGF0ZV9hdHRlbmRhbmNlcxgFIAMoCzImLmNvbW1vbl9tZXNzYWdl'
-    'cy5Vc2VyRGF0ZUF0dGVuZGFuY2VNYXBSE3VzZXJEYXRlQXR0ZW5kYW5jZXMSMQoSdXNlcl90aH'
-    'VtYm5haWxfdXJsGAYgASgJSAJSEHVzZXJUaHVtYm5haWxVcmyIAQESUQoUdGh1bWJuYWlsX3Vw'
-    'ZGF0ZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSANSEnRodW1ibmFpbF'
-    'VwZGF0ZWRBdIgBARJRChR0aHVtYm5haWxfZXhwaXJlc19hdBgIIAEoCzIaLmdvb2dsZS5wcm90'
-    'b2J1Zi5UaW1lc3RhbXBIBFISdGh1bWJuYWlsRXhwaXJlc0F0iAEBQg4KDF9zZWNvbmRfbmFtZU'
-    'IYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3Ro'
-    'dW1ibmFpbF91cGRhdGVkX2F0QhcKFV90aHVtYm5haWxfZXhwaXJlc19hdA==');
+    'VtYmVyiAEBEjwKGGxhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZRgFIAEoCUgCUhVsYXN0QXR0ZW5k'
+    'ZWRDbGFzc05hbWWIAQESQAoabGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWUYBiABKAlIA1IXbG'
+    'FzdEF0dGVuZGVkU2VjdGlvbk5hbWWIAQESWgoVdXNlcl9kYXRlX2F0dGVuZGFuY2VzGAcgAygL'
+    'MiYuY29tbW9uX21lc3NhZ2VzLlVzZXJEYXRlQXR0ZW5kYW5jZU1hcFITdXNlckRhdGVBdHRlbm'
+    'RhbmNlcxIxChJ1c2VyX3RodW1ibmFpbF91cmwYCCABKAlIBFIQdXNlclRodW1ibmFpbFVybIgB'
+    'ARJRChR0aHVtYm5haWxfdXBkYXRlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3'
+    'RhbXBIBVISdGh1bWJuYWlsVXBkYXRlZEF0iAEBElEKFHRodW1ibmFpbF9leHBpcmVzX2F0GAog'
+    'ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgGUhJ0aHVtYm5haWxFeHBpcmVzQXSIAQ'
+    'FCDgoMX3NlY29uZF9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCGwoZX2xhc3RfYXR0'
+    'ZW5kZWRfY2xhc3NfbmFtZUIdChtfbGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWVCFQoTX3VzZX'
+    'JfdGh1bWJuYWlsX3VybEIXChVfdGh1bWJuYWlsX3VwZGF0ZWRfYXRCFwoVX3RodW1ibmFpbF9l'
+    'eHBpcmVzX2F0');
