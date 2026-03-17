@@ -2147,8 +2147,17 @@ const InstitutionLeaves$json = {
       '17': true
     },
     {
-      '1': 'leave_dates',
+      '1': 'last_attended_session_name',
       '3': 10,
+      '4': 1,
+      '5': 9,
+      '9': 4,
+      '10': 'lastAttendedSessionName',
+      '17': true
+    },
+    {
+      '1': 'leave_dates',
+      '3': 11,
       '4': 3,
       '5': 11,
       '6': '.leave_messages.LeaveDate',
@@ -2156,60 +2165,60 @@ const InstitutionLeaves$json = {
     },
     {
       '1': 'start_date',
-      '3': 11,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Timestamp',
-      '9': 4,
-      '10': 'startDate',
-      '17': true
-    },
-    {
-      '1': 'end_date',
       '3': 12,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
       '9': 5,
+      '10': 'startDate',
+      '17': true
+    },
+    {
+      '1': 'end_date',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 6,
       '10': 'endDate',
       '17': true
     },
     {
       '1': 'range_status',
-      '3': 13,
+      '3': 14,
       '4': 1,
       '5': 14,
       '6': '.common_messages.LeaveStatus',
-      '9': 6,
+      '9': 7,
       '10': 'rangeStatus',
       '17': true
     },
     {
       '1': 'user_thumbnail_url',
-      '3': 14,
+      '3': 15,
       '4': 1,
       '5': 9,
-      '9': 7,
+      '9': 8,
       '10': 'userThumbnailUrl',
       '17': true
     },
     {
       '1': 'thumbnail_updated_at',
-      '3': 15,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Timestamp',
-      '9': 8,
-      '10': 'thumbnailUpdatedAt',
-      '17': true
-    },
-    {
-      '1': 'thumbnail_expires_at',
       '3': 16,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
       '9': 9,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 17,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 10,
       '10': 'thumbnailExpiresAt',
       '17': true
     },
@@ -2219,6 +2228,7 @@ const InstitutionLeaves$json = {
     {'1': '_identification_number'},
     {'1': '_last_attended_class_name'},
     {'1': '_last_attended_section_name'},
+    {'1': '_last_attended_session_name'},
     {'1': '_start_date'},
     {'1': '_end_date'},
     {'1': '_range_status'},
@@ -2238,19 +2248,21 @@ final $typed_data.Uint8List institutionLeavesDescriptor = $convert.base64Decode(
     'IaLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVJvbGVSCWxlYXZlUm9sZRI8ChhsYXN0X2F0dGVuZGVk'
     'X2NsYXNzX25hbWUYCCABKAlIAlIVbGFzdEF0dGVuZGVkQ2xhc3NOYW1liAEBEkAKGmxhc3RfYX'
     'R0ZW5kZWRfc2VjdGlvbl9uYW1lGAkgASgJSANSF2xhc3RBdHRlbmRlZFNlY3Rpb25OYW1liAEB'
-    'EjoKC2xlYXZlX2RhdGVzGAogAygLMhkubGVhdmVfbWVzc2FnZXMuTGVhdmVEYXRlUgpsZWF2ZU'
-    'RhdGVzEj4KCnN0YXJ0X2RhdGUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSARS'
-    'CXN0YXJ0RGF0ZYgBARI6CghlbmRfZGF0ZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3'
-    'RhbXBIBVIHZW5kRGF0ZYgBARJECgxyYW5nZV9zdGF0dXMYDSABKA4yHC5jb21tb25fbWVzc2Fn'
-    'ZXMuTGVhdmVTdGF0dXNIBlILcmFuZ2VTdGF0dXOIAQESMQoSdXNlcl90aHVtYm5haWxfdXJsGA'
-    '4gASgJSAdSEHVzZXJUaHVtYm5haWxVcmyIAQESUQoUdGh1bWJuYWlsX3VwZGF0ZWRfYXQYDyAB'
-    'KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAhSEnRodW1ibmFpbFVwZGF0ZWRBdIgBAR'
-    'JRChR0aHVtYm5haWxfZXhwaXJlc19hdBgQIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh'
-    'bXBICVISdGh1bWJuYWlsRXhwaXJlc0F0iAEBQg4KDF9zZWNvbmRfbmFtZUIYChZfaWRlbnRpZm'
-    'ljYXRpb25fbnVtYmVyQhsKGV9sYXN0X2F0dGVuZGVkX2NsYXNzX25hbWVCHQobX2xhc3RfYXR0'
-    'ZW5kZWRfc2VjdGlvbl9uYW1lQg0KC19zdGFydF9kYXRlQgsKCV9lbmRfZGF0ZUIPCg1fcmFuZ2'
-    'Vfc3RhdHVzQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0'
-    'QhcKFV90aHVtYm5haWxfZXhwaXJlc19hdA==');
+    'EkAKGmxhc3RfYXR0ZW5kZWRfc2Vzc2lvbl9uYW1lGAogASgJSARSF2xhc3RBdHRlbmRlZFNlc3'
+    'Npb25OYW1liAEBEjoKC2xlYXZlX2RhdGVzGAsgAygLMhkubGVhdmVfbWVzc2FnZXMuTGVhdmVE'
+    'YXRlUgpsZWF2ZURhdGVzEj4KCnN0YXJ0X2RhdGUYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVG'
+    'ltZXN0YW1wSAVSCXN0YXJ0RGF0ZYgBARI6CghlbmRfZGF0ZRgNIAEoCzIaLmdvb2dsZS5wcm90'
+    'b2J1Zi5UaW1lc3RhbXBIBlIHZW5kRGF0ZYgBARJECgxyYW5nZV9zdGF0dXMYDiABKA4yHC5jb2'
+    '1tb25fbWVzc2FnZXMuTGVhdmVTdGF0dXNIB1ILcmFuZ2VTdGF0dXOIAQESMQoSdXNlcl90aHVt'
+    'Ym5haWxfdXJsGA8gASgJSAhSEHVzZXJUaHVtYm5haWxVcmyIAQESUQoUdGh1bWJuYWlsX3VwZG'
+    'F0ZWRfYXQYECABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAlSEnRodW1ibmFpbFVw'
+    'ZGF0ZWRBdIgBARJRChR0aHVtYm5haWxfZXhwaXJlc19hdBgRIAEoCzIaLmdvb2dsZS5wcm90b2'
+    'J1Zi5UaW1lc3RhbXBIClISdGh1bWJuYWlsRXhwaXJlc0F0iAEBQg4KDF9zZWNvbmRfbmFtZUIY'
+    'ChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQhsKGV9sYXN0X2F0dGVuZGVkX2NsYXNzX25hbWVCHQ'
+    'obX2xhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1lQh0KG19sYXN0X2F0dGVuZGVkX3Nlc3Npb25f'
+    'bmFtZUINCgtfc3RhcnRfZGF0ZUILCglfZW5kX2RhdGVCDwoNX3JhbmdlX3N0YXR1c0IVChNfdX'
+    'Nlcl90aHVtYm5haWxfdXJsQhcKFV90aHVtYm5haWxfdXBkYXRlZF9hdEIXChVfdGh1bWJuYWls'
+    'X2V4cGlyZXNfYXQ=');
 
 @$core.Deprecated('Use canRequestLeaveRequestDescriptor instead')
 const CanRequestLeaveRequest$json = {
@@ -2393,31 +2405,40 @@ const ShiftUserRegistration$json = {
       '17': true
     },
     {
-      '1': 'user_thumbnail_url',
+      '1': 'last_attended_session_name',
       '3': 8,
       '4': 1,
       '5': 9,
       '9': 4,
+      '10': 'lastAttendedSessionName',
+      '17': true
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '9': 5,
       '10': 'userThumbnailUrl',
       '17': true
     },
     {
       '1': 'thumbnail_updated_at',
-      '3': 9,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Timestamp',
-      '9': 5,
-      '10': 'thumbnailUpdatedAt',
-      '17': true
-    },
-    {
-      '1': 'thumbnail_expires_at',
       '3': 10,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
       '9': 6,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 7,
       '10': 'thumbnailExpiresAt',
       '17': true
     },
@@ -2427,6 +2448,7 @@ const ShiftUserRegistration$json = {
     {'1': '_identification_number'},
     {'1': '_last_attended_class_name'},
     {'1': '_last_attended_section_name'},
+    {'1': '_last_attended_session_name'},
     {'1': '_user_thumbnail_url'},
     {'1': '_thumbnail_updated_at'},
     {'1': '_thumbnail_expires_at'},
@@ -2441,14 +2463,16 @@ final $typed_data.Uint8List shiftUserRegistrationDescriptor = $convert.base64Dec
     'VudGlmaWNhdGlvbl9udW1iZXIYBSABKAlIAVIUaWRlbnRpZmljYXRpb25OdW1iZXKIAQESPAoY'
     'bGFzdF9hdHRlbmRlZF9jbGFzc19uYW1lGAYgASgJSAJSFWxhc3RBdHRlbmRlZENsYXNzTmFtZY'
     'gBARJAChpsYXN0X2F0dGVuZGVkX3NlY3Rpb25fbmFtZRgHIAEoCUgDUhdsYXN0QXR0ZW5kZWRT'
-    'ZWN0aW9uTmFtZYgBARIxChJ1c2VyX3RodW1ibmFpbF91cmwYCCABKAlIBFIQdXNlclRodW1ibm'
-    'FpbFVybIgBARJRChR0aHVtYm5haWxfdXBkYXRlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1'
-    'Zi5UaW1lc3RhbXBIBVISdGh1bWJuYWlsVXBkYXRlZEF0iAEBElEKFHRodW1ibmFpbF9leHBpcm'
-    'VzX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgGUhJ0aHVtYm5haWxFeHBp'
-    'cmVzQXSIAQFCDgoMX3NlY29uZF9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCGwoZX2'
-    'xhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZUIdChtfbGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWVC'
-    'FQoTX3VzZXJfdGh1bWJuYWlsX3VybEIXChVfdGh1bWJuYWlsX3VwZGF0ZWRfYXRCFwoVX3RodW'
-    '1ibmFpbF9leHBpcmVzX2F0');
+    'ZWN0aW9uTmFtZYgBARJAChpsYXN0X2F0dGVuZGVkX3Nlc3Npb25fbmFtZRgIIAEoCUgEUhdsYX'
+    'N0QXR0ZW5kZWRTZXNzaW9uTmFtZYgBARIxChJ1c2VyX3RodW1ibmFpbF91cmwYCSABKAlIBVIQ'
+    'dXNlclRodW1ibmFpbFVybIgBARJRChR0aHVtYm5haWxfdXBkYXRlZF9hdBgKIAEoCzIaLmdvb2'
+    'dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBlISdGh1bWJuYWlsVXBkYXRlZEF0iAEBElEKFHRodW1i'
+    'bmFpbF9leHBpcmVzX2F0GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgHUhJ0aH'
+    'VtYm5haWxFeHBpcmVzQXSIAQFCDgoMX3NlY29uZF9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9u'
+    'dW1iZXJCGwoZX2xhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZUIdChtfbGFzdF9hdHRlbmRlZF9zZW'
+    'N0aW9uX25hbWVCHQobX2xhc3RfYXR0ZW5kZWRfc2Vzc2lvbl9uYW1lQhUKE191c2VyX3RodW1i'
+    'bmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0QhcKFV90aHVtYm5haWxfZXhwaXJlc1'
+    '9hdA==');
 
 @$core.Deprecated(
     'Use listStudentsOfSchoolForShiftAllocationRequestDescriptor instead')
@@ -2564,40 +2588,49 @@ const StudentOfSchoolForShiftAllocation$json = {
       '17': true
     },
     {
-      '1': 'user_thumbnail_url',
+      '1': 'last_attended_session_name',
       '3': 7,
       '4': 1,
       '5': 9,
       '9': 4,
+      '10': 'lastAttendedSessionName',
+      '17': true
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '9': 5,
       '10': 'userThumbnailUrl',
       '17': true
     },
     {
       '1': 'thumbnail_updated_at',
-      '3': 8,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Timestamp',
-      '9': 5,
-      '10': 'thumbnailUpdatedAt',
-      '17': true
-    },
-    {
-      '1': 'thumbnail_expires_at',
       '3': 9,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
       '9': 6,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 7,
       '10': 'thumbnailExpiresAt',
       '17': true
     },
     {
       '1': 'shift_name',
-      '3': 10,
+      '3': 11,
       '4': 1,
       '5': 9,
-      '9': 7,
+      '9': 8,
       '10': 'shiftName',
       '17': true
     },
@@ -2607,6 +2640,7 @@ const StudentOfSchoolForShiftAllocation$json = {
     {'1': '_identification_number'},
     {'1': '_last_attended_class_name'},
     {'1': '_last_attended_section_name'},
+    {'1': '_last_attended_session_name'},
     {'1': '_user_thumbnail_url'},
     {'1': '_thumbnail_updated_at'},
     {'1': '_thumbnail_expires_at'},
@@ -2621,15 +2655,17 @@ final $typed_data.Uint8List studentOfSchoolForShiftAllocationDescriptor = $conve
     'ZRgDIAEoCUgAUgpzZWNvbmROYW1liAEBEjgKFWlkZW50aWZpY2F0aW9uX251bWJlchgEIAEoCU'
     'gBUhRpZGVudGlmaWNhdGlvbk51bWJlcogBARI8ChhsYXN0X2F0dGVuZGVkX2NsYXNzX25hbWUY'
     'BSABKAlIAlIVbGFzdEF0dGVuZGVkQ2xhc3NOYW1liAEBEkAKGmxhc3RfYXR0ZW5kZWRfc2VjdG'
-    'lvbl9uYW1lGAYgASgJSANSF2xhc3RBdHRlbmRlZFNlY3Rpb25OYW1liAEBEjEKEnVzZXJfdGh1'
-    'bWJuYWlsX3VybBgHIAEoCUgEUhB1c2VyVGh1bWJuYWlsVXJsiAEBElEKFHRodW1ibmFpbF91cG'
-    'RhdGVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgFUhJ0aHVtYm5haWxV'
-    'cGRhdGVkQXSIAQESUQoUdGh1bWJuYWlsX2V4cGlyZXNfYXQYCSABKAsyGi5nb29nbGUucHJvdG'
-    '9idWYuVGltZXN0YW1wSAZSEnRodW1ibmFpbEV4cGlyZXNBdIgBARIiCgpzaGlmdF9uYW1lGAog'
-    'ASgJSAdSCXNoaWZ0TmFtZYgBAUIOCgxfc2Vjb25kX25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX2'
-    '51bWJlckIbChlfbGFzdF9hdHRlbmRlZF9jbGFzc19uYW1lQh0KG19sYXN0X2F0dGVuZGVkX3Nl'
-    'Y3Rpb25fbmFtZUIVChNfdXNlcl90aHVtYm5haWxfdXJsQhcKFV90aHVtYm5haWxfdXBkYXRlZF'
-    '9hdEIXChVfdGh1bWJuYWlsX2V4cGlyZXNfYXRCDQoLX3NoaWZ0X25hbWU=');
+    'lvbl9uYW1lGAYgASgJSANSF2xhc3RBdHRlbmRlZFNlY3Rpb25OYW1liAEBEkAKGmxhc3RfYXR0'
+    'ZW5kZWRfc2Vzc2lvbl9uYW1lGAcgASgJSARSF2xhc3RBdHRlbmRlZFNlc3Npb25OYW1liAEBEj'
+    'EKEnVzZXJfdGh1bWJuYWlsX3VybBgIIAEoCUgFUhB1c2VyVGh1bWJuYWlsVXJsiAEBElEKFHRo'
+    'dW1ibmFpbF91cGRhdGVkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgGUh'
+    'J0aHVtYm5haWxVcGRhdGVkQXSIAQESUQoUdGh1bWJuYWlsX2V4cGlyZXNfYXQYCiABKAsyGi5n'
+    'b29nbGUucHJvdG9idWYuVGltZXN0YW1wSAdSEnRodW1ibmFpbEV4cGlyZXNBdIgBARIiCgpzaG'
+    'lmdF9uYW1lGAsgASgJSAhSCXNoaWZ0TmFtZYgBAUIOCgxfc2Vjb25kX25hbWVCGAoWX2lkZW50'
+    'aWZpY2F0aW9uX251bWJlckIbChlfbGFzdF9hdHRlbmRlZF9jbGFzc19uYW1lQh0KG19sYXN0X2'
+    'F0dGVuZGVkX3NlY3Rpb25fbmFtZUIdChtfbGFzdF9hdHRlbmRlZF9zZXNzaW9uX25hbWVCFQoT'
+    'X3VzZXJfdGh1bWJuYWlsX3VybEIXChVfdGh1bWJuYWlsX3VwZGF0ZWRfYXRCFwoVX3RodW1ibm'
+    'FpbF9leHBpcmVzX2F0Qg0KC19zaGlmdF9uYW1l');
 
 @$core.Deprecated(
     'Use listStudentsOfSchoolForShiftAllocationResponseDescriptor instead')
@@ -3117,40 +3153,49 @@ const UserOfShiftForShiftAllocation$json = {
       '17': true
     },
     {
-      '1': 'user_thumbnail_url',
+      '1': 'last_attended_session_name',
       '3': 7,
       '4': 1,
       '5': 9,
       '9': 4,
+      '10': 'lastAttendedSessionName',
+      '17': true
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '9': 5,
       '10': 'userThumbnailUrl',
       '17': true
     },
     {
       '1': 'thumbnail_updated_at',
-      '3': 8,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Timestamp',
-      '9': 5,
-      '10': 'thumbnailUpdatedAt',
-      '17': true
-    },
-    {
-      '1': 'thumbnail_expires_at',
       '3': 9,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
       '9': 6,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 7,
       '10': 'thumbnailExpiresAt',
       '17': true
     },
     {
       '1': 'shift_name',
-      '3': 10,
+      '3': 11,
       '4': 1,
       '5': 9,
-      '9': 7,
+      '9': 8,
       '10': 'shiftName',
       '17': true
     },
@@ -3160,6 +3205,7 @@ const UserOfShiftForShiftAllocation$json = {
     {'1': '_identification_number'},
     {'1': '_last_attended_class_name'},
     {'1': '_last_attended_section_name'},
+    {'1': '_last_attended_session_name'},
     {'1': '_user_thumbnail_url'},
     {'1': '_thumbnail_updated_at'},
     {'1': '_thumbnail_expires_at'},
@@ -3174,15 +3220,17 @@ final $typed_data.Uint8List userOfShiftForShiftAllocationDescriptor = $convert.b
     'CnNlY29uZE5hbWWIAQESOAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJSAFSFGlkZW50aW'
     'ZpY2F0aW9uTnVtYmVyiAEBEjwKGGxhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZRgFIAEoCUgCUhVs'
     'YXN0QXR0ZW5kZWRDbGFzc05hbWWIAQESQAoabGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWUYBi'
-    'ABKAlIA1IXbGFzdEF0dGVuZGVkU2VjdGlvbk5hbWWIAQESMQoSdXNlcl90aHVtYm5haWxfdXJs'
-    'GAcgASgJSARSEHVzZXJUaHVtYm5haWxVcmyIAQESUQoUdGh1bWJuYWlsX3VwZGF0ZWRfYXQYCC'
-    'ABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAVSEnRodW1ibmFpbFVwZGF0ZWRBdIgB'
-    'ARJRChR0aHVtYm5haWxfZXhwaXJlc19hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3'
-    'RhbXBIBlISdGh1bWJuYWlsRXhwaXJlc0F0iAEBEiIKCnNoaWZ0X25hbWUYCiABKAlIB1IJc2hp'
-    'ZnROYW1liAEBQg4KDF9zZWNvbmRfbmFtZUIYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQhsKGV'
-    '9sYXN0X2F0dGVuZGVkX2NsYXNzX25hbWVCHQobX2xhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1l'
-    'QhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0QhcKFV90aH'
-    'VtYm5haWxfZXhwaXJlc19hdEINCgtfc2hpZnRfbmFtZQ==');
+    'ABKAlIA1IXbGFzdEF0dGVuZGVkU2VjdGlvbk5hbWWIAQESQAoabGFzdF9hdHRlbmRlZF9zZXNz'
+    'aW9uX25hbWUYByABKAlIBFIXbGFzdEF0dGVuZGVkU2Vzc2lvbk5hbWWIAQESMQoSdXNlcl90aH'
+    'VtYm5haWxfdXJsGAggASgJSAVSEHVzZXJUaHVtYm5haWxVcmyIAQESUQoUdGh1bWJuYWlsX3Vw'
+    'ZGF0ZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAZSEnRodW1ibmFpbF'
+    'VwZGF0ZWRBdIgBARJRChR0aHVtYm5haWxfZXhwaXJlc19hdBgKIAEoCzIaLmdvb2dsZS5wcm90'
+    'b2J1Zi5UaW1lc3RhbXBIB1ISdGh1bWJuYWlsRXhwaXJlc0F0iAEBEiIKCnNoaWZ0X25hbWUYCy'
+    'ABKAlICFIJc2hpZnROYW1liAEBQg4KDF9zZWNvbmRfbmFtZUIYChZfaWRlbnRpZmljYXRpb25f'
+    'bnVtYmVyQhsKGV9sYXN0X2F0dGVuZGVkX2NsYXNzX25hbWVCHQobX2xhc3RfYXR0ZW5kZWRfc2'
+    'VjdGlvbl9uYW1lQh0KG19sYXN0X2F0dGVuZGVkX3Nlc3Npb25fbmFtZUIVChNfdXNlcl90aHVt'
+    'Ym5haWxfdXJsQhcKFV90aHVtYm5haWxfdXBkYXRlZF9hdEIXChVfdGh1bWJuYWlsX2V4cGlyZX'
+    'NfYXRCDQoLX3NoaWZ0X25hbWU=');
 
 @$core.Deprecated(
     'Use getBatchUsersInfoOfSchoolForLiveFeedRequestDescriptor instead')
@@ -3303,40 +3351,49 @@ const SchoolUserInfoForLiveFeed$json = {
       '17': true
     },
     {
-      '1': 'shift_name',
+      '1': 'last_attended_session_name',
       '3': 8,
       '4': 1,
       '5': 9,
       '9': 4,
+      '10': 'lastAttendedSessionName',
+      '17': true
+    },
+    {
+      '1': 'shift_name',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '9': 5,
       '10': 'shiftName',
       '17': true
     },
     {
       '1': 'user_thumbnail_url',
-      '3': 9,
+      '3': 10,
       '4': 1,
       '5': 9,
-      '9': 5,
+      '9': 6,
       '10': 'userThumbnailUrl',
       '17': true
     },
     {
       '1': 'thumbnail_updated_at',
-      '3': 10,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Timestamp',
-      '9': 6,
-      '10': 'thumbnailUpdatedAt',
-      '17': true
-    },
-    {
-      '1': 'thumbnail_expires_at',
       '3': 11,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
       '9': 7,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 8,
       '10': 'thumbnailExpiresAt',
       '17': true
     },
@@ -3346,6 +3403,7 @@ const SchoolUserInfoForLiveFeed$json = {
     {'1': '_identification_number'},
     {'1': '_last_attendance_class_name'},
     {'1': '_last_attended_section_name'},
+    {'1': '_last_attended_session_name'},
     {'1': '_shift_name'},
     {'1': '_user_thumbnail_url'},
     {'1': '_thumbnail_updated_at'},
@@ -3361,15 +3419,17 @@ final $typed_data.Uint8List schoolUserInfoForLiveFeedDescriptor = $convert.base6
     'oVaWRlbnRpZmljYXRpb25fbnVtYmVyGAUgASgJSAFSFGlkZW50aWZpY2F0aW9uTnVtYmVyiAEB'
     'EkAKGmxhc3RfYXR0ZW5kYW5jZV9jbGFzc19uYW1lGAYgASgJSAJSF2xhc3RBdHRlbmRhbmNlQ2'
     'xhc3NOYW1liAEBEkAKGmxhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1lGAcgASgJSANSF2xhc3RB'
-    'dHRlbmRlZFNlY3Rpb25OYW1liAEBEiIKCnNoaWZ0X25hbWUYCCABKAlIBFIJc2hpZnROYW1liA'
-    'EBEjEKEnVzZXJfdGh1bWJuYWlsX3VybBgJIAEoCUgFUhB1c2VyVGh1bWJuYWlsVXJsiAEBElEK'
-    'FHRodW1ibmFpbF91cGRhdGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcE'
-    'gGUhJ0aHVtYm5haWxVcGRhdGVkQXSIAQESUQoUdGh1bWJuYWlsX2V4cGlyZXNfYXQYCyABKAsy'
-    'Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAdSEnRodW1ibmFpbEV4cGlyZXNBdIgBAUIOCg'
-    'xfc2Vjb25kX25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX251bWJlckIdChtfbGFzdF9hdHRlbmRh'
-    'bmNlX2NsYXNzX25hbWVCHQobX2xhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1lQg0KC19zaGlmdF'
-    '9uYW1lQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0QhcK'
-    'FV90aHVtYm5haWxfZXhwaXJlc19hdA==');
+    'dHRlbmRlZFNlY3Rpb25OYW1liAEBEkAKGmxhc3RfYXR0ZW5kZWRfc2Vzc2lvbl9uYW1lGAggAS'
+    'gJSARSF2xhc3RBdHRlbmRlZFNlc3Npb25OYW1liAEBEiIKCnNoaWZ0X25hbWUYCSABKAlIBVIJ'
+    'c2hpZnROYW1liAEBEjEKEnVzZXJfdGh1bWJuYWlsX3VybBgKIAEoCUgGUhB1c2VyVGh1bWJuYW'
+    'lsVXJsiAEBElEKFHRodW1ibmFpbF91cGRhdGVkX2F0GAsgASgLMhouZ29vZ2xlLnByb3RvYnVm'
+    'LlRpbWVzdGFtcEgHUhJ0aHVtYm5haWxVcGRhdGVkQXSIAQESUQoUdGh1bWJuYWlsX2V4cGlyZX'
+    'NfYXQYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAhSEnRodW1ibmFpbEV4cGly'
+    'ZXNBdIgBAUIOCgxfc2Vjb25kX25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX251bWJlckIdChtfbG'
+    'FzdF9hdHRlbmRhbmNlX2NsYXNzX25hbWVCHQobX2xhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1l'
+    'Qh0KG19sYXN0X2F0dGVuZGVkX3Nlc3Npb25fbmFtZUINCgtfc2hpZnRfbmFtZUIVChNfdXNlcl'
+    '90aHVtYm5haWxfdXJsQhcKFV90aHVtYm5haWxfdXBkYXRlZF9hdEIXChVfdGh1bWJuYWlsX2V4'
+    'cGlyZXNfYXQ=');
 
 @$core.Deprecated('Use listStudentsOfSchoolOfClassRequestDescriptor instead')
 const ListStudentsOfSchoolOfClassRequest$json = {
@@ -3925,8 +3985,17 @@ const UserAttendanceReport$json = {
       '17': true
     },
     {
-      '1': 'user_date_attendances',
+      '1': 'last_attended_session_name',
       '3': 7,
+      '4': 1,
+      '5': 9,
+      '9': 4,
+      '10': 'lastAttendedSessionName',
+      '17': true
+    },
+    {
+      '1': 'user_date_attendances',
+      '3': 8,
       '4': 3,
       '5': 11,
       '6': '.common_messages.UserDateAttendanceMap',
@@ -3934,30 +4003,30 @@ const UserAttendanceReport$json = {
     },
     {
       '1': 'user_thumbnail_url',
-      '3': 8,
+      '3': 9,
       '4': 1,
       '5': 9,
-      '9': 4,
+      '9': 5,
       '10': 'userThumbnailUrl',
       '17': true
     },
     {
       '1': 'thumbnail_updated_at',
-      '3': 9,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Timestamp',
-      '9': 5,
-      '10': 'thumbnailUpdatedAt',
-      '17': true
-    },
-    {
-      '1': 'thumbnail_expires_at',
       '3': 10,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
       '9': 6,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 7,
       '10': 'thumbnailExpiresAt',
       '17': true
     },
@@ -3967,6 +4036,7 @@ const UserAttendanceReport$json = {
     {'1': '_identification_number'},
     {'1': '_last_attended_class_name'},
     {'1': '_last_attended_section_name'},
+    {'1': '_last_attended_session_name'},
     {'1': '_user_thumbnail_url'},
     {'1': '_thumbnail_updated_at'},
     {'1': '_thumbnail_expires_at'},
@@ -3980,13 +4050,14 @@ final $typed_data.Uint8List userAttendanceReportDescriptor = $convert.base64Deco
     'bWWIAQESOAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJSAFSFGlkZW50aWZpY2F0aW9uTn'
     'VtYmVyiAEBEjwKGGxhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZRgFIAEoCUgCUhVsYXN0QXR0ZW5k'
     'ZWRDbGFzc05hbWWIAQESQAoabGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWUYBiABKAlIA1IXbG'
-    'FzdEF0dGVuZGVkU2VjdGlvbk5hbWWIAQESWgoVdXNlcl9kYXRlX2F0dGVuZGFuY2VzGAcgAygL'
-    'MiYuY29tbW9uX21lc3NhZ2VzLlVzZXJEYXRlQXR0ZW5kYW5jZU1hcFITdXNlckRhdGVBdHRlbm'
-    'RhbmNlcxIxChJ1c2VyX3RodW1ibmFpbF91cmwYCCABKAlIBFIQdXNlclRodW1ibmFpbFVybIgB'
-    'ARJRChR0aHVtYm5haWxfdXBkYXRlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3'
-    'RhbXBIBVISdGh1bWJuYWlsVXBkYXRlZEF0iAEBElEKFHRodW1ibmFpbF9leHBpcmVzX2F0GAog'
-    'ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgGUhJ0aHVtYm5haWxFeHBpcmVzQXSIAQ'
-    'FCDgoMX3NlY29uZF9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCGwoZX2xhc3RfYXR0'
-    'ZW5kZWRfY2xhc3NfbmFtZUIdChtfbGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWVCFQoTX3VzZX'
-    'JfdGh1bWJuYWlsX3VybEIXChVfdGh1bWJuYWlsX3VwZGF0ZWRfYXRCFwoVX3RodW1ibmFpbF9l'
-    'eHBpcmVzX2F0');
+    'FzdEF0dGVuZGVkU2VjdGlvbk5hbWWIAQESQAoabGFzdF9hdHRlbmRlZF9zZXNzaW9uX25hbWUY'
+    'ByABKAlIBFIXbGFzdEF0dGVuZGVkU2Vzc2lvbk5hbWWIAQESWgoVdXNlcl9kYXRlX2F0dGVuZG'
+    'FuY2VzGAggAygLMiYuY29tbW9uX21lc3NhZ2VzLlVzZXJEYXRlQXR0ZW5kYW5jZU1hcFITdXNl'
+    'ckRhdGVBdHRlbmRhbmNlcxIxChJ1c2VyX3RodW1ibmFpbF91cmwYCSABKAlIBVIQdXNlclRodW'
+    '1ibmFpbFVybIgBARJRChR0aHVtYm5haWxfdXBkYXRlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90'
+    'b2J1Zi5UaW1lc3RhbXBIBlISdGh1bWJuYWlsVXBkYXRlZEF0iAEBElEKFHRodW1ibmFpbF9leH'
+    'BpcmVzX2F0GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgHUhJ0aHVtYm5haWxF'
+    'eHBpcmVzQXSIAQFCDgoMX3NlY29uZF9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCGw'
+    'oZX2xhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZUIdChtfbGFzdF9hdHRlbmRlZF9zZWN0aW9uX25h'
+    'bWVCHQobX2xhc3RfYXR0ZW5kZWRfc2Vzc2lvbl9uYW1lQhUKE191c2VyX3RodW1ibmFpbF91cm'
+    'xCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0QhcKFV90aHVtYm5haWxfZXhwaXJlc19hdA==');

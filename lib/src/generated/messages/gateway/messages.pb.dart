@@ -4912,6 +4912,7 @@ class InstitutionLeaves extends $pb.GeneratedMessage {
     $0.LeaveRole? leaveRole,
     $core.String? lastAttendedClassName,
     $core.String? lastAttendedSectionName,
+    $core.String? lastAttendedSessionName,
     $core.Iterable<$2.LeaveDate>? leaveDates,
     $1.Timestamp? startDate,
     $1.Timestamp? endDate,
@@ -4933,6 +4934,8 @@ class InstitutionLeaves extends $pb.GeneratedMessage {
       result.lastAttendedClassName = lastAttendedClassName;
     if (lastAttendedSectionName != null)
       result.lastAttendedSectionName = lastAttendedSectionName;
+    if (lastAttendedSessionName != null)
+      result.lastAttendedSessionName = lastAttendedSessionName;
     if (leaveDates != null) result.leaveDates.addAll(leaveDates);
     if (startDate != null) result.startDate = startDate;
     if (endDate != null) result.endDate = endDate;
@@ -4970,18 +4973,19 @@ class InstitutionLeaves extends $pb.GeneratedMessage {
         enumValues: $0.LeaveRole.values)
     ..aOS(8, _omitFieldNames ? '' : 'lastAttendedClassName')
     ..aOS(9, _omitFieldNames ? '' : 'lastAttendedSectionName')
-    ..pPM<$2.LeaveDate>(10, _omitFieldNames ? '' : 'leaveDates',
+    ..aOS(10, _omitFieldNames ? '' : 'lastAttendedSessionName')
+    ..pPM<$2.LeaveDate>(11, _omitFieldNames ? '' : 'leaveDates',
         subBuilder: $2.LeaveDate.create)
-    ..aOM<$1.Timestamp>(11, _omitFieldNames ? '' : 'startDate',
+    ..aOM<$1.Timestamp>(12, _omitFieldNames ? '' : 'startDate',
         subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(12, _omitFieldNames ? '' : 'endDate',
+    ..aOM<$1.Timestamp>(13, _omitFieldNames ? '' : 'endDate',
         subBuilder: $1.Timestamp.create)
-    ..aE<$0.LeaveStatus>(13, _omitFieldNames ? '' : 'rangeStatus',
+    ..aE<$0.LeaveStatus>(14, _omitFieldNames ? '' : 'rangeStatus',
         enumValues: $0.LeaveStatus.values)
-    ..aOS(14, _omitFieldNames ? '' : 'userThumbnailUrl')
-    ..aOM<$1.Timestamp>(15, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+    ..aOS(15, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(16, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
         subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(16, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+    ..aOM<$1.Timestamp>(17, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
@@ -5088,72 +5092,81 @@ class InstitutionLeaves extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearLastAttendedSectionName() => $_clearField(9);
 
-  /// For DISCRETE type
   @$pb.TagNumber(10)
-  $pb.PbList<$2.LeaveDate> get leaveDates => $_getList(9);
+  $core.String get lastAttendedSessionName => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set lastAttendedSessionName($core.String value) => $_setString(9, value);
+  @$pb.TagNumber(10)
+  $core.bool hasLastAttendedSessionName() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearLastAttendedSessionName() => $_clearField(10);
+
+  /// For DISCRETE type
+  @$pb.TagNumber(11)
+  $pb.PbList<$2.LeaveDate> get leaveDates => $_getList(10);
 
   /// For RANGE type
-  @$pb.TagNumber(11)
-  $1.Timestamp get startDate => $_getN(10);
-  @$pb.TagNumber(11)
-  set startDate($1.Timestamp value) => $_setField(11, value);
-  @$pb.TagNumber(11)
-  $core.bool hasStartDate() => $_has(10);
-  @$pb.TagNumber(11)
-  void clearStartDate() => $_clearField(11);
-  @$pb.TagNumber(11)
-  $1.Timestamp ensureStartDate() => $_ensure(10);
-
   @$pb.TagNumber(12)
-  $1.Timestamp get endDate => $_getN(11);
+  $1.Timestamp get startDate => $_getN(11);
   @$pb.TagNumber(12)
-  set endDate($1.Timestamp value) => $_setField(12, value);
+  set startDate($1.Timestamp value) => $_setField(12, value);
   @$pb.TagNumber(12)
-  $core.bool hasEndDate() => $_has(11);
+  $core.bool hasStartDate() => $_has(11);
   @$pb.TagNumber(12)
-  void clearEndDate() => $_clearField(12);
+  void clearStartDate() => $_clearField(12);
   @$pb.TagNumber(12)
-  $1.Timestamp ensureEndDate() => $_ensure(11);
+  $1.Timestamp ensureStartDate() => $_ensure(11);
 
   @$pb.TagNumber(13)
-  $0.LeaveStatus get rangeStatus => $_getN(12);
+  $1.Timestamp get endDate => $_getN(12);
   @$pb.TagNumber(13)
-  set rangeStatus($0.LeaveStatus value) => $_setField(13, value);
+  set endDate($1.Timestamp value) => $_setField(13, value);
   @$pb.TagNumber(13)
-  $core.bool hasRangeStatus() => $_has(12);
+  $core.bool hasEndDate() => $_has(12);
   @$pb.TagNumber(13)
-  void clearRangeStatus() => $_clearField(13);
+  void clearEndDate() => $_clearField(13);
+  @$pb.TagNumber(13)
+  $1.Timestamp ensureEndDate() => $_ensure(12);
 
   @$pb.TagNumber(14)
-  $core.String get userThumbnailUrl => $_getSZ(13);
+  $0.LeaveStatus get rangeStatus => $_getN(13);
   @$pb.TagNumber(14)
-  set userThumbnailUrl($core.String value) => $_setString(13, value);
+  set rangeStatus($0.LeaveStatus value) => $_setField(14, value);
   @$pb.TagNumber(14)
-  $core.bool hasUserThumbnailUrl() => $_has(13);
+  $core.bool hasRangeStatus() => $_has(13);
   @$pb.TagNumber(14)
-  void clearUserThumbnailUrl() => $_clearField(14);
+  void clearRangeStatus() => $_clearField(14);
 
   @$pb.TagNumber(15)
-  $1.Timestamp get thumbnailUpdatedAt => $_getN(14);
+  $core.String get userThumbnailUrl => $_getSZ(14);
   @$pb.TagNumber(15)
-  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(15, value);
+  set userThumbnailUrl($core.String value) => $_setString(14, value);
   @$pb.TagNumber(15)
-  $core.bool hasThumbnailUpdatedAt() => $_has(14);
+  $core.bool hasUserThumbnailUrl() => $_has(14);
   @$pb.TagNumber(15)
-  void clearThumbnailUpdatedAt() => $_clearField(15);
-  @$pb.TagNumber(15)
-  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(14);
+  void clearUserThumbnailUrl() => $_clearField(15);
 
   @$pb.TagNumber(16)
-  $1.Timestamp get thumbnailExpiresAt => $_getN(15);
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(15);
   @$pb.TagNumber(16)
-  set thumbnailExpiresAt($1.Timestamp value) => $_setField(16, value);
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(16, value);
   @$pb.TagNumber(16)
-  $core.bool hasThumbnailExpiresAt() => $_has(15);
+  $core.bool hasThumbnailUpdatedAt() => $_has(15);
   @$pb.TagNumber(16)
-  void clearThumbnailExpiresAt() => $_clearField(16);
+  void clearThumbnailUpdatedAt() => $_clearField(16);
   @$pb.TagNumber(16)
-  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(15);
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(15);
+
+  @$pb.TagNumber(17)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(16);
+  @$pb.TagNumber(17)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(17, value);
+  @$pb.TagNumber(17)
+  $core.bool hasThumbnailExpiresAt() => $_has(16);
+  @$pb.TagNumber(17)
+  void clearThumbnailExpiresAt() => $_clearField(17);
+  @$pb.TagNumber(17)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(16);
 }
 
 class CanRequestLeaveRequest extends $pb.GeneratedMessage {
@@ -5444,6 +5457,7 @@ class ShiftUserRegistration extends $pb.GeneratedMessage {
     $core.String? identificationNumber,
     $core.String? lastAttendedClassName,
     $core.String? lastAttendedSectionName,
+    $core.String? lastAttendedSessionName,
     $core.String? userThumbnailUrl,
     $1.Timestamp? thumbnailUpdatedAt,
     $1.Timestamp? thumbnailExpiresAt,
@@ -5459,6 +5473,8 @@ class ShiftUserRegistration extends $pb.GeneratedMessage {
       result.lastAttendedClassName = lastAttendedClassName;
     if (lastAttendedSectionName != null)
       result.lastAttendedSectionName = lastAttendedSectionName;
+    if (lastAttendedSessionName != null)
+      result.lastAttendedSessionName = lastAttendedSessionName;
     if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
     if (thumbnailUpdatedAt != null)
       result.thumbnailUpdatedAt = thumbnailUpdatedAt;
@@ -5488,10 +5504,11 @@ class ShiftUserRegistration extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
     ..aOS(6, _omitFieldNames ? '' : 'lastAttendedClassName')
     ..aOS(7, _omitFieldNames ? '' : 'lastAttendedSectionName')
-    ..aOS(8, _omitFieldNames ? '' : 'userThumbnailUrl')
-    ..aOM<$1.Timestamp>(9, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+    ..aOS(8, _omitFieldNames ? '' : 'lastAttendedSessionName')
+    ..aOS(9, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
         subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+    ..aOM<$1.Timestamp>(11, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
@@ -5582,35 +5599,44 @@ class ShiftUserRegistration extends $pb.GeneratedMessage {
   void clearLastAttendedSectionName() => $_clearField(7);
 
   @$pb.TagNumber(8)
-  $core.String get userThumbnailUrl => $_getSZ(7);
+  $core.String get lastAttendedSessionName => $_getSZ(7);
   @$pb.TagNumber(8)
-  set userThumbnailUrl($core.String value) => $_setString(7, value);
+  set lastAttendedSessionName($core.String value) => $_setString(7, value);
   @$pb.TagNumber(8)
-  $core.bool hasUserThumbnailUrl() => $_has(7);
+  $core.bool hasLastAttendedSessionName() => $_has(7);
   @$pb.TagNumber(8)
-  void clearUserThumbnailUrl() => $_clearField(8);
+  void clearLastAttendedSessionName() => $_clearField(8);
 
   @$pb.TagNumber(9)
-  $1.Timestamp get thumbnailUpdatedAt => $_getN(8);
+  $core.String get userThumbnailUrl => $_getSZ(8);
   @$pb.TagNumber(9)
-  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(9, value);
+  set userThumbnailUrl($core.String value) => $_setString(8, value);
   @$pb.TagNumber(9)
-  $core.bool hasThumbnailUpdatedAt() => $_has(8);
+  $core.bool hasUserThumbnailUrl() => $_has(8);
   @$pb.TagNumber(9)
-  void clearThumbnailUpdatedAt() => $_clearField(9);
-  @$pb.TagNumber(9)
-  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(8);
+  void clearUserThumbnailUrl() => $_clearField(9);
 
   @$pb.TagNumber(10)
-  $1.Timestamp get thumbnailExpiresAt => $_getN(9);
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(9);
   @$pb.TagNumber(10)
-  set thumbnailExpiresAt($1.Timestamp value) => $_setField(10, value);
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(10, value);
   @$pb.TagNumber(10)
-  $core.bool hasThumbnailExpiresAt() => $_has(9);
+  $core.bool hasThumbnailUpdatedAt() => $_has(9);
   @$pb.TagNumber(10)
-  void clearThumbnailExpiresAt() => $_clearField(10);
+  void clearThumbnailUpdatedAt() => $_clearField(10);
   @$pb.TagNumber(10)
-  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(9);
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(9);
+
+  @$pb.TagNumber(11)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(10);
+  @$pb.TagNumber(11)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(11, value);
+  @$pb.TagNumber(11)
+  $core.bool hasThumbnailExpiresAt() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearThumbnailExpiresAt() => $_clearField(11);
+  @$pb.TagNumber(11)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(10);
 }
 
 class ListStudentsOfSchoolForShiftAllocationRequest
@@ -5752,6 +5778,7 @@ class StudentOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
     $core.String? identificationNumber,
     $core.String? lastAttendedClassName,
     $core.String? lastAttendedSectionName,
+    $core.String? lastAttendedSessionName,
     $core.String? userThumbnailUrl,
     $1.Timestamp? thumbnailUpdatedAt,
     $1.Timestamp? thumbnailExpiresAt,
@@ -5767,6 +5794,8 @@ class StudentOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
       result.lastAttendedClassName = lastAttendedClassName;
     if (lastAttendedSectionName != null)
       result.lastAttendedSectionName = lastAttendedSectionName;
+    if (lastAttendedSessionName != null)
+      result.lastAttendedSessionName = lastAttendedSessionName;
     if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
     if (thumbnailUpdatedAt != null)
       result.thumbnailUpdatedAt = thumbnailUpdatedAt;
@@ -5797,12 +5826,13 @@ class StudentOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
     ..aOS(5, _omitFieldNames ? '' : 'lastAttendedClassName')
     ..aOS(6, _omitFieldNames ? '' : 'lastAttendedSectionName')
-    ..aOS(7, _omitFieldNames ? '' : 'userThumbnailUrl')
-    ..aOM<$1.Timestamp>(8, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+    ..aOS(7, _omitFieldNames ? '' : 'lastAttendedSessionName')
+    ..aOS(8, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(9, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
         subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(9, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
-    ..aOS(10, _omitFieldNames ? '' : 'shiftName')
+    ..aOS(11, _omitFieldNames ? '' : 'shiftName')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -5885,44 +5915,53 @@ class StudentOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
   void clearLastAttendedSectionName() => $_clearField(6);
 
   @$pb.TagNumber(7)
-  $core.String get userThumbnailUrl => $_getSZ(6);
+  $core.String get lastAttendedSessionName => $_getSZ(6);
   @$pb.TagNumber(7)
-  set userThumbnailUrl($core.String value) => $_setString(6, value);
+  set lastAttendedSessionName($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
-  $core.bool hasUserThumbnailUrl() => $_has(6);
+  $core.bool hasLastAttendedSessionName() => $_has(6);
   @$pb.TagNumber(7)
-  void clearUserThumbnailUrl() => $_clearField(7);
+  void clearLastAttendedSessionName() => $_clearField(7);
 
   @$pb.TagNumber(8)
-  $1.Timestamp get thumbnailUpdatedAt => $_getN(7);
+  $core.String get userThumbnailUrl => $_getSZ(7);
   @$pb.TagNumber(8)
-  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(8, value);
+  set userThumbnailUrl($core.String value) => $_setString(7, value);
   @$pb.TagNumber(8)
-  $core.bool hasThumbnailUpdatedAt() => $_has(7);
+  $core.bool hasUserThumbnailUrl() => $_has(7);
   @$pb.TagNumber(8)
-  void clearThumbnailUpdatedAt() => $_clearField(8);
-  @$pb.TagNumber(8)
-  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(7);
+  void clearUserThumbnailUrl() => $_clearField(8);
 
   @$pb.TagNumber(9)
-  $1.Timestamp get thumbnailExpiresAt => $_getN(8);
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(8);
   @$pb.TagNumber(9)
-  set thumbnailExpiresAt($1.Timestamp value) => $_setField(9, value);
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(9, value);
   @$pb.TagNumber(9)
-  $core.bool hasThumbnailExpiresAt() => $_has(8);
+  $core.bool hasThumbnailUpdatedAt() => $_has(8);
   @$pb.TagNumber(9)
-  void clearThumbnailExpiresAt() => $_clearField(9);
+  void clearThumbnailUpdatedAt() => $_clearField(9);
   @$pb.TagNumber(9)
-  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(8);
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(8);
 
   @$pb.TagNumber(10)
-  $core.String get shiftName => $_getSZ(9);
+  $1.Timestamp get thumbnailExpiresAt => $_getN(9);
   @$pb.TagNumber(10)
-  set shiftName($core.String value) => $_setString(9, value);
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(10, value);
   @$pb.TagNumber(10)
-  $core.bool hasShiftName() => $_has(9);
+  $core.bool hasThumbnailExpiresAt() => $_has(9);
   @$pb.TagNumber(10)
-  void clearShiftName() => $_clearField(10);
+  void clearThumbnailExpiresAt() => $_clearField(10);
+  @$pb.TagNumber(10)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(9);
+
+  @$pb.TagNumber(11)
+  $core.String get shiftName => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set shiftName($core.String value) => $_setString(10, value);
+  @$pb.TagNumber(11)
+  $core.bool hasShiftName() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearShiftName() => $_clearField(11);
 }
 
 class ListStudentsOfSchoolForShiftAllocationResponse
@@ -6868,6 +6907,7 @@ class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
     $core.String? identificationNumber,
     $core.String? lastAttendedClassName,
     $core.String? lastAttendedSectionName,
+    $core.String? lastAttendedSessionName,
     $core.String? userThumbnailUrl,
     $1.Timestamp? thumbnailUpdatedAt,
     $1.Timestamp? thumbnailExpiresAt,
@@ -6883,6 +6923,8 @@ class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
       result.lastAttendedClassName = lastAttendedClassName;
     if (lastAttendedSectionName != null)
       result.lastAttendedSectionName = lastAttendedSectionName;
+    if (lastAttendedSessionName != null)
+      result.lastAttendedSessionName = lastAttendedSessionName;
     if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
     if (thumbnailUpdatedAt != null)
       result.thumbnailUpdatedAt = thumbnailUpdatedAt;
@@ -6912,12 +6954,13 @@ class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
     ..aOS(5, _omitFieldNames ? '' : 'lastAttendedClassName')
     ..aOS(6, _omitFieldNames ? '' : 'lastAttendedSectionName')
-    ..aOS(7, _omitFieldNames ? '' : 'userThumbnailUrl')
-    ..aOM<$1.Timestamp>(8, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+    ..aOS(7, _omitFieldNames ? '' : 'lastAttendedSessionName')
+    ..aOS(8, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(9, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
         subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(9, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
-    ..aOS(10, _omitFieldNames ? '' : 'shiftName')
+    ..aOS(11, _omitFieldNames ? '' : 'shiftName')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -6999,44 +7042,53 @@ class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
   void clearLastAttendedSectionName() => $_clearField(6);
 
   @$pb.TagNumber(7)
-  $core.String get userThumbnailUrl => $_getSZ(6);
+  $core.String get lastAttendedSessionName => $_getSZ(6);
   @$pb.TagNumber(7)
-  set userThumbnailUrl($core.String value) => $_setString(6, value);
+  set lastAttendedSessionName($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
-  $core.bool hasUserThumbnailUrl() => $_has(6);
+  $core.bool hasLastAttendedSessionName() => $_has(6);
   @$pb.TagNumber(7)
-  void clearUserThumbnailUrl() => $_clearField(7);
+  void clearLastAttendedSessionName() => $_clearField(7);
 
   @$pb.TagNumber(8)
-  $1.Timestamp get thumbnailUpdatedAt => $_getN(7);
+  $core.String get userThumbnailUrl => $_getSZ(7);
   @$pb.TagNumber(8)
-  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(8, value);
+  set userThumbnailUrl($core.String value) => $_setString(7, value);
   @$pb.TagNumber(8)
-  $core.bool hasThumbnailUpdatedAt() => $_has(7);
+  $core.bool hasUserThumbnailUrl() => $_has(7);
   @$pb.TagNumber(8)
-  void clearThumbnailUpdatedAt() => $_clearField(8);
-  @$pb.TagNumber(8)
-  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(7);
+  void clearUserThumbnailUrl() => $_clearField(8);
 
   @$pb.TagNumber(9)
-  $1.Timestamp get thumbnailExpiresAt => $_getN(8);
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(8);
   @$pb.TagNumber(9)
-  set thumbnailExpiresAt($1.Timestamp value) => $_setField(9, value);
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(9, value);
   @$pb.TagNumber(9)
-  $core.bool hasThumbnailExpiresAt() => $_has(8);
+  $core.bool hasThumbnailUpdatedAt() => $_has(8);
   @$pb.TagNumber(9)
-  void clearThumbnailExpiresAt() => $_clearField(9);
+  void clearThumbnailUpdatedAt() => $_clearField(9);
   @$pb.TagNumber(9)
-  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(8);
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(8);
 
   @$pb.TagNumber(10)
-  $core.String get shiftName => $_getSZ(9);
+  $1.Timestamp get thumbnailExpiresAt => $_getN(9);
   @$pb.TagNumber(10)
-  set shiftName($core.String value) => $_setString(9, value);
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(10, value);
   @$pb.TagNumber(10)
-  $core.bool hasShiftName() => $_has(9);
+  $core.bool hasThumbnailExpiresAt() => $_has(9);
   @$pb.TagNumber(10)
-  void clearShiftName() => $_clearField(10);
+  void clearThumbnailExpiresAt() => $_clearField(10);
+  @$pb.TagNumber(10)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(9);
+
+  @$pb.TagNumber(11)
+  $core.String get shiftName => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set shiftName($core.String value) => $_setString(10, value);
+  @$pb.TagNumber(11)
+  $core.bool hasShiftName() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearShiftName() => $_clearField(11);
 }
 
 class GetBatchUsersInfoOfSchoolForLiveFeedRequest extends $pb.GeneratedMessage {
@@ -7238,6 +7290,7 @@ class SchoolUserInfoForLiveFeed extends $pb.GeneratedMessage {
     $core.String? identificationNumber,
     $core.String? lastAttendanceClassName,
     $core.String? lastAttendedSectionName,
+    $core.String? lastAttendedSessionName,
     $core.String? shiftName,
     $core.String? userThumbnailUrl,
     $1.Timestamp? thumbnailUpdatedAt,
@@ -7254,6 +7307,8 @@ class SchoolUserInfoForLiveFeed extends $pb.GeneratedMessage {
       result.lastAttendanceClassName = lastAttendanceClassName;
     if (lastAttendedSectionName != null)
       result.lastAttendedSectionName = lastAttendedSectionName;
+    if (lastAttendedSessionName != null)
+      result.lastAttendedSessionName = lastAttendedSessionName;
     if (shiftName != null) result.shiftName = shiftName;
     if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
     if (thumbnailUpdatedAt != null)
@@ -7284,11 +7339,12 @@ class SchoolUserInfoForLiveFeed extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
     ..aOS(6, _omitFieldNames ? '' : 'lastAttendanceClassName')
     ..aOS(7, _omitFieldNames ? '' : 'lastAttendedSectionName')
-    ..aOS(8, _omitFieldNames ? '' : 'shiftName')
-    ..aOS(9, _omitFieldNames ? '' : 'userThumbnailUrl')
-    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+    ..aOS(8, _omitFieldNames ? '' : 'lastAttendedSessionName')
+    ..aOS(9, _omitFieldNames ? '' : 'shiftName')
+    ..aOS(10, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(11, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
         subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(11, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+    ..aOM<$1.Timestamp>(12, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
@@ -7379,44 +7435,53 @@ class SchoolUserInfoForLiveFeed extends $pb.GeneratedMessage {
   void clearLastAttendedSectionName() => $_clearField(7);
 
   @$pb.TagNumber(8)
-  $core.String get shiftName => $_getSZ(7);
+  $core.String get lastAttendedSessionName => $_getSZ(7);
   @$pb.TagNumber(8)
-  set shiftName($core.String value) => $_setString(7, value);
+  set lastAttendedSessionName($core.String value) => $_setString(7, value);
   @$pb.TagNumber(8)
-  $core.bool hasShiftName() => $_has(7);
+  $core.bool hasLastAttendedSessionName() => $_has(7);
   @$pb.TagNumber(8)
-  void clearShiftName() => $_clearField(8);
+  void clearLastAttendedSessionName() => $_clearField(8);
 
   @$pb.TagNumber(9)
-  $core.String get userThumbnailUrl => $_getSZ(8);
+  $core.String get shiftName => $_getSZ(8);
   @$pb.TagNumber(9)
-  set userThumbnailUrl($core.String value) => $_setString(8, value);
+  set shiftName($core.String value) => $_setString(8, value);
   @$pb.TagNumber(9)
-  $core.bool hasUserThumbnailUrl() => $_has(8);
+  $core.bool hasShiftName() => $_has(8);
   @$pb.TagNumber(9)
-  void clearUserThumbnailUrl() => $_clearField(9);
+  void clearShiftName() => $_clearField(9);
 
   @$pb.TagNumber(10)
-  $1.Timestamp get thumbnailUpdatedAt => $_getN(9);
+  $core.String get userThumbnailUrl => $_getSZ(9);
   @$pb.TagNumber(10)
-  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(10, value);
+  set userThumbnailUrl($core.String value) => $_setString(9, value);
   @$pb.TagNumber(10)
-  $core.bool hasThumbnailUpdatedAt() => $_has(9);
+  $core.bool hasUserThumbnailUrl() => $_has(9);
   @$pb.TagNumber(10)
-  void clearThumbnailUpdatedAt() => $_clearField(10);
-  @$pb.TagNumber(10)
-  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(9);
+  void clearUserThumbnailUrl() => $_clearField(10);
 
   @$pb.TagNumber(11)
-  $1.Timestamp get thumbnailExpiresAt => $_getN(10);
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(10);
   @$pb.TagNumber(11)
-  set thumbnailExpiresAt($1.Timestamp value) => $_setField(11, value);
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(11, value);
   @$pb.TagNumber(11)
-  $core.bool hasThumbnailExpiresAt() => $_has(10);
+  $core.bool hasThumbnailUpdatedAt() => $_has(10);
   @$pb.TagNumber(11)
-  void clearThumbnailExpiresAt() => $_clearField(11);
+  void clearThumbnailUpdatedAt() => $_clearField(11);
   @$pb.TagNumber(11)
-  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(10);
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(10);
+
+  @$pb.TagNumber(12)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(11);
+  @$pb.TagNumber(12)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(12, value);
+  @$pb.TagNumber(12)
+  $core.bool hasThumbnailExpiresAt() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearThumbnailExpiresAt() => $_clearField(12);
+  @$pb.TagNumber(12)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(11);
 }
 
 class ListStudentsOfSchoolOfClassRequest extends $pb.GeneratedMessage {
@@ -8391,6 +8456,7 @@ class UserAttendanceReport extends $pb.GeneratedMessage {
     $core.String? identificationNumber,
     $core.String? lastAttendedClassName,
     $core.String? lastAttendedSectionName,
+    $core.String? lastAttendedSessionName,
     $core.Iterable<$0.UserDateAttendanceMap>? userDateAttendances,
     $core.String? userThumbnailUrl,
     $1.Timestamp? thumbnailUpdatedAt,
@@ -8406,6 +8472,8 @@ class UserAttendanceReport extends $pb.GeneratedMessage {
       result.lastAttendedClassName = lastAttendedClassName;
     if (lastAttendedSectionName != null)
       result.lastAttendedSectionName = lastAttendedSectionName;
+    if (lastAttendedSessionName != null)
+      result.lastAttendedSessionName = lastAttendedSessionName;
     if (userDateAttendances != null)
       result.userDateAttendances.addAll(userDateAttendances);
     if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
@@ -8436,13 +8504,14 @@ class UserAttendanceReport extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
     ..aOS(5, _omitFieldNames ? '' : 'lastAttendedClassName')
     ..aOS(6, _omitFieldNames ? '' : 'lastAttendedSectionName')
+    ..aOS(7, _omitFieldNames ? '' : 'lastAttendedSessionName')
     ..pPM<$0.UserDateAttendanceMap>(
-        7, _omitFieldNames ? '' : 'userDateAttendances',
+        8, _omitFieldNames ? '' : 'userDateAttendances',
         subBuilder: $0.UserDateAttendanceMap.create)
-    ..aOS(8, _omitFieldNames ? '' : 'userThumbnailUrl')
-    ..aOM<$1.Timestamp>(9, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+    ..aOS(9, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
         subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+    ..aOM<$1.Timestamp>(11, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
@@ -8522,38 +8591,47 @@ class UserAttendanceReport extends $pb.GeneratedMessage {
   void clearLastAttendedSectionName() => $_clearField(6);
 
   @$pb.TagNumber(7)
-  $pb.PbList<$0.UserDateAttendanceMap> get userDateAttendances => $_getList(6);
+  $core.String get lastAttendedSessionName => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set lastAttendedSessionName($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasLastAttendedSessionName() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearLastAttendedSessionName() => $_clearField(7);
 
   @$pb.TagNumber(8)
-  $core.String get userThumbnailUrl => $_getSZ(7);
-  @$pb.TagNumber(8)
-  set userThumbnailUrl($core.String value) => $_setString(7, value);
-  @$pb.TagNumber(8)
-  $core.bool hasUserThumbnailUrl() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearUserThumbnailUrl() => $_clearField(8);
+  $pb.PbList<$0.UserDateAttendanceMap> get userDateAttendances => $_getList(7);
 
   @$pb.TagNumber(9)
-  $1.Timestamp get thumbnailUpdatedAt => $_getN(8);
+  $core.String get userThumbnailUrl => $_getSZ(8);
   @$pb.TagNumber(9)
-  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(9, value);
+  set userThumbnailUrl($core.String value) => $_setString(8, value);
   @$pb.TagNumber(9)
-  $core.bool hasThumbnailUpdatedAt() => $_has(8);
+  $core.bool hasUserThumbnailUrl() => $_has(8);
   @$pb.TagNumber(9)
-  void clearThumbnailUpdatedAt() => $_clearField(9);
-  @$pb.TagNumber(9)
-  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(8);
+  void clearUserThumbnailUrl() => $_clearField(9);
 
   @$pb.TagNumber(10)
-  $1.Timestamp get thumbnailExpiresAt => $_getN(9);
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(9);
   @$pb.TagNumber(10)
-  set thumbnailExpiresAt($1.Timestamp value) => $_setField(10, value);
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(10, value);
   @$pb.TagNumber(10)
-  $core.bool hasThumbnailExpiresAt() => $_has(9);
+  $core.bool hasThumbnailUpdatedAt() => $_has(9);
   @$pb.TagNumber(10)
-  void clearThumbnailExpiresAt() => $_clearField(10);
+  void clearThumbnailUpdatedAt() => $_clearField(10);
   @$pb.TagNumber(10)
-  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(9);
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(9);
+
+  @$pb.TagNumber(11)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(10);
+  @$pb.TagNumber(11)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(11, value);
+  @$pb.TagNumber(11)
+  $core.bool hasThumbnailExpiresAt() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearThumbnailExpiresAt() => $_clearField(11);
+  @$pb.TagNumber(11)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(10);
 }
 
 const $core.bool _omitFieldNames =

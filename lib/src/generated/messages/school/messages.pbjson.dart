@@ -2594,6 +2594,13 @@ const StudentLatestEnrollmentInfo$json = {
       '5': 9,
       '10': 'lastAttendedSectionName'
     },
+    {
+      '1': 'last_attended_session_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'lastAttendedSessionName'
+    },
   ],
 };
 
@@ -2602,7 +2609,8 @@ final $typed_data.Uint8List studentLatestEnrollmentInfoDescriptor = $convert.bas
     'ChtTdHVkZW50TGF0ZXN0RW5yb2xsbWVudEluZm8SFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEj'
     'cKGGxhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZRgCIAEoCVIVbGFzdEF0dGVuZGVkQ2xhc3NOYW1l'
     'EjsKGmxhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1lGAMgASgJUhdsYXN0QXR0ZW5kZWRTZWN0aW'
-    '9uTmFtZQ==');
+    '9uTmFtZRI7ChpsYXN0X2F0dGVuZGVkX3Nlc3Npb25fbmFtZRgEIAEoCVIXbGFzdEF0dGVuZGVk'
+    'U2Vzc2lvbk5hbWU=');
 
 @$core.Deprecated('Use getStudentIdsOfClassRequestDescriptor instead')
 const GetStudentIdsOfClassRequest$json = {

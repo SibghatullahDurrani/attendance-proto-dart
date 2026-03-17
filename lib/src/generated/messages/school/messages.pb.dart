@@ -7466,6 +7466,7 @@ class StudentLatestEnrollmentInfo extends $pb.GeneratedMessage {
     $core.String? userId,
     $core.String? lastAttendedClassName,
     $core.String? lastAttendedSectionName,
+    $core.String? lastAttendedSessionName,
   }) {
     final result = create();
     if (userId != null) result.userId = userId;
@@ -7473,6 +7474,8 @@ class StudentLatestEnrollmentInfo extends $pb.GeneratedMessage {
       result.lastAttendedClassName = lastAttendedClassName;
     if (lastAttendedSectionName != null)
       result.lastAttendedSectionName = lastAttendedSectionName;
+    if (lastAttendedSessionName != null)
+      result.lastAttendedSessionName = lastAttendedSessionName;
     return result;
   }
 
@@ -7493,6 +7496,7 @@ class StudentLatestEnrollmentInfo extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'userId')
     ..aOS(2, _omitFieldNames ? '' : 'lastAttendedClassName')
     ..aOS(3, _omitFieldNames ? '' : 'lastAttendedSectionName')
+    ..aOS(4, _omitFieldNames ? '' : 'lastAttendedSessionName')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -7545,6 +7549,15 @@ class StudentLatestEnrollmentInfo extends $pb.GeneratedMessage {
   $core.bool hasLastAttendedSectionName() => $_has(2);
   @$pb.TagNumber(3)
   void clearLastAttendedSectionName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get lastAttendedSessionName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set lastAttendedSessionName($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasLastAttendedSessionName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearLastAttendedSessionName() => $_clearField(4);
 }
 
 class GetStudentIdsOfClassRequest extends $pb.GeneratedMessage {
