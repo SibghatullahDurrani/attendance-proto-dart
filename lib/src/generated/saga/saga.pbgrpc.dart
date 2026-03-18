@@ -16,6 +16,7 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../messages/saga/bulk_registration.pb.dart' as $1;
 import '../messages/saga/messages.pb.dart' as $0;
 
 export 'saga.pb.dart';
@@ -98,6 +99,24 @@ class SagaServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// Bulk Registration - Bidirectional streaming for spreadsheet-like editing
+  $grpc.ResponseStream<$1.BulkRegistrationEvent> bulkRegistrationStream(
+    $async.Stream<$1.BulkRegistrationCommand> request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createStreamingCall(_$bulkRegistrationStream, request,
+        options: options);
+  }
+
+  /// Bulk Registration - Image upload (separate stream)
+  $grpc.ResponseFuture<$1.UploadRowImageResponse> uploadRowImage(
+    $async.Stream<$1.UploadRowImageRequest> request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createStreamingCall(_$uploadRowImage, request, options: options)
+        .single;
+  }
+
   // method descriptors
 
   static final _$registerStudentSaga = $grpc.ClientMethod<
@@ -146,6 +165,16 @@ class SagaServiceClient extends $grpc.Client {
       '/saga.SagaService/HandleLeaveResponseSaga',
       ($0.HandleLeaveResponseSagaRequest value) => value.writeToBuffer(),
       $0.HandleLeaveResponseSagaResponse.fromBuffer);
+  static final _$bulkRegistrationStream =
+      $grpc.ClientMethod<$1.BulkRegistrationCommand, $1.BulkRegistrationEvent>(
+          '/saga.SagaService/BulkRegistrationStream',
+          ($1.BulkRegistrationCommand value) => value.writeToBuffer(),
+          $1.BulkRegistrationEvent.fromBuffer);
+  static final _$uploadRowImage =
+      $grpc.ClientMethod<$1.UploadRowImageRequest, $1.UploadRowImageResponse>(
+          '/saga.SagaService/UploadRowImage',
+          ($1.UploadRowImageRequest value) => value.writeToBuffer(),
+          $1.UploadRowImageResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('saga.SagaService')
@@ -228,6 +257,24 @@ abstract class SagaServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.HandleLeaveResponseSagaRequest.fromBuffer(value),
         ($0.HandleLeaveResponseSagaResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.BulkRegistrationCommand,
+            $1.BulkRegistrationEvent>(
+        'BulkRegistrationStream',
+        bulkRegistrationStream,
+        true,
+        true,
+        ($core.List<$core.int> value) =>
+            $1.BulkRegistrationCommand.fromBuffer(value),
+        ($1.BulkRegistrationEvent value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.UploadRowImageRequest,
+            $1.UploadRowImageResponse>(
+        'UploadRowImage',
+        uploadRowImage,
+        true,
+        false,
+        ($core.List<$core.int> value) =>
+            $1.UploadRowImageRequest.fromBuffer(value),
+        ($1.UploadRowImageResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.RegisterStudentSagaResponse> registerStudentSaga_Pre(
@@ -308,4 +355,11 @@ abstract class SagaServiceBase extends $grpc.Service {
 
   $async.Future<$0.HandleLeaveResponseSagaResponse> handleLeaveResponseSaga(
       $grpc.ServiceCall call, $0.HandleLeaveResponseSagaRequest request);
+
+  $async.Stream<$1.BulkRegistrationEvent> bulkRegistrationStream(
+      $grpc.ServiceCall call,
+      $async.Stream<$1.BulkRegistrationCommand> request);
+
+  $async.Future<$1.UploadRowImageResponse> uploadRowImage(
+      $grpc.ServiceCall call, $async.Stream<$1.UploadRowImageRequest> request);
 }

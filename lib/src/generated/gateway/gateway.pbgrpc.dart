@@ -21,6 +21,7 @@ import '../messages/auth/messages.pb.dart' as $0;
 import '../messages/gateway/messages.pb.dart' as $5;
 import '../messages/leave/messages.pb.dart' as $4;
 import '../messages/media/messages.pb.dart' as $6;
+import '../messages/saga/bulk_registration.pb.dart' as $8;
 import '../messages/saga/messages.pb.dart' as $7;
 import '../messages/school/messages.pb.dart' as $1;
 import '../messages/user/messages.pb.dart' as $3;
@@ -604,6 +605,25 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// Bulk Registration Rpcs (bidirectional and client streaming)
+  $grpc.ResponseStream<$8.BulkRegistrationEvent> bulkRegistrationStream(
+    $async.Stream<$8.BulkRegistrationCommand> request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createStreamingCall(_$bulkRegistrationStream, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$8.UploadRowImageResponse>
+      uploadBulkRegistrationRowImage(
+    $async.Stream<$8.UploadRowImageRequest> request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createStreamingCall(_$uploadBulkRegistrationRowImage, request,
+            options: options)
+        .single;
+  }
+
   // method descriptors
 
   static final _$login = $grpc.ClientMethod<$0.LoginRequest, $0.LoginResponse>(
@@ -994,6 +1014,16 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/HandleLeaveResponseSaga',
       ($7.HandleLeaveResponseSagaRequest value) => value.writeToBuffer(),
       $7.HandleLeaveResponseSagaResponse.fromBuffer);
+  static final _$bulkRegistrationStream =
+      $grpc.ClientMethod<$8.BulkRegistrationCommand, $8.BulkRegistrationEvent>(
+          '/gateway.GatewayService/BulkRegistrationStream',
+          ($8.BulkRegistrationCommand value) => value.writeToBuffer(),
+          $8.BulkRegistrationEvent.fromBuffer);
+  static final _$uploadBulkRegistrationRowImage =
+      $grpc.ClientMethod<$8.UploadRowImageRequest, $8.UploadRowImageResponse>(
+          '/gateway.GatewayService/UploadBulkRegistrationRowImage',
+          ($8.UploadRowImageRequest value) => value.writeToBuffer(),
+          $8.UploadRowImageResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -1649,6 +1679,24 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $7.HandleLeaveResponseSagaRequest.fromBuffer(value),
         ($7.HandleLeaveResponseSagaResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$8.BulkRegistrationCommand,
+            $8.BulkRegistrationEvent>(
+        'BulkRegistrationStream',
+        bulkRegistrationStream,
+        true,
+        true,
+        ($core.List<$core.int> value) =>
+            $8.BulkRegistrationCommand.fromBuffer(value),
+        ($8.BulkRegistrationEvent value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$8.UploadRowImageRequest,
+            $8.UploadRowImageResponse>(
+        'UploadBulkRegistrationRowImage',
+        uploadBulkRegistrationRowImage,
+        true,
+        false,
+        ($core.List<$core.int> value) =>
+            $8.UploadRowImageRequest.fromBuffer(value),
+        ($8.UploadRowImageResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -2298,4 +2346,11 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$7.HandleLeaveResponseSagaResponse> handleLeaveResponseSaga(
       $grpc.ServiceCall call, $7.HandleLeaveResponseSagaRequest request);
+
+  $async.Stream<$8.BulkRegistrationEvent> bulkRegistrationStream(
+      $grpc.ServiceCall call,
+      $async.Stream<$8.BulkRegistrationCommand> request);
+
+  $async.Future<$8.UploadRowImageResponse> uploadBulkRegistrationRowImage(
+      $grpc.ServiceCall call, $async.Stream<$8.UploadRowImageRequest> request);
 }
