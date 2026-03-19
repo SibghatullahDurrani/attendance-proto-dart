@@ -1279,6 +1279,441 @@ class DeleteLeaveAttachmentResponse extends $pb.GeneratedMessage {
   static DeleteLeaveAttachmentResponse? _defaultInstance;
 }
 
+enum AddDraftImageRequest_Data { rowId, imageChunk, notSet }
+
+/// AddDraftImage messages (streaming upload for bulk registration draft images)
+class AddDraftImageRequest extends $pb.GeneratedMessage {
+  factory AddDraftImageRequest({
+    $core.String? rowId,
+    $core.List<$core.int>? imageChunk,
+  }) {
+    final result = create();
+    if (rowId != null) result.rowId = rowId;
+    if (imageChunk != null) result.imageChunk = imageChunk;
+    return result;
+  }
+
+  AddDraftImageRequest._();
+
+  factory AddDraftImageRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddDraftImageRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static const $core.Map<$core.int, AddDraftImageRequest_Data>
+      _AddDraftImageRequest_DataByTag = {
+    1: AddDraftImageRequest_Data.rowId,
+    2: AddDraftImageRequest_Data.imageChunk,
+    0: AddDraftImageRequest_Data.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddDraftImageRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..aOS(1, _omitFieldNames ? '' : 'rowId')
+    ..a<$core.List<$core.int>>(
+        2, _omitFieldNames ? '' : 'imageChunk', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddDraftImageRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddDraftImageRequest copyWith(void Function(AddDraftImageRequest) updates) =>
+      super.copyWith((message) => updates(message as AddDraftImageRequest))
+          as AddDraftImageRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddDraftImageRequest create() => AddDraftImageRequest._();
+  @$core.override
+  AddDraftImageRequest createEmptyInstance() => create();
+  static $pb.PbList<AddDraftImageRequest> createRepeated() =>
+      $pb.PbList<AddDraftImageRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AddDraftImageRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddDraftImageRequest>(create);
+  static AddDraftImageRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  AddDraftImageRequest_Data whichData() =>
+      _AddDraftImageRequest_DataByTag[$_whichOneof(0)]!;
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearData() => $_clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.String get rowId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set rowId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasRowId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRowId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get imageChunk => $_getN(1);
+  @$pb.TagNumber(2)
+  set imageChunk($core.List<$core.int> value) => $_setBytes(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasImageChunk() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearImageChunk() => $_clearField(2);
+}
+
+class AddDraftImageResponse extends $pb.GeneratedMessage {
+  factory AddDraftImageResponse({
+    $core.bool? success,
+    $core.String? thumbnailUrl,
+  }) {
+    final result = create();
+    if (success != null) result.success = success;
+    if (thumbnailUrl != null) result.thumbnailUrl = thumbnailUrl;
+    return result;
+  }
+
+  AddDraftImageResponse._();
+
+  factory AddDraftImageResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddDraftImageResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddDraftImageResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'success')
+    ..aOS(2, _omitFieldNames ? '' : 'thumbnailUrl')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddDraftImageResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddDraftImageResponse copyWith(
+          void Function(AddDraftImageResponse) updates) =>
+      super.copyWith((message) => updates(message as AddDraftImageResponse))
+          as AddDraftImageResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddDraftImageResponse create() => AddDraftImageResponse._();
+  @$core.override
+  AddDraftImageResponse createEmptyInstance() => create();
+  static $pb.PbList<AddDraftImageResponse> createRepeated() =>
+      $pb.PbList<AddDraftImageResponse>();
+  @$core.pragma('dart2js:noInline')
+  static AddDraftImageResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddDraftImageResponse>(create);
+  static AddDraftImageResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get success => $_getBF(0);
+  @$pb.TagNumber(1)
+  set success($core.bool value) => $_setBool(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSuccess() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSuccess() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get thumbnailUrl => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set thumbnailUrl($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasThumbnailUrl() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearThumbnailUrl() => $_clearField(2);
+}
+
+/// GetBatchDraftThumbnailURLs messages (batch signed URLs for draft thumbnails)
+class GetBatchDraftThumbnailURLsRequest extends $pb.GeneratedMessage {
+  factory GetBatchDraftThumbnailURLsRequest({
+    $core.Iterable<$core.String>? rowIds,
+  }) {
+    final result = create();
+    if (rowIds != null) result.rowIds.addAll(rowIds);
+    return result;
+  }
+
+  GetBatchDraftThumbnailURLsRequest._();
+
+  factory GetBatchDraftThumbnailURLsRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchDraftThumbnailURLsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBatchDraftThumbnailURLsRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'rowIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchDraftThumbnailURLsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchDraftThumbnailURLsRequest copyWith(
+          void Function(GetBatchDraftThumbnailURLsRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetBatchDraftThumbnailURLsRequest))
+          as GetBatchDraftThumbnailURLsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchDraftThumbnailURLsRequest create() =>
+      GetBatchDraftThumbnailURLsRequest._();
+  @$core.override
+  GetBatchDraftThumbnailURLsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetBatchDraftThumbnailURLsRequest> createRepeated() =>
+      $pb.PbList<GetBatchDraftThumbnailURLsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchDraftThumbnailURLsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBatchDraftThumbnailURLsRequest>(
+          create);
+  static GetBatchDraftThumbnailURLsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get rowIds => $_getList(0);
+}
+
+class DraftThumbnail extends $pb.GeneratedMessage {
+  factory DraftThumbnail({
+    $core.String? rowId,
+    $core.String? thumbnailUrl,
+  }) {
+    final result = create();
+    if (rowId != null) result.rowId = rowId;
+    if (thumbnailUrl != null) result.thumbnailUrl = thumbnailUrl;
+    return result;
+  }
+
+  DraftThumbnail._();
+
+  factory DraftThumbnail.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DraftThumbnail.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DraftThumbnail',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'rowId')
+    ..aOS(2, _omitFieldNames ? '' : 'thumbnailUrl')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DraftThumbnail clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DraftThumbnail copyWith(void Function(DraftThumbnail) updates) =>
+      super.copyWith((message) => updates(message as DraftThumbnail))
+          as DraftThumbnail;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DraftThumbnail create() => DraftThumbnail._();
+  @$core.override
+  DraftThumbnail createEmptyInstance() => create();
+  static $pb.PbList<DraftThumbnail> createRepeated() =>
+      $pb.PbList<DraftThumbnail>();
+  @$core.pragma('dart2js:noInline')
+  static DraftThumbnail getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DraftThumbnail>(create);
+  static DraftThumbnail? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get rowId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set rowId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasRowId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRowId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get thumbnailUrl => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set thumbnailUrl($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasThumbnailUrl() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearThumbnailUrl() => $_clearField(2);
+}
+
+class GetBatchDraftThumbnailURLsResponse extends $pb.GeneratedMessage {
+  factory GetBatchDraftThumbnailURLsResponse({
+    $core.Iterable<DraftThumbnail>? thumbnails,
+  }) {
+    final result = create();
+    if (thumbnails != null) result.thumbnails.addAll(thumbnails);
+    return result;
+  }
+
+  GetBatchDraftThumbnailURLsResponse._();
+
+  factory GetBatchDraftThumbnailURLsResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchDraftThumbnailURLsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBatchDraftThumbnailURLsResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..pPM<DraftThumbnail>(1, _omitFieldNames ? '' : 'thumbnails',
+        subBuilder: DraftThumbnail.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchDraftThumbnailURLsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchDraftThumbnailURLsResponse copyWith(
+          void Function(GetBatchDraftThumbnailURLsResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetBatchDraftThumbnailURLsResponse))
+          as GetBatchDraftThumbnailURLsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchDraftThumbnailURLsResponse create() =>
+      GetBatchDraftThumbnailURLsResponse._();
+  @$core.override
+  GetBatchDraftThumbnailURLsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetBatchDraftThumbnailURLsResponse> createRepeated() =>
+      $pb.PbList<GetBatchDraftThumbnailURLsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchDraftThumbnailURLsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBatchDraftThumbnailURLsResponse>(
+          create);
+  static GetBatchDraftThumbnailURLsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<DraftThumbnail> get thumbnails => $_getList(0);
+}
+
+/// DeleteDraftImage messages
+class DeleteDraftImageRequest extends $pb.GeneratedMessage {
+  factory DeleteDraftImageRequest({
+    $core.String? rowId,
+  }) {
+    final result = create();
+    if (rowId != null) result.rowId = rowId;
+    return result;
+  }
+
+  DeleteDraftImageRequest._();
+
+  factory DeleteDraftImageRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteDraftImageRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteDraftImageRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'rowId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteDraftImageRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteDraftImageRequest copyWith(
+          void Function(DeleteDraftImageRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteDraftImageRequest))
+          as DeleteDraftImageRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DeleteDraftImageRequest create() => DeleteDraftImageRequest._();
+  @$core.override
+  DeleteDraftImageRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteDraftImageRequest> createRepeated() =>
+      $pb.PbList<DeleteDraftImageRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteDraftImageRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteDraftImageRequest>(create);
+  static DeleteDraftImageRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get rowId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set rowId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasRowId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRowId() => $_clearField(1);
+}
+
+class DeleteDraftImageResponse extends $pb.GeneratedMessage {
+  factory DeleteDraftImageResponse() => create();
+
+  DeleteDraftImageResponse._();
+
+  factory DeleteDraftImageResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteDraftImageResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteDraftImageResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteDraftImageResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteDraftImageResponse copyWith(
+          void Function(DeleteDraftImageResponse) updates) =>
+      super.copyWith((message) => updates(message as DeleteDraftImageResponse))
+          as DeleteDraftImageResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DeleteDraftImageResponse create() => DeleteDraftImageResponse._();
+  @$core.override
+  DeleteDraftImageResponse createEmptyInstance() => create();
+  static $pb.PbList<DeleteDraftImageResponse> createRepeated() =>
+      $pb.PbList<DeleteDraftImageResponse>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteDraftImageResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteDraftImageResponse>(create);
+  static DeleteDraftImageResponse? _defaultInstance;
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

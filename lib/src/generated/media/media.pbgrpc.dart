@@ -94,6 +94,35 @@ class MediaServiceClient extends $grpc.Client {
     return $createUnaryCall(_$deleteLeaveAttachment, request, options: options);
   }
 
+  /// AddDraftImage uploads a draft image for bulk registration via streaming.
+  /// First message contains row_id, subsequent messages contain image chunks.
+  $grpc.ResponseFuture<$0.AddDraftImageResponse> addDraftImage(
+    $async.Stream<$0.AddDraftImageRequest> request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createStreamingCall(_$addDraftImage, request, options: options)
+        .single;
+  }
+
+  /// GetBatchDraftThumbnailURLs returns signed thumbnail URLs for multiple rows.
+  /// For rows without images, thumbnail_url will be absent in the response.
+  $grpc.ResponseFuture<$0.GetBatchDraftThumbnailURLsResponse>
+      getBatchDraftThumbnailURLs(
+    $0.GetBatchDraftThumbnailURLsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getBatchDraftThumbnailURLs, request,
+        options: options);
+  }
+
+  /// DeleteDraftImage deletes a draft image for a row.
+  $grpc.ResponseFuture<$0.DeleteDraftImageResponse> deleteDraftImage(
+    $0.DeleteDraftImageRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$deleteDraftImage, request, options: options);
+  }
+
   // method descriptors
 
   static final _$addUserImage =
@@ -131,6 +160,22 @@ class MediaServiceClient extends $grpc.Client {
       '/image.MediaService/DeleteLeaveAttachment',
       ($0.DeleteLeaveAttachmentRequest value) => value.writeToBuffer(),
       $0.DeleteLeaveAttachmentResponse.fromBuffer);
+  static final _$addDraftImage =
+      $grpc.ClientMethod<$0.AddDraftImageRequest, $0.AddDraftImageResponse>(
+          '/image.MediaService/AddDraftImage',
+          ($0.AddDraftImageRequest value) => value.writeToBuffer(),
+          $0.AddDraftImageResponse.fromBuffer);
+  static final _$getBatchDraftThumbnailURLs = $grpc.ClientMethod<
+          $0.GetBatchDraftThumbnailURLsRequest,
+          $0.GetBatchDraftThumbnailURLsResponse>(
+      '/image.MediaService/GetBatchDraftThumbnailURLs',
+      ($0.GetBatchDraftThumbnailURLsRequest value) => value.writeToBuffer(),
+      $0.GetBatchDraftThumbnailURLsResponse.fromBuffer);
+  static final _$deleteDraftImage = $grpc.ClientMethod<
+          $0.DeleteDraftImageRequest, $0.DeleteDraftImageResponse>(
+      '/image.MediaService/DeleteDraftImage',
+      ($0.DeleteDraftImageRequest value) => value.writeToBuffer(),
+      $0.DeleteDraftImageResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('image.MediaService')
@@ -201,6 +246,34 @@ abstract class MediaServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.DeleteLeaveAttachmentRequest.fromBuffer(value),
         ($0.DeleteLeaveAttachmentResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.AddDraftImageRequest, $0.AddDraftImageResponse>(
+            'AddDraftImage',
+            addDraftImage,
+            true,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.AddDraftImageRequest.fromBuffer(value),
+            ($0.AddDraftImageResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetBatchDraftThumbnailURLsRequest,
+            $0.GetBatchDraftThumbnailURLsResponse>(
+        'GetBatchDraftThumbnailURLs',
+        getBatchDraftThumbnailURLs_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetBatchDraftThumbnailURLsRequest.fromBuffer(value),
+        ($0.GetBatchDraftThumbnailURLsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteDraftImageRequest,
+            $0.DeleteDraftImageResponse>(
+        'DeleteDraftImage',
+        deleteDraftImage_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteDraftImageRequest.fromBuffer(value),
+        ($0.DeleteDraftImageResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.AddUserImageResponse> addUserImage(
@@ -254,4 +327,26 @@ abstract class MediaServiceBase extends $grpc.Service {
 
   $async.Future<$0.DeleteLeaveAttachmentResponse> deleteLeaveAttachment(
       $grpc.ServiceCall call, $0.DeleteLeaveAttachmentRequest request);
+
+  $async.Future<$0.AddDraftImageResponse> addDraftImage(
+      $grpc.ServiceCall call, $async.Stream<$0.AddDraftImageRequest> request);
+
+  $async.Future<$0.GetBatchDraftThumbnailURLsResponse>
+      getBatchDraftThumbnailURLs_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetBatchDraftThumbnailURLsRequest> $request) async {
+    return getBatchDraftThumbnailURLs($call, await $request);
+  }
+
+  $async.Future<$0.GetBatchDraftThumbnailURLsResponse>
+      getBatchDraftThumbnailURLs(
+          $grpc.ServiceCall call, $0.GetBatchDraftThumbnailURLsRequest request);
+
+  $async.Future<$0.DeleteDraftImageResponse> deleteDraftImage_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.DeleteDraftImageRequest> $request) async {
+    return deleteDraftImage($call, await $request);
+  }
+
+  $async.Future<$0.DeleteDraftImageResponse> deleteDraftImage(
+      $grpc.ServiceCall call, $0.DeleteDraftImageRequest request);
 }

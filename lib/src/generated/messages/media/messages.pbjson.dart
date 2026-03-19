@@ -394,3 +394,116 @@ const DeleteLeaveAttachmentResponse$json = {
 /// Descriptor for `DeleteLeaveAttachmentResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteLeaveAttachmentResponseDescriptor =
     $convert.base64Decode('Ch1EZWxldGVMZWF2ZUF0dGFjaG1lbnRSZXNwb25zZQ==');
+
+@$core.Deprecated('Use addDraftImageRequestDescriptor instead')
+const AddDraftImageRequest$json = {
+  '1': 'AddDraftImageRequest',
+  '2': [
+    {'1': 'row_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'rowId'},
+    {'1': 'image_chunk', '3': 2, '4': 1, '5': 12, '9': 0, '10': 'imageChunk'},
+  ],
+  '8': [
+    {'1': 'data'},
+  ],
+};
+
+/// Descriptor for `AddDraftImageRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addDraftImageRequestDescriptor = $convert.base64Decode(
+    'ChRBZGREcmFmdEltYWdlUmVxdWVzdBIXCgZyb3dfaWQYASABKAlIAFIFcm93SWQSIQoLaW1hZ2'
+    'VfY2h1bmsYAiABKAxIAFIKaW1hZ2VDaHVua0IGCgRkYXRh');
+
+@$core.Deprecated('Use addDraftImageResponseDescriptor instead')
+const AddDraftImageResponse$json = {
+  '1': 'AddDraftImageResponse',
+  '2': [
+    {'1': 'success', '3': 1, '4': 1, '5': 8, '10': 'success'},
+    {'1': 'thumbnail_url', '3': 2, '4': 1, '5': 9, '10': 'thumbnailUrl'},
+  ],
+};
+
+/// Descriptor for `AddDraftImageResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addDraftImageResponseDescriptor = $convert.base64Decode(
+    'ChVBZGREcmFmdEltYWdlUmVzcG9uc2USGAoHc3VjY2VzcxgBIAEoCFIHc3VjY2VzcxIjCg10aH'
+    'VtYm5haWxfdXJsGAIgASgJUgx0aHVtYm5haWxVcmw=');
+
+@$core.Deprecated('Use getBatchDraftThumbnailURLsRequestDescriptor instead')
+const GetBatchDraftThumbnailURLsRequest$json = {
+  '1': 'GetBatchDraftThumbnailURLsRequest',
+  '2': [
+    {'1': 'row_ids', '3': 1, '4': 3, '5': 9, '10': 'rowIds'},
+  ],
+};
+
+/// Descriptor for `GetBatchDraftThumbnailURLsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBatchDraftThumbnailURLsRequestDescriptor =
+    $convert.base64Decode(
+        'CiFHZXRCYXRjaERyYWZ0VGh1bWJuYWlsVVJMc1JlcXVlc3QSFwoHcm93X2lkcxgBIAMoCVIGcm'
+        '93SWRz');
+
+@$core.Deprecated('Use draftThumbnailDescriptor instead')
+const DraftThumbnail$json = {
+  '1': 'DraftThumbnail',
+  '2': [
+    {'1': 'row_id', '3': 1, '4': 1, '5': 9, '10': 'rowId'},
+    {
+      '1': 'thumbnail_url',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'thumbnailUrl',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_thumbnail_url'},
+  ],
+};
+
+/// Descriptor for `DraftThumbnail`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List draftThumbnailDescriptor = $convert.base64Decode(
+    'Cg5EcmFmdFRodW1ibmFpbBIVCgZyb3dfaWQYASABKAlSBXJvd0lkEigKDXRodW1ibmFpbF91cm'
+    'wYAiABKAlIAFIMdGh1bWJuYWlsVXJsiAEBQhAKDl90aHVtYm5haWxfdXJs');
+
+@$core.Deprecated('Use getBatchDraftThumbnailURLsResponseDescriptor instead')
+const GetBatchDraftThumbnailURLsResponse$json = {
+  '1': 'GetBatchDraftThumbnailURLsResponse',
+  '2': [
+    {
+      '1': 'thumbnails',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.media_messages.DraftThumbnail',
+      '10': 'thumbnails'
+    },
+  ],
+};
+
+/// Descriptor for `GetBatchDraftThumbnailURLsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBatchDraftThumbnailURLsResponseDescriptor =
+    $convert.base64Decode(
+        'CiJHZXRCYXRjaERyYWZ0VGh1bWJuYWlsVVJMc1Jlc3BvbnNlEj4KCnRodW1ibmFpbHMYASADKA'
+        'syHi5tZWRpYV9tZXNzYWdlcy5EcmFmdFRodW1ibmFpbFIKdGh1bWJuYWlscw==');
+
+@$core.Deprecated('Use deleteDraftImageRequestDescriptor instead')
+const DeleteDraftImageRequest$json = {
+  '1': 'DeleteDraftImageRequest',
+  '2': [
+    {'1': 'row_id', '3': 1, '4': 1, '5': 9, '10': 'rowId'},
+  ],
+};
+
+/// Descriptor for `DeleteDraftImageRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteDraftImageRequestDescriptor =
+    $convert.base64Decode(
+        'ChdEZWxldGVEcmFmdEltYWdlUmVxdWVzdBIVCgZyb3dfaWQYASABKAlSBXJvd0lk');
+
+@$core.Deprecated('Use deleteDraftImageResponseDescriptor instead')
+const DeleteDraftImageResponse$json = {
+  '1': 'DeleteDraftImageResponse',
+};
+
+/// Descriptor for `DeleteDraftImageResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteDraftImageResponseDescriptor =
+    $convert.base64Decode('ChhEZWxldGVEcmFmdEltYWdlUmVzcG9uc2U=');
