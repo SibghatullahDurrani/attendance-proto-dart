@@ -200,6 +200,13 @@ class UserServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetBulkParentNameResponse> getBulkParentName(
+    $0.GetBulkParentNameRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getBulkParentName, request, options: options);
+  }
+
   // method descriptors
 
   static final _$createStudent =
@@ -312,6 +319,11 @@ class UserServiceClient extends $grpc.Client {
       '/user.UserService/GetBatchShortEmployeeInfo',
       ($0.GetBatchShortEmployeeInfoRequest value) => value.writeToBuffer(),
       $0.GetBatchShortEmployeeInfoResponse.fromBuffer);
+  static final _$getBulkParentName = $grpc.ClientMethod<
+          $0.GetBulkParentNameRequest, $0.GetBulkParentNameResponse>(
+      '/user.UserService/GetBulkParentName',
+      ($0.GetBulkParentNameRequest value) => value.writeToBuffer(),
+      $0.GetBulkParentNameResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('user.UserService')
@@ -510,6 +522,15 @@ abstract class UserServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetBatchShortEmployeeInfoRequest.fromBuffer(value),
         ($0.GetBatchShortEmployeeInfoResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetBulkParentNameRequest,
+            $0.GetBulkParentNameResponse>(
+        'GetBulkParentName',
+        getBulkParentName_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetBulkParentNameRequest.fromBuffer(value),
+        ($0.GetBulkParentNameResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateStudentResponse> createStudent_Pre(
@@ -704,4 +725,13 @@ abstract class UserServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetBatchShortEmployeeInfoResponse> getBatchShortEmployeeInfo(
       $grpc.ServiceCall call, $0.GetBatchShortEmployeeInfoRequest request);
+
+  $async.Future<$0.GetBulkParentNameResponse> getBulkParentName_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetBulkParentNameRequest> $request) async {
+    return getBulkParentName($call, await $request);
+  }
+
+  $async.Future<$0.GetBulkParentNameResponse> getBulkParentName(
+      $grpc.ServiceCall call, $0.GetBulkParentNameRequest request);
 }

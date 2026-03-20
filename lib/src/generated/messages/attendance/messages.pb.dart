@@ -4048,6 +4048,116 @@ class UserAttendance extends $pb.GeneratedMessage {
   $pb.PbList<$1.UserDateAttendanceMap> get userDateAttendances => $_getList(1);
 }
 
+class GetBulkShiftShortInfoRequest extends $pb.GeneratedMessage {
+  factory GetBulkShiftShortInfoRequest({
+    $core.Iterable<$core.String>? shiftIds,
+  }) {
+    final result = create();
+    if (shiftIds != null) result.shiftIds.addAll(shiftIds);
+    return result;
+  }
+
+  GetBulkShiftShortInfoRequest._();
+
+  factory GetBulkShiftShortInfoRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBulkShiftShortInfoRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBulkShiftShortInfoRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'shiftIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBulkShiftShortInfoRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBulkShiftShortInfoRequest copyWith(
+          void Function(GetBulkShiftShortInfoRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetBulkShiftShortInfoRequest))
+          as GetBulkShiftShortInfoRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBulkShiftShortInfoRequest create() =>
+      GetBulkShiftShortInfoRequest._();
+  @$core.override
+  GetBulkShiftShortInfoRequest createEmptyInstance() => create();
+  static $pb.PbList<GetBulkShiftShortInfoRequest> createRepeated() =>
+      $pb.PbList<GetBulkShiftShortInfoRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetBulkShiftShortInfoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBulkShiftShortInfoRequest>(create);
+  static GetBulkShiftShortInfoRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get shiftIds => $_getList(0);
+}
+
+class GetBulkShiftShortInfoResponse extends $pb.GeneratedMessage {
+  factory GetBulkShiftShortInfoResponse({
+    $core.Iterable<OrganizationShiftSelectionMenuItem>? menuItems,
+  }) {
+    final result = create();
+    if (menuItems != null) result.menuItems.addAll(menuItems);
+    return result;
+  }
+
+  GetBulkShiftShortInfoResponse._();
+
+  factory GetBulkShiftShortInfoResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBulkShiftShortInfoResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBulkShiftShortInfoResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..pPM<OrganizationShiftSelectionMenuItem>(
+        1, _omitFieldNames ? '' : 'menuItems',
+        subBuilder: OrganizationShiftSelectionMenuItem.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBulkShiftShortInfoResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBulkShiftShortInfoResponse copyWith(
+          void Function(GetBulkShiftShortInfoResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetBulkShiftShortInfoResponse))
+          as GetBulkShiftShortInfoResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBulkShiftShortInfoResponse create() =>
+      GetBulkShiftShortInfoResponse._();
+  @$core.override
+  GetBulkShiftShortInfoResponse createEmptyInstance() => create();
+  static $pb.PbList<GetBulkShiftShortInfoResponse> createRepeated() =>
+      $pb.PbList<GetBulkShiftShortInfoResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetBulkShiftShortInfoResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBulkShiftShortInfoResponse>(create);
+  static GetBulkShiftShortInfoResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<OrganizationShiftSelectionMenuItem> get menuItems => $_getList(0);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

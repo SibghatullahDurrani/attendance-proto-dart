@@ -1297,3 +1297,39 @@ final $typed_data.Uint8List userAttendanceDescriptor = $convert.base64Decode(
     'Cg5Vc2VyQXR0ZW5kYW5jZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQSWgoVdXNlcl9kYXRlX2'
     'F0dGVuZGFuY2VzGAIgAygLMiYuY29tbW9uX21lc3NhZ2VzLlVzZXJEYXRlQXR0ZW5kYW5jZU1h'
     'cFITdXNlckRhdGVBdHRlbmRhbmNlcw==');
+
+@$core.Deprecated('Use getBulkShiftShortInfoRequestDescriptor instead')
+const GetBulkShiftShortInfoRequest$json = {
+  '1': 'GetBulkShiftShortInfoRequest',
+  '2': [
+    {'1': 'shift_ids', '3': 1, '4': 3, '5': 9, '10': 'shiftIds'},
+  ],
+};
+
+/// Descriptor for `GetBulkShiftShortInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBulkShiftShortInfoRequestDescriptor =
+    $convert.base64Decode(
+        'ChxHZXRCdWxrU2hpZnRTaG9ydEluZm9SZXF1ZXN0EhsKCXNoaWZ0X2lkcxgBIAMoCVIIc2hpZn'
+        'RJZHM=');
+
+@$core.Deprecated('Use getBulkShiftShortInfoResponseDescriptor instead')
+const GetBulkShiftShortInfoResponse$json = {
+  '1': 'GetBulkShiftShortInfoResponse',
+  '2': [
+    {
+      '1': 'menu_items',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.OrganizationShiftSelectionMenuItem',
+      '10': 'menuItems'
+    },
+  ],
+};
+
+/// Descriptor for `GetBulkShiftShortInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBulkShiftShortInfoResponseDescriptor =
+    $convert.base64Decode(
+        'Ch1HZXRCdWxrU2hpZnRTaG9ydEluZm9SZXNwb25zZRJWCgptZW51X2l0ZW1zGAEgAygLMjcuYX'
+        'R0ZW5kYW5jZV9tZXNzYWdlcy5Pcmdhbml6YXRpb25TaGlmdFNlbGVjdGlvbk1lbnVJdGVtUglt'
+        'ZW51SXRlbXM=');

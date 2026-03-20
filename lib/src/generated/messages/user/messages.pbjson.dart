@@ -1194,3 +1194,65 @@ final $typed_data.Uint8List shortEmployeeInfoDescriptor = $convert.base64Decode(
     'pmaXJzdF9uYW1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAyABKAlIAFIKc2Vj'
     'b25kTmFtZYgBARIzChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlSFGlkZW50aWZpY2F0aW'
     '9uTnVtYmVyQg4KDF9zZWNvbmRfbmFtZQ==');
+
+@$core.Deprecated('Use getBulkParentNameRequestDescriptor instead')
+const GetBulkParentNameRequest$json = {
+  '1': 'GetBulkParentNameRequest',
+  '2': [
+    {'1': 'parent_ids', '3': 1, '4': 3, '5': 9, '10': 'parentIds'},
+  ],
+};
+
+/// Descriptor for `GetBulkParentNameRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBulkParentNameRequestDescriptor =
+    $convert.base64Decode(
+        'ChhHZXRCdWxrUGFyZW50TmFtZVJlcXVlc3QSHQoKcGFyZW50X2lkcxgBIAMoCVIJcGFyZW50SW'
+        'Rz');
+
+@$core.Deprecated('Use getBulkParentNameResponseDescriptor instead')
+const GetBulkParentNameResponse$json = {
+  '1': 'GetBulkParentNameResponse',
+  '2': [
+    {
+      '1': 'parent_names',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.ParentName',
+      '10': 'parentNames'
+    },
+  ],
+};
+
+/// Descriptor for `GetBulkParentNameResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBulkParentNameResponseDescriptor =
+    $convert.base64Decode(
+        'ChlHZXRCdWxrUGFyZW50TmFtZVJlc3BvbnNlEjwKDHBhcmVudF9uYW1lcxgCIAMoCzIZLnVzZX'
+        'JfbWVzc2FnZXMuUGFyZW50TmFtZVILcGFyZW50TmFtZXM=');
+
+@$core.Deprecated('Use parentNameDescriptor instead')
+const ParentName$json = {
+  '1': 'ParentName',
+  '2': [
+    {'1': 'parent_id', '3': 1, '4': 1, '5': 9, '10': 'parentId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+  ],
+};
+
+/// Descriptor for `ParentName`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List parentNameDescriptor = $convert.base64Decode(
+    'CgpQYXJlbnROYW1lEhsKCXBhcmVudF9pZBgBIAEoCVIIcGFyZW50SWQSHQoKZmlyc3RfbmFtZR'
+    'gCIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAMgASgJSABSCnNlY29uZE5hbWWIAQFC'
+    'DgoMX3NlY29uZF9uYW1l');

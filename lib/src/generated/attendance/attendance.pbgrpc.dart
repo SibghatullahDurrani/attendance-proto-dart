@@ -189,6 +189,13 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetBulkShiftShortInfoResponse> getBulkShiftShortInfo(
+    $0.GetBulkShiftShortInfoRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getBulkShiftShortInfo, request, options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -300,6 +307,11 @@ class AttendanceServiceClient extends $grpc.Client {
       ($0.GetUserAttendanceReportAttendanceRequest value) =>
           value.writeToBuffer(),
       $0.GetUserAttendanceReportAttendancesResponse.fromBuffer);
+  static final _$getBulkShiftShortInfo = $grpc.ClientMethod<
+          $0.GetBulkShiftShortInfoRequest, $0.GetBulkShiftShortInfoResponse>(
+      '/attendance.AttendanceService/GetBulkShiftShortInfo',
+      ($0.GetBulkShiftShortInfoRequest value) => value.writeToBuffer(),
+      $0.GetBulkShiftShortInfoResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -483,6 +495,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
             $0.GetUserAttendanceReportAttendanceRequest.fromBuffer(value),
         ($0.GetUserAttendanceReportAttendancesResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetBulkShiftShortInfoRequest,
+            $0.GetBulkShiftShortInfoResponse>(
+        'GetBulkShiftShortInfo',
+        getBulkShiftShortInfo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetBulkShiftShortInfoRequest.fromBuffer(value),
+        ($0.GetBulkShiftShortInfoResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -668,4 +689,13 @@ abstract class AttendanceServiceBase extends $grpc.Service {
   $async.Future<$0.GetUserAttendanceReportAttendancesResponse>
       getUserAttendanceReportAttendances($grpc.ServiceCall call,
           $0.GetUserAttendanceReportAttendanceRequest request);
+
+  $async.Future<$0.GetBulkShiftShortInfoResponse> getBulkShiftShortInfo_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetBulkShiftShortInfoRequest> $request) async {
+    return getBulkShiftShortInfo($call, await $request);
+  }
+
+  $async.Future<$0.GetBulkShiftShortInfoResponse> getBulkShiftShortInfo(
+      $grpc.ServiceCall call, $0.GetBulkShiftShortInfoRequest request);
 }

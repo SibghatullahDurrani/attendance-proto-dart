@@ -199,6 +199,13 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$enrollStudentsToClass, request, options: options);
   }
 
+  $grpc.ResponseFuture<$1.GetBulkClassNameResponse> getBulkClassName(
+    $1.GetBulkClassNameRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getBulkClassName, request, options: options);
+  }
+
   /// Attendance RPCS
   $grpc.ResponseFuture<$2.GetUserMonthlyAttendanceStatsResponse>
       getUserMonthlyAttendanceStats(
@@ -302,6 +309,13 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$editShift, request, options: options);
   }
 
+  $grpc.ResponseFuture<$2.GetBulkShiftShortInfoResponse> getBulkShiftShortInfo(
+    $2.GetBulkShiftShortInfoRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getBulkShiftShortInfo, request, options: options);
+  }
+
   /// User RPCs
   $grpc.ResponseFuture<$3.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData(
@@ -310,6 +324,13 @@ class GatewayServiceClient extends $grpc.Client {
   }) {
     return $createUnaryCall(_$getParentStudentSelectionData, request,
         options: options);
+  }
+
+  $grpc.ResponseFuture<$3.GetBulkParentNameResponse> getBulkParentName(
+    $3.GetBulkParentNameRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getBulkParentName, request, options: options);
   }
 
   /// Leave RPCs
@@ -737,6 +758,11 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/EnrollStudentsToClass',
       ($1.EnrollStudentsToClassRequest value) => value.writeToBuffer(),
       $1.EnrollStudentsToClassResponse.fromBuffer);
+  static final _$getBulkClassName = $grpc.ClientMethod<
+          $1.GetBulkClassNameRequest, $1.GetBulkClassNameResponse>(
+      '/gateway.GatewayService/GetBulkClassName',
+      ($1.GetBulkClassNameRequest value) => value.writeToBuffer(),
+      $1.GetBulkClassNameResponse.fromBuffer);
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
           $2.GetUserMonthlyAttendanceStatsRequest,
           $2.GetUserMonthlyAttendanceStatsResponse>(
@@ -807,12 +833,22 @@ class GatewayServiceClient extends $grpc.Client {
           '/gateway.GatewayService/EditShift',
           ($2.EditShiftRequest value) => value.writeToBuffer(),
           $2.EditShiftResponse.fromBuffer);
+  static final _$getBulkShiftShortInfo = $grpc.ClientMethod<
+          $2.GetBulkShiftShortInfoRequest, $2.GetBulkShiftShortInfoResponse>(
+      '/gateway.GatewayService/GetBulkShiftShortInfo',
+      ($2.GetBulkShiftShortInfoRequest value) => value.writeToBuffer(),
+      $2.GetBulkShiftShortInfoResponse.fromBuffer);
   static final _$getParentStudentSelectionData = $grpc.ClientMethod<
           $3.GetParentStudentSelectionDataRequest,
           $3.GetParentStudentSelectionDataResponse>(
       '/gateway.GatewayService/GetParentStudentSelectionData',
       ($3.GetParentStudentSelectionDataRequest value) => value.writeToBuffer(),
       $3.GetParentStudentSelectionDataResponse.fromBuffer);
+  static final _$getBulkParentName = $grpc.ClientMethod<
+          $3.GetBulkParentNameRequest, $3.GetBulkParentNameResponse>(
+      '/gateway.GatewayService/GetBulkParentName',
+      ($3.GetBulkParentNameRequest value) => value.writeToBuffer(),
+      $3.GetBulkParentNameResponse.fromBuffer);
   static final _$listUserLeaves =
       $grpc.ClientMethod<$4.ListUserLeavesRequest, $4.ListUserLeavesResponse>(
           '/gateway.GatewayService/ListUserLeaves',
@@ -1218,6 +1254,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $1.EnrollStudentsToClassRequest.fromBuffer(value),
         ($1.EnrollStudentsToClassResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetBulkClassNameRequest,
+            $1.GetBulkClassNameResponse>(
+        'GetBulkClassName',
+        getBulkClassName_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $1.GetBulkClassNameRequest.fromBuffer(value),
+        ($1.GetBulkClassNameResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.GetUserMonthlyAttendanceStatsRequest,
             $2.GetUserMonthlyAttendanceStatsResponse>(
         'GetUserMonthlyAttendanceStats',
@@ -1329,6 +1374,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $2.EditShiftRequest.fromBuffer(value),
         ($2.EditShiftResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetBulkShiftShortInfoRequest,
+            $2.GetBulkShiftShortInfoResponse>(
+        'GetBulkShiftShortInfo',
+        getBulkShiftShortInfo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetBulkShiftShortInfoRequest.fromBuffer(value),
+        ($2.GetBulkShiftShortInfoResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$3.GetParentStudentSelectionDataRequest,
             $3.GetParentStudentSelectionDataResponse>(
         'GetParentStudentSelectionData',
@@ -1339,6 +1393,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
             $3.GetParentStudentSelectionDataRequest.fromBuffer(value),
         ($3.GetParentStudentSelectionDataResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetBulkParentNameRequest,
+            $3.GetBulkParentNameResponse>(
+        'GetBulkParentName',
+        getBulkParentName_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $3.GetBulkParentNameRequest.fromBuffer(value),
+        ($3.GetBulkParentNameResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$4.ListUserLeavesRequest,
             $4.ListUserLeavesResponse>(
         'ListUserLeaves',
@@ -1895,6 +1958,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$1.EnrollStudentsToClassResponse> enrollStudentsToClass(
       $grpc.ServiceCall call, $1.EnrollStudentsToClassRequest request);
 
+  $async.Future<$1.GetBulkClassNameResponse> getBulkClassName_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$1.GetBulkClassNameRequest> $request) async {
+    return getBulkClassName($call, await $request);
+  }
+
+  $async.Future<$1.GetBulkClassNameResponse> getBulkClassName(
+      $grpc.ServiceCall call, $1.GetBulkClassNameRequest request);
+
   $async.Future<$2.GetUserMonthlyAttendanceStatsResponse>
       getUserMonthlyAttendanceStats_Pre(
           $grpc.ServiceCall $call,
@@ -2012,6 +2084,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$2.EditShiftResponse> editShift(
       $grpc.ServiceCall call, $2.EditShiftRequest request);
 
+  $async.Future<$2.GetBulkShiftShortInfoResponse> getBulkShiftShortInfo_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$2.GetBulkShiftShortInfoRequest> $request) async {
+    return getBulkShiftShortInfo($call, await $request);
+  }
+
+  $async.Future<$2.GetBulkShiftShortInfoResponse> getBulkShiftShortInfo(
+      $grpc.ServiceCall call, $2.GetBulkShiftShortInfoRequest request);
+
   $async.Future<$3.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData_Pre(
           $grpc.ServiceCall $call,
@@ -2023,6 +2104,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$3.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData($grpc.ServiceCall call,
           $3.GetParentStudentSelectionDataRequest request);
+
+  $async.Future<$3.GetBulkParentNameResponse> getBulkParentName_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$3.GetBulkParentNameRequest> $request) async {
+    return getBulkParentName($call, await $request);
+  }
+
+  $async.Future<$3.GetBulkParentNameResponse> getBulkParentName(
+      $grpc.ServiceCall call, $3.GetBulkParentNameRequest request);
 
   $async.Future<$4.ListUserLeavesResponse> listUserLeaves_Pre(
       $grpc.ServiceCall $call,

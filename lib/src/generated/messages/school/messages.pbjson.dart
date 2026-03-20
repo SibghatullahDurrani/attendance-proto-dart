@@ -3223,3 +3223,52 @@ final $typed_data.Uint8List studentInfoOfSchoolForEnrollmentDescriptor = $conver
     'ZXJCGwoZX2xhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZUIdChtfbGFzdF9hdHRlbmRlZF9zZWN0aW'
     '9uX25hbWVCHQobX2xhc3RfYXR0ZW5kZWRfc2Vzc2lvbl9uYW1lQigKJl9sYXN0X2F0dGVuZGVk'
     'X2NsYXNzX2Vucm9sbG1lbnRfc3RhdHVz');
+
+@$core.Deprecated('Use getBulkClassNameRequestDescriptor instead')
+const GetBulkClassNameRequest$json = {
+  '1': 'GetBulkClassNameRequest',
+  '2': [
+    {'1': 'class_id', '3': 1, '4': 3, '5': 9, '10': 'classId'},
+  ],
+};
+
+/// Descriptor for `GetBulkClassNameRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBulkClassNameRequestDescriptor =
+    $convert.base64Decode(
+        'ChdHZXRCdWxrQ2xhc3NOYW1lUmVxdWVzdBIZCghjbGFzc19pZBgBIAMoCVIHY2xhc3NJZA==');
+
+@$core.Deprecated('Use getBulkClassNameResponseDescriptor instead')
+const GetBulkClassNameResponse$json = {
+  '1': 'GetBulkClassNameResponse',
+  '2': [
+    {
+      '1': 'class_names',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.ClassName',
+      '10': 'classNames'
+    },
+  ],
+};
+
+/// Descriptor for `GetBulkClassNameResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getBulkClassNameResponseDescriptor =
+    $convert.base64Decode(
+        'ChhHZXRCdWxrQ2xhc3NOYW1lUmVzcG9uc2USOwoLY2xhc3NfbmFtZXMYAiADKAsyGi5zY2hvb2'
+        'xfbWVzc2FnZXMuQ2xhc3NOYW1lUgpjbGFzc05hbWVz');
+
+@$core.Deprecated('Use classNameDescriptor instead')
+const ClassName$json = {
+  '1': 'ClassName',
+  '2': [
+    {'1': 'class_id', '3': 1, '4': 1, '5': 9, '10': 'classId'},
+    {'1': 'class_name', '3': 2, '4': 1, '5': 9, '10': 'className'},
+    {'1': 'section', '3': 3, '4': 1, '5': 9, '10': 'section'},
+  ],
+};
+
+/// Descriptor for `ClassName`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List classNameDescriptor = $convert.base64Decode(
+    'CglDbGFzc05hbWUSGQoIY2xhc3NfaWQYASABKAlSB2NsYXNzSWQSHQoKY2xhc3NfbmFtZRgCIA'
+    'EoCVIJY2xhc3NOYW1lEhgKB3NlY3Rpb24YAyABKAlSB3NlY3Rpb24=');

@@ -3532,6 +3532,187 @@ class ShortEmployeeInfo extends $pb.GeneratedMessage {
   void clearIdentificationNumber() => $_clearField(4);
 }
 
+class GetBulkParentNameRequest extends $pb.GeneratedMessage {
+  factory GetBulkParentNameRequest({
+    $core.Iterable<$core.String>? parentIds,
+  }) {
+    final result = create();
+    if (parentIds != null) result.parentIds.addAll(parentIds);
+    return result;
+  }
+
+  GetBulkParentNameRequest._();
+
+  factory GetBulkParentNameRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBulkParentNameRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBulkParentNameRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'parentIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBulkParentNameRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBulkParentNameRequest copyWith(
+          void Function(GetBulkParentNameRequest) updates) =>
+      super.copyWith((message) => updates(message as GetBulkParentNameRequest))
+          as GetBulkParentNameRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBulkParentNameRequest create() => GetBulkParentNameRequest._();
+  @$core.override
+  GetBulkParentNameRequest createEmptyInstance() => create();
+  static $pb.PbList<GetBulkParentNameRequest> createRepeated() =>
+      $pb.PbList<GetBulkParentNameRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetBulkParentNameRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBulkParentNameRequest>(create);
+  static GetBulkParentNameRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get parentIds => $_getList(0);
+}
+
+class GetBulkParentNameResponse extends $pb.GeneratedMessage {
+  factory GetBulkParentNameResponse({
+    $core.Iterable<ParentName>? parentNames,
+  }) {
+    final result = create();
+    if (parentNames != null) result.parentNames.addAll(parentNames);
+    return result;
+  }
+
+  GetBulkParentNameResponse._();
+
+  factory GetBulkParentNameResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBulkParentNameResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetBulkParentNameResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPM<ParentName>(2, _omitFieldNames ? '' : 'parentNames',
+        subBuilder: ParentName.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBulkParentNameResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBulkParentNameResponse copyWith(
+          void Function(GetBulkParentNameResponse) updates) =>
+      super.copyWith((message) => updates(message as GetBulkParentNameResponse))
+          as GetBulkParentNameResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBulkParentNameResponse create() => GetBulkParentNameResponse._();
+  @$core.override
+  GetBulkParentNameResponse createEmptyInstance() => create();
+  static $pb.PbList<GetBulkParentNameResponse> createRepeated() =>
+      $pb.PbList<GetBulkParentNameResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetBulkParentNameResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBulkParentNameResponse>(create);
+  static GetBulkParentNameResponse? _defaultInstance;
+
+  @$pb.TagNumber(2)
+  $pb.PbList<ParentName> get parentNames => $_getList(0);
+}
+
+class ParentName extends $pb.GeneratedMessage {
+  factory ParentName({
+    $core.String? parentId,
+    $core.String? firstName,
+    $core.String? secondName,
+  }) {
+    final result = create();
+    if (parentId != null) result.parentId = parentId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    return result;
+  }
+
+  ParentName._();
+
+  factory ParentName.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ParentName.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ParentName',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parentId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParentName clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParentName copyWith(void Function(ParentName) updates) =>
+      super.copyWith((message) => updates(message as ParentName)) as ParentName;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ParentName create() => ParentName._();
+  @$core.override
+  ParentName createEmptyInstance() => create();
+  static $pb.PbList<ParentName> createRepeated() => $pb.PbList<ParentName>();
+  @$core.pragma('dart2js:noInline')
+  static ParentName getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ParentName>(create);
+  static ParentName? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parentId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasParentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =
