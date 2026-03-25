@@ -90,6 +90,15 @@ const BulkRegistrationCommand$json = {
       '9': 0,
       '10': 'deleteRowImage'
     },
+    {
+      '1': 'register_parent',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.saga_messages.RegisterParentCmd',
+      '9': 0,
+      '10': 'registerParent'
+    },
   ],
   '8': [
     {'1': 'command'},
@@ -108,7 +117,8 @@ final $typed_data.Uint8List bulkRegistrationCommandDescriptor = $convert.base64D
     'JkZXJSb3dDbWRIAFIKcmVvcmRlclJvdxJFCg1jbGVhcl9zZXNzaW9uGAcgASgLMh4uc2FnYV9t'
     'ZXNzYWdlcy5DbGVhclNlc3Npb25DbWRIAFIMY2xlYXJTZXNzaW9uEkwKEGRlbGV0ZV9yb3dfaW'
     '1hZ2UYCCABKAsyIC5zYWdhX21lc3NhZ2VzLkRlbGV0ZVJvd0ltYWdlQ21kSABSDmRlbGV0ZVJv'
-    'd0ltYWdlQgkKB2NvbW1hbmQ=');
+    'd0ltYWdlEksKD3JlZ2lzdGVyX3BhcmVudBgJIAEoCzIgLnNhZ2FfbWVzc2FnZXMuUmVnaXN0ZX'
+    'JQYXJlbnRDbWRIAFIOcmVnaXN0ZXJQYXJlbnRCCQoHY29tbWFuZA==');
 
 @$core.Deprecated('Use startSessionCmdDescriptor instead')
 const StartSessionCmd$json = {
@@ -312,6 +322,18 @@ const DeleteRowImageCmd$json = {
 /// Descriptor for `DeleteRowImageCmd`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteRowImageCmdDescriptor = $convert
     .base64Decode('ChFEZWxldGVSb3dJbWFnZUNtZBIVCgZyb3dfaWQYASABKAlSBXJvd0lk');
+
+@$core.Deprecated('Use registerParentCmdDescriptor instead')
+const RegisterParentCmd$json = {
+  '1': 'RegisterParentCmd',
+  '2': [
+    {'1': 'row_id', '3': 1, '4': 1, '5': 9, '10': 'rowId'},
+  ],
+};
+
+/// Descriptor for `RegisterParentCmd`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List registerParentCmdDescriptor = $convert
+    .base64Decode('ChFSZWdpc3RlclBhcmVudENtZBIVCgZyb3dfaWQYASABKAlSBXJvd0lk');
 
 @$core.Deprecated('Use bulkRegistrationEventDescriptor instead')
 const BulkRegistrationEvent$json = {

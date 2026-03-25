@@ -25,6 +25,7 @@ enum BulkRegistrationCommand_Command {
   reorderRow,
   clearSession,
   deleteRowImage,
+  registerParent,
   notSet
 }
 
@@ -38,6 +39,7 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
     ReorderRowCmd? reorderRow,
     ClearSessionCmd? clearSession,
     DeleteRowImageCmd? deleteRowImage,
+    RegisterParentCmd? registerParent,
   }) {
     final result = create();
     if (startSession != null) result.startSession = startSession;
@@ -48,6 +50,7 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
     if (reorderRow != null) result.reorderRow = reorderRow;
     if (clearSession != null) result.clearSession = clearSession;
     if (deleteRowImage != null) result.deleteRowImage = deleteRowImage;
+    if (registerParent != null) result.registerParent = registerParent;
     return result;
   }
 
@@ -70,13 +73,14 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
     6: BulkRegistrationCommand_Command.reorderRow,
     7: BulkRegistrationCommand_Command.clearSession,
     8: BulkRegistrationCommand_Command.deleteRowImage,
+    9: BulkRegistrationCommand_Command.registerParent,
     0: BulkRegistrationCommand_Command.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BulkRegistrationCommand',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8])
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
     ..aOM<StartSessionCmd>(1, _omitFieldNames ? '' : 'startSession',
         subBuilder: StartSessionCmd.create)
     ..aOM<ResumeSessionCmd>(2, _omitFieldNames ? '' : 'resumeSession',
@@ -93,6 +97,8 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
         subBuilder: ClearSessionCmd.create)
     ..aOM<DeleteRowImageCmd>(8, _omitFieldNames ? '' : 'deleteRowImage',
         subBuilder: DeleteRowImageCmd.create)
+    ..aOM<RegisterParentCmd>(9, _omitFieldNames ? '' : 'registerParent',
+        subBuilder: RegisterParentCmd.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -125,6 +131,7 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   @$pb.TagNumber(7)
   @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
   BulkRegistrationCommand_Command whichCommand() =>
       _BulkRegistrationCommand_CommandByTag[$_whichOneof(0)]!;
   @$pb.TagNumber(1)
@@ -135,6 +142,7 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   @$pb.TagNumber(7)
   @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
   void clearCommand() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -224,6 +232,17 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
   void clearDeleteRowImage() => $_clearField(8);
   @$pb.TagNumber(8)
   DeleteRowImageCmd ensureDeleteRowImage() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  RegisterParentCmd get registerParent => $_getN(8);
+  @$pb.TagNumber(9)
+  set registerParent(RegisterParentCmd value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasRegisterParent() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearRegisterParent() => $_clearField(9);
+  @$pb.TagNumber(9)
+  RegisterParentCmd ensureRegisterParent() => $_ensure(8);
 }
 
 class StartSessionCmd extends $pb.GeneratedMessage {
@@ -802,6 +821,62 @@ class DeleteRowImageCmd extends $pb.GeneratedMessage {
   static DeleteRowImageCmd getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteRowImageCmd>(create);
   static DeleteRowImageCmd? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get rowId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set rowId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasRowId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRowId() => $_clearField(1);
+}
+
+class RegisterParentCmd extends $pb.GeneratedMessage {
+  factory RegisterParentCmd({
+    $core.String? rowId,
+  }) {
+    final result = create();
+    if (rowId != null) result.rowId = rowId;
+    return result;
+  }
+
+  RegisterParentCmd._();
+
+  factory RegisterParentCmd.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RegisterParentCmd.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegisterParentCmd',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'rowId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterParentCmd clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterParentCmd copyWith(void Function(RegisterParentCmd) updates) =>
+      super.copyWith((message) => updates(message as RegisterParentCmd))
+          as RegisterParentCmd;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RegisterParentCmd create() => RegisterParentCmd._();
+  @$core.override
+  RegisterParentCmd createEmptyInstance() => create();
+  static $pb.PbList<RegisterParentCmd> createRepeated() =>
+      $pb.PbList<RegisterParentCmd>();
+  @$core.pragma('dart2js:noInline')
+  static RegisterParentCmd getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RegisterParentCmd>(create);
+  static RegisterParentCmd? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get rowId => $_getSZ(0);
