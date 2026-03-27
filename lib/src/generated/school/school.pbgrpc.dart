@@ -463,6 +463,111 @@ class SchoolServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getBulkClassName, request, options: options);
   }
 
+  /// Bulk Add/Remove Students to School
+  $grpc.ResponseFuture<$0.BulkAddStudentsToSchoolResponse>
+      bulkAddStudentsToSchool(
+    $0.BulkAddStudentsToSchoolRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkAddStudentsToSchool, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BulkRemoveStudentsFromSchoolResponse>
+      bulkRemoveStudentsFromSchool(
+    $0.BulkRemoveStudentsFromSchoolRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkRemoveStudentsFromSchool, request,
+        options: options);
+  }
+
+  /// Bulk Add/Remove Teachers to School
+  $grpc.ResponseFuture<$0.BulkAddTeachersToSchoolResponse>
+      bulkAddTeachersToSchool(
+    $0.BulkAddTeachersToSchoolRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkAddTeachersToSchool, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BulkRemoveTeachersFromSchoolResponse>
+      bulkRemoveTeachersFromSchool(
+    $0.BulkRemoveTeachersFromSchoolRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkRemoveTeachersFromSchool, request,
+        options: options);
+  }
+
+  /// Remove Parent from School (single)
+  $grpc.ResponseFuture<$0.RemoveParentFromSchoolResponse>
+      removeParentFromSchool(
+    $0.RemoveParentFromSchoolRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$removeParentFromSchool, request,
+        options: options);
+  }
+
+  /// Bulk Add/Remove Parents to School
+  $grpc.ResponseFuture<$0.BulkAddParentsToSchoolResponse>
+      bulkAddParentsToSchool(
+    $0.BulkAddParentsToSchoolRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkAddParentsToSchool, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BulkRemoveParentsFromSchoolResponse>
+      bulkRemoveParentsFromSchool(
+    $0.BulkRemoveParentsFromSchoolRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkRemoveParentsFromSchool, request,
+        options: options);
+  }
+
+  /// Bulk Add/Remove Employees to School
+  $grpc.ResponseFuture<$0.BulkAddEmployeesToSchoolResponse>
+      bulkAddEmployeesToSchool(
+    $0.BulkAddEmployeesToSchoolRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkAddEmployeesToSchool, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BulkRemoveEmployeesFromSchoolResponse>
+      bulkRemoveEmployeesFromSchool(
+    $0.BulkRemoveEmployeesFromSchoolRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkRemoveEmployeesFromSchool, request,
+        options: options);
+  }
+
+  /// Bulk Add/Remove Students to Class
+  $grpc.ResponseFuture<$0.BulkAddStudentsToClassResponse>
+      bulkAddStudentsToClass(
+    $0.BulkAddStudentsToClassRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkAddStudentsToClass, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BulkRemoveStudentsFromClassResponse>
+      bulkRemoveStudentsFromClass(
+    $0.BulkRemoveStudentsFromClassRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkRemoveStudentsFromClass, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createSchool =
@@ -761,6 +866,69 @@ class SchoolServiceClient extends $grpc.Client {
       '/school.SchoolService/GetBulkClassName',
       ($0.GetBulkClassNameRequest value) => value.writeToBuffer(),
       $0.GetBulkClassNameResponse.fromBuffer);
+  static final _$bulkAddStudentsToSchool = $grpc.ClientMethod<
+          $0.BulkAddStudentsToSchoolRequest,
+          $0.BulkAddStudentsToSchoolResponse>(
+      '/school.SchoolService/BulkAddStudentsToSchool',
+      ($0.BulkAddStudentsToSchoolRequest value) => value.writeToBuffer(),
+      $0.BulkAddStudentsToSchoolResponse.fromBuffer);
+  static final _$bulkRemoveStudentsFromSchool = $grpc.ClientMethod<
+          $0.BulkRemoveStudentsFromSchoolRequest,
+          $0.BulkRemoveStudentsFromSchoolResponse>(
+      '/school.SchoolService/BulkRemoveStudentsFromSchool',
+      ($0.BulkRemoveStudentsFromSchoolRequest value) => value.writeToBuffer(),
+      $0.BulkRemoveStudentsFromSchoolResponse.fromBuffer);
+  static final _$bulkAddTeachersToSchool = $grpc.ClientMethod<
+          $0.BulkAddTeachersToSchoolRequest,
+          $0.BulkAddTeachersToSchoolResponse>(
+      '/school.SchoolService/BulkAddTeachersToSchool',
+      ($0.BulkAddTeachersToSchoolRequest value) => value.writeToBuffer(),
+      $0.BulkAddTeachersToSchoolResponse.fromBuffer);
+  static final _$bulkRemoveTeachersFromSchool = $grpc.ClientMethod<
+          $0.BulkRemoveTeachersFromSchoolRequest,
+          $0.BulkRemoveTeachersFromSchoolResponse>(
+      '/school.SchoolService/BulkRemoveTeachersFromSchool',
+      ($0.BulkRemoveTeachersFromSchoolRequest value) => value.writeToBuffer(),
+      $0.BulkRemoveTeachersFromSchoolResponse.fromBuffer);
+  static final _$removeParentFromSchool = $grpc.ClientMethod<
+          $0.RemoveParentFromSchoolRequest, $0.RemoveParentFromSchoolResponse>(
+      '/school.SchoolService/RemoveParentFromSchool',
+      ($0.RemoveParentFromSchoolRequest value) => value.writeToBuffer(),
+      $0.RemoveParentFromSchoolResponse.fromBuffer);
+  static final _$bulkAddParentsToSchool = $grpc.ClientMethod<
+          $0.BulkAddParentsToSchoolRequest, $0.BulkAddParentsToSchoolResponse>(
+      '/school.SchoolService/BulkAddParentsToSchool',
+      ($0.BulkAddParentsToSchoolRequest value) => value.writeToBuffer(),
+      $0.BulkAddParentsToSchoolResponse.fromBuffer);
+  static final _$bulkRemoveParentsFromSchool = $grpc.ClientMethod<
+          $0.BulkRemoveParentsFromSchoolRequest,
+          $0.BulkRemoveParentsFromSchoolResponse>(
+      '/school.SchoolService/BulkRemoveParentsFromSchool',
+      ($0.BulkRemoveParentsFromSchoolRequest value) => value.writeToBuffer(),
+      $0.BulkRemoveParentsFromSchoolResponse.fromBuffer);
+  static final _$bulkAddEmployeesToSchool = $grpc.ClientMethod<
+          $0.BulkAddEmployeesToSchoolRequest,
+          $0.BulkAddEmployeesToSchoolResponse>(
+      '/school.SchoolService/BulkAddEmployeesToSchool',
+      ($0.BulkAddEmployeesToSchoolRequest value) => value.writeToBuffer(),
+      $0.BulkAddEmployeesToSchoolResponse.fromBuffer);
+  static final _$bulkRemoveEmployeesFromSchool = $grpc.ClientMethod<
+          $0.BulkRemoveEmployeesFromSchoolRequest,
+          $0.BulkRemoveEmployeesFromSchoolResponse>(
+      '/school.SchoolService/BulkRemoveEmployeesFromSchool',
+      ($0.BulkRemoveEmployeesFromSchoolRequest value) => value.writeToBuffer(),
+      $0.BulkRemoveEmployeesFromSchoolResponse.fromBuffer);
+  static final _$bulkAddStudentsToClass = $grpc.ClientMethod<
+          $0.BulkAddStudentsToClassRequest, $0.BulkAddStudentsToClassResponse>(
+      '/school.SchoolService/BulkAddStudentsToClass',
+      ($0.BulkAddStudentsToClassRequest value) => value.writeToBuffer(),
+      $0.BulkAddStudentsToClassResponse.fromBuffer);
+  static final _$bulkRemoveStudentsFromClass = $grpc.ClientMethod<
+          $0.BulkRemoveStudentsFromClassRequest,
+          $0.BulkRemoveStudentsFromClassResponse>(
+      '/school.SchoolService/BulkRemoveStudentsFromClass',
+      ($0.BulkRemoveStudentsFromClassRequest value) => value.writeToBuffer(),
+      $0.BulkRemoveStudentsFromClassResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('school.SchoolService')
@@ -1272,6 +1440,110 @@ abstract class SchoolServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetBulkClassNameRequest.fromBuffer(value),
         ($0.GetBulkClassNameResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkAddStudentsToSchoolRequest,
+            $0.BulkAddStudentsToSchoolResponse>(
+        'BulkAddStudentsToSchool',
+        bulkAddStudentsToSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkAddStudentsToSchoolRequest.fromBuffer(value),
+        ($0.BulkAddStudentsToSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkRemoveStudentsFromSchoolRequest,
+            $0.BulkRemoveStudentsFromSchoolResponse>(
+        'BulkRemoveStudentsFromSchool',
+        bulkRemoveStudentsFromSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkRemoveStudentsFromSchoolRequest.fromBuffer(value),
+        ($0.BulkRemoveStudentsFromSchoolResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkAddTeachersToSchoolRequest,
+            $0.BulkAddTeachersToSchoolResponse>(
+        'BulkAddTeachersToSchool',
+        bulkAddTeachersToSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkAddTeachersToSchoolRequest.fromBuffer(value),
+        ($0.BulkAddTeachersToSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkRemoveTeachersFromSchoolRequest,
+            $0.BulkRemoveTeachersFromSchoolResponse>(
+        'BulkRemoveTeachersFromSchool',
+        bulkRemoveTeachersFromSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkRemoveTeachersFromSchoolRequest.fromBuffer(value),
+        ($0.BulkRemoveTeachersFromSchoolResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RemoveParentFromSchoolRequest,
+            $0.RemoveParentFromSchoolResponse>(
+        'RemoveParentFromSchool',
+        removeParentFromSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.RemoveParentFromSchoolRequest.fromBuffer(value),
+        ($0.RemoveParentFromSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkAddParentsToSchoolRequest,
+            $0.BulkAddParentsToSchoolResponse>(
+        'BulkAddParentsToSchool',
+        bulkAddParentsToSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkAddParentsToSchoolRequest.fromBuffer(value),
+        ($0.BulkAddParentsToSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkRemoveParentsFromSchoolRequest,
+            $0.BulkRemoveParentsFromSchoolResponse>(
+        'BulkRemoveParentsFromSchool',
+        bulkRemoveParentsFromSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkRemoveParentsFromSchoolRequest.fromBuffer(value),
+        ($0.BulkRemoveParentsFromSchoolResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkAddEmployeesToSchoolRequest,
+            $0.BulkAddEmployeesToSchoolResponse>(
+        'BulkAddEmployeesToSchool',
+        bulkAddEmployeesToSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkAddEmployeesToSchoolRequest.fromBuffer(value),
+        ($0.BulkAddEmployeesToSchoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkRemoveEmployeesFromSchoolRequest,
+            $0.BulkRemoveEmployeesFromSchoolResponse>(
+        'BulkRemoveEmployeesFromSchool',
+        bulkRemoveEmployeesFromSchool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkRemoveEmployeesFromSchoolRequest.fromBuffer(value),
+        ($0.BulkRemoveEmployeesFromSchoolResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkAddStudentsToClassRequest,
+            $0.BulkAddStudentsToClassResponse>(
+        'BulkAddStudentsToClass',
+        bulkAddStudentsToClass_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkAddStudentsToClassRequest.fromBuffer(value),
+        ($0.BulkAddStudentsToClassResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkRemoveStudentsFromClassRequest,
+            $0.BulkRemoveStudentsFromClassResponse>(
+        'BulkRemoveStudentsFromClass',
+        bulkRemoveStudentsFromClass_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkRemoveStudentsFromClassRequest.fromBuffer(value),
+        ($0.BulkRemoveStudentsFromClassResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateSchoolResponse> createSchool_Pre(
@@ -1791,4 +2063,114 @@ abstract class SchoolServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetBulkClassNameResponse> getBulkClassName(
       $grpc.ServiceCall call, $0.GetBulkClassNameRequest request);
+
+  $async.Future<$0.BulkAddStudentsToSchoolResponse> bulkAddStudentsToSchool_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkAddStudentsToSchoolRequest> $request) async {
+    return bulkAddStudentsToSchool($call, await $request);
+  }
+
+  $async.Future<$0.BulkAddStudentsToSchoolResponse> bulkAddStudentsToSchool(
+      $grpc.ServiceCall call, $0.BulkAddStudentsToSchoolRequest request);
+
+  $async.Future<$0.BulkRemoveStudentsFromSchoolResponse>
+      bulkRemoveStudentsFromSchool_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.BulkRemoveStudentsFromSchoolRequest>
+              $request) async {
+    return bulkRemoveStudentsFromSchool($call, await $request);
+  }
+
+  $async.Future<$0.BulkRemoveStudentsFromSchoolResponse>
+      bulkRemoveStudentsFromSchool($grpc.ServiceCall call,
+          $0.BulkRemoveStudentsFromSchoolRequest request);
+
+  $async.Future<$0.BulkAddTeachersToSchoolResponse> bulkAddTeachersToSchool_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkAddTeachersToSchoolRequest> $request) async {
+    return bulkAddTeachersToSchool($call, await $request);
+  }
+
+  $async.Future<$0.BulkAddTeachersToSchoolResponse> bulkAddTeachersToSchool(
+      $grpc.ServiceCall call, $0.BulkAddTeachersToSchoolRequest request);
+
+  $async.Future<$0.BulkRemoveTeachersFromSchoolResponse>
+      bulkRemoveTeachersFromSchool_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.BulkRemoveTeachersFromSchoolRequest>
+              $request) async {
+    return bulkRemoveTeachersFromSchool($call, await $request);
+  }
+
+  $async.Future<$0.BulkRemoveTeachersFromSchoolResponse>
+      bulkRemoveTeachersFromSchool($grpc.ServiceCall call,
+          $0.BulkRemoveTeachersFromSchoolRequest request);
+
+  $async.Future<$0.RemoveParentFromSchoolResponse> removeParentFromSchool_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.RemoveParentFromSchoolRequest> $request) async {
+    return removeParentFromSchool($call, await $request);
+  }
+
+  $async.Future<$0.RemoveParentFromSchoolResponse> removeParentFromSchool(
+      $grpc.ServiceCall call, $0.RemoveParentFromSchoolRequest request);
+
+  $async.Future<$0.BulkAddParentsToSchoolResponse> bulkAddParentsToSchool_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkAddParentsToSchoolRequest> $request) async {
+    return bulkAddParentsToSchool($call, await $request);
+  }
+
+  $async.Future<$0.BulkAddParentsToSchoolResponse> bulkAddParentsToSchool(
+      $grpc.ServiceCall call, $0.BulkAddParentsToSchoolRequest request);
+
+  $async.Future<$0.BulkRemoveParentsFromSchoolResponse>
+      bulkRemoveParentsFromSchool_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.BulkRemoveParentsFromSchoolRequest> $request) async {
+    return bulkRemoveParentsFromSchool($call, await $request);
+  }
+
+  $async.Future<$0.BulkRemoveParentsFromSchoolResponse>
+      bulkRemoveParentsFromSchool($grpc.ServiceCall call,
+          $0.BulkRemoveParentsFromSchoolRequest request);
+
+  $async.Future<$0.BulkAddEmployeesToSchoolResponse>
+      bulkAddEmployeesToSchool_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.BulkAddEmployeesToSchoolRequest> $request) async {
+    return bulkAddEmployeesToSchool($call, await $request);
+  }
+
+  $async.Future<$0.BulkAddEmployeesToSchoolResponse> bulkAddEmployeesToSchool(
+      $grpc.ServiceCall call, $0.BulkAddEmployeesToSchoolRequest request);
+
+  $async.Future<$0.BulkRemoveEmployeesFromSchoolResponse>
+      bulkRemoveEmployeesFromSchool_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.BulkRemoveEmployeesFromSchoolRequest>
+              $request) async {
+    return bulkRemoveEmployeesFromSchool($call, await $request);
+  }
+
+  $async.Future<$0.BulkRemoveEmployeesFromSchoolResponse>
+      bulkRemoveEmployeesFromSchool($grpc.ServiceCall call,
+          $0.BulkRemoveEmployeesFromSchoolRequest request);
+
+  $async.Future<$0.BulkAddStudentsToClassResponse> bulkAddStudentsToClass_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkAddStudentsToClassRequest> $request) async {
+    return bulkAddStudentsToClass($call, await $request);
+  }
+
+  $async.Future<$0.BulkAddStudentsToClassResponse> bulkAddStudentsToClass(
+      $grpc.ServiceCall call, $0.BulkAddStudentsToClassRequest request);
+
+  $async.Future<$0.BulkRemoveStudentsFromClassResponse>
+      bulkRemoveStudentsFromClass_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.BulkRemoveStudentsFromClassRequest> $request) async {
+    return bulkRemoveStudentsFromClass($call, await $request);
+  }
+
+  $async.Future<$0.BulkRemoveStudentsFromClassResponse>
+      bulkRemoveStudentsFromClass($grpc.ServiceCall call,
+          $0.BulkRemoveStudentsFromClassRequest request);
 }

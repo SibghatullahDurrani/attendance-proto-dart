@@ -99,6 +99,15 @@ const BulkRegistrationCommand$json = {
       '9': 0,
       '10': 'registerParent'
     },
+    {
+      '1': 'register_all',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.saga_messages.RegisterAllCmd',
+      '9': 0,
+      '10': 'registerAll'
+    },
   ],
   '8': [
     {'1': 'command'},
@@ -118,7 +127,8 @@ final $typed_data.Uint8List bulkRegistrationCommandDescriptor = $convert.base64D
     'ZXNzYWdlcy5DbGVhclNlc3Npb25DbWRIAFIMY2xlYXJTZXNzaW9uEkwKEGRlbGV0ZV9yb3dfaW'
     '1hZ2UYCCABKAsyIC5zYWdhX21lc3NhZ2VzLkRlbGV0ZVJvd0ltYWdlQ21kSABSDmRlbGV0ZVJv'
     'd0ltYWdlEksKD3JlZ2lzdGVyX3BhcmVudBgJIAEoCzIgLnNhZ2FfbWVzc2FnZXMuUmVnaXN0ZX'
-    'JQYXJlbnRDbWRIAFIOcmVnaXN0ZXJQYXJlbnRCCQoHY29tbWFuZA==');
+    'JQYXJlbnRDbWRIAFIOcmVnaXN0ZXJQYXJlbnQSQgoMcmVnaXN0ZXJfYWxsGAogASgLMh0uc2Fn'
+    'YV9tZXNzYWdlcy5SZWdpc3RlckFsbENtZEgAUgtyZWdpc3RlckFsbEIJCgdjb21tYW5k');
 
 @$core.Deprecated('Use startSessionCmdDescriptor instead')
 const StartSessionCmd$json = {
@@ -335,6 +345,15 @@ const RegisterParentCmd$json = {
 final $typed_data.Uint8List registerParentCmdDescriptor = $convert
     .base64Decode('ChFSZWdpc3RlclBhcmVudENtZBIVCgZyb3dfaWQYASABKAlSBXJvd0lk');
 
+@$core.Deprecated('Use registerAllCmdDescriptor instead')
+const RegisterAllCmd$json = {
+  '1': 'RegisterAllCmd',
+};
+
+/// Descriptor for `RegisterAllCmd`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List registerAllCmdDescriptor =
+    $convert.base64Decode('Cg5SZWdpc3RlckFsbENtZA==');
+
 @$core.Deprecated('Use bulkRegistrationEventDescriptor instead')
 const BulkRegistrationEvent$json = {
   '1': 'BulkRegistrationEvent',
@@ -420,6 +439,33 @@ const BulkRegistrationEvent$json = {
       '9': 0,
       '10': 'error'
     },
+    {
+      '1': 'registration_started',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.saga_messages.RegistrationStartedEvent',
+      '9': 0,
+      '10': 'registrationStarted'
+    },
+    {
+      '1': 'registration_progress',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.saga_messages.RegistrationProgressEvent',
+      '9': 0,
+      '10': 'registrationProgress'
+    },
+    {
+      '1': 'registration_completed',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.saga_messages.RegistrationCompletedEvent',
+      '9': 0,
+      '10': 'registrationCompleted'
+    },
   ],
   '8': [
     {'1': 'event'},
@@ -440,7 +486,12 @@ final $typed_data.Uint8List bulkRegistrationEventDescriptor = $convert.base64Dec
     'lkYXRpb25SZXN1bHRFdmVudEgAUhB2YWxpZGF0aW9uUmVzdWx0Ek0KD3Nlc3Npb25fY2xlYXJl'
     'ZBgIIAEoCzIiLnNhZ2FfbWVzc2FnZXMuU2Vzc2lvbkNsZWFyZWRFdmVudEgAUg5zZXNzaW9uQ2'
     'xlYXJlZBIxCgVlcnJvchgJIAEoCzIZLnNhZ2FfbWVzc2FnZXMuRXJyb3JFdmVudEgAUgVlcnJv'
-    'ckIHCgVldmVudA==');
+    'chJcChRyZWdpc3RyYXRpb25fc3RhcnRlZBgKIAEoCzInLnNhZ2FfbWVzc2FnZXMuUmVnaXN0cm'
+    'F0aW9uU3RhcnRlZEV2ZW50SABSE3JlZ2lzdHJhdGlvblN0YXJ0ZWQSXwoVcmVnaXN0cmF0aW9u'
+    'X3Byb2dyZXNzGAsgASgLMiguc2FnYV9tZXNzYWdlcy5SZWdpc3RyYXRpb25Qcm9ncmVzc0V2ZW'
+    '50SABSFHJlZ2lzdHJhdGlvblByb2dyZXNzEmIKFnJlZ2lzdHJhdGlvbl9jb21wbGV0ZWQYDCAB'
+    'KAsyKS5zYWdhX21lc3NhZ2VzLlJlZ2lzdHJhdGlvbkNvbXBsZXRlZEV2ZW50SABSFXJlZ2lzdH'
+    'JhdGlvbkNvbXBsZXRlZEIHCgVldmVudA==');
 
 @$core.Deprecated('Use sessionStartedEventDescriptor instead')
 const SessionStartedEvent$json = {
@@ -608,6 +659,62 @@ const SessionClearedEvent$json = {
 /// Descriptor for `SessionClearedEvent`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sessionClearedEventDescriptor = $convert.base64Decode(
     'ChNTZXNzaW9uQ2xlYXJlZEV2ZW50Eh0KCnNlc3Npb25faWQYASABKAlSCXNlc3Npb25JZA==');
+
+@$core.Deprecated('Use registrationStartedEventDescriptor instead')
+const RegistrationStartedEvent$json = {
+  '1': 'RegistrationStartedEvent',
+  '2': [
+    {'1': 'session_id', '3': 1, '4': 1, '5': 9, '10': 'sessionId'},
+    {'1': 'total_rows', '3': 2, '4': 1, '5': 5, '10': 'totalRows'},
+  ],
+};
+
+/// Descriptor for `RegistrationStartedEvent`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List registrationStartedEventDescriptor =
+    $convert.base64Decode(
+        'ChhSZWdpc3RyYXRpb25TdGFydGVkRXZlbnQSHQoKc2Vzc2lvbl9pZBgBIAEoCVIJc2Vzc2lvbk'
+        'lkEh0KCnRvdGFsX3Jvd3MYAiABKAVSCXRvdGFsUm93cw==');
+
+@$core.Deprecated('Use registrationProgressEventDescriptor instead')
+const RegistrationProgressEvent$json = {
+  '1': 'RegistrationProgressEvent',
+  '2': [
+    {'1': 'row_id', '3': 1, '4': 1, '5': 9, '10': 'rowId'},
+    {'1': 'current_index', '3': 2, '4': 1, '5': 5, '10': 'currentIndex'},
+    {'1': 'total_rows', '3': 3, '4': 1, '5': 5, '10': 'totalRows'},
+    {'1': 'status', '3': 4, '4': 1, '5': 9, '10': 'status'},
+    {'1': 'user_id', '3': 5, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'error', '3': 6, '4': 1, '5': 9, '10': 'error'},
+  ],
+};
+
+/// Descriptor for `RegistrationProgressEvent`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List registrationProgressEventDescriptor = $convert.base64Decode(
+    'ChlSZWdpc3RyYXRpb25Qcm9ncmVzc0V2ZW50EhUKBnJvd19pZBgBIAEoCVIFcm93SWQSIwoNY3'
+    'VycmVudF9pbmRleBgCIAEoBVIMY3VycmVudEluZGV4Eh0KCnRvdGFsX3Jvd3MYAyABKAVSCXRv'
+    'dGFsUm93cxIWCgZzdGF0dXMYBCABKAlSBnN0YXR1cxIXCgd1c2VyX2lkGAUgASgJUgZ1c2VySW'
+    'QSFAoFZXJyb3IYBiABKAlSBWVycm9y');
+
+@$core.Deprecated('Use registrationCompletedEventDescriptor instead')
+const RegistrationCompletedEvent$json = {
+  '1': 'RegistrationCompletedEvent',
+  '2': [
+    {'1': 'session_id', '3': 1, '4': 1, '5': 9, '10': 'sessionId'},
+    {'1': 'total_processed', '3': 2, '4': 1, '5': 5, '10': 'totalProcessed'},
+    {'1': 'success_count', '3': 3, '4': 1, '5': 5, '10': 'successCount'},
+    {'1': 'failure_count', '3': 4, '4': 1, '5': 5, '10': 'failureCount'},
+    {'1': 'rolled_back', '3': 5, '4': 1, '5': 8, '10': 'rolledBack'},
+    {'1': 'rollback_reason', '3': 6, '4': 1, '5': 9, '10': 'rollbackReason'},
+  ],
+};
+
+/// Descriptor for `RegistrationCompletedEvent`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List registrationCompletedEventDescriptor = $convert.base64Decode(
+    'ChpSZWdpc3RyYXRpb25Db21wbGV0ZWRFdmVudBIdCgpzZXNzaW9uX2lkGAEgASgJUglzZXNzaW'
+    '9uSWQSJwoPdG90YWxfcHJvY2Vzc2VkGAIgASgFUg50b3RhbFByb2Nlc3NlZBIjCg1zdWNjZXNz'
+    'X2NvdW50GAMgASgFUgxzdWNjZXNzQ291bnQSIwoNZmFpbHVyZV9jb3VudBgEIAEoBVIMZmFpbH'
+    'VyZUNvdW50Eh8KC3JvbGxlZF9iYWNrGAUgASgIUgpyb2xsZWRCYWNrEicKD3JvbGxiYWNrX3Jl'
+    'YXNvbhgGIAEoCVIOcm9sbGJhY2tSZWFzb24=');
 
 @$core.Deprecated('Use errorEventDescriptor instead')
 const ErrorEvent$json = {

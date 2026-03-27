@@ -207,6 +207,66 @@ class UserServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getBulkParentName, request, options: options);
   }
 
+  /// Bulk Student Registration
+  $grpc.ResponseFuture<$0.BulkCreateStudentsResponse> bulkCreateStudents(
+    $0.BulkCreateStudentsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkCreateStudents, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BulkDeleteStudentsResponse> bulkDeleteStudents(
+    $0.BulkDeleteStudentsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkDeleteStudents, request, options: options);
+  }
+
+  /// Bulk Teacher Registration
+  $grpc.ResponseFuture<$0.BulkCreateTeachersResponse> bulkCreateTeachers(
+    $0.BulkCreateTeachersRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkCreateTeachers, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BulkDeleteTeachersResponse> bulkDeleteTeachers(
+    $0.BulkDeleteTeachersRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkDeleteTeachers, request, options: options);
+  }
+
+  /// Bulk Parent Registration
+  $grpc.ResponseFuture<$0.BulkCreateParentsResponse> bulkCreateParents(
+    $0.BulkCreateParentsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkCreateParents, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BulkDeleteParentsResponse> bulkDeleteParents(
+    $0.BulkDeleteParentsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkDeleteParents, request, options: options);
+  }
+
+  /// Bulk Employee Registration
+  $grpc.ResponseFuture<$0.BulkCreateEmployeesResponse> bulkCreateEmployees(
+    $0.BulkCreateEmployeesRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkCreateEmployees, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BulkDeleteEmployeesResponse> bulkDeleteEmployees(
+    $0.BulkDeleteEmployeesRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkDeleteEmployees, request, options: options);
+  }
+
   // method descriptors
 
   static final _$createStudent =
@@ -324,6 +384,46 @@ class UserServiceClient extends $grpc.Client {
       '/user.UserService/GetBulkParentName',
       ($0.GetBulkParentNameRequest value) => value.writeToBuffer(),
       $0.GetBulkParentNameResponse.fromBuffer);
+  static final _$bulkCreateStudents = $grpc.ClientMethod<
+          $0.BulkCreateStudentsRequest, $0.BulkCreateStudentsResponse>(
+      '/user.UserService/BulkCreateStudents',
+      ($0.BulkCreateStudentsRequest value) => value.writeToBuffer(),
+      $0.BulkCreateStudentsResponse.fromBuffer);
+  static final _$bulkDeleteStudents = $grpc.ClientMethod<
+          $0.BulkDeleteStudentsRequest, $0.BulkDeleteStudentsResponse>(
+      '/user.UserService/BulkDeleteStudents',
+      ($0.BulkDeleteStudentsRequest value) => value.writeToBuffer(),
+      $0.BulkDeleteStudentsResponse.fromBuffer);
+  static final _$bulkCreateTeachers = $grpc.ClientMethod<
+          $0.BulkCreateTeachersRequest, $0.BulkCreateTeachersResponse>(
+      '/user.UserService/BulkCreateTeachers',
+      ($0.BulkCreateTeachersRequest value) => value.writeToBuffer(),
+      $0.BulkCreateTeachersResponse.fromBuffer);
+  static final _$bulkDeleteTeachers = $grpc.ClientMethod<
+          $0.BulkDeleteTeachersRequest, $0.BulkDeleteTeachersResponse>(
+      '/user.UserService/BulkDeleteTeachers',
+      ($0.BulkDeleteTeachersRequest value) => value.writeToBuffer(),
+      $0.BulkDeleteTeachersResponse.fromBuffer);
+  static final _$bulkCreateParents = $grpc.ClientMethod<
+          $0.BulkCreateParentsRequest, $0.BulkCreateParentsResponse>(
+      '/user.UserService/BulkCreateParents',
+      ($0.BulkCreateParentsRequest value) => value.writeToBuffer(),
+      $0.BulkCreateParentsResponse.fromBuffer);
+  static final _$bulkDeleteParents = $grpc.ClientMethod<
+          $0.BulkDeleteParentsRequest, $0.BulkDeleteParentsResponse>(
+      '/user.UserService/BulkDeleteParents',
+      ($0.BulkDeleteParentsRequest value) => value.writeToBuffer(),
+      $0.BulkDeleteParentsResponse.fromBuffer);
+  static final _$bulkCreateEmployees = $grpc.ClientMethod<
+          $0.BulkCreateEmployeesRequest, $0.BulkCreateEmployeesResponse>(
+      '/user.UserService/BulkCreateEmployees',
+      ($0.BulkCreateEmployeesRequest value) => value.writeToBuffer(),
+      $0.BulkCreateEmployeesResponse.fromBuffer);
+  static final _$bulkDeleteEmployees = $grpc.ClientMethod<
+          $0.BulkDeleteEmployeesRequest, $0.BulkDeleteEmployeesResponse>(
+      '/user.UserService/BulkDeleteEmployees',
+      ($0.BulkDeleteEmployeesRequest value) => value.writeToBuffer(),
+      $0.BulkDeleteEmployeesResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('user.UserService')
@@ -531,6 +631,78 @@ abstract class UserServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetBulkParentNameRequest.fromBuffer(value),
         ($0.GetBulkParentNameResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkCreateStudentsRequest,
+            $0.BulkCreateStudentsResponse>(
+        'BulkCreateStudents',
+        bulkCreateStudents_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkCreateStudentsRequest.fromBuffer(value),
+        ($0.BulkCreateStudentsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkDeleteStudentsRequest,
+            $0.BulkDeleteStudentsResponse>(
+        'BulkDeleteStudents',
+        bulkDeleteStudents_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkDeleteStudentsRequest.fromBuffer(value),
+        ($0.BulkDeleteStudentsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkCreateTeachersRequest,
+            $0.BulkCreateTeachersResponse>(
+        'BulkCreateTeachers',
+        bulkCreateTeachers_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkCreateTeachersRequest.fromBuffer(value),
+        ($0.BulkCreateTeachersResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkDeleteTeachersRequest,
+            $0.BulkDeleteTeachersResponse>(
+        'BulkDeleteTeachers',
+        bulkDeleteTeachers_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkDeleteTeachersRequest.fromBuffer(value),
+        ($0.BulkDeleteTeachersResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkCreateParentsRequest,
+            $0.BulkCreateParentsResponse>(
+        'BulkCreateParents',
+        bulkCreateParents_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkCreateParentsRequest.fromBuffer(value),
+        ($0.BulkCreateParentsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkDeleteParentsRequest,
+            $0.BulkDeleteParentsResponse>(
+        'BulkDeleteParents',
+        bulkDeleteParents_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkDeleteParentsRequest.fromBuffer(value),
+        ($0.BulkDeleteParentsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkCreateEmployeesRequest,
+            $0.BulkCreateEmployeesResponse>(
+        'BulkCreateEmployees',
+        bulkCreateEmployees_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkCreateEmployeesRequest.fromBuffer(value),
+        ($0.BulkCreateEmployeesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkDeleteEmployeesRequest,
+            $0.BulkDeleteEmployeesResponse>(
+        'BulkDeleteEmployees',
+        bulkDeleteEmployees_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkDeleteEmployeesRequest.fromBuffer(value),
+        ($0.BulkDeleteEmployeesResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateStudentResponse> createStudent_Pre(
@@ -734,4 +906,76 @@ abstract class UserServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetBulkParentNameResponse> getBulkParentName(
       $grpc.ServiceCall call, $0.GetBulkParentNameRequest request);
+
+  $async.Future<$0.BulkCreateStudentsResponse> bulkCreateStudents_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkCreateStudentsRequest> $request) async {
+    return bulkCreateStudents($call, await $request);
+  }
+
+  $async.Future<$0.BulkCreateStudentsResponse> bulkCreateStudents(
+      $grpc.ServiceCall call, $0.BulkCreateStudentsRequest request);
+
+  $async.Future<$0.BulkDeleteStudentsResponse> bulkDeleteStudents_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkDeleteStudentsRequest> $request) async {
+    return bulkDeleteStudents($call, await $request);
+  }
+
+  $async.Future<$0.BulkDeleteStudentsResponse> bulkDeleteStudents(
+      $grpc.ServiceCall call, $0.BulkDeleteStudentsRequest request);
+
+  $async.Future<$0.BulkCreateTeachersResponse> bulkCreateTeachers_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkCreateTeachersRequest> $request) async {
+    return bulkCreateTeachers($call, await $request);
+  }
+
+  $async.Future<$0.BulkCreateTeachersResponse> bulkCreateTeachers(
+      $grpc.ServiceCall call, $0.BulkCreateTeachersRequest request);
+
+  $async.Future<$0.BulkDeleteTeachersResponse> bulkDeleteTeachers_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkDeleteTeachersRequest> $request) async {
+    return bulkDeleteTeachers($call, await $request);
+  }
+
+  $async.Future<$0.BulkDeleteTeachersResponse> bulkDeleteTeachers(
+      $grpc.ServiceCall call, $0.BulkDeleteTeachersRequest request);
+
+  $async.Future<$0.BulkCreateParentsResponse> bulkCreateParents_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkCreateParentsRequest> $request) async {
+    return bulkCreateParents($call, await $request);
+  }
+
+  $async.Future<$0.BulkCreateParentsResponse> bulkCreateParents(
+      $grpc.ServiceCall call, $0.BulkCreateParentsRequest request);
+
+  $async.Future<$0.BulkDeleteParentsResponse> bulkDeleteParents_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkDeleteParentsRequest> $request) async {
+    return bulkDeleteParents($call, await $request);
+  }
+
+  $async.Future<$0.BulkDeleteParentsResponse> bulkDeleteParents(
+      $grpc.ServiceCall call, $0.BulkDeleteParentsRequest request);
+
+  $async.Future<$0.BulkCreateEmployeesResponse> bulkCreateEmployees_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkCreateEmployeesRequest> $request) async {
+    return bulkCreateEmployees($call, await $request);
+  }
+
+  $async.Future<$0.BulkCreateEmployeesResponse> bulkCreateEmployees(
+      $grpc.ServiceCall call, $0.BulkCreateEmployeesRequest request);
+
+  $async.Future<$0.BulkDeleteEmployeesResponse> bulkDeleteEmployees_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkDeleteEmployeesRequest> $request) async {
+    return bulkDeleteEmployees($call, await $request);
+  }
+
+  $async.Future<$0.BulkDeleteEmployeesResponse> bulkDeleteEmployees(
+      $grpc.ServiceCall call, $0.BulkDeleteEmployeesRequest request);
 }

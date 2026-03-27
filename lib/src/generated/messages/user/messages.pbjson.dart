@@ -1256,3 +1256,231 @@ final $typed_data.Uint8List parentNameDescriptor = $convert.base64Decode(
     'CgpQYXJlbnROYW1lEhsKCXBhcmVudF9pZBgBIAEoCVIIcGFyZW50SWQSHQoKZmlyc3RfbmFtZR'
     'gCIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAMgASgJSABSCnNlY29uZE5hbWWIAQFC'
     'DgoMX3NlY29uZF9uYW1l');
+
+@$core.Deprecated('Use bulkCreateStudentsRequestDescriptor instead')
+const BulkCreateStudentsRequest$json = {
+  '1': 'BulkCreateStudentsRequest',
+  '2': [
+    {
+      '1': 'students',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.CreateStudentRequest',
+      '10': 'students'
+    },
+  ],
+};
+
+/// Descriptor for `BulkCreateStudentsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkCreateStudentsRequestDescriptor =
+    $convert.base64Decode(
+        'ChlCdWxrQ3JlYXRlU3R1ZGVudHNSZXF1ZXN0Ej8KCHN0dWRlbnRzGAEgAygLMiMudXNlcl9tZX'
+        'NzYWdlcy5DcmVhdGVTdHVkZW50UmVxdWVzdFIIc3R1ZGVudHM=');
+
+@$core.Deprecated('Use bulkCreateStudentsResponseDescriptor instead')
+const BulkCreateStudentsResponse$json = {
+  '1': 'BulkCreateStudentsResponse',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `BulkCreateStudentsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkCreateStudentsResponseDescriptor =
+    $convert.base64Decode(
+        'ChpCdWxrQ3JlYXRlU3R1ZGVudHNSZXNwb25zZRIZCgh1c2VyX2lkcxgBIAMoCVIHdXNlcklkcw'
+        '==');
+
+@$core.Deprecated('Use bulkDeleteStudentsRequestDescriptor instead')
+const BulkDeleteStudentsRequest$json = {
+  '1': 'BulkDeleteStudentsRequest',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `BulkDeleteStudentsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkDeleteStudentsRequestDescriptor =
+    $convert.base64Decode(
+        'ChlCdWxrRGVsZXRlU3R1ZGVudHNSZXF1ZXN0EhkKCHVzZXJfaWRzGAEgAygJUgd1c2VySWRz');
+
+@$core.Deprecated('Use bulkDeleteStudentsResponseDescriptor instead')
+const BulkDeleteStudentsResponse$json = {
+  '1': 'BulkDeleteStudentsResponse',
+};
+
+/// Descriptor for `BulkDeleteStudentsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkDeleteStudentsResponseDescriptor =
+    $convert.base64Decode('ChpCdWxrRGVsZXRlU3R1ZGVudHNSZXNwb25zZQ==');
+
+@$core.Deprecated('Use bulkCreateTeachersRequestDescriptor instead')
+const BulkCreateTeachersRequest$json = {
+  '1': 'BulkCreateTeachersRequest',
+  '2': [
+    {
+      '1': 'teachers',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.CreateTeacherRequest',
+      '10': 'teachers'
+    },
+  ],
+};
+
+/// Descriptor for `BulkCreateTeachersRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkCreateTeachersRequestDescriptor =
+    $convert.base64Decode(
+        'ChlCdWxrQ3JlYXRlVGVhY2hlcnNSZXF1ZXN0Ej8KCHRlYWNoZXJzGAEgAygLMiMudXNlcl9tZX'
+        'NzYWdlcy5DcmVhdGVUZWFjaGVyUmVxdWVzdFIIdGVhY2hlcnM=');
+
+@$core.Deprecated('Use bulkCreateTeachersResponseDescriptor instead')
+const BulkCreateTeachersResponse$json = {
+  '1': 'BulkCreateTeachersResponse',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `BulkCreateTeachersResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkCreateTeachersResponseDescriptor =
+    $convert.base64Decode(
+        'ChpCdWxrQ3JlYXRlVGVhY2hlcnNSZXNwb25zZRIZCgh1c2VyX2lkcxgBIAMoCVIHdXNlcklkcw'
+        '==');
+
+@$core.Deprecated('Use bulkDeleteTeachersRequestDescriptor instead')
+const BulkDeleteTeachersRequest$json = {
+  '1': 'BulkDeleteTeachersRequest',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `BulkDeleteTeachersRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkDeleteTeachersRequestDescriptor =
+    $convert.base64Decode(
+        'ChlCdWxrRGVsZXRlVGVhY2hlcnNSZXF1ZXN0EhkKCHVzZXJfaWRzGAEgAygJUgd1c2VySWRz');
+
+@$core.Deprecated('Use bulkDeleteTeachersResponseDescriptor instead')
+const BulkDeleteTeachersResponse$json = {
+  '1': 'BulkDeleteTeachersResponse',
+};
+
+/// Descriptor for `BulkDeleteTeachersResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkDeleteTeachersResponseDescriptor =
+    $convert.base64Decode('ChpCdWxrRGVsZXRlVGVhY2hlcnNSZXNwb25zZQ==');
+
+@$core.Deprecated('Use bulkCreateParentsRequestDescriptor instead')
+const BulkCreateParentsRequest$json = {
+  '1': 'BulkCreateParentsRequest',
+  '2': [
+    {
+      '1': 'parents',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.CreateParentRequest',
+      '10': 'parents'
+    },
+  ],
+};
+
+/// Descriptor for `BulkCreateParentsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkCreateParentsRequestDescriptor =
+    $convert.base64Decode(
+        'ChhCdWxrQ3JlYXRlUGFyZW50c1JlcXVlc3QSPAoHcGFyZW50cxgBIAMoCzIiLnVzZXJfbWVzc2'
+        'FnZXMuQ3JlYXRlUGFyZW50UmVxdWVzdFIHcGFyZW50cw==');
+
+@$core.Deprecated('Use bulkCreateParentsResponseDescriptor instead')
+const BulkCreateParentsResponse$json = {
+  '1': 'BulkCreateParentsResponse',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `BulkCreateParentsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkCreateParentsResponseDescriptor =
+    $convert.base64Decode(
+        'ChlCdWxrQ3JlYXRlUGFyZW50c1Jlc3BvbnNlEhkKCHVzZXJfaWRzGAEgAygJUgd1c2VySWRz');
+
+@$core.Deprecated('Use bulkDeleteParentsRequestDescriptor instead')
+const BulkDeleteParentsRequest$json = {
+  '1': 'BulkDeleteParentsRequest',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `BulkDeleteParentsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkDeleteParentsRequestDescriptor =
+    $convert.base64Decode(
+        'ChhCdWxrRGVsZXRlUGFyZW50c1JlcXVlc3QSGQoIdXNlcl9pZHMYASADKAlSB3VzZXJJZHM=');
+
+@$core.Deprecated('Use bulkDeleteParentsResponseDescriptor instead')
+const BulkDeleteParentsResponse$json = {
+  '1': 'BulkDeleteParentsResponse',
+};
+
+/// Descriptor for `BulkDeleteParentsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkDeleteParentsResponseDescriptor =
+    $convert.base64Decode('ChlCdWxrRGVsZXRlUGFyZW50c1Jlc3BvbnNl');
+
+@$core.Deprecated('Use bulkCreateEmployeesRequestDescriptor instead')
+const BulkCreateEmployeesRequest$json = {
+  '1': 'BulkCreateEmployeesRequest',
+  '2': [
+    {
+      '1': 'employees',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.user_messages.CreateEmployeeRequest',
+      '10': 'employees'
+    },
+  ],
+};
+
+/// Descriptor for `BulkCreateEmployeesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkCreateEmployeesRequestDescriptor =
+    $convert.base64Decode(
+        'ChpCdWxrQ3JlYXRlRW1wbG95ZWVzUmVxdWVzdBJCCgllbXBsb3llZXMYASADKAsyJC51c2VyX2'
+        '1lc3NhZ2VzLkNyZWF0ZUVtcGxveWVlUmVxdWVzdFIJZW1wbG95ZWVz');
+
+@$core.Deprecated('Use bulkCreateEmployeesResponseDescriptor instead')
+const BulkCreateEmployeesResponse$json = {
+  '1': 'BulkCreateEmployeesResponse',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `BulkCreateEmployeesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkCreateEmployeesResponseDescriptor =
+    $convert.base64Decode(
+        'ChtCdWxrQ3JlYXRlRW1wbG95ZWVzUmVzcG9uc2USGQoIdXNlcl9pZHMYASADKAlSB3VzZXJJZH'
+        'M=');
+
+@$core.Deprecated('Use bulkDeleteEmployeesRequestDescriptor instead')
+const BulkDeleteEmployeesRequest$json = {
+  '1': 'BulkDeleteEmployeesRequest',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `BulkDeleteEmployeesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkDeleteEmployeesRequestDescriptor =
+    $convert.base64Decode(
+        'ChpCdWxrRGVsZXRlRW1wbG95ZWVzUmVxdWVzdBIZCgh1c2VyX2lkcxgBIAMoCVIHdXNlcklkcw'
+        '==');
+
+@$core.Deprecated('Use bulkDeleteEmployeesResponseDescriptor instead')
+const BulkDeleteEmployeesResponse$json = {
+  '1': 'BulkDeleteEmployeesResponse',
+};
+
+/// Descriptor for `BulkDeleteEmployeesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkDeleteEmployeesResponseDescriptor =
+    $convert.base64Decode('ChtCdWxrRGVsZXRlRW1wbG95ZWVzUmVzcG9uc2U=');

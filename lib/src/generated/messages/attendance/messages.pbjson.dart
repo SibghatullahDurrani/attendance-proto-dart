@@ -1087,6 +1087,30 @@ const AllocateUsersShiftResponse$json = {
 final $typed_data.Uint8List allocateUsersShiftResponseDescriptor =
     $convert.base64Decode('ChpBbGxvY2F0ZVVzZXJzU2hpZnRSZXNwb25zZQ==');
 
+@$core.Deprecated('Use deallocateUsersShiftRequestDescriptor instead')
+const DeallocateUsersShiftRequest$json = {
+  '1': 'DeallocateUsersShiftRequest',
+  '2': [
+    {'1': 'shift_id', '3': 1, '4': 1, '5': 9, '10': 'shiftId'},
+    {'1': 'user_ids', '3': 2, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `DeallocateUsersShiftRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deallocateUsersShiftRequestDescriptor =
+    $convert.base64Decode(
+        'ChtEZWFsbG9jYXRlVXNlcnNTaGlmdFJlcXVlc3QSGQoIc2hpZnRfaWQYASABKAlSB3NoaWZ0SW'
+        'QSGQoIdXNlcl9pZHMYAiADKAlSB3VzZXJJZHM=');
+
+@$core.Deprecated('Use deallocateUsersShiftResponseDescriptor instead')
+const DeallocateUsersShiftResponse$json = {
+  '1': 'DeallocateUsersShiftResponse',
+};
+
+/// Descriptor for `DeallocateUsersShiftResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deallocateUsersShiftResponseDescriptor =
+    $convert.base64Decode('ChxEZWFsbG9jYXRlVXNlcnNTaGlmdFJlc3BvbnNl');
+
 @$core.Deprecated('Use editShiftRequestDescriptor instead')
 const EditShiftRequest$json = {
   '1': 'EditShiftRequest',

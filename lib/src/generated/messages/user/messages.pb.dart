@@ -3713,6 +3713,800 @@ class ParentName extends $pb.GeneratedMessage {
   void clearSecondName() => $_clearField(3);
 }
 
+/// Bulk Create/Delete Student Messages
+class BulkCreateStudentsRequest extends $pb.GeneratedMessage {
+  factory BulkCreateStudentsRequest({
+    $core.Iterable<CreateStudentRequest>? students,
+  }) {
+    final result = create();
+    if (students != null) result.students.addAll(students);
+    return result;
+  }
+
+  BulkCreateStudentsRequest._();
+
+  factory BulkCreateStudentsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkCreateStudentsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkCreateStudentsRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPM<CreateStudentRequest>(1, _omitFieldNames ? '' : 'students',
+        subBuilder: CreateStudentRequest.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateStudentsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateStudentsRequest copyWith(
+          void Function(BulkCreateStudentsRequest) updates) =>
+      super.copyWith((message) => updates(message as BulkCreateStudentsRequest))
+          as BulkCreateStudentsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateStudentsRequest create() => BulkCreateStudentsRequest._();
+  @$core.override
+  BulkCreateStudentsRequest createEmptyInstance() => create();
+  static $pb.PbList<BulkCreateStudentsRequest> createRepeated() =>
+      $pb.PbList<BulkCreateStudentsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateStudentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkCreateStudentsRequest>(create);
+  static BulkCreateStudentsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<CreateStudentRequest> get students => $_getList(0);
+}
+
+class BulkCreateStudentsResponse extends $pb.GeneratedMessage {
+  factory BulkCreateStudentsResponse({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    return result;
+  }
+
+  BulkCreateStudentsResponse._();
+
+  factory BulkCreateStudentsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkCreateStudentsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkCreateStudentsResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateStudentsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateStudentsResponse copyWith(
+          void Function(BulkCreateStudentsResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as BulkCreateStudentsResponse))
+          as BulkCreateStudentsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateStudentsResponse create() => BulkCreateStudentsResponse._();
+  @$core.override
+  BulkCreateStudentsResponse createEmptyInstance() => create();
+  static $pb.PbList<BulkCreateStudentsResponse> createRepeated() =>
+      $pb.PbList<BulkCreateStudentsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateStudentsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkCreateStudentsResponse>(create);
+  static BulkCreateStudentsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
+}
+
+class BulkDeleteStudentsRequest extends $pb.GeneratedMessage {
+  factory BulkDeleteStudentsRequest({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    return result;
+  }
+
+  BulkDeleteStudentsRequest._();
+
+  factory BulkDeleteStudentsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkDeleteStudentsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkDeleteStudentsRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteStudentsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteStudentsRequest copyWith(
+          void Function(BulkDeleteStudentsRequest) updates) =>
+      super.copyWith((message) => updates(message as BulkDeleteStudentsRequest))
+          as BulkDeleteStudentsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteStudentsRequest create() => BulkDeleteStudentsRequest._();
+  @$core.override
+  BulkDeleteStudentsRequest createEmptyInstance() => create();
+  static $pb.PbList<BulkDeleteStudentsRequest> createRepeated() =>
+      $pb.PbList<BulkDeleteStudentsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteStudentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkDeleteStudentsRequest>(create);
+  static BulkDeleteStudentsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
+}
+
+class BulkDeleteStudentsResponse extends $pb.GeneratedMessage {
+  factory BulkDeleteStudentsResponse() => create();
+
+  BulkDeleteStudentsResponse._();
+
+  factory BulkDeleteStudentsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkDeleteStudentsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkDeleteStudentsResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteStudentsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteStudentsResponse copyWith(
+          void Function(BulkDeleteStudentsResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as BulkDeleteStudentsResponse))
+          as BulkDeleteStudentsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteStudentsResponse create() => BulkDeleteStudentsResponse._();
+  @$core.override
+  BulkDeleteStudentsResponse createEmptyInstance() => create();
+  static $pb.PbList<BulkDeleteStudentsResponse> createRepeated() =>
+      $pb.PbList<BulkDeleteStudentsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteStudentsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkDeleteStudentsResponse>(create);
+  static BulkDeleteStudentsResponse? _defaultInstance;
+}
+
+/// Bulk Create/Delete Teacher Messages
+class BulkCreateTeachersRequest extends $pb.GeneratedMessage {
+  factory BulkCreateTeachersRequest({
+    $core.Iterable<CreateTeacherRequest>? teachers,
+  }) {
+    final result = create();
+    if (teachers != null) result.teachers.addAll(teachers);
+    return result;
+  }
+
+  BulkCreateTeachersRequest._();
+
+  factory BulkCreateTeachersRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkCreateTeachersRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkCreateTeachersRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPM<CreateTeacherRequest>(1, _omitFieldNames ? '' : 'teachers',
+        subBuilder: CreateTeacherRequest.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateTeachersRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateTeachersRequest copyWith(
+          void Function(BulkCreateTeachersRequest) updates) =>
+      super.copyWith((message) => updates(message as BulkCreateTeachersRequest))
+          as BulkCreateTeachersRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateTeachersRequest create() => BulkCreateTeachersRequest._();
+  @$core.override
+  BulkCreateTeachersRequest createEmptyInstance() => create();
+  static $pb.PbList<BulkCreateTeachersRequest> createRepeated() =>
+      $pb.PbList<BulkCreateTeachersRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateTeachersRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkCreateTeachersRequest>(create);
+  static BulkCreateTeachersRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<CreateTeacherRequest> get teachers => $_getList(0);
+}
+
+class BulkCreateTeachersResponse extends $pb.GeneratedMessage {
+  factory BulkCreateTeachersResponse({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    return result;
+  }
+
+  BulkCreateTeachersResponse._();
+
+  factory BulkCreateTeachersResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkCreateTeachersResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkCreateTeachersResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateTeachersResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateTeachersResponse copyWith(
+          void Function(BulkCreateTeachersResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as BulkCreateTeachersResponse))
+          as BulkCreateTeachersResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateTeachersResponse create() => BulkCreateTeachersResponse._();
+  @$core.override
+  BulkCreateTeachersResponse createEmptyInstance() => create();
+  static $pb.PbList<BulkCreateTeachersResponse> createRepeated() =>
+      $pb.PbList<BulkCreateTeachersResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateTeachersResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkCreateTeachersResponse>(create);
+  static BulkCreateTeachersResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
+}
+
+class BulkDeleteTeachersRequest extends $pb.GeneratedMessage {
+  factory BulkDeleteTeachersRequest({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    return result;
+  }
+
+  BulkDeleteTeachersRequest._();
+
+  factory BulkDeleteTeachersRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkDeleteTeachersRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkDeleteTeachersRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteTeachersRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteTeachersRequest copyWith(
+          void Function(BulkDeleteTeachersRequest) updates) =>
+      super.copyWith((message) => updates(message as BulkDeleteTeachersRequest))
+          as BulkDeleteTeachersRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteTeachersRequest create() => BulkDeleteTeachersRequest._();
+  @$core.override
+  BulkDeleteTeachersRequest createEmptyInstance() => create();
+  static $pb.PbList<BulkDeleteTeachersRequest> createRepeated() =>
+      $pb.PbList<BulkDeleteTeachersRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteTeachersRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkDeleteTeachersRequest>(create);
+  static BulkDeleteTeachersRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
+}
+
+class BulkDeleteTeachersResponse extends $pb.GeneratedMessage {
+  factory BulkDeleteTeachersResponse() => create();
+
+  BulkDeleteTeachersResponse._();
+
+  factory BulkDeleteTeachersResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkDeleteTeachersResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkDeleteTeachersResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteTeachersResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteTeachersResponse copyWith(
+          void Function(BulkDeleteTeachersResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as BulkDeleteTeachersResponse))
+          as BulkDeleteTeachersResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteTeachersResponse create() => BulkDeleteTeachersResponse._();
+  @$core.override
+  BulkDeleteTeachersResponse createEmptyInstance() => create();
+  static $pb.PbList<BulkDeleteTeachersResponse> createRepeated() =>
+      $pb.PbList<BulkDeleteTeachersResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteTeachersResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkDeleteTeachersResponse>(create);
+  static BulkDeleteTeachersResponse? _defaultInstance;
+}
+
+/// Bulk Create/Delete Parent Messages
+class BulkCreateParentsRequest extends $pb.GeneratedMessage {
+  factory BulkCreateParentsRequest({
+    $core.Iterable<CreateParentRequest>? parents,
+  }) {
+    final result = create();
+    if (parents != null) result.parents.addAll(parents);
+    return result;
+  }
+
+  BulkCreateParentsRequest._();
+
+  factory BulkCreateParentsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkCreateParentsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkCreateParentsRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPM<CreateParentRequest>(1, _omitFieldNames ? '' : 'parents',
+        subBuilder: CreateParentRequest.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateParentsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateParentsRequest copyWith(
+          void Function(BulkCreateParentsRequest) updates) =>
+      super.copyWith((message) => updates(message as BulkCreateParentsRequest))
+          as BulkCreateParentsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateParentsRequest create() => BulkCreateParentsRequest._();
+  @$core.override
+  BulkCreateParentsRequest createEmptyInstance() => create();
+  static $pb.PbList<BulkCreateParentsRequest> createRepeated() =>
+      $pb.PbList<BulkCreateParentsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateParentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkCreateParentsRequest>(create);
+  static BulkCreateParentsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<CreateParentRequest> get parents => $_getList(0);
+}
+
+class BulkCreateParentsResponse extends $pb.GeneratedMessage {
+  factory BulkCreateParentsResponse({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    return result;
+  }
+
+  BulkCreateParentsResponse._();
+
+  factory BulkCreateParentsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkCreateParentsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkCreateParentsResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateParentsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateParentsResponse copyWith(
+          void Function(BulkCreateParentsResponse) updates) =>
+      super.copyWith((message) => updates(message as BulkCreateParentsResponse))
+          as BulkCreateParentsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateParentsResponse create() => BulkCreateParentsResponse._();
+  @$core.override
+  BulkCreateParentsResponse createEmptyInstance() => create();
+  static $pb.PbList<BulkCreateParentsResponse> createRepeated() =>
+      $pb.PbList<BulkCreateParentsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateParentsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkCreateParentsResponse>(create);
+  static BulkCreateParentsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
+}
+
+class BulkDeleteParentsRequest extends $pb.GeneratedMessage {
+  factory BulkDeleteParentsRequest({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    return result;
+  }
+
+  BulkDeleteParentsRequest._();
+
+  factory BulkDeleteParentsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkDeleteParentsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkDeleteParentsRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteParentsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteParentsRequest copyWith(
+          void Function(BulkDeleteParentsRequest) updates) =>
+      super.copyWith((message) => updates(message as BulkDeleteParentsRequest))
+          as BulkDeleteParentsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteParentsRequest create() => BulkDeleteParentsRequest._();
+  @$core.override
+  BulkDeleteParentsRequest createEmptyInstance() => create();
+  static $pb.PbList<BulkDeleteParentsRequest> createRepeated() =>
+      $pb.PbList<BulkDeleteParentsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteParentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkDeleteParentsRequest>(create);
+  static BulkDeleteParentsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
+}
+
+class BulkDeleteParentsResponse extends $pb.GeneratedMessage {
+  factory BulkDeleteParentsResponse() => create();
+
+  BulkDeleteParentsResponse._();
+
+  factory BulkDeleteParentsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkDeleteParentsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkDeleteParentsResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteParentsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteParentsResponse copyWith(
+          void Function(BulkDeleteParentsResponse) updates) =>
+      super.copyWith((message) => updates(message as BulkDeleteParentsResponse))
+          as BulkDeleteParentsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteParentsResponse create() => BulkDeleteParentsResponse._();
+  @$core.override
+  BulkDeleteParentsResponse createEmptyInstance() => create();
+  static $pb.PbList<BulkDeleteParentsResponse> createRepeated() =>
+      $pb.PbList<BulkDeleteParentsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteParentsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkDeleteParentsResponse>(create);
+  static BulkDeleteParentsResponse? _defaultInstance;
+}
+
+/// Bulk Create/Delete Employee Messages
+class BulkCreateEmployeesRequest extends $pb.GeneratedMessage {
+  factory BulkCreateEmployeesRequest({
+    $core.Iterable<CreateEmployeeRequest>? employees,
+  }) {
+    final result = create();
+    if (employees != null) result.employees.addAll(employees);
+    return result;
+  }
+
+  BulkCreateEmployeesRequest._();
+
+  factory BulkCreateEmployeesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkCreateEmployeesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkCreateEmployeesRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPM<CreateEmployeeRequest>(1, _omitFieldNames ? '' : 'employees',
+        subBuilder: CreateEmployeeRequest.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateEmployeesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateEmployeesRequest copyWith(
+          void Function(BulkCreateEmployeesRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as BulkCreateEmployeesRequest))
+          as BulkCreateEmployeesRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateEmployeesRequest create() => BulkCreateEmployeesRequest._();
+  @$core.override
+  BulkCreateEmployeesRequest createEmptyInstance() => create();
+  static $pb.PbList<BulkCreateEmployeesRequest> createRepeated() =>
+      $pb.PbList<BulkCreateEmployeesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateEmployeesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkCreateEmployeesRequest>(create);
+  static BulkCreateEmployeesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<CreateEmployeeRequest> get employees => $_getList(0);
+}
+
+class BulkCreateEmployeesResponse extends $pb.GeneratedMessage {
+  factory BulkCreateEmployeesResponse({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    return result;
+  }
+
+  BulkCreateEmployeesResponse._();
+
+  factory BulkCreateEmployeesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkCreateEmployeesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkCreateEmployeesResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateEmployeesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkCreateEmployeesResponse copyWith(
+          void Function(BulkCreateEmployeesResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as BulkCreateEmployeesResponse))
+          as BulkCreateEmployeesResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateEmployeesResponse create() =>
+      BulkCreateEmployeesResponse._();
+  @$core.override
+  BulkCreateEmployeesResponse createEmptyInstance() => create();
+  static $pb.PbList<BulkCreateEmployeesResponse> createRepeated() =>
+      $pb.PbList<BulkCreateEmployeesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BulkCreateEmployeesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkCreateEmployeesResponse>(create);
+  static BulkCreateEmployeesResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
+}
+
+class BulkDeleteEmployeesRequest extends $pb.GeneratedMessage {
+  factory BulkDeleteEmployeesRequest({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    return result;
+  }
+
+  BulkDeleteEmployeesRequest._();
+
+  factory BulkDeleteEmployeesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkDeleteEmployeesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkDeleteEmployeesRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteEmployeesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteEmployeesRequest copyWith(
+          void Function(BulkDeleteEmployeesRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as BulkDeleteEmployeesRequest))
+          as BulkDeleteEmployeesRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteEmployeesRequest create() => BulkDeleteEmployeesRequest._();
+  @$core.override
+  BulkDeleteEmployeesRequest createEmptyInstance() => create();
+  static $pb.PbList<BulkDeleteEmployeesRequest> createRepeated() =>
+      $pb.PbList<BulkDeleteEmployeesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteEmployeesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkDeleteEmployeesRequest>(create);
+  static BulkDeleteEmployeesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
+}
+
+class BulkDeleteEmployeesResponse extends $pb.GeneratedMessage {
+  factory BulkDeleteEmployeesResponse() => create();
+
+  BulkDeleteEmployeesResponse._();
+
+  factory BulkDeleteEmployeesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkDeleteEmployeesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkDeleteEmployeesResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'user_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteEmployeesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteEmployeesResponse copyWith(
+          void Function(BulkDeleteEmployeesResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as BulkDeleteEmployeesResponse))
+          as BulkDeleteEmployeesResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteEmployeesResponse create() =>
+      BulkDeleteEmployeesResponse._();
+  @$core.override
+  BulkDeleteEmployeesResponse createEmptyInstance() => create();
+  static $pb.PbList<BulkDeleteEmployeesResponse> createRepeated() =>
+      $pb.PbList<BulkDeleteEmployeesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteEmployeesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkDeleteEmployeesResponse>(create);
+  static BulkDeleteEmployeesResponse? _defaultInstance;
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

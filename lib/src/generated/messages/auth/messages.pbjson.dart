@@ -111,3 +111,58 @@ const RemoveUserResponse$json = {
 /// Descriptor for `RemoveUserResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List removeUserResponseDescriptor =
     $convert.base64Decode('ChJSZW1vdmVVc2VyUmVzcG9uc2U=');
+
+@$core.Deprecated('Use bulkAddUsersRequestDescriptor instead')
+const BulkAddUsersRequest$json = {
+  '1': 'BulkAddUsersRequest',
+  '2': [
+    {
+      '1': 'users',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.auth_messages.AddUserRequest',
+      '10': 'users'
+    },
+  ],
+};
+
+/// Descriptor for `BulkAddUsersRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAddUsersRequestDescriptor = $convert.base64Decode(
+    'ChNCdWxrQWRkVXNlcnNSZXF1ZXN0EjMKBXVzZXJzGAEgAygLMh0uYXV0aF9tZXNzYWdlcy5BZG'
+    'RVc2VyUmVxdWVzdFIFdXNlcnM=');
+
+@$core.Deprecated('Use bulkAddUsersResponseDescriptor instead')
+const BulkAddUsersResponse$json = {
+  '1': 'BulkAddUsersResponse',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `BulkAddUsersResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAddUsersResponseDescriptor =
+    $convert.base64Decode(
+        'ChRCdWxrQWRkVXNlcnNSZXNwb25zZRIZCgh1c2VyX2lkcxgBIAMoCVIHdXNlcklkcw==');
+
+@$core.Deprecated('Use bulkRemoveUsersRequestDescriptor instead')
+const BulkRemoveUsersRequest$json = {
+  '1': 'BulkRemoveUsersRequest',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `BulkRemoveUsersRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkRemoveUsersRequestDescriptor =
+    $convert.base64Decode(
+        'ChZCdWxrUmVtb3ZlVXNlcnNSZXF1ZXN0EhkKCHVzZXJfaWRzGAEgAygJUgd1c2VySWRz');
+
+@$core.Deprecated('Use bulkRemoveUsersResponseDescriptor instead')
+const BulkRemoveUsersResponse$json = {
+  '1': 'BulkRemoveUsersResponse',
+};
+
+/// Descriptor for `BulkRemoveUsersResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkRemoveUsersResponseDescriptor =
+    $convert.base64Decode('ChdCdWxrUmVtb3ZlVXNlcnNSZXNwb25zZQ==');

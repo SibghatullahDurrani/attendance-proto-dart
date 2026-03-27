@@ -173,6 +173,13 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$allocateUsersShift, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.DeallocateUsersShiftResponse> deallocateUsersShift(
+    $0.DeallocateUsersShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$deallocateUsersShift, request, options: options);
+  }
+
   $grpc.ResponseFuture<$0.EditShiftResponse> editShift(
     $0.EditShiftRequest request, {
     $grpc.CallOptions? options,
@@ -295,6 +302,11 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/AllocateUsersShift',
       ($0.AllocateUsersShiftRequest value) => value.writeToBuffer(),
       $0.AllocateUsersShiftResponse.fromBuffer);
+  static final _$deallocateUsersShift = $grpc.ClientMethod<
+          $0.DeallocateUsersShiftRequest, $0.DeallocateUsersShiftResponse>(
+      '/attendance.AttendanceService/DeallocateUsersShift',
+      ($0.DeallocateUsersShiftRequest value) => value.writeToBuffer(),
+      $0.DeallocateUsersShiftResponse.fromBuffer);
   static final _$editShift =
       $grpc.ClientMethod<$0.EditShiftRequest, $0.EditShiftResponse>(
           '/attendance.AttendanceService/EditShift',
@@ -478,6 +490,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.AllocateUsersShiftRequest.fromBuffer(value),
         ($0.AllocateUsersShiftResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeallocateUsersShiftRequest,
+            $0.DeallocateUsersShiftResponse>(
+        'DeallocateUsersShift',
+        deallocateUsersShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeallocateUsersShiftRequest.fromBuffer(value),
+        ($0.DeallocateUsersShiftResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.EditShiftRequest, $0.EditShiftResponse>(
         'EditShift',
         editShift_Pre,
@@ -669,6 +690,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.AllocateUsersShiftResponse> allocateUsersShift(
       $grpc.ServiceCall call, $0.AllocateUsersShiftRequest request);
+
+  $async.Future<$0.DeallocateUsersShiftResponse> deallocateUsersShift_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.DeallocateUsersShiftRequest> $request) async {
+    return deallocateUsersShift($call, await $request);
+  }
+
+  $async.Future<$0.DeallocateUsersShiftResponse> deallocateUsersShift(
+      $grpc.ServiceCall call, $0.DeallocateUsersShiftRequest request);
 
   $async.Future<$0.EditShiftResponse> editShift_Pre($grpc.ServiceCall $call,
       $async.Future<$0.EditShiftRequest> $request) async {

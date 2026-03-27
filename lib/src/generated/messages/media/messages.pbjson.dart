@@ -507,3 +507,52 @@ const DeleteDraftImageResponse$json = {
 /// Descriptor for `DeleteDraftImageResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteDraftImageResponseDescriptor =
     $convert.base64Decode('ChhEZWxldGVEcmFmdEltYWdlUmVzcG9uc2U=');
+
+@$core.Deprecated('Use promoteDraftImagesRequestDescriptor instead')
+const PromoteDraftImagesRequest$json = {
+  '1': 'PromoteDraftImagesRequest',
+  '2': [
+    {
+      '1': 'mappings',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.media_messages.DraftImageMapping',
+      '10': 'mappings'
+    },
+  ],
+};
+
+/// Descriptor for `PromoteDraftImagesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List promoteDraftImagesRequestDescriptor =
+    $convert.base64Decode(
+        'ChlQcm9tb3RlRHJhZnRJbWFnZXNSZXF1ZXN0Ej0KCG1hcHBpbmdzGAEgAygLMiEubWVkaWFfbW'
+        'Vzc2FnZXMuRHJhZnRJbWFnZU1hcHBpbmdSCG1hcHBpbmdz');
+
+@$core.Deprecated('Use draftImageMappingDescriptor instead')
+const DraftImageMapping$json = {
+  '1': 'DraftImageMapping',
+  '2': [
+    {'1': 'row_id', '3': 1, '4': 1, '5': 9, '10': 'rowId'},
+    {'1': 'user_id', '3': 2, '4': 1, '5': 9, '10': 'userId'},
+  ],
+};
+
+/// Descriptor for `DraftImageMapping`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List draftImageMappingDescriptor = $convert.base64Decode(
+    'ChFEcmFmdEltYWdlTWFwcGluZxIVCgZyb3dfaWQYASABKAlSBXJvd0lkEhcKB3VzZXJfaWQYAi'
+    'ABKAlSBnVzZXJJZA==');
+
+@$core.Deprecated('Use promoteDraftImagesResponseDescriptor instead')
+const PromoteDraftImagesResponse$json = {
+  '1': 'PromoteDraftImagesResponse',
+  '2': [
+    {'1': 'promoted_user_ids', '3': 1, '4': 3, '5': 9, '10': 'promotedUserIds'},
+  ],
+};
+
+/// Descriptor for `PromoteDraftImagesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List promoteDraftImagesResponseDescriptor =
+    $convert.base64Decode(
+        'ChpQcm9tb3RlRHJhZnRJbWFnZXNSZXNwb25zZRIqChFwcm9tb3RlZF91c2VyX2lkcxgBIAMoCV'
+        'IPcHJvbW90ZWRVc2VySWRz');

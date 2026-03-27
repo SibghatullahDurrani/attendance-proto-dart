@@ -1714,6 +1714,179 @@ class DeleteDraftImageResponse extends $pb.GeneratedMessage {
   static DeleteDraftImageResponse? _defaultInstance;
 }
 
+/// PromoteDraftImages messages (move draft images to user images)
+class PromoteDraftImagesRequest extends $pb.GeneratedMessage {
+  factory PromoteDraftImagesRequest({
+    $core.Iterable<DraftImageMapping>? mappings,
+  }) {
+    final result = create();
+    if (mappings != null) result.mappings.addAll(mappings);
+    return result;
+  }
+
+  PromoteDraftImagesRequest._();
+
+  factory PromoteDraftImagesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PromoteDraftImagesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PromoteDraftImagesRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..pPM<DraftImageMapping>(1, _omitFieldNames ? '' : 'mappings',
+        subBuilder: DraftImageMapping.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PromoteDraftImagesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PromoteDraftImagesRequest copyWith(
+          void Function(PromoteDraftImagesRequest) updates) =>
+      super.copyWith((message) => updates(message as PromoteDraftImagesRequest))
+          as PromoteDraftImagesRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static PromoteDraftImagesRequest create() => PromoteDraftImagesRequest._();
+  @$core.override
+  PromoteDraftImagesRequest createEmptyInstance() => create();
+  static $pb.PbList<PromoteDraftImagesRequest> createRepeated() =>
+      $pb.PbList<PromoteDraftImagesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static PromoteDraftImagesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PromoteDraftImagesRequest>(create);
+  static PromoteDraftImagesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<DraftImageMapping> get mappings => $_getList(0);
+}
+
+class DraftImageMapping extends $pb.GeneratedMessage {
+  factory DraftImageMapping({
+    $core.String? rowId,
+    $core.String? userId,
+  }) {
+    final result = create();
+    if (rowId != null) result.rowId = rowId;
+    if (userId != null) result.userId = userId;
+    return result;
+  }
+
+  DraftImageMapping._();
+
+  factory DraftImageMapping.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DraftImageMapping.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DraftImageMapping',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'rowId')
+    ..aOS(2, _omitFieldNames ? '' : 'userId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DraftImageMapping clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DraftImageMapping copyWith(void Function(DraftImageMapping) updates) =>
+      super.copyWith((message) => updates(message as DraftImageMapping))
+          as DraftImageMapping;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DraftImageMapping create() => DraftImageMapping._();
+  @$core.override
+  DraftImageMapping createEmptyInstance() => create();
+  static $pb.PbList<DraftImageMapping> createRepeated() =>
+      $pb.PbList<DraftImageMapping>();
+  @$core.pragma('dart2js:noInline')
+  static DraftImageMapping getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DraftImageMapping>(create);
+  static DraftImageMapping? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get rowId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set rowId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasRowId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRowId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get userId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set userId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUserId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUserId() => $_clearField(2);
+}
+
+class PromoteDraftImagesResponse extends $pb.GeneratedMessage {
+  factory PromoteDraftImagesResponse({
+    $core.Iterable<$core.String>? promotedUserIds,
+  }) {
+    final result = create();
+    if (promotedUserIds != null) result.promotedUserIds.addAll(promotedUserIds);
+    return result;
+  }
+
+  PromoteDraftImagesResponse._();
+
+  factory PromoteDraftImagesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PromoteDraftImagesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PromoteDraftImagesResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'media_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'promotedUserIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PromoteDraftImagesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PromoteDraftImagesResponse copyWith(
+          void Function(PromoteDraftImagesResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as PromoteDraftImagesResponse))
+          as PromoteDraftImagesResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static PromoteDraftImagesResponse create() => PromoteDraftImagesResponse._();
+  @$core.override
+  PromoteDraftImagesResponse createEmptyInstance() => create();
+  static $pb.PbList<PromoteDraftImagesResponse> createRepeated() =>
+      $pb.PbList<PromoteDraftImagesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static PromoteDraftImagesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PromoteDraftImagesResponse>(create);
+  static PromoteDraftImagesResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get promotedUserIds => $_getList(0);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

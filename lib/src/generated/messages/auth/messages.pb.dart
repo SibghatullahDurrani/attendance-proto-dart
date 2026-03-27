@@ -398,6 +398,200 @@ class RemoveUserResponse extends $pb.GeneratedMessage {
   static RemoveUserResponse? _defaultInstance;
 }
 
+/// Bulk operations
+class BulkAddUsersRequest extends $pb.GeneratedMessage {
+  factory BulkAddUsersRequest({
+    $core.Iterable<AddUserRequest>? users,
+  }) {
+    final result = create();
+    if (users != null) result.users.addAll(users);
+    return result;
+  }
+
+  BulkAddUsersRequest._();
+
+  factory BulkAddUsersRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkAddUsersRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkAddUsersRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
+      createEmptyInstance: create)
+    ..pPM<AddUserRequest>(1, _omitFieldNames ? '' : 'users',
+        subBuilder: AddUserRequest.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkAddUsersRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkAddUsersRequest copyWith(void Function(BulkAddUsersRequest) updates) =>
+      super.copyWith((message) => updates(message as BulkAddUsersRequest))
+          as BulkAddUsersRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkAddUsersRequest create() => BulkAddUsersRequest._();
+  @$core.override
+  BulkAddUsersRequest createEmptyInstance() => create();
+  static $pb.PbList<BulkAddUsersRequest> createRepeated() =>
+      $pb.PbList<BulkAddUsersRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BulkAddUsersRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkAddUsersRequest>(create);
+  static BulkAddUsersRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<AddUserRequest> get users => $_getList(0);
+}
+
+class BulkAddUsersResponse extends $pb.GeneratedMessage {
+  factory BulkAddUsersResponse({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    return result;
+  }
+
+  BulkAddUsersResponse._();
+
+  factory BulkAddUsersResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkAddUsersResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkAddUsersResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkAddUsersResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkAddUsersResponse copyWith(void Function(BulkAddUsersResponse) updates) =>
+      super.copyWith((message) => updates(message as BulkAddUsersResponse))
+          as BulkAddUsersResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkAddUsersResponse create() => BulkAddUsersResponse._();
+  @$core.override
+  BulkAddUsersResponse createEmptyInstance() => create();
+  static $pb.PbList<BulkAddUsersResponse> createRepeated() =>
+      $pb.PbList<BulkAddUsersResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BulkAddUsersResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkAddUsersResponse>(create);
+  static BulkAddUsersResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
+}
+
+class BulkRemoveUsersRequest extends $pb.GeneratedMessage {
+  factory BulkRemoveUsersRequest({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    return result;
+  }
+
+  BulkRemoveUsersRequest._();
+
+  factory BulkRemoveUsersRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkRemoveUsersRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkRemoveUsersRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkRemoveUsersRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkRemoveUsersRequest copyWith(
+          void Function(BulkRemoveUsersRequest) updates) =>
+      super.copyWith((message) => updates(message as BulkRemoveUsersRequest))
+          as BulkRemoveUsersRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkRemoveUsersRequest create() => BulkRemoveUsersRequest._();
+  @$core.override
+  BulkRemoveUsersRequest createEmptyInstance() => create();
+  static $pb.PbList<BulkRemoveUsersRequest> createRepeated() =>
+      $pb.PbList<BulkRemoveUsersRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BulkRemoveUsersRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkRemoveUsersRequest>(create);
+  static BulkRemoveUsersRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
+}
+
+class BulkRemoveUsersResponse extends $pb.GeneratedMessage {
+  factory BulkRemoveUsersResponse() => create();
+
+  BulkRemoveUsersResponse._();
+
+  factory BulkRemoveUsersResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkRemoveUsersResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BulkRemoveUsersResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkRemoveUsersResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkRemoveUsersResponse copyWith(
+          void Function(BulkRemoveUsersResponse) updates) =>
+      super.copyWith((message) => updates(message as BulkRemoveUsersResponse))
+          as BulkRemoveUsersResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BulkRemoveUsersResponse create() => BulkRemoveUsersResponse._();
+  @$core.override
+  BulkRemoveUsersResponse createEmptyInstance() => create();
+  static $pb.PbList<BulkRemoveUsersResponse> createRepeated() =>
+      $pb.PbList<BulkRemoveUsersResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BulkRemoveUsersResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkRemoveUsersResponse>(create);
+  static BulkRemoveUsersResponse? _defaultInstance;
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

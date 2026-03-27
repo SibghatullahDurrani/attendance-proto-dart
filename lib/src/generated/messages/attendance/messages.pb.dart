@@ -3612,6 +3612,116 @@ class AllocateUsersShiftResponse extends $pb.GeneratedMessage {
   static AllocateUsersShiftResponse? _defaultInstance;
 }
 
+class DeallocateUsersShiftRequest extends $pb.GeneratedMessage {
+  factory DeallocateUsersShiftRequest({
+    $core.String? shiftId,
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final result = create();
+    if (shiftId != null) result.shiftId = shiftId;
+    if (userIds != null) result.userIds.addAll(userIds);
+    return result;
+  }
+
+  DeallocateUsersShiftRequest._();
+
+  factory DeallocateUsersShiftRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeallocateUsersShiftRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeallocateUsersShiftRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'shiftId')
+    ..pPS(2, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeallocateUsersShiftRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeallocateUsersShiftRequest copyWith(
+          void Function(DeallocateUsersShiftRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as DeallocateUsersShiftRequest))
+          as DeallocateUsersShiftRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DeallocateUsersShiftRequest create() =>
+      DeallocateUsersShiftRequest._();
+  @$core.override
+  DeallocateUsersShiftRequest createEmptyInstance() => create();
+  static $pb.PbList<DeallocateUsersShiftRequest> createRepeated() =>
+      $pb.PbList<DeallocateUsersShiftRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DeallocateUsersShiftRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeallocateUsersShiftRequest>(create);
+  static DeallocateUsersShiftRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get shiftId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set shiftId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasShiftId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearShiftId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<$core.String> get userIds => $_getList(1);
+}
+
+class DeallocateUsersShiftResponse extends $pb.GeneratedMessage {
+  factory DeallocateUsersShiftResponse() => create();
+
+  DeallocateUsersShiftResponse._();
+
+  factory DeallocateUsersShiftResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeallocateUsersShiftResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeallocateUsersShiftResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeallocateUsersShiftResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeallocateUsersShiftResponse copyWith(
+          void Function(DeallocateUsersShiftResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as DeallocateUsersShiftResponse))
+          as DeallocateUsersShiftResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DeallocateUsersShiftResponse create() =>
+      DeallocateUsersShiftResponse._();
+  @$core.override
+  DeallocateUsersShiftResponse createEmptyInstance() => create();
+  static $pb.PbList<DeallocateUsersShiftResponse> createRepeated() =>
+      $pb.PbList<DeallocateUsersShiftResponse>();
+  @$core.pragma('dart2js:noInline')
+  static DeallocateUsersShiftResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeallocateUsersShiftResponse>(create);
+  static DeallocateUsersShiftResponse? _defaultInstance;
+}
+
 class EditShiftRequest extends $pb.GeneratedMessage {
   factory EditShiftRequest({
     $core.String? shiftId,

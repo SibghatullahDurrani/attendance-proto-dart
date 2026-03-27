@@ -26,6 +26,7 @@ enum BulkRegistrationCommand_Command {
   clearSession,
   deleteRowImage,
   registerParent,
+  registerAll,
   notSet
 }
 
@@ -40,6 +41,7 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
     ClearSessionCmd? clearSession,
     DeleteRowImageCmd? deleteRowImage,
     RegisterParentCmd? registerParent,
+    RegisterAllCmd? registerAll,
   }) {
     final result = create();
     if (startSession != null) result.startSession = startSession;
@@ -51,6 +53,7 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
     if (clearSession != null) result.clearSession = clearSession;
     if (deleteRowImage != null) result.deleteRowImage = deleteRowImage;
     if (registerParent != null) result.registerParent = registerParent;
+    if (registerAll != null) result.registerAll = registerAll;
     return result;
   }
 
@@ -74,13 +77,14 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
     7: BulkRegistrationCommand_Command.clearSession,
     8: BulkRegistrationCommand_Command.deleteRowImage,
     9: BulkRegistrationCommand_Command.registerParent,
+    10: BulkRegistrationCommand_Command.registerAll,
     0: BulkRegistrationCommand_Command.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BulkRegistrationCommand',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
     ..aOM<StartSessionCmd>(1, _omitFieldNames ? '' : 'startSession',
         subBuilder: StartSessionCmd.create)
     ..aOM<ResumeSessionCmd>(2, _omitFieldNames ? '' : 'resumeSession',
@@ -99,6 +103,8 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
         subBuilder: DeleteRowImageCmd.create)
     ..aOM<RegisterParentCmd>(9, _omitFieldNames ? '' : 'registerParent',
         subBuilder: RegisterParentCmd.create)
+    ..aOM<RegisterAllCmd>(10, _omitFieldNames ? '' : 'registerAll',
+        subBuilder: RegisterAllCmd.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -132,6 +138,7 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   @$pb.TagNumber(8)
   @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
   BulkRegistrationCommand_Command whichCommand() =>
       _BulkRegistrationCommand_CommandByTag[$_whichOneof(0)]!;
   @$pb.TagNumber(1)
@@ -143,6 +150,7 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   @$pb.TagNumber(8)
   @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
   void clearCommand() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -243,6 +251,17 @@ class BulkRegistrationCommand extends $pb.GeneratedMessage {
   void clearRegisterParent() => $_clearField(9);
   @$pb.TagNumber(9)
   RegisterParentCmd ensureRegisterParent() => $_ensure(8);
+
+  @$pb.TagNumber(10)
+  RegisterAllCmd get registerAll => $_getN(9);
+  @$pb.TagNumber(10)
+  set registerAll(RegisterAllCmd value) => $_setField(10, value);
+  @$pb.TagNumber(10)
+  $core.bool hasRegisterAll() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearRegisterAll() => $_clearField(10);
+  @$pb.TagNumber(10)
+  RegisterAllCmd ensureRegisterAll() => $_ensure(9);
 }
 
 class StartSessionCmd extends $pb.GeneratedMessage {
@@ -888,6 +907,48 @@ class RegisterParentCmd extends $pb.GeneratedMessage {
   void clearRowId() => $_clearField(1);
 }
 
+/// RegisterAll - registers all valid unregistered rows in bulk
+/// Uses ALL-OR-NOTHING semantics: if any user fails, all are rolled back
+class RegisterAllCmd extends $pb.GeneratedMessage {
+  factory RegisterAllCmd() => create();
+
+  RegisterAllCmd._();
+
+  factory RegisterAllCmd.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RegisterAllCmd.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegisterAllCmd',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterAllCmd clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegisterAllCmd copyWith(void Function(RegisterAllCmd) updates) =>
+      super.copyWith((message) => updates(message as RegisterAllCmd))
+          as RegisterAllCmd;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RegisterAllCmd create() => RegisterAllCmd._();
+  @$core.override
+  RegisterAllCmd createEmptyInstance() => create();
+  static $pb.PbList<RegisterAllCmd> createRepeated() =>
+      $pb.PbList<RegisterAllCmd>();
+  @$core.pragma('dart2js:noInline')
+  static RegisterAllCmd getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RegisterAllCmd>(create);
+  static RegisterAllCmd? _defaultInstance;
+}
+
 enum BulkRegistrationEvent_Event {
   sessionStarted,
   sessionResumed,
@@ -898,6 +959,9 @@ enum BulkRegistrationEvent_Event {
   validationResult,
   sessionCleared,
   error,
+  registrationStarted,
+  registrationProgress,
+  registrationCompleted,
   notSet
 }
 
@@ -912,6 +976,9 @@ class BulkRegistrationEvent extends $pb.GeneratedMessage {
     ValidationResultEvent? validationResult,
     SessionClearedEvent? sessionCleared,
     ErrorEvent? error,
+    RegistrationStartedEvent? registrationStarted,
+    RegistrationProgressEvent? registrationProgress,
+    RegistrationCompletedEvent? registrationCompleted,
   }) {
     final result = create();
     if (sessionStarted != null) result.sessionStarted = sessionStarted;
@@ -923,6 +990,12 @@ class BulkRegistrationEvent extends $pb.GeneratedMessage {
     if (validationResult != null) result.validationResult = validationResult;
     if (sessionCleared != null) result.sessionCleared = sessionCleared;
     if (error != null) result.error = error;
+    if (registrationStarted != null)
+      result.registrationStarted = registrationStarted;
+    if (registrationProgress != null)
+      result.registrationProgress = registrationProgress;
+    if (registrationCompleted != null)
+      result.registrationCompleted = registrationCompleted;
     return result;
   }
 
@@ -946,13 +1019,16 @@ class BulkRegistrationEvent extends $pb.GeneratedMessage {
     7: BulkRegistrationEvent_Event.validationResult,
     8: BulkRegistrationEvent_Event.sessionCleared,
     9: BulkRegistrationEvent_Event.error,
+    10: BulkRegistrationEvent_Event.registrationStarted,
+    11: BulkRegistrationEvent_Event.registrationProgress,
+    12: BulkRegistrationEvent_Event.registrationCompleted,
     0: BulkRegistrationEvent_Event.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BulkRegistrationEvent',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
     ..aOM<SessionStartedEvent>(1, _omitFieldNames ? '' : 'sessionStarted',
         subBuilder: SessionStartedEvent.create)
     ..aOM<SessionResumedEvent>(2, _omitFieldNames ? '' : 'sessionResumed',
@@ -971,6 +1047,15 @@ class BulkRegistrationEvent extends $pb.GeneratedMessage {
         subBuilder: SessionClearedEvent.create)
     ..aOM<ErrorEvent>(9, _omitFieldNames ? '' : 'error',
         subBuilder: ErrorEvent.create)
+    ..aOM<RegistrationStartedEvent>(
+        10, _omitFieldNames ? '' : 'registrationStarted',
+        subBuilder: RegistrationStartedEvent.create)
+    ..aOM<RegistrationProgressEvent>(
+        11, _omitFieldNames ? '' : 'registrationProgress',
+        subBuilder: RegistrationProgressEvent.create)
+    ..aOM<RegistrationCompletedEvent>(
+        12, _omitFieldNames ? '' : 'registrationCompleted',
+        subBuilder: RegistrationCompletedEvent.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1004,6 +1089,9 @@ class BulkRegistrationEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   @$pb.TagNumber(8)
   @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
+  @$pb.TagNumber(12)
   BulkRegistrationEvent_Event whichEvent() =>
       _BulkRegistrationEvent_EventByTag[$_whichOneof(0)]!;
   @$pb.TagNumber(1)
@@ -1015,6 +1103,9 @@ class BulkRegistrationEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   @$pb.TagNumber(8)
   @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
+  @$pb.TagNumber(12)
   void clearEvent() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -1115,6 +1206,42 @@ class BulkRegistrationEvent extends $pb.GeneratedMessage {
   void clearError() => $_clearField(9);
   @$pb.TagNumber(9)
   ErrorEvent ensureError() => $_ensure(8);
+
+  @$pb.TagNumber(10)
+  RegistrationStartedEvent get registrationStarted => $_getN(9);
+  @$pb.TagNumber(10)
+  set registrationStarted(RegistrationStartedEvent value) =>
+      $_setField(10, value);
+  @$pb.TagNumber(10)
+  $core.bool hasRegistrationStarted() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearRegistrationStarted() => $_clearField(10);
+  @$pb.TagNumber(10)
+  RegistrationStartedEvent ensureRegistrationStarted() => $_ensure(9);
+
+  @$pb.TagNumber(11)
+  RegistrationProgressEvent get registrationProgress => $_getN(10);
+  @$pb.TagNumber(11)
+  set registrationProgress(RegistrationProgressEvent value) =>
+      $_setField(11, value);
+  @$pb.TagNumber(11)
+  $core.bool hasRegistrationProgress() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearRegistrationProgress() => $_clearField(11);
+  @$pb.TagNumber(11)
+  RegistrationProgressEvent ensureRegistrationProgress() => $_ensure(10);
+
+  @$pb.TagNumber(12)
+  RegistrationCompletedEvent get registrationCompleted => $_getN(11);
+  @$pb.TagNumber(12)
+  set registrationCompleted(RegistrationCompletedEvent value) =>
+      $_setField(12, value);
+  @$pb.TagNumber(12)
+  $core.bool hasRegistrationCompleted() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearRegistrationCompleted() => $_clearField(12);
+  @$pb.TagNumber(12)
+  RegistrationCompletedEvent ensureRegistrationCompleted() => $_ensure(11);
 }
 
 class SessionStartedEvent extends $pb.GeneratedMessage {
@@ -1675,6 +1802,310 @@ class SessionClearedEvent extends $pb.GeneratedMessage {
   $core.bool hasSessionId() => $_has(0);
   @$pb.TagNumber(1)
   void clearSessionId() => $_clearField(1);
+}
+
+class RegistrationStartedEvent extends $pb.GeneratedMessage {
+  factory RegistrationStartedEvent({
+    $core.String? sessionId,
+    $core.int? totalRows,
+  }) {
+    final result = create();
+    if (sessionId != null) result.sessionId = sessionId;
+    if (totalRows != null) result.totalRows = totalRows;
+    return result;
+  }
+
+  RegistrationStartedEvent._();
+
+  factory RegistrationStartedEvent.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RegistrationStartedEvent.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegistrationStartedEvent',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'sessionId')
+    ..aI(2, _omitFieldNames ? '' : 'totalRows')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegistrationStartedEvent clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegistrationStartedEvent copyWith(
+          void Function(RegistrationStartedEvent) updates) =>
+      super.copyWith((message) => updates(message as RegistrationStartedEvent))
+          as RegistrationStartedEvent;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RegistrationStartedEvent create() => RegistrationStartedEvent._();
+  @$core.override
+  RegistrationStartedEvent createEmptyInstance() => create();
+  static $pb.PbList<RegistrationStartedEvent> createRepeated() =>
+      $pb.PbList<RegistrationStartedEvent>();
+  @$core.pragma('dart2js:noInline')
+  static RegistrationStartedEvent getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RegistrationStartedEvent>(create);
+  static RegistrationStartedEvent? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get sessionId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set sessionId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSessionId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSessionId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get totalRows => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set totalRows($core.int value) => $_setSignedInt32(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasTotalRows() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTotalRows() => $_clearField(2);
+}
+
+class RegistrationProgressEvent extends $pb.GeneratedMessage {
+  factory RegistrationProgressEvent({
+    $core.String? rowId,
+    $core.int? currentIndex,
+    $core.int? totalRows,
+    $core.String? status,
+    $core.String? userId,
+    $core.String? error,
+  }) {
+    final result = create();
+    if (rowId != null) result.rowId = rowId;
+    if (currentIndex != null) result.currentIndex = currentIndex;
+    if (totalRows != null) result.totalRows = totalRows;
+    if (status != null) result.status = status;
+    if (userId != null) result.userId = userId;
+    if (error != null) result.error = error;
+    return result;
+  }
+
+  RegistrationProgressEvent._();
+
+  factory RegistrationProgressEvent.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RegistrationProgressEvent.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegistrationProgressEvent',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'rowId')
+    ..aI(2, _omitFieldNames ? '' : 'currentIndex')
+    ..aI(3, _omitFieldNames ? '' : 'totalRows')
+    ..aOS(4, _omitFieldNames ? '' : 'status')
+    ..aOS(5, _omitFieldNames ? '' : 'userId')
+    ..aOS(6, _omitFieldNames ? '' : 'error')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegistrationProgressEvent clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegistrationProgressEvent copyWith(
+          void Function(RegistrationProgressEvent) updates) =>
+      super.copyWith((message) => updates(message as RegistrationProgressEvent))
+          as RegistrationProgressEvent;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RegistrationProgressEvent create() => RegistrationProgressEvent._();
+  @$core.override
+  RegistrationProgressEvent createEmptyInstance() => create();
+  static $pb.PbList<RegistrationProgressEvent> createRepeated() =>
+      $pb.PbList<RegistrationProgressEvent>();
+  @$core.pragma('dart2js:noInline')
+  static RegistrationProgressEvent getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RegistrationProgressEvent>(create);
+  static RegistrationProgressEvent? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get rowId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set rowId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasRowId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRowId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get currentIndex => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set currentIndex($core.int value) => $_setSignedInt32(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasCurrentIndex() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearCurrentIndex() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get totalRows => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set totalRows($core.int value) => $_setSignedInt32(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasTotalRows() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTotalRows() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get status => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set status($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasStatus() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearStatus() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get userId => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set userId($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasUserId() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUserId() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get error => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set error($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasError() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearError() => $_clearField(6);
+}
+
+class RegistrationCompletedEvent extends $pb.GeneratedMessage {
+  factory RegistrationCompletedEvent({
+    $core.String? sessionId,
+    $core.int? totalProcessed,
+    $core.int? successCount,
+    $core.int? failureCount,
+    $core.bool? rolledBack,
+    $core.String? rollbackReason,
+  }) {
+    final result = create();
+    if (sessionId != null) result.sessionId = sessionId;
+    if (totalProcessed != null) result.totalProcessed = totalProcessed;
+    if (successCount != null) result.successCount = successCount;
+    if (failureCount != null) result.failureCount = failureCount;
+    if (rolledBack != null) result.rolledBack = rolledBack;
+    if (rollbackReason != null) result.rollbackReason = rollbackReason;
+    return result;
+  }
+
+  RegistrationCompletedEvent._();
+
+  factory RegistrationCompletedEvent.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RegistrationCompletedEvent.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RegistrationCompletedEvent',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'sessionId')
+    ..aI(2, _omitFieldNames ? '' : 'totalProcessed')
+    ..aI(3, _omitFieldNames ? '' : 'successCount')
+    ..aI(4, _omitFieldNames ? '' : 'failureCount')
+    ..aOB(5, _omitFieldNames ? '' : 'rolledBack')
+    ..aOS(6, _omitFieldNames ? '' : 'rollbackReason')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegistrationCompletedEvent clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RegistrationCompletedEvent copyWith(
+          void Function(RegistrationCompletedEvent) updates) =>
+      super.copyWith(
+              (message) => updates(message as RegistrationCompletedEvent))
+          as RegistrationCompletedEvent;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RegistrationCompletedEvent create() => RegistrationCompletedEvent._();
+  @$core.override
+  RegistrationCompletedEvent createEmptyInstance() => create();
+  static $pb.PbList<RegistrationCompletedEvent> createRepeated() =>
+      $pb.PbList<RegistrationCompletedEvent>();
+  @$core.pragma('dart2js:noInline')
+  static RegistrationCompletedEvent getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RegistrationCompletedEvent>(create);
+  static RegistrationCompletedEvent? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get sessionId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set sessionId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSessionId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSessionId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get totalProcessed => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set totalProcessed($core.int value) => $_setSignedInt32(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasTotalProcessed() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTotalProcessed() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get successCount => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set successCount($core.int value) => $_setSignedInt32(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSuccessCount() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSuccessCount() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get failureCount => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set failureCount($core.int value) => $_setSignedInt32(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasFailureCount() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearFailureCount() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get rolledBack => $_getBF(4);
+  @$pb.TagNumber(5)
+  set rolledBack($core.bool value) => $_setBool(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasRolledBack() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearRolledBack() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get rollbackReason => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set rollbackReason($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasRollbackReason() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearRollbackReason() => $_clearField(6);
 }
 
 class ErrorEvent extends $pb.GeneratedMessage {

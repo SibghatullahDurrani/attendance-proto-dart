@@ -3272,3 +3272,321 @@ const ClassName$json = {
 final $typed_data.Uint8List classNameDescriptor = $convert.base64Decode(
     'CglDbGFzc05hbWUSGQoIY2xhc3NfaWQYASABKAlSB2NsYXNzSWQSHQoKY2xhc3NfbmFtZRgCIA'
     'EoCVIJY2xhc3NOYW1lEhgKB3NlY3Rpb24YAyABKAlSB3NlY3Rpb24=');
+
+@$core.Deprecated('Use bulkAddStudentsToSchoolRequestDescriptor instead')
+const BulkAddStudentsToSchoolRequest$json = {
+  '1': 'BulkAddStudentsToSchoolRequest',
+  '2': [
+    {
+      '1': 'students',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.AddStudentToSchoolRequest',
+      '10': 'students'
+    },
+  ],
+};
+
+/// Descriptor for `BulkAddStudentsToSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAddStudentsToSchoolRequestDescriptor =
+    $convert.base64Decode(
+        'Ch5CdWxrQWRkU3R1ZGVudHNUb1NjaG9vbFJlcXVlc3QSRgoIc3R1ZGVudHMYASADKAsyKi5zY2'
+        'hvb2xfbWVzc2FnZXMuQWRkU3R1ZGVudFRvU2Nob29sUmVxdWVzdFIIc3R1ZGVudHM=');
+
+@$core.Deprecated('Use bulkAddStudentsToSchoolResponseDescriptor instead')
+const BulkAddStudentsToSchoolResponse$json = {
+  '1': 'BulkAddStudentsToSchoolResponse',
+  '2': [
+    {'1': 'registration_ids', '3': 1, '4': 3, '5': 9, '10': 'registrationIds'},
+  ],
+};
+
+/// Descriptor for `BulkAddStudentsToSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAddStudentsToSchoolResponseDescriptor =
+    $convert.base64Decode(
+        'Ch9CdWxrQWRkU3R1ZGVudHNUb1NjaG9vbFJlc3BvbnNlEikKEHJlZ2lzdHJhdGlvbl9pZHMYAS'
+        'ADKAlSD3JlZ2lzdHJhdGlvbklkcw==');
+
+@$core.Deprecated('Use bulkRemoveStudentsFromSchoolRequestDescriptor instead')
+const BulkRemoveStudentsFromSchoolRequest$json = {
+  '1': 'BulkRemoveStudentsFromSchoolRequest',
+  '2': [
+    {'1': 'registration_ids', '3': 1, '4': 3, '5': 9, '10': 'registrationIds'},
+  ],
+};
+
+/// Descriptor for `BulkRemoveStudentsFromSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkRemoveStudentsFromSchoolRequestDescriptor =
+    $convert.base64Decode(
+        'CiNCdWxrUmVtb3ZlU3R1ZGVudHNGcm9tU2Nob29sUmVxdWVzdBIpChByZWdpc3RyYXRpb25faW'
+        'RzGAEgAygJUg9yZWdpc3RyYXRpb25JZHM=');
+
+@$core.Deprecated('Use bulkRemoveStudentsFromSchoolResponseDescriptor instead')
+const BulkRemoveStudentsFromSchoolResponse$json = {
+  '1': 'BulkRemoveStudentsFromSchoolResponse',
+};
+
+/// Descriptor for `BulkRemoveStudentsFromSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkRemoveStudentsFromSchoolResponseDescriptor =
+    $convert
+        .base64Decode('CiRCdWxrUmVtb3ZlU3R1ZGVudHNGcm9tU2Nob29sUmVzcG9uc2U=');
+
+@$core.Deprecated('Use bulkAddTeachersToSchoolRequestDescriptor instead')
+const BulkAddTeachersToSchoolRequest$json = {
+  '1': 'BulkAddTeachersToSchoolRequest',
+  '2': [
+    {
+      '1': 'teachers',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.AddTeacherToSchoolRequest',
+      '10': 'teachers'
+    },
+  ],
+};
+
+/// Descriptor for `BulkAddTeachersToSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAddTeachersToSchoolRequestDescriptor =
+    $convert.base64Decode(
+        'Ch5CdWxrQWRkVGVhY2hlcnNUb1NjaG9vbFJlcXVlc3QSRgoIdGVhY2hlcnMYASADKAsyKi5zY2'
+        'hvb2xfbWVzc2FnZXMuQWRkVGVhY2hlclRvU2Nob29sUmVxdWVzdFIIdGVhY2hlcnM=');
+
+@$core.Deprecated('Use bulkAddTeachersToSchoolResponseDescriptor instead')
+const BulkAddTeachersToSchoolResponse$json = {
+  '1': 'BulkAddTeachersToSchoolResponse',
+  '2': [
+    {'1': 'registration_ids', '3': 1, '4': 3, '5': 9, '10': 'registrationIds'},
+  ],
+};
+
+/// Descriptor for `BulkAddTeachersToSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAddTeachersToSchoolResponseDescriptor =
+    $convert.base64Decode(
+        'Ch9CdWxrQWRkVGVhY2hlcnNUb1NjaG9vbFJlc3BvbnNlEikKEHJlZ2lzdHJhdGlvbl9pZHMYAS'
+        'ADKAlSD3JlZ2lzdHJhdGlvbklkcw==');
+
+@$core.Deprecated('Use bulkRemoveTeachersFromSchoolRequestDescriptor instead')
+const BulkRemoveTeachersFromSchoolRequest$json = {
+  '1': 'BulkRemoveTeachersFromSchoolRequest',
+  '2': [
+    {'1': 'registration_ids', '3': 1, '4': 3, '5': 9, '10': 'registrationIds'},
+  ],
+};
+
+/// Descriptor for `BulkRemoveTeachersFromSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkRemoveTeachersFromSchoolRequestDescriptor =
+    $convert.base64Decode(
+        'CiNCdWxrUmVtb3ZlVGVhY2hlcnNGcm9tU2Nob29sUmVxdWVzdBIpChByZWdpc3RyYXRpb25faW'
+        'RzGAEgAygJUg9yZWdpc3RyYXRpb25JZHM=');
+
+@$core.Deprecated('Use bulkRemoveTeachersFromSchoolResponseDescriptor instead')
+const BulkRemoveTeachersFromSchoolResponse$json = {
+  '1': 'BulkRemoveTeachersFromSchoolResponse',
+};
+
+/// Descriptor for `BulkRemoveTeachersFromSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkRemoveTeachersFromSchoolResponseDescriptor =
+    $convert
+        .base64Decode('CiRCdWxrUmVtb3ZlVGVhY2hlcnNGcm9tU2Nob29sUmVzcG9uc2U=');
+
+@$core.Deprecated('Use removeParentFromSchoolRequestDescriptor instead')
+const RemoveParentFromSchoolRequest$json = {
+  '1': 'RemoveParentFromSchoolRequest',
+  '2': [
+    {'1': 'registration_id', '3': 1, '4': 1, '5': 9, '10': 'registrationId'},
+  ],
+};
+
+/// Descriptor for `RemoveParentFromSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List removeParentFromSchoolRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1SZW1vdmVQYXJlbnRGcm9tU2Nob29sUmVxdWVzdBInCg9yZWdpc3RyYXRpb25faWQYASABKA'
+        'lSDnJlZ2lzdHJhdGlvbklk');
+
+@$core.Deprecated('Use removeParentFromSchoolResponseDescriptor instead')
+const RemoveParentFromSchoolResponse$json = {
+  '1': 'RemoveParentFromSchoolResponse',
+};
+
+/// Descriptor for `RemoveParentFromSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List removeParentFromSchoolResponseDescriptor =
+    $convert.base64Decode('Ch5SZW1vdmVQYXJlbnRGcm9tU2Nob29sUmVzcG9uc2U=');
+
+@$core.Deprecated('Use bulkAddParentsToSchoolRequestDescriptor instead')
+const BulkAddParentsToSchoolRequest$json = {
+  '1': 'BulkAddParentsToSchoolRequest',
+  '2': [
+    {
+      '1': 'parents',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.AddParentToSchoolRequest',
+      '10': 'parents'
+    },
+  ],
+};
+
+/// Descriptor for `BulkAddParentsToSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAddParentsToSchoolRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1CdWxrQWRkUGFyZW50c1RvU2Nob29sUmVxdWVzdBJDCgdwYXJlbnRzGAEgAygLMikuc2Nob2'
+        '9sX21lc3NhZ2VzLkFkZFBhcmVudFRvU2Nob29sUmVxdWVzdFIHcGFyZW50cw==');
+
+@$core.Deprecated('Use bulkAddParentsToSchoolResponseDescriptor instead')
+const BulkAddParentsToSchoolResponse$json = {
+  '1': 'BulkAddParentsToSchoolResponse',
+  '2': [
+    {'1': 'registration_ids', '3': 1, '4': 3, '5': 9, '10': 'registrationIds'},
+  ],
+};
+
+/// Descriptor for `BulkAddParentsToSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAddParentsToSchoolResponseDescriptor =
+    $convert.base64Decode(
+        'Ch5CdWxrQWRkUGFyZW50c1RvU2Nob29sUmVzcG9uc2USKQoQcmVnaXN0cmF0aW9uX2lkcxgBIA'
+        'MoCVIPcmVnaXN0cmF0aW9uSWRz');
+
+@$core.Deprecated('Use bulkRemoveParentsFromSchoolRequestDescriptor instead')
+const BulkRemoveParentsFromSchoolRequest$json = {
+  '1': 'BulkRemoveParentsFromSchoolRequest',
+  '2': [
+    {'1': 'registration_ids', '3': 1, '4': 3, '5': 9, '10': 'registrationIds'},
+  ],
+};
+
+/// Descriptor for `BulkRemoveParentsFromSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkRemoveParentsFromSchoolRequestDescriptor =
+    $convert.base64Decode(
+        'CiJCdWxrUmVtb3ZlUGFyZW50c0Zyb21TY2hvb2xSZXF1ZXN0EikKEHJlZ2lzdHJhdGlvbl9pZH'
+        'MYASADKAlSD3JlZ2lzdHJhdGlvbklkcw==');
+
+@$core.Deprecated('Use bulkRemoveParentsFromSchoolResponseDescriptor instead')
+const BulkRemoveParentsFromSchoolResponse$json = {
+  '1': 'BulkRemoveParentsFromSchoolResponse',
+};
+
+/// Descriptor for `BulkRemoveParentsFromSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkRemoveParentsFromSchoolResponseDescriptor =
+    $convert
+        .base64Decode('CiNCdWxrUmVtb3ZlUGFyZW50c0Zyb21TY2hvb2xSZXNwb25zZQ==');
+
+@$core.Deprecated('Use bulkAddEmployeesToSchoolRequestDescriptor instead')
+const BulkAddEmployeesToSchoolRequest$json = {
+  '1': 'BulkAddEmployeesToSchoolRequest',
+  '2': [
+    {
+      '1': 'employees',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.AddEmployeeToSchoolRequest',
+      '10': 'employees'
+    },
+  ],
+};
+
+/// Descriptor for `BulkAddEmployeesToSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAddEmployeesToSchoolRequestDescriptor =
+    $convert.base64Decode(
+        'Ch9CdWxrQWRkRW1wbG95ZWVzVG9TY2hvb2xSZXF1ZXN0EkkKCWVtcGxveWVlcxgBIAMoCzIrLn'
+        'NjaG9vbF9tZXNzYWdlcy5BZGRFbXBsb3llZVRvU2Nob29sUmVxdWVzdFIJZW1wbG95ZWVz');
+
+@$core.Deprecated('Use bulkAddEmployeesToSchoolResponseDescriptor instead')
+const BulkAddEmployeesToSchoolResponse$json = {
+  '1': 'BulkAddEmployeesToSchoolResponse',
+  '2': [
+    {'1': 'registration_ids', '3': 1, '4': 3, '5': 9, '10': 'registrationIds'},
+  ],
+};
+
+/// Descriptor for `BulkAddEmployeesToSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAddEmployeesToSchoolResponseDescriptor =
+    $convert.base64Decode(
+        'CiBCdWxrQWRkRW1wbG95ZWVzVG9TY2hvb2xSZXNwb25zZRIpChByZWdpc3RyYXRpb25faWRzGA'
+        'EgAygJUg9yZWdpc3RyYXRpb25JZHM=');
+
+@$core.Deprecated('Use bulkRemoveEmployeesFromSchoolRequestDescriptor instead')
+const BulkRemoveEmployeesFromSchoolRequest$json = {
+  '1': 'BulkRemoveEmployeesFromSchoolRequest',
+  '2': [
+    {'1': 'registration_ids', '3': 1, '4': 3, '5': 9, '10': 'registrationIds'},
+  ],
+};
+
+/// Descriptor for `BulkRemoveEmployeesFromSchoolRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkRemoveEmployeesFromSchoolRequestDescriptor =
+    $convert.base64Decode(
+        'CiRCdWxrUmVtb3ZlRW1wbG95ZWVzRnJvbVNjaG9vbFJlcXVlc3QSKQoQcmVnaXN0cmF0aW9uX2'
+        'lkcxgBIAMoCVIPcmVnaXN0cmF0aW9uSWRz');
+
+@$core.Deprecated('Use bulkRemoveEmployeesFromSchoolResponseDescriptor instead')
+const BulkRemoveEmployeesFromSchoolResponse$json = {
+  '1': 'BulkRemoveEmployeesFromSchoolResponse',
+};
+
+/// Descriptor for `BulkRemoveEmployeesFromSchoolResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkRemoveEmployeesFromSchoolResponseDescriptor =
+    $convert
+        .base64Decode('CiVCdWxrUmVtb3ZlRW1wbG95ZWVzRnJvbVNjaG9vbFJlc3BvbnNl');
+
+@$core.Deprecated('Use bulkAddStudentsToClassRequestDescriptor instead')
+const BulkAddStudentsToClassRequest$json = {
+  '1': 'BulkAddStudentsToClassRequest',
+  '2': [
+    {
+      '1': 'enrollments',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.school_messages.AddStudentToClassRequest',
+      '10': 'enrollments'
+    },
+  ],
+};
+
+/// Descriptor for `BulkAddStudentsToClassRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAddStudentsToClassRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1CdWxrQWRkU3R1ZGVudHNUb0NsYXNzUmVxdWVzdBJLCgtlbnJvbGxtZW50cxgBIAMoCzIpLn'
+        'NjaG9vbF9tZXNzYWdlcy5BZGRTdHVkZW50VG9DbGFzc1JlcXVlc3RSC2Vucm9sbG1lbnRz');
+
+@$core.Deprecated('Use bulkAddStudentsToClassResponseDescriptor instead')
+const BulkAddStudentsToClassResponse$json = {
+  '1': 'BulkAddStudentsToClassResponse',
+  '2': [
+    {'1': 'enrollment_ids', '3': 1, '4': 3, '5': 9, '10': 'enrollmentIds'},
+  ],
+};
+
+/// Descriptor for `BulkAddStudentsToClassResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkAddStudentsToClassResponseDescriptor =
+    $convert.base64Decode(
+        'Ch5CdWxrQWRkU3R1ZGVudHNUb0NsYXNzUmVzcG9uc2USJQoOZW5yb2xsbWVudF9pZHMYASADKA'
+        'lSDWVucm9sbG1lbnRJZHM=');
+
+@$core.Deprecated('Use bulkRemoveStudentsFromClassRequestDescriptor instead')
+const BulkRemoveStudentsFromClassRequest$json = {
+  '1': 'BulkRemoveStudentsFromClassRequest',
+  '2': [
+    {'1': 'enrollment_ids', '3': 1, '4': 3, '5': 9, '10': 'enrollmentIds'},
+  ],
+};
+
+/// Descriptor for `BulkRemoveStudentsFromClassRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkRemoveStudentsFromClassRequestDescriptor =
+    $convert.base64Decode(
+        'CiJCdWxrUmVtb3ZlU3R1ZGVudHNGcm9tQ2xhc3NSZXF1ZXN0EiUKDmVucm9sbG1lbnRfaWRzGA'
+        'EgAygJUg1lbnJvbGxtZW50SWRz');
+
+@$core.Deprecated('Use bulkRemoveStudentsFromClassResponseDescriptor instead')
+const BulkRemoveStudentsFromClassResponse$json = {
+  '1': 'BulkRemoveStudentsFromClassResponse',
+};
+
+/// Descriptor for `BulkRemoveStudentsFromClassResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bulkRemoveStudentsFromClassResponseDescriptor =
+    $convert
+        .base64Decode('CiNCdWxrUmVtb3ZlU3R1ZGVudHNGcm9tQ2xhc3NSZXNwb25zZQ==');

@@ -302,6 +302,13 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$allocateUsersShift, request, options: options);
   }
 
+  $grpc.ResponseFuture<$2.DeallocateUsersShiftResponse> deallocateUsersShift(
+    $2.DeallocateUsersShiftRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$deallocateUsersShift, request, options: options);
+  }
+
   $grpc.ResponseFuture<$2.EditShiftResponse> editShift(
     $2.EditShiftRequest request, {
     $grpc.CallOptions? options,
@@ -828,6 +835,11 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/AllocateUsersShift',
       ($2.AllocateUsersShiftRequest value) => value.writeToBuffer(),
       $2.AllocateUsersShiftResponse.fromBuffer);
+  static final _$deallocateUsersShift = $grpc.ClientMethod<
+          $2.DeallocateUsersShiftRequest, $2.DeallocateUsersShiftResponse>(
+      '/gateway.GatewayService/DeallocateUsersShift',
+      ($2.DeallocateUsersShiftRequest value) => value.writeToBuffer(),
+      $2.DeallocateUsersShiftResponse.fromBuffer);
   static final _$editShift =
       $grpc.ClientMethod<$2.EditShiftRequest, $2.EditShiftResponse>(
           '/gateway.GatewayService/EditShift',
@@ -1367,6 +1379,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.AllocateUsersShiftRequest.fromBuffer(value),
         ($2.AllocateUsersShiftResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DeallocateUsersShiftRequest,
+            $2.DeallocateUsersShiftResponse>(
+        'DeallocateUsersShift',
+        deallocateUsersShift_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.DeallocateUsersShiftRequest.fromBuffer(value),
+        ($2.DeallocateUsersShiftResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.EditShiftRequest, $2.EditShiftResponse>(
         'EditShift',
         editShift_Pre,
@@ -2075,6 +2096,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$2.AllocateUsersShiftResponse> allocateUsersShift(
       $grpc.ServiceCall call, $2.AllocateUsersShiftRequest request);
+
+  $async.Future<$2.DeallocateUsersShiftResponse> deallocateUsersShift_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$2.DeallocateUsersShiftRequest> $request) async {
+    return deallocateUsersShift($call, await $request);
+  }
+
+  $async.Future<$2.DeallocateUsersShiftResponse> deallocateUsersShift(
+      $grpc.ServiceCall call, $2.DeallocateUsersShiftRequest request);
 
   $async.Future<$2.EditShiftResponse> editShift_Pre($grpc.ServiceCall $call,
       $async.Future<$2.EditShiftRequest> $request) async {

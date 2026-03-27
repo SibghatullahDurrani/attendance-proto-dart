@@ -123,6 +123,16 @@ class MediaServiceClient extends $grpc.Client {
     return $createUnaryCall(_$deleteDraftImage, request, options: options);
   }
 
+  /// PromoteDraftImages moves draft images from drafts/{rowID}/ to users/{userID}/.
+  /// This is called after successful user registration to finalize profile images.
+  /// The draft images are deleted after successful promotion.
+  $grpc.ResponseFuture<$0.PromoteDraftImagesResponse> promoteDraftImages(
+    $0.PromoteDraftImagesRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$promoteDraftImages, request, options: options);
+  }
+
   // method descriptors
 
   static final _$addUserImage =
@@ -176,6 +186,11 @@ class MediaServiceClient extends $grpc.Client {
       '/image.MediaService/DeleteDraftImage',
       ($0.DeleteDraftImageRequest value) => value.writeToBuffer(),
       $0.DeleteDraftImageResponse.fromBuffer);
+  static final _$promoteDraftImages = $grpc.ClientMethod<
+          $0.PromoteDraftImagesRequest, $0.PromoteDraftImagesResponse>(
+      '/image.MediaService/PromoteDraftImages',
+      ($0.PromoteDraftImagesRequest value) => value.writeToBuffer(),
+      $0.PromoteDraftImagesResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('image.MediaService')
@@ -274,6 +289,15 @@ abstract class MediaServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.DeleteDraftImageRequest.fromBuffer(value),
         ($0.DeleteDraftImageResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.PromoteDraftImagesRequest,
+            $0.PromoteDraftImagesResponse>(
+        'PromoteDraftImages',
+        promoteDraftImages_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.PromoteDraftImagesRequest.fromBuffer(value),
+        ($0.PromoteDraftImagesResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.AddUserImageResponse> addUserImage(
@@ -349,4 +373,13 @@ abstract class MediaServiceBase extends $grpc.Service {
 
   $async.Future<$0.DeleteDraftImageResponse> deleteDraftImage(
       $grpc.ServiceCall call, $0.DeleteDraftImageRequest request);
+
+  $async.Future<$0.PromoteDraftImagesResponse> promoteDraftImages_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.PromoteDraftImagesRequest> $request) async {
+    return promoteDraftImages($call, await $request);
+  }
+
+  $async.Future<$0.PromoteDraftImagesResponse> promoteDraftImages(
+      $grpc.ServiceCall call, $0.PromoteDraftImagesRequest request);
 }

@@ -62,6 +62,21 @@ class AuthServiceClient extends $grpc.Client {
     return $createUnaryCall(_$refreshLogin, request, options: options);
   }
 
+  /// Bulk operations
+  $grpc.ResponseFuture<$0.BulkAddUsersResponse> bulkAddUsers(
+    $0.BulkAddUsersRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkAddUsers, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BulkRemoveUsersResponse> bulkRemoveUsers(
+    $0.BulkRemoveUsersRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$bulkRemoveUsers, request, options: options);
+  }
+
   // method descriptors
 
   static final _$login = $grpc.ClientMethod<$0.LoginRequest, $0.LoginResponse>(
@@ -83,6 +98,16 @@ class AuthServiceClient extends $grpc.Client {
           '/auth.AuthService/RefreshLogin',
           ($0.RefreshLoginRequest value) => value.writeToBuffer(),
           $0.LoginResponse.fromBuffer);
+  static final _$bulkAddUsers =
+      $grpc.ClientMethod<$0.BulkAddUsersRequest, $0.BulkAddUsersResponse>(
+          '/auth.AuthService/BulkAddUsers',
+          ($0.BulkAddUsersRequest value) => value.writeToBuffer(),
+          $0.BulkAddUsersResponse.fromBuffer);
+  static final _$bulkRemoveUsers =
+      $grpc.ClientMethod<$0.BulkRemoveUsersRequest, $0.BulkRemoveUsersResponse>(
+          '/auth.AuthService/BulkRemoveUsers',
+          ($0.BulkRemoveUsersRequest value) => value.writeToBuffer(),
+          $0.BulkRemoveUsersResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('auth.AuthService')
@@ -119,6 +144,24 @@ abstract class AuthServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.RefreshLoginRequest.fromBuffer(value),
         ($0.LoginResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.BulkAddUsersRequest, $0.BulkAddUsersResponse>(
+            'BulkAddUsers',
+            bulkAddUsers_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.BulkAddUsersRequest.fromBuffer(value),
+            ($0.BulkAddUsersResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BulkRemoveUsersRequest,
+            $0.BulkRemoveUsersResponse>(
+        'BulkRemoveUsers',
+        bulkRemoveUsers_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BulkRemoveUsersRequest.fromBuffer(value),
+        ($0.BulkRemoveUsersResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -152,4 +195,22 @@ abstract class AuthServiceBase extends $grpc.Service {
 
   $async.Future<$0.LoginResponse> refreshLogin(
       $grpc.ServiceCall call, $0.RefreshLoginRequest request);
+
+  $async.Future<$0.BulkAddUsersResponse> bulkAddUsers_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkAddUsersRequest> $request) async {
+    return bulkAddUsers($call, await $request);
+  }
+
+  $async.Future<$0.BulkAddUsersResponse> bulkAddUsers(
+      $grpc.ServiceCall call, $0.BulkAddUsersRequest request);
+
+  $async.Future<$0.BulkRemoveUsersResponse> bulkRemoveUsers_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.BulkRemoveUsersRequest> $request) async {
+    return bulkRemoveUsers($call, await $request);
+  }
+
+  $async.Future<$0.BulkRemoveUsersResponse> bulkRemoveUsers(
+      $grpc.ServiceCall call, $0.BulkRemoveUsersRequest request);
 }
