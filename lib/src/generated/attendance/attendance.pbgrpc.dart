@@ -203,6 +203,15 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getBulkShiftShortInfo, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetOrganizationShiftsForDayResponse>
+      getOrganizationShiftsForDay(
+    $0.GetOrganizationShiftsForDayRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getOrganizationShiftsForDay, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -324,6 +333,12 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/GetBulkShiftShortInfo',
       ($0.GetBulkShiftShortInfoRequest value) => value.writeToBuffer(),
       $0.GetBulkShiftShortInfoResponse.fromBuffer);
+  static final _$getOrganizationShiftsForDay = $grpc.ClientMethod<
+          $0.GetOrganizationShiftsForDayRequest,
+          $0.GetOrganizationShiftsForDayResponse>(
+      '/attendance.AttendanceService/GetOrganizationShiftsForDay',
+      ($0.GetOrganizationShiftsForDayRequest value) => value.writeToBuffer(),
+      $0.GetOrganizationShiftsForDayResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -525,6 +540,16 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetBulkShiftShortInfoRequest.fromBuffer(value),
         ($0.GetBulkShiftShortInfoResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetOrganizationShiftsForDayRequest,
+            $0.GetOrganizationShiftsForDayResponse>(
+        'GetOrganizationShiftsForDay',
+        getOrganizationShiftsForDay_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetOrganizationShiftsForDayRequest.fromBuffer(value),
+        ($0.GetOrganizationShiftsForDayResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -728,4 +753,14 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetBulkShiftShortInfoResponse> getBulkShiftShortInfo(
       $grpc.ServiceCall call, $0.GetBulkShiftShortInfoRequest request);
+
+  $async.Future<$0.GetOrganizationShiftsForDayResponse>
+      getOrganizationShiftsForDay_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetOrganizationShiftsForDayRequest> $request) async {
+    return getOrganizationShiftsForDay($call, await $request);
+  }
+
+  $async.Future<$0.GetOrganizationShiftsForDayResponse>
+      getOrganizationShiftsForDay($grpc.ServiceCall call,
+          $0.GetOrganizationShiftsForDayRequest request);
 }

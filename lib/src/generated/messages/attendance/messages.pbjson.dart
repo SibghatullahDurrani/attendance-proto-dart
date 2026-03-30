@@ -1357,3 +1357,67 @@ final $typed_data.Uint8List getBulkShiftShortInfoResponseDescriptor =
         'Ch1HZXRCdWxrU2hpZnRTaG9ydEluZm9SZXNwb25zZRJWCgptZW51X2l0ZW1zGAEgAygLMjcuYX'
         'R0ZW5kYW5jZV9tZXNzYWdlcy5Pcmdhbml6YXRpb25TaGlmdFNlbGVjdGlvbk1lbnVJdGVtUglt'
         'ZW51SXRlbXM=');
+
+@$core.Deprecated('Use getOrganizationShiftsForDayRequestDescriptor instead')
+const GetOrganizationShiftsForDayRequest$json = {
+  '1': 'GetOrganizationShiftsForDayRequest',
+  '2': [
+    {
+      '1': 'day',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.Days',
+      '10': 'day'
+    },
+    {'1': 'belongs_to', '3': 2, '4': 1, '5': 9, '10': 'belongsTo'},
+  ],
+};
+
+/// Descriptor for `GetOrganizationShiftsForDayRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getOrganizationShiftsForDayRequestDescriptor =
+    $convert.base64Decode(
+        'CiJHZXRPcmdhbml6YXRpb25TaGlmdHNGb3JEYXlSZXF1ZXN0EicKA2RheRgBIAEoDjIVLmNvbW'
+        '1vbl9tZXNzYWdlcy5EYXlzUgNkYXkSHQoKYmVsb25nc190bxgCIAEoCVIJYmVsb25nc1Rv');
+
+@$core.Deprecated('Use getOrganizationShiftsForDayResponseDescriptor instead')
+const GetOrganizationShiftsForDayResponse$json = {
+  '1': 'GetOrganizationShiftsForDayResponse',
+  '2': [
+    {
+      '1': 'shifts',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.OrganizationShiftForDay',
+      '10': 'shifts'
+    },
+  ],
+};
+
+/// Descriptor for `GetOrganizationShiftsForDayResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getOrganizationShiftsForDayResponseDescriptor =
+    $convert.base64Decode(
+        'CiNHZXRPcmdhbml6YXRpb25TaGlmdHNGb3JEYXlSZXNwb25zZRJECgZzaGlmdHMYASADKAsyLC'
+        '5hdHRlbmRhbmNlX21lc3NhZ2VzLk9yZ2FuaXphdGlvblNoaWZ0Rm9yRGF5UgZzaGlmdHM=');
+
+@$core.Deprecated('Use organizationShiftForDayDescriptor instead')
+const OrganizationShiftForDay$json = {
+  '1': 'OrganizationShiftForDay',
+  '2': [
+    {'1': 'shift_id', '3': 1, '4': 1, '5': 9, '10': 'shiftId'},
+    {'1': 'shift_name', '3': 2, '4': 1, '5': 9, '10': 'shiftName'},
+    {'1': 'check_in_hour', '3': 3, '4': 1, '5': 5, '10': 'checkInHour'},
+    {'1': 'check_in_minute', '3': 4, '4': 1, '5': 5, '10': 'checkInMinute'},
+    {'1': 'check_out_hour', '3': 5, '4': 1, '5': 5, '10': 'checkOutHour'},
+    {'1': 'check_out_minute', '3': 6, '4': 1, '5': 5, '10': 'checkOutMinute'},
+  ],
+};
+
+/// Descriptor for `OrganizationShiftForDay`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List organizationShiftForDayDescriptor = $convert.base64Decode(
+    'ChdPcmdhbml6YXRpb25TaGlmdEZvckRheRIZCghzaGlmdF9pZBgBIAEoCVIHc2hpZnRJZBIdCg'
+    'pzaGlmdF9uYW1lGAIgASgJUglzaGlmdE5hbWUSIgoNY2hlY2tfaW5faG91chgDIAEoBVILY2hl'
+    'Y2tJbkhvdXISJgoPY2hlY2tfaW5fbWludXRlGAQgASgFUg1jaGVja0luTWludXRlEiQKDmNoZW'
+    'NrX291dF9ob3VyGAUgASgFUgxjaGVja091dEhvdXISKAoQY2hlY2tfb3V0X21pbnV0ZRgGIAEo'
+    'BVIOY2hlY2tPdXRNaW51dGU=');
