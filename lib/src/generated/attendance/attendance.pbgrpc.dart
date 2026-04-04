@@ -32,6 +32,7 @@ class AttendanceServiceClient extends $grpc.Client {
 
   AttendanceServiceClient(super.channel, {super.options, super.interceptors});
 
+  /// Needs to be fixed for multi shift
   $grpc.ResponseFuture<$0.GetUserMonthlyAttendanceStatsResponse>
       getUserMonthlyAttendanceStats(
     $0.GetUserMonthlyAttendanceStatsRequest request, {
@@ -41,6 +42,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// Needs to be fixed for multi shift
   $grpc.ResponseFuture<$0.GetUserAttendanceCalendarResponse>
       getUserAttendanceCalendar(
     $0.GetUserAttendanceCalendarRequest request, {
@@ -50,6 +52,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// Needs to be fixed for multi shift
   $grpc.ResponseFuture<$0.GetUserYearlyAttendanceStatsResponse>
       getUserYearlyAttendanceStats(
     $0.GetUserYearlyAttendanceStatsRequest request, {
@@ -68,6 +71,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// Needs to be fixed for multi shift
   $grpc.ResponseFuture<$0.GetUserShiftOffDaysResponse> getUserShiftOffDays(
     $0.GetUserShiftOffDaysRequest request, {
     $grpc.CallOptions? options,
@@ -127,6 +131,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// Needs to be fixed for multi shift
   $grpc.ResponseFuture<$0.GetBulkUserShiftNamesResponse> getBulkUserShiftNames(
     $0.GetBulkUserShiftNamesRequest request, {
     $grpc.CallOptions? options,
@@ -134,6 +139,7 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getBulkUserShiftNames, request, options: options);
   }
 
+  /// Needs to be fixed for multi shift
   $grpc.ResponseFuture<$0.MarkLeaveOfUserResponse> markLeaveOfUser(
     $0.MarkLeaveOfUserRequest request, {
     $grpc.CallOptions? options,
@@ -141,6 +147,7 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$markLeaveOfUser, request, options: options);
   }
 
+  /// Check if it Needs to be fixed for multi shift
   $grpc.ResponseFuture<$0.UserBelongsToShiftResponse> userBelongsToShift(
     $0.UserBelongsToShiftRequest request, {
     $grpc.CallOptions? options,
@@ -148,6 +155,7 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$userBelongsToShift, request, options: options);
   }
 
+  /// Needs to be fixed for multi shift
   $grpc.ResponseFuture<$0.GetUserRegisteredInShiftResponse>
       getUserRegisteredInShift(
     $0.GetUserRegisteredInShiftRequest request, {
@@ -157,6 +165,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// Needs to be fixed for multi shift
   $grpc.ResponseFuture<$0.GetUserIdsRegisteredToShiftResponse>
       getUserIdsRegisteredToShift(
     $0.GetUserIdsRegisteredToShiftRequest request, {
@@ -209,6 +218,15 @@ class AttendanceServiceClient extends $grpc.Client {
     $grpc.CallOptions? options,
   }) {
     return $createUnaryCall(_$getOrganizationShiftsForDay, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetUserShiftsOfAttendanceMonthResponse>
+      getUserShiftsOfAttendanceMonth(
+    $0.GetUserShiftsOfAttendanceMonthRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserShiftsOfAttendanceMonth, request,
         options: options);
   }
 
@@ -339,6 +357,12 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/GetOrganizationShiftsForDay',
       ($0.GetOrganizationShiftsForDayRequest value) => value.writeToBuffer(),
       $0.GetOrganizationShiftsForDayResponse.fromBuffer);
+  static final _$getUserShiftsOfAttendanceMonth = $grpc.ClientMethod<
+          $0.GetUserShiftsOfAttendanceMonthRequest,
+          $0.GetUserShiftsOfAttendanceMonthResponse>(
+      '/attendance.AttendanceService/GetUserShiftsOfAttendanceMonth',
+      ($0.GetUserShiftsOfAttendanceMonthRequest value) => value.writeToBuffer(),
+      $0.GetUserShiftsOfAttendanceMonthResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -549,6 +573,16 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetOrganizationShiftsForDayRequest.fromBuffer(value),
         ($0.GetOrganizationShiftsForDayResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetUserShiftsOfAttendanceMonthRequest,
+            $0.GetUserShiftsOfAttendanceMonthResponse>(
+        'GetUserShiftsOfAttendanceMonth',
+        getUserShiftsOfAttendanceMonth_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetUserShiftsOfAttendanceMonthRequest.fromBuffer(value),
+        ($0.GetUserShiftsOfAttendanceMonthResponse value) =>
             value.writeToBuffer()));
   }
 
@@ -763,4 +797,16 @@ abstract class AttendanceServiceBase extends $grpc.Service {
   $async.Future<$0.GetOrganizationShiftsForDayResponse>
       getOrganizationShiftsForDay($grpc.ServiceCall call,
           $0.GetOrganizationShiftsForDayRequest request);
+
+  $async.Future<$0.GetUserShiftsOfAttendanceMonthResponse>
+      getUserShiftsOfAttendanceMonth_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetUserShiftsOfAttendanceMonthRequest>
+              $request) async {
+    return getUserShiftsOfAttendanceMonth($call, await $request);
+  }
+
+  $async.Future<$0.GetUserShiftsOfAttendanceMonthResponse>
+      getUserShiftsOfAttendanceMonth($grpc.ServiceCall call,
+          $0.GetUserShiftsOfAttendanceMonthRequest request);
 }

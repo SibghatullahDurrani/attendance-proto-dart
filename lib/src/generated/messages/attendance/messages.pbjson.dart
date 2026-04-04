@@ -28,6 +28,18 @@ const GetUserMonthlyAttendanceStatsRequest$json = {
       '6': '.google.protobuf.Timestamp',
       '10': 'monthStartTime'
     },
+    {
+      '1': 'shift_id',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'shiftId',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_shift_id'},
   ],
 };
 
@@ -36,7 +48,8 @@ final $typed_data.Uint8List getUserMonthlyAttendanceStatsRequestDescriptor =
     $convert.base64Decode(
         'CiRHZXRVc2VyTW9udGhseUF0dGVuZGFuY2VTdGF0c1JlcXVlc3QSFwoHdXNlcl9pZBgBIAEoCV'
         'IGdXNlcklkEhsKCXRpbWVfem9uZRgCIAEoCVIIdGltZVpvbmUSRAoQbW9udGhfc3RhcnRfdGlt'
-        'ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSDm1vbnRoU3RhcnRUaW1l');
+        'ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSDm1vbnRoU3RhcnRUaW1lEh4KCH'
+        'NoaWZ0X2lkGAQgASgJSABSB3NoaWZ0SWSIAQFCCwoJX3NoaWZ0X2lk');
 
 @$core.Deprecated('Use getUserMonthlyAttendanceStatsResponseDescriptor instead')
 const GetUserMonthlyAttendanceStatsResponse$json = {
@@ -1421,3 +1434,70 @@ final $typed_data.Uint8List organizationShiftForDayDescriptor = $convert.base64D
     'Y2tJbkhvdXISJgoPY2hlY2tfaW5fbWludXRlGAQgASgFUg1jaGVja0luTWludXRlEiQKDmNoZW'
     'NrX291dF9ob3VyGAUgASgFUgxjaGVja091dEhvdXISKAoQY2hlY2tfb3V0X21pbnV0ZRgGIAEo'
     'BVIOY2hlY2tPdXRNaW51dGU=');
+
+@$core.Deprecated('Use getUserShiftsOfAttendanceMonthRequestDescriptor instead')
+const GetUserShiftsOfAttendanceMonthRequest$json = {
+  '1': 'GetUserShiftsOfAttendanceMonthRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'month_start_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'monthStartTime'
+    },
+  ],
+};
+
+/// Descriptor for `GetUserShiftsOfAttendanceMonthRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserShiftsOfAttendanceMonthRequestDescriptor =
+    $convert.base64Decode(
+        'CiVHZXRVc2VyU2hpZnRzT2ZBdHRlbmRhbmNlTW9udGhSZXF1ZXN0EhcKB3VzZXJfaWQYASABKA'
+        'lSBnVzZXJJZBJEChBtb250aF9zdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp'
+        'bWVzdGFtcFIObW9udGhTdGFydFRpbWU=');
+
+@$core
+    .Deprecated('Use getUserShiftsOfAttendanceMonthResponseDescriptor instead')
+const GetUserShiftsOfAttendanceMonthResponse$json = {
+  '1': 'GetUserShiftsOfAttendanceMonthResponse',
+  '2': [
+    {
+      '1': 'shifts_of_attendance_month',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.ShiftOfAttendanceMonth',
+      '10': 'shiftsOfAttendanceMonth'
+    },
+  ],
+};
+
+/// Descriptor for `GetUserShiftsOfAttendanceMonthResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserShiftsOfAttendanceMonthResponseDescriptor =
+    $convert.base64Decode(
+        'CiZHZXRVc2VyU2hpZnRzT2ZBdHRlbmRhbmNlTW9udGhSZXNwb25zZRJoChpzaGlmdHNfb2ZfYX'
+        'R0ZW5kYW5jZV9tb250aBgBIAMoCzIrLmF0dGVuZGFuY2VfbWVzc2FnZXMuU2hpZnRPZkF0dGVu'
+        'ZGFuY2VNb250aFIXc2hpZnRzT2ZBdHRlbmRhbmNlTW9udGg=');
+
+@$core.Deprecated('Use shiftOfAttendanceMonthDescriptor instead')
+const ShiftOfAttendanceMonth$json = {
+  '1': 'ShiftOfAttendanceMonth',
+  '2': [
+    {'1': 'shift_id', '3': 1, '4': 1, '5': 9, '10': 'shiftId'},
+    {'1': 'shift_name', '3': 2, '4': 1, '5': 9, '10': 'shiftName'},
+    {'1': 'check_in_hour', '3': 3, '4': 1, '5': 5, '10': 'checkInHour'},
+    {'1': 'check_in_minute', '3': 4, '4': 1, '5': 5, '10': 'checkInMinute'},
+    {'1': 'check_out_hour', '3': 5, '4': 1, '5': 5, '10': 'checkOutHour'},
+    {'1': 'check_out_minute', '3': 6, '4': 1, '5': 5, '10': 'checkOutMinute'},
+  ],
+};
+
+/// Descriptor for `ShiftOfAttendanceMonth`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List shiftOfAttendanceMonthDescriptor = $convert.base64Decode(
+    'ChZTaGlmdE9mQXR0ZW5kYW5jZU1vbnRoEhkKCHNoaWZ0X2lkGAEgASgJUgdzaGlmdElkEh0KCn'
+    'NoaWZ0X25hbWUYAiABKAlSCXNoaWZ0TmFtZRIiCg1jaGVja19pbl9ob3VyGAMgASgFUgtjaGVj'
+    'a0luSG91chImCg9jaGVja19pbl9taW51dGUYBCABKAVSDWNoZWNrSW5NaW51dGUSJAoOY2hlY2'
+    'tfb3V0X2hvdXIYBSABKAVSDGNoZWNrT3V0SG91chIoChBjaGVja19vdXRfbWludXRlGAYgASgF'
+    'Ug5jaGVja091dE1pbnV0ZQ==');

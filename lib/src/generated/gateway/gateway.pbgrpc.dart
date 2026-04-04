@@ -332,6 +332,15 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$2.GetUserShiftsOfAttendanceMonthResponse>
+      getUserShiftsOfAttendanceMonth(
+    $2.GetUserShiftsOfAttendanceMonthRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserShiftsOfAttendanceMonth, request,
+        options: options);
+  }
+
   /// User RPCs
   $grpc.ResponseFuture<$3.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData(
@@ -865,6 +874,12 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/GetOrganizationShiftsForDay',
       ($2.GetOrganizationShiftsForDayRequest value) => value.writeToBuffer(),
       $2.GetOrganizationShiftsForDayResponse.fromBuffer);
+  static final _$getUserShiftsOfAttendanceMonth = $grpc.ClientMethod<
+          $2.GetUserShiftsOfAttendanceMonthRequest,
+          $2.GetUserShiftsOfAttendanceMonthResponse>(
+      '/gateway.GatewayService/GetUserShiftsOfAttendanceMonth',
+      ($2.GetUserShiftsOfAttendanceMonthRequest value) => value.writeToBuffer(),
+      $2.GetUserShiftsOfAttendanceMonthResponse.fromBuffer);
   static final _$getParentStudentSelectionData = $grpc.ClientMethod<
           $3.GetParentStudentSelectionDataRequest,
           $3.GetParentStudentSelectionDataResponse>(
@@ -1428,6 +1443,16 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.GetOrganizationShiftsForDayRequest.fromBuffer(value),
         ($2.GetOrganizationShiftsForDayResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetUserShiftsOfAttendanceMonthRequest,
+            $2.GetUserShiftsOfAttendanceMonthResponse>(
+        'GetUserShiftsOfAttendanceMonth',
+        getUserShiftsOfAttendanceMonth_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetUserShiftsOfAttendanceMonthRequest.fromBuffer(value),
+        ($2.GetUserShiftsOfAttendanceMonthResponse value) =>
             value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$3.GetParentStudentSelectionDataRequest,
             $3.GetParentStudentSelectionDataResponse>(
@@ -2157,6 +2182,18 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$2.GetOrganizationShiftsForDayResponse>
       getOrganizationShiftsForDay($grpc.ServiceCall call,
           $2.GetOrganizationShiftsForDayRequest request);
+
+  $async.Future<$2.GetUserShiftsOfAttendanceMonthResponse>
+      getUserShiftsOfAttendanceMonth_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$2.GetUserShiftsOfAttendanceMonthRequest>
+              $request) async {
+    return getUserShiftsOfAttendanceMonth($call, await $request);
+  }
+
+  $async.Future<$2.GetUserShiftsOfAttendanceMonthResponse>
+      getUserShiftsOfAttendanceMonth($grpc.ServiceCall call,
+          $2.GetUserShiftsOfAttendanceMonthRequest request);
 
   $async.Future<$3.GetParentStudentSelectionDataResponse>
       getParentStudentSelectionData_Pre(
