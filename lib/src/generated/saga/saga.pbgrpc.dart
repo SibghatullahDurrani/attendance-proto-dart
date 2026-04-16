@@ -90,6 +90,7 @@ class SagaServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// Needs to be changed because MarkLeaveOfUserNowRequires a shift_id as well
   $grpc.ResponseFuture<$0.HandleLeaveResponseSagaResponse>
       handleLeaveResponseSaga(
     $0.HandleLeaveResponseSagaRequest request, {

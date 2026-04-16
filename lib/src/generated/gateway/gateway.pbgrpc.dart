@@ -207,6 +207,7 @@ class GatewayServiceClient extends $grpc.Client {
   }
 
   /// Attendance RPCS
+  /// Frontend needs changing
   $grpc.ResponseFuture<$2.GetUserMonthlyAttendanceStatsResponse>
       getUserMonthlyAttendanceStats(
     $2.GetUserMonthlyAttendanceStatsRequest request, {
@@ -216,6 +217,7 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// Frontend needs changing
   $grpc.ResponseFuture<$2.GetUserAttendanceCalendarResponse>
       getUserAttendanceCalendar(
     $2.GetUserAttendanceCalendarRequest request, {
@@ -225,6 +227,7 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// Frontend needs changing
   $grpc.ResponseFuture<$2.GetUserYearlyAttendanceStatsResponse>
       getUserYearlyAttendanceStats(
     $2.GetUserYearlyAttendanceStatsRequest request, {
@@ -234,6 +237,7 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// Frontend needs changing
   $grpc.ResponseFuture<$2.GetUserAttendanceDetailsResponse>
       getUserAttendanceDetails(
     $2.GetUserAttendanceDetailsRequest request, {
@@ -243,11 +247,12 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
-  $grpc.ResponseFuture<$2.GetUserShiftOffDaysResponse> getUserShiftOffDays(
-    $2.GetUserShiftOffDaysRequest request, {
+  /// Frontend needs changing renamed from GetUserShiftOffDays
+  $grpc.ResponseFuture<$2.GetShiftOffDaysResponse> getShiftOffDays(
+    $2.GetShiftOffDaysRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$getUserShiftOffDays, request, options: options);
+    return $createUnaryCall(_$getShiftOffDays, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.GetUserHolidaysForMonthResponse>
@@ -468,6 +473,7 @@ class GatewayServiceClient extends $grpc.Client {
         .single;
   }
 
+  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListStudentsOfSchoolResponse> listStudentsOfSchool(
     $5.ListStudentsOfSchoolRequest request, {
     $grpc.CallOptions? options,
@@ -482,6 +488,7 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listParentsOfSchool, request, options: options);
   }
 
+  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListTeachersOfSchoolResponse> listTeachersOfSchool(
     $5.ListTeachersOfSchoolRequest request, {
     $grpc.CallOptions? options,
@@ -489,6 +496,7 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listTeachersOfSchool, request, options: options);
   }
 
+  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListEmployeesOfSchoolResponse> listEmployeesOfSchool(
     $5.ListEmployeesOfSchoolRequest request, {
     $grpc.CallOptions? options,
@@ -546,6 +554,7 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListStudentsOfSchoolForShiftAllocationResponse>
       listStudentsOfSchoolForShiftAllocation(
     $5.ListStudentsOfSchoolForShiftAllocationRequest request, {
@@ -555,6 +564,7 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListTeachersOfSchoolForShiftAllocationResponse>
       listTeachersOfSchoolForShiftAllocation(
     $5.ListTeachersOfSchoolForShiftAllocationRequest request, {
@@ -564,6 +574,7 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListEmployeesOfSchoolForShiftAllocationResponse>
       listEmployeesOfSchoolForShiftAllocation(
     $5.ListEmployeesOfSchoolForShiftAllocationRequest request, {
@@ -573,6 +584,7 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListUsersOfShiftForShiftAllocationResponse>
       listUsersOfShiftForShiftAllocation(
     $5.ListUsersOfShiftForShiftAllocationRequest request, {
@@ -582,6 +594,7 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.GetBatchUsersInfoOfSchoolForLiveFeedResponse>
       getBatchUsersInfoOfSchoolForLiveFeed(
     $5.GetBatchUsersInfoOfSchoolForLiveFeedRequest request, {
@@ -812,11 +825,11 @@ class GatewayServiceClient extends $grpc.Client {
       '/gateway.GatewayService/GetUserAttendanceDetails',
       ($2.GetUserAttendanceDetailsRequest value) => value.writeToBuffer(),
       $2.GetUserAttendanceDetailsResponse.fromBuffer);
-  static final _$getUserShiftOffDays = $grpc.ClientMethod<
-          $2.GetUserShiftOffDaysRequest, $2.GetUserShiftOffDaysResponse>(
-      '/gateway.GatewayService/GetUserShiftOffDays',
-      ($2.GetUserShiftOffDaysRequest value) => value.writeToBuffer(),
-      $2.GetUserShiftOffDaysResponse.fromBuffer);
+  static final _$getShiftOffDays =
+      $grpc.ClientMethod<$2.GetShiftOffDaysRequest, $2.GetShiftOffDaysResponse>(
+          '/gateway.GatewayService/GetShiftOffDays',
+          ($2.GetShiftOffDaysRequest value) => value.writeToBuffer(),
+          $2.GetShiftOffDaysResponse.fromBuffer);
   static final _$getUserHolidaysForMonth = $grpc.ClientMethod<
           $2.GetUserHolidaysForMonthRequest,
           $2.GetUserHolidaysForMonthResponse>(
@@ -1343,15 +1356,15 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.GetUserAttendanceDetailsRequest.fromBuffer(value),
         ($2.GetUserAttendanceDetailsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.GetUserShiftOffDaysRequest,
-            $2.GetUserShiftOffDaysResponse>(
-        'GetUserShiftOffDays',
-        getUserShiftOffDays_Pre,
+    $addMethod($grpc.ServiceMethod<$2.GetShiftOffDaysRequest,
+            $2.GetShiftOffDaysResponse>(
+        'GetShiftOffDays',
+        getShiftOffDays_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $2.GetUserShiftOffDaysRequest.fromBuffer(value),
-        ($2.GetUserShiftOffDaysResponse value) => value.writeToBuffer()));
+            $2.GetShiftOffDaysRequest.fromBuffer(value),
+        ($2.GetShiftOffDaysResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.GetUserHolidaysForMonthRequest,
             $2.GetUserHolidaysForMonthResponse>(
         'GetUserHolidaysForMonth',
@@ -2080,14 +2093,14 @@ abstract class GatewayServiceBase extends $grpc.Service {
   $async.Future<$2.GetUserAttendanceDetailsResponse> getUserAttendanceDetails(
       $grpc.ServiceCall call, $2.GetUserAttendanceDetailsRequest request);
 
-  $async.Future<$2.GetUserShiftOffDaysResponse> getUserShiftOffDays_Pre(
+  $async.Future<$2.GetShiftOffDaysResponse> getShiftOffDays_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$2.GetUserShiftOffDaysRequest> $request) async {
-    return getUserShiftOffDays($call, await $request);
+      $async.Future<$2.GetShiftOffDaysRequest> $request) async {
+    return getShiftOffDays($call, await $request);
   }
 
-  $async.Future<$2.GetUserShiftOffDaysResponse> getUserShiftOffDays(
-      $grpc.ServiceCall call, $2.GetUserShiftOffDaysRequest request);
+  $async.Future<$2.GetShiftOffDaysResponse> getShiftOffDays(
+      $grpc.ServiceCall call, $2.GetShiftOffDaysRequest request);
 
   $async.Future<$2.GetUserHolidaysForMonthResponse> getUserHolidaysForMonth_Pre(
       $grpc.ServiceCall $call,

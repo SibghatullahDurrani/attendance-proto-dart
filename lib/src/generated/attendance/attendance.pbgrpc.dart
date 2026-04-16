@@ -32,7 +32,7 @@ class AttendanceServiceClient extends $grpc.Client {
 
   AttendanceServiceClient(super.channel, {super.options, super.interceptors});
 
-  /// Needs to be fixed for multi shift
+  /// refactored
   $grpc.ResponseFuture<$0.GetUserMonthlyAttendanceStatsResponse>
       getUserMonthlyAttendanceStats(
     $0.GetUserMonthlyAttendanceStatsRequest request, {
@@ -42,7 +42,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// Needs to be fixed for multi shift
+  /// refactored
   $grpc.ResponseFuture<$0.GetUserAttendanceCalendarResponse>
       getUserAttendanceCalendar(
     $0.GetUserAttendanceCalendarRequest request, {
@@ -52,7 +52,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// Needs to be fixed for multi shift
+  /// refactored
   $grpc.ResponseFuture<$0.GetUserYearlyAttendanceStatsResponse>
       getUserYearlyAttendanceStats(
     $0.GetUserYearlyAttendanceStatsRequest request, {
@@ -62,6 +62,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// refactored
   $grpc.ResponseFuture<$0.GetUserAttendanceDetailsResponse>
       getUserAttendanceDetails(
     $0.GetUserAttendanceDetailsRequest request, {
@@ -71,14 +72,15 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// Needs to be fixed for multi shift
-  $grpc.ResponseFuture<$0.GetUserShiftOffDaysResponse> getUserShiftOffDays(
-    $0.GetUserShiftOffDaysRequest request, {
+  /// refactored
+  $grpc.ResponseFuture<$0.GetShiftOffDaysResponse> getShiftOffDays(
+    $0.GetShiftOffDaysRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$getUserShiftOffDays, request, options: options);
+    return $createUnaryCall(_$getShiftOffDays, request, options: options);
   }
 
+  /// refactored
   $grpc.ResponseFuture<$0.GetUserHolidaysForMonthResponse>
       getUserHolidaysForMonth(
     $0.GetUserHolidaysForMonthRequest request, {
@@ -88,6 +90,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// refactored
   $grpc.ResponseFuture<$0.CreateOrganizationShiftResponse>
       createOrganizationShift(
     $0.CreateOrganizationShiftRequest request, {
@@ -97,6 +100,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// refactored
   $grpc.ResponseFuture<$0.ListAllOrganizationShiftsResponse>
       listAllOrganizationShifts(
     $0.ListAllOrganizationShiftsRequest request, {
@@ -106,6 +110,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// refactored
   $grpc.ResponseFuture<$0.AddUserToShiftResponse> addUserToShift(
     $0.AddUserToShiftRequest request, {
     $grpc.CallOptions? options,
@@ -113,6 +118,7 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$addUserToShift, request, options: options);
   }
 
+  /// refactored
   $grpc.ResponseFuture<$0.GetOrganizationShiftSelectionMenuItemsResponse>
       getOrganizationShiftSelectionMenuItems(
     $0.GetOrganizationShiftSelectionMenuItemsRequest request, {
@@ -122,6 +128,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// refactored
   $grpc.ResponseFuture<$0.GetOrganizationDefaultShiftResponse>
       getOrganizationDefaultShift(
     $0.GetOrganizationDefaultShiftRequest request, {
@@ -131,15 +138,15 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// Needs to be fixed for multi shift
-  $grpc.ResponseFuture<$0.GetBulkUserShiftNamesResponse> getBulkUserShiftNames(
-    $0.GetBulkUserShiftNamesRequest request, {
+  /// refactored
+  $grpc.ResponseFuture<$0.GetBulkUserShiftsResponse> getBulkUserShifts(
+    $0.GetBulkUserShiftsRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$getBulkUserShiftNames, request, options: options);
+    return $createUnaryCall(_$getBulkUserShifts, request, options: options);
   }
 
-  /// Needs to be fixed for multi shift
+  /// refactored
   $grpc.ResponseFuture<$0.MarkLeaveOfUserResponse> markLeaveOfUser(
     $0.MarkLeaveOfUserRequest request, {
     $grpc.CallOptions? options,
@@ -147,7 +154,7 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$markLeaveOfUser, request, options: options);
   }
 
-  /// Check if it Needs to be fixed for multi shift
+  /// refactored
   $grpc.ResponseFuture<$0.UserBelongsToShiftResponse> userBelongsToShift(
     $0.UserBelongsToShiftRequest request, {
     $grpc.CallOptions? options,
@@ -155,17 +162,17 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$userBelongsToShift, request, options: options);
   }
 
-  /// Needs to be fixed for multi shift
-  $grpc.ResponseFuture<$0.GetUserRegisteredInShiftResponse>
-      getUserRegisteredInShift(
-    $0.GetUserRegisteredInShiftRequest request, {
+  /// refactored
+  $grpc.ResponseFuture<$0.GetUsersRegisteredInShiftResponse>
+      getUsersRegisteredInShift(
+    $0.GetUsersRegisteredInShiftRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$getUserRegisteredInShift, request,
+    return $createUnaryCall(_$getUsersRegisteredInShift, request,
         options: options);
   }
 
-  /// Needs to be fixed for multi shift
+  /// refactored
   $grpc.ResponseFuture<$0.GetUserIdsRegisteredToShiftResponse>
       getUserIdsRegisteredToShift(
     $0.GetUserIdsRegisteredToShiftRequest request, {
@@ -175,6 +182,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// refactored
   $grpc.ResponseFuture<$0.AllocateUsersShiftResponse> allocateUsersShift(
     $0.AllocateUsersShiftRequest request, {
     $grpc.CallOptions? options,
@@ -182,6 +190,7 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$allocateUsersShift, request, options: options);
   }
 
+  /// refactored
   $grpc.ResponseFuture<$0.DeallocateUsersShiftResponse> deallocateUsersShift(
     $0.DeallocateUsersShiftRequest request, {
     $grpc.CallOptions? options,
@@ -189,6 +198,7 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$deallocateUsersShift, request, options: options);
   }
 
+  /// refactored
   $grpc.ResponseFuture<$0.EditShiftResponse> editShift(
     $0.EditShiftRequest request, {
     $grpc.CallOptions? options,
@@ -196,6 +206,7 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$editShift, request, options: options);
   }
 
+  /// refactored
   $grpc.ResponseFuture<$0.GetUserAttendanceReportAttendancesResponse>
       getUserAttendanceReportAttendances(
     $0.GetUserAttendanceReportAttendanceRequest request, {
@@ -205,6 +216,7 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  /// refactored
   $grpc.ResponseFuture<$0.GetBulkShiftShortInfoResponse> getBulkShiftShortInfo(
     $0.GetBulkShiftShortInfoRequest request, {
     $grpc.CallOptions? options,
@@ -212,6 +224,7 @@ class AttendanceServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getBulkShiftShortInfo, request, options: options);
   }
 
+  /// refactored
   $grpc.ResponseFuture<$0.GetOrganizationShiftsForDayResponse>
       getOrganizationShiftsForDay(
     $0.GetOrganizationShiftsForDayRequest request, {
@@ -256,11 +269,11 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/GetUserAttendanceDetails',
       ($0.GetUserAttendanceDetailsRequest value) => value.writeToBuffer(),
       $0.GetUserAttendanceDetailsResponse.fromBuffer);
-  static final _$getUserShiftOffDays = $grpc.ClientMethod<
-          $0.GetUserShiftOffDaysRequest, $0.GetUserShiftOffDaysResponse>(
-      '/attendance.AttendanceService/GetUserShiftOffDays',
-      ($0.GetUserShiftOffDaysRequest value) => value.writeToBuffer(),
-      $0.GetUserShiftOffDaysResponse.fromBuffer);
+  static final _$getShiftOffDays =
+      $grpc.ClientMethod<$0.GetShiftOffDaysRequest, $0.GetShiftOffDaysResponse>(
+          '/attendance.AttendanceService/GetShiftOffDays',
+          ($0.GetShiftOffDaysRequest value) => value.writeToBuffer(),
+          $0.GetShiftOffDaysResponse.fromBuffer);
   static final _$getUserHolidaysForMonth = $grpc.ClientMethod<
           $0.GetUserHolidaysForMonthRequest,
           $0.GetUserHolidaysForMonthResponse>(
@@ -297,11 +310,11 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/GetOrganizationDefaultShift',
       ($0.GetOrganizationDefaultShiftRequest value) => value.writeToBuffer(),
       $0.GetOrganizationDefaultShiftResponse.fromBuffer);
-  static final _$getBulkUserShiftNames = $grpc.ClientMethod<
-          $0.GetBulkUserShiftNamesRequest, $0.GetBulkUserShiftNamesResponse>(
-      '/attendance.AttendanceService/GetBulkUserShiftNames',
-      ($0.GetBulkUserShiftNamesRequest value) => value.writeToBuffer(),
-      $0.GetBulkUserShiftNamesResponse.fromBuffer);
+  static final _$getBulkUserShifts = $grpc.ClientMethod<
+          $0.GetBulkUserShiftsRequest, $0.GetBulkUserShiftsResponse>(
+      '/attendance.AttendanceService/GetBulkUserShifts',
+      ($0.GetBulkUserShiftsRequest value) => value.writeToBuffer(),
+      $0.GetBulkUserShiftsResponse.fromBuffer);
   static final _$markLeaveOfUser =
       $grpc.ClientMethod<$0.MarkLeaveOfUserRequest, $0.MarkLeaveOfUserResponse>(
           '/attendance.AttendanceService/MarkLeaveOfUser',
@@ -312,12 +325,12 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/UserBelongsToShift',
       ($0.UserBelongsToShiftRequest value) => value.writeToBuffer(),
       $0.UserBelongsToShiftResponse.fromBuffer);
-  static final _$getUserRegisteredInShift = $grpc.ClientMethod<
-          $0.GetUserRegisteredInShiftRequest,
-          $0.GetUserRegisteredInShiftResponse>(
-      '/attendance.AttendanceService/GetUserRegisteredInShift',
-      ($0.GetUserRegisteredInShiftRequest value) => value.writeToBuffer(),
-      $0.GetUserRegisteredInShiftResponse.fromBuffer);
+  static final _$getUsersRegisteredInShift = $grpc.ClientMethod<
+          $0.GetUsersRegisteredInShiftRequest,
+          $0.GetUsersRegisteredInShiftResponse>(
+      '/attendance.AttendanceService/GetUsersRegisteredInShift',
+      ($0.GetUsersRegisteredInShiftRequest value) => value.writeToBuffer(),
+      $0.GetUsersRegisteredInShiftResponse.fromBuffer);
   static final _$getUserIdsRegisteredToShift = $grpc.ClientMethod<
           $0.GetUserIdsRegisteredToShiftRequest,
           $0.GetUserIdsRegisteredToShiftResponse>(
@@ -408,15 +421,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetUserAttendanceDetailsRequest.fromBuffer(value),
         ($0.GetUserAttendanceDetailsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.GetUserShiftOffDaysRequest,
-            $0.GetUserShiftOffDaysResponse>(
-        'GetUserShiftOffDays',
-        getUserShiftOffDays_Pre,
+    $addMethod($grpc.ServiceMethod<$0.GetShiftOffDaysRequest,
+            $0.GetShiftOffDaysResponse>(
+        'GetShiftOffDays',
+        getShiftOffDays_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.GetUserShiftOffDaysRequest.fromBuffer(value),
-        ($0.GetUserShiftOffDaysResponse value) => value.writeToBuffer()));
+            $0.GetShiftOffDaysRequest.fromBuffer(value),
+        ($0.GetShiftOffDaysResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetUserHolidaysForMonthRequest,
             $0.GetUserHolidaysForMonthResponse>(
         'GetUserHolidaysForMonth',
@@ -474,15 +487,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
             $0.GetOrganizationDefaultShiftRequest.fromBuffer(value),
         ($0.GetOrganizationDefaultShiftResponse value) =>
             value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.GetBulkUserShiftNamesRequest,
-            $0.GetBulkUserShiftNamesResponse>(
-        'GetBulkUserShiftNames',
-        getBulkUserShiftNames_Pre,
+    $addMethod($grpc.ServiceMethod<$0.GetBulkUserShiftsRequest,
+            $0.GetBulkUserShiftsResponse>(
+        'GetBulkUserShifts',
+        getBulkUserShifts_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.GetBulkUserShiftNamesRequest.fromBuffer(value),
-        ($0.GetBulkUserShiftNamesResponse value) => value.writeToBuffer()));
+            $0.GetBulkUserShiftsRequest.fromBuffer(value),
+        ($0.GetBulkUserShiftsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.MarkLeaveOfUserRequest,
             $0.MarkLeaveOfUserResponse>(
         'MarkLeaveOfUser',
@@ -501,15 +514,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.UserBelongsToShiftRequest.fromBuffer(value),
         ($0.UserBelongsToShiftResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.GetUserRegisteredInShiftRequest,
-            $0.GetUserRegisteredInShiftResponse>(
-        'GetUserRegisteredInShift',
-        getUserRegisteredInShift_Pre,
+    $addMethod($grpc.ServiceMethod<$0.GetUsersRegisteredInShiftRequest,
+            $0.GetUsersRegisteredInShiftResponse>(
+        'GetUsersRegisteredInShift',
+        getUsersRegisteredInShift_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.GetUserRegisteredInShiftRequest.fromBuffer(value),
-        ($0.GetUserRegisteredInShiftResponse value) => value.writeToBuffer()));
+            $0.GetUsersRegisteredInShiftRequest.fromBuffer(value),
+        ($0.GetUsersRegisteredInShiftResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetUserIdsRegisteredToShiftRequest,
             $0.GetUserIdsRegisteredToShiftResponse>(
         'GetUserIdsRegisteredToShift',
@@ -628,14 +641,14 @@ abstract class AttendanceServiceBase extends $grpc.Service {
   $async.Future<$0.GetUserAttendanceDetailsResponse> getUserAttendanceDetails(
       $grpc.ServiceCall call, $0.GetUserAttendanceDetailsRequest request);
 
-  $async.Future<$0.GetUserShiftOffDaysResponse> getUserShiftOffDays_Pre(
+  $async.Future<$0.GetShiftOffDaysResponse> getShiftOffDays_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.GetUserShiftOffDaysRequest> $request) async {
-    return getUserShiftOffDays($call, await $request);
+      $async.Future<$0.GetShiftOffDaysRequest> $request) async {
+    return getShiftOffDays($call, await $request);
   }
 
-  $async.Future<$0.GetUserShiftOffDaysResponse> getUserShiftOffDays(
-      $grpc.ServiceCall call, $0.GetUserShiftOffDaysRequest request);
+  $async.Future<$0.GetShiftOffDaysResponse> getShiftOffDays(
+      $grpc.ServiceCall call, $0.GetShiftOffDaysRequest request);
 
   $async.Future<$0.GetUserHolidaysForMonthResponse> getUserHolidaysForMonth_Pre(
       $grpc.ServiceCall $call,
@@ -695,14 +708,14 @@ abstract class AttendanceServiceBase extends $grpc.Service {
       getOrganizationDefaultShift($grpc.ServiceCall call,
           $0.GetOrganizationDefaultShiftRequest request);
 
-  $async.Future<$0.GetBulkUserShiftNamesResponse> getBulkUserShiftNames_Pre(
+  $async.Future<$0.GetBulkUserShiftsResponse> getBulkUserShifts_Pre(
       $grpc.ServiceCall $call,
-      $async.Future<$0.GetBulkUserShiftNamesRequest> $request) async {
-    return getBulkUserShiftNames($call, await $request);
+      $async.Future<$0.GetBulkUserShiftsRequest> $request) async {
+    return getBulkUserShifts($call, await $request);
   }
 
-  $async.Future<$0.GetBulkUserShiftNamesResponse> getBulkUserShiftNames(
-      $grpc.ServiceCall call, $0.GetBulkUserShiftNamesRequest request);
+  $async.Future<$0.GetBulkUserShiftsResponse> getBulkUserShifts(
+      $grpc.ServiceCall call, $0.GetBulkUserShiftsRequest request);
 
   $async.Future<$0.MarkLeaveOfUserResponse> markLeaveOfUser_Pre(
       $grpc.ServiceCall $call,
@@ -722,14 +735,14 @@ abstract class AttendanceServiceBase extends $grpc.Service {
   $async.Future<$0.UserBelongsToShiftResponse> userBelongsToShift(
       $grpc.ServiceCall call, $0.UserBelongsToShiftRequest request);
 
-  $async.Future<$0.GetUserRegisteredInShiftResponse>
-      getUserRegisteredInShift_Pre($grpc.ServiceCall $call,
-          $async.Future<$0.GetUserRegisteredInShiftRequest> $request) async {
-    return getUserRegisteredInShift($call, await $request);
+  $async.Future<$0.GetUsersRegisteredInShiftResponse>
+      getUsersRegisteredInShift_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetUsersRegisteredInShiftRequest> $request) async {
+    return getUsersRegisteredInShift($call, await $request);
   }
 
-  $async.Future<$0.GetUserRegisteredInShiftResponse> getUserRegisteredInShift(
-      $grpc.ServiceCall call, $0.GetUserRegisteredInShiftRequest request);
+  $async.Future<$0.GetUsersRegisteredInShiftResponse> getUsersRegisteredInShift(
+      $grpc.ServiceCall call, $0.GetUsersRegisteredInShiftRequest request);
 
   $async.Future<$0.GetUserIdsRegisteredToShiftResponse>
       getUserIdsRegisteredToShift_Pre($grpc.ServiceCall $call,

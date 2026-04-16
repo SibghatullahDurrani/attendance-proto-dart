@@ -2154,7 +2154,7 @@ class StudentOfSchool extends $pb.GeneratedMessage {
     $1.Timestamp? thumbnailUpdatedAt,
     $1.Timestamp? thumbnailExpiresAt,
     $core.bool? inAShift,
-    $core.String? shiftName,
+    $core.Iterable<$core.String>? shiftNames,
   }) {
     final result = create();
     if (studentId != null) result.studentId = studentId;
@@ -2183,7 +2183,7 @@ class StudentOfSchool extends $pb.GeneratedMessage {
     if (thumbnailExpiresAt != null)
       result.thumbnailExpiresAt = thumbnailExpiresAt;
     if (inAShift != null) result.inAShift = inAShift;
-    if (shiftName != null) result.shiftName = shiftName;
+    if (shiftNames != null) result.shiftNames.addAll(shiftNames);
     return result;
   }
 
@@ -2221,7 +2221,7 @@ class StudentOfSchool extends $pb.GeneratedMessage {
     ..aOM<$1.Timestamp>(15, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
     ..aOB(16, _omitFieldNames ? '' : 'inAShift')
-    ..aOS(17, _omitFieldNames ? '' : 'shiftName')
+    ..pPS(17, _omitFieldNames ? '' : 'shiftNames')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -2395,13 +2395,7 @@ class StudentOfSchool extends $pb.GeneratedMessage {
   void clearInAShift() => $_clearField(16);
 
   @$pb.TagNumber(17)
-  $core.String get shiftName => $_getSZ(16);
-  @$pb.TagNumber(17)
-  set shiftName($core.String value) => $_setString(16, value);
-  @$pb.TagNumber(17)
-  $core.bool hasShiftName() => $_has(16);
-  @$pb.TagNumber(17)
-  void clearShiftName() => $_clearField(17);
+  $pb.PbList<$core.String> get shiftNames => $_getList(16);
 }
 
 class ListStudentsOfSchoolResponse extends $pb.GeneratedMessage {
@@ -3114,7 +3108,7 @@ class TeacherOfSchool extends $pb.GeneratedMessage {
     $1.Timestamp? thumbnailUpdatedAt,
     $1.Timestamp? thumbnailExpiresAt,
     $core.bool? inAShift,
-    $core.String? shiftName,
+    $core.Iterable<$core.String>? shiftNames,
   }) {
     final result = create();
     if (teacherId != null) result.teacherId = teacherId;
@@ -3135,7 +3129,7 @@ class TeacherOfSchool extends $pb.GeneratedMessage {
     if (thumbnailExpiresAt != null)
       result.thumbnailExpiresAt = thumbnailExpiresAt;
     if (inAShift != null) result.inAShift = inAShift;
-    if (shiftName != null) result.shiftName = shiftName;
+    if (shiftNames != null) result.shiftNames.addAll(shiftNames);
     return result;
   }
 
@@ -3168,7 +3162,7 @@ class TeacherOfSchool extends $pb.GeneratedMessage {
     ..aOM<$1.Timestamp>(12, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
     ..aOB(13, _omitFieldNames ? '' : 'inAShift')
-    ..aOS(14, _omitFieldNames ? '' : 'shiftName')
+    ..pPS(14, _omitFieldNames ? '' : 'shiftNames')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -3314,13 +3308,7 @@ class TeacherOfSchool extends $pb.GeneratedMessage {
   void clearInAShift() => $_clearField(13);
 
   @$pb.TagNumber(14)
-  $core.String get shiftName => $_getSZ(13);
-  @$pb.TagNumber(14)
-  set shiftName($core.String value) => $_setString(13, value);
-  @$pb.TagNumber(14)
-  $core.bool hasShiftName() => $_has(13);
-  @$pb.TagNumber(14)
-  void clearShiftName() => $_clearField(14);
+  $pb.PbList<$core.String> get shiftNames => $_getList(13);
 }
 
 class ListEmployeesOfSchoolRequest extends $pb.GeneratedMessage {
@@ -3534,7 +3522,7 @@ class EmployeeOfSchool extends $pb.GeneratedMessage {
     $1.Timestamp? thumbnailUpdatedAt,
     $1.Timestamp? thumbnailExpiresAt,
     $core.bool? inAShift,
-    $core.String? shiftName,
+    $core.Iterable<$core.String>? shiftNames,
   }) {
     final result = create();
     if (employeeId != null) result.employeeId = employeeId;
@@ -3556,7 +3544,7 @@ class EmployeeOfSchool extends $pb.GeneratedMessage {
     if (thumbnailExpiresAt != null)
       result.thumbnailExpiresAt = thumbnailExpiresAt;
     if (inAShift != null) result.inAShift = inAShift;
-    if (shiftName != null) result.shiftName = shiftName;
+    if (shiftNames != null) result.shiftNames.addAll(shiftNames);
     return result;
   }
 
@@ -3590,7 +3578,7 @@ class EmployeeOfSchool extends $pb.GeneratedMessage {
     ..aOM<$1.Timestamp>(13, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
     ..aOB(14, _omitFieldNames ? '' : 'inAShift')
-    ..aOS(15, _omitFieldNames ? '' : 'shiftName')
+    ..pPS(15, _omitFieldNames ? '' : 'shiftNames')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -3745,13 +3733,7 @@ class EmployeeOfSchool extends $pb.GeneratedMessage {
   void clearInAShift() => $_clearField(14);
 
   @$pb.TagNumber(15)
-  $core.String get shiftName => $_getSZ(14);
-  @$pb.TagNumber(15)
-  set shiftName($core.String value) => $_setString(14, value);
-  @$pb.TagNumber(15)
-  $core.bool hasShiftName() => $_has(14);
-  @$pb.TagNumber(15)
-  void clearShiftName() => $_clearField(15);
+  $pb.PbList<$core.String> get shiftNames => $_getList(14);
 }
 
 class GetStudentsSelectionMenuItemsRequest extends $pb.GeneratedMessage {
@@ -5782,7 +5764,7 @@ class StudentOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
     $core.String? userThumbnailUrl,
     $1.Timestamp? thumbnailUpdatedAt,
     $1.Timestamp? thumbnailExpiresAt,
-    $core.String? shiftName,
+    $core.Iterable<$core.String>? shiftNames,
   }) {
     final result = create();
     if (studentId != null) result.studentId = studentId;
@@ -5801,7 +5783,7 @@ class StudentOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
       result.thumbnailUpdatedAt = thumbnailUpdatedAt;
     if (thumbnailExpiresAt != null)
       result.thumbnailExpiresAt = thumbnailExpiresAt;
-    if (shiftName != null) result.shiftName = shiftName;
+    if (shiftNames != null) result.shiftNames.addAll(shiftNames);
     return result;
   }
 
@@ -5832,7 +5814,7 @@ class StudentOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
         subBuilder: $1.Timestamp.create)
     ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
-    ..aOS(11, _omitFieldNames ? '' : 'shiftName')
+    ..pPS(11, _omitFieldNames ? '' : 'shiftNames')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -5955,13 +5937,7 @@ class StudentOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
   $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(9);
 
   @$pb.TagNumber(11)
-  $core.String get shiftName => $_getSZ(10);
-  @$pb.TagNumber(11)
-  set shiftName($core.String value) => $_setString(10, value);
-  @$pb.TagNumber(11)
-  $core.bool hasShiftName() => $_has(10);
-  @$pb.TagNumber(11)
-  void clearShiftName() => $_clearField(11);
+  $pb.PbList<$core.String> get shiftNames => $_getList(10);
 }
 
 class ListStudentsOfSchoolForShiftAllocationResponse
@@ -6170,7 +6146,7 @@ class TeacherOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
     $core.String? userThumbnailUrl,
     $1.Timestamp? thumbnailUpdatedAt,
     $1.Timestamp? thumbnailExpiresAt,
-    $core.String? shiftName,
+    $core.Iterable<$core.String>? shiftNames,
   }) {
     final result = create();
     if (teacherId != null) result.teacherId = teacherId;
@@ -6183,7 +6159,7 @@ class TeacherOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
       result.thumbnailUpdatedAt = thumbnailUpdatedAt;
     if (thumbnailExpiresAt != null)
       result.thumbnailExpiresAt = thumbnailExpiresAt;
-    if (shiftName != null) result.shiftName = shiftName;
+    if (shiftNames != null) result.shiftNames.addAll(shiftNames);
     return result;
   }
 
@@ -6211,7 +6187,7 @@ class TeacherOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
         subBuilder: $1.Timestamp.create)
     ..aOM<$1.Timestamp>(7, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
-    ..aOS(8, _omitFieldNames ? '' : 'shiftName')
+    ..pPS(8, _omitFieldNames ? '' : 'shiftNames')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -6307,13 +6283,7 @@ class TeacherOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
   $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $core.String get shiftName => $_getSZ(7);
-  @$pb.TagNumber(8)
-  set shiftName($core.String value) => $_setString(7, value);
-  @$pb.TagNumber(8)
-  $core.bool hasShiftName() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearShiftName() => $_clearField(8);
+  $pb.PbList<$core.String> get shiftNames => $_getList(7);
 }
 
 class ListTeachersOfSchoolForShiftAllocationResponse
@@ -6522,7 +6492,7 @@ class EmployeeOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
     $core.String? userThumbnailUrl,
     $1.Timestamp? thumbnailUpdatedAt,
     $1.Timestamp? thumbnailExpiresAt,
-    $core.String? shiftName,
+    $core.Iterable<$core.String>? shiftNames,
   }) {
     final result = create();
     if (employeeId != null) result.employeeId = employeeId;
@@ -6535,7 +6505,7 @@ class EmployeeOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
       result.thumbnailUpdatedAt = thumbnailUpdatedAt;
     if (thumbnailExpiresAt != null)
       result.thumbnailExpiresAt = thumbnailExpiresAt;
-    if (shiftName != null) result.shiftName = shiftName;
+    if (shiftNames != null) result.shiftNames.addAll(shiftNames);
     return result;
   }
 
@@ -6563,7 +6533,7 @@ class EmployeeOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
         subBuilder: $1.Timestamp.create)
     ..aOM<$1.Timestamp>(7, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
-    ..aOS(8, _omitFieldNames ? '' : 'shiftName')
+    ..pPS(8, _omitFieldNames ? '' : 'shiftNames')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -6659,13 +6629,7 @@ class EmployeeOfSchoolForShiftAllocation extends $pb.GeneratedMessage {
   $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $core.String get shiftName => $_getSZ(7);
-  @$pb.TagNumber(8)
-  set shiftName($core.String value) => $_setString(7, value);
-  @$pb.TagNumber(8)
-  $core.bool hasShiftName() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearShiftName() => $_clearField(8);
+  $pb.PbList<$core.String> get shiftNames => $_getList(7);
 }
 
 class ListEmployeesOfSchoolForShiftAllocationResponse
@@ -6911,7 +6875,7 @@ class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
     $core.String? userThumbnailUrl,
     $1.Timestamp? thumbnailUpdatedAt,
     $1.Timestamp? thumbnailExpiresAt,
-    $core.String? shiftName,
+    $core.Iterable<$core.String>? shiftNames,
   }) {
     final result = create();
     if (userId != null) result.userId = userId;
@@ -6930,7 +6894,7 @@ class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
       result.thumbnailUpdatedAt = thumbnailUpdatedAt;
     if (thumbnailExpiresAt != null)
       result.thumbnailExpiresAt = thumbnailExpiresAt;
-    if (shiftName != null) result.shiftName = shiftName;
+    if (shiftNames != null) result.shiftNames.addAll(shiftNames);
     return result;
   }
 
@@ -6960,7 +6924,7 @@ class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
         subBuilder: $1.Timestamp.create)
     ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
-    ..aOS(11, _omitFieldNames ? '' : 'shiftName')
+    ..pPS(11, _omitFieldNames ? '' : 'shiftNames')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -7082,13 +7046,7 @@ class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
   $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(9);
 
   @$pb.TagNumber(11)
-  $core.String get shiftName => $_getSZ(10);
-  @$pb.TagNumber(11)
-  set shiftName($core.String value) => $_setString(10, value);
-  @$pb.TagNumber(11)
-  $core.bool hasShiftName() => $_has(10);
-  @$pb.TagNumber(11)
-  void clearShiftName() => $_clearField(11);
+  $pb.PbList<$core.String> get shiftNames => $_getList(10);
 }
 
 class GetBatchUsersInfoOfSchoolForLiveFeedRequest extends $pb.GeneratedMessage {
@@ -7291,7 +7249,7 @@ class SchoolUserInfoForLiveFeed extends $pb.GeneratedMessage {
     $core.String? lastAttendanceClassName,
     $core.String? lastAttendedSectionName,
     $core.String? lastAttendedSessionName,
-    $core.String? shiftName,
+    $core.Iterable<$core.String>? shiftNames,
     $core.String? userThumbnailUrl,
     $1.Timestamp? thumbnailUpdatedAt,
     $1.Timestamp? thumbnailExpiresAt,
@@ -7309,7 +7267,7 @@ class SchoolUserInfoForLiveFeed extends $pb.GeneratedMessage {
       result.lastAttendedSectionName = lastAttendedSectionName;
     if (lastAttendedSessionName != null)
       result.lastAttendedSessionName = lastAttendedSessionName;
-    if (shiftName != null) result.shiftName = shiftName;
+    if (shiftNames != null) result.shiftNames.addAll(shiftNames);
     if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
     if (thumbnailUpdatedAt != null)
       result.thumbnailUpdatedAt = thumbnailUpdatedAt;
@@ -7340,7 +7298,7 @@ class SchoolUserInfoForLiveFeed extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'lastAttendanceClassName')
     ..aOS(7, _omitFieldNames ? '' : 'lastAttendedSectionName')
     ..aOS(8, _omitFieldNames ? '' : 'lastAttendedSessionName')
-    ..aOS(9, _omitFieldNames ? '' : 'shiftName')
+    ..pPS(9, _omitFieldNames ? '' : 'shiftNames')
     ..aOS(10, _omitFieldNames ? '' : 'userThumbnailUrl')
     ..aOM<$1.Timestamp>(11, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
         subBuilder: $1.Timestamp.create)
@@ -7444,13 +7402,7 @@ class SchoolUserInfoForLiveFeed extends $pb.GeneratedMessage {
   void clearLastAttendedSessionName() => $_clearField(8);
 
   @$pb.TagNumber(9)
-  $core.String get shiftName => $_getSZ(8);
-  @$pb.TagNumber(9)
-  set shiftName($core.String value) => $_setString(8, value);
-  @$pb.TagNumber(9)
-  $core.bool hasShiftName() => $_has(8);
-  @$pb.TagNumber(9)
-  void clearShiftName() => $_clearField(9);
+  $pb.PbList<$core.String> get shiftNames => $_getList(8);
 
   @$pb.TagNumber(10)
   $core.String get userThumbnailUrl => $_getSZ(9);
