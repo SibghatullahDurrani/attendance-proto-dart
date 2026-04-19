@@ -641,6 +641,7 @@ const InstitutionLeaveData$json = {
       '10': 'rangeStatus',
       '17': true
     },
+    {'1': 'shift_id', '3': 9, '4': 1, '5': 9, '10': 'shiftId'},
   ],
   '8': [
     {'1': '_start_date'},
@@ -659,7 +660,8 @@ final $typed_data.Uint8List institutionLeaveDataDescriptor = $convert.base64Deco
     '9nbGUucHJvdG9idWYuVGltZXN0YW1wSABSCXN0YXJ0RGF0ZYgBARI6CghlbmRfZGF0ZRgHIAEo'
     'CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAVIHZW5kRGF0ZYgBARJECgxyYW5nZV9zdG'
     'F0dXMYCCABKA4yHC5jb21tb25fbWVzc2FnZXMuTGVhdmVTdGF0dXNIAlILcmFuZ2VTdGF0dXOI'
-    'AQFCDQoLX3N0YXJ0X2RhdGVCCwoJX2VuZF9kYXRlQg8KDV9yYW5nZV9zdGF0dXM=');
+    'AQESGQoIc2hpZnRfaWQYCSABKAlSB3NoaWZ0SWRCDQoLX3N0YXJ0X2RhdGVCCwoJX2VuZF9kYX'
+    'RlQg8KDV9yYW5nZV9zdGF0dXM=');
 
 @$core.Deprecated('Use respondToLeaveRequestDescriptor instead')
 const RespondToLeaveRequest$json = {

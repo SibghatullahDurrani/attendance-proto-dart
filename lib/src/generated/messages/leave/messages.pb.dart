@@ -1343,6 +1343,7 @@ class InstitutionLeaveData extends $pb.GeneratedMessage {
     $1.Timestamp? startDate,
     $1.Timestamp? endDate,
     $0.LeaveStatus? rangeStatus,
+    $core.String? shiftId,
   }) {
     final result = create();
     if (leaveId != null) result.leaveId = leaveId;
@@ -1353,6 +1354,7 @@ class InstitutionLeaveData extends $pb.GeneratedMessage {
     if (startDate != null) result.startDate = startDate;
     if (endDate != null) result.endDate = endDate;
     if (rangeStatus != null) result.rangeStatus = rangeStatus;
+    if (shiftId != null) result.shiftId = shiftId;
     return result;
   }
 
@@ -1383,6 +1385,7 @@ class InstitutionLeaveData extends $pb.GeneratedMessage {
         subBuilder: $1.Timestamp.create)
     ..aE<$0.LeaveStatus>(8, _omitFieldNames ? '' : 'rangeStatus',
         enumValues: $0.LeaveStatus.values)
+    ..aOS(9, _omitFieldNames ? '' : 'shiftId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1477,6 +1480,15 @@ class InstitutionLeaveData extends $pb.GeneratedMessage {
   $core.bool hasRangeStatus() => $_has(7);
   @$pb.TagNumber(8)
   void clearRangeStatus() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get shiftId => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set shiftId($core.String value) => $_setString(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasShiftId() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearShiftId() => $_clearField(9);
 }
 
 class RespondToLeaveRequest extends $pb.GeneratedMessage {

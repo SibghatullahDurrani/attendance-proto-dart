@@ -1680,3 +1680,48 @@ const ShiftRegistration$json = {
 final $typed_data.Uint8List shiftRegistrationDescriptor = $convert.base64Decode(
     'ChFTaGlmdFJlZ2lzdHJhdGlvbhIZCghzaGlmdF9pZBgBIAEoCVIHc2hpZnRJZBIdCgpzaGlmdF'
     '9uYW1lGAIgASgJUglzaGlmdE5hbWU=');
+
+@$core.Deprecated('Use getShiftsNamesRequestDescriptor instead')
+const GetShiftsNamesRequest$json = {
+  '1': 'GetShiftsNamesRequest',
+  '2': [
+    {'1': 'shift_ids', '3': 1, '4': 3, '5': 9, '10': 'shiftIds'},
+  ],
+};
+
+/// Descriptor for `GetShiftsNamesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getShiftsNamesRequestDescriptor = $convert.base64Decode(
+    'ChVHZXRTaGlmdHNOYW1lc1JlcXVlc3QSGwoJc2hpZnRfaWRzGAEgAygJUghzaGlmdElkcw==');
+
+@$core.Deprecated('Use getShiftsNamesResponseDescriptor instead')
+const GetShiftsNamesResponse$json = {
+  '1': 'GetShiftsNamesResponse',
+  '2': [
+    {
+      '1': 'shift_names',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.GetShiftsNamesResponse.ShiftNamesEntry',
+      '10': 'shiftNames'
+    },
+  ],
+  '3': [GetShiftsNamesResponse_ShiftNamesEntry$json],
+};
+
+@$core.Deprecated('Use getShiftsNamesResponseDescriptor instead')
+const GetShiftsNamesResponse_ShiftNamesEntry$json = {
+  '1': 'ShiftNamesEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+/// Descriptor for `GetShiftsNamesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getShiftsNamesResponseDescriptor = $convert.base64Decode(
+    'ChZHZXRTaGlmdHNOYW1lc1Jlc3BvbnNlElwKC3NoaWZ0X25hbWVzGAIgAygLMjsuYXR0ZW5kYW'
+    '5jZV9tZXNzYWdlcy5HZXRTaGlmdHNOYW1lc1Jlc3BvbnNlLlNoaWZ0TmFtZXNFbnRyeVIKc2hp'
+    'ZnROYW1lcxo9Cg9TaGlmdE5hbWVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAi'
+    'ABKAlSBXZhbHVlOgI4AQ==');

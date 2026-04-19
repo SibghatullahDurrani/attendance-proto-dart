@@ -243,6 +243,13 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetShiftsNamesResponse> getShiftsNames(
+    $0.GetShiftsNamesRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getShiftsNames, request, options: options);
+  }
+
   // method descriptors
 
   static final _$getUserMonthlyAttendanceStats = $grpc.ClientMethod<
@@ -376,6 +383,11 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/GetUserShiftRegistrations',
       ($0.GetUserShiftRegistrationsRequest value) => value.writeToBuffer(),
       $0.GetUserShiftRegistrationsResponse.fromBuffer);
+  static final _$getShiftsNames =
+      $grpc.ClientMethod<$0.GetShiftsNamesRequest, $0.GetShiftsNamesResponse>(
+          '/attendance.AttendanceService/GetShiftsNames',
+          ($0.GetShiftsNamesRequest value) => value.writeToBuffer(),
+          $0.GetShiftsNamesResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -596,6 +608,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetUserShiftRegistrationsRequest.fromBuffer(value),
         ($0.GetUserShiftRegistrationsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetShiftsNamesRequest,
+            $0.GetShiftsNamesResponse>(
+        'GetShiftsNames',
+        getShiftsNames_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetShiftsNamesRequest.fromBuffer(value),
+        ($0.GetShiftsNamesResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -818,4 +839,13 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetUserShiftRegistrationsResponse> getUserShiftRegistrations(
       $grpc.ServiceCall call, $0.GetUserShiftRegistrationsRequest request);
+
+  $async.Future<$0.GetShiftsNamesResponse> getShiftsNames_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetShiftsNamesRequest> $request) async {
+    return getShiftsNames($call, await $request);
+  }
+
+  $async.Future<$0.GetShiftsNamesResponse> getShiftsNames(
+      $grpc.ServiceCall call, $0.GetShiftsNamesRequest request);
 }
