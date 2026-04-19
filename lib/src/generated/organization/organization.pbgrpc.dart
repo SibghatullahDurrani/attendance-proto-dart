@@ -116,6 +116,15 @@ class OrganizationServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listAllOrganizations, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.ListAllSubOrganizationsResponse>
+      listAllSubOrganizations(
+    $0.ListAllSubOrganizationsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listAllSubOrganizations, request,
+        options: options);
+  }
+
   $grpc.ResponseFuture<$0.GetOrganizationNameResponse> getOrganizationName(
     $0.GetOrganizationNameRequest request, {
     $grpc.CallOptions? options,
@@ -223,6 +232,12 @@ class OrganizationServiceClient extends $grpc.Client {
       '/organization.OrganizationService/ListAllOrganizations',
       ($0.ListAllOrganizationsRequest value) => value.writeToBuffer(),
       $0.ListAllOrganizationsResponse.fromBuffer);
+  static final _$listAllSubOrganizations = $grpc.ClientMethod<
+          $0.ListAllSubOrganizationsRequest,
+          $0.ListAllSubOrganizationsResponse>(
+      '/organization.OrganizationService/ListAllSubOrganizations',
+      ($0.ListAllSubOrganizationsRequest value) => value.writeToBuffer(),
+      $0.ListAllSubOrganizationsResponse.fromBuffer);
   static final _$getOrganizationName = $grpc.ClientMethod<
           $0.GetOrganizationNameRequest, $0.GetOrganizationNameResponse>(
       '/organization.OrganizationService/GetOrganizationName',
@@ -356,6 +371,15 @@ abstract class OrganizationServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ListAllOrganizationsRequest.fromBuffer(value),
         ($0.ListAllOrganizationsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListAllSubOrganizationsRequest,
+            $0.ListAllSubOrganizationsResponse>(
+        'ListAllSubOrganizations',
+        listAllSubOrganizations_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListAllSubOrganizationsRequest.fromBuffer(value),
+        ($0.ListAllSubOrganizationsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetOrganizationNameRequest,
             $0.GetOrganizationNameResponse>(
         'GetOrganizationName',
@@ -510,6 +534,15 @@ abstract class OrganizationServiceBase extends $grpc.Service {
 
   $async.Future<$0.ListAllOrganizationsResponse> listAllOrganizations(
       $grpc.ServiceCall call, $0.ListAllOrganizationsRequest request);
+
+  $async.Future<$0.ListAllSubOrganizationsResponse> listAllSubOrganizations_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.ListAllSubOrganizationsRequest> $request) async {
+    return listAllSubOrganizations($call, await $request);
+  }
+
+  $async.Future<$0.ListAllSubOrganizationsResponse> listAllSubOrganizations(
+      $grpc.ServiceCall call, $0.ListAllSubOrganizationsRequest request);
 
   $async.Future<$0.GetOrganizationNameResponse> getOrganizationName_Pre(
       $grpc.ServiceCall $call,

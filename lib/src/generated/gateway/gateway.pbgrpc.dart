@@ -207,7 +207,6 @@ class GatewayServiceClient extends $grpc.Client {
   }
 
   /// Attendance RPCS
-  /// Frontend needs changing
   $grpc.ResponseFuture<$2.GetUserMonthlyAttendanceStatsResponse>
       getUserMonthlyAttendanceStats(
     $2.GetUserMonthlyAttendanceStatsRequest request, {
@@ -217,7 +216,6 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// Frontend needs changing
   $grpc.ResponseFuture<$2.GetUserAttendanceCalendarResponse>
       getUserAttendanceCalendar(
     $2.GetUserAttendanceCalendarRequest request, {
@@ -227,7 +225,6 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// Frontend needs changing
   $grpc.ResponseFuture<$2.GetUserYearlyAttendanceStatsResponse>
       getUserYearlyAttendanceStats(
     $2.GetUserYearlyAttendanceStatsRequest request, {
@@ -237,7 +234,6 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// Frontend needs changing
   $grpc.ResponseFuture<$2.GetUserAttendanceDetailsResponse>
       getUserAttendanceDetails(
     $2.GetUserAttendanceDetailsRequest request, {
@@ -363,7 +359,7 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getBulkParentName, request, options: options);
   }
 
-  /// Leave RPCs
+  /// Frontend needs changing
   $grpc.ResponseFuture<$4.ListUserLeavesResponse> listUserLeaves(
     $4.ListUserLeavesRequest request, {
     $grpc.CallOptions? options,
@@ -371,6 +367,7 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listUserLeaves, request, options: options);
   }
 
+  /// Frontend needs changing
   $grpc.ResponseFuture<$4.CreateLeaveResponse> createLeave(
     $4.CreateLeaveRequest request, {
     $grpc.CallOptions? options,

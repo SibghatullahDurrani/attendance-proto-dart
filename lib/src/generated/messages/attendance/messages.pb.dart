@@ -5115,6 +5115,195 @@ class ShiftOfAttendanceMonth extends $pb.GeneratedMessage {
   void clearCheckOutMinute() => $_clearField(6);
 }
 
+class GetUserShiftRegistrationsRequest extends $pb.GeneratedMessage {
+  factory GetUserShiftRegistrationsRequest({
+    $core.String? userId,
+  }) {
+    final result = create();
+    if (userId != null) result.userId = userId;
+    return result;
+  }
+
+  GetUserShiftRegistrationsRequest._();
+
+  factory GetUserShiftRegistrationsRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetUserShiftRegistrationsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetUserShiftRegistrationsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserShiftRegistrationsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserShiftRegistrationsRequest copyWith(
+          void Function(GetUserShiftRegistrationsRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetUserShiftRegistrationsRequest))
+          as GetUserShiftRegistrationsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserShiftRegistrationsRequest create() =>
+      GetUserShiftRegistrationsRequest._();
+  @$core.override
+  GetUserShiftRegistrationsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetUserShiftRegistrationsRequest> createRepeated() =>
+      $pb.PbList<GetUserShiftRegistrationsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserShiftRegistrationsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetUserShiftRegistrationsRequest>(
+          create);
+  static GetUserShiftRegistrationsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => $_clearField(1);
+}
+
+class GetUserShiftRegistrationsResponse extends $pb.GeneratedMessage {
+  factory GetUserShiftRegistrationsResponse({
+    $core.Iterable<ShiftRegistration>? shiftRegistrations,
+  }) {
+    final result = create();
+    if (shiftRegistrations != null)
+      result.shiftRegistrations.addAll(shiftRegistrations);
+    return result;
+  }
+
+  GetUserShiftRegistrationsResponse._();
+
+  factory GetUserShiftRegistrationsResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetUserShiftRegistrationsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetUserShiftRegistrationsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..pPM<ShiftRegistration>(1, _omitFieldNames ? '' : 'shiftRegistrations',
+        subBuilder: ShiftRegistration.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserShiftRegistrationsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserShiftRegistrationsResponse copyWith(
+          void Function(GetUserShiftRegistrationsResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetUserShiftRegistrationsResponse))
+          as GetUserShiftRegistrationsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserShiftRegistrationsResponse create() =>
+      GetUserShiftRegistrationsResponse._();
+  @$core.override
+  GetUserShiftRegistrationsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetUserShiftRegistrationsResponse> createRepeated() =>
+      $pb.PbList<GetUserShiftRegistrationsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserShiftRegistrationsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetUserShiftRegistrationsResponse>(
+          create);
+  static GetUserShiftRegistrationsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<ShiftRegistration> get shiftRegistrations => $_getList(0);
+}
+
+class ShiftRegistration extends $pb.GeneratedMessage {
+  factory ShiftRegistration({
+    $core.String? shiftId,
+    $core.String? shiftName,
+  }) {
+    final result = create();
+    if (shiftId != null) result.shiftId = shiftId;
+    if (shiftName != null) result.shiftName = shiftName;
+    return result;
+  }
+
+  ShiftRegistration._();
+
+  factory ShiftRegistration.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ShiftRegistration.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ShiftRegistration',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'shiftId')
+    ..aOS(2, _omitFieldNames ? '' : 'shiftName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ShiftRegistration clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ShiftRegistration copyWith(void Function(ShiftRegistration) updates) =>
+      super.copyWith((message) => updates(message as ShiftRegistration))
+          as ShiftRegistration;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ShiftRegistration create() => ShiftRegistration._();
+  @$core.override
+  ShiftRegistration createEmptyInstance() => create();
+  static $pb.PbList<ShiftRegistration> createRepeated() =>
+      $pb.PbList<ShiftRegistration>();
+  @$core.pragma('dart2js:noInline')
+  static ShiftRegistration getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ShiftRegistration>(create);
+  static ShiftRegistration? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get shiftId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set shiftId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasShiftId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearShiftId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get shiftName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set shiftName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasShiftName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearShiftName() => $_clearField(2);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

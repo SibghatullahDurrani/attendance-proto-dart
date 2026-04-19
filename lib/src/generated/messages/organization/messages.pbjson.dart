@@ -65,15 +65,28 @@ const CreateSubOrganizationRequest$json = {
     {'1': 'city', '3': 2, '4': 1, '5': 9, '10': 'city'},
     {'1': 'address', '3': 3, '4': 1, '5': 9, '10': 'address'},
     {'1': 'time_zone', '3': 4, '4': 1, '5': 9, '10': 'timeZone'},
+    {
+      '1': 'organization_id',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'organizationId',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_organization_id'},
   ],
 };
 
 /// Descriptor for `CreateSubOrganizationRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List createSubOrganizationRequestDescriptor =
-    $convert.base64Decode(
-        'ChxDcmVhdGVTdWJPcmdhbml6YXRpb25SZXF1ZXN0EjIKFXN1Yl9vcmdhbml6YXRpb25fbmFtZR'
-        'gBIAEoCVITc3ViT3JnYW5pemF0aW9uTmFtZRISCgRjaXR5GAIgASgJUgRjaXR5EhgKB2FkZHJl'
-        'c3MYAyABKAlSB2FkZHJlc3MSGwoJdGltZV96b25lGAQgASgJUgh0aW1lWm9uZQ==');
+final $typed_data.Uint8List createSubOrganizationRequestDescriptor = $convert.base64Decode(
+    'ChxDcmVhdGVTdWJPcmdhbml6YXRpb25SZXF1ZXN0EjIKFXN1Yl9vcmdhbml6YXRpb25fbmFtZR'
+    'gBIAEoCVITc3ViT3JnYW5pemF0aW9uTmFtZRISCgRjaXR5GAIgASgJUgRjaXR5EhgKB2FkZHJl'
+    'c3MYAyABKAlSB2FkZHJlc3MSGwoJdGltZV96b25lGAQgASgJUgh0aW1lWm9uZRIsCg9vcmdhbm'
+    'l6YXRpb25faWQYBSABKAlIAFIOb3JnYW5pemF0aW9uSWSIAQFCEgoQX29yZ2FuaXphdGlvbl9p'
+    'ZA==');
 
 @$core.Deprecated('Use createSubOrganizationResponseDescriptor instead')
 const CreateSubOrganizationResponse$json = {
@@ -94,6 +107,150 @@ final $typed_data.Uint8List createSubOrganizationResponseDescriptor =
     $convert.base64Decode(
         'Ch1DcmVhdGVTdWJPcmdhbml6YXRpb25SZXNwb25zZRIuChNzdWJfb3JnYW5pemF0aW9uX2lkGA'
         'EgASgJUhFzdWJPcmdhbml6YXRpb25JZA==');
+
+@$core.Deprecated('Use listAllSubOrganizationsRequestDescriptor instead')
+const ListAllSubOrganizationsRequest$json = {
+  '1': 'ListAllSubOrganizationsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {
+      '1': 'sub_organization_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'subOrganizationName',
+      '17': true
+    },
+    {'1': 'city', '3': 3, '4': 1, '5': 9, '9': 1, '10': 'city', '17': true},
+    {
+      '1': 'address',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'address',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_sub_organization_name'},
+    {'1': '_city'},
+    {'1': '_address'},
+  ],
+};
+
+/// Descriptor for `ListAllSubOrganizationsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAllSubOrganizationsRequestDescriptor = $convert.base64Decode(
+    'Ch5MaXN0QWxsU3ViT3JnYW5pemF0aW9uc1JlcXVlc3QSQgoKcGFnaW5hdGlvbhgBIAEoCzIiLm'
+    'NvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhI3ChVzdWJfb3Jn'
+    'YW5pemF0aW9uX25hbWUYAiABKAlIAFITc3ViT3JnYW5pemF0aW9uTmFtZYgBARIXCgRjaXR5GA'
+    'MgASgJSAFSBGNpdHmIAQESHQoHYWRkcmVzcxgEIAEoCUgCUgdhZGRyZXNziAEBQhgKFl9zdWJf'
+    'b3JnYW5pemF0aW9uX25hbWVCBwoFX2NpdHlCCgoIX2FkZHJlc3M=');
+
+@$core.Deprecated('Use listAllSubOrganizationsResponseDescriptor instead')
+const ListAllSubOrganizationsResponse$json = {
+  '1': 'ListAllSubOrganizationsResponse',
+  '2': [
+    {
+      '1': 'sub_organizations',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.organization_messages.SubOrganization',
+      '10': 'subOrganizations'
+    },
+    {
+      '1': 'pagination',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+  ],
+};
+
+/// Descriptor for `ListAllSubOrganizationsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAllSubOrganizationsResponseDescriptor =
+    $convert.base64Decode(
+        'Ch9MaXN0QWxsU3ViT3JnYW5pemF0aW9uc1Jlc3BvbnNlElMKEXN1Yl9vcmdhbml6YXRpb25zGA'
+        'EgAygLMiYub3JnYW5pemF0aW9uX21lc3NhZ2VzLlN1Yk9yZ2FuaXphdGlvblIQc3ViT3JnYW5p'
+        'emF0aW9ucxJDCgpwYWdpbmF0aW9uGAIgASgLMiMuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb2'
+        '5SZXNwb25zZVIKcGFnaW5hdGlvbg==');
+
+@$core.Deprecated('Use subOrganizationDescriptor instead')
+const SubOrganization$json = {
+  '1': 'SubOrganization',
+  '2': [
+    {
+      '1': 'sub_organization_id',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '10': 'subOrganizationId'
+    },
+    {
+      '1': 'sub_organization_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'subOrganizationName'
+    },
+    {
+      '1': 'created_at',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createdAt'
+    },
+    {
+      '1': 'modified_at',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'modifiedAt'
+    },
+    {'1': 'city', '3': 5, '4': 1, '5': 9, '10': 'city'},
+    {'1': 'address', '3': 6, '4': 1, '5': 9, '10': 'address'},
+    {'1': 'time_zone', '3': 7, '4': 1, '5': 9, '10': 'timeZone'},
+    {
+      '1': 'sub_organization_employees_count',
+      '3': 8,
+      '4': 1,
+      '5': 5,
+      '10': 'subOrganizationEmployeesCount'
+    },
+    {
+      '1': 'sub_organization_admin_count',
+      '3': 9,
+      '4': 1,
+      '5': 5,
+      '10': 'subOrganizationAdminCount'
+    },
+  ],
+};
+
+/// Descriptor for `SubOrganization`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List subOrganizationDescriptor = $convert.base64Decode(
+    'Cg9TdWJPcmdhbml6YXRpb24SLgoTc3ViX29yZ2FuaXphdGlvbl9pZBgBIAEoCVIRc3ViT3JnYW'
+    '5pemF0aW9uSWQSMgoVc3ViX29yZ2FuaXphdGlvbl9uYW1lGAIgASgJUhNzdWJPcmdhbml6YXRp'
+    'b25OYW1lEjkKCmNyZWF0ZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUg'
+    'ljcmVhdGVkQXQSOwoLbW9kaWZpZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0'
+    'YW1wUgptb2RpZmllZEF0EhIKBGNpdHkYBSABKAlSBGNpdHkSGAoHYWRkcmVzcxgGIAEoCVIHYW'
+    'RkcmVzcxIbCgl0aW1lX3pvbmUYByABKAlSCHRpbWVab25lEkcKIHN1Yl9vcmdhbml6YXRpb25f'
+    'ZW1wbG95ZWVzX2NvdW50GAggASgFUh1zdWJPcmdhbml6YXRpb25FbXBsb3llZXNDb3VudBI/Ch'
+    'xzdWJfb3JnYW5pemF0aW9uX2FkbWluX2NvdW50GAkgASgFUhlzdWJPcmdhbml6YXRpb25BZG1p'
+    'bkNvdW50');
 
 @$core.Deprecated('Use createOrganizationDepartmentRequestDescriptor instead')
 const CreateOrganizationDepartmentRequest$json = {
@@ -542,15 +699,23 @@ final $typed_data.Uint8List getOrganizationIdResponseDescriptor =
 const GetSubOrganizationIdRequest$json = {
   '1': 'GetSubOrganizationIdRequest',
   '2': [
-    {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'user_role',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.Role',
+      '10': 'userRole'
+    },
   ],
 };
 
 /// Descriptor for `GetSubOrganizationIdRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getSubOrganizationIdRequestDescriptor =
     $convert.base64Decode(
-        'ChtHZXRTdWJPcmdhbml6YXRpb25JZFJlcXVlc3QSHwoLZW1wbG95ZWVfaWQYASABKAlSCmVtcG'
-        'xveWVlSWQ=');
+        'ChtHZXRTdWJPcmdhbml6YXRpb25JZFJlcXVlc3QSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEj'
+        'IKCXVzZXJfcm9sZRgCIAEoDjIVLmNvbW1vbl9tZXNzYWdlcy5Sb2xlUgh1c2VyUm9sZQ==');
 
 @$core.Deprecated('Use getSubOrganizationIdResponseDescriptor instead')
 const GetSubOrganizationIdResponse$json = {

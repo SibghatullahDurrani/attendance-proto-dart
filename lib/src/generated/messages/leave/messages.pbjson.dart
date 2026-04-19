@@ -114,6 +114,7 @@ const UserLeave$json = {
       '10': 'rangeStatus',
       '17': true
     },
+    {'1': 'shift_id', '3': 7, '4': 1, '5': 9, '10': 'shiftId'},
   ],
   '8': [
     {'1': '_start_date'},
@@ -130,8 +131,8 @@ final $typed_data.Uint8List userLeaveDescriptor = $convert.base64Decode(
     '9kYXRlGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAUglzdGFydERhdGWIAQES'
     'OgoIZW5kX2RhdGUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAFSB2VuZERhdG'
     'WIAQESRAoMcmFuZ2Vfc3RhdHVzGAYgASgOMhwuY29tbW9uX21lc3NhZ2VzLkxlYXZlU3RhdHVz'
-    'SAJSC3JhbmdlU3RhdHVziAEBQg0KC19zdGFydF9kYXRlQgsKCV9lbmRfZGF0ZUIPCg1fcmFuZ2'
-    'Vfc3RhdHVz');
+    'SAJSC3JhbmdlU3RhdHVziAEBEhkKCHNoaWZ0X2lkGAcgASgJUgdzaGlmdElkQg0KC19zdGFydF'
+    '9kYXRlQgsKCV9lbmRfZGF0ZUIPCg1fcmFuZ2Vfc3RhdHVz');
 
 @$core.Deprecated('Use leaveDateDescriptor instead')
 const LeaveDate$json = {
@@ -243,6 +244,7 @@ const CreateLeaveRequest$json = {
       '6': '.common_messages.LeaveRole',
       '10': 'role'
     },
+    {'1': 'shift_id', '3': 10, '4': 1, '5': 9, '10': 'shiftId'},
   ],
   '8': [
     {'1': '_start_date'},
@@ -259,7 +261,8 @@ final $typed_data.Uint8List createLeaveRequestDescriptor = $convert.base64Decode
     'CnN0YXJ0X2RhdGUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSABSCXN0YXJ0RG'
     'F0ZYgBARI6CghlbmRfZGF0ZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAVIH'
     'ZW5kRGF0ZYgBARIuCgRyb2xlGAkgASgOMhouY29tbW9uX21lc3NhZ2VzLkxlYXZlUm9sZVIEcm'
-    '9sZUINCgtfc3RhcnRfZGF0ZUILCglfZW5kX2RhdGU=');
+    '9sZRIZCghzaGlmdF9pZBgKIAEoCVIHc2hpZnRJZEINCgtfc3RhcnRfZGF0ZUILCglfZW5kX2Rh'
+    'dGU=');
 
 @$core.Deprecated('Use createLeaveResponseDescriptor instead')
 const CreateLeaveResponse$json = {
@@ -348,6 +351,7 @@ const GetLeaveDetailsResponse$json = {
       '10': 'remarks',
       '17': true
     },
+    {'1': 'shift_id', '3': 9, '4': 1, '5': 9, '10': 'shiftId'},
   ],
   '8': [
     {'1': '_start_date'},
@@ -366,8 +370,9 @@ final $typed_data.Uint8List getLeaveDetailsResponseDescriptor = $convert.base64D
     'CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAFIJc3RhcnREYXRliAEBEjoKCGVuZF9kYX'
     'RlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBUgdlbmREYXRliAEBEkQKDHJh'
     'bmdlX3N0YXR1cxgHIAEoDjIcLmNvbW1vbl9tZXNzYWdlcy5MZWF2ZVN0YXR1c0gCUgtyYW5nZV'
-    'N0YXR1c4gBARIdCgdyZW1hcmtzGAggASgJSANSB3JlbWFya3OIAQFCDQoLX3N0YXJ0X2RhdGVC'
-    'CwoJX2VuZF9kYXRlQg8KDV9yYW5nZV9zdGF0dXNCCgoIX3JlbWFya3M=');
+    'N0YXR1c4gBARIdCgdyZW1hcmtzGAggASgJSANSB3JlbWFya3OIAQESGQoIc2hpZnRfaWQYCSAB'
+    'KAlSB3NoaWZ0SWRCDQoLX3N0YXJ0X2RhdGVCCwoJX2VuZF9kYXRlQg8KDV9yYW5nZV9zdGF0dX'
+    'NCCgoIX3JlbWFya3M=');
 
 @$core.Deprecated('Use updateLeaveRequestDescriptor instead')
 const UpdateLeaveRequest$json = {

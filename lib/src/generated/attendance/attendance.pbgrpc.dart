@@ -234,12 +234,12 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetUserShiftsOfAttendanceMonthResponse>
-      getUserShiftsOfAttendanceMonth(
-    $0.GetUserShiftsOfAttendanceMonthRequest request, {
+  $grpc.ResponseFuture<$0.GetUserShiftRegistrationsResponse>
+      getUserShiftRegistrations(
+    $0.GetUserShiftRegistrationsRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$getUserShiftsOfAttendanceMonth, request,
+    return $createUnaryCall(_$getUserShiftRegistrations, request,
         options: options);
   }
 
@@ -370,12 +370,12 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/GetOrganizationShiftsForDay',
       ($0.GetOrganizationShiftsForDayRequest value) => value.writeToBuffer(),
       $0.GetOrganizationShiftsForDayResponse.fromBuffer);
-  static final _$getUserShiftsOfAttendanceMonth = $grpc.ClientMethod<
-          $0.GetUserShiftsOfAttendanceMonthRequest,
-          $0.GetUserShiftsOfAttendanceMonthResponse>(
-      '/attendance.AttendanceService/GetUserShiftsOfAttendanceMonth',
-      ($0.GetUserShiftsOfAttendanceMonthRequest value) => value.writeToBuffer(),
-      $0.GetUserShiftsOfAttendanceMonthResponse.fromBuffer);
+  static final _$getUserShiftRegistrations = $grpc.ClientMethod<
+          $0.GetUserShiftRegistrationsRequest,
+          $0.GetUserShiftRegistrationsResponse>(
+      '/attendance.AttendanceService/GetUserShiftRegistrations',
+      ($0.GetUserShiftRegistrationsRequest value) => value.writeToBuffer(),
+      $0.GetUserShiftRegistrationsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -587,16 +587,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
             $0.GetOrganizationShiftsForDayRequest.fromBuffer(value),
         ($0.GetOrganizationShiftsForDayResponse value) =>
             value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.GetUserShiftsOfAttendanceMonthRequest,
-            $0.GetUserShiftsOfAttendanceMonthResponse>(
-        'GetUserShiftsOfAttendanceMonth',
-        getUserShiftsOfAttendanceMonth_Pre,
+    $addMethod($grpc.ServiceMethod<$0.GetUserShiftRegistrationsRequest,
+            $0.GetUserShiftRegistrationsResponse>(
+        'GetUserShiftRegistrations',
+        getUserShiftRegistrations_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.GetUserShiftsOfAttendanceMonthRequest.fromBuffer(value),
-        ($0.GetUserShiftsOfAttendanceMonthResponse value) =>
-            value.writeToBuffer()));
+            $0.GetUserShiftRegistrationsRequest.fromBuffer(value),
+        ($0.GetUserShiftRegistrationsResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -811,15 +810,12 @@ abstract class AttendanceServiceBase extends $grpc.Service {
       getOrganizationShiftsForDay($grpc.ServiceCall call,
           $0.GetOrganizationShiftsForDayRequest request);
 
-  $async.Future<$0.GetUserShiftsOfAttendanceMonthResponse>
-      getUserShiftsOfAttendanceMonth_Pre(
-          $grpc.ServiceCall $call,
-          $async.Future<$0.GetUserShiftsOfAttendanceMonthRequest>
-              $request) async {
-    return getUserShiftsOfAttendanceMonth($call, await $request);
+  $async.Future<$0.GetUserShiftRegistrationsResponse>
+      getUserShiftRegistrations_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetUserShiftRegistrationsRequest> $request) async {
+    return getUserShiftRegistrations($call, await $request);
   }
 
-  $async.Future<$0.GetUserShiftsOfAttendanceMonthResponse>
-      getUserShiftsOfAttendanceMonth($grpc.ServiceCall call,
-          $0.GetUserShiftsOfAttendanceMonthRequest request);
+  $async.Future<$0.GetUserShiftRegistrationsResponse> getUserShiftRegistrations(
+      $grpc.ServiceCall call, $0.GetUserShiftRegistrationsRequest request);
 }

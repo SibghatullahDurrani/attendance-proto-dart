@@ -127,6 +127,7 @@ class UserLeave extends $pb.GeneratedMessage {
     $1.Timestamp? startDate,
     $1.Timestamp? endDate,
     $0.LeaveStatus? rangeStatus,
+    $core.String? shiftId,
   }) {
     final result = create();
     if (leaveId != null) result.leaveId = leaveId;
@@ -135,6 +136,7 @@ class UserLeave extends $pb.GeneratedMessage {
     if (startDate != null) result.startDate = startDate;
     if (endDate != null) result.endDate = endDate;
     if (rangeStatus != null) result.rangeStatus = rangeStatus;
+    if (shiftId != null) result.shiftId = shiftId;
     return result;
   }
 
@@ -162,6 +164,7 @@ class UserLeave extends $pb.GeneratedMessage {
         subBuilder: $1.Timestamp.create)
     ..aE<$0.LeaveStatus>(6, _omitFieldNames ? '' : 'rangeStatus',
         enumValues: $0.LeaveStatus.values)
+    ..aOS(7, _omitFieldNames ? '' : 'shiftId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -236,6 +239,15 @@ class UserLeave extends $pb.GeneratedMessage {
   $core.bool hasRangeStatus() => $_has(5);
   @$pb.TagNumber(6)
   void clearRangeStatus() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get shiftId => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set shiftId($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasShiftId() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearShiftId() => $_clearField(7);
 }
 
 class LeaveDate extends $pb.GeneratedMessage {
@@ -397,6 +409,7 @@ class CreateLeaveRequest extends $pb.GeneratedMessage {
     $1.Timestamp? startDate,
     $1.Timestamp? endDate,
     $0.LeaveRole? role,
+    $core.String? shiftId,
   }) {
     final result = create();
     if (leaveType != null) result.leaveType = leaveType;
@@ -407,6 +420,7 @@ class CreateLeaveRequest extends $pb.GeneratedMessage {
     if (startDate != null) result.startDate = startDate;
     if (endDate != null) result.endDate = endDate;
     if (role != null) result.role = role;
+    if (shiftId != null) result.shiftId = shiftId;
     return result;
   }
 
@@ -436,6 +450,7 @@ class CreateLeaveRequest extends $pb.GeneratedMessage {
         subBuilder: $1.Timestamp.create)
     ..aE<$0.LeaveRole>(9, _omitFieldNames ? '' : 'role',
         enumValues: $0.LeaveRole.values)
+    ..aOS(10, _omitFieldNames ? '' : 'shiftId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -530,6 +545,15 @@ class CreateLeaveRequest extends $pb.GeneratedMessage {
   $core.bool hasRole() => $_has(7);
   @$pb.TagNumber(9)
   void clearRole() => $_clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get shiftId => $_getSZ(8);
+  @$pb.TagNumber(10)
+  set shiftId($core.String value) => $_setString(8, value);
+  @$pb.TagNumber(10)
+  $core.bool hasShiftId() => $_has(8);
+  @$pb.TagNumber(10)
+  void clearShiftId() => $_clearField(10);
 }
 
 class CreateLeaveResponse extends $pb.GeneratedMessage {
@@ -655,6 +679,7 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
     $1.Timestamp? endDate,
     $0.LeaveStatus? rangeStatus,
     $core.String? remarks,
+    $core.String? shiftId,
   }) {
     final result = create();
     if (description != null) result.description = description;
@@ -665,6 +690,7 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
     if (endDate != null) result.endDate = endDate;
     if (rangeStatus != null) result.rangeStatus = rangeStatus;
     if (remarks != null) result.remarks = remarks;
+    if (shiftId != null) result.shiftId = shiftId;
     return result;
   }
 
@@ -694,6 +720,7 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
     ..aE<$0.LeaveStatus>(7, _omitFieldNames ? '' : 'rangeStatus',
         enumValues: $0.LeaveStatus.values)
     ..aOS(8, _omitFieldNames ? '' : 'remarks')
+    ..aOS(9, _omitFieldNames ? '' : 'shiftId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -789,6 +816,15 @@ class GetLeaveDetailsResponse extends $pb.GeneratedMessage {
   $core.bool hasRemarks() => $_has(7);
   @$pb.TagNumber(8)
   void clearRemarks() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get shiftId => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set shiftId($core.String value) => $_setString(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasShiftId() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearShiftId() => $_clearField(9);
 }
 
 class UpdateLeaveRequest extends $pb.GeneratedMessage {

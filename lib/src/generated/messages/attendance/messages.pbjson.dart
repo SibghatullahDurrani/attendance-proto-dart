@@ -1630,3 +1630,53 @@ final $typed_data.Uint8List shiftOfAttendanceMonthDescriptor = $convert.base64De
     'a0luSG91chImCg9jaGVja19pbl9taW51dGUYBCABKAVSDWNoZWNrSW5NaW51dGUSJAoOY2hlY2'
     'tfb3V0X2hvdXIYBSABKAVSDGNoZWNrT3V0SG91chIoChBjaGVja19vdXRfbWludXRlGAYgASgF'
     'Ug5jaGVja091dE1pbnV0ZQ==');
+
+@$core.Deprecated('Use getUserShiftRegistrationsRequestDescriptor instead')
+const GetUserShiftRegistrationsRequest$json = {
+  '1': 'GetUserShiftRegistrationsRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+  ],
+};
+
+/// Descriptor for `GetUserShiftRegistrationsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserShiftRegistrationsRequestDescriptor =
+    $convert.base64Decode(
+        'CiBHZXRVc2VyU2hpZnRSZWdpc3RyYXRpb25zUmVxdWVzdBIXCgd1c2VyX2lkGAEgASgJUgZ1c2'
+        'VySWQ=');
+
+@$core.Deprecated('Use getUserShiftRegistrationsResponseDescriptor instead')
+const GetUserShiftRegistrationsResponse$json = {
+  '1': 'GetUserShiftRegistrationsResponse',
+  '2': [
+    {
+      '1': 'shift_registrations',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.ShiftRegistration',
+      '10': 'shiftRegistrations'
+    },
+  ],
+};
+
+/// Descriptor for `GetUserShiftRegistrationsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserShiftRegistrationsResponseDescriptor =
+    $convert.base64Decode(
+        'CiFHZXRVc2VyU2hpZnRSZWdpc3RyYXRpb25zUmVzcG9uc2USVwoTc2hpZnRfcmVnaXN0cmF0aW'
+        '9ucxgBIAMoCzImLmF0dGVuZGFuY2VfbWVzc2FnZXMuU2hpZnRSZWdpc3RyYXRpb25SEnNoaWZ0'
+        'UmVnaXN0cmF0aW9ucw==');
+
+@$core.Deprecated('Use shiftRegistrationDescriptor instead')
+const ShiftRegistration$json = {
+  '1': 'ShiftRegistration',
+  '2': [
+    {'1': 'shift_id', '3': 1, '4': 1, '5': 9, '10': 'shiftId'},
+    {'1': 'shift_name', '3': 2, '4': 1, '5': 9, '10': 'shiftName'},
+  ],
+};
+
+/// Descriptor for `ShiftRegistration`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List shiftRegistrationDescriptor = $convert.base64Decode(
+    'ChFTaGlmdFJlZ2lzdHJhdGlvbhIZCghzaGlmdF9pZBgBIAEoCVIHc2hpZnRJZBIdCgpzaGlmdF'
+    '9uYW1lGAIgASgJUglzaGlmdE5hbWU=');

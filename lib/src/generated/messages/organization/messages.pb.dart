@@ -178,6 +178,7 @@ class CreateSubOrganizationRequest extends $pb.GeneratedMessage {
     $core.String? city,
     $core.String? address,
     $core.String? timeZone,
+    $core.String? organizationId,
   }) {
     final result = create();
     if (subOrganizationName != null)
@@ -185,6 +186,7 @@ class CreateSubOrganizationRequest extends $pb.GeneratedMessage {
     if (city != null) result.city = city;
     if (address != null) result.address = address;
     if (timeZone != null) result.timeZone = timeZone;
+    if (organizationId != null) result.organizationId = organizationId;
     return result;
   }
 
@@ -206,6 +208,7 @@ class CreateSubOrganizationRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'city')
     ..aOS(3, _omitFieldNames ? '' : 'address')
     ..aOS(4, _omitFieldNames ? '' : 'timeZone')
+    ..aOS(5, _omitFieldNames ? '' : 'organizationId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -267,6 +270,15 @@ class CreateSubOrganizationRequest extends $pb.GeneratedMessage {
   $core.bool hasTimeZone() => $_has(3);
   @$pb.TagNumber(4)
   void clearTimeZone() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get organizationId => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set organizationId($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasOrganizationId() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearOrganizationId() => $_clearField(5);
 }
 
 class CreateSubOrganizationResponse extends $pb.GeneratedMessage {
@@ -327,6 +339,341 @@ class CreateSubOrganizationResponse extends $pb.GeneratedMessage {
   $core.bool hasSubOrganizationId() => $_has(0);
   @$pb.TagNumber(1)
   void clearSubOrganizationId() => $_clearField(1);
+}
+
+class ListAllSubOrganizationsRequest extends $pb.GeneratedMessage {
+  factory ListAllSubOrganizationsRequest({
+    $0.PaginationRequest? pagination,
+    $core.String? subOrganizationName,
+    $core.String? city,
+    $core.String? address,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (subOrganizationName != null)
+      result.subOrganizationName = subOrganizationName;
+    if (city != null) result.city = city;
+    if (address != null) result.address = address;
+    return result;
+  }
+
+  ListAllSubOrganizationsRequest._();
+
+  factory ListAllSubOrganizationsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListAllSubOrganizationsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAllSubOrganizationsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'organization_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'subOrganizationName')
+    ..aOS(3, _omitFieldNames ? '' : 'city')
+    ..aOS(4, _omitFieldNames ? '' : 'address')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAllSubOrganizationsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAllSubOrganizationsRequest copyWith(
+          void Function(ListAllSubOrganizationsRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListAllSubOrganizationsRequest))
+          as ListAllSubOrganizationsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListAllSubOrganizationsRequest create() =>
+      ListAllSubOrganizationsRequest._();
+  @$core.override
+  ListAllSubOrganizationsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListAllSubOrganizationsRequest> createRepeated() =>
+      $pb.PbList<ListAllSubOrganizationsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListAllSubOrganizationsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAllSubOrganizationsRequest>(create);
+  static ListAllSubOrganizationsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get subOrganizationName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set subOrganizationName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSubOrganizationName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSubOrganizationName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get city => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set city($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasCity() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCity() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get address => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set address($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasAddress() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAddress() => $_clearField(4);
+}
+
+class ListAllSubOrganizationsResponse extends $pb.GeneratedMessage {
+  factory ListAllSubOrganizationsResponse({
+    $core.Iterable<SubOrganization>? subOrganizations,
+    $0.PaginationResponse? pagination,
+  }) {
+    final result = create();
+    if (subOrganizations != null)
+      result.subOrganizations.addAll(subOrganizations);
+    if (pagination != null) result.pagination = pagination;
+    return result;
+  }
+
+  ListAllSubOrganizationsResponse._();
+
+  factory ListAllSubOrganizationsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListAllSubOrganizationsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAllSubOrganizationsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'organization_messages'),
+      createEmptyInstance: create)
+    ..pPM<SubOrganization>(1, _omitFieldNames ? '' : 'subOrganizations',
+        subBuilder: SubOrganization.create)
+    ..aOM<$0.PaginationResponse>(2, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationResponse.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAllSubOrganizationsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAllSubOrganizationsResponse copyWith(
+          void Function(ListAllSubOrganizationsResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as ListAllSubOrganizationsResponse))
+          as ListAllSubOrganizationsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListAllSubOrganizationsResponse create() =>
+      ListAllSubOrganizationsResponse._();
+  @$core.override
+  ListAllSubOrganizationsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListAllSubOrganizationsResponse> createRepeated() =>
+      $pb.PbList<ListAllSubOrganizationsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListAllSubOrganizationsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAllSubOrganizationsResponse>(
+          create);
+  static ListAllSubOrganizationsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<SubOrganization> get subOrganizations => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $0.PaginationResponse get pagination => $_getN(1);
+  @$pb.TagNumber(2)
+  set pagination($0.PaginationResponse value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasPagination() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPagination() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $0.PaginationResponse ensurePagination() => $_ensure(1);
+}
+
+class SubOrganization extends $pb.GeneratedMessage {
+  factory SubOrganization({
+    $core.String? subOrganizationId,
+    $core.String? subOrganizationName,
+    $1.Timestamp? createdAt,
+    $1.Timestamp? modifiedAt,
+    $core.String? city,
+    $core.String? address,
+    $core.String? timeZone,
+    $core.int? subOrganizationEmployeesCount,
+    $core.int? subOrganizationAdminCount,
+  }) {
+    final result = create();
+    if (subOrganizationId != null) result.subOrganizationId = subOrganizationId;
+    if (subOrganizationName != null)
+      result.subOrganizationName = subOrganizationName;
+    if (createdAt != null) result.createdAt = createdAt;
+    if (modifiedAt != null) result.modifiedAt = modifiedAt;
+    if (city != null) result.city = city;
+    if (address != null) result.address = address;
+    if (timeZone != null) result.timeZone = timeZone;
+    if (subOrganizationEmployeesCount != null)
+      result.subOrganizationEmployeesCount = subOrganizationEmployeesCount;
+    if (subOrganizationAdminCount != null)
+      result.subOrganizationAdminCount = subOrganizationAdminCount;
+    return result;
+  }
+
+  SubOrganization._();
+
+  factory SubOrganization.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SubOrganization.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SubOrganization',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'organization_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'subOrganizationId')
+    ..aOS(2, _omitFieldNames ? '' : 'subOrganizationName')
+    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'createdAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'modifiedAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOS(5, _omitFieldNames ? '' : 'city')
+    ..aOS(6, _omitFieldNames ? '' : 'address')
+    ..aOS(7, _omitFieldNames ? '' : 'timeZone')
+    ..aI(8, _omitFieldNames ? '' : 'subOrganizationEmployeesCount')
+    ..aI(9, _omitFieldNames ? '' : 'subOrganizationAdminCount')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SubOrganization clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SubOrganization copyWith(void Function(SubOrganization) updates) =>
+      super.copyWith((message) => updates(message as SubOrganization))
+          as SubOrganization;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SubOrganization create() => SubOrganization._();
+  @$core.override
+  SubOrganization createEmptyInstance() => create();
+  static $pb.PbList<SubOrganization> createRepeated() =>
+      $pb.PbList<SubOrganization>();
+  @$core.pragma('dart2js:noInline')
+  static SubOrganization getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SubOrganization>(create);
+  static SubOrganization? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get subOrganizationId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set subOrganizationId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSubOrganizationId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSubOrganizationId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get subOrganizationName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set subOrganizationName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSubOrganizationName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSubOrganizationName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $1.Timestamp get createdAt => $_getN(2);
+  @$pb.TagNumber(3)
+  set createdAt($1.Timestamp value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasCreatedAt() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCreatedAt() => $_clearField(3);
+  @$pb.TagNumber(3)
+  $1.Timestamp ensureCreatedAt() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $1.Timestamp get modifiedAt => $_getN(3);
+  @$pb.TagNumber(4)
+  set modifiedAt($1.Timestamp value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasModifiedAt() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearModifiedAt() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $1.Timestamp ensureModifiedAt() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.String get city => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set city($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasCity() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearCity() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get address => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set address($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasAddress() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearAddress() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get timeZone => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set timeZone($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasTimeZone() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearTimeZone() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.int get subOrganizationEmployeesCount => $_getIZ(7);
+  @$pb.TagNumber(8)
+  set subOrganizationEmployeesCount($core.int value) =>
+      $_setSignedInt32(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasSubOrganizationEmployeesCount() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearSubOrganizationEmployeesCount() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.int get subOrganizationAdminCount => $_getIZ(8);
+  @$pb.TagNumber(9)
+  set subOrganizationAdminCount($core.int value) => $_setSignedInt32(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasSubOrganizationAdminCount() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearSubOrganizationAdminCount() => $_clearField(9);
 }
 
 class CreateOrganizationDepartmentRequest extends $pb.GeneratedMessage {
@@ -1833,10 +2180,12 @@ class GetOrganizationIdResponse extends $pb.GeneratedMessage {
 
 class GetSubOrganizationIdRequest extends $pb.GeneratedMessage {
   factory GetSubOrganizationIdRequest({
-    $core.String? employeeId,
+    $core.String? userId,
+    $0.Role? userRole,
   }) {
     final result = create();
-    if (employeeId != null) result.employeeId = employeeId;
+    if (userId != null) result.userId = userId;
+    if (userRole != null) result.userRole = userRole;
     return result;
   }
 
@@ -1854,7 +2203,9 @@ class GetSubOrganizationIdRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'organization_messages'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'employeeId')
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..aE<$0.Role>(2, _omitFieldNames ? '' : 'userRole',
+        enumValues: $0.Role.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1882,13 +2233,22 @@ class GetSubOrganizationIdRequest extends $pb.GeneratedMessage {
   static GetSubOrganizationIdRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get employeeId => $_getSZ(0);
+  $core.String get userId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set employeeId($core.String value) => $_setString(0, value);
+  set userId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasEmployeeId() => $_has(0);
+  $core.bool hasUserId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEmployeeId() => $_clearField(1);
+  void clearUserId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.Role get userRole => $_getN(1);
+  @$pb.TagNumber(2)
+  set userRole($0.Role value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUserRole() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUserRole() => $_clearField(2);
 }
 
 class GetSubOrganizationIdResponse extends $pb.GeneratedMessage {
