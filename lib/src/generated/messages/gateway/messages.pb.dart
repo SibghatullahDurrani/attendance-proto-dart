@@ -4902,6 +4902,7 @@ class InstitutionLeaves extends $pb.GeneratedMessage {
     $core.String? userThumbnailUrl,
     $1.Timestamp? thumbnailUpdatedAt,
     $1.Timestamp? thumbnailExpiresAt,
+    $core.String? shiftId,
   }) {
     final result = create();
     if (leaveId != null) result.leaveId = leaveId;
@@ -4927,6 +4928,7 @@ class InstitutionLeaves extends $pb.GeneratedMessage {
       result.thumbnailUpdatedAt = thumbnailUpdatedAt;
     if (thumbnailExpiresAt != null)
       result.thumbnailExpiresAt = thumbnailExpiresAt;
+    if (shiftId != null) result.shiftId = shiftId;
     return result;
   }
 
@@ -4969,6 +4971,7 @@ class InstitutionLeaves extends $pb.GeneratedMessage {
         subBuilder: $1.Timestamp.create)
     ..aOM<$1.Timestamp>(17, _omitFieldNames ? '' : 'thumbnailExpiresAt',
         subBuilder: $1.Timestamp.create)
+    ..aOS(18, _omitFieldNames ? '' : 'shiftId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -5149,6 +5152,15 @@ class InstitutionLeaves extends $pb.GeneratedMessage {
   void clearThumbnailExpiresAt() => $_clearField(17);
   @$pb.TagNumber(17)
   $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(16);
+
+  @$pb.TagNumber(18)
+  $core.String get shiftId => $_getSZ(17);
+  @$pb.TagNumber(18)
+  set shiftId($core.String value) => $_setString(17, value);
+  @$pb.TagNumber(18)
+  $core.bool hasShiftId() => $_has(17);
+  @$pb.TagNumber(18)
+  void clearShiftId() => $_clearField(18);
 }
 
 class CanRequestLeaveRequest extends $pb.GeneratedMessage {

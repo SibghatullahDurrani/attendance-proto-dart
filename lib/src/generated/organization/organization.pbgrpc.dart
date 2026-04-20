@@ -116,6 +116,15 @@ class OrganizationServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listAllOrganizations, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetOrganizationSelectionMenuItemsResponse>
+      getOrganizationSelectionMenuItems(
+    $0.GetOrganizationSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getOrganizationSelectionMenuItems, request,
+        options: options);
+  }
+
   $grpc.ResponseFuture<$0.ListAllSubOrganizationsResponse>
       listAllSubOrganizations(
     $0.ListAllSubOrganizationsRequest request, {
@@ -141,11 +150,11 @@ class OrganizationServiceClient extends $grpc.Client {
         options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetOrganizationIdResponse> getSchoolTimezone(
+  $grpc.ResponseFuture<$0.GetOrganizationIdResponse> getOrganizationId(
     $0.GetOrganizationIdRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$getSchoolTimezone, request, options: options);
+    return $createUnaryCall(_$getOrganizationId, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetSubOrganizationIdResponse> getSubOrganizationId(
@@ -232,6 +241,13 @@ class OrganizationServiceClient extends $grpc.Client {
       '/organization.OrganizationService/ListAllOrganizations',
       ($0.ListAllOrganizationsRequest value) => value.writeToBuffer(),
       $0.ListAllOrganizationsResponse.fromBuffer);
+  static final _$getOrganizationSelectionMenuItems = $grpc.ClientMethod<
+          $0.GetOrganizationSelectionMenuItemsRequest,
+          $0.GetOrganizationSelectionMenuItemsResponse>(
+      '/organization.OrganizationService/GetOrganizationSelectionMenuItems',
+      ($0.GetOrganizationSelectionMenuItemsRequest value) =>
+          value.writeToBuffer(),
+      $0.GetOrganizationSelectionMenuItemsResponse.fromBuffer);
   static final _$listAllSubOrganizations = $grpc.ClientMethod<
           $0.ListAllSubOrganizationsRequest,
           $0.ListAllSubOrganizationsResponse>(
@@ -248,9 +264,9 @@ class OrganizationServiceClient extends $grpc.Client {
       '/organization.OrganizationService/GetSubOrganizationName',
       ($0.GetSubOrganizationNameRequest value) => value.writeToBuffer(),
       $0.GetSubOrganizationNameResponse.fromBuffer);
-  static final _$getSchoolTimezone = $grpc.ClientMethod<
+  static final _$getOrganizationId = $grpc.ClientMethod<
           $0.GetOrganizationIdRequest, $0.GetOrganizationIdResponse>(
-      '/organization.OrganizationService/GetSchoolTimezone',
+      '/organization.OrganizationService/GetOrganizationId',
       ($0.GetOrganizationIdRequest value) => value.writeToBuffer(),
       $0.GetOrganizationIdResponse.fromBuffer);
   static final _$getSubOrganizationId = $grpc.ClientMethod<
@@ -371,6 +387,16 @@ abstract class OrganizationServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ListAllOrganizationsRequest.fromBuffer(value),
         ($0.ListAllOrganizationsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetOrganizationSelectionMenuItemsRequest,
+            $0.GetOrganizationSelectionMenuItemsResponse>(
+        'GetOrganizationSelectionMenuItems',
+        getOrganizationSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetOrganizationSelectionMenuItemsRequest.fromBuffer(value),
+        ($0.GetOrganizationSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.ListAllSubOrganizationsRequest,
             $0.ListAllSubOrganizationsResponse>(
         'ListAllSubOrganizations',
@@ -400,8 +426,8 @@ abstract class OrganizationServiceBase extends $grpc.Service {
         ($0.GetSubOrganizationNameResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetOrganizationIdRequest,
             $0.GetOrganizationIdResponse>(
-        'GetSchoolTimezone',
-        getSchoolTimezone_Pre,
+        'GetOrganizationId',
+        getOrganizationId_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
@@ -535,6 +561,18 @@ abstract class OrganizationServiceBase extends $grpc.Service {
   $async.Future<$0.ListAllOrganizationsResponse> listAllOrganizations(
       $grpc.ServiceCall call, $0.ListAllOrganizationsRequest request);
 
+  $async.Future<$0.GetOrganizationSelectionMenuItemsResponse>
+      getOrganizationSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetOrganizationSelectionMenuItemsRequest>
+              $request) async {
+    return getOrganizationSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$0.GetOrganizationSelectionMenuItemsResponse>
+      getOrganizationSelectionMenuItems($grpc.ServiceCall call,
+          $0.GetOrganizationSelectionMenuItemsRequest request);
+
   $async.Future<$0.ListAllSubOrganizationsResponse> listAllSubOrganizations_Pre(
       $grpc.ServiceCall $call,
       $async.Future<$0.ListAllSubOrganizationsRequest> $request) async {
@@ -562,13 +600,13 @@ abstract class OrganizationServiceBase extends $grpc.Service {
   $async.Future<$0.GetSubOrganizationNameResponse> getSubOrganizationName(
       $grpc.ServiceCall call, $0.GetSubOrganizationNameRequest request);
 
-  $async.Future<$0.GetOrganizationIdResponse> getSchoolTimezone_Pre(
+  $async.Future<$0.GetOrganizationIdResponse> getOrganizationId_Pre(
       $grpc.ServiceCall $call,
       $async.Future<$0.GetOrganizationIdRequest> $request) async {
-    return getSchoolTimezone($call, await $request);
+    return getOrganizationId($call, await $request);
   }
 
-  $async.Future<$0.GetOrganizationIdResponse> getSchoolTimezone(
+  $async.Future<$0.GetOrganizationIdResponse> getOrganizationId(
       $grpc.ServiceCall call, $0.GetOrganizationIdRequest request);
 
   $async.Future<$0.GetSubOrganizationIdResponse> getSubOrganizationId_Pre(

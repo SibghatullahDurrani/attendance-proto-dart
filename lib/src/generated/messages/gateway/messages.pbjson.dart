@@ -2195,6 +2195,7 @@ const InstitutionLeaves$json = {
       '10': 'thumbnailExpiresAt',
       '17': true
     },
+    {'1': 'shift_id', '3': 18, '4': 1, '5': 9, '10': 'shiftId'},
   ],
   '8': [
     {'1': '_second_name'},
@@ -2230,12 +2231,12 @@ final $typed_data.Uint8List institutionLeavesDescriptor = $convert.base64Decode(
     'Ym5haWxfdXJsGA8gASgJSAhSEHVzZXJUaHVtYm5haWxVcmyIAQESUQoUdGh1bWJuYWlsX3VwZG'
     'F0ZWRfYXQYECABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAlSEnRodW1ibmFpbFVw'
     'ZGF0ZWRBdIgBARJRChR0aHVtYm5haWxfZXhwaXJlc19hdBgRIAEoCzIaLmdvb2dsZS5wcm90b2'
-    'J1Zi5UaW1lc3RhbXBIClISdGh1bWJuYWlsRXhwaXJlc0F0iAEBQg4KDF9zZWNvbmRfbmFtZUIY'
-    'ChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQhsKGV9sYXN0X2F0dGVuZGVkX2NsYXNzX25hbWVCHQ'
-    'obX2xhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1lQh0KG19sYXN0X2F0dGVuZGVkX3Nlc3Npb25f'
-    'bmFtZUINCgtfc3RhcnRfZGF0ZUILCglfZW5kX2RhdGVCDwoNX3JhbmdlX3N0YXR1c0IVChNfdX'
-    'Nlcl90aHVtYm5haWxfdXJsQhcKFV90aHVtYm5haWxfdXBkYXRlZF9hdEIXChVfdGh1bWJuYWls'
-    'X2V4cGlyZXNfYXQ=');
+    'J1Zi5UaW1lc3RhbXBIClISdGh1bWJuYWlsRXhwaXJlc0F0iAEBEhkKCHNoaWZ0X2lkGBIgASgJ'
+    'UgdzaGlmdElkQg4KDF9zZWNvbmRfbmFtZUIYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQhsKGV'
+    '9sYXN0X2F0dGVuZGVkX2NsYXNzX25hbWVCHQobX2xhc3RfYXR0ZW5kZWRfc2VjdGlvbl9uYW1l'
+    'Qh0KG19sYXN0X2F0dGVuZGVkX3Nlc3Npb25fbmFtZUINCgtfc3RhcnRfZGF0ZUILCglfZW5kX2'
+    'RhdGVCDwoNX3JhbmdlX3N0YXR1c0IVChNfdXNlcl90aHVtYm5haWxfdXJsQhcKFV90aHVtYm5h'
+    'aWxfdXBkYXRlZF9hdEIXChVfdGh1bWJuYWlsX2V4cGlyZXNfYXQ=');
 
 @$core.Deprecated('Use canRequestLeaveRequestDescriptor instead')
 const CanRequestLeaveRequest$json = {

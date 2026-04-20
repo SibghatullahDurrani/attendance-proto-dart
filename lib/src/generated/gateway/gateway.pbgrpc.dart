@@ -374,7 +374,7 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getBulkParentName, request, options: options);
   }
 
-  /// Frontend needs changing
+  /// Leave RPCs
   $grpc.ResponseFuture<$4.ListUserLeavesResponse> listUserLeaves(
     $4.ListUserLeavesRequest request, {
     $grpc.CallOptions? options,
@@ -382,7 +382,6 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listUserLeaves, request, options: options);
   }
 
-  /// Frontend needs changing
   $grpc.ResponseFuture<$4.CreateLeaveResponse> createLeave(
     $4.CreateLeaveRequest request, {
     $grpc.CallOptions? options,
@@ -485,7 +484,6 @@ class GatewayServiceClient extends $grpc.Client {
         .single;
   }
 
-  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListStudentsOfSchoolResponse> listStudentsOfSchool(
     $5.ListStudentsOfSchoolRequest request, {
     $grpc.CallOptions? options,
@@ -500,7 +498,6 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listParentsOfSchool, request, options: options);
   }
 
-  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListTeachersOfSchoolResponse> listTeachersOfSchool(
     $5.ListTeachersOfSchoolRequest request, {
     $grpc.CallOptions? options,
@@ -508,7 +505,6 @@ class GatewayServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listTeachersOfSchool, request, options: options);
   }
 
-  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListEmployeesOfSchoolResponse> listEmployeesOfSchool(
     $5.ListEmployeesOfSchoolRequest request, {
     $grpc.CallOptions? options,

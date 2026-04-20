@@ -671,15 +671,23 @@ final $typed_data.Uint8List getSubOrganizationNameResponseDescriptor =
 const GetOrganizationIdRequest$json = {
   '1': 'GetOrganizationIdRequest',
   '2': [
-    {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {
+      '1': 'user_role',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.Role',
+      '10': 'userRole'
+    },
   ],
 };
 
 /// Descriptor for `GetOrganizationIdRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getOrganizationIdRequestDescriptor =
     $convert.base64Decode(
-        'ChhHZXRPcmdhbml6YXRpb25JZFJlcXVlc3QSHwoLZW1wbG95ZWVfaWQYASABKAlSCmVtcGxveW'
-        'VlSWQ=');
+        'ChhHZXRPcmdhbml6YXRpb25JZFJlcXVlc3QSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEjIKCX'
+        'VzZXJfcm9sZRgCIAEoDjIVLmNvbW1vbl9tZXNzYWdlcy5Sb2xlUgh1c2VyUm9sZQ==');
 
 @$core.Deprecated('Use getOrganizationIdResponseDescriptor instead')
 const GetOrganizationIdResponse$json = {
@@ -798,3 +806,91 @@ final $typed_data.Uint8List getSubOrganizationTimezoneResponseDescriptor =
     $convert.base64Decode(
         'CiJHZXRTdWJPcmdhbml6YXRpb25UaW1lem9uZVJlc3BvbnNlEhoKCHRpbWV6b25lGAEgASgJUg'
         'h0aW1lem9uZQ==');
+
+@$core.Deprecated(
+    'Use getOrganizationSelectionMenuItemsRequestDescriptor instead')
+const GetOrganizationSelectionMenuItemsRequest$json = {
+  '1': 'GetOrganizationSelectionMenuItemsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {
+      '1': 'organization_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'organizationName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_organization_name'},
+  ],
+};
+
+/// Descriptor for `GetOrganizationSelectionMenuItemsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getOrganizationSelectionMenuItemsRequestDescriptor =
+    $convert.base64Decode(
+        'CihHZXRPcmdhbml6YXRpb25TZWxlY3Rpb25NZW51SXRlbXNSZXF1ZXN0EkIKCnBhZ2luYXRpb2'
+        '4YASABKAsyIi5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24S'
+        'MAoRb3JnYW5pemF0aW9uX25hbWUYAiABKAlIAFIQb3JnYW5pemF0aW9uTmFtZYgBAUIUChJfb3'
+        'JnYW5pemF0aW9uX25hbWU=');
+
+@$core.Deprecated(
+    'Use getOrganizationSelectionMenuItemsResponseDescriptor instead')
+const GetOrganizationSelectionMenuItemsResponse$json = {
+  '1': 'GetOrganizationSelectionMenuItemsResponse',
+  '2': [
+    {
+      '1': 'organization_menu_item',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.organization_messages.OrganizationMenuItem',
+      '10': 'organizationMenuItem'
+    },
+    {
+      '1': 'pagination',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+  ],
+};
+
+/// Descriptor for `GetOrganizationSelectionMenuItemsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getOrganizationSelectionMenuItemsResponseDescriptor = $convert.base64Decode(
+        'CilHZXRPcmdhbml6YXRpb25TZWxlY3Rpb25NZW51SXRlbXNSZXNwb25zZRJhChZvcmdhbml6YX'
+        'Rpb25fbWVudV9pdGVtGAEgAygLMisub3JnYW5pemF0aW9uX21lc3NhZ2VzLk9yZ2FuaXphdGlv'
+        'bk1lbnVJdGVtUhRvcmdhbml6YXRpb25NZW51SXRlbRJDCgpwYWdpbmF0aW9uGAIgASgLMiMuY2'
+        '9tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbg==');
+
+@$core.Deprecated('Use organizationMenuItemDescriptor instead')
+const OrganizationMenuItem$json = {
+  '1': 'OrganizationMenuItem',
+  '2': [
+    {'1': 'organization_id', '3': 1, '4': 1, '5': 9, '10': 'organizationId'},
+    {
+      '1': 'organization_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'organizationName'
+    },
+  ],
+};
+
+/// Descriptor for `OrganizationMenuItem`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List organizationMenuItemDescriptor = $convert.base64Decode(
+    'ChRPcmdhbml6YXRpb25NZW51SXRlbRInCg9vcmdhbml6YXRpb25faWQYASABKAlSDm9yZ2FuaX'
+    'phdGlvbklkEisKEW9yZ2FuaXphdGlvbl9uYW1lGAIgASgJUhBvcmdhbml6YXRpb25OYW1l');

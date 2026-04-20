@@ -2064,10 +2064,12 @@ class GetSubOrganizationNameResponse extends $pb.GeneratedMessage {
 
 class GetOrganizationIdRequest extends $pb.GeneratedMessage {
   factory GetOrganizationIdRequest({
-    $core.String? employeeId,
+    $core.String? userId,
+    $0.Role? userRole,
   }) {
     final result = create();
-    if (employeeId != null) result.employeeId = employeeId;
+    if (userId != null) result.userId = userId;
+    if (userRole != null) result.userRole = userRole;
     return result;
   }
 
@@ -2085,7 +2087,9 @@ class GetOrganizationIdRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'organization_messages'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'employeeId')
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..aE<$0.Role>(2, _omitFieldNames ? '' : 'userRole',
+        enumValues: $0.Role.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -2111,13 +2115,22 @@ class GetOrganizationIdRequest extends $pb.GeneratedMessage {
   static GetOrganizationIdRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get employeeId => $_getSZ(0);
+  $core.String get userId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set employeeId($core.String value) => $_setString(0, value);
+  set userId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasEmployeeId() => $_has(0);
+  $core.bool hasUserId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEmployeeId() => $_clearField(1);
+  void clearUserId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.Role get userRole => $_getN(1);
+  @$pb.TagNumber(2)
+  set userRole($0.Role value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUserRole() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUserRole() => $_clearField(2);
 }
 
 class GetOrganizationIdResponse extends $pb.GeneratedMessage {
@@ -2554,6 +2567,228 @@ class GetSubOrganizationTimezoneResponse extends $pb.GeneratedMessage {
   $core.bool hasTimezone() => $_has(0);
   @$pb.TagNumber(1)
   void clearTimezone() => $_clearField(1);
+}
+
+class GetOrganizationSelectionMenuItemsRequest extends $pb.GeneratedMessage {
+  factory GetOrganizationSelectionMenuItemsRequest({
+    $0.PaginationRequest? pagination,
+    $core.String? organizationName,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (organizationName != null) result.organizationName = organizationName;
+    return result;
+  }
+
+  GetOrganizationSelectionMenuItemsRequest._();
+
+  factory GetOrganizationSelectionMenuItemsRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetOrganizationSelectionMenuItemsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetOrganizationSelectionMenuItemsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'organization_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'organizationName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetOrganizationSelectionMenuItemsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetOrganizationSelectionMenuItemsRequest copyWith(
+          void Function(GetOrganizationSelectionMenuItemsRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetOrganizationSelectionMenuItemsRequest))
+          as GetOrganizationSelectionMenuItemsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetOrganizationSelectionMenuItemsRequest create() =>
+      GetOrganizationSelectionMenuItemsRequest._();
+  @$core.override
+  GetOrganizationSelectionMenuItemsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetOrganizationSelectionMenuItemsRequest>
+      createRepeated() =>
+          $pb.PbList<GetOrganizationSelectionMenuItemsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetOrganizationSelectionMenuItemsRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetOrganizationSelectionMenuItemsRequest>(create);
+  static GetOrganizationSelectionMenuItemsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get organizationName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set organizationName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasOrganizationName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearOrganizationName() => $_clearField(2);
+}
+
+class GetOrganizationSelectionMenuItemsResponse extends $pb.GeneratedMessage {
+  factory GetOrganizationSelectionMenuItemsResponse({
+    $core.Iterable<OrganizationMenuItem>? organizationMenuItem,
+    $0.PaginationResponse? pagination,
+  }) {
+    final result = create();
+    if (organizationMenuItem != null)
+      result.organizationMenuItem.addAll(organizationMenuItem);
+    if (pagination != null) result.pagination = pagination;
+    return result;
+  }
+
+  GetOrganizationSelectionMenuItemsResponse._();
+
+  factory GetOrganizationSelectionMenuItemsResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetOrganizationSelectionMenuItemsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetOrganizationSelectionMenuItemsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'organization_messages'),
+      createEmptyInstance: create)
+    ..pPM<OrganizationMenuItem>(
+        1, _omitFieldNames ? '' : 'organizationMenuItem',
+        subBuilder: OrganizationMenuItem.create)
+    ..aOM<$0.PaginationResponse>(2, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationResponse.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetOrganizationSelectionMenuItemsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetOrganizationSelectionMenuItemsResponse copyWith(
+          void Function(GetOrganizationSelectionMenuItemsResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetOrganizationSelectionMenuItemsResponse))
+          as GetOrganizationSelectionMenuItemsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetOrganizationSelectionMenuItemsResponse create() =>
+      GetOrganizationSelectionMenuItemsResponse._();
+  @$core.override
+  GetOrganizationSelectionMenuItemsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetOrganizationSelectionMenuItemsResponse>
+      createRepeated() =>
+          $pb.PbList<GetOrganizationSelectionMenuItemsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetOrganizationSelectionMenuItemsResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetOrganizationSelectionMenuItemsResponse>(create);
+  static GetOrganizationSelectionMenuItemsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<OrganizationMenuItem> get organizationMenuItem => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $0.PaginationResponse get pagination => $_getN(1);
+  @$pb.TagNumber(2)
+  set pagination($0.PaginationResponse value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasPagination() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPagination() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $0.PaginationResponse ensurePagination() => $_ensure(1);
+}
+
+class OrganizationMenuItem extends $pb.GeneratedMessage {
+  factory OrganizationMenuItem({
+    $core.String? organizationId,
+    $core.String? organizationName,
+  }) {
+    final result = create();
+    if (organizationId != null) result.organizationId = organizationId;
+    if (organizationName != null) result.organizationName = organizationName;
+    return result;
+  }
+
+  OrganizationMenuItem._();
+
+  factory OrganizationMenuItem.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory OrganizationMenuItem.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'OrganizationMenuItem',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'organization_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'organizationId')
+    ..aOS(2, _omitFieldNames ? '' : 'organizationName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OrganizationMenuItem clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OrganizationMenuItem copyWith(void Function(OrganizationMenuItem) updates) =>
+      super.copyWith((message) => updates(message as OrganizationMenuItem))
+          as OrganizationMenuItem;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static OrganizationMenuItem create() => OrganizationMenuItem._();
+  @$core.override
+  OrganizationMenuItem createEmptyInstance() => create();
+  static $pb.PbList<OrganizationMenuItem> createRepeated() =>
+      $pb.PbList<OrganizationMenuItem>();
+  @$core.pragma('dart2js:noInline')
+  static OrganizationMenuItem getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<OrganizationMenuItem>(create);
+  static OrganizationMenuItem? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get organizationId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set organizationId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasOrganizationId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearOrganizationId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get organizationName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set organizationName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasOrganizationName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearOrganizationName() => $_clearField(2);
 }
 
 const $core.bool _omitFieldNames =
