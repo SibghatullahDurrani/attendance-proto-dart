@@ -88,3 +88,5 @@ export 'src/generated/messages/media/messages.pbjson.dart';
 export 'src/generated/messages/saga/messages.pb.dart';
 export 'src/generated/messages/saga/messages.pbenum.dart';
 export 'src/generated/messages/saga/messages.pbjson.dart';
+
+export 'src/generated/messages/saga/bulk_registration.pb.dart';
