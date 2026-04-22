@@ -21,6 +21,7 @@ import '../messages/auth/messages.pb.dart' as $0;
 import '../messages/gateway/messages.pb.dart' as $5;
 import '../messages/leave/messages.pb.dart' as $4;
 import '../messages/media/messages.pb.dart' as $6;
+import '../messages/organization/messages.pb.dart' as $9;
 import '../messages/saga/bulk_registration.pb.dart' as $8;
 import '../messages/saga/messages.pb.dart' as $7;
 import '../messages/school/messages.pb.dart' as $1;
@@ -539,7 +540,6 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListInstitutionLeavesResponse> listInstitutionLeaves(
     $5.ListInstitutionLeavesRequest request, {
     $grpc.CallOptions? options,
@@ -563,7 +563,6 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListStudentsOfSchoolForShiftAllocationResponse>
       listStudentsOfSchoolForShiftAllocation(
     $5.ListStudentsOfSchoolForShiftAllocationRequest request, {
@@ -573,7 +572,6 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListTeachersOfSchoolForShiftAllocationResponse>
       listTeachersOfSchoolForShiftAllocation(
     $5.ListTeachersOfSchoolForShiftAllocationRequest request, {
@@ -583,7 +581,6 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListEmployeesOfSchoolForShiftAllocationResponse>
       listEmployeesOfSchoolForShiftAllocation(
     $5.ListEmployeesOfSchoolForShiftAllocationRequest request, {
@@ -593,7 +590,6 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// (Changed, modify frontend)
   $grpc.ResponseFuture<$5.ListUsersOfShiftForShiftAllocationResponse>
       listUsersOfShiftForShiftAllocation(
     $5.ListUsersOfShiftForShiftAllocationRequest request, {
@@ -603,7 +599,7 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// (Changed, modify frontend)
+  /// (Changed, modify frontend and backend)
   $grpc.ResponseFuture<$5.GetBatchUsersInfoOfSchoolForLiveFeedResponse>
       getBatchUsersInfoOfSchoolForLiveFeed(
     $5.GetBatchUsersInfoOfSchoolForLiveFeedRequest request, {
@@ -631,12 +627,32 @@ class GatewayServiceClient extends $grpc.Client {
         options: options);
   }
 
-  $grpc.ResponseFuture<$5.ListUserAttendanceReportsResponse>
-      listUserAttendanceReports(
-    $5.ListUserAttendanceReportsRequest request, {
+  /// (Chainged, modify frontend and backend)
+  $grpc.ResponseFuture<$5.ListSchoolAttendanceReportsResponse>
+      listSchoolAttendanceReport(
+    $5.ListSchoolAttendanceReportsRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$listUserAttendanceReports, request,
+    return $createUnaryCall(_$listSchoolAttendanceReport, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$5.ListSubOrganizationAttendanceReportResponse>
+      listSubOrganizationAttendanceReport(
+    $5.ListSubOrganizationAttendanceReportRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listSubOrganizationAttendanceReport, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$5.GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse>
+      getBatchUsersInfoOfSubOrganizationForLiveFeed(
+    $5.GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(
+        _$getBatchUsersInfoOfSubOrganizationForLiveFeed, request,
         options: options);
   }
 
@@ -690,6 +706,80 @@ class GatewayServiceClient extends $grpc.Client {
     return $createStreamingCall(_$uploadBulkRegistrationRowImage, request,
             options: options)
         .single;
+  }
+
+  /// Organization Rpcs
+  $grpc.ResponseFuture<$9.CreateOrganizationResponse> createOrganization(
+    $9.CreateOrganizationRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$createOrganization, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$9.CreateSubOrganizationResponse> createSubOrganization(
+    $9.CreateSubOrganizationRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$createSubOrganization, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$9.ListAllSubOrganizationsResponse>
+      listAllSubOrganizations(
+    $9.ListAllSubOrganizationsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listAllSubOrganizations, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$9.ListAllOrganizationsResponse> listAllOrganizations(
+    $9.ListAllOrganizationsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listAllOrganizations, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$9.GetOrganizationSelectionMenuItemsResponse>
+      getOrganizationSelectionMenuItems(
+    $9.GetOrganizationSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getOrganizationSelectionMenuItems, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$9.CreateOrganizationDepartmentResponse>
+      createOrganizationDepartment(
+    $9.CreateOrganizationDepartmentRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$createOrganizationDepartment, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$9.CreateSubOrganizationDepartmentResponse>
+      createSubOrganizationDepartment(
+    $9.CreateSubOrganizationDepartmentRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$createSubOrganizationDepartment, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$9.ListAllDepartmentsResponse> listAllDepartments(
+    $9.ListAllDepartmentsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listAllDepartments, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$9.GetDepartmentSelectionMenuItemsResponse>
+      getDepartmentSelectionMenuItems(
+    $9.GetDepartmentSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getDepartmentSelectionMenuItems, request,
+        options: options);
   }
 
   // method descriptors
@@ -1098,12 +1188,27 @@ class GatewayServiceClient extends $grpc.Client {
       ($5.ListStudentsOfSchoolForEnrollmentRequest value) =>
           value.writeToBuffer(),
       $5.ListStudentsOfSchoolForEnrollmentResponse.fromBuffer);
-  static final _$listUserAttendanceReports = $grpc.ClientMethod<
-          $5.ListUserAttendanceReportsRequest,
-          $5.ListUserAttendanceReportsResponse>(
-      '/gateway.GatewayService/ListUserAttendanceReports',
-      ($5.ListUserAttendanceReportsRequest value) => value.writeToBuffer(),
-      $5.ListUserAttendanceReportsResponse.fromBuffer);
+  static final _$listSchoolAttendanceReport = $grpc.ClientMethod<
+          $5.ListSchoolAttendanceReportsRequest,
+          $5.ListSchoolAttendanceReportsResponse>(
+      '/gateway.GatewayService/ListSchoolAttendanceReport',
+      ($5.ListSchoolAttendanceReportsRequest value) => value.writeToBuffer(),
+      $5.ListSchoolAttendanceReportsResponse.fromBuffer);
+  static final _$listSubOrganizationAttendanceReport = $grpc.ClientMethod<
+          $5.ListSubOrganizationAttendanceReportRequest,
+          $5.ListSubOrganizationAttendanceReportResponse>(
+      '/gateway.GatewayService/ListSubOrganizationAttendanceReport',
+      ($5.ListSubOrganizationAttendanceReportRequest value) =>
+          value.writeToBuffer(),
+      $5.ListSubOrganizationAttendanceReportResponse.fromBuffer);
+  static final _$getBatchUsersInfoOfSubOrganizationForLiveFeed =
+      $grpc.ClientMethod<
+              $5.GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest,
+              $5.GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse>(
+          '/gateway.GatewayService/GetBatchUsersInfoOfSubOrganizationForLiveFeed',
+          ($5.GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest value) =>
+              value.writeToBuffer(),
+          $5.GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse.fromBuffer);
   static final _$addLeaveAttachment = $grpc.ClientMethod<
           $6.AddLeaveAttachmentRequest, $6.AddLeaveAttachmentResponse>(
       '/gateway.GatewayService/AddLeaveAttachment',
@@ -1135,6 +1240,59 @@ class GatewayServiceClient extends $grpc.Client {
           '/gateway.GatewayService/UploadBulkRegistrationRowImage',
           ($8.UploadRowImageRequest value) => value.writeToBuffer(),
           $8.UploadRowImageResponse.fromBuffer);
+  static final _$createOrganization = $grpc.ClientMethod<
+          $9.CreateOrganizationRequest, $9.CreateOrganizationResponse>(
+      '/gateway.GatewayService/CreateOrganization',
+      ($9.CreateOrganizationRequest value) => value.writeToBuffer(),
+      $9.CreateOrganizationResponse.fromBuffer);
+  static final _$createSubOrganization = $grpc.ClientMethod<
+          $9.CreateSubOrganizationRequest, $9.CreateSubOrganizationResponse>(
+      '/gateway.GatewayService/CreateSubOrganization',
+      ($9.CreateSubOrganizationRequest value) => value.writeToBuffer(),
+      $9.CreateSubOrganizationResponse.fromBuffer);
+  static final _$listAllSubOrganizations = $grpc.ClientMethod<
+          $9.ListAllSubOrganizationsRequest,
+          $9.ListAllSubOrganizationsResponse>(
+      '/gateway.GatewayService/ListAllSubOrganizations',
+      ($9.ListAllSubOrganizationsRequest value) => value.writeToBuffer(),
+      $9.ListAllSubOrganizationsResponse.fromBuffer);
+  static final _$listAllOrganizations = $grpc.ClientMethod<
+          $9.ListAllOrganizationsRequest, $9.ListAllOrganizationsResponse>(
+      '/gateway.GatewayService/ListAllOrganizations',
+      ($9.ListAllOrganizationsRequest value) => value.writeToBuffer(),
+      $9.ListAllOrganizationsResponse.fromBuffer);
+  static final _$getOrganizationSelectionMenuItems = $grpc.ClientMethod<
+          $9.GetOrganizationSelectionMenuItemsRequest,
+          $9.GetOrganizationSelectionMenuItemsResponse>(
+      '/gateway.GatewayService/GetOrganizationSelectionMenuItems',
+      ($9.GetOrganizationSelectionMenuItemsRequest value) =>
+          value.writeToBuffer(),
+      $9.GetOrganizationSelectionMenuItemsResponse.fromBuffer);
+  static final _$createOrganizationDepartment = $grpc.ClientMethod<
+          $9.CreateOrganizationDepartmentRequest,
+          $9.CreateOrganizationDepartmentResponse>(
+      '/gateway.GatewayService/CreateOrganizationDepartment',
+      ($9.CreateOrganizationDepartmentRequest value) => value.writeToBuffer(),
+      $9.CreateOrganizationDepartmentResponse.fromBuffer);
+  static final _$createSubOrganizationDepartment = $grpc.ClientMethod<
+          $9.CreateSubOrganizationDepartmentRequest,
+          $9.CreateSubOrganizationDepartmentResponse>(
+      '/gateway.GatewayService/CreateSubOrganizationDepartment',
+      ($9.CreateSubOrganizationDepartmentRequest value) =>
+          value.writeToBuffer(),
+      $9.CreateSubOrganizationDepartmentResponse.fromBuffer);
+  static final _$listAllDepartments = $grpc.ClientMethod<
+          $9.ListAllDepartmentsRequest, $9.ListAllDepartmentsResponse>(
+      '/gateway.GatewayService/ListAllDepartments',
+      ($9.ListAllDepartmentsRequest value) => value.writeToBuffer(),
+      $9.ListAllDepartmentsResponse.fromBuffer);
+  static final _$getDepartmentSelectionMenuItems = $grpc.ClientMethod<
+          $9.GetDepartmentSelectionMenuItemsRequest,
+          $9.GetDepartmentSelectionMenuItemsResponse>(
+      '/gateway.GatewayService/GetDepartmentSelectionMenuItems',
+      ($9.GetDepartmentSelectionMenuItemsRequest value) =>
+          value.writeToBuffer(),
+      $9.GetDepartmentSelectionMenuItemsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('gateway.GatewayService')
@@ -1819,15 +1977,39 @@ abstract class GatewayServiceBase extends $grpc.Service {
             $5.ListStudentsOfSchoolForEnrollmentRequest.fromBuffer(value),
         ($5.ListStudentsOfSchoolForEnrollmentResponse value) =>
             value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$5.ListUserAttendanceReportsRequest,
-            $5.ListUserAttendanceReportsResponse>(
-        'ListUserAttendanceReports',
-        listUserAttendanceReports_Pre,
+    $addMethod($grpc.ServiceMethod<$5.ListSchoolAttendanceReportsRequest,
+            $5.ListSchoolAttendanceReportsResponse>(
+        'ListSchoolAttendanceReport',
+        listSchoolAttendanceReport_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $5.ListUserAttendanceReportsRequest.fromBuffer(value),
-        ($5.ListUserAttendanceReportsResponse value) => value.writeToBuffer()));
+            $5.ListSchoolAttendanceReportsRequest.fromBuffer(value),
+        ($5.ListSchoolAttendanceReportsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $5.ListSubOrganizationAttendanceReportRequest,
+            $5.ListSubOrganizationAttendanceReportResponse>(
+        'ListSubOrganizationAttendanceReport',
+        listSubOrganizationAttendanceReport_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.ListSubOrganizationAttendanceReportRequest.fromBuffer(value),
+        ($5.ListSubOrganizationAttendanceReportResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $5.GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest,
+            $5.GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse>(
+        'GetBatchUsersInfoOfSubOrganizationForLiveFeed',
+        getBatchUsersInfoOfSubOrganizationForLiveFeed_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $5.GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest.fromBuffer(
+                value),
+        ($5.GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse value) =>
+            value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$6.AddLeaveAttachmentRequest,
             $6.AddLeaveAttachmentResponse>(
         'AddLeaveAttachment',
@@ -1882,6 +2064,91 @@ abstract class GatewayServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $8.UploadRowImageRequest.fromBuffer(value),
         ($8.UploadRowImageResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$9.CreateOrganizationRequest,
+            $9.CreateOrganizationResponse>(
+        'CreateOrganization',
+        createOrganization_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $9.CreateOrganizationRequest.fromBuffer(value),
+        ($9.CreateOrganizationResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$9.CreateSubOrganizationRequest,
+            $9.CreateSubOrganizationResponse>(
+        'CreateSubOrganization',
+        createSubOrganization_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $9.CreateSubOrganizationRequest.fromBuffer(value),
+        ($9.CreateSubOrganizationResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$9.ListAllSubOrganizationsRequest,
+            $9.ListAllSubOrganizationsResponse>(
+        'ListAllSubOrganizations',
+        listAllSubOrganizations_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $9.ListAllSubOrganizationsRequest.fromBuffer(value),
+        ($9.ListAllSubOrganizationsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$9.ListAllOrganizationsRequest,
+            $9.ListAllOrganizationsResponse>(
+        'ListAllOrganizations',
+        listAllOrganizations_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $9.ListAllOrganizationsRequest.fromBuffer(value),
+        ($9.ListAllOrganizationsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$9.GetOrganizationSelectionMenuItemsRequest,
+            $9.GetOrganizationSelectionMenuItemsResponse>(
+        'GetOrganizationSelectionMenuItems',
+        getOrganizationSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $9.GetOrganizationSelectionMenuItemsRequest.fromBuffer(value),
+        ($9.GetOrganizationSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$9.CreateOrganizationDepartmentRequest,
+            $9.CreateOrganizationDepartmentResponse>(
+        'CreateOrganizationDepartment',
+        createOrganizationDepartment_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $9.CreateOrganizationDepartmentRequest.fromBuffer(value),
+        ($9.CreateOrganizationDepartmentResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$9.CreateSubOrganizationDepartmentRequest,
+            $9.CreateSubOrganizationDepartmentResponse>(
+        'CreateSubOrganizationDepartment',
+        createSubOrganizationDepartment_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $9.CreateSubOrganizationDepartmentRequest.fromBuffer(value),
+        ($9.CreateSubOrganizationDepartmentResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$9.ListAllDepartmentsRequest,
+            $9.ListAllDepartmentsResponse>(
+        'ListAllDepartments',
+        listAllDepartments_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $9.ListAllDepartmentsRequest.fromBuffer(value),
+        ($9.ListAllDepartmentsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$9.GetDepartmentSelectionMenuItemsRequest,
+            $9.GetDepartmentSelectionMenuItemsResponse>(
+        'GetDepartmentSelectionMenuItems',
+        getDepartmentSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $9.GetDepartmentSelectionMenuItemsRequest.fromBuffer(value),
+        ($9.GetDepartmentSelectionMenuItemsResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -2568,14 +2835,39 @@ abstract class GatewayServiceBase extends $grpc.Service {
       listStudentsOfSchoolForEnrollment($grpc.ServiceCall call,
           $5.ListStudentsOfSchoolForEnrollmentRequest request);
 
-  $async.Future<$5.ListUserAttendanceReportsResponse>
-      listUserAttendanceReports_Pre($grpc.ServiceCall $call,
-          $async.Future<$5.ListUserAttendanceReportsRequest> $request) async {
-    return listUserAttendanceReports($call, await $request);
+  $async.Future<$5.ListSchoolAttendanceReportsResponse>
+      listSchoolAttendanceReport_Pre($grpc.ServiceCall $call,
+          $async.Future<$5.ListSchoolAttendanceReportsRequest> $request) async {
+    return listSchoolAttendanceReport($call, await $request);
   }
 
-  $async.Future<$5.ListUserAttendanceReportsResponse> listUserAttendanceReports(
-      $grpc.ServiceCall call, $5.ListUserAttendanceReportsRequest request);
+  $async.Future<$5.ListSchoolAttendanceReportsResponse>
+      listSchoolAttendanceReport($grpc.ServiceCall call,
+          $5.ListSchoolAttendanceReportsRequest request);
+
+  $async.Future<$5.ListSubOrganizationAttendanceReportResponse>
+      listSubOrganizationAttendanceReport_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$5.ListSubOrganizationAttendanceReportRequest>
+              $request) async {
+    return listSubOrganizationAttendanceReport($call, await $request);
+  }
+
+  $async.Future<$5.ListSubOrganizationAttendanceReportResponse>
+      listSubOrganizationAttendanceReport($grpc.ServiceCall call,
+          $5.ListSubOrganizationAttendanceReportRequest request);
+
+  $async.Future<$5.GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse>
+      getBatchUsersInfoOfSubOrganizationForLiveFeed_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$5.GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest>
+              $request) async {
+    return getBatchUsersInfoOfSubOrganizationForLiveFeed($call, await $request);
+  }
+
+  $async.Future<$5.GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse>
+      getBatchUsersInfoOfSubOrganizationForLiveFeed($grpc.ServiceCall call,
+          $5.GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest request);
 
   $async.Future<$6.AddLeaveAttachmentResponse> addLeaveAttachment(
       $grpc.ServiceCall call,
@@ -2614,4 +2906,97 @@ abstract class GatewayServiceBase extends $grpc.Service {
 
   $async.Future<$8.UploadRowImageResponse> uploadBulkRegistrationRowImage(
       $grpc.ServiceCall call, $async.Stream<$8.UploadRowImageRequest> request);
+
+  $async.Future<$9.CreateOrganizationResponse> createOrganization_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$9.CreateOrganizationRequest> $request) async {
+    return createOrganization($call, await $request);
+  }
+
+  $async.Future<$9.CreateOrganizationResponse> createOrganization(
+      $grpc.ServiceCall call, $9.CreateOrganizationRequest request);
+
+  $async.Future<$9.CreateSubOrganizationResponse> createSubOrganization_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$9.CreateSubOrganizationRequest> $request) async {
+    return createSubOrganization($call, await $request);
+  }
+
+  $async.Future<$9.CreateSubOrganizationResponse> createSubOrganization(
+      $grpc.ServiceCall call, $9.CreateSubOrganizationRequest request);
+
+  $async.Future<$9.ListAllSubOrganizationsResponse> listAllSubOrganizations_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$9.ListAllSubOrganizationsRequest> $request) async {
+    return listAllSubOrganizations($call, await $request);
+  }
+
+  $async.Future<$9.ListAllSubOrganizationsResponse> listAllSubOrganizations(
+      $grpc.ServiceCall call, $9.ListAllSubOrganizationsRequest request);
+
+  $async.Future<$9.ListAllOrganizationsResponse> listAllOrganizations_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$9.ListAllOrganizationsRequest> $request) async {
+    return listAllOrganizations($call, await $request);
+  }
+
+  $async.Future<$9.ListAllOrganizationsResponse> listAllOrganizations(
+      $grpc.ServiceCall call, $9.ListAllOrganizationsRequest request);
+
+  $async.Future<$9.GetOrganizationSelectionMenuItemsResponse>
+      getOrganizationSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$9.GetOrganizationSelectionMenuItemsRequest>
+              $request) async {
+    return getOrganizationSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$9.GetOrganizationSelectionMenuItemsResponse>
+      getOrganizationSelectionMenuItems($grpc.ServiceCall call,
+          $9.GetOrganizationSelectionMenuItemsRequest request);
+
+  $async.Future<$9.CreateOrganizationDepartmentResponse>
+      createOrganizationDepartment_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$9.CreateOrganizationDepartmentRequest>
+              $request) async {
+    return createOrganizationDepartment($call, await $request);
+  }
+
+  $async.Future<$9.CreateOrganizationDepartmentResponse>
+      createOrganizationDepartment($grpc.ServiceCall call,
+          $9.CreateOrganizationDepartmentRequest request);
+
+  $async.Future<$9.CreateSubOrganizationDepartmentResponse>
+      createSubOrganizationDepartment_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$9.CreateSubOrganizationDepartmentRequest>
+              $request) async {
+    return createSubOrganizationDepartment($call, await $request);
+  }
+
+  $async.Future<$9.CreateSubOrganizationDepartmentResponse>
+      createSubOrganizationDepartment($grpc.ServiceCall call,
+          $9.CreateSubOrganizationDepartmentRequest request);
+
+  $async.Future<$9.ListAllDepartmentsResponse> listAllDepartments_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$9.ListAllDepartmentsRequest> $request) async {
+    return listAllDepartments($call, await $request);
+  }
+
+  $async.Future<$9.ListAllDepartmentsResponse> listAllDepartments(
+      $grpc.ServiceCall call, $9.ListAllDepartmentsRequest request);
+
+  $async.Future<$9.GetDepartmentSelectionMenuItemsResponse>
+      getDepartmentSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$9.GetDepartmentSelectionMenuItemsRequest>
+              $request) async {
+    return getDepartmentSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$9.GetDepartmentSelectionMenuItemsResponse>
+      getDepartmentSelectionMenuItems($grpc.ServiceCall call,
+          $9.GetDepartmentSelectionMenuItemsRequest request);
 }

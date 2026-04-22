@@ -177,9 +177,11 @@ class RegisterStudentSagaRequest extends $pb.GeneratedMessage {
 class RegisterStudentSagaResponse extends $pb.GeneratedMessage {
   factory RegisterStudentSagaResponse({
     $core.String? studentId,
+    $core.String? sagaId,
   }) {
     final result = create();
     if (studentId != null) result.studentId = studentId;
+    if (sagaId != null) result.sagaId = sagaId;
     return result;
   }
 
@@ -197,6 +199,7 @@ class RegisterStudentSagaResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'studentId')
+    ..aOS(2, _omitFieldNames ? '' : 'sagaId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -223,6 +226,10 @@ class RegisterStudentSagaResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RegisterStudentSagaResponse>(create);
   static RegisterStudentSagaResponse? _defaultInstance;
 
+  /// student_id is populated only when the sync orchestration path is
+  /// active (SAGA_ASYNC_ENABLED=false). Clients that need the ID MUST
+  /// switch to saga_id + GetSagaStatus polling — the sync field will be
+  /// removed once async rollout is complete.
   @$pb.TagNumber(1)
   $core.String get studentId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -231,6 +238,18 @@ class RegisterStudentSagaResponse extends $pb.GeneratedMessage {
   $core.bool hasStudentId() => $_has(0);
   @$pb.TagNumber(1)
   void clearStudentId() => $_clearField(1);
+
+  /// saga_id is populated when the async orchestration path is active.
+  /// Clients poll GetSagaStatus with this ID to observe saga progress
+  /// and read the final created IDs from the result payload.
+  @$pb.TagNumber(2)
+  $core.String get sagaId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set sagaId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSagaId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSagaId() => $_clearField(2);
 }
 
 class RegisterTeacherSagaRequest extends $pb.GeneratedMessage {
@@ -379,9 +398,11 @@ class RegisterTeacherSagaRequest extends $pb.GeneratedMessage {
 class RegisterTeacherSagaResponse extends $pb.GeneratedMessage {
   factory RegisterTeacherSagaResponse({
     $core.String? teacherId,
+    $core.String? sagaId,
   }) {
     final result = create();
     if (teacherId != null) result.teacherId = teacherId;
+    if (sagaId != null) result.sagaId = sagaId;
     return result;
   }
 
@@ -399,6 +420,7 @@ class RegisterTeacherSagaResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'teacherId')
+    ..aOS(2, _omitFieldNames ? '' : 'sagaId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -433,6 +455,15 @@ class RegisterTeacherSagaResponse extends $pb.GeneratedMessage {
   $core.bool hasTeacherId() => $_has(0);
   @$pb.TagNumber(1)
   void clearTeacherId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get sagaId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set sagaId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSagaId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSagaId() => $_clearField(2);
 }
 
 class RegisterParentSagaRequest extends $pb.GeneratedMessage {
@@ -556,9 +587,11 @@ class RegisterParentSagaRequest extends $pb.GeneratedMessage {
 class RegisterParentSagaResponse extends $pb.GeneratedMessage {
   factory RegisterParentSagaResponse({
     $core.String? parentId,
+    $core.String? sagaId,
   }) {
     final result = create();
     if (parentId != null) result.parentId = parentId;
+    if (sagaId != null) result.sagaId = sagaId;
     return result;
   }
 
@@ -576,6 +609,7 @@ class RegisterParentSagaResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parentId')
+    ..aOS(2, _omitFieldNames ? '' : 'sagaId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -609,6 +643,15 @@ class RegisterParentSagaResponse extends $pb.GeneratedMessage {
   $core.bool hasParentId() => $_has(0);
   @$pb.TagNumber(1)
   void clearParentId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get sagaId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set sagaId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSagaId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSagaId() => $_clearField(2);
 }
 
 class RegisterSchoolEmployeeSagaRequest extends $pb.GeneratedMessage {
@@ -772,9 +815,11 @@ class RegisterSchoolEmployeeSagaRequest extends $pb.GeneratedMessage {
 class RegisterSchoolEmployeeSagaResponse extends $pb.GeneratedMessage {
   factory RegisterSchoolEmployeeSagaResponse({
     $core.String? employeeId,
+    $core.String? sagaId,
   }) {
     final result = create();
     if (employeeId != null) result.employeeId = employeeId;
+    if (sagaId != null) result.sagaId = sagaId;
     return result;
   }
 
@@ -793,6 +838,7 @@ class RegisterSchoolEmployeeSagaResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'employeeId')
+    ..aOS(2, _omitFieldNames ? '' : 'sagaId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -828,6 +874,15 @@ class RegisterSchoolEmployeeSagaResponse extends $pb.GeneratedMessage {
   $core.bool hasEmployeeId() => $_has(0);
   @$pb.TagNumber(1)
   void clearEmployeeId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get sagaId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set sagaId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSagaId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSagaId() => $_clearField(2);
 }
 
 class RegisterSchoolAdminSagaRequest extends $pb.GeneratedMessage {
@@ -892,9 +947,11 @@ class RegisterSchoolAdminSagaRequest extends $pb.GeneratedMessage {
 class RegisterSchoolAdminSagaResponse extends $pb.GeneratedMessage {
   factory RegisterSchoolAdminSagaResponse({
     $core.String? adminId,
+    $core.String? sagaId,
   }) {
     final result = create();
     if (adminId != null) result.adminId = adminId;
+    if (sagaId != null) result.sagaId = sagaId;
     return result;
   }
 
@@ -912,6 +969,7 @@ class RegisterSchoolAdminSagaResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'adminId')
+    ..aOS(2, _omitFieldNames ? '' : 'sagaId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -947,6 +1005,15 @@ class RegisterSchoolAdminSagaResponse extends $pb.GeneratedMessage {
   $core.bool hasAdminId() => $_has(0);
   @$pb.TagNumber(1)
   void clearAdminId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get sagaId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set sagaId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSagaId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSagaId() => $_clearField(2);
 }
 
 class RegisterSchoolChainAdminSagaRequest extends $pb.GeneratedMessage {
@@ -1013,9 +1080,11 @@ class RegisterSchoolChainAdminSagaRequest extends $pb.GeneratedMessage {
 class RegisterSchoolChainAdminSagaResponse extends $pb.GeneratedMessage {
   factory RegisterSchoolChainAdminSagaResponse({
     $core.String? adminId,
+    $core.String? sagaId,
   }) {
     final result = create();
     if (adminId != null) result.adminId = adminId;
+    if (sagaId != null) result.sagaId = sagaId;
     return result;
   }
 
@@ -1034,6 +1103,7 @@ class RegisterSchoolChainAdminSagaResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'adminId')
+    ..aOS(2, _omitFieldNames ? '' : 'sagaId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1069,6 +1139,15 @@ class RegisterSchoolChainAdminSagaResponse extends $pb.GeneratedMessage {
   $core.bool hasAdminId() => $_has(0);
   @$pb.TagNumber(1)
   void clearAdminId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get sagaId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set sagaId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSagaId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSagaId() => $_clearField(2);
 }
 
 class RegisterSchoolChainEmployeeSagaRequest extends $pb.GeneratedMessage {
@@ -1232,9 +1311,11 @@ class RegisterSchoolChainEmployeeSagaRequest extends $pb.GeneratedMessage {
 class RegisterSchoolChainEmployeeSagaResponse extends $pb.GeneratedMessage {
   factory RegisterSchoolChainEmployeeSagaResponse({
     $core.String? employeeId,
+    $core.String? sagaId,
   }) {
     final result = create();
     if (employeeId != null) result.employeeId = employeeId;
+    if (sagaId != null) result.sagaId = sagaId;
     return result;
   }
 
@@ -1253,6 +1334,7 @@ class RegisterSchoolChainEmployeeSagaResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'employeeId')
+    ..aOS(2, _omitFieldNames ? '' : 'sagaId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1288,6 +1370,15 @@ class RegisterSchoolChainEmployeeSagaResponse extends $pb.GeneratedMessage {
   $core.bool hasEmployeeId() => $_has(0);
   @$pb.TagNumber(1)
   void clearEmployeeId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get sagaId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set sagaId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSagaId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSagaId() => $_clearField(2);
 }
 
 class HandleLeaveResponseSagaRequest extends $pb.GeneratedMessage {
@@ -1448,9 +1539,11 @@ class HandleLeaveResponseSagaRequest extends $pb.GeneratedMessage {
 class HandleLeaveResponseSagaResponse extends $pb.GeneratedMessage {
   factory HandleLeaveResponseSagaResponse({
     $core.bool? success,
+    $core.String? sagaId,
   }) {
     final result = create();
     if (success != null) result.success = success;
+    if (sagaId != null) result.sagaId = sagaId;
     return result;
   }
 
@@ -1468,6 +1561,7 @@ class HandleLeaveResponseSagaResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
       createEmptyInstance: create)
     ..aOB(1, _omitFieldNames ? '' : 'success')
+    ..aOS(2, _omitFieldNames ? '' : 'sagaId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1503,6 +1597,251 @@ class HandleLeaveResponseSagaResponse extends $pb.GeneratedMessage {
   $core.bool hasSuccess() => $_has(0);
   @$pb.TagNumber(1)
   void clearSuccess() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get sagaId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set sagaId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSagaId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSagaId() => $_clearField(2);
+}
+
+/// GetSagaStatus returns the current lifecycle state of an async saga
+/// instance. Clients poll this with the saga_id returned from any of
+/// the Register*Saga / HandleLeaveResponseSaga RPCs.
+class GetSagaStatusRequest extends $pb.GeneratedMessage {
+  factory GetSagaStatusRequest({
+    $core.String? sagaId,
+  }) {
+    final result = create();
+    if (sagaId != null) result.sagaId = sagaId;
+    return result;
+  }
+
+  GetSagaStatusRequest._();
+
+  factory GetSagaStatusRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSagaStatusRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSagaStatusRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'sagaId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSagaStatusRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSagaStatusRequest copyWith(void Function(GetSagaStatusRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSagaStatusRequest))
+          as GetSagaStatusRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSagaStatusRequest create() => GetSagaStatusRequest._();
+  @$core.override
+  GetSagaStatusRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSagaStatusRequest> createRepeated() =>
+      $pb.PbList<GetSagaStatusRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSagaStatusRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSagaStatusRequest>(create);
+  static GetSagaStatusRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get sagaId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set sagaId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSagaId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSagaId() => $_clearField(1);
+}
+
+class GetSagaStatusResponse extends $pb.GeneratedMessage {
+  factory GetSagaStatusResponse({
+    $core.String? sagaId,
+    $core.String? sagaKind,
+    $core.String? status,
+    $core.String? direction,
+    $core.int? currentStep,
+    $core.int? totalSteps,
+    $core.String? lastError,
+    $core.String? resultPayloadJson,
+    $0.Timestamp? createdAt,
+    $0.Timestamp? completedAt,
+  }) {
+    final result = create();
+    if (sagaId != null) result.sagaId = sagaId;
+    if (sagaKind != null) result.sagaKind = sagaKind;
+    if (status != null) result.status = status;
+    if (direction != null) result.direction = direction;
+    if (currentStep != null) result.currentStep = currentStep;
+    if (totalSteps != null) result.totalSteps = totalSteps;
+    if (lastError != null) result.lastError = lastError;
+    if (resultPayloadJson != null) result.resultPayloadJson = resultPayloadJson;
+    if (createdAt != null) result.createdAt = createdAt;
+    if (completedAt != null) result.completedAt = completedAt;
+    return result;
+  }
+
+  GetSagaStatusResponse._();
+
+  factory GetSagaStatusResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSagaStatusResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSagaStatusResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'saga_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'sagaId')
+    ..aOS(2, _omitFieldNames ? '' : 'sagaKind')
+    ..aOS(3, _omitFieldNames ? '' : 'status')
+    ..aOS(4, _omitFieldNames ? '' : 'direction')
+    ..aI(5, _omitFieldNames ? '' : 'currentStep')
+    ..aI(6, _omitFieldNames ? '' : 'totalSteps')
+    ..aOS(7, _omitFieldNames ? '' : 'lastError')
+    ..aOS(8, _omitFieldNames ? '' : 'resultPayloadJson')
+    ..aOM<$0.Timestamp>(9, _omitFieldNames ? '' : 'createdAt',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(10, _omitFieldNames ? '' : 'completedAt',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSagaStatusResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSagaStatusResponse copyWith(
+          void Function(GetSagaStatusResponse) updates) =>
+      super.copyWith((message) => updates(message as GetSagaStatusResponse))
+          as GetSagaStatusResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSagaStatusResponse create() => GetSagaStatusResponse._();
+  @$core.override
+  GetSagaStatusResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSagaStatusResponse> createRepeated() =>
+      $pb.PbList<GetSagaStatusResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSagaStatusResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSagaStatusResponse>(create);
+  static GetSagaStatusResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get sagaId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set sagaId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSagaId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSagaId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get sagaKind => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set sagaKind($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSagaKind() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSagaKind() => $_clearField(2);
+
+  /// status ∈ {PENDING, RUNNING, COMPLETED, COMPENSATING, COMPENSATED,
+  ///          COMPENSATION_FAILED, FAILED}
+  @$pb.TagNumber(3)
+  $core.String get status => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set status($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasStatus() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearStatus() => $_clearField(3);
+
+  /// direction ∈ {FORWARD, COMPENSATE}
+  @$pb.TagNumber(4)
+  $core.String get direction => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set direction($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasDirection() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDirection() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get currentStep => $_getIZ(4);
+  @$pb.TagNumber(5)
+  set currentStep($core.int value) => $_setSignedInt32(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasCurrentStep() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearCurrentStep() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.int get totalSteps => $_getIZ(5);
+  @$pb.TagNumber(6)
+  set totalSteps($core.int value) => $_setSignedInt32(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasTotalSteps() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearTotalSteps() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get lastError => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set lastError($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasLastError() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearLastError() => $_clearField(7);
+
+  /// result_payload_json is the aggregated map of FORWARD step_index →
+  /// JSON-encoded result struct. Clients decode it per saga_kind to
+  /// recover created IDs (student_id, teacher_id, registration_id, ...).
+  @$pb.TagNumber(8)
+  $core.String get resultPayloadJson => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set resultPayloadJson($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasResultPayloadJson() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearResultPayloadJson() => $_clearField(8);
+
+  @$pb.TagNumber(9)
+  $0.Timestamp get createdAt => $_getN(8);
+  @$pb.TagNumber(9)
+  set createdAt($0.Timestamp value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasCreatedAt() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearCreatedAt() => $_clearField(9);
+  @$pb.TagNumber(9)
+  $0.Timestamp ensureCreatedAt() => $_ensure(8);
+
+  @$pb.TagNumber(10)
+  $0.Timestamp get completedAt => $_getN(9);
+  @$pb.TagNumber(10)
+  set completedAt($0.Timestamp value) => $_setField(10, value);
+  @$pb.TagNumber(10)
+  $core.bool hasCompletedAt() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearCompletedAt() => $_clearField(10);
+  @$pb.TagNumber(10)
+  $0.Timestamp ensureCompletedAt() => $_ensure(9);
 }
 
 const $core.bool _omitFieldNames =

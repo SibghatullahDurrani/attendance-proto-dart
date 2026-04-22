@@ -90,7 +90,6 @@ class SagaServiceClient extends $grpc.Client {
         options: options);
   }
 
-  /// Needs to be changed because MarkLeaveOfUserNowRequires a shift_id as well
   $grpc.ResponseFuture<$0.HandleLeaveResponseSagaResponse>
       handleLeaveResponseSaga(
     $0.HandleLeaveResponseSagaRequest request, {
@@ -116,6 +115,17 @@ class SagaServiceClient extends $grpc.Client {
   }) {
     return $createStreamingCall(_$uploadRowImage, request, options: options)
         .single;
+  }
+
+  /// GetSagaStatus returns the current state of an async saga instance.
+  /// Clients poll this with the saga_id returned from any Register* RPC
+  /// once SAGA_ASYNC_ENABLED=true. Terminal states are COMPLETED,
+  /// COMPENSATED, COMPENSATION_FAILED, FAILED.
+  $grpc.ResponseFuture<$0.GetSagaStatusResponse> getSagaStatus(
+    $0.GetSagaStatusRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getSagaStatus, request, options: options);
   }
 
   // method descriptors
@@ -176,6 +186,11 @@ class SagaServiceClient extends $grpc.Client {
           '/saga.SagaService/UploadRowImage',
           ($1.UploadRowImageRequest value) => value.writeToBuffer(),
           $1.UploadRowImageResponse.fromBuffer);
+  static final _$getSagaStatus =
+      $grpc.ClientMethod<$0.GetSagaStatusRequest, $0.GetSagaStatusResponse>(
+          '/saga.SagaService/GetSagaStatus',
+          ($0.GetSagaStatusRequest value) => value.writeToBuffer(),
+          $0.GetSagaStatusResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('saga.SagaService')
@@ -276,6 +291,15 @@ abstract class SagaServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $1.UploadRowImageRequest.fromBuffer(value),
         ($1.UploadRowImageResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetSagaStatusRequest, $0.GetSagaStatusResponse>(
+            'GetSagaStatus',
+            getSagaStatus_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetSagaStatusRequest.fromBuffer(value),
+            ($0.GetSagaStatusResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.RegisterStudentSagaResponse> registerStudentSaga_Pre(
@@ -363,4 +387,13 @@ abstract class SagaServiceBase extends $grpc.Service {
 
   $async.Future<$1.UploadRowImageResponse> uploadRowImage(
       $grpc.ServiceCall call, $async.Stream<$1.UploadRowImageRequest> request);
+
+  $async.Future<$0.GetSagaStatusResponse> getSagaStatus_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetSagaStatusRequest> $request) async {
+    return getSagaStatus($call, await $request);
+  }
+
+  $async.Future<$0.GetSagaStatusResponse> getSagaStatus(
+      $grpc.ServiceCall call, $0.GetSagaStatusRequest request);
 }

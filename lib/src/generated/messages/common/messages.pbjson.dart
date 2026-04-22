@@ -195,6 +195,22 @@ const UserType$json = {
 final $typed_data.Uint8List userTypeDescriptor = $convert.base64Decode(
     'CghVc2VyVHlwZRILCgdTVFVERU5UEAASCwoHVEVBQ0hFUhABEgwKCEVNUExPWUVFEAI=');
 
+@$core.Deprecated('Use shiftBelongsToDescriptor instead')
+const ShiftBelongsTo$json = {
+  '1': 'ShiftBelongsTo',
+  '2': [
+    {'1': 'SCHOOL', '2': 0},
+    {'1': 'SCHOOL_CHAIN', '2': 1},
+    {'1': 'ORGANIZATION', '2': 3},
+    {'1': 'SUB_ORGANIZATION', '2': 4},
+  ],
+};
+
+/// Descriptor for `ShiftBelongsTo`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List shiftBelongsToDescriptor = $convert.base64Decode(
+    'Cg5TaGlmdEJlbG9uZ3NUbxIKCgZTQ0hPT0wQABIQCgxTQ0hPT0xfQ0hBSU4QARIQCgxPUkdBTk'
+    'laQVRJT04QAxIUChBTVUJfT1JHQU5JWkFUSU9OEAQ=');
+
 @$core.Deprecated('Use paginationRequestDescriptor instead')
 const PaginationRequest$json = {
   '1': 'PaginationRequest',

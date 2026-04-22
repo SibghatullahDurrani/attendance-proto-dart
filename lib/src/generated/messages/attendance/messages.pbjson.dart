@@ -485,6 +485,14 @@ const CreateOrganizationShiftRequest$json = {
       '6': '.common_messages.Days',
       '10': 'workingDays'
     },
+    {
+      '1': 'shift_belongs_to',
+      '3': 10,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.ShiftBelongsTo',
+      '10': 'shiftBelongsTo'
+    },
   ],
 };
 
@@ -496,7 +504,8 @@ final $typed_data.Uint8List createOrganizationShiftRequestDescriptor = $convert.
     'NrX291dF9ob3VyGAUgASgFUgxjaGVja091dEhvdXISKAoQY2hlY2tfb3V0X21pbnV0ZRgGIAEo'
     'BVIOY2hlY2tPdXRNaW51dGUSHQoKaXNfZGVmYXVsdBgHIAEoCFIJaXNEZWZhdWx0EhsKCXRpbW'
     'Vfem9uZRgIIAEoCVIIdGltZVpvbmUSOAoMd29ya2luZ19kYXlzGAkgAygOMhUuY29tbW9uX21l'
-    'c3NhZ2VzLkRheXNSC3dvcmtpbmdEYXlz');
+    'c3NhZ2VzLkRheXNSC3dvcmtpbmdEYXlzEkkKEHNoaWZ0X2JlbG9uZ3NfdG8YCiABKA4yHy5jb2'
+    '1tb25fbWVzc2FnZXMuU2hpZnRCZWxvbmdzVG9SDnNoaWZ0QmVsb25nc1Rv');
 
 @$core.Deprecated('Use createOrganizationShiftResponseDescriptor instead')
 const CreateOrganizationShiftResponse$json = {

@@ -1540,6 +1540,7 @@ class CreateOrganizationShiftRequest extends $pb.GeneratedMessage {
     $core.bool? isDefault,
     $core.String? timeZone,
     $core.Iterable<$1.Days>? workingDays,
+    $1.ShiftBelongsTo? shiftBelongsTo,
   }) {
     final result = create();
     if (belongsTo != null) result.belongsTo = belongsTo;
@@ -1551,6 +1552,7 @@ class CreateOrganizationShiftRequest extends $pb.GeneratedMessage {
     if (isDefault != null) result.isDefault = isDefault;
     if (timeZone != null) result.timeZone = timeZone;
     if (workingDays != null) result.workingDays.addAll(workingDays);
+    if (shiftBelongsTo != null) result.shiftBelongsTo = shiftBelongsTo;
     return result;
   }
 
@@ -1580,6 +1582,8 @@ class CreateOrganizationShiftRequest extends $pb.GeneratedMessage {
         valueOf: $1.Days.valueOf,
         enumValues: $1.Days.values,
         defaultEnumValue: $1.Days.MONDAY)
+    ..aE<$1.ShiftBelongsTo>(10, _omitFieldNames ? '' : 'shiftBelongsTo',
+        enumValues: $1.ShiftBelongsTo.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1680,6 +1684,15 @@ class CreateOrganizationShiftRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(9)
   $pb.PbList<$1.Days> get workingDays => $_getList(8);
+
+  @$pb.TagNumber(10)
+  $1.ShiftBelongsTo get shiftBelongsTo => $_getN(9);
+  @$pb.TagNumber(10)
+  set shiftBelongsTo($1.ShiftBelongsTo value) => $_setField(10, value);
+  @$pb.TagNumber(10)
+  $core.bool hasShiftBelongsTo() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearShiftBelongsTo() => $_clearField(10);
 }
 
 class CreateOrganizationShiftResponse extends $pb.GeneratedMessage {

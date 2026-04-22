@@ -64,6 +64,22 @@ class OrganizationServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.ListAllDepartmentsResponse> listAllDepartments(
+    $0.ListAllDepartmentsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listAllDepartments, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetDepartmentSelectionMenuItemsResponse>
+      getDepartmentSelectionMenuItems(
+    $0.GetDepartmentSelectionMenuItemsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getDepartmentSelectionMenuItems, request,
+        options: options);
+  }
+
   $grpc.ResponseFuture<$0.AddEmployeeToDepartmentResponse>
       addEmployeeToDepartment(
     $0.AddEmployeeToDepartmentRequest request, {
@@ -182,6 +198,33 @@ class OrganizationServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetSubOrganizationIdsInOrganizationResponse>
+      getSubOrganizationIdsInOrganization(
+    $0.GetSubOrganizationIdsInOrganizationRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getSubOrganizationIdsInOrganization, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetSubOrganizationParentOrganizationIdResponse>
+      getSubOrganizationParentOrganizationId(
+    $0.GetSubOrganizationParentOrganizationIdRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getSubOrganizationParentOrganizationId, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetBatchEmployeesDepartmentNamesResponse>
+      getBatchEmployeesDepartmentNames(
+    $0.GetBatchEmployeesDepartmentNamesRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getBatchEmployeesDepartmentNames, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$createOrganization = $grpc.ClientMethod<
@@ -207,6 +250,18 @@ class OrganizationServiceClient extends $grpc.Client {
       ($0.CreateSubOrganizationDepartmentRequest value) =>
           value.writeToBuffer(),
       $0.CreateSubOrganizationDepartmentResponse.fromBuffer);
+  static final _$listAllDepartments = $grpc.ClientMethod<
+          $0.ListAllDepartmentsRequest, $0.ListAllDepartmentsResponse>(
+      '/organization.OrganizationService/ListAllDepartments',
+      ($0.ListAllDepartmentsRequest value) => value.writeToBuffer(),
+      $0.ListAllDepartmentsResponse.fromBuffer);
+  static final _$getDepartmentSelectionMenuItems = $grpc.ClientMethod<
+          $0.GetDepartmentSelectionMenuItemsRequest,
+          $0.GetDepartmentSelectionMenuItemsResponse>(
+      '/organization.OrganizationService/GetDepartmentSelectionMenuItems',
+      ($0.GetDepartmentSelectionMenuItemsRequest value) =>
+          value.writeToBuffer(),
+      $0.GetDepartmentSelectionMenuItemsResponse.fromBuffer);
   static final _$addEmployeeToDepartment = $grpc.ClientMethod<
           $0.AddEmployeeToDepartmentRequest,
           $0.AddEmployeeToDepartmentResponse>(
@@ -286,6 +341,27 @@ class OrganizationServiceClient extends $grpc.Client {
       '/organization.OrganizationService/GetSubOrganizationTimezone',
       ($0.GetSubOrganizationTimezoneRequest value) => value.writeToBuffer(),
       $0.GetSubOrganizationTimezoneResponse.fromBuffer);
+  static final _$getSubOrganizationIdsInOrganization = $grpc.ClientMethod<
+          $0.GetSubOrganizationIdsInOrganizationRequest,
+          $0.GetSubOrganizationIdsInOrganizationResponse>(
+      '/organization.OrganizationService/GetSubOrganizationIdsInOrganization',
+      ($0.GetSubOrganizationIdsInOrganizationRequest value) =>
+          value.writeToBuffer(),
+      $0.GetSubOrganizationIdsInOrganizationResponse.fromBuffer);
+  static final _$getSubOrganizationParentOrganizationId = $grpc.ClientMethod<
+          $0.GetSubOrganizationParentOrganizationIdRequest,
+          $0.GetSubOrganizationParentOrganizationIdResponse>(
+      '/organization.OrganizationService/GetSubOrganizationParentOrganizationId',
+      ($0.GetSubOrganizationParentOrganizationIdRequest value) =>
+          value.writeToBuffer(),
+      $0.GetSubOrganizationParentOrganizationIdResponse.fromBuffer);
+  static final _$getBatchEmployeesDepartmentNames = $grpc.ClientMethod<
+          $0.GetBatchEmployeesDepartmentNamesRequest,
+          $0.GetBatchEmployeesDepartmentNamesResponse>(
+      '/organization.OrganizationService/GetBatchEmployeesDepartmentNames',
+      ($0.GetBatchEmployeesDepartmentNamesRequest value) =>
+          value.writeToBuffer(),
+      $0.GetBatchEmployeesDepartmentNamesResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('organization.OrganizationService')
@@ -330,6 +406,25 @@ abstract class OrganizationServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.CreateSubOrganizationDepartmentRequest.fromBuffer(value),
         ($0.CreateSubOrganizationDepartmentResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListAllDepartmentsRequest,
+            $0.ListAllDepartmentsResponse>(
+        'ListAllDepartments',
+        listAllDepartments_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListAllDepartmentsRequest.fromBuffer(value),
+        ($0.ListAllDepartmentsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetDepartmentSelectionMenuItemsRequest,
+            $0.GetDepartmentSelectionMenuItemsResponse>(
+        'GetDepartmentSelectionMenuItems',
+        getDepartmentSelectionMenuItems_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetDepartmentSelectionMenuItemsRequest.fromBuffer(value),
+        ($0.GetDepartmentSelectionMenuItemsResponse value) =>
             value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.AddEmployeeToDepartmentRequest,
             $0.AddEmployeeToDepartmentResponse>(
@@ -461,6 +556,38 @@ abstract class OrganizationServiceBase extends $grpc.Service {
             $0.GetSubOrganizationTimezoneRequest.fromBuffer(value),
         ($0.GetSubOrganizationTimezoneResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.GetSubOrganizationIdsInOrganizationRequest,
+            $0.GetSubOrganizationIdsInOrganizationResponse>(
+        'GetSubOrganizationIdsInOrganization',
+        getSubOrganizationIdsInOrganization_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetSubOrganizationIdsInOrganizationRequest.fromBuffer(value),
+        ($0.GetSubOrganizationIdsInOrganizationResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.GetSubOrganizationParentOrganizationIdRequest,
+            $0.GetSubOrganizationParentOrganizationIdResponse>(
+        'GetSubOrganizationParentOrganizationId',
+        getSubOrganizationParentOrganizationId_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetSubOrganizationParentOrganizationIdRequest.fromBuffer(value),
+        ($0.GetSubOrganizationParentOrganizationIdResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetBatchEmployeesDepartmentNamesRequest,
+            $0.GetBatchEmployeesDepartmentNamesResponse>(
+        'GetBatchEmployeesDepartmentNames',
+        getBatchEmployeesDepartmentNames_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetBatchEmployeesDepartmentNamesRequest.fromBuffer(value),
+        ($0.GetBatchEmployeesDepartmentNamesResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateOrganizationResponse> createOrganization_Pre(
@@ -504,6 +631,27 @@ abstract class OrganizationServiceBase extends $grpc.Service {
   $async.Future<$0.CreateSubOrganizationDepartmentResponse>
       createSubOrganizationDepartment($grpc.ServiceCall call,
           $0.CreateSubOrganizationDepartmentRequest request);
+
+  $async.Future<$0.ListAllDepartmentsResponse> listAllDepartments_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.ListAllDepartmentsRequest> $request) async {
+    return listAllDepartments($call, await $request);
+  }
+
+  $async.Future<$0.ListAllDepartmentsResponse> listAllDepartments(
+      $grpc.ServiceCall call, $0.ListAllDepartmentsRequest request);
+
+  $async.Future<$0.GetDepartmentSelectionMenuItemsResponse>
+      getDepartmentSelectionMenuItems_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetDepartmentSelectionMenuItemsRequest>
+              $request) async {
+    return getDepartmentSelectionMenuItems($call, await $request);
+  }
+
+  $async.Future<$0.GetDepartmentSelectionMenuItemsResponse>
+      getDepartmentSelectionMenuItems($grpc.ServiceCall call,
+          $0.GetDepartmentSelectionMenuItemsRequest request);
 
   $async.Future<$0.AddEmployeeToDepartmentResponse> addEmployeeToDepartment_Pre(
       $grpc.ServiceCall $call,
@@ -636,4 +784,40 @@ abstract class OrganizationServiceBase extends $grpc.Service {
   $async.Future<$0.GetSubOrganizationTimezoneResponse>
       getSubOrganizationTimezone(
           $grpc.ServiceCall call, $0.GetSubOrganizationTimezoneRequest request);
+
+  $async.Future<$0.GetSubOrganizationIdsInOrganizationResponse>
+      getSubOrganizationIdsInOrganization_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetSubOrganizationIdsInOrganizationRequest>
+              $request) async {
+    return getSubOrganizationIdsInOrganization($call, await $request);
+  }
+
+  $async.Future<$0.GetSubOrganizationIdsInOrganizationResponse>
+      getSubOrganizationIdsInOrganization($grpc.ServiceCall call,
+          $0.GetSubOrganizationIdsInOrganizationRequest request);
+
+  $async.Future<$0.GetSubOrganizationParentOrganizationIdResponse>
+      getSubOrganizationParentOrganizationId_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetSubOrganizationParentOrganizationIdRequest>
+              $request) async {
+    return getSubOrganizationParentOrganizationId($call, await $request);
+  }
+
+  $async.Future<$0.GetSubOrganizationParentOrganizationIdResponse>
+      getSubOrganizationParentOrganizationId($grpc.ServiceCall call,
+          $0.GetSubOrganizationParentOrganizationIdRequest request);
+
+  $async.Future<$0.GetBatchEmployeesDepartmentNamesResponse>
+      getBatchEmployeesDepartmentNames_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetBatchEmployeesDepartmentNamesRequest>
+              $request) async {
+    return getBatchEmployeesDepartmentNames($call, await $request);
+  }
+
+  $async.Future<$0.GetBatchEmployeesDepartmentNamesResponse>
+      getBatchEmployeesDepartmentNames($grpc.ServiceCall call,
+          $0.GetBatchEmployeesDepartmentNamesRequest request);
 }

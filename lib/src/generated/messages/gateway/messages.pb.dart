@@ -15,6 +15,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../google/protobuf/timestamp.pb.dart' as $1;
+import '../attendance/messages.pb.dart' as $3;
 import '../common/messages.pb.dart' as $0;
 import '../leave/messages.pb.dart' as $2;
 
@@ -7063,7 +7064,7 @@ class UserOfShiftForShiftAllocation extends $pb.GeneratedMessage {
 
 class GetBatchUsersInfoOfSchoolForLiveFeedRequest extends $pb.GeneratedMessage {
   factory GetBatchUsersInfoOfSchoolForLiveFeedRequest({
-    $core.Iterable<UserOfLiveFeed>? users,
+    $core.Iterable<SchoolUserForLiveFeed>? users,
   }) {
     final result = create();
     if (users != null) result.users.addAll(users);
@@ -7086,8 +7087,8 @@ class GetBatchUsersInfoOfSchoolForLiveFeedRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
       createEmptyInstance: create)
-    ..pPM<UserOfLiveFeed>(1, _omitFieldNames ? '' : 'users',
-        subBuilder: UserOfLiveFeed.create)
+    ..pPM<SchoolUserForLiveFeed>(1, _omitFieldNames ? '' : 'users',
+        subBuilder: SchoolUserForLiveFeed.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -7117,11 +7118,11 @@ class GetBatchUsersInfoOfSchoolForLiveFeedRequest extends $pb.GeneratedMessage {
   static GetBatchUsersInfoOfSchoolForLiveFeedRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $pb.PbList<UserOfLiveFeed> get users => $_getList(0);
+  $pb.PbList<SchoolUserForLiveFeed> get users => $_getList(0);
 }
 
-class UserOfLiveFeed extends $pb.GeneratedMessage {
-  factory UserOfLiveFeed({
+class SchoolUserForLiveFeed extends $pb.GeneratedMessage {
+  factory SchoolUserForLiveFeed({
     $core.String? userId,
     $0.Role? role,
   }) {
@@ -7131,17 +7132,17 @@ class UserOfLiveFeed extends $pb.GeneratedMessage {
     return result;
   }
 
-  UserOfLiveFeed._();
+  SchoolUserForLiveFeed._();
 
-  factory UserOfLiveFeed.fromBuffer($core.List<$core.int> data,
+  factory SchoolUserForLiveFeed.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory UserOfLiveFeed.fromJson($core.String json,
+  factory SchoolUserForLiveFeed.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UserOfLiveFeed',
+      _omitMessageNames ? '' : 'SchoolUserForLiveFeed',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
       createEmptyInstance: create)
@@ -7150,25 +7151,26 @@ class UserOfLiveFeed extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UserOfLiveFeed clone() => deepCopy();
+  SchoolUserForLiveFeed clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UserOfLiveFeed copyWith(void Function(UserOfLiveFeed) updates) =>
-      super.copyWith((message) => updates(message as UserOfLiveFeed))
-          as UserOfLiveFeed;
+  SchoolUserForLiveFeed copyWith(
+          void Function(SchoolUserForLiveFeed) updates) =>
+      super.copyWith((message) => updates(message as SchoolUserForLiveFeed))
+          as SchoolUserForLiveFeed;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static UserOfLiveFeed create() => UserOfLiveFeed._();
+  static SchoolUserForLiveFeed create() => SchoolUserForLiveFeed._();
   @$core.override
-  UserOfLiveFeed createEmptyInstance() => create();
-  static $pb.PbList<UserOfLiveFeed> createRepeated() =>
-      $pb.PbList<UserOfLiveFeed>();
+  SchoolUserForLiveFeed createEmptyInstance() => create();
+  static $pb.PbList<SchoolUserForLiveFeed> createRepeated() =>
+      $pb.PbList<SchoolUserForLiveFeed>();
   @$core.pragma('dart2js:noInline')
-  static UserOfLiveFeed getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<UserOfLiveFeed>(create);
-  static UserOfLiveFeed? _defaultInstance;
+  static SchoolUserForLiveFeed getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SchoolUserForLiveFeed>(create);
+  static SchoolUserForLiveFeed? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get userId => $_getSZ(0);
@@ -8123,8 +8125,8 @@ class StudentOfSchoolForEnrollment extends $pb.GeneratedMessage {
   $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(10);
 }
 
-class ListUserAttendanceReportsRequest extends $pb.GeneratedMessage {
-  factory ListUserAttendanceReportsRequest({
+class ListSchoolAttendanceReportsRequest extends $pb.GeneratedMessage {
+  factory ListSchoolAttendanceReportsRequest({
     $0.PaginationRequest? pagination,
     $core.String? schoolId,
     $0.UserType? userType,
@@ -8155,18 +8157,18 @@ class ListUserAttendanceReportsRequest extends $pb.GeneratedMessage {
     return result;
   }
 
-  ListUserAttendanceReportsRequest._();
+  ListSchoolAttendanceReportsRequest._();
 
-  factory ListUserAttendanceReportsRequest.fromBuffer(
+  factory ListSchoolAttendanceReportsRequest.fromBuffer(
           $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory ListUserAttendanceReportsRequest.fromJson($core.String json,
+  factory ListSchoolAttendanceReportsRequest.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ListUserAttendanceReportsRequest',
+      _omitMessageNames ? '' : 'ListSchoolAttendanceReportsRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
       createEmptyInstance: create)
@@ -8192,29 +8194,29 @@ class ListUserAttendanceReportsRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListUserAttendanceReportsRequest clone() => deepCopy();
+  ListSchoolAttendanceReportsRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListUserAttendanceReportsRequest copyWith(
-          void Function(ListUserAttendanceReportsRequest) updates) =>
-      super.copyWith(
-              (message) => updates(message as ListUserAttendanceReportsRequest))
-          as ListUserAttendanceReportsRequest;
+  ListSchoolAttendanceReportsRequest copyWith(
+          void Function(ListSchoolAttendanceReportsRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as ListSchoolAttendanceReportsRequest))
+          as ListSchoolAttendanceReportsRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ListUserAttendanceReportsRequest create() =>
-      ListUserAttendanceReportsRequest._();
+  static ListSchoolAttendanceReportsRequest create() =>
+      ListSchoolAttendanceReportsRequest._();
   @$core.override
-  ListUserAttendanceReportsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListUserAttendanceReportsRequest> createRepeated() =>
-      $pb.PbList<ListUserAttendanceReportsRequest>();
+  ListSchoolAttendanceReportsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListSchoolAttendanceReportsRequest> createRepeated() =>
+      $pb.PbList<ListSchoolAttendanceReportsRequest>();
   @$core.pragma('dart2js:noInline')
-  static ListUserAttendanceReportsRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ListUserAttendanceReportsRequest>(
+  static ListSchoolAttendanceReportsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSchoolAttendanceReportsRequest>(
           create);
-  static ListUserAttendanceReportsRequest? _defaultInstance;
+  static ListSchoolAttendanceReportsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $0.PaginationRequest get pagination => $_getN(0);
@@ -8338,64 +8340,64 @@ class ListUserAttendanceReportsRequest extends $pb.GeneratedMessage {
   $1.Timestamp ensureDate() => $_ensure(11);
 }
 
-class ListUserAttendanceReportsResponse extends $pb.GeneratedMessage {
-  factory ListUserAttendanceReportsResponse({
+class ListSchoolAttendanceReportsResponse extends $pb.GeneratedMessage {
+  factory ListSchoolAttendanceReportsResponse({
     $0.PaginationResponse? pagination,
-    $core.Iterable<UserAttendanceReport>? userAttendanceReport,
+    $core.Iterable<SchoolAttendanceReport>? schoolAttendanceReport,
   }) {
     final result = create();
     if (pagination != null) result.pagination = pagination;
-    if (userAttendanceReport != null)
-      result.userAttendanceReport.addAll(userAttendanceReport);
+    if (schoolAttendanceReport != null)
+      result.schoolAttendanceReport.addAll(schoolAttendanceReport);
     return result;
   }
 
-  ListUserAttendanceReportsResponse._();
+  ListSchoolAttendanceReportsResponse._();
 
-  factory ListUserAttendanceReportsResponse.fromBuffer(
+  factory ListSchoolAttendanceReportsResponse.fromBuffer(
           $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory ListUserAttendanceReportsResponse.fromJson($core.String json,
+  factory ListSchoolAttendanceReportsResponse.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ListUserAttendanceReportsResponse',
+      _omitMessageNames ? '' : 'ListSchoolAttendanceReportsResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
       createEmptyInstance: create)
     ..aOM<$0.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
         subBuilder: $0.PaginationResponse.create)
-    ..pPM<UserAttendanceReport>(
-        2, _omitFieldNames ? '' : 'userAttendanceReport',
-        subBuilder: UserAttendanceReport.create)
+    ..pPM<SchoolAttendanceReport>(
+        2, _omitFieldNames ? '' : 'schoolAttendanceReport',
+        subBuilder: SchoolAttendanceReport.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListUserAttendanceReportsResponse clone() => deepCopy();
+  ListSchoolAttendanceReportsResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListUserAttendanceReportsResponse copyWith(
-          void Function(ListUserAttendanceReportsResponse) updates) =>
+  ListSchoolAttendanceReportsResponse copyWith(
+          void Function(ListSchoolAttendanceReportsResponse) updates) =>
       super.copyWith((message) =>
-              updates(message as ListUserAttendanceReportsResponse))
-          as ListUserAttendanceReportsResponse;
+              updates(message as ListSchoolAttendanceReportsResponse))
+          as ListSchoolAttendanceReportsResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ListUserAttendanceReportsResponse create() =>
-      ListUserAttendanceReportsResponse._();
+  static ListSchoolAttendanceReportsResponse create() =>
+      ListSchoolAttendanceReportsResponse._();
   @$core.override
-  ListUserAttendanceReportsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListUserAttendanceReportsResponse> createRepeated() =>
-      $pb.PbList<ListUserAttendanceReportsResponse>();
+  ListSchoolAttendanceReportsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListSchoolAttendanceReportsResponse> createRepeated() =>
+      $pb.PbList<ListSchoolAttendanceReportsResponse>();
   @$core.pragma('dart2js:noInline')
-  static ListUserAttendanceReportsResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ListUserAttendanceReportsResponse>(
-          create);
-  static ListUserAttendanceReportsResponse? _defaultInstance;
+  static ListSchoolAttendanceReportsResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListSchoolAttendanceReportsResponse>(create);
+  static ListSchoolAttendanceReportsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $0.PaginationResponse get pagination => $_getN(0);
@@ -8409,11 +8411,11 @@ class ListUserAttendanceReportsResponse extends $pb.GeneratedMessage {
   $0.PaginationResponse ensurePagination() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $pb.PbList<UserAttendanceReport> get userAttendanceReport => $_getList(1);
+  $pb.PbList<SchoolAttendanceReport> get schoolAttendanceReport => $_getList(1);
 }
 
-class UserAttendanceReport extends $pb.GeneratedMessage {
-  factory UserAttendanceReport({
+class SchoolAttendanceReport extends $pb.GeneratedMessage {
+  factory SchoolAttendanceReport({
     $core.String? userId,
     $core.String? firstName,
     $core.String? secondName,
@@ -8448,17 +8450,17 @@ class UserAttendanceReport extends $pb.GeneratedMessage {
     return result;
   }
 
-  UserAttendanceReport._();
+  SchoolAttendanceReport._();
 
-  factory UserAttendanceReport.fromBuffer($core.List<$core.int> data,
+  factory SchoolAttendanceReport.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory UserAttendanceReport.fromJson($core.String json,
+  factory SchoolAttendanceReport.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UserAttendanceReport',
+      _omitMessageNames ? '' : 'SchoolAttendanceReport',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
       createEmptyInstance: create)
@@ -8480,25 +8482,26 @@ class UserAttendanceReport extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UserAttendanceReport clone() => deepCopy();
+  SchoolAttendanceReport clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UserAttendanceReport copyWith(void Function(UserAttendanceReport) updates) =>
-      super.copyWith((message) => updates(message as UserAttendanceReport))
-          as UserAttendanceReport;
+  SchoolAttendanceReport copyWith(
+          void Function(SchoolAttendanceReport) updates) =>
+      super.copyWith((message) => updates(message as SchoolAttendanceReport))
+          as SchoolAttendanceReport;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static UserAttendanceReport create() => UserAttendanceReport._();
+  static SchoolAttendanceReport create() => SchoolAttendanceReport._();
   @$core.override
-  UserAttendanceReport createEmptyInstance() => create();
-  static $pb.PbList<UserAttendanceReport> createRepeated() =>
-      $pb.PbList<UserAttendanceReport>();
+  SchoolAttendanceReport createEmptyInstance() => create();
+  static $pb.PbList<SchoolAttendanceReport> createRepeated() =>
+      $pb.PbList<SchoolAttendanceReport>();
   @$core.pragma('dart2js:noInline')
-  static UserAttendanceReport getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<UserAttendanceReport>(create);
-  static UserAttendanceReport? _defaultInstance;
+  static SchoolAttendanceReport getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SchoolAttendanceReport>(create);
+  static SchoolAttendanceReport? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get userId => $_getSZ(0);
@@ -8596,6 +8599,665 @@ class UserAttendanceReport extends $pb.GeneratedMessage {
   void clearThumbnailExpiresAt() => $_clearField(11);
   @$pb.TagNumber(11)
   $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(10);
+}
+
+class GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest
+    extends $pb.GeneratedMessage {
+  factory GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest({
+    $core.Iterable<$core.String>? employeeIds,
+  }) {
+    final result = create();
+    if (employeeIds != null) result.employeeIds.addAll(employeeIds);
+    return result;
+  }
+
+  GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest._();
+
+  factory GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'employeeIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest copyWith(
+          void Function(GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest))
+          as GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest create() =>
+      GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest._();
+  @$core.override
+  GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest createEmptyInstance() =>
+      create();
+  static $pb.PbList<GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest>
+      createRepeated() =>
+          $pb.PbList<GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest>(create);
+  static GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get employeeIds => $_getList(0);
+}
+
+class GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse
+    extends $pb.GeneratedMessage {
+  factory GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse({
+    $core.Iterable<SubOrganizationEmployeesForLiveFeed>? employees,
+  }) {
+    final result = create();
+    if (employees != null) result.employees.addAll(employees);
+    return result;
+  }
+
+  GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse._();
+
+  factory GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..pPM<SubOrganizationEmployeesForLiveFeed>(
+        1, _omitFieldNames ? '' : 'employees',
+        subBuilder: SubOrganizationEmployeesForLiveFeed.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse copyWith(
+          void Function(GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse))
+          as GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse create() =>
+      GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse._();
+  @$core.override
+  GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse createEmptyInstance() =>
+      create();
+  static $pb.PbList<GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse>
+      createRepeated() =>
+          $pb.PbList<GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse>(create);
+  static GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse?
+      _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<SubOrganizationEmployeesForLiveFeed> get employees => $_getList(0);
+}
+
+class SubOrganizationEmployeesForLiveFeed extends $pb.GeneratedMessage {
+  factory SubOrganizationEmployeesForLiveFeed({
+    $core.String? employeeId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? departmentName,
+  }) {
+    final result = create();
+    if (employeeId != null) result.employeeId = employeeId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (departmentName != null) result.departmentName = departmentName;
+    return result;
+  }
+
+  SubOrganizationEmployeesForLiveFeed._();
+
+  factory SubOrganizationEmployeesForLiveFeed.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SubOrganizationEmployeesForLiveFeed.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SubOrganizationEmployeesForLiveFeed',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'employeeId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'departmentName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SubOrganizationEmployeesForLiveFeed clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SubOrganizationEmployeesForLiveFeed copyWith(
+          void Function(SubOrganizationEmployeesForLiveFeed) updates) =>
+      super.copyWith((message) =>
+              updates(message as SubOrganizationEmployeesForLiveFeed))
+          as SubOrganizationEmployeesForLiveFeed;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SubOrganizationEmployeesForLiveFeed create() =>
+      SubOrganizationEmployeesForLiveFeed._();
+  @$core.override
+  SubOrganizationEmployeesForLiveFeed createEmptyInstance() => create();
+  static $pb.PbList<SubOrganizationEmployeesForLiveFeed> createRepeated() =>
+      $pb.PbList<SubOrganizationEmployeesForLiveFeed>();
+  @$core.pragma('dart2js:noInline')
+  static SubOrganizationEmployeesForLiveFeed getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          SubOrganizationEmployeesForLiveFeed>(create);
+  static SubOrganizationEmployeesForLiveFeed? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get employeeId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set employeeId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasEmployeeId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEmployeeId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get departmentName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set departmentName($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasDepartmentName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDepartmentName() => $_clearField(4);
+}
+
+class ListSubOrganizationAttendanceReportRequest extends $pb.GeneratedMessage {
+  factory ListSubOrganizationAttendanceReportRequest({
+    $0.PaginationRequest? pagination,
+    $core.String? subOrganizationId,
+    $core.String? userName,
+    $core.String? identificationNumber,
+    $core.String? phoneNumber,
+    $0.AttendanceReportType? reportType,
+    $1.Timestamp? monthStartTime,
+    $1.Timestamp? startDate,
+    $1.Timestamp? endDate,
+    $1.Timestamp? date,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (subOrganizationId != null) result.subOrganizationId = subOrganizationId;
+    if (userName != null) result.userName = userName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (phoneNumber != null) result.phoneNumber = phoneNumber;
+    if (reportType != null) result.reportType = reportType;
+    if (monthStartTime != null) result.monthStartTime = monthStartTime;
+    if (startDate != null) result.startDate = startDate;
+    if (endDate != null) result.endDate = endDate;
+    if (date != null) result.date = date;
+    return result;
+  }
+
+  ListSubOrganizationAttendanceReportRequest._();
+
+  factory ListSubOrganizationAttendanceReportRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListSubOrganizationAttendanceReportRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListSubOrganizationAttendanceReportRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationRequest.create)
+    ..aOS(2, _omitFieldNames ? '' : 'subOrganizationId')
+    ..aOS(4, _omitFieldNames ? '' : 'userName')
+    ..aOS(5, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(6, _omitFieldNames ? '' : 'phoneNumber')
+    ..aE<$0.AttendanceReportType>(7, _omitFieldNames ? '' : 'reportType',
+        enumValues: $0.AttendanceReportType.values)
+    ..aOM<$1.Timestamp>(8, _omitFieldNames ? '' : 'monthStartTime',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(9, _omitFieldNames ? '' : 'startDate',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'endDate',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(11, _omitFieldNames ? '' : 'date',
+        subBuilder: $1.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSubOrganizationAttendanceReportRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSubOrganizationAttendanceReportRequest copyWith(
+          void Function(ListSubOrganizationAttendanceReportRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as ListSubOrganizationAttendanceReportRequest))
+          as ListSubOrganizationAttendanceReportRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListSubOrganizationAttendanceReportRequest create() =>
+      ListSubOrganizationAttendanceReportRequest._();
+  @$core.override
+  ListSubOrganizationAttendanceReportRequest createEmptyInstance() => create();
+  static $pb.PbList<ListSubOrganizationAttendanceReportRequest>
+      createRepeated() =>
+          $pb.PbList<ListSubOrganizationAttendanceReportRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListSubOrganizationAttendanceReportRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListSubOrganizationAttendanceReportRequest>(create);
+  static ListSubOrganizationAttendanceReportRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get subOrganizationId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set subOrganizationId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSubOrganizationId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSubOrganizationId() => $_clearField(2);
+
+  @$pb.TagNumber(4)
+  $core.String get userName => $_getSZ(2);
+  @$pb.TagNumber(4)
+  set userName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(4)
+  $core.bool hasUserName() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearUserName() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(5)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(5)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearIdentificationNumber() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get phoneNumber => $_getSZ(4);
+  @$pb.TagNumber(6)
+  set phoneNumber($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(6)
+  $core.bool hasPhoneNumber() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearPhoneNumber() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $0.AttendanceReportType get reportType => $_getN(5);
+  @$pb.TagNumber(7)
+  set reportType($0.AttendanceReportType value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasReportType() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearReportType() => $_clearField(7);
+
+  /// Attendance Report Type Month
+  @$pb.TagNumber(8)
+  $1.Timestamp get monthStartTime => $_getN(6);
+  @$pb.TagNumber(8)
+  set monthStartTime($1.Timestamp value) => $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasMonthStartTime() => $_has(6);
+  @$pb.TagNumber(8)
+  void clearMonthStartTime() => $_clearField(8);
+  @$pb.TagNumber(8)
+  $1.Timestamp ensureMonthStartTime() => $_ensure(6);
+
+  /// Attendance Report Type Range
+  @$pb.TagNumber(9)
+  $1.Timestamp get startDate => $_getN(7);
+  @$pb.TagNumber(9)
+  set startDate($1.Timestamp value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasStartDate() => $_has(7);
+  @$pb.TagNumber(9)
+  void clearStartDate() => $_clearField(9);
+  @$pb.TagNumber(9)
+  $1.Timestamp ensureStartDate() => $_ensure(7);
+
+  @$pb.TagNumber(10)
+  $1.Timestamp get endDate => $_getN(8);
+  @$pb.TagNumber(10)
+  set endDate($1.Timestamp value) => $_setField(10, value);
+  @$pb.TagNumber(10)
+  $core.bool hasEndDate() => $_has(8);
+  @$pb.TagNumber(10)
+  void clearEndDate() => $_clearField(10);
+  @$pb.TagNumber(10)
+  $1.Timestamp ensureEndDate() => $_ensure(8);
+
+  /// Attendance Report Type Single Date
+  @$pb.TagNumber(11)
+  $1.Timestamp get date => $_getN(9);
+  @$pb.TagNumber(11)
+  set date($1.Timestamp value) => $_setField(11, value);
+  @$pb.TagNumber(11)
+  $core.bool hasDate() => $_has(9);
+  @$pb.TagNumber(11)
+  void clearDate() => $_clearField(11);
+  @$pb.TagNumber(11)
+  $1.Timestamp ensureDate() => $_ensure(9);
+}
+
+class ListSubOrganizationAttendanceReportResponse extends $pb.GeneratedMessage {
+  factory ListSubOrganizationAttendanceReportResponse({
+    $0.PaginationResponse? pagination,
+    $core.Iterable<SubOrganizationAttendanceReport>? userAttendanceReport,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (userAttendanceReport != null)
+      result.userAttendanceReport.addAll(userAttendanceReport);
+    return result;
+  }
+
+  ListSubOrganizationAttendanceReportResponse._();
+
+  factory ListSubOrganizationAttendanceReportResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListSubOrganizationAttendanceReportResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListSubOrganizationAttendanceReportResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $0.PaginationResponse.create)
+    ..pPM<SubOrganizationAttendanceReport>(
+        2, _omitFieldNames ? '' : 'userAttendanceReport',
+        subBuilder: SubOrganizationAttendanceReport.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSubOrganizationAttendanceReportResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSubOrganizationAttendanceReportResponse copyWith(
+          void Function(ListSubOrganizationAttendanceReportResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as ListSubOrganizationAttendanceReportResponse))
+          as ListSubOrganizationAttendanceReportResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListSubOrganizationAttendanceReportResponse create() =>
+      ListSubOrganizationAttendanceReportResponse._();
+  @$core.override
+  ListSubOrganizationAttendanceReportResponse createEmptyInstance() => create();
+  static $pb.PbList<ListSubOrganizationAttendanceReportResponse>
+      createRepeated() =>
+          $pb.PbList<ListSubOrganizationAttendanceReportResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListSubOrganizationAttendanceReportResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListSubOrganizationAttendanceReportResponse>(create);
+  static ListSubOrganizationAttendanceReportResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($0.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<SubOrganizationAttendanceReport> get userAttendanceReport =>
+      $_getList(1);
+}
+
+class SubOrganizationAttendanceReport extends $pb.GeneratedMessage {
+  factory SubOrganizationAttendanceReport({
+    $core.String? employeeId,
+    $core.String? firstName,
+    $core.String? secondName,
+    $core.String? identificationNumber,
+    $core.String? departmentName,
+    $core.Iterable<$3.UserDateShiftAttendances>? userDateAttendances,
+    $core.String? userThumbnailUrl,
+    $1.Timestamp? thumbnailUpdatedAt,
+    $1.Timestamp? thumbnailExpiresAt,
+  }) {
+    final result = create();
+    if (employeeId != null) result.employeeId = employeeId;
+    if (firstName != null) result.firstName = firstName;
+    if (secondName != null) result.secondName = secondName;
+    if (identificationNumber != null)
+      result.identificationNumber = identificationNumber;
+    if (departmentName != null) result.departmentName = departmentName;
+    if (userDateAttendances != null)
+      result.userDateAttendances.addAll(userDateAttendances);
+    if (userThumbnailUrl != null) result.userThumbnailUrl = userThumbnailUrl;
+    if (thumbnailUpdatedAt != null)
+      result.thumbnailUpdatedAt = thumbnailUpdatedAt;
+    if (thumbnailExpiresAt != null)
+      result.thumbnailExpiresAt = thumbnailExpiresAt;
+    return result;
+  }
+
+  SubOrganizationAttendanceReport._();
+
+  factory SubOrganizationAttendanceReport.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SubOrganizationAttendanceReport.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SubOrganizationAttendanceReport',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'gateway_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'employeeId')
+    ..aOS(2, _omitFieldNames ? '' : 'firstName')
+    ..aOS(3, _omitFieldNames ? '' : 'secondName')
+    ..aOS(4, _omitFieldNames ? '' : 'identificationNumber')
+    ..aOS(5, _omitFieldNames ? '' : 'departmentName')
+    ..pPM<$3.UserDateShiftAttendances>(
+        6, _omitFieldNames ? '' : 'userDateAttendances',
+        subBuilder: $3.UserDateShiftAttendances.create)
+    ..aOS(7, _omitFieldNames ? '' : 'userThumbnailUrl')
+    ..aOM<$1.Timestamp>(8, _omitFieldNames ? '' : 'thumbnailUpdatedAt',
+        subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(9, _omitFieldNames ? '' : 'thumbnailExpiresAt',
+        subBuilder: $1.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SubOrganizationAttendanceReport clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SubOrganizationAttendanceReport copyWith(
+          void Function(SubOrganizationAttendanceReport) updates) =>
+      super.copyWith(
+              (message) => updates(message as SubOrganizationAttendanceReport))
+          as SubOrganizationAttendanceReport;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SubOrganizationAttendanceReport create() =>
+      SubOrganizationAttendanceReport._();
+  @$core.override
+  SubOrganizationAttendanceReport createEmptyInstance() => create();
+  static $pb.PbList<SubOrganizationAttendanceReport> createRepeated() =>
+      $pb.PbList<SubOrganizationAttendanceReport>();
+  @$core.pragma('dart2js:noInline')
+  static SubOrganizationAttendanceReport getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SubOrganizationAttendanceReport>(
+          create);
+  static SubOrganizationAttendanceReport? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get employeeId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set employeeId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasEmployeeId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEmployeeId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get firstName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set firstName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasFirstName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFirstName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get secondName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set secondName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSecondName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSecondName() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get identificationNumber => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set identificationNumber($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasIdentificationNumber() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIdentificationNumber() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get departmentName => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set departmentName($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasDepartmentName() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDepartmentName() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $pb.PbList<$3.UserDateShiftAttendances> get userDateAttendances =>
+      $_getList(5);
+
+  @$pb.TagNumber(7)
+  $core.String get userThumbnailUrl => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set userThumbnailUrl($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasUserThumbnailUrl() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearUserThumbnailUrl() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $1.Timestamp get thumbnailUpdatedAt => $_getN(7);
+  @$pb.TagNumber(8)
+  set thumbnailUpdatedAt($1.Timestamp value) => $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasThumbnailUpdatedAt() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearThumbnailUpdatedAt() => $_clearField(8);
+  @$pb.TagNumber(8)
+  $1.Timestamp ensureThumbnailUpdatedAt() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  $1.Timestamp get thumbnailExpiresAt => $_getN(8);
+  @$pb.TagNumber(9)
+  set thumbnailExpiresAt($1.Timestamp value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasThumbnailExpiresAt() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearThumbnailExpiresAt() => $_clearField(9);
+  @$pb.TagNumber(9)
+  $1.Timestamp ensureThumbnailExpiresAt() => $_ensure(8);
 }
 
 const $core.bool _omitFieldNames =

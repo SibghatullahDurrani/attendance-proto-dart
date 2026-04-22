@@ -296,5 +296,30 @@ class UserType extends $pb.ProtobufEnum {
   const UserType._(super.value, super.name);
 }
 
+class ShiftBelongsTo extends $pb.ProtobufEnum {
+  static const ShiftBelongsTo SCHOOL =
+      ShiftBelongsTo._(0, _omitEnumNames ? '' : 'SCHOOL');
+  static const ShiftBelongsTo SCHOOL_CHAIN =
+      ShiftBelongsTo._(1, _omitEnumNames ? '' : 'SCHOOL_CHAIN');
+  static const ShiftBelongsTo ORGANIZATION =
+      ShiftBelongsTo._(3, _omitEnumNames ? '' : 'ORGANIZATION');
+  static const ShiftBelongsTo SUB_ORGANIZATION =
+      ShiftBelongsTo._(4, _omitEnumNames ? '' : 'SUB_ORGANIZATION');
+
+  static const $core.List<ShiftBelongsTo> values = <ShiftBelongsTo>[
+    SCHOOL,
+    SCHOOL_CHAIN,
+    ORGANIZATION,
+    SUB_ORGANIZATION,
+  ];
+
+  static final $core.List<ShiftBelongsTo?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 4);
+  static ShiftBelongsTo? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const ShiftBelongsTo._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');

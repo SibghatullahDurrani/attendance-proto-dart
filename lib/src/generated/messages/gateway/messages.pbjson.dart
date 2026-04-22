@@ -3180,7 +3180,7 @@ const GetBatchUsersInfoOfSchoolForLiveFeedRequest$json = {
       '3': 1,
       '4': 3,
       '5': 11,
-      '6': '.gateway_messages.UserOfLiveFeed',
+      '6': '.gateway_messages.SchoolUserForLiveFeed',
       '10': 'users'
     },
   ],
@@ -3190,12 +3190,12 @@ const GetBatchUsersInfoOfSchoolForLiveFeedRequest$json = {
 final $typed_data.Uint8List
     getBatchUsersInfoOfSchoolForLiveFeedRequestDescriptor =
     $convert.base64Decode(
-        'CitHZXRCYXRjaFVzZXJzSW5mb09mU2Nob29sRm9yTGl2ZUZlZWRSZXF1ZXN0EjYKBXVzZXJzGA'
-        'EgAygLMiAuZ2F0ZXdheV9tZXNzYWdlcy5Vc2VyT2ZMaXZlRmVlZFIFdXNlcnM=');
+        'CitHZXRCYXRjaFVzZXJzSW5mb09mU2Nob29sRm9yTGl2ZUZlZWRSZXF1ZXN0Ej0KBXVzZXJzGA'
+        'EgAygLMicuZ2F0ZXdheV9tZXNzYWdlcy5TY2hvb2xVc2VyRm9yTGl2ZUZlZWRSBXVzZXJz');
 
-@$core.Deprecated('Use userOfLiveFeedDescriptor instead')
-const UserOfLiveFeed$json = {
-  '1': 'UserOfLiveFeed',
+@$core.Deprecated('Use schoolUserForLiveFeedDescriptor instead')
+const SchoolUserForLiveFeed$json = {
+  '1': 'SchoolUserForLiveFeed',
   '2': [
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
     {
@@ -3209,10 +3209,10 @@ const UserOfLiveFeed$json = {
   ],
 };
 
-/// Descriptor for `UserOfLiveFeed`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List userOfLiveFeedDescriptor = $convert.base64Decode(
-    'Cg5Vc2VyT2ZMaXZlRmVlZBIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQSKQoEcm9sZRgCIAEoDj'
-    'IVLmNvbW1vbl9tZXNzYWdlcy5Sb2xlUgRyb2xl');
+/// Descriptor for `SchoolUserForLiveFeed`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schoolUserForLiveFeedDescriptor = $convert.base64Decode(
+    'ChVTY2hvb2xVc2VyRm9yTGl2ZUZlZWQSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEikKBHJvbG'
+    'UYAiABKA4yFS5jb21tb25fbWVzc2FnZXMuUm9sZVIEcm9sZQ==');
 
 @$core.Deprecated(
     'Use getBatchUsersInfoOfSchoolForLiveFeedResponseDescriptor instead')
@@ -3703,9 +3703,9 @@ final $typed_data.Uint8List studentOfSchoolForEnrollmentDescriptor = $convert.ba
     'cm9sbG1lbnRfc3RhdHVzQhUKE191c2VyX3RodW1ibmFpbF91cmxCFwoVX3RodW1ibmFpbF91cG'
     'RhdGVkX2F0QhcKFV90aHVtYm5haWxfZXhwaXJlc19hdA==');
 
-@$core.Deprecated('Use listUserAttendanceReportsRequestDescriptor instead')
-const ListUserAttendanceReportsRequest$json = {
-  '1': 'ListUserAttendanceReportsRequest',
+@$core.Deprecated('Use listSchoolAttendanceReportsRequestDescriptor instead')
+const ListSchoolAttendanceReportsRequest$json = {
+  '1': 'ListSchoolAttendanceReportsRequest',
   '2': [
     {
       '1': 'pagination',
@@ -3821,27 +3821,27 @@ const ListUserAttendanceReportsRequest$json = {
   ],
 };
 
-/// Descriptor for `ListUserAttendanceReportsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List listUserAttendanceReportsRequestDescriptor = $convert.base64Decode(
-    'CiBMaXN0VXNlckF0dGVuZGFuY2VSZXBvcnRzUmVxdWVzdBJCCgpwYWdpbmF0aW9uGAEgASgLMi'
-    'IuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9uEhsKCXNjaG9v'
-    'bF9pZBgCIAEoCVIIc2Nob29sSWQSNgoJdXNlcl90eXBlGAMgASgOMhkuY29tbW9uX21lc3NhZ2'
-    'VzLlVzZXJUeXBlUgh1c2VyVHlwZRIgCgl1c2VyX25hbWUYBCABKAlIAFIIdXNlck5hbWWIAQES'
-    'OAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAUgASgJSAFSFGlkZW50aWZpY2F0aW9uTnVtYmVyiA'
-    'EBEiYKDHBob25lX251bWJlchgGIAEoCUgCUgtwaG9uZU51bWJlcogBARIeCghjbGFzc19pZBgH'
-    'IAEoCUgDUgdjbGFzc0lkiAEBEkYKC3JlcG9ydF90eXBlGAggASgOMiUuY29tbW9uX21lc3NhZ2'
-    'VzLkF0dGVuZGFuY2VSZXBvcnRUeXBlUgpyZXBvcnRUeXBlEkkKEG1vbnRoX3N0YXJ0X3RpbWUY'
-    'CSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSARSDm1vbnRoU3RhcnRUaW1liAEBEj'
-    '4KCnN0YXJ0X2RhdGUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAVSCXN0YXJ0'
-    'RGF0ZYgBARI6CghlbmRfZGF0ZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBl'
-    'IHZW5kRGF0ZYgBARIzCgRkYXRlGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgH'
-    'UgRkYXRliAEBQgwKCl91c2VyX25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX251bWJlckIPCg1fcG'
-    'hvbmVfbnVtYmVyQgsKCV9jbGFzc19pZEITChFfbW9udGhfc3RhcnRfdGltZUINCgtfc3RhcnRf'
-    'ZGF0ZUILCglfZW5kX2RhdGVCBwoFX2RhdGU=');
+/// Descriptor for `ListSchoolAttendanceReportsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSchoolAttendanceReportsRequestDescriptor = $convert.base64Decode(
+    'CiJMaXN0U2Nob29sQXR0ZW5kYW5jZVJlcG9ydHNSZXF1ZXN0EkIKCnBhZ2luYXRpb24YASABKA'
+    'syIi5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SGwoJc2No'
+    'b29sX2lkGAIgASgJUghzY2hvb2xJZBI2Cgl1c2VyX3R5cGUYAyABKA4yGS5jb21tb25fbWVzc2'
+    'FnZXMuVXNlclR5cGVSCHVzZXJUeXBlEiAKCXVzZXJfbmFtZRgEIAEoCUgAUgh1c2VyTmFtZYgB'
+    'ARI4ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBSABKAlIAVIUaWRlbnRpZmljYXRpb25OdW1iZX'
+    'KIAQESJgoMcGhvbmVfbnVtYmVyGAYgASgJSAJSC3Bob25lTnVtYmVyiAEBEh4KCGNsYXNzX2lk'
+    'GAcgASgJSANSB2NsYXNzSWSIAQESRgoLcmVwb3J0X3R5cGUYCCABKA4yJS5jb21tb25fbWVzc2'
+    'FnZXMuQXR0ZW5kYW5jZVJlcG9ydFR5cGVSCnJlcG9ydFR5cGUSSQoQbW9udGhfc3RhcnRfdGlt'
+    'ZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBFIObW9udGhTdGFydFRpbWWIAQ'
+    'ESPgoKc3RhcnRfZGF0ZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBVIJc3Rh'
+    'cnREYXRliAEBEjoKCGVuZF9kYXRlGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcE'
+    'gGUgdlbmREYXRliAEBEjMKBGRhdGUYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w'
+    'SAdSBGRhdGWIAQFCDAoKX3VzZXJfbmFtZUIYChZfaWRlbnRpZmljYXRpb25fbnVtYmVyQg8KDV'
+    '9waG9uZV9udW1iZXJCCwoJX2NsYXNzX2lkQhMKEV9tb250aF9zdGFydF90aW1lQg0KC19zdGFy'
+    'dF9kYXRlQgsKCV9lbmRfZGF0ZUIHCgVfZGF0ZQ==');
 
-@$core.Deprecated('Use listUserAttendanceReportsResponseDescriptor instead')
-const ListUserAttendanceReportsResponse$json = {
-  '1': 'ListUserAttendanceReportsResponse',
+@$core.Deprecated('Use listSchoolAttendanceReportsResponseDescriptor instead')
+const ListSchoolAttendanceReportsResponse$json = {
+  '1': 'ListSchoolAttendanceReportsResponse',
   '2': [
     {
       '1': 'pagination',
@@ -3852,27 +3852,27 @@ const ListUserAttendanceReportsResponse$json = {
       '10': 'pagination'
     },
     {
-      '1': 'user_attendance_report',
+      '1': 'school_attendance_report',
       '3': 2,
       '4': 3,
       '5': 11,
-      '6': '.gateway_messages.UserAttendanceReport',
-      '10': 'userAttendanceReport'
+      '6': '.gateway_messages.SchoolAttendanceReport',
+      '10': 'schoolAttendanceReport'
     },
   ],
 };
 
-/// Descriptor for `ListUserAttendanceReportsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List listUserAttendanceReportsResponseDescriptor =
+/// Descriptor for `ListSchoolAttendanceReportsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSchoolAttendanceReportsResponseDescriptor =
     $convert.base64Decode(
-        'CiFMaXN0VXNlckF0dGVuZGFuY2VSZXBvcnRzUmVzcG9uc2USQwoKcGFnaW5hdGlvbhgBIAEoCz'
-        'IjLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVzcG9uc2VSCnBhZ2luYXRpb24SXAoWdXNl'
-        'cl9hdHRlbmRhbmNlX3JlcG9ydBgCIAMoCzImLmdhdGV3YXlfbWVzc2FnZXMuVXNlckF0dGVuZG'
-        'FuY2VSZXBvcnRSFHVzZXJBdHRlbmRhbmNlUmVwb3J0');
+        'CiNMaXN0U2Nob29sQXR0ZW5kYW5jZVJlcG9ydHNSZXNwb25zZRJDCgpwYWdpbmF0aW9uGAEgAS'
+        'gLMiMuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIKcGFnaW5hdGlvbhJiChhz'
+        'Y2hvb2xfYXR0ZW5kYW5jZV9yZXBvcnQYAiADKAsyKC5nYXRld2F5X21lc3NhZ2VzLlNjaG9vbE'
+        'F0dGVuZGFuY2VSZXBvcnRSFnNjaG9vbEF0dGVuZGFuY2VSZXBvcnQ=');
 
-@$core.Deprecated('Use userAttendanceReportDescriptor instead')
-const UserAttendanceReport$json = {
-  '1': 'UserAttendanceReport',
+@$core.Deprecated('Use schoolAttendanceReportDescriptor instead')
+const SchoolAttendanceReport$json = {
+  '1': 'SchoolAttendanceReport',
   '2': [
     {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
     {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
@@ -3971,21 +3971,335 @@ const UserAttendanceReport$json = {
   ],
 };
 
-/// Descriptor for `UserAttendanceReport`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List userAttendanceReportDescriptor = $convert.base64Decode(
-    'ChRVc2VyQXR0ZW5kYW5jZVJlcG9ydBIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQSHQoKZmlyc3'
-    'RfbmFtZRgCIAEoCVIJZmlyc3ROYW1lEiQKC3NlY29uZF9uYW1lGAMgASgJSABSCnNlY29uZE5h'
-    'bWWIAQESOAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAQgASgJSAFSFGlkZW50aWZpY2F0aW9uTn'
-    'VtYmVyiAEBEjwKGGxhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZRgFIAEoCUgCUhVsYXN0QXR0ZW5k'
-    'ZWRDbGFzc05hbWWIAQESQAoabGFzdF9hdHRlbmRlZF9zZWN0aW9uX25hbWUYBiABKAlIA1IXbG'
-    'FzdEF0dGVuZGVkU2VjdGlvbk5hbWWIAQESQAoabGFzdF9hdHRlbmRlZF9zZXNzaW9uX25hbWUY'
-    'ByABKAlIBFIXbGFzdEF0dGVuZGVkU2Vzc2lvbk5hbWWIAQESWgoVdXNlcl9kYXRlX2F0dGVuZG'
-    'FuY2VzGAggAygLMiYuY29tbW9uX21lc3NhZ2VzLlVzZXJEYXRlQXR0ZW5kYW5jZU1hcFITdXNl'
-    'ckRhdGVBdHRlbmRhbmNlcxIxChJ1c2VyX3RodW1ibmFpbF91cmwYCSABKAlIBVIQdXNlclRodW'
-    '1ibmFpbFVybIgBARJRChR0aHVtYm5haWxfdXBkYXRlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90'
-    'b2J1Zi5UaW1lc3RhbXBIBlISdGh1bWJuYWlsVXBkYXRlZEF0iAEBElEKFHRodW1ibmFpbF9leH'
-    'BpcmVzX2F0GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgHUhJ0aHVtYm5haWxF'
-    'eHBpcmVzQXSIAQFCDgoMX3NlY29uZF9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCGw'
-    'oZX2xhc3RfYXR0ZW5kZWRfY2xhc3NfbmFtZUIdChtfbGFzdF9hdHRlbmRlZF9zZWN0aW9uX25h'
-    'bWVCHQobX2xhc3RfYXR0ZW5kZWRfc2Vzc2lvbl9uYW1lQhUKE191c2VyX3RodW1ibmFpbF91cm'
-    'xCFwoVX3RodW1ibmFpbF91cGRhdGVkX2F0QhcKFV90aHVtYm5haWxfZXhwaXJlc19hdA==');
+/// Descriptor for `SchoolAttendanceReport`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schoolAttendanceReportDescriptor = $convert.base64Decode(
+    'ChZTY2hvb2xBdHRlbmRhbmNlUmVwb3J0EhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIdCgpmaX'
+    'JzdF9uYW1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25kX25hbWUYAyABKAlIAFIKc2Vjb25k'
+    'TmFtZYgBARI4ChVpZGVudGlmaWNhdGlvbl9udW1iZXIYBCABKAlIAVIUaWRlbnRpZmljYXRpb2'
+    '5OdW1iZXKIAQESPAoYbGFzdF9hdHRlbmRlZF9jbGFzc19uYW1lGAUgASgJSAJSFWxhc3RBdHRl'
+    'bmRlZENsYXNzTmFtZYgBARJAChpsYXN0X2F0dGVuZGVkX3NlY3Rpb25fbmFtZRgGIAEoCUgDUh'
+    'dsYXN0QXR0ZW5kZWRTZWN0aW9uTmFtZYgBARJAChpsYXN0X2F0dGVuZGVkX3Nlc3Npb25fbmFt'
+    'ZRgHIAEoCUgEUhdsYXN0QXR0ZW5kZWRTZXNzaW9uTmFtZYgBARJaChV1c2VyX2RhdGVfYXR0ZW'
+    '5kYW5jZXMYCCADKAsyJi5jb21tb25fbWVzc2FnZXMuVXNlckRhdGVBdHRlbmRhbmNlTWFwUhN1'
+    'c2VyRGF0ZUF0dGVuZGFuY2VzEjEKEnVzZXJfdGh1bWJuYWlsX3VybBgJIAEoCUgFUhB1c2VyVG'
+    'h1bWJuYWlsVXJsiAEBElEKFHRodW1ibmFpbF91cGRhdGVkX2F0GAogASgLMhouZ29vZ2xlLnBy'
+    'b3RvYnVmLlRpbWVzdGFtcEgGUhJ0aHVtYm5haWxVcGRhdGVkQXSIAQESUQoUdGh1bWJuYWlsX2'
+    'V4cGlyZXNfYXQYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAdSEnRodW1ibmFp'
+    'bEV4cGlyZXNBdIgBAUIOCgxfc2Vjb25kX25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX251bWJlck'
+    'IbChlfbGFzdF9hdHRlbmRlZF9jbGFzc19uYW1lQh0KG19sYXN0X2F0dGVuZGVkX3NlY3Rpb25f'
+    'bmFtZUIdChtfbGFzdF9hdHRlbmRlZF9zZXNzaW9uX25hbWVCFQoTX3VzZXJfdGh1bWJuYWlsX3'
+    'VybEIXChVfdGh1bWJuYWlsX3VwZGF0ZWRfYXRCFwoVX3RodW1ibmFpbF9leHBpcmVzX2F0');
+
+@$core.Deprecated(
+    'Use getBatchUsersInfoOfSubOrganizationForLiveFeedRequestDescriptor instead')
+const GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest$json = {
+  '1': 'GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest',
+  '2': [
+    {'1': 'employee_ids', '3': 1, '4': 3, '5': 9, '10': 'employeeIds'},
+  ],
+};
+
+/// Descriptor for `GetBatchUsersInfoOfSubOrganizationForLiveFeedRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getBatchUsersInfoOfSubOrganizationForLiveFeedRequestDescriptor =
+    $convert.base64Decode(
+        'CjRHZXRCYXRjaFVzZXJzSW5mb09mU3ViT3JnYW5pemF0aW9uRm9yTGl2ZUZlZWRSZXF1ZXN0Ei'
+        'EKDGVtcGxveWVlX2lkcxgBIAMoCVILZW1wbG95ZWVJZHM=');
+
+@$core.Deprecated(
+    'Use getBatchUsersInfoOfSubOrganizationForLiveFeedResponseDescriptor instead')
+const GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse$json = {
+  '1': 'GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse',
+  '2': [
+    {
+      '1': 'employees',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.SubOrganizationEmployeesForLiveFeed',
+      '10': 'employees'
+    },
+  ],
+};
+
+/// Descriptor for `GetBatchUsersInfoOfSubOrganizationForLiveFeedResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getBatchUsersInfoOfSubOrganizationForLiveFeedResponseDescriptor =
+    $convert.base64Decode(
+        'CjVHZXRCYXRjaFVzZXJzSW5mb09mU3ViT3JnYW5pemF0aW9uRm9yTGl2ZUZlZWRSZXNwb25zZR'
+        'JTCgllbXBsb3llZXMYASADKAsyNS5nYXRld2F5X21lc3NhZ2VzLlN1Yk9yZ2FuaXphdGlvbkVt'
+        'cGxveWVlc0ZvckxpdmVGZWVkUgllbXBsb3llZXM=');
+
+@$core.Deprecated('Use subOrganizationEmployeesForLiveFeedDescriptor instead')
+const SubOrganizationEmployeesForLiveFeed$json = {
+  '1': 'SubOrganizationEmployeesForLiveFeed',
+  '2': [
+    {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {'1': 'department_name', '3': 4, '4': 1, '5': 9, '10': 'departmentName'},
+  ],
+  '8': [
+    {'1': '_second_name'},
+  ],
+};
+
+/// Descriptor for `SubOrganizationEmployeesForLiveFeed`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List subOrganizationEmployeesForLiveFeedDescriptor =
+    $convert.base64Decode(
+        'CiNTdWJPcmdhbml6YXRpb25FbXBsb3llZXNGb3JMaXZlRmVlZBIfCgtlbXBsb3llZV9pZBgBIA'
+        'EoCVIKZW1wbG95ZWVJZBIdCgpmaXJzdF9uYW1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25k'
+        'X25hbWUYAyABKAlIAFIKc2Vjb25kTmFtZYgBARInCg9kZXBhcnRtZW50X25hbWUYBCABKAlSDm'
+        'RlcGFydG1lbnROYW1lQg4KDF9zZWNvbmRfbmFtZQ==');
+
+@$core.Deprecated(
+    'Use listSubOrganizationAttendanceReportRequestDescriptor instead')
+const ListSubOrganizationAttendanceReportRequest$json = {
+  '1': 'ListSubOrganizationAttendanceReportRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {
+      '1': 'sub_organization_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'subOrganizationId'
+    },
+    {
+      '1': 'user_name',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'userName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {
+      '1': 'phone_number',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'phoneNumber',
+      '17': true
+    },
+    {
+      '1': 'report_type',
+      '3': 7,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.AttendanceReportType',
+      '10': 'reportType'
+    },
+    {
+      '1': 'month_start_time',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 3,
+      '10': 'monthStartTime',
+      '17': true
+    },
+    {
+      '1': 'start_date',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 4,
+      '10': 'startDate',
+      '17': true
+    },
+    {
+      '1': 'end_date',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 5,
+      '10': 'endDate',
+      '17': true
+    },
+    {
+      '1': 'date',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 6,
+      '10': 'date',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_user_name'},
+    {'1': '_identification_number'},
+    {'1': '_phone_number'},
+    {'1': '_month_start_time'},
+    {'1': '_start_date'},
+    {'1': '_end_date'},
+    {'1': '_date'},
+  ],
+};
+
+/// Descriptor for `ListSubOrganizationAttendanceReportRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSubOrganizationAttendanceReportRequestDescriptor = $convert.base64Decode(
+    'CipMaXN0U3ViT3JnYW5pemF0aW9uQXR0ZW5kYW5jZVJlcG9ydFJlcXVlc3QSQgoKcGFnaW5hdG'
+    'lvbhgBIAEoCzIiLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlv'
+    'bhIuChNzdWJfb3JnYW5pemF0aW9uX2lkGAIgASgJUhFzdWJPcmdhbml6YXRpb25JZBIgCgl1c2'
+    'VyX25hbWUYBCABKAlIAFIIdXNlck5hbWWIAQESOAoVaWRlbnRpZmljYXRpb25fbnVtYmVyGAUg'
+    'ASgJSAFSFGlkZW50aWZpY2F0aW9uTnVtYmVyiAEBEiYKDHBob25lX251bWJlchgGIAEoCUgCUg'
+    'twaG9uZU51bWJlcogBARJGCgtyZXBvcnRfdHlwZRgHIAEoDjIlLmNvbW1vbl9tZXNzYWdlcy5B'
+    'dHRlbmRhbmNlUmVwb3J0VHlwZVIKcmVwb3J0VHlwZRJJChBtb250aF9zdGFydF90aW1lGAggAS'
+    'gLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgDUg5tb250aFN0YXJ0VGltZYgBARI+Cgpz'
+    'dGFydF9kYXRlGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgEUglzdGFydERhdG'
+    'WIAQESOgoIZW5kX2RhdGUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAVSB2Vu'
+    'ZERhdGWIAQESMwoEZGF0ZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBlIEZG'
+    'F0ZYgBAUIMCgpfdXNlcl9uYW1lQhgKFl9pZGVudGlmaWNhdGlvbl9udW1iZXJCDwoNX3Bob25l'
+    'X251bWJlckITChFfbW9udGhfc3RhcnRfdGltZUINCgtfc3RhcnRfZGF0ZUILCglfZW5kX2RhdG'
+    'VCBwoFX2RhdGU=');
+
+@$core.Deprecated(
+    'Use listSubOrganizationAttendanceReportResponseDescriptor instead')
+const ListSubOrganizationAttendanceReportResponse$json = {
+  '1': 'ListSubOrganizationAttendanceReportResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'user_attendance_report',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.gateway_messages.SubOrganizationAttendanceReport',
+      '10': 'userAttendanceReport'
+    },
+  ],
+};
+
+/// Descriptor for `ListSubOrganizationAttendanceReportResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    listSubOrganizationAttendanceReportResponseDescriptor =
+    $convert.base64Decode(
+        'CitMaXN0U3ViT3JnYW5pemF0aW9uQXR0ZW5kYW5jZVJlcG9ydFJlc3BvbnNlEkMKCnBhZ2luYX'
+        'Rpb24YASABKAsyIy5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpwYWdpbmF0'
+        'aW9uEmcKFnVzZXJfYXR0ZW5kYW5jZV9yZXBvcnQYAiADKAsyMS5nYXRld2F5X21lc3NhZ2VzLl'
+        'N1Yk9yZ2FuaXphdGlvbkF0dGVuZGFuY2VSZXBvcnRSFHVzZXJBdHRlbmRhbmNlUmVwb3J0');
+
+@$core.Deprecated('Use subOrganizationAttendanceReportDescriptor instead')
+const SubOrganizationAttendanceReport$json = {
+  '1': 'SubOrganizationAttendanceReport',
+  '2': [
+    {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
+    {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
+    {
+      '1': 'second_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'secondName',
+      '17': true
+    },
+    {
+      '1': 'identification_number',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'identificationNumber',
+      '17': true
+    },
+    {'1': 'department_name', '3': 5, '4': 1, '5': 9, '10': 'departmentName'},
+    {
+      '1': 'user_date_attendances',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.UserDateShiftAttendances',
+      '10': 'userDateAttendances'
+    },
+    {
+      '1': 'user_thumbnail_url',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '9': 2,
+      '10': 'userThumbnailUrl',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_updated_at',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 3,
+      '10': 'thumbnailUpdatedAt',
+      '17': true
+    },
+    {
+      '1': 'thumbnail_expires_at',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 4,
+      '10': 'thumbnailExpiresAt',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_second_name'},
+    {'1': '_identification_number'},
+    {'1': '_user_thumbnail_url'},
+    {'1': '_thumbnail_updated_at'},
+    {'1': '_thumbnail_expires_at'},
+  ],
+};
+
+/// Descriptor for `SubOrganizationAttendanceReport`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List subOrganizationAttendanceReportDescriptor = $convert.base64Decode(
+    'Ch9TdWJPcmdhbml6YXRpb25BdHRlbmRhbmNlUmVwb3J0Eh8KC2VtcGxveWVlX2lkGAEgASgJUg'
+    'plbXBsb3llZUlkEh0KCmZpcnN0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNvbmRfbmFt'
+    'ZRgDIAEoCUgAUgpzZWNvbmROYW1liAEBEjgKFWlkZW50aWZpY2F0aW9uX251bWJlchgEIAEoCU'
+    'gBUhRpZGVudGlmaWNhdGlvbk51bWJlcogBARInCg9kZXBhcnRtZW50X25hbWUYBSABKAlSDmRl'
+    'cGFydG1lbnROYW1lEmEKFXVzZXJfZGF0ZV9hdHRlbmRhbmNlcxgGIAMoCzItLmF0dGVuZGFuY2'
+    'VfbWVzc2FnZXMuVXNlckRhdGVTaGlmdEF0dGVuZGFuY2VzUhN1c2VyRGF0ZUF0dGVuZGFuY2Vz'
+    'EjEKEnVzZXJfdGh1bWJuYWlsX3VybBgHIAEoCUgCUhB1c2VyVGh1bWJuYWlsVXJsiAEBElEKFH'
+    'RodW1ibmFpbF91cGRhdGVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgD'
+    'UhJ0aHVtYm5haWxVcGRhdGVkQXSIAQESUQoUdGh1bWJuYWlsX2V4cGlyZXNfYXQYCSABKAsyGi'
+    '5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSARSEnRodW1ibmFpbEV4cGlyZXNBdIgBAUIOCgxf'
+    'c2Vjb25kX25hbWVCGAoWX2lkZW50aWZpY2F0aW9uX251bWJlckIVChNfdXNlcl90aHVtYm5haW'
+    'xfdXJsQhcKFV90aHVtYm5haWxfdXBkYXRlZF9hdEIXChVfdGh1bWJuYWlsX2V4cGlyZXNfYXQ=');

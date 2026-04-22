@@ -104,6 +104,7 @@ const RegisterStudentSagaResponse$json = {
   '1': 'RegisterStudentSagaResponse',
   '2': [
     {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
+    {'1': 'saga_id', '3': 2, '4': 1, '5': 9, '10': 'sagaId'},
   ],
 };
 
@@ -111,7 +112,7 @@ const RegisterStudentSagaResponse$json = {
 final $typed_data.Uint8List registerStudentSagaResponseDescriptor =
     $convert.base64Decode(
         'ChtSZWdpc3RlclN0dWRlbnRTYWdhUmVzcG9uc2USHQoKc3R1ZGVudF9pZBgBIAEoCVIJc3R1ZG'
-        'VudElk');
+        'VudElkEhcKB3NhZ2FfaWQYAiABKAlSBnNhZ2FJZA==');
 
 @$core.Deprecated('Use registerTeacherSagaRequestDescriptor instead')
 const RegisterTeacherSagaRequest$json = {
@@ -170,6 +171,7 @@ const RegisterTeacherSagaResponse$json = {
   '1': 'RegisterTeacherSagaResponse',
   '2': [
     {'1': 'teacher_id', '3': 1, '4': 1, '5': 9, '10': 'teacherId'},
+    {'1': 'saga_id', '3': 2, '4': 1, '5': 9, '10': 'sagaId'},
   ],
 };
 
@@ -177,7 +179,7 @@ const RegisterTeacherSagaResponse$json = {
 final $typed_data.Uint8List registerTeacherSagaResponseDescriptor =
     $convert.base64Decode(
         'ChtSZWdpc3RlclRlYWNoZXJTYWdhUmVzcG9uc2USHQoKdGVhY2hlcl9pZBgBIAEoCVIJdGVhY2'
-        'hlcklk');
+        'hlcklkEhcKB3NhZ2FfaWQYAiABKAlSBnNhZ2FJZA==');
 
 @$core.Deprecated('Use registerParentSagaRequestDescriptor instead')
 const RegisterParentSagaRequest$json = {
@@ -223,6 +225,7 @@ const RegisterParentSagaResponse$json = {
   '1': 'RegisterParentSagaResponse',
   '2': [
     {'1': 'parent_id', '3': 1, '4': 1, '5': 9, '10': 'parentId'},
+    {'1': 'saga_id', '3': 2, '4': 1, '5': 9, '10': 'sagaId'},
   ],
 };
 
@@ -230,7 +233,7 @@ const RegisterParentSagaResponse$json = {
 final $typed_data.Uint8List registerParentSagaResponseDescriptor =
     $convert.base64Decode(
         'ChpSZWdpc3RlclBhcmVudFNhZ2FSZXNwb25zZRIbCglwYXJlbnRfaWQYASABKAlSCHBhcmVudE'
-        'lk');
+        'lkEhcKB3NhZ2FfaWQYAiABKAlSBnNhZ2FJZA==');
 
 @$core.Deprecated('Use registerSchoolEmployeeSagaRequestDescriptor instead')
 const RegisterSchoolEmployeeSagaRequest$json = {
@@ -291,6 +294,7 @@ const RegisterSchoolEmployeeSagaResponse$json = {
   '1': 'RegisterSchoolEmployeeSagaResponse',
   '2': [
     {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
+    {'1': 'saga_id', '3': 2, '4': 1, '5': 9, '10': 'sagaId'},
   ],
 };
 
@@ -298,7 +302,7 @@ const RegisterSchoolEmployeeSagaResponse$json = {
 final $typed_data.Uint8List registerSchoolEmployeeSagaResponseDescriptor =
     $convert.base64Decode(
         'CiJSZWdpc3RlclNjaG9vbEVtcGxveWVlU2FnYVJlc3BvbnNlEh8KC2VtcGxveWVlX2lkGAEgAS'
-        'gJUgplbXBsb3llZUlk');
+        'gJUgplbXBsb3llZUlkEhcKB3NhZ2FfaWQYAiABKAlSBnNhZ2FJZA==');
 
 @$core.Deprecated('Use registerSchoolAdminSagaRequestDescriptor instead')
 const RegisterSchoolAdminSagaRequest$json = {
@@ -319,6 +323,7 @@ const RegisterSchoolAdminSagaResponse$json = {
   '1': 'RegisterSchoolAdminSagaResponse',
   '2': [
     {'1': 'admin_id', '3': 1, '4': 1, '5': 9, '10': 'adminId'},
+    {'1': 'saga_id', '3': 2, '4': 1, '5': 9, '10': 'sagaId'},
   ],
 };
 
@@ -326,7 +331,7 @@ const RegisterSchoolAdminSagaResponse$json = {
 final $typed_data.Uint8List registerSchoolAdminSagaResponseDescriptor =
     $convert.base64Decode(
         'Ch9SZWdpc3RlclNjaG9vbEFkbWluU2FnYVJlc3BvbnNlEhkKCGFkbWluX2lkGAEgASgJUgdhZG'
-        '1pbklk');
+        '1pbklkEhcKB3NhZ2FfaWQYAiABKAlSBnNhZ2FJZA==');
 
 @$core.Deprecated('Use registerSchoolChainAdminSagaRequestDescriptor instead')
 const RegisterSchoolChainAdminSagaRequest$json = {
@@ -347,6 +352,7 @@ const RegisterSchoolChainAdminSagaResponse$json = {
   '1': 'RegisterSchoolChainAdminSagaResponse',
   '2': [
     {'1': 'admin_id', '3': 1, '4': 1, '5': 9, '10': 'adminId'},
+    {'1': 'saga_id', '3': 2, '4': 1, '5': 9, '10': 'sagaId'},
   ],
 };
 
@@ -354,7 +360,7 @@ const RegisterSchoolChainAdminSagaResponse$json = {
 final $typed_data.Uint8List registerSchoolChainAdminSagaResponseDescriptor =
     $convert.base64Decode(
         'CiRSZWdpc3RlclNjaG9vbENoYWluQWRtaW5TYWdhUmVzcG9uc2USGQoIYWRtaW5faWQYASABKA'
-        'lSB2FkbWluSWQ=');
+        'lSB2FkbWluSWQSFwoHc2FnYV9pZBgCIAEoCVIGc2FnYUlk');
 
 @$core
     .Deprecated('Use registerSchoolChainEmployeeSagaRequestDescriptor instead')
@@ -417,6 +423,7 @@ const RegisterSchoolChainEmployeeSagaResponse$json = {
   '1': 'RegisterSchoolChainEmployeeSagaResponse',
   '2': [
     {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
+    {'1': 'saga_id', '3': 2, '4': 1, '5': 9, '10': 'sagaId'},
   ],
 };
 
@@ -424,7 +431,7 @@ const RegisterSchoolChainEmployeeSagaResponse$json = {
 final $typed_data.Uint8List registerSchoolChainEmployeeSagaResponseDescriptor =
     $convert.base64Decode(
         'CidSZWdpc3RlclNjaG9vbENoYWluRW1wbG95ZWVTYWdhUmVzcG9uc2USHwoLZW1wbG95ZWVfaW'
-        'QYASABKAlSCmVtcGxveWVlSWQ=');
+        'QYASABKAlSCmVtcGxveWVlSWQSFwoHc2FnYV9pZBgCIAEoCVIGc2FnYUlk');
 
 @$core.Deprecated('Use handleLeaveResponseSagaRequestDescriptor instead')
 const HandleLeaveResponseSagaRequest$json = {
@@ -521,6 +528,7 @@ const HandleLeaveResponseSagaResponse$json = {
   '1': 'HandleLeaveResponseSagaResponse',
   '2': [
     {'1': 'success', '3': 1, '4': 1, '5': 8, '10': 'success'},
+    {'1': 'saga_id', '3': 2, '4': 1, '5': 9, '10': 'sagaId'},
   ],
 };
 
@@ -528,4 +536,65 @@ const HandleLeaveResponseSagaResponse$json = {
 final $typed_data.Uint8List handleLeaveResponseSagaResponseDescriptor =
     $convert.base64Decode(
         'Ch9IYW5kbGVMZWF2ZVJlc3BvbnNlU2FnYVJlc3BvbnNlEhgKB3N1Y2Nlc3MYASABKAhSB3N1Y2'
-        'Nlc3M=');
+        'Nlc3MSFwoHc2FnYV9pZBgCIAEoCVIGc2FnYUlk');
+
+@$core.Deprecated('Use getSagaStatusRequestDescriptor instead')
+const GetSagaStatusRequest$json = {
+  '1': 'GetSagaStatusRequest',
+  '2': [
+    {'1': 'saga_id', '3': 1, '4': 1, '5': 9, '10': 'sagaId'},
+  ],
+};
+
+/// Descriptor for `GetSagaStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSagaStatusRequestDescriptor =
+    $convert.base64Decode(
+        'ChRHZXRTYWdhU3RhdHVzUmVxdWVzdBIXCgdzYWdhX2lkGAEgASgJUgZzYWdhSWQ=');
+
+@$core.Deprecated('Use getSagaStatusResponseDescriptor instead')
+const GetSagaStatusResponse$json = {
+  '1': 'GetSagaStatusResponse',
+  '2': [
+    {'1': 'saga_id', '3': 1, '4': 1, '5': 9, '10': 'sagaId'},
+    {'1': 'saga_kind', '3': 2, '4': 1, '5': 9, '10': 'sagaKind'},
+    {'1': 'status', '3': 3, '4': 1, '5': 9, '10': 'status'},
+    {'1': 'direction', '3': 4, '4': 1, '5': 9, '10': 'direction'},
+    {'1': 'current_step', '3': 5, '4': 1, '5': 5, '10': 'currentStep'},
+    {'1': 'total_steps', '3': 6, '4': 1, '5': 5, '10': 'totalSteps'},
+    {'1': 'last_error', '3': 7, '4': 1, '5': 9, '10': 'lastError'},
+    {
+      '1': 'result_payload_json',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '10': 'resultPayloadJson'
+    },
+    {
+      '1': 'created_at',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createdAt'
+    },
+    {
+      '1': 'completed_at',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'completedAt'
+    },
+  ],
+};
+
+/// Descriptor for `GetSagaStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSagaStatusResponseDescriptor = $convert.base64Decode(
+    'ChVHZXRTYWdhU3RhdHVzUmVzcG9uc2USFwoHc2FnYV9pZBgBIAEoCVIGc2FnYUlkEhsKCXNhZ2'
+    'Ffa2luZBgCIAEoCVIIc2FnYUtpbmQSFgoGc3RhdHVzGAMgASgJUgZzdGF0dXMSHAoJZGlyZWN0'
+    'aW9uGAQgASgJUglkaXJlY3Rpb24SIQoMY3VycmVudF9zdGVwGAUgASgFUgtjdXJyZW50U3RlcB'
+    'IfCgt0b3RhbF9zdGVwcxgGIAEoBVIKdG90YWxTdGVwcxIdCgpsYXN0X2Vycm9yGAcgASgJUgls'
+    'YXN0RXJyb3ISLgoTcmVzdWx0X3BheWxvYWRfanNvbhgIIAEoCVIRcmVzdWx0UGF5bG9hZEpzb2'
+    '4SOQoKY3JlYXRlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCWNyZWF0'
+    'ZWRBdBI9Cgxjb21wbGV0ZWRfYXQYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUg'
+    'tjb21wbGV0ZWRBdA==');
