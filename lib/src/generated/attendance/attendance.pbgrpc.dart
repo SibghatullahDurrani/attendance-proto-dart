@@ -110,6 +110,15 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetShiftsOfInstitutionsResponse>
+      getShiftsOfInstitutions(
+    $0.GetShiftsOfInstitutionsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getShiftsOfInstitutions, request,
+        options: options);
+  }
+
   /// refactored
   $grpc.ResponseFuture<$0.AddUserToShiftResponse> addUserToShift(
     $0.AddUserToShiftRequest request, {
@@ -216,6 +225,34 @@ class AttendanceServiceClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.GetAttendanceCountReportOfShiftBelongsToResponse>
+      getAttendanceCountReportOfShiftBelongsTo(
+    $0.GetAttendanceCountReportOfShiftBelongsToRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getAttendanceCountReportOfShiftBelongsTo, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetAttendanceCountReportOfUserIdsResponse>
+      getAttendanceCountReportOfUserIds(
+    $0.GetAttendanceCountReportOfUserIdsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getAttendanceCountReportOfUserIds, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetAccumulatedCountReportOfShiftBelongsToResponse>
+      getAccumulatedCountReportOfShiftBelongsTo(
+    $0.GetAccumulatedCountReportOfShiftBelongsToRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(
+        _$getAccumulatedCountReportOfShiftBelongsTo, request,
+        options: options);
+  }
+
   /// refactored
   $grpc.ResponseFuture<$0.GetBulkShiftShortInfoResponse> getBulkShiftShortInfo(
     $0.GetBulkShiftShortInfoRequest request, {
@@ -248,6 +285,15 @@ class AttendanceServiceClient extends $grpc.Client {
     $grpc.CallOptions? options,
   }) {
     return $createUnaryCall(_$getShiftsNames, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetUserIdsRegisteredToShiftsResponse>
+      getUserIdsRegisteredToShifts(
+    $0.GetUserIdsRegisteredToShiftsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getUserIdsRegisteredToShifts, request,
+        options: options);
   }
 
   // method descriptors
@@ -299,6 +345,12 @@ class AttendanceServiceClient extends $grpc.Client {
       '/attendance.AttendanceService/ListAllOrganizationShifts',
       ($0.ListAllOrganizationShiftsRequest value) => value.writeToBuffer(),
       $0.ListAllOrganizationShiftsResponse.fromBuffer);
+  static final _$getShiftsOfInstitutions = $grpc.ClientMethod<
+          $0.GetShiftsOfInstitutionsRequest,
+          $0.GetShiftsOfInstitutionsResponse>(
+      '/attendance.AttendanceService/GetShiftsOfInstitutions',
+      ($0.GetShiftsOfInstitutionsRequest value) => value.writeToBuffer(),
+      $0.GetShiftsOfInstitutionsResponse.fromBuffer);
   static final _$addUserToShift =
       $grpc.ClientMethod<$0.AddUserToShiftRequest, $0.AddUserToShiftResponse>(
           '/attendance.AttendanceService/AddUserToShift',
@@ -366,6 +418,27 @@ class AttendanceServiceClient extends $grpc.Client {
       ($0.GetUserAttendanceReportAttendanceRequest value) =>
           value.writeToBuffer(),
       $0.GetUserAttendanceReportAttendancesResponse.fromBuffer);
+  static final _$getAttendanceCountReportOfShiftBelongsTo = $grpc.ClientMethod<
+          $0.GetAttendanceCountReportOfShiftBelongsToRequest,
+          $0.GetAttendanceCountReportOfShiftBelongsToResponse>(
+      '/attendance.AttendanceService/GetAttendanceCountReportOfShiftBelongsTo',
+      ($0.GetAttendanceCountReportOfShiftBelongsToRequest value) =>
+          value.writeToBuffer(),
+      $0.GetAttendanceCountReportOfShiftBelongsToResponse.fromBuffer);
+  static final _$getAttendanceCountReportOfUserIds = $grpc.ClientMethod<
+          $0.GetAttendanceCountReportOfUserIdsRequest,
+          $0.GetAttendanceCountReportOfUserIdsResponse>(
+      '/attendance.AttendanceService/GetAttendanceCountReportOfUserIds',
+      ($0.GetAttendanceCountReportOfUserIdsRequest value) =>
+          value.writeToBuffer(),
+      $0.GetAttendanceCountReportOfUserIdsResponse.fromBuffer);
+  static final _$getAccumulatedCountReportOfShiftBelongsTo = $grpc.ClientMethod<
+          $0.GetAccumulatedCountReportOfShiftBelongsToRequest,
+          $0.GetAccumulatedCountReportOfShiftBelongsToResponse>(
+      '/attendance.AttendanceService/GetAccumulatedCountReportOfShiftBelongsTo',
+      ($0.GetAccumulatedCountReportOfShiftBelongsToRequest value) =>
+          value.writeToBuffer(),
+      $0.GetAccumulatedCountReportOfShiftBelongsToResponse.fromBuffer);
   static final _$getBulkShiftShortInfo = $grpc.ClientMethod<
           $0.GetBulkShiftShortInfoRequest, $0.GetBulkShiftShortInfoResponse>(
       '/attendance.AttendanceService/GetBulkShiftShortInfo',
@@ -388,6 +461,12 @@ class AttendanceServiceClient extends $grpc.Client {
           '/attendance.AttendanceService/GetShiftsNames',
           ($0.GetShiftsNamesRequest value) => value.writeToBuffer(),
           $0.GetShiftsNamesResponse.fromBuffer);
+  static final _$getUserIdsRegisteredToShifts = $grpc.ClientMethod<
+          $0.GetUserIdsRegisteredToShiftsRequest,
+          $0.GetUserIdsRegisteredToShiftsResponse>(
+      '/attendance.AttendanceService/GetUserIdsRegisteredToShifts',
+      ($0.GetUserIdsRegisteredToShiftsRequest value) => value.writeToBuffer(),
+      $0.GetUserIdsRegisteredToShiftsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('attendance.AttendanceService')
@@ -469,6 +548,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ListAllOrganizationShiftsRequest.fromBuffer(value),
         ($0.ListAllOrganizationShiftsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetShiftsOfInstitutionsRequest,
+            $0.GetShiftsOfInstitutionsResponse>(
+        'GetShiftsOfInstitutions',
+        getShiftsOfInstitutions_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetShiftsOfInstitutionsRequest.fromBuffer(value),
+        ($0.GetShiftsOfInstitutionsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.AddUserToShiftRequest,
             $0.AddUserToShiftResponse>(
         'AddUserToShift',
@@ -580,6 +668,40 @@ abstract class AttendanceServiceBase extends $grpc.Service {
             $0.GetUserAttendanceReportAttendanceRequest.fromBuffer(value),
         ($0.GetUserAttendanceReportAttendancesResponse value) =>
             value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.GetAttendanceCountReportOfShiftBelongsToRequest,
+            $0.GetAttendanceCountReportOfShiftBelongsToResponse>(
+        'GetAttendanceCountReportOfShiftBelongsTo',
+        getAttendanceCountReportOfShiftBelongsTo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetAttendanceCountReportOfShiftBelongsToRequest.fromBuffer(
+                value),
+        ($0.GetAttendanceCountReportOfShiftBelongsToResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetAttendanceCountReportOfUserIdsRequest,
+            $0.GetAttendanceCountReportOfUserIdsResponse>(
+        'GetAttendanceCountReportOfUserIds',
+        getAttendanceCountReportOfUserIds_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetAttendanceCountReportOfUserIdsRequest.fromBuffer(value),
+        ($0.GetAttendanceCountReportOfUserIdsResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<
+            $0.GetAccumulatedCountReportOfShiftBelongsToRequest,
+            $0.GetAccumulatedCountReportOfShiftBelongsToResponse>(
+        'GetAccumulatedCountReportOfShiftBelongsTo',
+        getAccumulatedCountReportOfShiftBelongsTo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetAccumulatedCountReportOfShiftBelongsToRequest.fromBuffer(
+                value),
+        ($0.GetAccumulatedCountReportOfShiftBelongsToResponse value) =>
+            value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetBulkShiftShortInfoRequest,
             $0.GetBulkShiftShortInfoResponse>(
         'GetBulkShiftShortInfo',
@@ -617,6 +739,16 @@ abstract class AttendanceServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetShiftsNamesRequest.fromBuffer(value),
         ($0.GetShiftsNamesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetUserIdsRegisteredToShiftsRequest,
+            $0.GetUserIdsRegisteredToShiftsResponse>(
+        'GetUserIdsRegisteredToShifts',
+        getUserIdsRegisteredToShifts_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetUserIdsRegisteredToShiftsRequest.fromBuffer(value),
+        ($0.GetUserIdsRegisteredToShiftsResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.GetUserMonthlyAttendanceStatsResponse>
@@ -696,6 +828,15 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.ListAllOrganizationShiftsResponse> listAllOrganizationShifts(
       $grpc.ServiceCall call, $0.ListAllOrganizationShiftsRequest request);
+
+  $async.Future<$0.GetShiftsOfInstitutionsResponse> getShiftsOfInstitutions_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.GetShiftsOfInstitutionsRequest> $request) async {
+    return getShiftsOfInstitutions($call, await $request);
+  }
+
+  $async.Future<$0.GetShiftsOfInstitutionsResponse> getShiftsOfInstitutions(
+      $grpc.ServiceCall call, $0.GetShiftsOfInstitutionsRequest request);
 
   $async.Future<$0.AddUserToShiftResponse> addUserToShift_Pre(
       $grpc.ServiceCall $call,
@@ -812,6 +953,42 @@ abstract class AttendanceServiceBase extends $grpc.Service {
       getUserAttendanceReportAttendances($grpc.ServiceCall call,
           $0.GetUserAttendanceReportAttendanceRequest request);
 
+  $async.Future<$0.GetAttendanceCountReportOfShiftBelongsToResponse>
+      getAttendanceCountReportOfShiftBelongsTo_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetAttendanceCountReportOfShiftBelongsToRequest>
+              $request) async {
+    return getAttendanceCountReportOfShiftBelongsTo($call, await $request);
+  }
+
+  $async.Future<$0.GetAttendanceCountReportOfShiftBelongsToResponse>
+      getAttendanceCountReportOfShiftBelongsTo($grpc.ServiceCall call,
+          $0.GetAttendanceCountReportOfShiftBelongsToRequest request);
+
+  $async.Future<$0.GetAttendanceCountReportOfUserIdsResponse>
+      getAttendanceCountReportOfUserIds_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetAttendanceCountReportOfUserIdsRequest>
+              $request) async {
+    return getAttendanceCountReportOfUserIds($call, await $request);
+  }
+
+  $async.Future<$0.GetAttendanceCountReportOfUserIdsResponse>
+      getAttendanceCountReportOfUserIds($grpc.ServiceCall call,
+          $0.GetAttendanceCountReportOfUserIdsRequest request);
+
+  $async.Future<$0.GetAccumulatedCountReportOfShiftBelongsToResponse>
+      getAccumulatedCountReportOfShiftBelongsTo_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetAccumulatedCountReportOfShiftBelongsToRequest>
+              $request) async {
+    return getAccumulatedCountReportOfShiftBelongsTo($call, await $request);
+  }
+
+  $async.Future<$0.GetAccumulatedCountReportOfShiftBelongsToResponse>
+      getAccumulatedCountReportOfShiftBelongsTo($grpc.ServiceCall call,
+          $0.GetAccumulatedCountReportOfShiftBelongsToRequest request);
+
   $async.Future<$0.GetBulkShiftShortInfoResponse> getBulkShiftShortInfo_Pre(
       $grpc.ServiceCall $call,
       $async.Future<$0.GetBulkShiftShortInfoRequest> $request) async {
@@ -848,4 +1025,16 @@ abstract class AttendanceServiceBase extends $grpc.Service {
 
   $async.Future<$0.GetShiftsNamesResponse> getShiftsNames(
       $grpc.ServiceCall call, $0.GetShiftsNamesRequest request);
+
+  $async.Future<$0.GetUserIdsRegisteredToShiftsResponse>
+      getUserIdsRegisteredToShifts_Pre(
+          $grpc.ServiceCall $call,
+          $async.Future<$0.GetUserIdsRegisteredToShiftsRequest>
+              $request) async {
+    return getUserIdsRegisteredToShifts($call, await $request);
+  }
+
+  $async.Future<$0.GetUserIdsRegisteredToShiftsResponse>
+      getUserIdsRegisteredToShifts($grpc.ServiceCall call,
+          $0.GetUserIdsRegisteredToShiftsRequest request);
 }

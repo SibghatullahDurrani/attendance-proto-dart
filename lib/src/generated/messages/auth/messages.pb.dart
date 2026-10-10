@@ -14,10 +14,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../common/messages.pbenum.dart' as $0;
-
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
+/// LoginRequest carries the user's primary credentials for the
+/// AuthService.Login RPC. Both fields are mandatory; an empty value for either
+/// is rejected with gRPC status code INVALID_ARGUMENT before any database lookup
+/// is performed.
 class LoginRequest extends $pb.GeneratedMessage {
   factory LoginRequest({
     $core.String? username,
@@ -67,6 +69,10 @@ class LoginRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<LoginRequest>(create);
   static LoginRequest? _defaultInstance;
 
+  /// The user's unique username. Required, non-empty. Matched exactly
+  /// (case-sensitive) against the stored record. An unknown username is reported
+  /// as UNAUTHENTICATED ("invalid username or password") — the same error used
+  /// for a wrong password — so clients cannot probe which usernames exist.
   @$pb.TagNumber(1)
   $core.String get username => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -76,6 +82,10 @@ class LoginRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearUsername() => $_clearField(1);
 
+  /// The user's plaintext password. Required, non-empty. Verified server-side
+  /// against a bcrypt hash; never logged or stored in plaintext. A wrong password
+  /// yields UNAUTHENTICATED ("invalid username or password"). Transmit only over
+  /// a secure (TLS) channel.
   @$pb.TagNumber(2)
   $core.String get password => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -86,6 +96,10 @@ class LoginRequest extends $pb.GeneratedMessage {
   void clearPassword() => $_clearField(2);
 }
 
+/// LoginResponse is the token pair returned by both AuthService.Login and
+/// AuthService.RefreshLogin. Clients should store the access token in memory and
+/// the refresh token in secure storage, then attach the access token as a Bearer
+/// credential on subsequent authenticated requests.
 class LoginResponse extends $pb.GeneratedMessage {
   factory LoginResponse({
     $core.String? accessToken,
@@ -135,6 +149,21 @@ class LoginResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<LoginResponse>(create);
   static LoginResponse? _defaultInstance;
 
+  /// A short-lived RS256-signed JWT (valid for 1 hour from issuance). Attach it
+  /// to authenticated requests, typically as an "authorization: Bearer <token>"
+  /// metadata header. Other services verify it offline using the auth service's
+  /// public key — there is no call back to auth on each request.
+  ///
+  /// Claims:
+  ///   sub       - user ID (ULID)
+  ///   username  - username
+  ///   role      - role string (e.g. "ORGANIZATION_ADMIN", "UNIT_EMPLOYEE")
+  ///   belongsTo - scope ID the user belongs to; present for organization-,
+  ///               department-, and unit-scoped roles, omitted for SUPER_ADMIN
+  ///   iat, exp  - issued-at and expiry, Unix seconds (UTC)
+  ///
+  /// When the access token expires, exchange the refresh token via RefreshLogin
+  /// rather than asking the user to log in again.
   @$pb.TagNumber(1)
   $core.String get accessToken => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -144,6 +173,13 @@ class LoginResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAccessToken() => $_clearField(1);
 
+  /// A long-lived opaque refresh token (valid ~30 days). It is NOT a JWT — treat
+  /// it as an opaque secret. Stored server-side only as a SHA-256 hash.
+  ///
+  /// One-time use: each successful RefreshLogin revokes this token and issues a
+  /// new one (rotation). Always persist the newly returned refresh token and
+  /// discard the previous one. Replaying a consumed, expired, or revoked refresh
+  /// token returns UNAUTHENTICATED and requires a fresh Login.
   @$pb.TagNumber(2)
   $core.String get refreshToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -154,154 +190,8 @@ class LoginResponse extends $pb.GeneratedMessage {
   void clearRefreshToken() => $_clearField(2);
 }
 
-class AddUserRequest extends $pb.GeneratedMessage {
-  factory AddUserRequest({
-    $core.String? userId,
-    $0.Role? role,
-    $core.String? firstName,
-    $core.String? secondName,
-  }) {
-    final result = create();
-    if (userId != null) result.userId = userId;
-    if (role != null) result.role = role;
-    if (firstName != null) result.firstName = firstName;
-    if (secondName != null) result.secondName = secondName;
-    return result;
-  }
-
-  AddUserRequest._();
-
-  factory AddUserRequest.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory AddUserRequest.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'AddUserRequest',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
-      createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'userId')
-    ..aE<$0.Role>(2, _omitFieldNames ? '' : 'role', enumValues: $0.Role.values)
-    ..aOS(3, _omitFieldNames ? '' : 'firstName')
-    ..aOS(4, _omitFieldNames ? '' : 'secondName')
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddUserRequest clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddUserRequest copyWith(void Function(AddUserRequest) updates) =>
-      super.copyWith((message) => updates(message as AddUserRequest))
-          as AddUserRequest;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static AddUserRequest create() => AddUserRequest._();
-  @$core.override
-  AddUserRequest createEmptyInstance() => create();
-  static $pb.PbList<AddUserRequest> createRepeated() =>
-      $pb.PbList<AddUserRequest>();
-  @$core.pragma('dart2js:noInline')
-  static AddUserRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<AddUserRequest>(create);
-  static AddUserRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get userId => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set userId($core.String value) => $_setString(0, value);
-  @$pb.TagNumber(1)
-  $core.bool hasUserId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearUserId() => $_clearField(1);
-
-  @$pb.TagNumber(2)
-  $0.Role get role => $_getN(1);
-  @$pb.TagNumber(2)
-  set role($0.Role value) => $_setField(2, value);
-  @$pb.TagNumber(2)
-  $core.bool hasRole() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearRole() => $_clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.String get firstName => $_getSZ(2);
-  @$pb.TagNumber(3)
-  set firstName($core.String value) => $_setString(2, value);
-  @$pb.TagNumber(3)
-  $core.bool hasFirstName() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearFirstName() => $_clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.String get secondName => $_getSZ(3);
-  @$pb.TagNumber(4)
-  set secondName($core.String value) => $_setString(3, value);
-  @$pb.TagNumber(4)
-  $core.bool hasSecondName() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearSecondName() => $_clearField(4);
-}
-
-class AddUserResponse extends $pb.GeneratedMessage {
-  factory AddUserResponse({
-    $core.String? userId,
-  }) {
-    final result = create();
-    if (userId != null) result.userId = userId;
-    return result;
-  }
-
-  AddUserResponse._();
-
-  factory AddUserResponse.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory AddUserResponse.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'AddUserResponse',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
-      createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'userId')
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddUserResponse clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddUserResponse copyWith(void Function(AddUserResponse) updates) =>
-      super.copyWith((message) => updates(message as AddUserResponse))
-          as AddUserResponse;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static AddUserResponse create() => AddUserResponse._();
-  @$core.override
-  AddUserResponse createEmptyInstance() => create();
-  static $pb.PbList<AddUserResponse> createRepeated() =>
-      $pb.PbList<AddUserResponse>();
-  @$core.pragma('dart2js:noInline')
-  static AddUserResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<AddUserResponse>(create);
-  static AddUserResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get userId => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set userId($core.String value) => $_setString(0, value);
-  @$pb.TagNumber(1)
-  $core.bool hasUserId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearUserId() => $_clearField(1);
-}
-
+/// RefreshLoginRequest exchanges a valid refresh token for a new token pair
+/// without re-prompting the user for credentials. See AuthService.RefreshLogin.
 class RefreshLoginRequest extends $pb.GeneratedMessage {
   factory RefreshLoginRequest({
     $core.String? refreshToken,
@@ -348,6 +238,11 @@ class RefreshLoginRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RefreshLoginRequest>(create);
   static RefreshLoginRequest? _defaultInstance;
 
+  /// The opaque refresh token previously issued by Login or RefreshLogin.
+  /// Required, non-empty (empty is INVALID_ARGUMENT). The token is atomically
+  /// validated and revoked in a single step, so concurrent refreshes of the same
+  /// token cannot both succeed — exactly one wins and the rest get
+  /// UNAUTHENTICATED. An expired, revoked, or unknown token is UNAUTHENTICATED.
   @$pb.TagNumber(1)
   $core.String get refreshToken => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -356,240 +251,6 @@ class RefreshLoginRequest extends $pb.GeneratedMessage {
   $core.bool hasRefreshToken() => $_has(0);
   @$pb.TagNumber(1)
   void clearRefreshToken() => $_clearField(1);
-}
-
-class RemoveUserResponse extends $pb.GeneratedMessage {
-  factory RemoveUserResponse() => create();
-
-  RemoveUserResponse._();
-
-  factory RemoveUserResponse.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory RemoveUserResponse.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RemoveUserResponse',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RemoveUserResponse clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RemoveUserResponse copyWith(void Function(RemoveUserResponse) updates) =>
-      super.copyWith((message) => updates(message as RemoveUserResponse))
-          as RemoveUserResponse;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static RemoveUserResponse create() => RemoveUserResponse._();
-  @$core.override
-  RemoveUserResponse createEmptyInstance() => create();
-  static $pb.PbList<RemoveUserResponse> createRepeated() =>
-      $pb.PbList<RemoveUserResponse>();
-  @$core.pragma('dart2js:noInline')
-  static RemoveUserResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RemoveUserResponse>(create);
-  static RemoveUserResponse? _defaultInstance;
-}
-
-/// Bulk operations
-class BulkAddUsersRequest extends $pb.GeneratedMessage {
-  factory BulkAddUsersRequest({
-    $core.Iterable<AddUserRequest>? users,
-  }) {
-    final result = create();
-    if (users != null) result.users.addAll(users);
-    return result;
-  }
-
-  BulkAddUsersRequest._();
-
-  factory BulkAddUsersRequest.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory BulkAddUsersRequest.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'BulkAddUsersRequest',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
-      createEmptyInstance: create)
-    ..pPM<AddUserRequest>(1, _omitFieldNames ? '' : 'users',
-        subBuilder: AddUserRequest.create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BulkAddUsersRequest clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BulkAddUsersRequest copyWith(void Function(BulkAddUsersRequest) updates) =>
-      super.copyWith((message) => updates(message as BulkAddUsersRequest))
-          as BulkAddUsersRequest;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static BulkAddUsersRequest create() => BulkAddUsersRequest._();
-  @$core.override
-  BulkAddUsersRequest createEmptyInstance() => create();
-  static $pb.PbList<BulkAddUsersRequest> createRepeated() =>
-      $pb.PbList<BulkAddUsersRequest>();
-  @$core.pragma('dart2js:noInline')
-  static BulkAddUsersRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<BulkAddUsersRequest>(create);
-  static BulkAddUsersRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $pb.PbList<AddUserRequest> get users => $_getList(0);
-}
-
-class BulkAddUsersResponse extends $pb.GeneratedMessage {
-  factory BulkAddUsersResponse({
-    $core.Iterable<$core.String>? userIds,
-  }) {
-    final result = create();
-    if (userIds != null) result.userIds.addAll(userIds);
-    return result;
-  }
-
-  BulkAddUsersResponse._();
-
-  factory BulkAddUsersResponse.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory BulkAddUsersResponse.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'BulkAddUsersResponse',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
-      createEmptyInstance: create)
-    ..pPS(1, _omitFieldNames ? '' : 'userIds')
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BulkAddUsersResponse clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BulkAddUsersResponse copyWith(void Function(BulkAddUsersResponse) updates) =>
-      super.copyWith((message) => updates(message as BulkAddUsersResponse))
-          as BulkAddUsersResponse;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static BulkAddUsersResponse create() => BulkAddUsersResponse._();
-  @$core.override
-  BulkAddUsersResponse createEmptyInstance() => create();
-  static $pb.PbList<BulkAddUsersResponse> createRepeated() =>
-      $pb.PbList<BulkAddUsersResponse>();
-  @$core.pragma('dart2js:noInline')
-  static BulkAddUsersResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<BulkAddUsersResponse>(create);
-  static BulkAddUsersResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $pb.PbList<$core.String> get userIds => $_getList(0);
-}
-
-class BulkRemoveUsersRequest extends $pb.GeneratedMessage {
-  factory BulkRemoveUsersRequest({
-    $core.Iterable<$core.String>? userIds,
-  }) {
-    final result = create();
-    if (userIds != null) result.userIds.addAll(userIds);
-    return result;
-  }
-
-  BulkRemoveUsersRequest._();
-
-  factory BulkRemoveUsersRequest.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory BulkRemoveUsersRequest.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'BulkRemoveUsersRequest',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
-      createEmptyInstance: create)
-    ..pPS(1, _omitFieldNames ? '' : 'userIds')
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BulkRemoveUsersRequest clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BulkRemoveUsersRequest copyWith(
-          void Function(BulkRemoveUsersRequest) updates) =>
-      super.copyWith((message) => updates(message as BulkRemoveUsersRequest))
-          as BulkRemoveUsersRequest;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static BulkRemoveUsersRequest create() => BulkRemoveUsersRequest._();
-  @$core.override
-  BulkRemoveUsersRequest createEmptyInstance() => create();
-  static $pb.PbList<BulkRemoveUsersRequest> createRepeated() =>
-      $pb.PbList<BulkRemoveUsersRequest>();
-  @$core.pragma('dart2js:noInline')
-  static BulkRemoveUsersRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<BulkRemoveUsersRequest>(create);
-  static BulkRemoveUsersRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $pb.PbList<$core.String> get userIds => $_getList(0);
-}
-
-class BulkRemoveUsersResponse extends $pb.GeneratedMessage {
-  factory BulkRemoveUsersResponse() => create();
-
-  BulkRemoveUsersResponse._();
-
-  factory BulkRemoveUsersResponse.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory BulkRemoveUsersResponse.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'BulkRemoveUsersResponse',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'auth_messages'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BulkRemoveUsersResponse clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BulkRemoveUsersResponse copyWith(
-          void Function(BulkRemoveUsersResponse) updates) =>
-      super.copyWith((message) => updates(message as BulkRemoveUsersResponse))
-          as BulkRemoveUsersResponse;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static BulkRemoveUsersResponse create() => BulkRemoveUsersResponse._();
-  @$core.override
-  BulkRemoveUsersResponse createEmptyInstance() => create();
-  static $pb.PbList<BulkRemoveUsersResponse> createRepeated() =>
-      $pb.PbList<BulkRemoveUsersResponse>();
-  @$core.pragma('dart2js:noInline')
-  static BulkRemoveUsersResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<BulkRemoveUsersResponse>(create);
-  static BulkRemoveUsersResponse? _defaultInstance;
 }
 
 const $core.bool _omitFieldNames =

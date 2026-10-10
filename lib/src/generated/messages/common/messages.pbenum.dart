@@ -30,18 +30,18 @@ class Role extends $pb.ProtobufEnum {
       Role._(5, _omitEnumNames ? '' : 'ROLE_SCHOOL_EMPLOYEE');
   static const Role ROLE_ORGANIZATION_ADMIN =
       Role._(6, _omitEnumNames ? '' : 'ROLE_ORGANIZATION_ADMIN');
-  static const Role ROLE_ORGANIZATION_EMPLOYEE =
-      Role._(7, _omitEnumNames ? '' : 'ROLE_ORGANIZATION_EMPLOYEE');
-  static const Role ROLE_SUB_ORGANIZATION_ADMIN =
-      Role._(8, _omitEnumNames ? '' : 'ROLE_SUB_ORGANIZATION_ADMIN');
-  static const Role ROLE_SUB_ORGANIZATION_EMPLOYEE =
-      Role._(9, _omitEnumNames ? '' : 'ROLE_SUB_ORGANIZATION_EMPLOYEE');
+  static const Role ROLE_DEPARTMENT_ADMIN =
+      Role._(7, _omitEnumNames ? '' : 'ROLE_DEPARTMENT_ADMIN');
+  static const Role ROLE_UNIT_EMPLOYEE =
+      Role._(8, _omitEnumNames ? '' : 'ROLE_UNIT_EMPLOYEE');
   static const Role ROLE_SUPER_ADMIN =
-      Role._(10, _omitEnumNames ? '' : 'ROLE_SUPER_ADMIN');
+      Role._(9, _omitEnumNames ? '' : 'ROLE_SUPER_ADMIN');
   static const Role ROLE_SCHOOL_CHAIN_ADMIN =
-      Role._(11, _omitEnumNames ? '' : 'ROLE_SCHOOL_CHAIN_ADMIN');
+      Role._(10, _omitEnumNames ? '' : 'ROLE_SCHOOL_CHAIN_ADMIN');
   static const Role ROLE_SCHOOL_CHAIN_EMPLOYEE =
-      Role._(12, _omitEnumNames ? '' : 'ROLE_SCHOOL_CHAIN_EMPLOYEE');
+      Role._(11, _omitEnumNames ? '' : 'ROLE_SCHOOL_CHAIN_EMPLOYEE');
+  static const Role ROLE_UNIT_ADMIN =
+      Role._(12, _omitEnumNames ? '' : 'ROLE_UNIT_ADMIN');
 
   static const $core.List<Role> values = <Role>[
     ROLE_UNSPECIFIED,
@@ -51,12 +51,12 @@ class Role extends $pb.ProtobufEnum {
     ROLE_SCHOOL_ADMIN,
     ROLE_SCHOOL_EMPLOYEE,
     ROLE_ORGANIZATION_ADMIN,
-    ROLE_ORGANIZATION_EMPLOYEE,
-    ROLE_SUB_ORGANIZATION_ADMIN,
-    ROLE_SUB_ORGANIZATION_EMPLOYEE,
+    ROLE_DEPARTMENT_ADMIN,
+    ROLE_UNIT_EMPLOYEE,
     ROLE_SUPER_ADMIN,
     ROLE_SCHOOL_CHAIN_ADMIN,
     ROLE_SCHOOL_CHAIN_EMPLOYEE,
+    ROLE_UNIT_ADMIN,
   ];
 
   static final $core.List<Role?> _byValue =
@@ -198,24 +198,21 @@ class LeaveRole extends $pb.ProtobufEnum {
       LeaveRole._(1, _omitEnumNames ? '' : 'LEAVE_ROLE_TEACHER');
   static const LeaveRole LEAVE_ROLE_SCHOOL_EMPLOYEE =
       LeaveRole._(2, _omitEnumNames ? '' : 'LEAVE_ROLE_SCHOOL_EMPLOYEE');
-  static const LeaveRole LEAVE_ROLE_ORGANIZATION_EMPLOYEE =
-      LeaveRole._(3, _omitEnumNames ? '' : 'LEAVE_ROLE_ORGANIZATION_EMPLOYEE');
-  static const LeaveRole LEAVE_ROLE_SUB_ORGANIZATION_EMPLOYEE = LeaveRole._(
-      4, _omitEnumNames ? '' : 'LEAVE_ROLE_SUB_ORGANIZATION_EMPLOYEE');
   static const LeaveRole LEAVE_ROLE_SCHOOL_CHAIN_EMPLOYEE =
       LeaveRole._(5, _omitEnumNames ? '' : 'LEAVE_ROLE_SCHOOL_CHAIN_EMPLOYEE');
+  static const LeaveRole LEAVE_ROLE_UNIT_EMPLOYEE =
+      LeaveRole._(6, _omitEnumNames ? '' : 'LEAVE_ROLE_UNIT_EMPLOYEE');
 
   static const $core.List<LeaveRole> values = <LeaveRole>[
     LEAVE_ROLE_STUDENT,
     LEAVE_ROLE_TEACHER,
     LEAVE_ROLE_SCHOOL_EMPLOYEE,
-    LEAVE_ROLE_ORGANIZATION_EMPLOYEE,
-    LEAVE_ROLE_SUB_ORGANIZATION_EMPLOYEE,
     LEAVE_ROLE_SCHOOL_CHAIN_EMPLOYEE,
+    LEAVE_ROLE_UNIT_EMPLOYEE,
   ];
 
   static final $core.List<LeaveRole?> _byValue =
-      $pb.ProtobufEnum.$_initByValueList(values, 5);
+      $pb.ProtobufEnum.$_initByValueList(values, 6);
   static LeaveRole? valueOf($core.int value) =>
       value < 0 || value >= _byValue.length ? null : _byValue[value];
 
@@ -301,24 +298,156 @@ class ShiftBelongsTo extends $pb.ProtobufEnum {
       ShiftBelongsTo._(0, _omitEnumNames ? '' : 'SCHOOL');
   static const ShiftBelongsTo SCHOOL_CHAIN =
       ShiftBelongsTo._(1, _omitEnumNames ? '' : 'SCHOOL_CHAIN');
-  static const ShiftBelongsTo ORGANIZATION =
-      ShiftBelongsTo._(3, _omitEnumNames ? '' : 'ORGANIZATION');
-  static const ShiftBelongsTo SUB_ORGANIZATION =
-      ShiftBelongsTo._(4, _omitEnumNames ? '' : 'SUB_ORGANIZATION');
+  static const ShiftBelongsTo UNIT =
+      ShiftBelongsTo._(2, _omitEnumNames ? '' : 'UNIT');
 
   static const $core.List<ShiftBelongsTo> values = <ShiftBelongsTo>[
     SCHOOL,
     SCHOOL_CHAIN,
-    ORGANIZATION,
-    SUB_ORGANIZATION,
+    UNIT,
   ];
 
   static final $core.List<ShiftBelongsTo?> _byValue =
-      $pb.ProtobufEnum.$_initByValueList(values, 4);
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
   static ShiftBelongsTo? valueOf($core.int value) =>
       value < 0 || value >= _byValue.length ? null : _byValue[value];
 
   const ShiftBelongsTo._(super.value, super.name);
+}
+
+class NotificationCategory extends $pb.ProtobufEnum {
+  static const NotificationCategory NOTIFICATION_CATEGORY_UNSPECIFIED =
+      NotificationCategory._(
+          0, _omitEnumNames ? '' : 'NOTIFICATION_CATEGORY_UNSPECIFIED');
+  static const NotificationCategory NOTIFICATION_CATEGORY_ATTENDANCE =
+      NotificationCategory._(
+          1, _omitEnumNames ? '' : 'NOTIFICATION_CATEGORY_ATTENDANCE');
+  static const NotificationCategory NOTIFICATION_CATEGORY_LEAVE =
+      NotificationCategory._(
+          2, _omitEnumNames ? '' : 'NOTIFICATION_CATEGORY_LEAVE');
+  static const NotificationCategory NOTIFICATION_CATEGORY_MESSAGE =
+      NotificationCategory._(
+          3, _omitEnumNames ? '' : 'NOTIFICATION_CATEGORY_MESSAGE');
+  static const NotificationCategory NOTIFICATION_CATEGORY_TICKET =
+      NotificationCategory._(
+          4, _omitEnumNames ? '' : 'NOTIFICATION_CATEGORY_TICKET');
+  static const NotificationCategory NOTIFICATION_CATEGORY_SYSTEM =
+      NotificationCategory._(
+          5, _omitEnumNames ? '' : 'NOTIFICATION_CATEGORY_SYSTEM');
+
+  static const $core.List<NotificationCategory> values = <NotificationCategory>[
+    NOTIFICATION_CATEGORY_UNSPECIFIED,
+    NOTIFICATION_CATEGORY_ATTENDANCE,
+    NOTIFICATION_CATEGORY_LEAVE,
+    NOTIFICATION_CATEGORY_MESSAGE,
+    NOTIFICATION_CATEGORY_TICKET,
+    NOTIFICATION_CATEGORY_SYSTEM,
+  ];
+
+  static final $core.List<NotificationCategory?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 5);
+  static NotificationCategory? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const NotificationCategory._(super.value, super.name);
+}
+
+class NotificationPriority extends $pb.ProtobufEnum {
+  static const NotificationPriority NOTIFICATION_PRIORITY_UNSPECIFIED =
+      NotificationPriority._(
+          0, _omitEnumNames ? '' : 'NOTIFICATION_PRIORITY_UNSPECIFIED');
+  static const NotificationPriority NOTIFICATION_PRIORITY_LOW =
+      NotificationPriority._(
+          1, _omitEnumNames ? '' : 'NOTIFICATION_PRIORITY_LOW');
+  static const NotificationPriority NOTIFICATION_PRIORITY_NORMAL =
+      NotificationPriority._(
+          2, _omitEnumNames ? '' : 'NOTIFICATION_PRIORITY_NORMAL');
+  static const NotificationPriority NOTIFICATION_PRIORITY_HIGH =
+      NotificationPriority._(
+          3, _omitEnumNames ? '' : 'NOTIFICATION_PRIORITY_HIGH');
+
+  static const $core.List<NotificationPriority> values = <NotificationPriority>[
+    NOTIFICATION_PRIORITY_UNSPECIFIED,
+    NOTIFICATION_PRIORITY_LOW,
+    NOTIFICATION_PRIORITY_NORMAL,
+    NOTIFICATION_PRIORITY_HIGH,
+  ];
+
+  static final $core.List<NotificationPriority?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static NotificationPriority? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const NotificationPriority._(super.value, super.name);
+}
+
+class NotificationKind extends $pb.ProtobufEnum {
+  static const NotificationKind NOTIFICATION_KIND_UNSPECIFIED =
+      NotificationKind._(
+          0, _omitEnumNames ? '' : 'NOTIFICATION_KIND_UNSPECIFIED');
+  static const NotificationKind NOTIFICATION_KIND_SYSTEM_SHIFT_START =
+      NotificationKind._(
+          1, _omitEnumNames ? '' : 'NOTIFICATION_KIND_SYSTEM_SHIFT_START');
+  static const NotificationKind NOTIFICATION_KIND_SYSTEM_CHECK_IN_FIRST =
+      NotificationKind._(
+          2, _omitEnumNames ? '' : 'NOTIFICATION_KIND_SYSTEM_CHECK_IN_FIRST');
+  static const NotificationKind NOTIFICATION_KIND_SYSTEM_CHECK_OUT_FIRST =
+      NotificationKind._(
+          3, _omitEnumNames ? '' : 'NOTIFICATION_KIND_SYSTEM_CHECK_OUT_FIRST');
+  static const NotificationKind NOTIFICATION_KIND_SYSTEM_LEAVE_ACCEPTED =
+      NotificationKind._(
+          4, _omitEnumNames ? '' : 'NOTIFICATION_KIND_SYSTEM_LEAVE_ACCEPTED');
+  static const NotificationKind NOTIFICATION_KIND_SYSTEM_LEAVE_REJECTED =
+      NotificationKind._(
+          5, _omitEnumNames ? '' : 'NOTIFICATION_KIND_SYSTEM_LEAVE_REJECTED');
+  static const NotificationKind
+      NOTIFICATION_KIND_SYSTEM_LEAVE_PARTIALLY_ACCEPTED = NotificationKind._(
+          6,
+          _omitEnumNames
+              ? ''
+              : 'NOTIFICATION_KIND_SYSTEM_LEAVE_PARTIALLY_ACCEPTED');
+
+  static const $core.List<NotificationKind> values = <NotificationKind>[
+    NOTIFICATION_KIND_UNSPECIFIED,
+    NOTIFICATION_KIND_SYSTEM_SHIFT_START,
+    NOTIFICATION_KIND_SYSTEM_CHECK_IN_FIRST,
+    NOTIFICATION_KIND_SYSTEM_CHECK_OUT_FIRST,
+    NOTIFICATION_KIND_SYSTEM_LEAVE_ACCEPTED,
+    NOTIFICATION_KIND_SYSTEM_LEAVE_REJECTED,
+    NOTIFICATION_KIND_SYSTEM_LEAVE_PARTIALLY_ACCEPTED,
+  ];
+
+  static final $core.List<NotificationKind?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 6);
+  static NotificationKind? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const NotificationKind._(super.value, super.name);
+}
+
+class LeaveOutcome extends $pb.ProtobufEnum {
+  static const LeaveOutcome LEAVE_OUTCOME_UNSPECIFIED =
+      LeaveOutcome._(0, _omitEnumNames ? '' : 'LEAVE_OUTCOME_UNSPECIFIED');
+  static const LeaveOutcome LEAVE_OUTCOME_ACCEPTED =
+      LeaveOutcome._(1, _omitEnumNames ? '' : 'LEAVE_OUTCOME_ACCEPTED');
+  static const LeaveOutcome LEAVE_OUTCOME_REJECTED =
+      LeaveOutcome._(2, _omitEnumNames ? '' : 'LEAVE_OUTCOME_REJECTED');
+  static const LeaveOutcome LEAVE_OUTCOME_PARTIALLY_ACCEPTED = LeaveOutcome._(
+      3, _omitEnumNames ? '' : 'LEAVE_OUTCOME_PARTIALLY_ACCEPTED');
+
+  static const $core.List<LeaveOutcome> values = <LeaveOutcome>[
+    LEAVE_OUTCOME_UNSPECIFIED,
+    LEAVE_OUTCOME_ACCEPTED,
+    LEAVE_OUTCOME_REJECTED,
+    LEAVE_OUTCOME_PARTIALLY_ACCEPTED,
+  ];
+
+  static final $core.List<LeaveOutcome?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static LeaveOutcome? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const LeaveOutcome._(super.value, super.name);
 }
 
 const $core.bool _omitEnumNames =

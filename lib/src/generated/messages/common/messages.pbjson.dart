@@ -25,12 +25,12 @@ const Role$json = {
     {'1': 'ROLE_SCHOOL_ADMIN', '2': 4},
     {'1': 'ROLE_SCHOOL_EMPLOYEE', '2': 5},
     {'1': 'ROLE_ORGANIZATION_ADMIN', '2': 6},
-    {'1': 'ROLE_ORGANIZATION_EMPLOYEE', '2': 7},
-    {'1': 'ROLE_SUB_ORGANIZATION_ADMIN', '2': 8},
-    {'1': 'ROLE_SUB_ORGANIZATION_EMPLOYEE', '2': 9},
-    {'1': 'ROLE_SUPER_ADMIN', '2': 10},
-    {'1': 'ROLE_SCHOOL_CHAIN_ADMIN', '2': 11},
-    {'1': 'ROLE_SCHOOL_CHAIN_EMPLOYEE', '2': 12},
+    {'1': 'ROLE_DEPARTMENT_ADMIN', '2': 7},
+    {'1': 'ROLE_UNIT_EMPLOYEE', '2': 8},
+    {'1': 'ROLE_SUPER_ADMIN', '2': 9},
+    {'1': 'ROLE_SCHOOL_CHAIN_ADMIN', '2': 10},
+    {'1': 'ROLE_SCHOOL_CHAIN_EMPLOYEE', '2': 11},
+    {'1': 'ROLE_UNIT_ADMIN', '2': 12},
   ],
 };
 
@@ -38,11 +38,10 @@ const Role$json = {
 final $typed_data.Uint8List roleDescriptor = $convert.base64Decode(
     'CgRSb2xlEhQKEFJPTEVfVU5TUEVDSUZJRUQQABIQCgxST0xFX1NUVURFTlQQARIQCgxST0xFX1'
     'RFQUNIRVIQAhIPCgtST0xFX1BBUkVOVBADEhUKEVJPTEVfU0NIT09MX0FETUlOEAQSGAoUUk9M'
-    'RV9TQ0hPT0xfRU1QTE9ZRUUQBRIbChdST0xFX09SR0FOSVpBVElPTl9BRE1JThAGEh4KGlJPTE'
-    'VfT1JHQU5JWkFUSU9OX0VNUExPWUVFEAcSHwobUk9MRV9TVUJfT1JHQU5JWkFUSU9OX0FETUlO'
-    'EAgSIgoeUk9MRV9TVUJfT1JHQU5JWkFUSU9OX0VNUExPWUVFEAkSFAoQUk9MRV9TVVBFUl9BRE'
-    '1JThAKEhsKF1JPTEVfU0NIT09MX0NIQUlOX0FETUlOEAsSHgoaUk9MRV9TQ0hPT0xfQ0hBSU5f'
-    'RU1QTE9ZRUUQDA==');
+    'RV9TQ0hPT0xfRU1QTE9ZRUUQBRIbChdST0xFX09SR0FOSVpBVElPTl9BRE1JThAGEhkKFVJPTE'
+    'VfREVQQVJUTUVOVF9BRE1JThAHEhYKElJPTEVfVU5JVF9FTVBMT1lFRRAIEhQKEFJPTEVfU1VQ'
+    'RVJfQURNSU4QCRIbChdST0xFX1NDSE9PTF9DSEFJTl9BRE1JThAKEh4KGlJPTEVfU0NIT09MX0'
+    'NIQUlOX0VNUExPWUVFEAsSEwoPUk9MRV9VTklUX0FETUlOEAw=');
 
 @$core.Deprecated('Use sessionStatusDescriptor instead')
 const SessionStatus$json = {
@@ -136,18 +135,16 @@ const LeaveRole$json = {
     {'1': 'LEAVE_ROLE_STUDENT', '2': 0},
     {'1': 'LEAVE_ROLE_TEACHER', '2': 1},
     {'1': 'LEAVE_ROLE_SCHOOL_EMPLOYEE', '2': 2},
-    {'1': 'LEAVE_ROLE_ORGANIZATION_EMPLOYEE', '2': 3},
-    {'1': 'LEAVE_ROLE_SUB_ORGANIZATION_EMPLOYEE', '2': 4},
     {'1': 'LEAVE_ROLE_SCHOOL_CHAIN_EMPLOYEE', '2': 5},
+    {'1': 'LEAVE_ROLE_UNIT_EMPLOYEE', '2': 6},
   ],
 };
 
 /// Descriptor for `LeaveRole`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List leaveRoleDescriptor = $convert.base64Decode(
     'CglMZWF2ZVJvbGUSFgoSTEVBVkVfUk9MRV9TVFVERU5UEAASFgoSTEVBVkVfUk9MRV9URUFDSE'
-    'VSEAESHgoaTEVBVkVfUk9MRV9TQ0hPT0xfRU1QTE9ZRUUQAhIkCiBMRUFWRV9ST0xFX09SR0FO'
-    'SVpBVElPTl9FTVBMT1lFRRADEigKJExFQVZFX1JPTEVfU1VCX09SR0FOSVpBVElPTl9FTVBMT1'
-    'lFRRAEEiQKIExFQVZFX1JPTEVfU0NIT09MX0NIQUlOX0VNUExPWUVFEAU=');
+    'VSEAESHgoaTEVBVkVfUk9MRV9TQ0hPT0xfRU1QTE9ZRUUQAhIkCiBMRUFWRV9ST0xFX1NDSE9P'
+    'TF9DSEFJTl9FTVBMT1lFRRAFEhwKGExFQVZFX1JPTEVfVU5JVF9FTVBMT1lFRRAG');
 
 @$core.Deprecated('Use studentEnrollmentStatusDescriptor instead')
 const StudentEnrollmentStatus$json = {
@@ -201,15 +198,92 @@ const ShiftBelongsTo$json = {
   '2': [
     {'1': 'SCHOOL', '2': 0},
     {'1': 'SCHOOL_CHAIN', '2': 1},
-    {'1': 'ORGANIZATION', '2': 3},
-    {'1': 'SUB_ORGANIZATION', '2': 4},
+    {'1': 'UNIT', '2': 2},
   ],
 };
 
 /// Descriptor for `ShiftBelongsTo`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List shiftBelongsToDescriptor = $convert.base64Decode(
-    'Cg5TaGlmdEJlbG9uZ3NUbxIKCgZTQ0hPT0wQABIQCgxTQ0hPT0xfQ0hBSU4QARIQCgxPUkdBTk'
-    'laQVRJT04QAxIUChBTVUJfT1JHQU5JWkFUSU9OEAQ=');
+    'Cg5TaGlmdEJlbG9uZ3NUbxIKCgZTQ0hPT0wQABIQCgxTQ0hPT0xfQ0hBSU4QARIICgRVTklUEA'
+    'I=');
+
+@$core.Deprecated('Use notificationCategoryDescriptor instead')
+const NotificationCategory$json = {
+  '1': 'NotificationCategory',
+  '2': [
+    {'1': 'NOTIFICATION_CATEGORY_UNSPECIFIED', '2': 0},
+    {'1': 'NOTIFICATION_CATEGORY_ATTENDANCE', '2': 1},
+    {'1': 'NOTIFICATION_CATEGORY_LEAVE', '2': 2},
+    {'1': 'NOTIFICATION_CATEGORY_MESSAGE', '2': 3},
+    {'1': 'NOTIFICATION_CATEGORY_TICKET', '2': 4},
+    {'1': 'NOTIFICATION_CATEGORY_SYSTEM', '2': 5},
+  ],
+};
+
+/// Descriptor for `NotificationCategory`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List notificationCategoryDescriptor = $convert.base64Decode(
+    'ChROb3RpZmljYXRpb25DYXRlZ29yeRIlCiFOT1RJRklDQVRJT05fQ0FURUdPUllfVU5TUEVDSU'
+    'ZJRUQQABIkCiBOT1RJRklDQVRJT05fQ0FURUdPUllfQVRURU5EQU5DRRABEh8KG05PVElGSUNB'
+    'VElPTl9DQVRFR09SWV9MRUFWRRACEiEKHU5PVElGSUNBVElPTl9DQVRFR09SWV9NRVNTQUdFEA'
+    'MSIAocTk9USUZJQ0FUSU9OX0NBVEVHT1JZX1RJQ0tFVBAEEiAKHE5PVElGSUNBVElPTl9DQVRF'
+    'R09SWV9TWVNURU0QBQ==');
+
+@$core.Deprecated('Use notificationPriorityDescriptor instead')
+const NotificationPriority$json = {
+  '1': 'NotificationPriority',
+  '2': [
+    {'1': 'NOTIFICATION_PRIORITY_UNSPECIFIED', '2': 0},
+    {'1': 'NOTIFICATION_PRIORITY_LOW', '2': 1},
+    {'1': 'NOTIFICATION_PRIORITY_NORMAL', '2': 2},
+    {'1': 'NOTIFICATION_PRIORITY_HIGH', '2': 3},
+  ],
+};
+
+/// Descriptor for `NotificationPriority`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List notificationPriorityDescriptor = $convert.base64Decode(
+    'ChROb3RpZmljYXRpb25Qcmlvcml0eRIlCiFOT1RJRklDQVRJT05fUFJJT1JJVFlfVU5TUEVDSU'
+    'ZJRUQQABIdChlOT1RJRklDQVRJT05fUFJJT1JJVFlfTE9XEAESIAocTk9USUZJQ0FUSU9OX1BS'
+    'SU9SSVRZX05PUk1BTBACEh4KGk5PVElGSUNBVElPTl9QUklPUklUWV9ISUdIEAM=');
+
+@$core.Deprecated('Use notificationKindDescriptor instead')
+const NotificationKind$json = {
+  '1': 'NotificationKind',
+  '2': [
+    {'1': 'NOTIFICATION_KIND_UNSPECIFIED', '2': 0},
+    {'1': 'NOTIFICATION_KIND_SYSTEM_SHIFT_START', '2': 1},
+    {'1': 'NOTIFICATION_KIND_SYSTEM_CHECK_IN_FIRST', '2': 2},
+    {'1': 'NOTIFICATION_KIND_SYSTEM_CHECK_OUT_FIRST', '2': 3},
+    {'1': 'NOTIFICATION_KIND_SYSTEM_LEAVE_ACCEPTED', '2': 4},
+    {'1': 'NOTIFICATION_KIND_SYSTEM_LEAVE_REJECTED', '2': 5},
+    {'1': 'NOTIFICATION_KIND_SYSTEM_LEAVE_PARTIALLY_ACCEPTED', '2': 6},
+  ],
+};
+
+/// Descriptor for `NotificationKind`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List notificationKindDescriptor = $convert.base64Decode(
+    'ChBOb3RpZmljYXRpb25LaW5kEiEKHU5PVElGSUNBVElPTl9LSU5EX1VOU1BFQ0lGSUVEEAASKA'
+    'okTk9USUZJQ0FUSU9OX0tJTkRfU1lTVEVNX1NISUZUX1NUQVJUEAESKwonTk9USUZJQ0FUSU9O'
+    'X0tJTkRfU1lTVEVNX0NIRUNLX0lOX0ZJUlNUEAISLAooTk9USUZJQ0FUSU9OX0tJTkRfU1lTVE'
+    'VNX0NIRUNLX09VVF9GSVJTVBADEisKJ05PVElGSUNBVElPTl9LSU5EX1NZU1RFTV9MRUFWRV9B'
+    'Q0NFUFRFRBAEEisKJ05PVElGSUNBVElPTl9LSU5EX1NZU1RFTV9MRUFWRV9SRUpFQ1RFRBAFEj'
+    'UKMU5PVElGSUNBVElPTl9LSU5EX1NZU1RFTV9MRUFWRV9QQVJUSUFMTFlfQUNDRVBURUQQBg==');
+
+@$core.Deprecated('Use leaveOutcomeDescriptor instead')
+const LeaveOutcome$json = {
+  '1': 'LeaveOutcome',
+  '2': [
+    {'1': 'LEAVE_OUTCOME_UNSPECIFIED', '2': 0},
+    {'1': 'LEAVE_OUTCOME_ACCEPTED', '2': 1},
+    {'1': 'LEAVE_OUTCOME_REJECTED', '2': 2},
+    {'1': 'LEAVE_OUTCOME_PARTIALLY_ACCEPTED', '2': 3},
+  ],
+};
+
+/// Descriptor for `LeaveOutcome`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List leaveOutcomeDescriptor = $convert.base64Decode(
+    'CgxMZWF2ZU91dGNvbWUSHQoZTEVBVkVfT1VUQ09NRV9VTlNQRUNJRklFRBAAEhoKFkxFQVZFX0'
+    '9VVENPTUVfQUNDRVBURUQQARIaChZMRUFWRV9PVVRDT01FX1JFSkVDVEVEEAISJAogTEVBVkVf'
+    'T1VUQ09NRV9QQVJUSUFMTFlfQUNDRVBURUQQAw==');
 
 @$core.Deprecated('Use paginationRequestDescriptor instead')
 const PaginationRequest$json = {

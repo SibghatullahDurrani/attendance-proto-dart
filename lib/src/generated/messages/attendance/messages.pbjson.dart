@@ -588,6 +588,106 @@ final $typed_data.Uint8List listAllOrganizationShiftsResponseDescriptor =
         'YW5pemF0aW9uX3NoaWZ0cxgCIAMoCzImLmF0dGVuZGFuY2VfbWVzc2FnZXMuT3JnYW5pemF0aW'
         '9uU2hpZnRSEm9yZ2FuaXphdGlvblNoaWZ0cw==');
 
+@$core.Deprecated('Use getShiftsOfInstitutionsRequestDescriptor instead')
+const GetShiftsOfInstitutionsRequest$json = {
+  '1': 'GetShiftsOfInstitutionsRequest',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationRequest',
+      '10': 'pagination'
+    },
+    {'1': 'belongs_to', '3': 2, '4': 3, '5': 9, '10': 'belongsTo'},
+    {
+      '1': 'shift_name',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'shiftName',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_shift_name'},
+  ],
+};
+
+/// Descriptor for `GetShiftsOfInstitutionsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getShiftsOfInstitutionsRequestDescriptor =
+    $convert.base64Decode(
+        'Ch5HZXRTaGlmdHNPZkluc3RpdHV0aW9uc1JlcXVlc3QSQgoKcGFnaW5hdGlvbhgBIAEoCzIiLm'
+        'NvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhIdCgpiZWxvbmdz'
+        'X3RvGAIgAygJUgliZWxvbmdzVG8SIgoKc2hpZnRfbmFtZRgDIAEoCUgAUglzaGlmdE5hbWWIAQ'
+        'FCDQoLX3NoaWZ0X25hbWU=');
+
+@$core.Deprecated('Use getShiftsOfInstitutionsResponseDescriptor instead')
+const GetShiftsOfInstitutionsResponse$json = {
+  '1': 'GetShiftsOfInstitutionsResponse',
+  '2': [
+    {
+      '1': 'pagination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.common_messages.PaginationResponse',
+      '10': 'pagination'
+    },
+    {
+      '1': 'shifts',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.InstitutionShift',
+      '10': 'shifts'
+    },
+  ],
+};
+
+/// Descriptor for `GetShiftsOfInstitutionsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getShiftsOfInstitutionsResponseDescriptor =
+    $convert.base64Decode(
+        'Ch9HZXRTaGlmdHNPZkluc3RpdHV0aW9uc1Jlc3BvbnNlEkMKCnBhZ2luYXRpb24YASABKAsyIy'
+        '5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpwYWdpbmF0aW9uEj0KBnNoaWZ0'
+        'cxgCIAMoCzIlLmF0dGVuZGFuY2VfbWVzc2FnZXMuSW5zdGl0dXRpb25TaGlmdFIGc2hpZnRz');
+
+@$core.Deprecated('Use institutionShiftDescriptor instead')
+const InstitutionShift$json = {
+  '1': 'InstitutionShift',
+  '2': [
+    {'1': 'shift_id', '3': 1, '4': 1, '5': 9, '10': 'shiftId'},
+    {'1': 'shift_name', '3': 2, '4': 1, '5': 9, '10': 'shiftName'},
+    {'1': 'check_in_hour', '3': 3, '4': 1, '5': 5, '10': 'checkInHour'},
+    {'1': 'check_in_minute', '3': 4, '4': 1, '5': 5, '10': 'checkInMinute'},
+    {'1': 'check_out_hour', '3': 5, '4': 1, '5': 5, '10': 'checkOutHour'},
+    {'1': 'check_out_minute', '3': 6, '4': 1, '5': 5, '10': 'checkOutMinute'},
+    {'1': 'is_default', '3': 7, '4': 1, '5': 8, '10': 'isDefault'},
+    {
+      '1': 'working_days',
+      '3': 8,
+      '4': 3,
+      '5': 14,
+      '6': '.common_messages.Days',
+      '10': 'workingDays'
+    },
+    {'1': 'users_count', '3': 9, '4': 1, '5': 5, '10': 'usersCount'},
+    {'1': 'belongs_to', '3': 10, '4': 1, '5': 9, '10': 'belongsTo'},
+  ],
+};
+
+/// Descriptor for `InstitutionShift`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List institutionShiftDescriptor = $convert.base64Decode(
+    'ChBJbnN0aXR1dGlvblNoaWZ0EhkKCHNoaWZ0X2lkGAEgASgJUgdzaGlmdElkEh0KCnNoaWZ0X2'
+    '5hbWUYAiABKAlSCXNoaWZ0TmFtZRIiCg1jaGVja19pbl9ob3VyGAMgASgFUgtjaGVja0luSG91'
+    'chImCg9jaGVja19pbl9taW51dGUYBCABKAVSDWNoZWNrSW5NaW51dGUSJAoOY2hlY2tfb3V0X2'
+    'hvdXIYBSABKAVSDGNoZWNrT3V0SG91chIoChBjaGVja19vdXRfbWludXRlGAYgASgFUg5jaGVj'
+    'a091dE1pbnV0ZRIdCgppc19kZWZhdWx0GAcgASgIUglpc0RlZmF1bHQSOAoMd29ya2luZ19kYX'
+    'lzGAggAygOMhUuY29tbW9uX21lc3NhZ2VzLkRheXNSC3dvcmtpbmdEYXlzEh8KC3VzZXJzX2Nv'
+    'dW50GAkgASgFUgp1c2Vyc0NvdW50Eh0KCmJlbG9uZ3NfdG8YCiABKAlSCWJlbG9uZ3NUbw==');
+
 @$core.Deprecated('Use organizationShiftDescriptor instead')
 const OrganizationShift$json = {
   '1': 'OrganizationShift',
@@ -607,6 +707,7 @@ const OrganizationShift$json = {
       '6': '.common_messages.Days',
       '10': 'workingDays'
     },
+    {'1': 'users_count', '3': 9, '4': 1, '5': 5, '10': 'usersCount'},
   ],
 };
 
@@ -617,7 +718,8 @@ final $typed_data.Uint8List organizationShiftDescriptor = $convert.base64Decode(
     'dXISJgoPY2hlY2tfaW5fbWludXRlGAQgASgFUg1jaGVja0luTWludXRlEiQKDmNoZWNrX291dF'
     '9ob3VyGAUgASgFUgxjaGVja091dEhvdXISKAoQY2hlY2tfb3V0X21pbnV0ZRgGIAEoBVIOY2hl'
     'Y2tPdXRNaW51dGUSHQoKaXNfZGVmYXVsdBgHIAEoCFIJaXNEZWZhdWx0EjgKDHdvcmtpbmdfZG'
-    'F5cxgIIAMoDjIVLmNvbW1vbl9tZXNzYWdlcy5EYXlzUgt3b3JraW5nRGF5cw==');
+    'F5cxgIIAMoDjIVLmNvbW1vbl9tZXNzYWdlcy5EYXlzUgt3b3JraW5nRGF5cxIfCgt1c2Vyc19j'
+    'b3VudBgJIAEoBVIKdXNlcnNDb3VudA==');
 
 @$core.Deprecated('Use addUserToShiftRequestDescriptor instead')
 const AddUserToShiftRequest$json = {
@@ -675,7 +777,7 @@ const GetOrganizationShiftSelectionMenuItemsRequest$json = {
       '6': '.common_messages.PaginationRequest',
       '10': 'pagination'
     },
-    {'1': 'belongs_to', '3': 2, '4': 1, '5': 9, '10': 'belongsTo'},
+    {'1': 'belongs_to', '3': 2, '4': 3, '5': 9, '10': 'belongsTo'},
     {
       '1': 'shift_name',
       '3': 3,
@@ -697,7 +799,7 @@ final $typed_data.Uint8List
     $convert.base64Decode(
         'Ci1HZXRPcmdhbml6YXRpb25TaGlmdFNlbGVjdGlvbk1lbnVJdGVtc1JlcXVlc3QSQgoKcGFnaW'
         '5hdGlvbhgBIAEoCzIiLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5h'
-        'dGlvbhIdCgpiZWxvbmdzX3RvGAIgASgJUgliZWxvbmdzVG8SIgoKc2hpZnRfbmFtZRgDIAEoCU'
+        'dGlvbhIdCgpiZWxvbmdzX3RvGAIgAygJUgliZWxvbmdzVG8SIgoKc2hpZnRfbmFtZRgDIAEoCU'
         'gAUglzaGlmdE5hbWWIAQFCDQoLX3NoaWZ0X25hbWU=');
 
 @$core.Deprecated(
@@ -744,6 +846,7 @@ const OrganizationShiftSelectionMenuItem$json = {
     {'1': 'check_in_minute', '3': 5, '4': 1, '5': 5, '10': 'checkInMinute'},
     {'1': 'check_out_hour', '3': 6, '4': 1, '5': 5, '10': 'checkOutHour'},
     {'1': 'check_out_minute', '3': 7, '4': 1, '5': 5, '10': 'checkOutMinute'},
+    {'1': 'belongs_to', '3': 8, '4': 1, '5': 9, '10': 'belongsTo'},
   ],
 };
 
@@ -754,7 +857,7 @@ final $typed_data.Uint8List organizationShiftSelectionMenuItemDescriptor = $conv
     'ASgIUglpc0RlZmF1bHQSIgoNY2hlY2tfaW5faG91chgEIAEoBVILY2hlY2tJbkhvdXISJgoPY2'
     'hlY2tfaW5fbWludXRlGAUgASgFUg1jaGVja0luTWludXRlEiQKDmNoZWNrX291dF9ob3VyGAYg'
     'ASgFUgxjaGVja091dEhvdXISKAoQY2hlY2tfb3V0X21pbnV0ZRgHIAEoBVIOY2hlY2tPdXRNaW'
-    '51dGU=');
+    '51dGUSHQoKYmVsb25nc190bxgIIAEoCVIJYmVsb25nc1Rv');
 
 @$core.Deprecated('Use getOrganizationDefaultShiftRequestDescriptor instead')
 const GetOrganizationDefaultShiftRequest$json = {
@@ -775,6 +878,11 @@ const GetOrganizationDefaultShiftResponse$json = {
   '1': 'GetOrganizationDefaultShiftResponse',
   '2': [
     {'1': 'shift_id', '3': 1, '4': 1, '5': 9, '10': 'shiftId'},
+    {'1': 'shift_name', '3': 2, '4': 1, '5': 9, '10': 'shiftName'},
+    {'1': 'check_in_hour', '3': 3, '4': 1, '5': 5, '10': 'checkInHour'},
+    {'1': 'check_in_minute', '3': 4, '4': 1, '5': 5, '10': 'checkInMinute'},
+    {'1': 'check_out_hour', '3': 5, '4': 1, '5': 5, '10': 'checkOutHour'},
+    {'1': 'check_out_minute', '3': 6, '4': 1, '5': 5, '10': 'checkOutMinute'},
   ],
 };
 
@@ -782,7 +890,10 @@ const GetOrganizationDefaultShiftResponse$json = {
 final $typed_data.Uint8List getOrganizationDefaultShiftResponseDescriptor =
     $convert.base64Decode(
         'CiNHZXRPcmdhbml6YXRpb25EZWZhdWx0U2hpZnRSZXNwb25zZRIZCghzaGlmdF9pZBgBIAEoCV'
-        'IHc2hpZnRJZA==');
+        'IHc2hpZnRJZBIdCgpzaGlmdF9uYW1lGAIgASgJUglzaGlmdE5hbWUSIgoNY2hlY2tfaW5faG91'
+        'chgDIAEoBVILY2hlY2tJbkhvdXISJgoPY2hlY2tfaW5fbWludXRlGAQgASgFUg1jaGVja0luTW'
+        'ludXRlEiQKDmNoZWNrX291dF9ob3VyGAUgASgFUgxjaGVja091dEhvdXISKAoQY2hlY2tfb3V0'
+        'X21pbnV0ZRgGIAEoBVIOY2hlY2tPdXRNaW51dGU=');
 
 @$core.Deprecated('Use getBulkUserShiftsRequestDescriptor instead')
 const GetBulkUserShiftsRequest$json = {
@@ -1290,51 +1401,46 @@ const GetUserAttendanceReportAttendanceRequest$json = {
       '10': 'reportType'
     },
     {
-      '1': 'month_start_time',
+      '1': 'month_data',
       '3': 3,
       '4': 1,
       '5': 11,
-      '6': '.google.protobuf.Timestamp',
+      '6': '.attendance_messages.ReportTypeMonthData',
       '9': 0,
-      '10': 'monthStartTime',
-      '17': true
+      '10': 'monthData'
     },
     {
-      '1': 'start_date',
+      '1': 'range_data',
       '3': 4,
       '4': 1,
       '5': 11,
-      '6': '.google.protobuf.Timestamp',
-      '9': 1,
-      '10': 'startDate',
-      '17': true
+      '6': '.attendance_messages.ReportTypeRangeData',
+      '9': 0,
+      '10': 'rangeData'
     },
     {
-      '1': 'end_date',
+      '1': 'single_date_data',
       '3': 5,
       '4': 1,
       '5': 11,
-      '6': '.google.protobuf.Timestamp',
-      '9': 2,
-      '10': 'endDate',
-      '17': true
+      '6': '.attendance_messages.ReportTypeSingleDateData',
+      '9': 0,
+      '10': 'singleDateData'
     },
     {
-      '1': 'date',
+      '1': 'attendance_status',
       '3': 6,
       '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Timestamp',
-      '9': 3,
-      '10': 'date',
+      '5': 14,
+      '6': '.common_messages.AttendanceStatus',
+      '9': 1,
+      '10': 'attendanceStatus',
       '17': true
     },
   ],
   '8': [
-    {'1': '_month_start_time'},
-    {'1': '_start_date'},
-    {'1': '_end_date'},
-    {'1': '_date'},
+    {'1': 'report_type_data'},
+    {'1': '_attendance_status'},
   ],
 };
 
@@ -1342,13 +1448,84 @@ const GetUserAttendanceReportAttendanceRequest$json = {
 final $typed_data.Uint8List getUserAttendanceReportAttendanceRequestDescriptor = $convert.base64Decode(
     'CihHZXRVc2VyQXR0ZW5kYW5jZVJlcG9ydEF0dGVuZGFuY2VSZXF1ZXN0EhkKCHVzZXJfaWRzGA'
     'EgAygJUgd1c2VySWRzEkYKC3JlcG9ydF90eXBlGAIgASgOMiUuY29tbW9uX21lc3NhZ2VzLkF0'
-    'dGVuZGFuY2VSZXBvcnRUeXBlUgpyZXBvcnRUeXBlEkkKEG1vbnRoX3N0YXJ0X3RpbWUYAyABKA'
-    'syGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSABSDm1vbnRoU3RhcnRUaW1liAEBEj4KCnN0'
-    'YXJ0X2RhdGUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAFSCXN0YXJ0RGF0ZY'
-    'gBARI6CghlbmRfZGF0ZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAlIHZW5k'
-    'RGF0ZYgBARIzCgRkYXRlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgDUgRkYX'
-    'RliAEBQhMKEV9tb250aF9zdGFydF90aW1lQg0KC19zdGFydF9kYXRlQgsKCV9lbmRfZGF0ZUIH'
-    'CgVfZGF0ZQ==');
+    'dGVuZGFuY2VSZXBvcnRUeXBlUgpyZXBvcnRUeXBlEkkKCm1vbnRoX2RhdGEYAyABKAsyKC5hdH'
+    'RlbmRhbmNlX21lc3NhZ2VzLlJlcG9ydFR5cGVNb250aERhdGFIAFIJbW9udGhEYXRhEkkKCnJh'
+    'bmdlX2RhdGEYBCABKAsyKC5hdHRlbmRhbmNlX21lc3NhZ2VzLlJlcG9ydFR5cGVSYW5nZURhdG'
+    'FIAFIJcmFuZ2VEYXRhElkKEHNpbmdsZV9kYXRlX2RhdGEYBSABKAsyLS5hdHRlbmRhbmNlX21l'
+    'c3NhZ2VzLlJlcG9ydFR5cGVTaW5nbGVEYXRlRGF0YUgAUg5zaW5nbGVEYXRlRGF0YRJTChFhdH'
+    'RlbmRhbmNlX3N0YXR1cxgGIAEoDjIhLmNvbW1vbl9tZXNzYWdlcy5BdHRlbmRhbmNlU3RhdHVz'
+    'SAFSEGF0dGVuZGFuY2VTdGF0dXOIAQFCEgoQcmVwb3J0X3R5cGVfZGF0YUIUChJfYXR0ZW5kYW'
+    '5jZV9zdGF0dXM=');
+
+@$core.Deprecated('Use reportTypeMonthDataDescriptor instead')
+const ReportTypeMonthData$json = {
+  '1': 'ReportTypeMonthData',
+  '2': [
+    {
+      '1': 'month_start_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'monthStartTime'
+    },
+  ],
+};
+
+/// Descriptor for `ReportTypeMonthData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List reportTypeMonthDataDescriptor = $convert.base64Decode(
+    'ChNSZXBvcnRUeXBlTW9udGhEYXRhEkQKEG1vbnRoX3N0YXJ0X3RpbWUYASABKAsyGi5nb29nbG'
+    'UucHJvdG9idWYuVGltZXN0YW1wUg5tb250aFN0YXJ0VGltZQ==');
+
+@$core.Deprecated('Use reportTypeRangeDataDescriptor instead')
+const ReportTypeRangeData$json = {
+  '1': 'ReportTypeRangeData',
+  '2': [
+    {
+      '1': 'start_date',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startDate'
+    },
+    {
+      '1': 'end_date',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endDate'
+    },
+  ],
+};
+
+/// Descriptor for `ReportTypeRangeData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List reportTypeRangeDataDescriptor = $convert.base64Decode(
+    'ChNSZXBvcnRUeXBlUmFuZ2VEYXRhEjkKCnN0YXJ0X2RhdGUYASABKAsyGi5nb29nbGUucHJvdG'
+    '9idWYuVGltZXN0YW1wUglzdGFydERhdGUSNQoIZW5kX2RhdGUYAiABKAsyGi5nb29nbGUucHJv'
+    'dG9idWYuVGltZXN0YW1wUgdlbmREYXRl');
+
+@$core.Deprecated('Use reportTypeSingleDateDataDescriptor instead')
+const ReportTypeSingleDateData$json = {
+  '1': 'ReportTypeSingleDateData',
+  '2': [
+    {
+      '1': 'date',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'date'
+    },
+  ],
+};
+
+/// Descriptor for `ReportTypeSingleDateData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List reportTypeSingleDateDataDescriptor =
+    $convert.base64Decode(
+        'ChhSZXBvcnRUeXBlU2luZ2xlRGF0ZURhdGESLgoEZGF0ZRgBIAEoCzIaLmdvb2dsZS5wcm90b2'
+        'J1Zi5UaW1lc3RhbXBSBGRhdGU=');
 
 @$core.Deprecated(
     'Use getUserAttendanceReportAttendancesResponseDescriptor instead')
@@ -1373,6 +1550,294 @@ final $typed_data.Uint8List
         'CipHZXRVc2VyQXR0ZW5kYW5jZVJlcG9ydEF0dGVuZGFuY2VzUmVzcG9uc2USTAoPdXNlcl9hdH'
         'RlbmRhbmNlGAEgAygLMiMuYXR0ZW5kYW5jZV9tZXNzYWdlcy5Vc2VyQXR0ZW5kYW5jZVIOdXNl'
         'ckF0dGVuZGFuY2U=');
+
+@$core.Deprecated(
+    'Use getAttendanceCountReportOfShiftBelongsToRequestDescriptor instead')
+const GetAttendanceCountReportOfShiftBelongsToRequest$json = {
+  '1': 'GetAttendanceCountReportOfShiftBelongsToRequest',
+  '2': [
+    {'1': 'belongs_to', '3': 1, '4': 3, '5': 9, '10': 'belongsTo'},
+    {
+      '1': 'report_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.AttendanceReportType',
+      '10': 'reportType'
+    },
+    {
+      '1': 'month_data',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.attendance_messages.ReportTypeMonthData',
+      '9': 0,
+      '10': 'monthData'
+    },
+    {
+      '1': 'range_data',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.attendance_messages.ReportTypeRangeData',
+      '9': 0,
+      '10': 'rangeData'
+    },
+    {
+      '1': 'single_date_data',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.attendance_messages.ReportTypeSingleDateData',
+      '9': 0,
+      '10': 'singleDateData'
+    },
+  ],
+  '8': [
+    {'1': 'report_type_data'},
+  ],
+};
+
+/// Descriptor for `GetAttendanceCountReportOfShiftBelongsToRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getAttendanceCountReportOfShiftBelongsToRequestDescriptor =
+    $convert.base64Decode(
+        'Ci9HZXRBdHRlbmRhbmNlQ291bnRSZXBvcnRPZlNoaWZ0QmVsb25nc1RvUmVxdWVzdBIdCgpiZW'
+        'xvbmdzX3RvGAEgAygJUgliZWxvbmdzVG8SRgoLcmVwb3J0X3R5cGUYAiABKA4yJS5jb21tb25f'
+        'bWVzc2FnZXMuQXR0ZW5kYW5jZVJlcG9ydFR5cGVSCnJlcG9ydFR5cGUSSQoKbW9udGhfZGF0YR'
+        'gDIAEoCzIoLmF0dGVuZGFuY2VfbWVzc2FnZXMuUmVwb3J0VHlwZU1vbnRoRGF0YUgAUgltb250'
+        'aERhdGESSQoKcmFuZ2VfZGF0YRgEIAEoCzIoLmF0dGVuZGFuY2VfbWVzc2FnZXMuUmVwb3J0VH'
+        'lwZVJhbmdlRGF0YUgAUglyYW5nZURhdGESWQoQc2luZ2xlX2RhdGVfZGF0YRgFIAEoCzItLmF0'
+        'dGVuZGFuY2VfbWVzc2FnZXMuUmVwb3J0VHlwZVNpbmdsZURhdGVEYXRhSABSDnNpbmdsZURhdG'
+        'VEYXRhQhIKEHJlcG9ydF90eXBlX2RhdGE=');
+
+@$core.Deprecated(
+    'Use getAttendanceCountReportOfShiftBelongsToResponseDescriptor instead')
+const GetAttendanceCountReportOfShiftBelongsToResponse$json = {
+  '1': 'GetAttendanceCountReportOfShiftBelongsToResponse',
+  '2': [
+    {
+      '1': 'belongs_to_attendances',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.attendance_messages.BelongsToAttendance',
+      '10': 'belongsToAttendances'
+    },
+  ],
+};
+
+/// Descriptor for `GetAttendanceCountReportOfShiftBelongsToResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getAttendanceCountReportOfShiftBelongsToResponseDescriptor =
+    $convert.base64Decode(
+        'CjBHZXRBdHRlbmRhbmNlQ291bnRSZXBvcnRPZlNoaWZ0QmVsb25nc1RvUmVzcG9uc2USXgoWYm'
+        'Vsb25nc190b19hdHRlbmRhbmNlcxgBIAMoCzIoLmF0dGVuZGFuY2VfbWVzc2FnZXMuQmVsb25n'
+        'c1RvQXR0ZW5kYW5jZVIUYmVsb25nc1RvQXR0ZW5kYW5jZXM=');
+
+@$core.Deprecated('Use belongsToAttendanceDescriptor instead')
+const BelongsToAttendance$json = {
+  '1': 'BelongsToAttendance',
+  '2': [
+    {'1': 'belongs_to', '3': 1, '4': 1, '5': 9, '10': 'belongsTo'},
+    {'1': 'total_users', '3': 3, '4': 1, '5': 5, '10': 'totalUsers'},
+    {'1': 'users_on_time', '3': 4, '4': 1, '5': 5, '10': 'usersOnTime'},
+    {'1': 'users_late', '3': 5, '4': 1, '5': 5, '10': 'usersLate'},
+    {'1': 'users_absent', '3': 6, '4': 1, '5': 5, '10': 'usersAbsent'},
+    {'1': 'users_on_leave', '3': 7, '4': 1, '5': 5, '10': 'usersOnLeave'},
+  ],
+};
+
+/// Descriptor for `BelongsToAttendance`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List belongsToAttendanceDescriptor = $convert.base64Decode(
+    'ChNCZWxvbmdzVG9BdHRlbmRhbmNlEh0KCmJlbG9uZ3NfdG8YASABKAlSCWJlbG9uZ3NUbxIfCg'
+    't0b3RhbF91c2VycxgDIAEoBVIKdG90YWxVc2VycxIiCg11c2Vyc19vbl90aW1lGAQgASgFUgt1'
+    'c2Vyc09uVGltZRIdCgp1c2Vyc19sYXRlGAUgASgFUgl1c2Vyc0xhdGUSIQoMdXNlcnNfYWJzZW'
+    '50GAYgASgFUgt1c2Vyc0Fic2VudBIkCg51c2Vyc19vbl9sZWF2ZRgHIAEoBVIMdXNlcnNPbkxl'
+    'YXZl');
+
+@$core.Deprecated(
+    'Use getAttendanceCountReportOfUserIdsRequestDescriptor instead')
+const GetAttendanceCountReportOfUserIdsRequest$json = {
+  '1': 'GetAttendanceCountReportOfUserIdsRequest',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+    {
+      '1': 'report_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.AttendanceReportType',
+      '10': 'reportType'
+    },
+    {
+      '1': 'month_data',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.attendance_messages.ReportTypeMonthData',
+      '9': 0,
+      '10': 'monthData'
+    },
+    {
+      '1': 'range_data',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.attendance_messages.ReportTypeRangeData',
+      '9': 0,
+      '10': 'rangeData'
+    },
+    {
+      '1': 'single_date_data',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.attendance_messages.ReportTypeSingleDateData',
+      '9': 0,
+      '10': 'singleDateData'
+    },
+  ],
+  '8': [
+    {'1': 'report_type_data'},
+  ],
+};
+
+/// Descriptor for `GetAttendanceCountReportOfUserIdsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getAttendanceCountReportOfUserIdsRequestDescriptor = $convert.base64Decode(
+    'CihHZXRBdHRlbmRhbmNlQ291bnRSZXBvcnRPZlVzZXJJZHNSZXF1ZXN0EhkKCHVzZXJfaWRzGA'
+    'EgAygJUgd1c2VySWRzEkYKC3JlcG9ydF90eXBlGAIgASgOMiUuY29tbW9uX21lc3NhZ2VzLkF0'
+    'dGVuZGFuY2VSZXBvcnRUeXBlUgpyZXBvcnRUeXBlEkkKCm1vbnRoX2RhdGEYAyABKAsyKC5hdH'
+    'RlbmRhbmNlX21lc3NhZ2VzLlJlcG9ydFR5cGVNb250aERhdGFIAFIJbW9udGhEYXRhEkkKCnJh'
+    'bmdlX2RhdGEYBCABKAsyKC5hdHRlbmRhbmNlX21lc3NhZ2VzLlJlcG9ydFR5cGVSYW5nZURhdG'
+    'FIAFIJcmFuZ2VEYXRhElkKEHNpbmdsZV9kYXRlX2RhdGEYBSABKAsyLS5hdHRlbmRhbmNlX21l'
+    'c3NhZ2VzLlJlcG9ydFR5cGVTaW5nbGVEYXRlRGF0YUgAUg5zaW5nbGVEYXRlRGF0YUISChByZX'
+    'BvcnRfdHlwZV9kYXRh');
+
+@$core.Deprecated(
+    'Use getAttendanceCountReportOfUserIdsResponseDescriptor instead')
+const GetAttendanceCountReportOfUserIdsResponse$json = {
+  '1': 'GetAttendanceCountReportOfUserIdsResponse',
+  '2': [
+    {
+      '1': 'user_attendance_count',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.attendance_messages.UserAttendanceCount',
+      '10': 'userAttendanceCount'
+    },
+  ],
+};
+
+/// Descriptor for `GetAttendanceCountReportOfUserIdsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getAttendanceCountReportOfUserIdsResponseDescriptor = $convert.base64Decode(
+        'CilHZXRBdHRlbmRhbmNlQ291bnRSZXBvcnRPZlVzZXJJZHNSZXNwb25zZRJcChV1c2VyX2F0dG'
+        'VuZGFuY2VfY291bnQYASABKAsyKC5hdHRlbmRhbmNlX21lc3NhZ2VzLlVzZXJBdHRlbmRhbmNl'
+        'Q291bnRSE3VzZXJBdHRlbmRhbmNlQ291bnQ=');
+
+@$core.Deprecated('Use userAttendanceCountDescriptor instead')
+const UserAttendanceCount$json = {
+  '1': 'UserAttendanceCount',
+  '2': [
+    {'1': 'total_users', '3': 1, '4': 1, '5': 5, '10': 'totalUsers'},
+    {'1': 'users_on_time', '3': 2, '4': 1, '5': 5, '10': 'usersOnTime'},
+    {'1': 'users_late', '3': 3, '4': 1, '5': 5, '10': 'usersLate'},
+    {'1': 'users_absent', '3': 4, '4': 1, '5': 5, '10': 'usersAbsent'},
+    {'1': 'users_on_leave', '3': 5, '4': 1, '5': 5, '10': 'usersOnLeave'},
+  ],
+};
+
+/// Descriptor for `UserAttendanceCount`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userAttendanceCountDescriptor = $convert.base64Decode(
+    'ChNVc2VyQXR0ZW5kYW5jZUNvdW50Eh8KC3RvdGFsX3VzZXJzGAEgASgFUgp0b3RhbFVzZXJzEi'
+    'IKDXVzZXJzX29uX3RpbWUYAiABKAVSC3VzZXJzT25UaW1lEh0KCnVzZXJzX2xhdGUYAyABKAVS'
+    'CXVzZXJzTGF0ZRIhCgx1c2Vyc19hYnNlbnQYBCABKAVSC3VzZXJzQWJzZW50EiQKDnVzZXJzX2'
+    '9uX2xlYXZlGAUgASgFUgx1c2Vyc09uTGVhdmU=');
+
+@$core.Deprecated(
+    'Use getAccumulatedCountReportOfShiftBelongsToRequestDescriptor instead')
+const GetAccumulatedCountReportOfShiftBelongsToRequest$json = {
+  '1': 'GetAccumulatedCountReportOfShiftBelongsToRequest',
+  '2': [
+    {'1': 'belongs_to', '3': 1, '4': 3, '5': 9, '10': 'belongsTo'},
+    {
+      '1': 'report_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.common_messages.AttendanceReportType',
+      '10': 'reportType'
+    },
+    {
+      '1': 'month_data',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.attendance_messages.ReportTypeMonthData',
+      '9': 0,
+      '10': 'monthData'
+    },
+    {
+      '1': 'range_data',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.attendance_messages.ReportTypeRangeData',
+      '9': 0,
+      '10': 'rangeData'
+    },
+    {
+      '1': 'single_date_data',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.attendance_messages.ReportTypeSingleDateData',
+      '9': 0,
+      '10': 'singleDateData'
+    },
+  ],
+  '8': [
+    {'1': 'report_type_data'},
+  ],
+};
+
+/// Descriptor for `GetAccumulatedCountReportOfShiftBelongsToRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getAccumulatedCountReportOfShiftBelongsToRequestDescriptor =
+    $convert.base64Decode(
+        'CjBHZXRBY2N1bXVsYXRlZENvdW50UmVwb3J0T2ZTaGlmdEJlbG9uZ3NUb1JlcXVlc3QSHQoKYm'
+        'Vsb25nc190bxgBIAMoCVIJYmVsb25nc1RvEkYKC3JlcG9ydF90eXBlGAIgASgOMiUuY29tbW9u'
+        'X21lc3NhZ2VzLkF0dGVuZGFuY2VSZXBvcnRUeXBlUgpyZXBvcnRUeXBlEkkKCm1vbnRoX2RhdG'
+        'EYAyABKAsyKC5hdHRlbmRhbmNlX21lc3NhZ2VzLlJlcG9ydFR5cGVNb250aERhdGFIAFIJbW9u'
+        'dGhEYXRhEkkKCnJhbmdlX2RhdGEYBCABKAsyKC5hdHRlbmRhbmNlX21lc3NhZ2VzLlJlcG9ydF'
+        'R5cGVSYW5nZURhdGFIAFIJcmFuZ2VEYXRhElkKEHNpbmdsZV9kYXRlX2RhdGEYBSABKAsyLS5h'
+        'dHRlbmRhbmNlX21lc3NhZ2VzLlJlcG9ydFR5cGVTaW5nbGVEYXRlRGF0YUgAUg5zaW5nbGVEYX'
+        'RlRGF0YUISChByZXBvcnRfdHlwZV9kYXRh');
+
+@$core.Deprecated(
+    'Use getAccumulatedCountReportOfShiftBelongsToResponseDescriptor instead')
+const GetAccumulatedCountReportOfShiftBelongsToResponse$json = {
+  '1': 'GetAccumulatedCountReportOfShiftBelongsToResponse',
+  '2': [
+    {'1': 'total_users', '3': 3, '4': 1, '5': 5, '10': 'totalUsers'},
+    {'1': 'users_on_time', '3': 4, '4': 1, '5': 5, '10': 'usersOnTime'},
+    {'1': 'users_late', '3': 5, '4': 1, '5': 5, '10': 'usersLate'},
+    {'1': 'users_absent', '3': 6, '4': 1, '5': 5, '10': 'usersAbsent'},
+    {'1': 'users_on_leave', '3': 7, '4': 1, '5': 5, '10': 'usersOnLeave'},
+  ],
+};
+
+/// Descriptor for `GetAccumulatedCountReportOfShiftBelongsToResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    getAccumulatedCountReportOfShiftBelongsToResponseDescriptor =
+    $convert.base64Decode(
+        'CjFHZXRBY2N1bXVsYXRlZENvdW50UmVwb3J0T2ZTaGlmdEJlbG9uZ3NUb1Jlc3BvbnNlEh8KC3'
+        'RvdGFsX3VzZXJzGAMgASgFUgp0b3RhbFVzZXJzEiIKDXVzZXJzX29uX3RpbWUYBCABKAVSC3Vz'
+        'ZXJzT25UaW1lEh0KCnVzZXJzX2xhdGUYBSABKAVSCXVzZXJzTGF0ZRIhCgx1c2Vyc19hYnNlbn'
+        'QYBiABKAVSC3VzZXJzQWJzZW50EiQKDnVzZXJzX29uX2xlYXZlGAcgASgFUgx1c2Vyc09uTGVh'
+        'dmU=');
 
 @$core.Deprecated('Use userAttendanceDescriptor instead')
 const UserAttendance$json = {
@@ -1430,9 +1895,10 @@ const ShiftAttendance$json = {
   '1': 'ShiftAttendance',
   '2': [
     {'1': 'shift_id', '3': 1, '4': 1, '5': 9, '10': 'shiftId'},
+    {'1': 'shift_name', '3': 2, '4': 1, '5': 9, '10': 'shiftName'},
     {
       '1': 'attendance_status',
-      '3': 2,
+      '3': 3,
       '4': 1,
       '5': 14,
       '6': '.common_messages.AttendanceStatus',
@@ -1440,7 +1906,7 @@ const ShiftAttendance$json = {
     },
     {
       '1': 'check_in',
-      '3': 3,
+      '3': 4,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
@@ -1450,7 +1916,7 @@ const ShiftAttendance$json = {
     },
     {
       '1': 'check_out',
-      '3': 4,
+      '3': 5,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
@@ -1467,11 +1933,12 @@ const ShiftAttendance$json = {
 
 /// Descriptor for `ShiftAttendance`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List shiftAttendanceDescriptor = $convert.base64Decode(
-    'Cg9TaGlmdEF0dGVuZGFuY2USGQoIc2hpZnRfaWQYASABKAlSB3NoaWZ0SWQSTgoRYXR0ZW5kYW'
-    '5jZV9zdGF0dXMYAiABKA4yIS5jb21tb25fbWVzc2FnZXMuQXR0ZW5kYW5jZVN0YXR1c1IQYXR0'
-    'ZW5kYW5jZVN0YXR1cxI6CghjaGVja19pbhgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3'
-    'RhbXBIAFIHY2hlY2tJbogBARI8CgljaGVja19vdXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYu'
-    'VGltZXN0YW1wSAFSCGNoZWNrT3V0iAEBQgsKCV9jaGVja19pbkIMCgpfY2hlY2tfb3V0');
+    'Cg9TaGlmdEF0dGVuZGFuY2USGQoIc2hpZnRfaWQYASABKAlSB3NoaWZ0SWQSHQoKc2hpZnRfbm'
+    'FtZRgCIAEoCVIJc2hpZnROYW1lEk4KEWF0dGVuZGFuY2Vfc3RhdHVzGAMgASgOMiEuY29tbW9u'
+    'X21lc3NhZ2VzLkF0dGVuZGFuY2VTdGF0dXNSEGF0dGVuZGFuY2VTdGF0dXMSOgoIY2hlY2tfaW'
+    '4YBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSABSB2NoZWNrSW6IAQESPAoJY2hl'
+    'Y2tfb3V0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBUghjaGVja091dIgBAU'
+    'ILCglfY2hlY2tfaW5CDAoKX2NoZWNrX291dA==');
 
 @$core.Deprecated('Use getBulkShiftShortInfoRequestDescriptor instead')
 const GetBulkShiftShortInfoRequest$json = {
@@ -1573,73 +2040,6 @@ final $typed_data.Uint8List organizationShiftForDayDescriptor = $convert.base64D
     'NrX291dF9ob3VyGAUgASgFUgxjaGVja091dEhvdXISKAoQY2hlY2tfb3V0X21pbnV0ZRgGIAEo'
     'BVIOY2hlY2tPdXRNaW51dGU=');
 
-@$core.Deprecated('Use getUserShiftsOfAttendanceMonthRequestDescriptor instead')
-const GetUserShiftsOfAttendanceMonthRequest$json = {
-  '1': 'GetUserShiftsOfAttendanceMonthRequest',
-  '2': [
-    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
-    {
-      '1': 'month_start_time',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Timestamp',
-      '10': 'monthStartTime'
-    },
-  ],
-};
-
-/// Descriptor for `GetUserShiftsOfAttendanceMonthRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getUserShiftsOfAttendanceMonthRequestDescriptor =
-    $convert.base64Decode(
-        'CiVHZXRVc2VyU2hpZnRzT2ZBdHRlbmRhbmNlTW9udGhSZXF1ZXN0EhcKB3VzZXJfaWQYASABKA'
-        'lSBnVzZXJJZBJEChBtb250aF9zdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp'
-        'bWVzdGFtcFIObW9udGhTdGFydFRpbWU=');
-
-@$core
-    .Deprecated('Use getUserShiftsOfAttendanceMonthResponseDescriptor instead')
-const GetUserShiftsOfAttendanceMonthResponse$json = {
-  '1': 'GetUserShiftsOfAttendanceMonthResponse',
-  '2': [
-    {
-      '1': 'shifts_of_attendance_month',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.attendance_messages.ShiftOfAttendanceMonth',
-      '10': 'shiftsOfAttendanceMonth'
-    },
-  ],
-};
-
-/// Descriptor for `GetUserShiftsOfAttendanceMonthResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getUserShiftsOfAttendanceMonthResponseDescriptor =
-    $convert.base64Decode(
-        'CiZHZXRVc2VyU2hpZnRzT2ZBdHRlbmRhbmNlTW9udGhSZXNwb25zZRJoChpzaGlmdHNfb2ZfYX'
-        'R0ZW5kYW5jZV9tb250aBgBIAMoCzIrLmF0dGVuZGFuY2VfbWVzc2FnZXMuU2hpZnRPZkF0dGVu'
-        'ZGFuY2VNb250aFIXc2hpZnRzT2ZBdHRlbmRhbmNlTW9udGg=');
-
-@$core.Deprecated('Use shiftOfAttendanceMonthDescriptor instead')
-const ShiftOfAttendanceMonth$json = {
-  '1': 'ShiftOfAttendanceMonth',
-  '2': [
-    {'1': 'shift_id', '3': 1, '4': 1, '5': 9, '10': 'shiftId'},
-    {'1': 'shift_name', '3': 2, '4': 1, '5': 9, '10': 'shiftName'},
-    {'1': 'check_in_hour', '3': 3, '4': 1, '5': 5, '10': 'checkInHour'},
-    {'1': 'check_in_minute', '3': 4, '4': 1, '5': 5, '10': 'checkInMinute'},
-    {'1': 'check_out_hour', '3': 5, '4': 1, '5': 5, '10': 'checkOutHour'},
-    {'1': 'check_out_minute', '3': 6, '4': 1, '5': 5, '10': 'checkOutMinute'},
-  ],
-};
-
-/// Descriptor for `ShiftOfAttendanceMonth`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List shiftOfAttendanceMonthDescriptor = $convert.base64Decode(
-    'ChZTaGlmdE9mQXR0ZW5kYW5jZU1vbnRoEhkKCHNoaWZ0X2lkGAEgASgJUgdzaGlmdElkEh0KCn'
-    'NoaWZ0X25hbWUYAiABKAlSCXNoaWZ0TmFtZRIiCg1jaGVja19pbl9ob3VyGAMgASgFUgtjaGVj'
-    'a0luSG91chImCg9jaGVja19pbl9taW51dGUYBCABKAVSDWNoZWNrSW5NaW51dGUSJAoOY2hlY2'
-    'tfb3V0X2hvdXIYBSABKAVSDGNoZWNrT3V0SG91chIoChBjaGVja19vdXRfbWludXRlGAYgASgF'
-    'Ug5jaGVja091dE1pbnV0ZQ==');
-
 @$core.Deprecated('Use getUserShiftRegistrationsRequestDescriptor instead')
 const GetUserShiftRegistrationsRequest$json = {
   '1': 'GetUserShiftRegistrationsRequest',
@@ -1734,3 +2134,31 @@ final $typed_data.Uint8List getShiftsNamesResponseDescriptor = $convert.base64De
     '5jZV9tZXNzYWdlcy5HZXRTaGlmdHNOYW1lc1Jlc3BvbnNlLlNoaWZ0TmFtZXNFbnRyeVIKc2hp'
     'ZnROYW1lcxo9Cg9TaGlmdE5hbWVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAi'
     'ABKAlSBXZhbHVlOgI4AQ==');
+
+@$core.Deprecated('Use getUserIdsRegisteredToShiftsRequestDescriptor instead')
+const GetUserIdsRegisteredToShiftsRequest$json = {
+  '1': 'GetUserIdsRegisteredToShiftsRequest',
+  '2': [
+    {'1': 'shift_ids', '3': 1, '4': 3, '5': 9, '10': 'shiftIds'},
+  ],
+};
+
+/// Descriptor for `GetUserIdsRegisteredToShiftsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserIdsRegisteredToShiftsRequestDescriptor =
+    $convert.base64Decode(
+        'CiNHZXRVc2VySWRzUmVnaXN0ZXJlZFRvU2hpZnRzUmVxdWVzdBIbCglzaGlmdF9pZHMYASADKA'
+        'lSCHNoaWZ0SWRz');
+
+@$core.Deprecated('Use getUserIdsRegisteredToShiftsResponseDescriptor instead')
+const GetUserIdsRegisteredToShiftsResponse$json = {
+  '1': 'GetUserIdsRegisteredToShiftsResponse',
+  '2': [
+    {'1': 'user_ids', '3': 2, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `GetUserIdsRegisteredToShiftsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserIdsRegisteredToShiftsResponseDescriptor =
+    $convert.base64Decode(
+        'CiRHZXRVc2VySWRzUmVnaXN0ZXJlZFRvU2hpZnRzUmVzcG9uc2USGQoIdXNlcl9pZHMYAiADKA'
+        'lSB3VzZXJJZHM=');

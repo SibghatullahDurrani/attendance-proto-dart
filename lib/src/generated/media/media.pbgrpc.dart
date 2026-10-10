@@ -123,9 +123,10 @@ class MediaServiceClient extends $grpc.Client {
     return $createUnaryCall(_$deleteDraftImage, request, options: options);
   }
 
-  /// PromoteDraftImages moves draft images from drafts/{rowID}/ to users/{userID}/.
-  /// This is called after successful user registration to finalize profile images.
-  /// The draft images are deleted after successful promotion.
+  /// PromoteDraftImages moves draft images from drafts/{rowID}/ to
+  /// users/{userID}/. This is called after successful user registration to
+  /// finalize profile images. The draft images are deleted after successful
+  /// promotion.
   $grpc.ResponseFuture<$0.PromoteDraftImagesResponse> promoteDraftImages(
     $0.PromoteDraftImagesRequest request, {
     $grpc.CallOptions? options,

@@ -6306,9 +6306,9 @@ class GetEmployeeIdsOfSchoolResponse extends $pb.GeneratedMessage {
   $pb.PbList<$core.String> get employeeIds => $_getList(1);
 }
 
-class GetStudentsSelectionMenuItemsPersonalInfoRequest
+class GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest
     extends $pb.GeneratedMessage {
-  factory GetStudentsSelectionMenuItemsPersonalInfoRequest({
+  factory GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest({
     $core.String? schoolId,
     $1.PaginationRequest? pagination,
     $core.String? name,
@@ -6320,13 +6320,13 @@ class GetStudentsSelectionMenuItemsPersonalInfoRequest
     return result;
   }
 
-  GetStudentsSelectionMenuItemsPersonalInfoRequest._();
+  GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest._();
 
-  factory GetStudentsSelectionMenuItemsPersonalInfoRequest.fromBuffer(
+  factory GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest.fromBuffer(
           $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory GetStudentsSelectionMenuItemsPersonalInfoRequest.fromJson(
+  factory GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest.fromJson(
           $core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
@@ -6334,7 +6334,7 @@ class GetStudentsSelectionMenuItemsPersonalInfoRequest
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
           ? ''
-          : 'GetStudentsSelectionMenuItemsPersonalInfoRequest',
+          : 'GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -6345,32 +6345,35 @@ class GetStudentsSelectionMenuItemsPersonalInfoRequest
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetStudentsSelectionMenuItemsPersonalInfoRequest clone() => deepCopy();
+  GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest clone() =>
+      deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetStudentsSelectionMenuItemsPersonalInfoRequest copyWith(
-          void Function(GetStudentsSelectionMenuItemsPersonalInfoRequest)
+  GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest copyWith(
+          void Function(
+                  GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest)
               updates) =>
-      super.copyWith((message) => updates(
-              message as GetStudentsSelectionMenuItemsPersonalInfoRequest))
-          as GetStudentsSelectionMenuItemsPersonalInfoRequest;
+      super.copyWith((message) => updates(message
+              as GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest))
+          as GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static GetStudentsSelectionMenuItemsPersonalInfoRequest create() =>
-      GetStudentsSelectionMenuItemsPersonalInfoRequest._();
+  static GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest create() =>
+      GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest._();
   @$core.override
-  GetStudentsSelectionMenuItemsPersonalInfoRequest createEmptyInstance() =>
-      create();
-  static $pb.PbList<GetStudentsSelectionMenuItemsPersonalInfoRequest>
-      createRepeated() =>
-          $pb.PbList<GetStudentsSelectionMenuItemsPersonalInfoRequest>();
+  GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest
+      createEmptyInstance() => create();
+  static $pb.PbList<GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest>
+      createRepeated() => $pb.PbList<
+          GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest>();
   @$core.pragma('dart2js:noInline')
-  static GetStudentsSelectionMenuItemsPersonalInfoRequest getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          GetStudentsSelectionMenuItemsPersonalInfoRequest>(create);
-  static GetStudentsSelectionMenuItemsPersonalInfoRequest? _defaultInstance;
+  static GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest>(create);
+  static GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest?
+      _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get schoolId => $_getSZ(0);
@@ -6402,11 +6405,11 @@ class GetStudentsSelectionMenuItemsPersonalInfoRequest
   void clearName() => $_clearField(3);
 }
 
-class GetStudentsSelectionMenuItemsPersonalInfoResponse
+class GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse
     extends $pb.GeneratedMessage {
-  factory GetStudentsSelectionMenuItemsPersonalInfoResponse({
+  factory GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse({
     $1.PaginationResponse? pagination,
-    $core.Iterable<StudentsSelectionMenuItemPersonalInfo>? students,
+    $core.Iterable<StudentsOfSchoolSelectionMenuItemPersonalInfo>? students,
   }) {
     final result = create();
     if (pagination != null) result.pagination = pagination;
@@ -6414,13 +6417,13 @@ class GetStudentsSelectionMenuItemsPersonalInfoResponse
     return result;
   }
 
-  GetStudentsSelectionMenuItemsPersonalInfoResponse._();
+  GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse._();
 
-  factory GetStudentsSelectionMenuItemsPersonalInfoResponse.fromBuffer(
+  factory GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse.fromBuffer(
           $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory GetStudentsSelectionMenuItemsPersonalInfoResponse.fromJson(
+  factory GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse.fromJson(
           $core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
@@ -6428,44 +6431,47 @@ class GetStudentsSelectionMenuItemsPersonalInfoResponse
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
           ? ''
-          : 'GetStudentsSelectionMenuItemsPersonalInfoResponse',
+          : 'GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
     ..aOM<$1.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
         subBuilder: $1.PaginationResponse.create)
-    ..pPM<StudentsSelectionMenuItemPersonalInfo>(
+    ..pPM<StudentsOfSchoolSelectionMenuItemPersonalInfo>(
         2, _omitFieldNames ? '' : 'students',
-        subBuilder: StudentsSelectionMenuItemPersonalInfo.create)
+        subBuilder: StudentsOfSchoolSelectionMenuItemPersonalInfo.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetStudentsSelectionMenuItemsPersonalInfoResponse clone() => deepCopy();
+  GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse clone() =>
+      deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetStudentsSelectionMenuItemsPersonalInfoResponse copyWith(
-          void Function(GetStudentsSelectionMenuItemsPersonalInfoResponse)
+  GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse copyWith(
+          void Function(
+                  GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse)
               updates) =>
-      super.copyWith((message) => updates(
-              message as GetStudentsSelectionMenuItemsPersonalInfoResponse))
-          as GetStudentsSelectionMenuItemsPersonalInfoResponse;
+      super.copyWith((message) => updates(message
+              as GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse))
+          as GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static GetStudentsSelectionMenuItemsPersonalInfoResponse create() =>
-      GetStudentsSelectionMenuItemsPersonalInfoResponse._();
+  static GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse create() =>
+      GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse._();
   @$core.override
-  GetStudentsSelectionMenuItemsPersonalInfoResponse createEmptyInstance() =>
-      create();
-  static $pb.PbList<GetStudentsSelectionMenuItemsPersonalInfoResponse>
-      createRepeated() =>
-          $pb.PbList<GetStudentsSelectionMenuItemsPersonalInfoResponse>();
+  GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse
+      createEmptyInstance() => create();
+  static $pb.PbList<GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse>
+      createRepeated() => $pb.PbList<
+          GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse>();
   @$core.pragma('dart2js:noInline')
-  static GetStudentsSelectionMenuItemsPersonalInfoResponse getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          GetStudentsSelectionMenuItemsPersonalInfoResponse>(create);
-  static GetStudentsSelectionMenuItemsPersonalInfoResponse? _defaultInstance;
+  static GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse>(create);
+  static GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse?
+      _defaultInstance;
 
   @$pb.TagNumber(1)
   $1.PaginationResponse get pagination => $_getN(0);
@@ -6479,12 +6485,13 @@ class GetStudentsSelectionMenuItemsPersonalInfoResponse
   $1.PaginationResponse ensurePagination() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $pb.PbList<StudentsSelectionMenuItemPersonalInfo> get students =>
+  $pb.PbList<StudentsOfSchoolSelectionMenuItemPersonalInfo> get students =>
       $_getList(1);
 }
 
-class StudentsSelectionMenuItemPersonalInfo extends $pb.GeneratedMessage {
-  factory StudentsSelectionMenuItemPersonalInfo({
+class StudentsOfSchoolSelectionMenuItemPersonalInfo
+    extends $pb.GeneratedMessage {
+  factory StudentsOfSchoolSelectionMenuItemPersonalInfo({
     $core.String? studentId,
     $core.String? firstName,
     $core.String? secondName,
@@ -6502,18 +6509,19 @@ class StudentsSelectionMenuItemPersonalInfo extends $pb.GeneratedMessage {
     return result;
   }
 
-  StudentsSelectionMenuItemPersonalInfo._();
+  StudentsOfSchoolSelectionMenuItemPersonalInfo._();
 
-  factory StudentsSelectionMenuItemPersonalInfo.fromBuffer(
+  factory StudentsOfSchoolSelectionMenuItemPersonalInfo.fromBuffer(
           $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory StudentsSelectionMenuItemPersonalInfo.fromJson($core.String json,
+  factory StudentsOfSchoolSelectionMenuItemPersonalInfo.fromJson(
+          $core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'StudentsSelectionMenuItemPersonalInfo',
+      _omitMessageNames ? '' : 'StudentsOfSchoolSelectionMenuItemPersonalInfo',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -6525,29 +6533,32 @@ class StudentsSelectionMenuItemPersonalInfo extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  StudentsSelectionMenuItemPersonalInfo clone() => deepCopy();
+  StudentsOfSchoolSelectionMenuItemPersonalInfo clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  StudentsSelectionMenuItemPersonalInfo copyWith(
-          void Function(StudentsSelectionMenuItemPersonalInfo) updates) =>
+  StudentsOfSchoolSelectionMenuItemPersonalInfo copyWith(
+          void Function(StudentsOfSchoolSelectionMenuItemPersonalInfo)
+              updates) =>
       super.copyWith((message) =>
-              updates(message as StudentsSelectionMenuItemPersonalInfo))
-          as StudentsSelectionMenuItemPersonalInfo;
+              updates(message as StudentsOfSchoolSelectionMenuItemPersonalInfo))
+          as StudentsOfSchoolSelectionMenuItemPersonalInfo;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static StudentsSelectionMenuItemPersonalInfo create() =>
-      StudentsSelectionMenuItemPersonalInfo._();
+  static StudentsOfSchoolSelectionMenuItemPersonalInfo create() =>
+      StudentsOfSchoolSelectionMenuItemPersonalInfo._();
   @$core.override
-  StudentsSelectionMenuItemPersonalInfo createEmptyInstance() => create();
-  static $pb.PbList<StudentsSelectionMenuItemPersonalInfo> createRepeated() =>
-      $pb.PbList<StudentsSelectionMenuItemPersonalInfo>();
+  StudentsOfSchoolSelectionMenuItemPersonalInfo createEmptyInstance() =>
+      create();
+  static $pb.PbList<StudentsOfSchoolSelectionMenuItemPersonalInfo>
+      createRepeated() =>
+          $pb.PbList<StudentsOfSchoolSelectionMenuItemPersonalInfo>();
   @$core.pragma('dart2js:noInline')
-  static StudentsSelectionMenuItemPersonalInfo getDefault() =>
+  static StudentsOfSchoolSelectionMenuItemPersonalInfo getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          StudentsSelectionMenuItemPersonalInfo>(create);
-  static StudentsSelectionMenuItemPersonalInfo? _defaultInstance;
+          StudentsOfSchoolSelectionMenuItemPersonalInfo>(create);
+  static StudentsOfSchoolSelectionMenuItemPersonalInfo? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get studentId => $_getSZ(0);
@@ -6595,9 +6606,9 @@ class StudentsSelectionMenuItemPersonalInfo extends $pb.GeneratedMessage {
   void clearLastAttendedSectionName() => $_clearField(5);
 }
 
-class GetTeachersSelectionMenuItemsPersonalInfoRequest
+class GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest
     extends $pb.GeneratedMessage {
-  factory GetTeachersSelectionMenuItemsPersonalInfoRequest({
+  factory GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest({
     $core.String? schoolId,
     $1.PaginationRequest? pagination,
     $core.String? name,
@@ -6609,13 +6620,13 @@ class GetTeachersSelectionMenuItemsPersonalInfoRequest
     return result;
   }
 
-  GetTeachersSelectionMenuItemsPersonalInfoRequest._();
+  GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest._();
 
-  factory GetTeachersSelectionMenuItemsPersonalInfoRequest.fromBuffer(
+  factory GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest.fromBuffer(
           $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory GetTeachersSelectionMenuItemsPersonalInfoRequest.fromJson(
+  factory GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest.fromJson(
           $core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
@@ -6623,7 +6634,7 @@ class GetTeachersSelectionMenuItemsPersonalInfoRequest
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
           ? ''
-          : 'GetTeachersSelectionMenuItemsPersonalInfoRequest',
+          : 'GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -6634,32 +6645,35 @@ class GetTeachersSelectionMenuItemsPersonalInfoRequest
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetTeachersSelectionMenuItemsPersonalInfoRequest clone() => deepCopy();
+  GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest clone() =>
+      deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetTeachersSelectionMenuItemsPersonalInfoRequest copyWith(
-          void Function(GetTeachersSelectionMenuItemsPersonalInfoRequest)
+  GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest copyWith(
+          void Function(
+                  GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest)
               updates) =>
-      super.copyWith((message) => updates(
-              message as GetTeachersSelectionMenuItemsPersonalInfoRequest))
-          as GetTeachersSelectionMenuItemsPersonalInfoRequest;
+      super.copyWith((message) => updates(message
+              as GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest))
+          as GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static GetTeachersSelectionMenuItemsPersonalInfoRequest create() =>
-      GetTeachersSelectionMenuItemsPersonalInfoRequest._();
+  static GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest create() =>
+      GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest._();
   @$core.override
-  GetTeachersSelectionMenuItemsPersonalInfoRequest createEmptyInstance() =>
-      create();
-  static $pb.PbList<GetTeachersSelectionMenuItemsPersonalInfoRequest>
-      createRepeated() =>
-          $pb.PbList<GetTeachersSelectionMenuItemsPersonalInfoRequest>();
+  GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest
+      createEmptyInstance() => create();
+  static $pb.PbList<GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest>
+      createRepeated() => $pb.PbList<
+          GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest>();
   @$core.pragma('dart2js:noInline')
-  static GetTeachersSelectionMenuItemsPersonalInfoRequest getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          GetTeachersSelectionMenuItemsPersonalInfoRequest>(create);
-  static GetTeachersSelectionMenuItemsPersonalInfoRequest? _defaultInstance;
+  static GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest>(create);
+  static GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest?
+      _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get schoolId => $_getSZ(0);
@@ -6691,11 +6705,11 @@ class GetTeachersSelectionMenuItemsPersonalInfoRequest
   void clearName() => $_clearField(3);
 }
 
-class GetTeachersSelectionMenuItemsPersonalInfoResponse
+class GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse
     extends $pb.GeneratedMessage {
-  factory GetTeachersSelectionMenuItemsPersonalInfoResponse({
+  factory GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse({
     $1.PaginationResponse? pagination,
-    $core.Iterable<TeacherSelectionMenuItemPersonalInfo>? teachers,
+    $core.Iterable<TeacherOfSchoolSelectionMenuItemPersonalInfo>? teachers,
   }) {
     final result = create();
     if (pagination != null) result.pagination = pagination;
@@ -6703,13 +6717,13 @@ class GetTeachersSelectionMenuItemsPersonalInfoResponse
     return result;
   }
 
-  GetTeachersSelectionMenuItemsPersonalInfoResponse._();
+  GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse._();
 
-  factory GetTeachersSelectionMenuItemsPersonalInfoResponse.fromBuffer(
+  factory GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse.fromBuffer(
           $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory GetTeachersSelectionMenuItemsPersonalInfoResponse.fromJson(
+  factory GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse.fromJson(
           $core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
@@ -6717,44 +6731,47 @@ class GetTeachersSelectionMenuItemsPersonalInfoResponse
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
           ? ''
-          : 'GetTeachersSelectionMenuItemsPersonalInfoResponse',
+          : 'GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
     ..aOM<$1.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
         subBuilder: $1.PaginationResponse.create)
-    ..pPM<TeacherSelectionMenuItemPersonalInfo>(
+    ..pPM<TeacherOfSchoolSelectionMenuItemPersonalInfo>(
         2, _omitFieldNames ? '' : 'teachers',
-        subBuilder: TeacherSelectionMenuItemPersonalInfo.create)
+        subBuilder: TeacherOfSchoolSelectionMenuItemPersonalInfo.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetTeachersSelectionMenuItemsPersonalInfoResponse clone() => deepCopy();
+  GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse clone() =>
+      deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetTeachersSelectionMenuItemsPersonalInfoResponse copyWith(
-          void Function(GetTeachersSelectionMenuItemsPersonalInfoResponse)
+  GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse copyWith(
+          void Function(
+                  GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse)
               updates) =>
-      super.copyWith((message) => updates(
-              message as GetTeachersSelectionMenuItemsPersonalInfoResponse))
-          as GetTeachersSelectionMenuItemsPersonalInfoResponse;
+      super.copyWith((message) => updates(message
+              as GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse))
+          as GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static GetTeachersSelectionMenuItemsPersonalInfoResponse create() =>
-      GetTeachersSelectionMenuItemsPersonalInfoResponse._();
+  static GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse create() =>
+      GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse._();
   @$core.override
-  GetTeachersSelectionMenuItemsPersonalInfoResponse createEmptyInstance() =>
-      create();
-  static $pb.PbList<GetTeachersSelectionMenuItemsPersonalInfoResponse>
-      createRepeated() =>
-          $pb.PbList<GetTeachersSelectionMenuItemsPersonalInfoResponse>();
+  GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse
+      createEmptyInstance() => create();
+  static $pb.PbList<GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse>
+      createRepeated() => $pb.PbList<
+          GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse>();
   @$core.pragma('dart2js:noInline')
-  static GetTeachersSelectionMenuItemsPersonalInfoResponse getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          GetTeachersSelectionMenuItemsPersonalInfoResponse>(create);
-  static GetTeachersSelectionMenuItemsPersonalInfoResponse? _defaultInstance;
+  static GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse>(create);
+  static GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse?
+      _defaultInstance;
 
   @$pb.TagNumber(1)
   $1.PaginationResponse get pagination => $_getN(0);
@@ -6768,11 +6785,13 @@ class GetTeachersSelectionMenuItemsPersonalInfoResponse
   $1.PaginationResponse ensurePagination() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $pb.PbList<TeacherSelectionMenuItemPersonalInfo> get teachers => $_getList(1);
+  $pb.PbList<TeacherOfSchoolSelectionMenuItemPersonalInfo> get teachers =>
+      $_getList(1);
 }
 
-class TeacherSelectionMenuItemPersonalInfo extends $pb.GeneratedMessage {
-  factory TeacherSelectionMenuItemPersonalInfo({
+class TeacherOfSchoolSelectionMenuItemPersonalInfo
+    extends $pb.GeneratedMessage {
+  factory TeacherOfSchoolSelectionMenuItemPersonalInfo({
     $core.String? teacherId,
     $core.String? firstName,
     $core.String? secondName,
@@ -6789,18 +6808,19 @@ class TeacherSelectionMenuItemPersonalInfo extends $pb.GeneratedMessage {
     return result;
   }
 
-  TeacherSelectionMenuItemPersonalInfo._();
+  TeacherOfSchoolSelectionMenuItemPersonalInfo._();
 
-  factory TeacherSelectionMenuItemPersonalInfo.fromBuffer(
+  factory TeacherOfSchoolSelectionMenuItemPersonalInfo.fromBuffer(
           $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory TeacherSelectionMenuItemPersonalInfo.fromJson($core.String json,
+  factory TeacherOfSchoolSelectionMenuItemPersonalInfo.fromJson(
+          $core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'TeacherSelectionMenuItemPersonalInfo',
+      _omitMessageNames ? '' : 'TeacherOfSchoolSelectionMenuItemPersonalInfo',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -6812,29 +6832,32 @@ class TeacherSelectionMenuItemPersonalInfo extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TeacherSelectionMenuItemPersonalInfo clone() => deepCopy();
+  TeacherOfSchoolSelectionMenuItemPersonalInfo clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TeacherSelectionMenuItemPersonalInfo copyWith(
-          void Function(TeacherSelectionMenuItemPersonalInfo) updates) =>
+  TeacherOfSchoolSelectionMenuItemPersonalInfo copyWith(
+          void Function(TeacherOfSchoolSelectionMenuItemPersonalInfo)
+              updates) =>
       super.copyWith((message) =>
-              updates(message as TeacherSelectionMenuItemPersonalInfo))
-          as TeacherSelectionMenuItemPersonalInfo;
+              updates(message as TeacherOfSchoolSelectionMenuItemPersonalInfo))
+          as TeacherOfSchoolSelectionMenuItemPersonalInfo;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static TeacherSelectionMenuItemPersonalInfo create() =>
-      TeacherSelectionMenuItemPersonalInfo._();
+  static TeacherOfSchoolSelectionMenuItemPersonalInfo create() =>
+      TeacherOfSchoolSelectionMenuItemPersonalInfo._();
   @$core.override
-  TeacherSelectionMenuItemPersonalInfo createEmptyInstance() => create();
-  static $pb.PbList<TeacherSelectionMenuItemPersonalInfo> createRepeated() =>
-      $pb.PbList<TeacherSelectionMenuItemPersonalInfo>();
+  TeacherOfSchoolSelectionMenuItemPersonalInfo createEmptyInstance() =>
+      create();
+  static $pb.PbList<TeacherOfSchoolSelectionMenuItemPersonalInfo>
+      createRepeated() =>
+          $pb.PbList<TeacherOfSchoolSelectionMenuItemPersonalInfo>();
   @$core.pragma('dart2js:noInline')
-  static TeacherSelectionMenuItemPersonalInfo getDefault() =>
+  static TeacherOfSchoolSelectionMenuItemPersonalInfo getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          TeacherSelectionMenuItemPersonalInfo>(create);
-  static TeacherSelectionMenuItemPersonalInfo? _defaultInstance;
+          TeacherOfSchoolSelectionMenuItemPersonalInfo>(create);
+  static TeacherOfSchoolSelectionMenuItemPersonalInfo? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get teacherId => $_getSZ(0);
@@ -6882,9 +6905,9 @@ class TeacherSelectionMenuItemPersonalInfo extends $pb.GeneratedMessage {
   void clearPhoneNumber() => $_clearField(5);
 }
 
-class GetEmployeesSelectionMenuItemsPersonalInfoRequest
+class GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest
     extends $pb.GeneratedMessage {
-  factory GetEmployeesSelectionMenuItemsPersonalInfoRequest({
+  factory GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest({
     $core.String? schoolId,
     $1.PaginationRequest? pagination,
     $core.String? name,
@@ -6896,13 +6919,13 @@ class GetEmployeesSelectionMenuItemsPersonalInfoRequest
     return result;
   }
 
-  GetEmployeesSelectionMenuItemsPersonalInfoRequest._();
+  GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest._();
 
-  factory GetEmployeesSelectionMenuItemsPersonalInfoRequest.fromBuffer(
+  factory GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest.fromBuffer(
           $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory GetEmployeesSelectionMenuItemsPersonalInfoRequest.fromJson(
+  factory GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest.fromJson(
           $core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
@@ -6910,7 +6933,7 @@ class GetEmployeesSelectionMenuItemsPersonalInfoRequest
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
           ? ''
-          : 'GetEmployeesSelectionMenuItemsPersonalInfoRequest',
+          : 'GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -6921,32 +6944,35 @@ class GetEmployeesSelectionMenuItemsPersonalInfoRequest
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetEmployeesSelectionMenuItemsPersonalInfoRequest clone() => deepCopy();
+  GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest clone() =>
+      deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetEmployeesSelectionMenuItemsPersonalInfoRequest copyWith(
-          void Function(GetEmployeesSelectionMenuItemsPersonalInfoRequest)
+  GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest copyWith(
+          void Function(
+                  GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest)
               updates) =>
-      super.copyWith((message) => updates(
-              message as GetEmployeesSelectionMenuItemsPersonalInfoRequest))
-          as GetEmployeesSelectionMenuItemsPersonalInfoRequest;
+      super.copyWith((message) => updates(message
+              as GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest))
+          as GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static GetEmployeesSelectionMenuItemsPersonalInfoRequest create() =>
-      GetEmployeesSelectionMenuItemsPersonalInfoRequest._();
+  static GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest create() =>
+      GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest._();
   @$core.override
-  GetEmployeesSelectionMenuItemsPersonalInfoRequest createEmptyInstance() =>
-      create();
-  static $pb.PbList<GetEmployeesSelectionMenuItemsPersonalInfoRequest>
-      createRepeated() =>
-          $pb.PbList<GetEmployeesSelectionMenuItemsPersonalInfoRequest>();
+  GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest
+      createEmptyInstance() => create();
+  static $pb.PbList<GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest>
+      createRepeated() => $pb.PbList<
+          GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest>();
   @$core.pragma('dart2js:noInline')
-  static GetEmployeesSelectionMenuItemsPersonalInfoRequest getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          GetEmployeesSelectionMenuItemsPersonalInfoRequest>(create);
-  static GetEmployeesSelectionMenuItemsPersonalInfoRequest? _defaultInstance;
+  static GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest>(create);
+  static GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest?
+      _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get schoolId => $_getSZ(0);
@@ -6978,11 +7004,11 @@ class GetEmployeesSelectionMenuItemsPersonalInfoRequest
   void clearName() => $_clearField(3);
 }
 
-class GetEmployeesSelectionMenuItemsPersonalInfoResponse
+class GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse
     extends $pb.GeneratedMessage {
-  factory GetEmployeesSelectionMenuItemsPersonalInfoResponse({
+  factory GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse({
     $1.PaginationResponse? pagination,
-    $core.Iterable<EmployeeSelectionMenuItemPersonalInfo>? employees,
+    $core.Iterable<EmployeeOfSchoolSelectionMenuItemPersonalInfo>? employees,
   }) {
     final result = create();
     if (pagination != null) result.pagination = pagination;
@@ -6990,13 +7016,13 @@ class GetEmployeesSelectionMenuItemsPersonalInfoResponse
     return result;
   }
 
-  GetEmployeesSelectionMenuItemsPersonalInfoResponse._();
+  GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse._();
 
-  factory GetEmployeesSelectionMenuItemsPersonalInfoResponse.fromBuffer(
+  factory GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse.fromBuffer(
           $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory GetEmployeesSelectionMenuItemsPersonalInfoResponse.fromJson(
+  factory GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse.fromJson(
           $core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
@@ -7004,44 +7030,47 @@ class GetEmployeesSelectionMenuItemsPersonalInfoResponse
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
           ? ''
-          : 'GetEmployeesSelectionMenuItemsPersonalInfoResponse',
+          : 'GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
     ..aOM<$1.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
         subBuilder: $1.PaginationResponse.create)
-    ..pPM<EmployeeSelectionMenuItemPersonalInfo>(
+    ..pPM<EmployeeOfSchoolSelectionMenuItemPersonalInfo>(
         2, _omitFieldNames ? '' : 'employees',
-        subBuilder: EmployeeSelectionMenuItemPersonalInfo.create)
+        subBuilder: EmployeeOfSchoolSelectionMenuItemPersonalInfo.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetEmployeesSelectionMenuItemsPersonalInfoResponse clone() => deepCopy();
+  GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse clone() =>
+      deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetEmployeesSelectionMenuItemsPersonalInfoResponse copyWith(
-          void Function(GetEmployeesSelectionMenuItemsPersonalInfoResponse)
+  GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse copyWith(
+          void Function(
+                  GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse)
               updates) =>
-      super.copyWith((message) => updates(
-              message as GetEmployeesSelectionMenuItemsPersonalInfoResponse))
-          as GetEmployeesSelectionMenuItemsPersonalInfoResponse;
+      super.copyWith((message) => updates(message
+              as GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse))
+          as GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static GetEmployeesSelectionMenuItemsPersonalInfoResponse create() =>
-      GetEmployeesSelectionMenuItemsPersonalInfoResponse._();
+  static GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse create() =>
+      GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse._();
   @$core.override
-  GetEmployeesSelectionMenuItemsPersonalInfoResponse createEmptyInstance() =>
-      create();
-  static $pb.PbList<GetEmployeesSelectionMenuItemsPersonalInfoResponse>
-      createRepeated() =>
-          $pb.PbList<GetEmployeesSelectionMenuItemsPersonalInfoResponse>();
+  GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse
+      createEmptyInstance() => create();
+  static $pb.PbList<GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse>
+      createRepeated() => $pb.PbList<
+          GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse>();
   @$core.pragma('dart2js:noInline')
-  static GetEmployeesSelectionMenuItemsPersonalInfoResponse getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          GetEmployeesSelectionMenuItemsPersonalInfoResponse>(create);
-  static GetEmployeesSelectionMenuItemsPersonalInfoResponse? _defaultInstance;
+  static GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse>(create);
+  static GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse?
+      _defaultInstance;
 
   @$pb.TagNumber(1)
   $1.PaginationResponse get pagination => $_getN(0);
@@ -7055,12 +7084,13 @@ class GetEmployeesSelectionMenuItemsPersonalInfoResponse
   $1.PaginationResponse ensurePagination() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $pb.PbList<EmployeeSelectionMenuItemPersonalInfo> get employees =>
+  $pb.PbList<EmployeeOfSchoolSelectionMenuItemPersonalInfo> get employees =>
       $_getList(1);
 }
 
-class EmployeeSelectionMenuItemPersonalInfo extends $pb.GeneratedMessage {
-  factory EmployeeSelectionMenuItemPersonalInfo({
+class EmployeeOfSchoolSelectionMenuItemPersonalInfo
+    extends $pb.GeneratedMessage {
+  factory EmployeeOfSchoolSelectionMenuItemPersonalInfo({
     $core.String? employeeId,
     $core.String? firstName,
     $core.String? secondName,
@@ -7077,18 +7107,19 @@ class EmployeeSelectionMenuItemPersonalInfo extends $pb.GeneratedMessage {
     return result;
   }
 
-  EmployeeSelectionMenuItemPersonalInfo._();
+  EmployeeOfSchoolSelectionMenuItemPersonalInfo._();
 
-  factory EmployeeSelectionMenuItemPersonalInfo.fromBuffer(
+  factory EmployeeOfSchoolSelectionMenuItemPersonalInfo.fromBuffer(
           $core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory EmployeeSelectionMenuItemPersonalInfo.fromJson($core.String json,
+  factory EmployeeOfSchoolSelectionMenuItemPersonalInfo.fromJson(
+          $core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'EmployeeSelectionMenuItemPersonalInfo',
+      _omitMessageNames ? '' : 'EmployeeOfSchoolSelectionMenuItemPersonalInfo',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'school_messages'),
       createEmptyInstance: create)
@@ -7100,29 +7131,32 @@ class EmployeeSelectionMenuItemPersonalInfo extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EmployeeSelectionMenuItemPersonalInfo clone() => deepCopy();
+  EmployeeOfSchoolSelectionMenuItemPersonalInfo clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EmployeeSelectionMenuItemPersonalInfo copyWith(
-          void Function(EmployeeSelectionMenuItemPersonalInfo) updates) =>
+  EmployeeOfSchoolSelectionMenuItemPersonalInfo copyWith(
+          void Function(EmployeeOfSchoolSelectionMenuItemPersonalInfo)
+              updates) =>
       super.copyWith((message) =>
-              updates(message as EmployeeSelectionMenuItemPersonalInfo))
-          as EmployeeSelectionMenuItemPersonalInfo;
+              updates(message as EmployeeOfSchoolSelectionMenuItemPersonalInfo))
+          as EmployeeOfSchoolSelectionMenuItemPersonalInfo;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static EmployeeSelectionMenuItemPersonalInfo create() =>
-      EmployeeSelectionMenuItemPersonalInfo._();
+  static EmployeeOfSchoolSelectionMenuItemPersonalInfo create() =>
+      EmployeeOfSchoolSelectionMenuItemPersonalInfo._();
   @$core.override
-  EmployeeSelectionMenuItemPersonalInfo createEmptyInstance() => create();
-  static $pb.PbList<EmployeeSelectionMenuItemPersonalInfo> createRepeated() =>
-      $pb.PbList<EmployeeSelectionMenuItemPersonalInfo>();
+  EmployeeOfSchoolSelectionMenuItemPersonalInfo createEmptyInstance() =>
+      create();
+  static $pb.PbList<EmployeeOfSchoolSelectionMenuItemPersonalInfo>
+      createRepeated() =>
+          $pb.PbList<EmployeeOfSchoolSelectionMenuItemPersonalInfo>();
   @$core.pragma('dart2js:noInline')
-  static EmployeeSelectionMenuItemPersonalInfo getDefault() =>
+  static EmployeeOfSchoolSelectionMenuItemPersonalInfo getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          EmployeeSelectionMenuItemPersonalInfo>(create);
-  static EmployeeSelectionMenuItemPersonalInfo? _defaultInstance;
+          EmployeeOfSchoolSelectionMenuItemPersonalInfo>(create);
+  static EmployeeOfSchoolSelectionMenuItemPersonalInfo? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get employeeId => $_getSZ(0);

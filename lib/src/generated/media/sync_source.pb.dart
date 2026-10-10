@@ -1,6 +1,6 @@
 // This is a generated file - do not edit.
 //
-// Generated from messages/user/messages.proto.
+// Generated from media/sync_source.proto.
 
 // @dart = 3.3
 
@@ -9,3 +9,7 @@
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
 // ignore_for_file: non_constant_identifier_names
+
+import 'dart:core' as $core;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;

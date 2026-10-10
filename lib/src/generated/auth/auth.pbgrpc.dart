@@ -20,6 +20,29 @@ import '../messages/auth/messages.pb.dart' as $0;
 
 export 'auth.pb.dart';
 
+/// AuthService issues and refreshes the credentials used to authenticate against
+/// the attendance platform.
+///
+/// A successful Login returns a token pair: a short-lived RS256 JWT access token
+/// (1 hour) and a long-lived opaque refresh token (~30 days). Clients attach the
+/// access token as a Bearer credential on authenticated requests; downstream
+/// services verify it offline with the auth service's public key. When the access
+/// token expires, RefreshLogin trades the refresh token for a new pair so the
+/// user does not have to re-enter credentials.
+///
+/// Refresh tokens are single-use and rotate on every refresh — always replace
+/// the stored token with the one most recently returned.
+///
+/// Roles and scope: the issued access token embeds the user's role and, for
+/// organization-, department-, and unit-scoped roles, a "belongsTo" scope ID.
+/// School-related roles are not supported in this deployment and are rejected
+/// with UNAUTHENTICATED.
+///
+/// Errors are returned as standard gRPC status codes. Common codes across both
+/// RPCs: UNAUTHENTICATED (bad credentials, or invalid/expired/revoked refresh
+/// token), INVALID_ARGUMENT (missing required fields), and INTERNAL (server-side
+/// failure; details are not exposed to clients). Always read the status code
+/// rather than parsing the message text.
 @$pb.GrpcServiceName('auth.AuthService')
 class AuthServiceClient extends $grpc.Client {
   /// The hostname for this service.
@@ -32,6 +55,15 @@ class AuthServiceClient extends $grpc.Client {
 
   AuthServiceClient(super.channel, {super.options, super.interceptors});
 
+  /// Login authenticates a user by username and password and returns a fresh
+  /// access + refresh token pair (LoginResponse).
+  ///
+  /// Errors:
+  ///   UNAUTHENTICATED  - unknown username or wrong password ("invalid username
+  ///                      or password"), or a school-scoped role that this
+  ///                      deployment does not support.
+  ///   INVALID_ARGUMENT - username or password missing/empty.
+  ///   INTERNAL         - server-side failure (e.g. signing-key misconfiguration).
   $grpc.ResponseFuture<$0.LoginResponse> login(
     $0.LoginRequest request, {
     $grpc.CallOptions? options,
@@ -39,42 +71,26 @@ class AuthServiceClient extends $grpc.Client {
     return $createUnaryCall(_$login, request, options: options);
   }
 
-  /// Action
-  $grpc.ResponseFuture<$0.AddUserResponse> addUser(
-    $0.AddUserRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$addUser, request, options: options);
-  }
-
-  /// Compensation
-  $grpc.ResponseFuture<$0.RemoveUserResponse> removeUser(
-    $0.AddUserResponse request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$removeUser, request, options: options);
-  }
-
+  /// RefreshLogin exchanges a valid, non-revoked refresh token for a brand-new
+  /// access + refresh token pair (LoginResponse), without re-prompting for the
+  /// password.
+  ///
+  /// The supplied refresh token is consumed (revoked) as part of this call and a
+  /// new one is returned — clients MUST persist the new refresh token and discard
+  /// the old one. Because validation and revocation are atomic, replaying the
+  /// same token (including concurrently) fails for all but the first caller.
+  ///
+  /// Errors:
+  ///   UNAUTHENTICATED  - refresh token is unknown, expired, already used, or
+  ///                      revoked; or the user's role is a school-scoped role.
+  ///   INVALID_ARGUMENT - refresh_token missing/empty.
+  ///   NOT_FOUND        - the user the token belonged to no longer exists.
+  ///   INTERNAL         - server-side failure.
   $grpc.ResponseFuture<$0.LoginResponse> refreshLogin(
     $0.RefreshLoginRequest request, {
     $grpc.CallOptions? options,
   }) {
     return $createUnaryCall(_$refreshLogin, request, options: options);
-  }
-
-  /// Bulk operations
-  $grpc.ResponseFuture<$0.BulkAddUsersResponse> bulkAddUsers(
-    $0.BulkAddUsersRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$bulkAddUsers, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.BulkRemoveUsersResponse> bulkRemoveUsers(
-    $0.BulkRemoveUsersRequest request, {
-    $grpc.CallOptions? options,
-  }) {
-    return $createUnaryCall(_$bulkRemoveUsers, request, options: options);
   }
 
   // method descriptors
@@ -83,31 +99,11 @@ class AuthServiceClient extends $grpc.Client {
       '/auth.AuthService/Login',
       ($0.LoginRequest value) => value.writeToBuffer(),
       $0.LoginResponse.fromBuffer);
-  static final _$addUser =
-      $grpc.ClientMethod<$0.AddUserRequest, $0.AddUserResponse>(
-          '/auth.AuthService/AddUser',
-          ($0.AddUserRequest value) => value.writeToBuffer(),
-          $0.AddUserResponse.fromBuffer);
-  static final _$removeUser =
-      $grpc.ClientMethod<$0.AddUserResponse, $0.RemoveUserResponse>(
-          '/auth.AuthService/RemoveUser',
-          ($0.AddUserResponse value) => value.writeToBuffer(),
-          $0.RemoveUserResponse.fromBuffer);
   static final _$refreshLogin =
       $grpc.ClientMethod<$0.RefreshLoginRequest, $0.LoginResponse>(
           '/auth.AuthService/RefreshLogin',
           ($0.RefreshLoginRequest value) => value.writeToBuffer(),
           $0.LoginResponse.fromBuffer);
-  static final _$bulkAddUsers =
-      $grpc.ClientMethod<$0.BulkAddUsersRequest, $0.BulkAddUsersResponse>(
-          '/auth.AuthService/BulkAddUsers',
-          ($0.BulkAddUsersRequest value) => value.writeToBuffer(),
-          $0.BulkAddUsersResponse.fromBuffer);
-  static final _$bulkRemoveUsers =
-      $grpc.ClientMethod<$0.BulkRemoveUsersRequest, $0.BulkRemoveUsersResponse>(
-          '/auth.AuthService/BulkRemoveUsers',
-          ($0.BulkRemoveUsersRequest value) => value.writeToBuffer(),
-          $0.BulkRemoveUsersResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('auth.AuthService')
@@ -122,20 +118,6 @@ abstract class AuthServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.LoginRequest.fromBuffer(value),
         ($0.LoginResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.AddUserRequest, $0.AddUserResponse>(
-        'AddUser',
-        addUser_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => $0.AddUserRequest.fromBuffer(value),
-        ($0.AddUserResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.AddUserResponse, $0.RemoveUserResponse>(
-        'RemoveUser',
-        removeUser_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => $0.AddUserResponse.fromBuffer(value),
-        ($0.RemoveUserResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.RefreshLoginRequest, $0.LoginResponse>(
         'RefreshLogin',
         refreshLogin_Pre,
@@ -144,24 +126,6 @@ abstract class AuthServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.RefreshLoginRequest.fromBuffer(value),
         ($0.LoginResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.BulkAddUsersRequest, $0.BulkAddUsersResponse>(
-            'BulkAddUsers',
-            bulkAddUsers_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $0.BulkAddUsersRequest.fromBuffer(value),
-            ($0.BulkAddUsersResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.BulkRemoveUsersRequest,
-            $0.BulkRemoveUsersResponse>(
-        'BulkRemoveUsers',
-        bulkRemoveUsers_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.BulkRemoveUsersRequest.fromBuffer(value),
-        ($0.BulkRemoveUsersResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.LoginResponse> login_Pre(
@@ -172,22 +136,6 @@ abstract class AuthServiceBase extends $grpc.Service {
   $async.Future<$0.LoginResponse> login(
       $grpc.ServiceCall call, $0.LoginRequest request);
 
-  $async.Future<$0.AddUserResponse> addUser_Pre($grpc.ServiceCall $call,
-      $async.Future<$0.AddUserRequest> $request) async {
-    return addUser($call, await $request);
-  }
-
-  $async.Future<$0.AddUserResponse> addUser(
-      $grpc.ServiceCall call, $0.AddUserRequest request);
-
-  $async.Future<$0.RemoveUserResponse> removeUser_Pre($grpc.ServiceCall $call,
-      $async.Future<$0.AddUserResponse> $request) async {
-    return removeUser($call, await $request);
-  }
-
-  $async.Future<$0.RemoveUserResponse> removeUser(
-      $grpc.ServiceCall call, $0.AddUserResponse request);
-
   $async.Future<$0.LoginResponse> refreshLogin_Pre($grpc.ServiceCall $call,
       $async.Future<$0.RefreshLoginRequest> $request) async {
     return refreshLogin($call, await $request);
@@ -195,22 +143,4 @@ abstract class AuthServiceBase extends $grpc.Service {
 
   $async.Future<$0.LoginResponse> refreshLogin(
       $grpc.ServiceCall call, $0.RefreshLoginRequest request);
-
-  $async.Future<$0.BulkAddUsersResponse> bulkAddUsers_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$0.BulkAddUsersRequest> $request) async {
-    return bulkAddUsers($call, await $request);
-  }
-
-  $async.Future<$0.BulkAddUsersResponse> bulkAddUsers(
-      $grpc.ServiceCall call, $0.BulkAddUsersRequest request);
-
-  $async.Future<$0.BulkRemoveUsersResponse> bulkRemoveUsers_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$0.BulkRemoveUsersRequest> $request) async {
-    return bulkRemoveUsers($call, await $request);
-  }
-
-  $async.Future<$0.BulkRemoveUsersResponse> bulkRemoveUsers(
-      $grpc.ServiceCall call, $0.BulkRemoveUsersRequest request);
 }

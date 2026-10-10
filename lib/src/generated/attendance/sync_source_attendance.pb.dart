@@ -1,6 +1,6 @@
 // This is a generated file - do not edit.
 //
-// Generated from user/user.proto.
+// Generated from attendance/sync_source_attendance.proto.
 
 // @dart = 3.3
 

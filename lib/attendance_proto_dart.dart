@@ -15,6 +15,16 @@ export 'src/generated/organization/organization.pbenum.dart';
 export 'src/generated/organization/organization.pbgrpc.dart';
 export 'src/generated/organization/organization.pbjson.dart';
 
+// Offline-sync surfaces (source = offline drain, sink = cloud apply) for the
+// three organization aggregates. The Flutter sync orchestrator imports these.
+export 'src/generated/messages/organization/sync_messages.pb.dart';
+export 'src/generated/organization/sync_source_sub_unit.pbgrpc.dart';
+export 'src/generated/organization/sync_source_employee.pbgrpc.dart';
+export 'src/generated/organization/sync_source_employee_registration.pbgrpc.dart';
+export 'src/generated/organization/sync_sink_sub_unit.pbgrpc.dart';
+export 'src/generated/organization/sync_sink_employee.pbgrpc.dart';
+export 'src/generated/organization/sync_sink_employee_registration.pbgrpc.dart';
+
 export 'src/generated/gateway/gateway.pb.dart';
 export 'src/generated/gateway/gateway.pbenum.dart';
 export 'src/generated/gateway/gateway.pbgrpc.dart';
@@ -24,11 +34,6 @@ export 'src/generated/school/school.pb.dart';
 export 'src/generated/school/school.pbenum.dart';
 export 'src/generated/school/school.pbgrpc.dart';
 export 'src/generated/school/school.pbjson.dart';
-
-export 'src/generated/user/user.pb.dart';
-export 'src/generated/user/user.pbenum.dart';
-export 'src/generated/user/user.pbgrpc.dart';
-export 'src/generated/user/user.pbjson.dart';
 
 export 'src/generated/messages/auth/messages.pb.dart';
 export 'src/generated/messages/auth/messages.pbenum.dart';
@@ -49,10 +54,6 @@ export 'src/generated/messages/gateway/messages.pbjson.dart';
 export 'src/generated/messages/school/messages.pb.dart';
 export 'src/generated/messages/school/messages.pbenum.dart';
 export 'src/generated/messages/school/messages.pbjson.dart';
-
-export 'src/generated/messages/user/messages.pb.dart';
-export 'src/generated/messages/user/messages.pbenum.dart';
-export 'src/generated/messages/user/messages.pbjson.dart';
 
 export 'src/generated/attendance/attendance.pb.dart';
 export 'src/generated/attendance/attendance.pbenum.dart';
@@ -90,3 +91,21 @@ export 'src/generated/messages/saga/messages.pbenum.dart';
 export 'src/generated/messages/saga/messages.pbjson.dart';
 
 export 'src/generated/messages/saga/bulk_registration.pb.dart';
+
+export 'src/generated/messages/notification/messages.pb.dart';
+export 'src/generated/messages/notification/messages.pbenum.dart';
+export 'src/generated/messages/notification/messages.pbjson.dart';
+
+export 'src/generated/notification/notification.pb.dart';
+export 'src/generated/notification/notification.pbenum.dart';
+export 'src/generated/notification/notification.pbgrpc.dart';
+export 'src/generated/notification/notification.pbjson.dart';
+
+export 'src/generated/messages/realtime/messages.pb.dart';
+export 'src/generated/messages/realtime/messages.pbenum.dart';
+export 'src/generated/messages/realtime/messages.pbjson.dart';
+
+export 'src/generated/realtime/realtime.pb.dart';
+export 'src/generated/realtime/realtime.pbenum.dart';
+export 'src/generated/realtime/realtime.pbgrpc.dart';
+export 'src/generated/realtime/realtime.pbjson.dart';

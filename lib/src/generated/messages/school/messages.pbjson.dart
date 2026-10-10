@@ -2142,9 +2142,9 @@ final $typed_data.Uint8List getEmployeeIdsOfSchoolResponseDescriptor =
         'ZWVfaWRzGAIgAygJUgtlbXBsb3llZUlkcw==');
 
 @$core.Deprecated(
-    'Use getStudentsSelectionMenuItemsPersonalInfoRequestDescriptor instead')
-const GetStudentsSelectionMenuItemsPersonalInfoRequest$json = {
-  '1': 'GetStudentsSelectionMenuItemsPersonalInfoRequest',
+    'Use getStudentsOfSchoolSelectionMenuItemsPersonalInfoRequestDescriptor instead')
+const GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest$json = {
+  '1': 'GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest',
   '2': [
     {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
     {
@@ -2162,19 +2162,19 @@ const GetStudentsSelectionMenuItemsPersonalInfoRequest$json = {
   ],
 };
 
-/// Descriptor for `GetStudentsSelectionMenuItemsPersonalInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+/// Descriptor for `GetStudentsOfSchoolSelectionMenuItemsPersonalInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List
-    getStudentsSelectionMenuItemsPersonalInfoRequestDescriptor =
+    getStudentsOfSchoolSelectionMenuItemsPersonalInfoRequestDescriptor =
     $convert.base64Decode(
-        'CjBHZXRTdHVkZW50c1NlbGVjdGlvbk1lbnVJdGVtc1BlcnNvbmFsSW5mb1JlcXVlc3QSGwoJc2'
-        'Nob29sX2lkGAEgASgJUghzY2hvb2xJZBJCCgpwYWdpbmF0aW9uGAIgASgLMiIuY29tbW9uX21l'
-        'c3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9uEhcKBG5hbWUYAyABKAlIAFIEbm'
-        'FtZYgBAUIHCgVfbmFtZQ==');
+        'CjhHZXRTdHVkZW50c09mU2Nob29sU2VsZWN0aW9uTWVudUl0ZW1zUGVyc29uYWxJbmZvUmVxdW'
+        'VzdBIbCglzY2hvb2xfaWQYASABKAlSCHNjaG9vbElkEkIKCnBhZ2luYXRpb24YAiABKAsyIi5j'
+        'b21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SFwoEbmFtZRgDIA'
+        'EoCUgAUgRuYW1liAEBQgcKBV9uYW1l');
 
 @$core.Deprecated(
-    'Use getStudentsSelectionMenuItemsPersonalInfoResponseDescriptor instead')
-const GetStudentsSelectionMenuItemsPersonalInfoResponse$json = {
-  '1': 'GetStudentsSelectionMenuItemsPersonalInfoResponse',
+    'Use getStudentsOfSchoolSelectionMenuItemsPersonalInfoResponseDescriptor instead')
+const GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse$json = {
+  '1': 'GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse',
   '2': [
     {
       '1': 'pagination',
@@ -2189,24 +2189,25 @@ const GetStudentsSelectionMenuItemsPersonalInfoResponse$json = {
       '3': 2,
       '4': 3,
       '5': 11,
-      '6': '.school_messages.StudentsSelectionMenuItemPersonalInfo',
+      '6': '.school_messages.StudentsOfSchoolSelectionMenuItemPersonalInfo',
       '10': 'students'
     },
   ],
 };
 
-/// Descriptor for `GetStudentsSelectionMenuItemsPersonalInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+/// Descriptor for `GetStudentsOfSchoolSelectionMenuItemsPersonalInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List
-    getStudentsSelectionMenuItemsPersonalInfoResponseDescriptor =
+    getStudentsOfSchoolSelectionMenuItemsPersonalInfoResponseDescriptor =
     $convert.base64Decode(
-        'CjFHZXRTdHVkZW50c1NlbGVjdGlvbk1lbnVJdGVtc1BlcnNvbmFsSW5mb1Jlc3BvbnNlEkMKCn'
-        'BhZ2luYXRpb24YASABKAsyIy5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpw'
-        'YWdpbmF0aW9uElIKCHN0dWRlbnRzGAIgAygLMjYuc2Nob29sX21lc3NhZ2VzLlN0dWRlbnRzU2'
-        'VsZWN0aW9uTWVudUl0ZW1QZXJzb25hbEluZm9SCHN0dWRlbnRz');
+        'CjlHZXRTdHVkZW50c09mU2Nob29sU2VsZWN0aW9uTWVudUl0ZW1zUGVyc29uYWxJbmZvUmVzcG'
+        '9uc2USQwoKcGFnaW5hdGlvbhgBIAEoCzIjLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVz'
+        'cG9uc2VSCnBhZ2luYXRpb24SWgoIc3R1ZGVudHMYAiADKAsyPi5zY2hvb2xfbWVzc2FnZXMuU3'
+        'R1ZGVudHNPZlNjaG9vbFNlbGVjdGlvbk1lbnVJdGVtUGVyc29uYWxJbmZvUghzdHVkZW50cw==');
 
-@$core.Deprecated('Use studentsSelectionMenuItemPersonalInfoDescriptor instead')
-const StudentsSelectionMenuItemPersonalInfo$json = {
-  '1': 'StudentsSelectionMenuItemPersonalInfo',
+@$core.Deprecated(
+    'Use studentsOfSchoolSelectionMenuItemPersonalInfoDescriptor instead')
+const StudentsOfSchoolSelectionMenuItemPersonalInfo$json = {
+  '1': 'StudentsOfSchoolSelectionMenuItemPersonalInfo',
   '2': [
     {'1': 'student_id', '3': 1, '4': 1, '5': 9, '10': 'studentId'},
     {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
@@ -2245,20 +2246,22 @@ const StudentsSelectionMenuItemPersonalInfo$json = {
   ],
 };
 
-/// Descriptor for `StudentsSelectionMenuItemPersonalInfo`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List studentsSelectionMenuItemPersonalInfoDescriptor = $convert.base64Decode(
-    'CiVTdHVkZW50c1NlbGVjdGlvbk1lbnVJdGVtUGVyc29uYWxJbmZvEh0KCnN0dWRlbnRfaWQYAS'
-    'ABKAlSCXN0dWRlbnRJZBIdCgpmaXJzdF9uYW1lGAIgASgJUglmaXJzdE5hbWUSJAoLc2Vjb25k'
-    'X25hbWUYAyABKAlIAFIKc2Vjb25kTmFtZYgBARI8ChhsYXN0X2F0dGVuZGVkX2NsYXNzX25hbW'
-    'UYBCABKAlIAVIVbGFzdEF0dGVuZGVkQ2xhc3NOYW1liAEBEkAKGmxhc3RfYXR0ZW5kZWRfc2Vj'
-    'dGlvbl9uYW1lGAUgASgJSAJSF2xhc3RBdHRlbmRlZFNlY3Rpb25OYW1liAEBQg4KDF9zZWNvbm'
-    'RfbmFtZUIbChlfbGFzdF9hdHRlbmRlZF9jbGFzc19uYW1lQh0KG19sYXN0X2F0dGVuZGVkX3Nl'
-    'Y3Rpb25fbmFtZQ==');
+/// Descriptor for `StudentsOfSchoolSelectionMenuItemPersonalInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    studentsOfSchoolSelectionMenuItemPersonalInfoDescriptor =
+    $convert.base64Decode(
+        'Ci1TdHVkZW50c09mU2Nob29sU2VsZWN0aW9uTWVudUl0ZW1QZXJzb25hbEluZm8SHQoKc3R1ZG'
+        'VudF9pZBgBIAEoCVIJc3R1ZGVudElkEh0KCmZpcnN0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIk'
+        'CgtzZWNvbmRfbmFtZRgDIAEoCUgAUgpzZWNvbmROYW1liAEBEjwKGGxhc3RfYXR0ZW5kZWRfY2'
+        'xhc3NfbmFtZRgEIAEoCUgBUhVsYXN0QXR0ZW5kZWRDbGFzc05hbWWIAQESQAoabGFzdF9hdHRl'
+        'bmRlZF9zZWN0aW9uX25hbWUYBSABKAlIAlIXbGFzdEF0dGVuZGVkU2VjdGlvbk5hbWWIAQFCDg'
+        'oMX3NlY29uZF9uYW1lQhsKGV9sYXN0X2F0dGVuZGVkX2NsYXNzX25hbWVCHQobX2xhc3RfYXR0'
+        'ZW5kZWRfc2VjdGlvbl9uYW1l');
 
 @$core.Deprecated(
-    'Use getTeachersSelectionMenuItemsPersonalInfoRequestDescriptor instead')
-const GetTeachersSelectionMenuItemsPersonalInfoRequest$json = {
-  '1': 'GetTeachersSelectionMenuItemsPersonalInfoRequest',
+    'Use getTeachersOfSchoolSelectionMenuItemsPersonalInfoRequestDescriptor instead')
+const GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest$json = {
+  '1': 'GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest',
   '2': [
     {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
     {
@@ -2276,19 +2279,19 @@ const GetTeachersSelectionMenuItemsPersonalInfoRequest$json = {
   ],
 };
 
-/// Descriptor for `GetTeachersSelectionMenuItemsPersonalInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+/// Descriptor for `GetTeachersOfSchoolSelectionMenuItemsPersonalInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List
-    getTeachersSelectionMenuItemsPersonalInfoRequestDescriptor =
+    getTeachersOfSchoolSelectionMenuItemsPersonalInfoRequestDescriptor =
     $convert.base64Decode(
-        'CjBHZXRUZWFjaGVyc1NlbGVjdGlvbk1lbnVJdGVtc1BlcnNvbmFsSW5mb1JlcXVlc3QSGwoJc2'
-        'Nob29sX2lkGAEgASgJUghzY2hvb2xJZBJCCgpwYWdpbmF0aW9uGAIgASgLMiIuY29tbW9uX21l'
-        'c3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9uEhcKBG5hbWUYAyABKAlIAFIEbm'
-        'FtZYgBAUIHCgVfbmFtZQ==');
+        'CjhHZXRUZWFjaGVyc09mU2Nob29sU2VsZWN0aW9uTWVudUl0ZW1zUGVyc29uYWxJbmZvUmVxdW'
+        'VzdBIbCglzY2hvb2xfaWQYASABKAlSCHNjaG9vbElkEkIKCnBhZ2luYXRpb24YAiABKAsyIi5j'
+        'b21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlcXVlc3RSCnBhZ2luYXRpb24SFwoEbmFtZRgDIA'
+        'EoCUgAUgRuYW1liAEBQgcKBV9uYW1l');
 
 @$core.Deprecated(
-    'Use getTeachersSelectionMenuItemsPersonalInfoResponseDescriptor instead')
-const GetTeachersSelectionMenuItemsPersonalInfoResponse$json = {
-  '1': 'GetTeachersSelectionMenuItemsPersonalInfoResponse',
+    'Use getTeachersOfSchoolSelectionMenuItemsPersonalInfoResponseDescriptor instead')
+const GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse$json = {
+  '1': 'GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse',
   '2': [
     {
       '1': 'pagination',
@@ -2303,24 +2306,25 @@ const GetTeachersSelectionMenuItemsPersonalInfoResponse$json = {
       '3': 2,
       '4': 3,
       '5': 11,
-      '6': '.school_messages.TeacherSelectionMenuItemPersonalInfo',
+      '6': '.school_messages.TeacherOfSchoolSelectionMenuItemPersonalInfo',
       '10': 'teachers'
     },
   ],
 };
 
-/// Descriptor for `GetTeachersSelectionMenuItemsPersonalInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+/// Descriptor for `GetTeachersOfSchoolSelectionMenuItemsPersonalInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List
-    getTeachersSelectionMenuItemsPersonalInfoResponseDescriptor =
+    getTeachersOfSchoolSelectionMenuItemsPersonalInfoResponseDescriptor =
     $convert.base64Decode(
-        'CjFHZXRUZWFjaGVyc1NlbGVjdGlvbk1lbnVJdGVtc1BlcnNvbmFsSW5mb1Jlc3BvbnNlEkMKCn'
-        'BhZ2luYXRpb24YASABKAsyIy5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJlc3BvbnNlUgpw'
-        'YWdpbmF0aW9uElEKCHRlYWNoZXJzGAIgAygLMjUuc2Nob29sX21lc3NhZ2VzLlRlYWNoZXJTZW'
-        'xlY3Rpb25NZW51SXRlbVBlcnNvbmFsSW5mb1IIdGVhY2hlcnM=');
+        'CjlHZXRUZWFjaGVyc09mU2Nob29sU2VsZWN0aW9uTWVudUl0ZW1zUGVyc29uYWxJbmZvUmVzcG'
+        '9uc2USQwoKcGFnaW5hdGlvbhgBIAEoCzIjLmNvbW1vbl9tZXNzYWdlcy5QYWdpbmF0aW9uUmVz'
+        'cG9uc2VSCnBhZ2luYXRpb24SWQoIdGVhY2hlcnMYAiADKAsyPS5zY2hvb2xfbWVzc2FnZXMuVG'
+        'VhY2hlck9mU2Nob29sU2VsZWN0aW9uTWVudUl0ZW1QZXJzb25hbEluZm9SCHRlYWNoZXJz');
 
-@$core.Deprecated('Use teacherSelectionMenuItemPersonalInfoDescriptor instead')
-const TeacherSelectionMenuItemPersonalInfo$json = {
-  '1': 'TeacherSelectionMenuItemPersonalInfo',
+@$core.Deprecated(
+    'Use teacherOfSchoolSelectionMenuItemPersonalInfoDescriptor instead')
+const TeacherOfSchoolSelectionMenuItemPersonalInfo$json = {
+  '1': 'TeacherOfSchoolSelectionMenuItemPersonalInfo',
   '2': [
     {'1': 'teacher_id', '3': 1, '4': 1, '5': 9, '10': 'teacherId'},
     {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
@@ -2347,19 +2351,20 @@ const TeacherSelectionMenuItemPersonalInfo$json = {
   ],
 };
 
-/// Descriptor for `TeacherSelectionMenuItemPersonalInfo`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List teacherSelectionMenuItemPersonalInfoDescriptor =
+/// Descriptor for `TeacherOfSchoolSelectionMenuItemPersonalInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    teacherOfSchoolSelectionMenuItemPersonalInfoDescriptor =
     $convert.base64Decode(
-        'CiRUZWFjaGVyU2VsZWN0aW9uTWVudUl0ZW1QZXJzb25hbEluZm8SHQoKdGVhY2hlcl9pZBgBIA'
-        'EoCVIJdGVhY2hlcklkEh0KCmZpcnN0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNvbmRf'
-        'bmFtZRgDIAEoCUgAUgpzZWNvbmROYW1liAEBEjMKFWlkZW50aWZpY2F0aW9uX251bWJlchgEIA'
-        'EoCVIUaWRlbnRpZmljYXRpb25OdW1iZXISIQoMcGhvbmVfbnVtYmVyGAUgASgJUgtwaG9uZU51'
-        'bWJlckIOCgxfc2Vjb25kX25hbWU=');
+        'CixUZWFjaGVyT2ZTY2hvb2xTZWxlY3Rpb25NZW51SXRlbVBlcnNvbmFsSW5mbxIdCgp0ZWFjaG'
+        'VyX2lkGAEgASgJUgl0ZWFjaGVySWQSHQoKZmlyc3RfbmFtZRgCIAEoCVIJZmlyc3ROYW1lEiQK'
+        'C3NlY29uZF9uYW1lGAMgASgJSABSCnNlY29uZE5hbWWIAQESMwoVaWRlbnRpZmljYXRpb25fbn'
+        'VtYmVyGAQgASgJUhRpZGVudGlmaWNhdGlvbk51bWJlchIhCgxwaG9uZV9udW1iZXIYBSABKAlS'
+        'C3Bob25lTnVtYmVyQg4KDF9zZWNvbmRfbmFtZQ==');
 
 @$core.Deprecated(
-    'Use getEmployeesSelectionMenuItemsPersonalInfoRequestDescriptor instead')
-const GetEmployeesSelectionMenuItemsPersonalInfoRequest$json = {
-  '1': 'GetEmployeesSelectionMenuItemsPersonalInfoRequest',
+    'Use getEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequestDescriptor instead')
+const GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest$json = {
+  '1': 'GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest',
   '2': [
     {'1': 'school_id', '3': 1, '4': 1, '5': 9, '10': 'schoolId'},
     {
@@ -2377,19 +2382,19 @@ const GetEmployeesSelectionMenuItemsPersonalInfoRequest$json = {
   ],
 };
 
-/// Descriptor for `GetEmployeesSelectionMenuItemsPersonalInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+/// Descriptor for `GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List
-    getEmployeesSelectionMenuItemsPersonalInfoRequestDescriptor =
+    getEmployeesOfSchoolSelectionMenuItemsPersonalInfoRequestDescriptor =
     $convert.base64Decode(
-        'CjFHZXRFbXBsb3llZXNTZWxlY3Rpb25NZW51SXRlbXNQZXJzb25hbEluZm9SZXF1ZXN0EhsKCX'
-        'NjaG9vbF9pZBgBIAEoCVIIc2Nob29sSWQSQgoKcGFnaW5hdGlvbhgCIAEoCzIiLmNvbW1vbl9t'
-        'ZXNzYWdlcy5QYWdpbmF0aW9uUmVxdWVzdFIKcGFnaW5hdGlvbhIXCgRuYW1lGAMgASgJSABSBG'
-        '5hbWWIAQFCBwoFX25hbWU=');
+        'CjlHZXRFbXBsb3llZXNPZlNjaG9vbFNlbGVjdGlvbk1lbnVJdGVtc1BlcnNvbmFsSW5mb1JlcX'
+        'Vlc3QSGwoJc2Nob29sX2lkGAEgASgJUghzY2hvb2xJZBJCCgpwYWdpbmF0aW9uGAIgASgLMiIu'
+        'Y29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXF1ZXN0UgpwYWdpbmF0aW9uEhcKBG5hbWUYAy'
+        'ABKAlIAFIEbmFtZYgBAUIHCgVfbmFtZQ==');
 
 @$core.Deprecated(
-    'Use getEmployeesSelectionMenuItemsPersonalInfoResponseDescriptor instead')
-const GetEmployeesSelectionMenuItemsPersonalInfoResponse$json = {
-  '1': 'GetEmployeesSelectionMenuItemsPersonalInfoResponse',
+    'Use getEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponseDescriptor instead')
+const GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse$json = {
+  '1': 'GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse',
   '2': [
     {
       '1': 'pagination',
@@ -2404,24 +2409,26 @@ const GetEmployeesSelectionMenuItemsPersonalInfoResponse$json = {
       '3': 2,
       '4': 3,
       '5': 11,
-      '6': '.school_messages.EmployeeSelectionMenuItemPersonalInfo',
+      '6': '.school_messages.EmployeeOfSchoolSelectionMenuItemPersonalInfo',
       '10': 'employees'
     },
   ],
 };
 
-/// Descriptor for `GetEmployeesSelectionMenuItemsPersonalInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+/// Descriptor for `GetEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List
-    getEmployeesSelectionMenuItemsPersonalInfoResponseDescriptor =
+    getEmployeesOfSchoolSelectionMenuItemsPersonalInfoResponseDescriptor =
     $convert.base64Decode(
-        'CjJHZXRFbXBsb3llZXNTZWxlY3Rpb25NZW51SXRlbXNQZXJzb25hbEluZm9SZXNwb25zZRJDCg'
-        'pwYWdpbmF0aW9uGAEgASgLMiMuY29tbW9uX21lc3NhZ2VzLlBhZ2luYXRpb25SZXNwb25zZVIK'
-        'cGFnaW5hdGlvbhJUCgllbXBsb3llZXMYAiADKAsyNi5zY2hvb2xfbWVzc2FnZXMuRW1wbG95ZW'
-        'VTZWxlY3Rpb25NZW51SXRlbVBlcnNvbmFsSW5mb1IJZW1wbG95ZWVz');
+        'CjpHZXRFbXBsb3llZXNPZlNjaG9vbFNlbGVjdGlvbk1lbnVJdGVtc1BlcnNvbmFsSW5mb1Jlc3'
+        'BvbnNlEkMKCnBhZ2luYXRpb24YASABKAsyIy5jb21tb25fbWVzc2FnZXMuUGFnaW5hdGlvblJl'
+        'c3BvbnNlUgpwYWdpbmF0aW9uElwKCWVtcGxveWVlcxgCIAMoCzI+LnNjaG9vbF9tZXNzYWdlcy'
+        '5FbXBsb3llZU9mU2Nob29sU2VsZWN0aW9uTWVudUl0ZW1QZXJzb25hbEluZm9SCWVtcGxveWVl'
+        'cw==');
 
-@$core.Deprecated('Use employeeSelectionMenuItemPersonalInfoDescriptor instead')
-const EmployeeSelectionMenuItemPersonalInfo$json = {
-  '1': 'EmployeeSelectionMenuItemPersonalInfo',
+@$core.Deprecated(
+    'Use employeeOfSchoolSelectionMenuItemPersonalInfoDescriptor instead')
+const EmployeeOfSchoolSelectionMenuItemPersonalInfo$json = {
+  '1': 'EmployeeOfSchoolSelectionMenuItemPersonalInfo',
   '2': [
     {'1': 'employee_id', '3': 1, '4': 1, '5': 9, '10': 'employeeId'},
     {'1': 'first_name', '3': 2, '4': 1, '5': 9, '10': 'firstName'},
@@ -2448,14 +2455,15 @@ const EmployeeSelectionMenuItemPersonalInfo$json = {
   ],
 };
 
-/// Descriptor for `EmployeeSelectionMenuItemPersonalInfo`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List employeeSelectionMenuItemPersonalInfoDescriptor =
+/// Descriptor for `EmployeeOfSchoolSelectionMenuItemPersonalInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List
+    employeeOfSchoolSelectionMenuItemPersonalInfoDescriptor =
     $convert.base64Decode(
-        'CiVFbXBsb3llZVNlbGVjdGlvbk1lbnVJdGVtUGVyc29uYWxJbmZvEh8KC2VtcGxveWVlX2lkGA'
-        'EgASgJUgplbXBsb3llZUlkEh0KCmZpcnN0X25hbWUYAiABKAlSCWZpcnN0TmFtZRIkCgtzZWNv'
-        'bmRfbmFtZRgDIAEoCUgAUgpzZWNvbmROYW1liAEBEjMKFWlkZW50aWZpY2F0aW9uX251bWJlch'
-        'gEIAEoCVIUaWRlbnRpZmljYXRpb25OdW1iZXISIQoMcGhvbmVfbnVtYmVyGAUgASgJUgtwaG9u'
-        'ZU51bWJlckIOCgxfc2Vjb25kX25hbWU=');
+        'Ci1FbXBsb3llZU9mU2Nob29sU2VsZWN0aW9uTWVudUl0ZW1QZXJzb25hbEluZm8SHwoLZW1wbG'
+        '95ZWVfaWQYASABKAlSCmVtcGxveWVlSWQSHQoKZmlyc3RfbmFtZRgCIAEoCVIJZmlyc3ROYW1l'
+        'EiQKC3NlY29uZF9uYW1lGAMgASgJSABSCnNlY29uZE5hbWWIAQESMwoVaWRlbnRpZmljYXRpb2'
+        '5fbnVtYmVyGAQgASgJUhRpZGVudGlmaWNhdGlvbk51bWJlchIhCgxwaG9uZV9udW1iZXIYBSAB'
+        'KAlSC3Bob25lTnVtYmVyQg4KDF9zZWNvbmRfbmFtZQ==');
 
 @$core.Deprecated('Use getClassesSelectionMenuItemsRequestDescriptor instead')
 const GetClassesSelectionMenuItemsRequest$json = {

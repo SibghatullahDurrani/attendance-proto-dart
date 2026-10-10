@@ -1918,8 +1918,160 @@ class ListAllOrganizationShiftsResponse extends $pb.GeneratedMessage {
   $pb.PbList<OrganizationShift> get organizationShifts => $_getList(1);
 }
 
-class OrganizationShift extends $pb.GeneratedMessage {
-  factory OrganizationShift({
+class GetShiftsOfInstitutionsRequest extends $pb.GeneratedMessage {
+  factory GetShiftsOfInstitutionsRequest({
+    $1.PaginationRequest? pagination,
+    $core.Iterable<$core.String>? belongsTo,
+    $core.String? shiftName,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (belongsTo != null) result.belongsTo.addAll(belongsTo);
+    if (shiftName != null) result.shiftName = shiftName;
+    return result;
+  }
+
+  GetShiftsOfInstitutionsRequest._();
+
+  factory GetShiftsOfInstitutionsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetShiftsOfInstitutionsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetShiftsOfInstitutionsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOM<$1.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationRequest.create)
+    ..pPS(2, _omitFieldNames ? '' : 'belongsTo')
+    ..aOS(3, _omitFieldNames ? '' : 'shiftName')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetShiftsOfInstitutionsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetShiftsOfInstitutionsRequest copyWith(
+          void Function(GetShiftsOfInstitutionsRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetShiftsOfInstitutionsRequest))
+          as GetShiftsOfInstitutionsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetShiftsOfInstitutionsRequest create() =>
+      GetShiftsOfInstitutionsRequest._();
+  @$core.override
+  GetShiftsOfInstitutionsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetShiftsOfInstitutionsRequest> createRepeated() =>
+      $pb.PbList<GetShiftsOfInstitutionsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetShiftsOfInstitutionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetShiftsOfInstitutionsRequest>(create);
+  static GetShiftsOfInstitutionsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.PaginationRequest get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($1.PaginationRequest value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.PaginationRequest ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<$core.String> get belongsTo => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.String get shiftName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set shiftName($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasShiftName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearShiftName() => $_clearField(3);
+}
+
+class GetShiftsOfInstitutionsResponse extends $pb.GeneratedMessage {
+  factory GetShiftsOfInstitutionsResponse({
+    $1.PaginationResponse? pagination,
+    $core.Iterable<InstitutionShift>? shifts,
+  }) {
+    final result = create();
+    if (pagination != null) result.pagination = pagination;
+    if (shifts != null) result.shifts.addAll(shifts);
+    return result;
+  }
+
+  GetShiftsOfInstitutionsResponse._();
+
+  factory GetShiftsOfInstitutionsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetShiftsOfInstitutionsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetShiftsOfInstitutionsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOM<$1.PaginationResponse>(1, _omitFieldNames ? '' : 'pagination',
+        subBuilder: $1.PaginationResponse.create)
+    ..pPM<InstitutionShift>(2, _omitFieldNames ? '' : 'shifts',
+        subBuilder: InstitutionShift.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetShiftsOfInstitutionsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetShiftsOfInstitutionsResponse copyWith(
+          void Function(GetShiftsOfInstitutionsResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as GetShiftsOfInstitutionsResponse))
+          as GetShiftsOfInstitutionsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetShiftsOfInstitutionsResponse create() =>
+      GetShiftsOfInstitutionsResponse._();
+  @$core.override
+  GetShiftsOfInstitutionsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetShiftsOfInstitutionsResponse> createRepeated() =>
+      $pb.PbList<GetShiftsOfInstitutionsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetShiftsOfInstitutionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetShiftsOfInstitutionsResponse>(
+          create);
+  static GetShiftsOfInstitutionsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.PaginationResponse get pagination => $_getN(0);
+  @$pb.TagNumber(1)
+  set pagination($1.PaginationResponse value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasPagination() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPagination() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.PaginationResponse ensurePagination() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<InstitutionShift> get shifts => $_getList(1);
+}
+
+class InstitutionShift extends $pb.GeneratedMessage {
+  factory InstitutionShift({
     $core.String? shiftId,
     $core.String? shiftName,
     $core.int? checkInHour,
@@ -1928,6 +2080,8 @@ class OrganizationShift extends $pb.GeneratedMessage {
     $core.int? checkOutMinute,
     $core.bool? isDefault,
     $core.Iterable<$1.Days>? workingDays,
+    $core.int? usersCount,
+    $core.String? belongsTo,
   }) {
     final result = create();
     if (shiftId != null) result.shiftId = shiftId;
@@ -1938,6 +2092,168 @@ class OrganizationShift extends $pb.GeneratedMessage {
     if (checkOutMinute != null) result.checkOutMinute = checkOutMinute;
     if (isDefault != null) result.isDefault = isDefault;
     if (workingDays != null) result.workingDays.addAll(workingDays);
+    if (usersCount != null) result.usersCount = usersCount;
+    if (belongsTo != null) result.belongsTo = belongsTo;
+    return result;
+  }
+
+  InstitutionShift._();
+
+  factory InstitutionShift.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory InstitutionShift.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'InstitutionShift',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'shiftId')
+    ..aOS(2, _omitFieldNames ? '' : 'shiftName')
+    ..aI(3, _omitFieldNames ? '' : 'checkInHour')
+    ..aI(4, _omitFieldNames ? '' : 'checkInMinute')
+    ..aI(5, _omitFieldNames ? '' : 'checkOutHour')
+    ..aI(6, _omitFieldNames ? '' : 'checkOutMinute')
+    ..aOB(7, _omitFieldNames ? '' : 'isDefault')
+    ..pc<$1.Days>(8, _omitFieldNames ? '' : 'workingDays', $pb.PbFieldType.KE,
+        valueOf: $1.Days.valueOf,
+        enumValues: $1.Days.values,
+        defaultEnumValue: $1.Days.MONDAY)
+    ..aI(9, _omitFieldNames ? '' : 'usersCount')
+    ..aOS(10, _omitFieldNames ? '' : 'belongsTo')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  InstitutionShift clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  InstitutionShift copyWith(void Function(InstitutionShift) updates) =>
+      super.copyWith((message) => updates(message as InstitutionShift))
+          as InstitutionShift;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static InstitutionShift create() => InstitutionShift._();
+  @$core.override
+  InstitutionShift createEmptyInstance() => create();
+  static $pb.PbList<InstitutionShift> createRepeated() =>
+      $pb.PbList<InstitutionShift>();
+  @$core.pragma('dart2js:noInline')
+  static InstitutionShift getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InstitutionShift>(create);
+  static InstitutionShift? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get shiftId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set shiftId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasShiftId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearShiftId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get shiftName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set shiftName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasShiftName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearShiftName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get checkInHour => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set checkInHour($core.int value) => $_setSignedInt32(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasCheckInHour() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCheckInHour() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get checkInMinute => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set checkInMinute($core.int value) => $_setSignedInt32(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasCheckInMinute() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCheckInMinute() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get checkOutHour => $_getIZ(4);
+  @$pb.TagNumber(5)
+  set checkOutHour($core.int value) => $_setSignedInt32(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasCheckOutHour() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearCheckOutHour() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.int get checkOutMinute => $_getIZ(5);
+  @$pb.TagNumber(6)
+  set checkOutMinute($core.int value) => $_setSignedInt32(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasCheckOutMinute() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearCheckOutMinute() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.bool get isDefault => $_getBF(6);
+  @$pb.TagNumber(7)
+  set isDefault($core.bool value) => $_setBool(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasIsDefault() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearIsDefault() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $pb.PbList<$1.Days> get workingDays => $_getList(7);
+
+  @$pb.TagNumber(9)
+  $core.int get usersCount => $_getIZ(8);
+  @$pb.TagNumber(9)
+  set usersCount($core.int value) => $_setSignedInt32(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasUsersCount() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearUsersCount() => $_clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get belongsTo => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set belongsTo($core.String value) => $_setString(9, value);
+  @$pb.TagNumber(10)
+  $core.bool hasBelongsTo() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearBelongsTo() => $_clearField(10);
+}
+
+class OrganizationShift extends $pb.GeneratedMessage {
+  factory OrganizationShift({
+    $core.String? shiftId,
+    $core.String? shiftName,
+    $core.int? checkInHour,
+    $core.int? checkInMinute,
+    $core.int? checkOutHour,
+    $core.int? checkOutMinute,
+    $core.bool? isDefault,
+    $core.Iterable<$1.Days>? workingDays,
+    $core.int? usersCount,
+  }) {
+    final result = create();
+    if (shiftId != null) result.shiftId = shiftId;
+    if (shiftName != null) result.shiftName = shiftName;
+    if (checkInHour != null) result.checkInHour = checkInHour;
+    if (checkInMinute != null) result.checkInMinute = checkInMinute;
+    if (checkOutHour != null) result.checkOutHour = checkOutHour;
+    if (checkOutMinute != null) result.checkOutMinute = checkOutMinute;
+    if (isDefault != null) result.isDefault = isDefault;
+    if (workingDays != null) result.workingDays.addAll(workingDays);
+    if (usersCount != null) result.usersCount = usersCount;
     return result;
   }
 
@@ -1966,6 +2282,7 @@ class OrganizationShift extends $pb.GeneratedMessage {
         valueOf: $1.Days.valueOf,
         enumValues: $1.Days.values,
         defaultEnumValue: $1.Days.MONDAY)
+    ..aI(9, _omitFieldNames ? '' : 'usersCount')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -2054,6 +2371,15 @@ class OrganizationShift extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(8)
   $pb.PbList<$1.Days> get workingDays => $_getList(7);
+
+  @$pb.TagNumber(9)
+  $core.int get usersCount => $_getIZ(8);
+  @$pb.TagNumber(9)
+  set usersCount($core.int value) => $_setSignedInt32(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasUsersCount() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearUsersCount() => $_clearField(9);
 }
 
 class AddUserToShiftRequest extends $pb.GeneratedMessage {
@@ -2201,12 +2527,12 @@ class GetOrganizationShiftSelectionMenuItemsRequest
     extends $pb.GeneratedMessage {
   factory GetOrganizationShiftSelectionMenuItemsRequest({
     $1.PaginationRequest? pagination,
-    $core.String? belongsTo,
+    $core.Iterable<$core.String>? belongsTo,
     $core.String? shiftName,
   }) {
     final result = create();
     if (pagination != null) result.pagination = pagination;
-    if (belongsTo != null) result.belongsTo = belongsTo;
+    if (belongsTo != null) result.belongsTo.addAll(belongsTo);
     if (shiftName != null) result.shiftName = shiftName;
     return result;
   }
@@ -2229,7 +2555,7 @@ class GetOrganizationShiftSelectionMenuItemsRequest
       createEmptyInstance: create)
     ..aOM<$1.PaginationRequest>(1, _omitFieldNames ? '' : 'pagination',
         subBuilder: $1.PaginationRequest.create)
-    ..aOS(2, _omitFieldNames ? '' : 'belongsTo')
+    ..pPS(2, _omitFieldNames ? '' : 'belongsTo')
     ..aOS(3, _omitFieldNames ? '' : 'shiftName')
     ..hasRequiredFields = false;
 
@@ -2273,13 +2599,7 @@ class GetOrganizationShiftSelectionMenuItemsRequest
   $1.PaginationRequest ensurePagination() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.String get belongsTo => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set belongsTo($core.String value) => $_setString(1, value);
-  @$pb.TagNumber(2)
-  $core.bool hasBelongsTo() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearBelongsTo() => $_clearField(2);
+  $pb.PbList<$core.String> get belongsTo => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get shiftName => $_getSZ(2);
@@ -2378,6 +2698,7 @@ class OrganizationShiftSelectionMenuItem extends $pb.GeneratedMessage {
     $core.int? checkInMinute,
     $core.int? checkOutHour,
     $core.int? checkOutMinute,
+    $core.String? belongsTo,
   }) {
     final result = create();
     if (shiftId != null) result.shiftId = shiftId;
@@ -2387,6 +2708,7 @@ class OrganizationShiftSelectionMenuItem extends $pb.GeneratedMessage {
     if (checkInMinute != null) result.checkInMinute = checkInMinute;
     if (checkOutHour != null) result.checkOutHour = checkOutHour;
     if (checkOutMinute != null) result.checkOutMinute = checkOutMinute;
+    if (belongsTo != null) result.belongsTo = belongsTo;
     return result;
   }
 
@@ -2412,6 +2734,7 @@ class OrganizationShiftSelectionMenuItem extends $pb.GeneratedMessage {
     ..aI(5, _omitFieldNames ? '' : 'checkInMinute')
     ..aI(6, _omitFieldNames ? '' : 'checkOutHour')
     ..aI(7, _omitFieldNames ? '' : 'checkOutMinute')
+    ..aOS(8, _omitFieldNames ? '' : 'belongsTo')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -2501,6 +2824,15 @@ class OrganizationShiftSelectionMenuItem extends $pb.GeneratedMessage {
   $core.bool hasCheckOutMinute() => $_has(6);
   @$pb.TagNumber(7)
   void clearCheckOutMinute() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get belongsTo => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set belongsTo($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasBelongsTo() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearBelongsTo() => $_clearField(8);
 }
 
 class GetOrganizationDefaultShiftRequest extends $pb.GeneratedMessage {
@@ -2568,9 +2900,19 @@ class GetOrganizationDefaultShiftRequest extends $pb.GeneratedMessage {
 class GetOrganizationDefaultShiftResponse extends $pb.GeneratedMessage {
   factory GetOrganizationDefaultShiftResponse({
     $core.String? shiftId,
+    $core.String? shiftName,
+    $core.int? checkInHour,
+    $core.int? checkInMinute,
+    $core.int? checkOutHour,
+    $core.int? checkOutMinute,
   }) {
     final result = create();
     if (shiftId != null) result.shiftId = shiftId;
+    if (shiftName != null) result.shiftName = shiftName;
+    if (checkInHour != null) result.checkInHour = checkInHour;
+    if (checkInMinute != null) result.checkInMinute = checkInMinute;
+    if (checkOutHour != null) result.checkOutHour = checkOutHour;
+    if (checkOutMinute != null) result.checkOutMinute = checkOutMinute;
     return result;
   }
 
@@ -2590,6 +2932,11 @@ class GetOrganizationDefaultShiftResponse extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'shiftId')
+    ..aOS(2, _omitFieldNames ? '' : 'shiftName')
+    ..aI(3, _omitFieldNames ? '' : 'checkInHour')
+    ..aI(4, _omitFieldNames ? '' : 'checkInMinute')
+    ..aI(5, _omitFieldNames ? '' : 'checkOutHour')
+    ..aI(6, _omitFieldNames ? '' : 'checkOutMinute')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -2625,6 +2972,51 @@ class GetOrganizationDefaultShiftResponse extends $pb.GeneratedMessage {
   $core.bool hasShiftId() => $_has(0);
   @$pb.TagNumber(1)
   void clearShiftId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get shiftName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set shiftName($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasShiftName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearShiftName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get checkInHour => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set checkInHour($core.int value) => $_setSignedInt32(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasCheckInHour() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCheckInHour() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get checkInMinute => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set checkInMinute($core.int value) => $_setSignedInt32(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasCheckInMinute() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCheckInMinute() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get checkOutHour => $_getIZ(4);
+  @$pb.TagNumber(5)
+  set checkOutHour($core.int value) => $_setSignedInt32(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasCheckOutHour() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearCheckOutHour() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.int get checkOutMinute => $_getIZ(5);
+  @$pb.TagNumber(6)
+  set checkOutMinute($core.int value) => $_setSignedInt32(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasCheckOutMinute() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearCheckOutMinute() => $_clearField(6);
 }
 
 class GetBulkUserShiftsRequest extends $pb.GeneratedMessage {
@@ -4088,22 +4480,29 @@ class EditShiftResponse extends $pb.GeneratedMessage {
   static EditShiftResponse? _defaultInstance;
 }
 
+enum GetUserAttendanceReportAttendanceRequest_ReportTypeData {
+  monthData,
+  rangeData,
+  singleDateData,
+  notSet
+}
+
 class GetUserAttendanceReportAttendanceRequest extends $pb.GeneratedMessage {
   factory GetUserAttendanceReportAttendanceRequest({
     $core.Iterable<$core.String>? userIds,
     $1.AttendanceReportType? reportType,
-    $0.Timestamp? monthStartTime,
-    $0.Timestamp? startDate,
-    $0.Timestamp? endDate,
-    $0.Timestamp? date,
+    ReportTypeMonthData? monthData,
+    ReportTypeRangeData? rangeData,
+    ReportTypeSingleDateData? singleDateData,
+    $1.AttendanceStatus? attendanceStatus,
   }) {
     final result = create();
     if (userIds != null) result.userIds.addAll(userIds);
     if (reportType != null) result.reportType = reportType;
-    if (monthStartTime != null) result.monthStartTime = monthStartTime;
-    if (startDate != null) result.startDate = startDate;
-    if (endDate != null) result.endDate = endDate;
-    if (date != null) result.date = date;
+    if (monthData != null) result.monthData = monthData;
+    if (rangeData != null) result.rangeData = rangeData;
+    if (singleDateData != null) result.singleDateData = singleDateData;
+    if (attendanceStatus != null) result.attendanceStatus = attendanceStatus;
     return result;
   }
 
@@ -4117,22 +4516,31 @@ class GetUserAttendanceReportAttendanceRequest extends $pb.GeneratedMessage {
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
+  static const $core
+      .Map<$core.int, GetUserAttendanceReportAttendanceRequest_ReportTypeData>
+      _GetUserAttendanceReportAttendanceRequest_ReportTypeDataByTag = {
+    3: GetUserAttendanceReportAttendanceRequest_ReportTypeData.monthData,
+    4: GetUserAttendanceReportAttendanceRequest_ReportTypeData.rangeData,
+    5: GetUserAttendanceReportAttendanceRequest_ReportTypeData.singleDateData,
+    0: GetUserAttendanceReportAttendanceRequest_ReportTypeData.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetUserAttendanceReportAttendanceRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
       createEmptyInstance: create)
+    ..oo(0, [3, 4, 5])
     ..pPS(1, _omitFieldNames ? '' : 'userIds')
     ..aE<$1.AttendanceReportType>(2, _omitFieldNames ? '' : 'reportType',
         enumValues: $1.AttendanceReportType.values)
-    ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'monthStartTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(4, _omitFieldNames ? '' : 'startDate',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(5, _omitFieldNames ? '' : 'endDate',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(6, _omitFieldNames ? '' : 'date',
-        subBuilder: $0.Timestamp.create)
+    ..aOM<ReportTypeMonthData>(3, _omitFieldNames ? '' : 'monthData',
+        subBuilder: ReportTypeMonthData.create)
+    ..aOM<ReportTypeRangeData>(4, _omitFieldNames ? '' : 'rangeData',
+        subBuilder: ReportTypeRangeData.create)
+    ..aOM<ReportTypeSingleDateData>(5, _omitFieldNames ? '' : 'singleDateData',
+        subBuilder: ReportTypeSingleDateData.create)
+    ..aE<$1.AttendanceStatus>(6, _omitFieldNames ? '' : 'attendanceStatus',
+        enumValues: $1.AttendanceStatus.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -4161,6 +4569,18 @@ class GetUserAttendanceReportAttendanceRequest extends $pb.GeneratedMessage {
           GetUserAttendanceReportAttendanceRequest>(create);
   static GetUserAttendanceReportAttendanceRequest? _defaultInstance;
 
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  GetUserAttendanceReportAttendanceRequest_ReportTypeData
+      whichReportTypeData() =>
+          _GetUserAttendanceReportAttendanceRequest_ReportTypeDataByTag[
+              $_whichOneof(0)]!;
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  void clearReportTypeData() => $_clearField($_whichOneof(0));
+
   @$pb.TagNumber(1)
   $pb.PbList<$core.String> get userIds => $_getList(0);
 
@@ -4173,52 +4593,243 @@ class GetUserAttendanceReportAttendanceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearReportType() => $_clearField(2);
 
-  /// Attendance Report Type Month
   @$pb.TagNumber(3)
-  $0.Timestamp get monthStartTime => $_getN(2);
+  ReportTypeMonthData get monthData => $_getN(2);
   @$pb.TagNumber(3)
-  set monthStartTime($0.Timestamp value) => $_setField(3, value);
+  set monthData(ReportTypeMonthData value) => $_setField(3, value);
   @$pb.TagNumber(3)
-  $core.bool hasMonthStartTime() => $_has(2);
+  $core.bool hasMonthData() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMonthStartTime() => $_clearField(3);
+  void clearMonthData() => $_clearField(3);
   @$pb.TagNumber(3)
-  $0.Timestamp ensureMonthStartTime() => $_ensure(2);
+  ReportTypeMonthData ensureMonthData() => $_ensure(2);
 
-  /// Attendance Report Type Range
   @$pb.TagNumber(4)
-  $0.Timestamp get startDate => $_getN(3);
+  ReportTypeRangeData get rangeData => $_getN(3);
   @$pb.TagNumber(4)
-  set startDate($0.Timestamp value) => $_setField(4, value);
+  set rangeData(ReportTypeRangeData value) => $_setField(4, value);
   @$pb.TagNumber(4)
-  $core.bool hasStartDate() => $_has(3);
+  $core.bool hasRangeData() => $_has(3);
   @$pb.TagNumber(4)
-  void clearStartDate() => $_clearField(4);
+  void clearRangeData() => $_clearField(4);
   @$pb.TagNumber(4)
-  $0.Timestamp ensureStartDate() => $_ensure(3);
+  ReportTypeRangeData ensureRangeData() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $0.Timestamp get endDate => $_getN(4);
+  ReportTypeSingleDateData get singleDateData => $_getN(4);
   @$pb.TagNumber(5)
-  set endDate($0.Timestamp value) => $_setField(5, value);
+  set singleDateData(ReportTypeSingleDateData value) => $_setField(5, value);
   @$pb.TagNumber(5)
-  $core.bool hasEndDate() => $_has(4);
+  $core.bool hasSingleDateData() => $_has(4);
   @$pb.TagNumber(5)
-  void clearEndDate() => $_clearField(5);
+  void clearSingleDateData() => $_clearField(5);
   @$pb.TagNumber(5)
-  $0.Timestamp ensureEndDate() => $_ensure(4);
+  ReportTypeSingleDateData ensureSingleDateData() => $_ensure(4);
 
-  /// Attendance Report Type Single Date
   @$pb.TagNumber(6)
-  $0.Timestamp get date => $_getN(5);
+  $1.AttendanceStatus get attendanceStatus => $_getN(5);
   @$pb.TagNumber(6)
-  set date($0.Timestamp value) => $_setField(6, value);
+  set attendanceStatus($1.AttendanceStatus value) => $_setField(6, value);
   @$pb.TagNumber(6)
-  $core.bool hasDate() => $_has(5);
+  $core.bool hasAttendanceStatus() => $_has(5);
   @$pb.TagNumber(6)
-  void clearDate() => $_clearField(6);
-  @$pb.TagNumber(6)
-  $0.Timestamp ensureDate() => $_ensure(5);
+  void clearAttendanceStatus() => $_clearField(6);
+}
+
+class ReportTypeMonthData extends $pb.GeneratedMessage {
+  factory ReportTypeMonthData({
+    $0.Timestamp? monthStartTime,
+  }) {
+    final result = create();
+    if (monthStartTime != null) result.monthStartTime = monthStartTime;
+    return result;
+  }
+
+  ReportTypeMonthData._();
+
+  factory ReportTypeMonthData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReportTypeMonthData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReportTypeMonthData',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'monthStartTime',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportTypeMonthData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportTypeMonthData copyWith(void Function(ReportTypeMonthData) updates) =>
+      super.copyWith((message) => updates(message as ReportTypeMonthData))
+          as ReportTypeMonthData;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ReportTypeMonthData create() => ReportTypeMonthData._();
+  @$core.override
+  ReportTypeMonthData createEmptyInstance() => create();
+  static $pb.PbList<ReportTypeMonthData> createRepeated() =>
+      $pb.PbList<ReportTypeMonthData>();
+  @$core.pragma('dart2js:noInline')
+  static ReportTypeMonthData getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReportTypeMonthData>(create);
+  static ReportTypeMonthData? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.Timestamp get monthStartTime => $_getN(0);
+  @$pb.TagNumber(1)
+  set monthStartTime($0.Timestamp value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasMonthStartTime() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMonthStartTime() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.Timestamp ensureMonthStartTime() => $_ensure(0);
+}
+
+class ReportTypeRangeData extends $pb.GeneratedMessage {
+  factory ReportTypeRangeData({
+    $0.Timestamp? startDate,
+    $0.Timestamp? endDate,
+  }) {
+    final result = create();
+    if (startDate != null) result.startDate = startDate;
+    if (endDate != null) result.endDate = endDate;
+    return result;
+  }
+
+  ReportTypeRangeData._();
+
+  factory ReportTypeRangeData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReportTypeRangeData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReportTypeRangeData',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'startDate',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endDate',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportTypeRangeData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportTypeRangeData copyWith(void Function(ReportTypeRangeData) updates) =>
+      super.copyWith((message) => updates(message as ReportTypeRangeData))
+          as ReportTypeRangeData;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ReportTypeRangeData create() => ReportTypeRangeData._();
+  @$core.override
+  ReportTypeRangeData createEmptyInstance() => create();
+  static $pb.PbList<ReportTypeRangeData> createRepeated() =>
+      $pb.PbList<ReportTypeRangeData>();
+  @$core.pragma('dart2js:noInline')
+  static ReportTypeRangeData getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReportTypeRangeData>(create);
+  static ReportTypeRangeData? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.Timestamp get startDate => $_getN(0);
+  @$pb.TagNumber(1)
+  set startDate($0.Timestamp value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasStartDate() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStartDate() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.Timestamp ensureStartDate() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $0.Timestamp get endDate => $_getN(1);
+  @$pb.TagNumber(2)
+  set endDate($0.Timestamp value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasEndDate() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEndDate() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $0.Timestamp ensureEndDate() => $_ensure(1);
+}
+
+class ReportTypeSingleDateData extends $pb.GeneratedMessage {
+  factory ReportTypeSingleDateData({
+    $0.Timestamp? date,
+  }) {
+    final result = create();
+    if (date != null) result.date = date;
+    return result;
+  }
+
+  ReportTypeSingleDateData._();
+
+  factory ReportTypeSingleDateData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReportTypeSingleDateData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReportTypeSingleDateData',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'date',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportTypeSingleDateData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportTypeSingleDateData copyWith(
+          void Function(ReportTypeSingleDateData) updates) =>
+      super.copyWith((message) => updates(message as ReportTypeSingleDateData))
+          as ReportTypeSingleDateData;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ReportTypeSingleDateData create() => ReportTypeSingleDateData._();
+  @$core.override
+  ReportTypeSingleDateData createEmptyInstance() => create();
+  static $pb.PbList<ReportTypeSingleDateData> createRepeated() =>
+      $pb.PbList<ReportTypeSingleDateData>();
+  @$core.pragma('dart2js:noInline')
+  static ReportTypeSingleDateData getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReportTypeSingleDateData>(create);
+  static ReportTypeSingleDateData? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.Timestamp get date => $_getN(0);
+  @$pb.TagNumber(1)
+  set date($0.Timestamp value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasDate() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDate() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.Timestamp ensureDate() => $_ensure(0);
 }
 
 class GetUserAttendanceReportAttendancesResponse extends $pb.GeneratedMessage {
@@ -4277,6 +4888,922 @@ class GetUserAttendanceReportAttendancesResponse extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $pb.PbList<UserAttendance> get userAttendance => $_getList(0);
+}
+
+enum GetAttendanceCountReportOfShiftBelongsToRequest_ReportTypeData {
+  monthData,
+  rangeData,
+  singleDateData,
+  notSet
+}
+
+class GetAttendanceCountReportOfShiftBelongsToRequest
+    extends $pb.GeneratedMessage {
+  factory GetAttendanceCountReportOfShiftBelongsToRequest({
+    $core.Iterable<$core.String>? belongsTo,
+    $1.AttendanceReportType? reportType,
+    ReportTypeMonthData? monthData,
+    ReportTypeRangeData? rangeData,
+    ReportTypeSingleDateData? singleDateData,
+  }) {
+    final result = create();
+    if (belongsTo != null) result.belongsTo.addAll(belongsTo);
+    if (reportType != null) result.reportType = reportType;
+    if (monthData != null) result.monthData = monthData;
+    if (rangeData != null) result.rangeData = rangeData;
+    if (singleDateData != null) result.singleDateData = singleDateData;
+    return result;
+  }
+
+  GetAttendanceCountReportOfShiftBelongsToRequest._();
+
+  factory GetAttendanceCountReportOfShiftBelongsToRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetAttendanceCountReportOfShiftBelongsToRequest.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static const $core.Map<$core.int,
+          GetAttendanceCountReportOfShiftBelongsToRequest_ReportTypeData>
+      _GetAttendanceCountReportOfShiftBelongsToRequest_ReportTypeDataByTag = {
+    3: GetAttendanceCountReportOfShiftBelongsToRequest_ReportTypeData.monthData,
+    4: GetAttendanceCountReportOfShiftBelongsToRequest_ReportTypeData.rangeData,
+    5: GetAttendanceCountReportOfShiftBelongsToRequest_ReportTypeData
+        .singleDateData,
+    0: GetAttendanceCountReportOfShiftBelongsToRequest_ReportTypeData.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'GetAttendanceCountReportOfShiftBelongsToRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..oo(0, [3, 4, 5])
+    ..pPS(1, _omitFieldNames ? '' : 'belongsTo')
+    ..aE<$1.AttendanceReportType>(2, _omitFieldNames ? '' : 'reportType',
+        enumValues: $1.AttendanceReportType.values)
+    ..aOM<ReportTypeMonthData>(3, _omitFieldNames ? '' : 'monthData',
+        subBuilder: ReportTypeMonthData.create)
+    ..aOM<ReportTypeRangeData>(4, _omitFieldNames ? '' : 'rangeData',
+        subBuilder: ReportTypeRangeData.create)
+    ..aOM<ReportTypeSingleDateData>(5, _omitFieldNames ? '' : 'singleDateData',
+        subBuilder: ReportTypeSingleDateData.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAttendanceCountReportOfShiftBelongsToRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAttendanceCountReportOfShiftBelongsToRequest copyWith(
+          void Function(GetAttendanceCountReportOfShiftBelongsToRequest)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as GetAttendanceCountReportOfShiftBelongsToRequest))
+          as GetAttendanceCountReportOfShiftBelongsToRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetAttendanceCountReportOfShiftBelongsToRequest create() =>
+      GetAttendanceCountReportOfShiftBelongsToRequest._();
+  @$core.override
+  GetAttendanceCountReportOfShiftBelongsToRequest createEmptyInstance() =>
+      create();
+  static $pb.PbList<GetAttendanceCountReportOfShiftBelongsToRequest>
+      createRepeated() =>
+          $pb.PbList<GetAttendanceCountReportOfShiftBelongsToRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetAttendanceCountReportOfShiftBelongsToRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetAttendanceCountReportOfShiftBelongsToRequest>(create);
+  static GetAttendanceCountReportOfShiftBelongsToRequest? _defaultInstance;
+
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  GetAttendanceCountReportOfShiftBelongsToRequest_ReportTypeData
+      whichReportTypeData() =>
+          _GetAttendanceCountReportOfShiftBelongsToRequest_ReportTypeDataByTag[
+              $_whichOneof(0)]!;
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  void clearReportTypeData() => $_clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get belongsTo => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $1.AttendanceReportType get reportType => $_getN(1);
+  @$pb.TagNumber(2)
+  set reportType($1.AttendanceReportType value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasReportType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearReportType() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  ReportTypeMonthData get monthData => $_getN(2);
+  @$pb.TagNumber(3)
+  set monthData(ReportTypeMonthData value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasMonthData() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMonthData() => $_clearField(3);
+  @$pb.TagNumber(3)
+  ReportTypeMonthData ensureMonthData() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  ReportTypeRangeData get rangeData => $_getN(3);
+  @$pb.TagNumber(4)
+  set rangeData(ReportTypeRangeData value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasRangeData() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearRangeData() => $_clearField(4);
+  @$pb.TagNumber(4)
+  ReportTypeRangeData ensureRangeData() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  ReportTypeSingleDateData get singleDateData => $_getN(4);
+  @$pb.TagNumber(5)
+  set singleDateData(ReportTypeSingleDateData value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasSingleDateData() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearSingleDateData() => $_clearField(5);
+  @$pb.TagNumber(5)
+  ReportTypeSingleDateData ensureSingleDateData() => $_ensure(4);
+}
+
+class GetAttendanceCountReportOfShiftBelongsToResponse
+    extends $pb.GeneratedMessage {
+  factory GetAttendanceCountReportOfShiftBelongsToResponse({
+    $core.Iterable<BelongsToAttendance>? belongsToAttendances,
+  }) {
+    final result = create();
+    if (belongsToAttendances != null)
+      result.belongsToAttendances.addAll(belongsToAttendances);
+    return result;
+  }
+
+  GetAttendanceCountReportOfShiftBelongsToResponse._();
+
+  factory GetAttendanceCountReportOfShiftBelongsToResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetAttendanceCountReportOfShiftBelongsToResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'GetAttendanceCountReportOfShiftBelongsToResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..pPM<BelongsToAttendance>(1, _omitFieldNames ? '' : 'belongsToAttendances',
+        subBuilder: BelongsToAttendance.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAttendanceCountReportOfShiftBelongsToResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAttendanceCountReportOfShiftBelongsToResponse copyWith(
+          void Function(GetAttendanceCountReportOfShiftBelongsToResponse)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as GetAttendanceCountReportOfShiftBelongsToResponse))
+          as GetAttendanceCountReportOfShiftBelongsToResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetAttendanceCountReportOfShiftBelongsToResponse create() =>
+      GetAttendanceCountReportOfShiftBelongsToResponse._();
+  @$core.override
+  GetAttendanceCountReportOfShiftBelongsToResponse createEmptyInstance() =>
+      create();
+  static $pb.PbList<GetAttendanceCountReportOfShiftBelongsToResponse>
+      createRepeated() =>
+          $pb.PbList<GetAttendanceCountReportOfShiftBelongsToResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetAttendanceCountReportOfShiftBelongsToResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetAttendanceCountReportOfShiftBelongsToResponse>(create);
+  static GetAttendanceCountReportOfShiftBelongsToResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<BelongsToAttendance> get belongsToAttendances => $_getList(0);
+}
+
+class BelongsToAttendance extends $pb.GeneratedMessage {
+  factory BelongsToAttendance({
+    $core.String? belongsTo,
+    $core.int? totalUsers,
+    $core.int? usersOnTime,
+    $core.int? usersLate,
+    $core.int? usersAbsent,
+    $core.int? usersOnLeave,
+  }) {
+    final result = create();
+    if (belongsTo != null) result.belongsTo = belongsTo;
+    if (totalUsers != null) result.totalUsers = totalUsers;
+    if (usersOnTime != null) result.usersOnTime = usersOnTime;
+    if (usersLate != null) result.usersLate = usersLate;
+    if (usersAbsent != null) result.usersAbsent = usersAbsent;
+    if (usersOnLeave != null) result.usersOnLeave = usersOnLeave;
+    return result;
+  }
+
+  BelongsToAttendance._();
+
+  factory BelongsToAttendance.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BelongsToAttendance.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BelongsToAttendance',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'belongsTo')
+    ..aI(3, _omitFieldNames ? '' : 'totalUsers')
+    ..aI(4, _omitFieldNames ? '' : 'usersOnTime')
+    ..aI(5, _omitFieldNames ? '' : 'usersLate')
+    ..aI(6, _omitFieldNames ? '' : 'usersAbsent')
+    ..aI(7, _omitFieldNames ? '' : 'usersOnLeave')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BelongsToAttendance clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BelongsToAttendance copyWith(void Function(BelongsToAttendance) updates) =>
+      super.copyWith((message) => updates(message as BelongsToAttendance))
+          as BelongsToAttendance;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BelongsToAttendance create() => BelongsToAttendance._();
+  @$core.override
+  BelongsToAttendance createEmptyInstance() => create();
+  static $pb.PbList<BelongsToAttendance> createRepeated() =>
+      $pb.PbList<BelongsToAttendance>();
+  @$core.pragma('dart2js:noInline')
+  static BelongsToAttendance getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BelongsToAttendance>(create);
+  static BelongsToAttendance? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get belongsTo => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set belongsTo($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasBelongsTo() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBelongsTo() => $_clearField(1);
+
+  @$pb.TagNumber(3)
+  $core.int get totalUsers => $_getIZ(1);
+  @$pb.TagNumber(3)
+  set totalUsers($core.int value) => $_setSignedInt32(1, value);
+  @$pb.TagNumber(3)
+  $core.bool hasTotalUsers() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearTotalUsers() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get usersOnTime => $_getIZ(2);
+  @$pb.TagNumber(4)
+  set usersOnTime($core.int value) => $_setSignedInt32(2, value);
+  @$pb.TagNumber(4)
+  $core.bool hasUsersOnTime() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearUsersOnTime() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get usersLate => $_getIZ(3);
+  @$pb.TagNumber(5)
+  set usersLate($core.int value) => $_setSignedInt32(3, value);
+  @$pb.TagNumber(5)
+  $core.bool hasUsersLate() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearUsersLate() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.int get usersAbsent => $_getIZ(4);
+  @$pb.TagNumber(6)
+  set usersAbsent($core.int value) => $_setSignedInt32(4, value);
+  @$pb.TagNumber(6)
+  $core.bool hasUsersAbsent() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearUsersAbsent() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.int get usersOnLeave => $_getIZ(5);
+  @$pb.TagNumber(7)
+  set usersOnLeave($core.int value) => $_setSignedInt32(5, value);
+  @$pb.TagNumber(7)
+  $core.bool hasUsersOnLeave() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearUsersOnLeave() => $_clearField(7);
+}
+
+enum GetAttendanceCountReportOfUserIdsRequest_ReportTypeData {
+  monthData,
+  rangeData,
+  singleDateData,
+  notSet
+}
+
+class GetAttendanceCountReportOfUserIdsRequest extends $pb.GeneratedMessage {
+  factory GetAttendanceCountReportOfUserIdsRequest({
+    $core.Iterable<$core.String>? userIds,
+    $1.AttendanceReportType? reportType,
+    ReportTypeMonthData? monthData,
+    ReportTypeRangeData? rangeData,
+    ReportTypeSingleDateData? singleDateData,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    if (reportType != null) result.reportType = reportType;
+    if (monthData != null) result.monthData = monthData;
+    if (rangeData != null) result.rangeData = rangeData;
+    if (singleDateData != null) result.singleDateData = singleDateData;
+    return result;
+  }
+
+  GetAttendanceCountReportOfUserIdsRequest._();
+
+  factory GetAttendanceCountReportOfUserIdsRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetAttendanceCountReportOfUserIdsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static const $core
+      .Map<$core.int, GetAttendanceCountReportOfUserIdsRequest_ReportTypeData>
+      _GetAttendanceCountReportOfUserIdsRequest_ReportTypeDataByTag = {
+    3: GetAttendanceCountReportOfUserIdsRequest_ReportTypeData.monthData,
+    4: GetAttendanceCountReportOfUserIdsRequest_ReportTypeData.rangeData,
+    5: GetAttendanceCountReportOfUserIdsRequest_ReportTypeData.singleDateData,
+    0: GetAttendanceCountReportOfUserIdsRequest_ReportTypeData.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetAttendanceCountReportOfUserIdsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..oo(0, [3, 4, 5])
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..aE<$1.AttendanceReportType>(2, _omitFieldNames ? '' : 'reportType',
+        enumValues: $1.AttendanceReportType.values)
+    ..aOM<ReportTypeMonthData>(3, _omitFieldNames ? '' : 'monthData',
+        subBuilder: ReportTypeMonthData.create)
+    ..aOM<ReportTypeRangeData>(4, _omitFieldNames ? '' : 'rangeData',
+        subBuilder: ReportTypeRangeData.create)
+    ..aOM<ReportTypeSingleDateData>(5, _omitFieldNames ? '' : 'singleDateData',
+        subBuilder: ReportTypeSingleDateData.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAttendanceCountReportOfUserIdsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAttendanceCountReportOfUserIdsRequest copyWith(
+          void Function(GetAttendanceCountReportOfUserIdsRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetAttendanceCountReportOfUserIdsRequest))
+          as GetAttendanceCountReportOfUserIdsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetAttendanceCountReportOfUserIdsRequest create() =>
+      GetAttendanceCountReportOfUserIdsRequest._();
+  @$core.override
+  GetAttendanceCountReportOfUserIdsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetAttendanceCountReportOfUserIdsRequest>
+      createRepeated() =>
+          $pb.PbList<GetAttendanceCountReportOfUserIdsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetAttendanceCountReportOfUserIdsRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetAttendanceCountReportOfUserIdsRequest>(create);
+  static GetAttendanceCountReportOfUserIdsRequest? _defaultInstance;
+
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  GetAttendanceCountReportOfUserIdsRequest_ReportTypeData
+      whichReportTypeData() =>
+          _GetAttendanceCountReportOfUserIdsRequest_ReportTypeDataByTag[
+              $_whichOneof(0)]!;
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  void clearReportTypeData() => $_clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $1.AttendanceReportType get reportType => $_getN(1);
+  @$pb.TagNumber(2)
+  set reportType($1.AttendanceReportType value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasReportType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearReportType() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  ReportTypeMonthData get monthData => $_getN(2);
+  @$pb.TagNumber(3)
+  set monthData(ReportTypeMonthData value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasMonthData() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMonthData() => $_clearField(3);
+  @$pb.TagNumber(3)
+  ReportTypeMonthData ensureMonthData() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  ReportTypeRangeData get rangeData => $_getN(3);
+  @$pb.TagNumber(4)
+  set rangeData(ReportTypeRangeData value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasRangeData() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearRangeData() => $_clearField(4);
+  @$pb.TagNumber(4)
+  ReportTypeRangeData ensureRangeData() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  ReportTypeSingleDateData get singleDateData => $_getN(4);
+  @$pb.TagNumber(5)
+  set singleDateData(ReportTypeSingleDateData value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasSingleDateData() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearSingleDateData() => $_clearField(5);
+  @$pb.TagNumber(5)
+  ReportTypeSingleDateData ensureSingleDateData() => $_ensure(4);
+}
+
+class GetAttendanceCountReportOfUserIdsResponse extends $pb.GeneratedMessage {
+  factory GetAttendanceCountReportOfUserIdsResponse({
+    UserAttendanceCount? userAttendanceCount,
+  }) {
+    final result = create();
+    if (userAttendanceCount != null)
+      result.userAttendanceCount = userAttendanceCount;
+    return result;
+  }
+
+  GetAttendanceCountReportOfUserIdsResponse._();
+
+  factory GetAttendanceCountReportOfUserIdsResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetAttendanceCountReportOfUserIdsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetAttendanceCountReportOfUserIdsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aOM<UserAttendanceCount>(1, _omitFieldNames ? '' : 'userAttendanceCount',
+        subBuilder: UserAttendanceCount.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAttendanceCountReportOfUserIdsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAttendanceCountReportOfUserIdsResponse copyWith(
+          void Function(GetAttendanceCountReportOfUserIdsResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetAttendanceCountReportOfUserIdsResponse))
+          as GetAttendanceCountReportOfUserIdsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetAttendanceCountReportOfUserIdsResponse create() =>
+      GetAttendanceCountReportOfUserIdsResponse._();
+  @$core.override
+  GetAttendanceCountReportOfUserIdsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetAttendanceCountReportOfUserIdsResponse>
+      createRepeated() =>
+          $pb.PbList<GetAttendanceCountReportOfUserIdsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetAttendanceCountReportOfUserIdsResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetAttendanceCountReportOfUserIdsResponse>(create);
+  static GetAttendanceCountReportOfUserIdsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  UserAttendanceCount get userAttendanceCount => $_getN(0);
+  @$pb.TagNumber(1)
+  set userAttendanceCount(UserAttendanceCount value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasUserAttendanceCount() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserAttendanceCount() => $_clearField(1);
+  @$pb.TagNumber(1)
+  UserAttendanceCount ensureUserAttendanceCount() => $_ensure(0);
+}
+
+class UserAttendanceCount extends $pb.GeneratedMessage {
+  factory UserAttendanceCount({
+    $core.int? totalUsers,
+    $core.int? usersOnTime,
+    $core.int? usersLate,
+    $core.int? usersAbsent,
+    $core.int? usersOnLeave,
+  }) {
+    final result = create();
+    if (totalUsers != null) result.totalUsers = totalUsers;
+    if (usersOnTime != null) result.usersOnTime = usersOnTime;
+    if (usersLate != null) result.usersLate = usersLate;
+    if (usersAbsent != null) result.usersAbsent = usersAbsent;
+    if (usersOnLeave != null) result.usersOnLeave = usersOnLeave;
+    return result;
+  }
+
+  UserAttendanceCount._();
+
+  factory UserAttendanceCount.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UserAttendanceCount.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UserAttendanceCount',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aI(1, _omitFieldNames ? '' : 'totalUsers')
+    ..aI(2, _omitFieldNames ? '' : 'usersOnTime')
+    ..aI(3, _omitFieldNames ? '' : 'usersLate')
+    ..aI(4, _omitFieldNames ? '' : 'usersAbsent')
+    ..aI(5, _omitFieldNames ? '' : 'usersOnLeave')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserAttendanceCount clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserAttendanceCount copyWith(void Function(UserAttendanceCount) updates) =>
+      super.copyWith((message) => updates(message as UserAttendanceCount))
+          as UserAttendanceCount;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UserAttendanceCount create() => UserAttendanceCount._();
+  @$core.override
+  UserAttendanceCount createEmptyInstance() => create();
+  static $pb.PbList<UserAttendanceCount> createRepeated() =>
+      $pb.PbList<UserAttendanceCount>();
+  @$core.pragma('dart2js:noInline')
+  static UserAttendanceCount getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserAttendanceCount>(create);
+  static UserAttendanceCount? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get totalUsers => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set totalUsers($core.int value) => $_setSignedInt32(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasTotalUsers() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTotalUsers() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get usersOnTime => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set usersOnTime($core.int value) => $_setSignedInt32(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUsersOnTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUsersOnTime() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get usersLate => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set usersLate($core.int value) => $_setSignedInt32(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasUsersLate() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUsersLate() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get usersAbsent => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set usersAbsent($core.int value) => $_setSignedInt32(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasUsersAbsent() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUsersAbsent() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get usersOnLeave => $_getIZ(4);
+  @$pb.TagNumber(5)
+  set usersOnLeave($core.int value) => $_setSignedInt32(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasUsersOnLeave() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUsersOnLeave() => $_clearField(5);
+}
+
+enum GetAccumulatedCountReportOfShiftBelongsToRequest_ReportTypeData {
+  monthData,
+  rangeData,
+  singleDateData,
+  notSet
+}
+
+class GetAccumulatedCountReportOfShiftBelongsToRequest
+    extends $pb.GeneratedMessage {
+  factory GetAccumulatedCountReportOfShiftBelongsToRequest({
+    $core.Iterable<$core.String>? belongsTo,
+    $1.AttendanceReportType? reportType,
+    ReportTypeMonthData? monthData,
+    ReportTypeRangeData? rangeData,
+    ReportTypeSingleDateData? singleDateData,
+  }) {
+    final result = create();
+    if (belongsTo != null) result.belongsTo.addAll(belongsTo);
+    if (reportType != null) result.reportType = reportType;
+    if (monthData != null) result.monthData = monthData;
+    if (rangeData != null) result.rangeData = rangeData;
+    if (singleDateData != null) result.singleDateData = singleDateData;
+    return result;
+  }
+
+  GetAccumulatedCountReportOfShiftBelongsToRequest._();
+
+  factory GetAccumulatedCountReportOfShiftBelongsToRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetAccumulatedCountReportOfShiftBelongsToRequest.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static const $core.Map<$core.int,
+          GetAccumulatedCountReportOfShiftBelongsToRequest_ReportTypeData>
+      _GetAccumulatedCountReportOfShiftBelongsToRequest_ReportTypeDataByTag = {
+    3: GetAccumulatedCountReportOfShiftBelongsToRequest_ReportTypeData
+        .monthData,
+    4: GetAccumulatedCountReportOfShiftBelongsToRequest_ReportTypeData
+        .rangeData,
+    5: GetAccumulatedCountReportOfShiftBelongsToRequest_ReportTypeData
+        .singleDateData,
+    0: GetAccumulatedCountReportOfShiftBelongsToRequest_ReportTypeData.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'GetAccumulatedCountReportOfShiftBelongsToRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..oo(0, [3, 4, 5])
+    ..pPS(1, _omitFieldNames ? '' : 'belongsTo')
+    ..aE<$1.AttendanceReportType>(2, _omitFieldNames ? '' : 'reportType',
+        enumValues: $1.AttendanceReportType.values)
+    ..aOM<ReportTypeMonthData>(3, _omitFieldNames ? '' : 'monthData',
+        subBuilder: ReportTypeMonthData.create)
+    ..aOM<ReportTypeRangeData>(4, _omitFieldNames ? '' : 'rangeData',
+        subBuilder: ReportTypeRangeData.create)
+    ..aOM<ReportTypeSingleDateData>(5, _omitFieldNames ? '' : 'singleDateData',
+        subBuilder: ReportTypeSingleDateData.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAccumulatedCountReportOfShiftBelongsToRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAccumulatedCountReportOfShiftBelongsToRequest copyWith(
+          void Function(GetAccumulatedCountReportOfShiftBelongsToRequest)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as GetAccumulatedCountReportOfShiftBelongsToRequest))
+          as GetAccumulatedCountReportOfShiftBelongsToRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetAccumulatedCountReportOfShiftBelongsToRequest create() =>
+      GetAccumulatedCountReportOfShiftBelongsToRequest._();
+  @$core.override
+  GetAccumulatedCountReportOfShiftBelongsToRequest createEmptyInstance() =>
+      create();
+  static $pb.PbList<GetAccumulatedCountReportOfShiftBelongsToRequest>
+      createRepeated() =>
+          $pb.PbList<GetAccumulatedCountReportOfShiftBelongsToRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetAccumulatedCountReportOfShiftBelongsToRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetAccumulatedCountReportOfShiftBelongsToRequest>(create);
+  static GetAccumulatedCountReportOfShiftBelongsToRequest? _defaultInstance;
+
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  GetAccumulatedCountReportOfShiftBelongsToRequest_ReportTypeData
+      whichReportTypeData() =>
+          _GetAccumulatedCountReportOfShiftBelongsToRequest_ReportTypeDataByTag[
+              $_whichOneof(0)]!;
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  void clearReportTypeData() => $_clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get belongsTo => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $1.AttendanceReportType get reportType => $_getN(1);
+  @$pb.TagNumber(2)
+  set reportType($1.AttendanceReportType value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasReportType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearReportType() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  ReportTypeMonthData get monthData => $_getN(2);
+  @$pb.TagNumber(3)
+  set monthData(ReportTypeMonthData value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasMonthData() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMonthData() => $_clearField(3);
+  @$pb.TagNumber(3)
+  ReportTypeMonthData ensureMonthData() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  ReportTypeRangeData get rangeData => $_getN(3);
+  @$pb.TagNumber(4)
+  set rangeData(ReportTypeRangeData value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasRangeData() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearRangeData() => $_clearField(4);
+  @$pb.TagNumber(4)
+  ReportTypeRangeData ensureRangeData() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  ReportTypeSingleDateData get singleDateData => $_getN(4);
+  @$pb.TagNumber(5)
+  set singleDateData(ReportTypeSingleDateData value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasSingleDateData() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearSingleDateData() => $_clearField(5);
+  @$pb.TagNumber(5)
+  ReportTypeSingleDateData ensureSingleDateData() => $_ensure(4);
+}
+
+class GetAccumulatedCountReportOfShiftBelongsToResponse
+    extends $pb.GeneratedMessage {
+  factory GetAccumulatedCountReportOfShiftBelongsToResponse({
+    $core.int? totalUsers,
+    $core.int? usersOnTime,
+    $core.int? usersLate,
+    $core.int? usersAbsent,
+    $core.int? usersOnLeave,
+  }) {
+    final result = create();
+    if (totalUsers != null) result.totalUsers = totalUsers;
+    if (usersOnTime != null) result.usersOnTime = usersOnTime;
+    if (usersLate != null) result.usersLate = usersLate;
+    if (usersAbsent != null) result.usersAbsent = usersAbsent;
+    if (usersOnLeave != null) result.usersOnLeave = usersOnLeave;
+    return result;
+  }
+
+  GetAccumulatedCountReportOfShiftBelongsToResponse._();
+
+  factory GetAccumulatedCountReportOfShiftBelongsToResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetAccumulatedCountReportOfShiftBelongsToResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'GetAccumulatedCountReportOfShiftBelongsToResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..aI(3, _omitFieldNames ? '' : 'totalUsers')
+    ..aI(4, _omitFieldNames ? '' : 'usersOnTime')
+    ..aI(5, _omitFieldNames ? '' : 'usersLate')
+    ..aI(6, _omitFieldNames ? '' : 'usersAbsent')
+    ..aI(7, _omitFieldNames ? '' : 'usersOnLeave')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAccumulatedCountReportOfShiftBelongsToResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAccumulatedCountReportOfShiftBelongsToResponse copyWith(
+          void Function(GetAccumulatedCountReportOfShiftBelongsToResponse)
+              updates) =>
+      super.copyWith((message) => updates(
+              message as GetAccumulatedCountReportOfShiftBelongsToResponse))
+          as GetAccumulatedCountReportOfShiftBelongsToResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetAccumulatedCountReportOfShiftBelongsToResponse create() =>
+      GetAccumulatedCountReportOfShiftBelongsToResponse._();
+  @$core.override
+  GetAccumulatedCountReportOfShiftBelongsToResponse createEmptyInstance() =>
+      create();
+  static $pb.PbList<GetAccumulatedCountReportOfShiftBelongsToResponse>
+      createRepeated() =>
+          $pb.PbList<GetAccumulatedCountReportOfShiftBelongsToResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetAccumulatedCountReportOfShiftBelongsToResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetAccumulatedCountReportOfShiftBelongsToResponse>(create);
+  static GetAccumulatedCountReportOfShiftBelongsToResponse? _defaultInstance;
+
+  @$pb.TagNumber(3)
+  $core.int get totalUsers => $_getIZ(0);
+  @$pb.TagNumber(3)
+  set totalUsers($core.int value) => $_setSignedInt32(0, value);
+  @$pb.TagNumber(3)
+  $core.bool hasTotalUsers() => $_has(0);
+  @$pb.TagNumber(3)
+  void clearTotalUsers() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get usersOnTime => $_getIZ(1);
+  @$pb.TagNumber(4)
+  set usersOnTime($core.int value) => $_setSignedInt32(1, value);
+  @$pb.TagNumber(4)
+  $core.bool hasUsersOnTime() => $_has(1);
+  @$pb.TagNumber(4)
+  void clearUsersOnTime() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get usersLate => $_getIZ(2);
+  @$pb.TagNumber(5)
+  set usersLate($core.int value) => $_setSignedInt32(2, value);
+  @$pb.TagNumber(5)
+  $core.bool hasUsersLate() => $_has(2);
+  @$pb.TagNumber(5)
+  void clearUsersLate() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.int get usersAbsent => $_getIZ(3);
+  @$pb.TagNumber(6)
+  set usersAbsent($core.int value) => $_setSignedInt32(3, value);
+  @$pb.TagNumber(6)
+  $core.bool hasUsersAbsent() => $_has(3);
+  @$pb.TagNumber(6)
+  void clearUsersAbsent() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.int get usersOnLeave => $_getIZ(4);
+  @$pb.TagNumber(7)
+  set usersOnLeave($core.int value) => $_setSignedInt32(4, value);
+  @$pb.TagNumber(7)
+  $core.bool hasUsersOnLeave() => $_has(4);
+  @$pb.TagNumber(7)
+  void clearUsersOnLeave() => $_clearField(7);
 }
 
 class UserAttendance extends $pb.GeneratedMessage {
@@ -4417,12 +5944,14 @@ class UserDateShiftAttendances extends $pb.GeneratedMessage {
 class ShiftAttendance extends $pb.GeneratedMessage {
   factory ShiftAttendance({
     $core.String? shiftId,
+    $core.String? shiftName,
     $1.AttendanceStatus? attendanceStatus,
     $0.Timestamp? checkIn,
     $0.Timestamp? checkOut,
   }) {
     final result = create();
     if (shiftId != null) result.shiftId = shiftId;
+    if (shiftName != null) result.shiftName = shiftName;
     if (attendanceStatus != null) result.attendanceStatus = attendanceStatus;
     if (checkIn != null) result.checkIn = checkIn;
     if (checkOut != null) result.checkOut = checkOut;
@@ -4444,11 +5973,12 @@ class ShiftAttendance extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'shiftId')
-    ..aE<$1.AttendanceStatus>(2, _omitFieldNames ? '' : 'attendanceStatus',
+    ..aOS(2, _omitFieldNames ? '' : 'shiftName')
+    ..aE<$1.AttendanceStatus>(3, _omitFieldNames ? '' : 'attendanceStatus',
         enumValues: $1.AttendanceStatus.values)
-    ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'checkIn',
+    ..aOM<$0.Timestamp>(4, _omitFieldNames ? '' : 'checkIn',
         subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(4, _omitFieldNames ? '' : 'checkOut',
+    ..aOM<$0.Timestamp>(5, _omitFieldNames ? '' : 'checkOut',
         subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
@@ -4483,35 +6013,44 @@ class ShiftAttendance extends $pb.GeneratedMessage {
   void clearShiftId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $1.AttendanceStatus get attendanceStatus => $_getN(1);
+  $core.String get shiftName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set attendanceStatus($1.AttendanceStatus value) => $_setField(2, value);
+  set shiftName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
-  $core.bool hasAttendanceStatus() => $_has(1);
+  $core.bool hasShiftName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAttendanceStatus() => $_clearField(2);
+  void clearShiftName() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $0.Timestamp get checkIn => $_getN(2);
+  $1.AttendanceStatus get attendanceStatus => $_getN(2);
   @$pb.TagNumber(3)
-  set checkIn($0.Timestamp value) => $_setField(3, value);
+  set attendanceStatus($1.AttendanceStatus value) => $_setField(3, value);
   @$pb.TagNumber(3)
-  $core.bool hasCheckIn() => $_has(2);
+  $core.bool hasAttendanceStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCheckIn() => $_clearField(3);
-  @$pb.TagNumber(3)
-  $0.Timestamp ensureCheckIn() => $_ensure(2);
+  void clearAttendanceStatus() => $_clearField(3);
 
   @$pb.TagNumber(4)
-  $0.Timestamp get checkOut => $_getN(3);
+  $0.Timestamp get checkIn => $_getN(3);
   @$pb.TagNumber(4)
-  set checkOut($0.Timestamp value) => $_setField(4, value);
+  set checkIn($0.Timestamp value) => $_setField(4, value);
   @$pb.TagNumber(4)
-  $core.bool hasCheckOut() => $_has(3);
+  $core.bool hasCheckIn() => $_has(3);
   @$pb.TagNumber(4)
-  void clearCheckOut() => $_clearField(4);
+  void clearCheckIn() => $_clearField(4);
   @$pb.TagNumber(4)
-  $0.Timestamp ensureCheckOut() => $_ensure(3);
+  $0.Timestamp ensureCheckIn() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $0.Timestamp get checkOut => $_getN(4);
+  @$pb.TagNumber(5)
+  set checkOut($0.Timestamp value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasCheckOut() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearCheckOut() => $_clearField(5);
+  @$pb.TagNumber(5)
+  $0.Timestamp ensureCheckOut() => $_ensure(4);
 }
 
 class GetBulkShiftShortInfoRequest extends $pb.GeneratedMessage {
@@ -4873,261 +6412,6 @@ class OrganizationShiftForDay extends $pb.GeneratedMessage {
   void clearCheckOutMinute() => $_clearField(6);
 }
 
-class GetUserShiftsOfAttendanceMonthRequest extends $pb.GeneratedMessage {
-  factory GetUserShiftsOfAttendanceMonthRequest({
-    $core.String? userId,
-    $0.Timestamp? monthStartTime,
-  }) {
-    final result = create();
-    if (userId != null) result.userId = userId;
-    if (monthStartTime != null) result.monthStartTime = monthStartTime;
-    return result;
-  }
-
-  GetUserShiftsOfAttendanceMonthRequest._();
-
-  factory GetUserShiftsOfAttendanceMonthRequest.fromBuffer(
-          $core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory GetUserShiftsOfAttendanceMonthRequest.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'GetUserShiftsOfAttendanceMonthRequest',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
-      createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'userId')
-    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'monthStartTime',
-        subBuilder: $0.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetUserShiftsOfAttendanceMonthRequest clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetUserShiftsOfAttendanceMonthRequest copyWith(
-          void Function(GetUserShiftsOfAttendanceMonthRequest) updates) =>
-      super.copyWith((message) =>
-              updates(message as GetUserShiftsOfAttendanceMonthRequest))
-          as GetUserShiftsOfAttendanceMonthRequest;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static GetUserShiftsOfAttendanceMonthRequest create() =>
-      GetUserShiftsOfAttendanceMonthRequest._();
-  @$core.override
-  GetUserShiftsOfAttendanceMonthRequest createEmptyInstance() => create();
-  static $pb.PbList<GetUserShiftsOfAttendanceMonthRequest> createRepeated() =>
-      $pb.PbList<GetUserShiftsOfAttendanceMonthRequest>();
-  @$core.pragma('dart2js:noInline')
-  static GetUserShiftsOfAttendanceMonthRequest getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          GetUserShiftsOfAttendanceMonthRequest>(create);
-  static GetUserShiftsOfAttendanceMonthRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get userId => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set userId($core.String value) => $_setString(0, value);
-  @$pb.TagNumber(1)
-  $core.bool hasUserId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearUserId() => $_clearField(1);
-
-  @$pb.TagNumber(2)
-  $0.Timestamp get monthStartTime => $_getN(1);
-  @$pb.TagNumber(2)
-  set monthStartTime($0.Timestamp value) => $_setField(2, value);
-  @$pb.TagNumber(2)
-  $core.bool hasMonthStartTime() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearMonthStartTime() => $_clearField(2);
-  @$pb.TagNumber(2)
-  $0.Timestamp ensureMonthStartTime() => $_ensure(1);
-}
-
-class GetUserShiftsOfAttendanceMonthResponse extends $pb.GeneratedMessage {
-  factory GetUserShiftsOfAttendanceMonthResponse({
-    $core.Iterable<ShiftOfAttendanceMonth>? shiftsOfAttendanceMonth,
-  }) {
-    final result = create();
-    if (shiftsOfAttendanceMonth != null)
-      result.shiftsOfAttendanceMonth.addAll(shiftsOfAttendanceMonth);
-    return result;
-  }
-
-  GetUserShiftsOfAttendanceMonthResponse._();
-
-  factory GetUserShiftsOfAttendanceMonthResponse.fromBuffer(
-          $core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory GetUserShiftsOfAttendanceMonthResponse.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'GetUserShiftsOfAttendanceMonthResponse',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
-      createEmptyInstance: create)
-    ..pPM<ShiftOfAttendanceMonth>(
-        1, _omitFieldNames ? '' : 'shiftsOfAttendanceMonth',
-        subBuilder: ShiftOfAttendanceMonth.create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetUserShiftsOfAttendanceMonthResponse clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetUserShiftsOfAttendanceMonthResponse copyWith(
-          void Function(GetUserShiftsOfAttendanceMonthResponse) updates) =>
-      super.copyWith((message) =>
-              updates(message as GetUserShiftsOfAttendanceMonthResponse))
-          as GetUserShiftsOfAttendanceMonthResponse;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static GetUserShiftsOfAttendanceMonthResponse create() =>
-      GetUserShiftsOfAttendanceMonthResponse._();
-  @$core.override
-  GetUserShiftsOfAttendanceMonthResponse createEmptyInstance() => create();
-  static $pb.PbList<GetUserShiftsOfAttendanceMonthResponse> createRepeated() =>
-      $pb.PbList<GetUserShiftsOfAttendanceMonthResponse>();
-  @$core.pragma('dart2js:noInline')
-  static GetUserShiftsOfAttendanceMonthResponse getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          GetUserShiftsOfAttendanceMonthResponse>(create);
-  static GetUserShiftsOfAttendanceMonthResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $pb.PbList<ShiftOfAttendanceMonth> get shiftsOfAttendanceMonth =>
-      $_getList(0);
-}
-
-class ShiftOfAttendanceMonth extends $pb.GeneratedMessage {
-  factory ShiftOfAttendanceMonth({
-    $core.String? shiftId,
-    $core.String? shiftName,
-    $core.int? checkInHour,
-    $core.int? checkInMinute,
-    $core.int? checkOutHour,
-    $core.int? checkOutMinute,
-  }) {
-    final result = create();
-    if (shiftId != null) result.shiftId = shiftId;
-    if (shiftName != null) result.shiftName = shiftName;
-    if (checkInHour != null) result.checkInHour = checkInHour;
-    if (checkInMinute != null) result.checkInMinute = checkInMinute;
-    if (checkOutHour != null) result.checkOutHour = checkOutHour;
-    if (checkOutMinute != null) result.checkOutMinute = checkOutMinute;
-    return result;
-  }
-
-  ShiftOfAttendanceMonth._();
-
-  factory ShiftOfAttendanceMonth.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory ShiftOfAttendanceMonth.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ShiftOfAttendanceMonth',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
-      createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'shiftId')
-    ..aOS(2, _omitFieldNames ? '' : 'shiftName')
-    ..aI(3, _omitFieldNames ? '' : 'checkInHour')
-    ..aI(4, _omitFieldNames ? '' : 'checkInMinute')
-    ..aI(5, _omitFieldNames ? '' : 'checkOutHour')
-    ..aI(6, _omitFieldNames ? '' : 'checkOutMinute')
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ShiftOfAttendanceMonth clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ShiftOfAttendanceMonth copyWith(
-          void Function(ShiftOfAttendanceMonth) updates) =>
-      super.copyWith((message) => updates(message as ShiftOfAttendanceMonth))
-          as ShiftOfAttendanceMonth;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static ShiftOfAttendanceMonth create() => ShiftOfAttendanceMonth._();
-  @$core.override
-  ShiftOfAttendanceMonth createEmptyInstance() => create();
-  static $pb.PbList<ShiftOfAttendanceMonth> createRepeated() =>
-      $pb.PbList<ShiftOfAttendanceMonth>();
-  @$core.pragma('dart2js:noInline')
-  static ShiftOfAttendanceMonth getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ShiftOfAttendanceMonth>(create);
-  static ShiftOfAttendanceMonth? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get shiftId => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set shiftId($core.String value) => $_setString(0, value);
-  @$pb.TagNumber(1)
-  $core.bool hasShiftId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearShiftId() => $_clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get shiftName => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set shiftName($core.String value) => $_setString(1, value);
-  @$pb.TagNumber(2)
-  $core.bool hasShiftName() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearShiftName() => $_clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.int get checkInHour => $_getIZ(2);
-  @$pb.TagNumber(3)
-  set checkInHour($core.int value) => $_setSignedInt32(2, value);
-  @$pb.TagNumber(3)
-  $core.bool hasCheckInHour() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearCheckInHour() => $_clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.int get checkInMinute => $_getIZ(3);
-  @$pb.TagNumber(4)
-  set checkInMinute($core.int value) => $_setSignedInt32(3, value);
-  @$pb.TagNumber(4)
-  $core.bool hasCheckInMinute() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearCheckInMinute() => $_clearField(4);
-
-  @$pb.TagNumber(5)
-  $core.int get checkOutHour => $_getIZ(4);
-  @$pb.TagNumber(5)
-  set checkOutHour($core.int value) => $_setSignedInt32(4, value);
-  @$pb.TagNumber(5)
-  $core.bool hasCheckOutHour() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearCheckOutHour() => $_clearField(5);
-
-  @$pb.TagNumber(6)
-  $core.int get checkOutMinute => $_getIZ(5);
-  @$pb.TagNumber(6)
-  set checkOutMinute($core.int value) => $_setSignedInt32(5, value);
-  @$pb.TagNumber(6)
-  $core.bool hasCheckOutMinute() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearCheckOutMinute() => $_clearField(6);
-}
-
 class GetUserShiftRegistrationsRequest extends $pb.GeneratedMessage {
   factory GetUserShiftRegistrationsRequest({
     $core.String? userId,
@@ -5423,6 +6707,118 @@ class GetShiftsNamesResponse extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(2)
   $pb.PbMap<$core.String, $core.String> get shiftNames => $_getMap(0);
+}
+
+class GetUserIdsRegisteredToShiftsRequest extends $pb.GeneratedMessage {
+  factory GetUserIdsRegisteredToShiftsRequest({
+    $core.Iterable<$core.String>? shiftIds,
+  }) {
+    final result = create();
+    if (shiftIds != null) result.shiftIds.addAll(shiftIds);
+    return result;
+  }
+
+  GetUserIdsRegisteredToShiftsRequest._();
+
+  factory GetUserIdsRegisteredToShiftsRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetUserIdsRegisteredToShiftsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetUserIdsRegisteredToShiftsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'shiftIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserIdsRegisteredToShiftsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserIdsRegisteredToShiftsRequest copyWith(
+          void Function(GetUserIdsRegisteredToShiftsRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetUserIdsRegisteredToShiftsRequest))
+          as GetUserIdsRegisteredToShiftsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserIdsRegisteredToShiftsRequest create() =>
+      GetUserIdsRegisteredToShiftsRequest._();
+  @$core.override
+  GetUserIdsRegisteredToShiftsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetUserIdsRegisteredToShiftsRequest> createRepeated() =>
+      $pb.PbList<GetUserIdsRegisteredToShiftsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserIdsRegisteredToShiftsRequest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetUserIdsRegisteredToShiftsRequest>(create);
+  static GetUserIdsRegisteredToShiftsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get shiftIds => $_getList(0);
+}
+
+class GetUserIdsRegisteredToShiftsResponse extends $pb.GeneratedMessage {
+  factory GetUserIdsRegisteredToShiftsResponse({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final result = create();
+    if (userIds != null) result.userIds.addAll(userIds);
+    return result;
+  }
+
+  GetUserIdsRegisteredToShiftsResponse._();
+
+  factory GetUserIdsRegisteredToShiftsResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetUserIdsRegisteredToShiftsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetUserIdsRegisteredToShiftsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'attendance_messages'),
+      createEmptyInstance: create)
+    ..pPS(2, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserIdsRegisteredToShiftsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserIdsRegisteredToShiftsResponse copyWith(
+          void Function(GetUserIdsRegisteredToShiftsResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetUserIdsRegisteredToShiftsResponse))
+          as GetUserIdsRegisteredToShiftsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserIdsRegisteredToShiftsResponse create() =>
+      GetUserIdsRegisteredToShiftsResponse._();
+  @$core.override
+  GetUserIdsRegisteredToShiftsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetUserIdsRegisteredToShiftsResponse> createRepeated() =>
+      $pb.PbList<GetUserIdsRegisteredToShiftsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserIdsRegisteredToShiftsResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetUserIdsRegisteredToShiftsResponse>(create);
+  static GetUserIdsRegisteredToShiftsResponse? _defaultInstance;
+
+  @$pb.TagNumber(2)
+  $pb.PbList<$core.String> get userIds => $_getList(0);
 }
 
 const $core.bool _omitFieldNames =
